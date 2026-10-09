@@ -8,6 +8,9 @@ DerivedData/
 .build/
 .swiftpm/
 
+# XcodeGen output (project.yml is the source of truth; run `xcodegen generate`)
+*.xcodeproj/
+
 # Xcode per-user state
 xcuserdata/
 *.xcuserstate
