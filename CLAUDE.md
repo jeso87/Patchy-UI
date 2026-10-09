@@ -35,7 +35,7 @@ xcodegen generate
 swift Tools/make-icon.swift PatchyUI/Assets.xcassets/AppIcon.appiconset
 ```
 
-`Patchy UI.xcodeproj` is generated from `project.yml` by XcodeGen. Change build settings in `project.yml`, not in Xcode, or they are lost on the next generate.
+`Patchy UI.xcodeproj` is generated from `project.yml` by XcodeGen. It is not committed (same convention as Shrinker Pro); run `xcodegen generate` after cloning. Change build settings in `project.yml`, not in Xcode, or they are lost on the next generate.
 
 Debug builds accept launch arguments that open the app in a given state for checking layouts without running any command, e.g. `-PatchyDebugSheet add -PatchyDebugName example.com`, `-PatchyDebugSheet folder`, `-PatchyDebugTab errors -PatchyDebugSite <address>`, `-PatchyDebugPhase empty|notinstalled`. See `applyDebugLaunchState` in `AppModel.swift` for the full list.
 
