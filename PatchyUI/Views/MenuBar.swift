@@ -94,13 +94,17 @@ struct MenuBarContent: View {
             Divider()
 
             Menu("Open Site") {
-                ForEach(model.sites) { site in
-                    Button {
-                        model.openInBrowser(site)
-                    } label: {
-                        Label(site.address, systemImage: symbol(for: model.status(of: site).severity))
+                // Groups become submenus; sites outside any group are listed directly.
+                let sections = model.groups.sections(for: model.addresses)
+                ForEach(sections.groups, id: \.group.id) { entry in
+                    if !entry.sites.isEmpty {
+                        Menu(entry.group.name) {
+                            ForEach(entry.sites, id: \.self) { address in siteButton(address) }
+                        }
                     }
                 }
+                if sections.groups.contains(where: { !$0.sites.isEmpty }), !sections.ungrouped.isEmpty { Divider() }
+                ForEach(sections.ungrouped, id: \.self) { address in siteButton(address) }
             }
             .disabled(model.sites.isEmpty || !model.serverRunning)
 
@@ -134,6 +138,16 @@ struct MenuBarContent: View {
 
         Button("Quit Patchy UI") { NSApp.terminate(nil) }
             .keyboardShortcut("q")
+    }
+
+    @ViewBuilder private func siteButton(_ address: String) -> some View {
+        if let site = model.site(address) {
+            Button {
+                model.openInBrowser(site)
+            } label: {
+                Label(site.address, systemImage: symbol(for: model.status(of: site).severity))
+            }
+        }
     }
 
     private func symbol(for severity: Severity) -> String {

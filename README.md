@@ -32,6 +32,10 @@ commands for you. It is free, open source, and not affiliated with Joe Workman.
 - **Change a site's folder** without removing and re-adding it. Nothing is
   moved or deleted.
 - **Remove a site.** The address stops working; the folder stays where it is.
+- **Group related sites,** such as one customer's domain and subdomains. Groups
+  show in the sidebar and as submenus in the menu bar. The app suggests groups
+  for sites that look related, and never groups anything by itself. Groups
+  belong to Patchy UI only; Patchy itself is not changed.
 - **Start, stop and restart the server** from the toolbar or the menu bar. If
   some addresses stop pointing at your Mac, one Repair button fixes them.
 - **Read the logs.** Each site's errors and visits, live, with filtering,

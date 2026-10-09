@@ -93,13 +93,49 @@ struct SidebarView: View {
 
     var body: some View {
         @Bindable var model = model
+        let sections = model.sidebarSections
         List(selection: $model.selection) {
-            ForEach(model.visibleSites) { site in
-                SiteRow(site: site)
-                    .tag(site.address)
+            ForEach(sections.groups, id: \.group.id) { entry in
+                // While filtering, groups with no match are hidden and the rest are held open.
+                if !model.isFiltering || !entry.sites.isEmpty {
+                    Section(isExpanded: Binding(
+                        get: { model.isFiltering || !entry.group.isCollapsed },
+                        set: { model.setGroup(entry.group, expanded: $0) })) {
+                        ForEach(entry.sites, id: \.self) { address in
+                            if let site = model.site(address) {
+                                SiteRow(site: site).tag(address)
+                            }
+                        }
+                    } header: {
+                        GroupHeader(group: entry.group, sites: entry.sites)
+                    }
+                }
+            }
+            if sections.groups.isEmpty {
+                ungroupedRows(sections.ungrouped)
+            } else if !sections.ungrouped.isEmpty {
+                Section {
+                    ungroupedRows(sections.ungrouped)
+                } header: {
+                    Text("Other Sites")
+                        .dropDestination(for: String.self) { addresses, _ in
+                            addresses.forEach { model.moveSite($0, to: nil) }
+                            return !addresses.isEmpty
+                        }
+                }
             }
         }
         .onDeleteCommand { model.askRemove() }
+        .alert(groupPromptTitle, isPresented: Binding(
+            get: { model.groupNamePrompt != nil },
+            set: { if !$0 { model.groupNamePrompt = nil } })) {
+            TextField("Group name", text: $model.groupNameDraft)
+            Button("Cancel", role: .cancel) { model.groupNamePrompt = nil }
+            Button(groupPromptAction) { model.commitGroupName() }
+                .keyboardShortcut(.defaultAction)
+        } message: {
+            Text("A group keeps related sites together in the sidebar and the menu bar, such as one customer’s sites. It doesn’t change the sites themselves.")
+        }
         .overlay(alignment: .top) {
             if model.sites.isEmpty {
                 emptyNote("No sites yet.")
@@ -113,6 +149,24 @@ struct SidebarView: View {
         }
     }
 
+    @ViewBuilder private func ungroupedRows(_ addresses: [String]) -> some View {
+        ForEach(addresses, id: \.self) { address in
+            if let site = model.site(address) {
+                SiteRow(site: site).tag(address)
+            }
+        }
+    }
+
+    private var groupPromptTitle: String {
+        if case .rename = model.groupNamePrompt { return "Rename Group" }
+        return "New Group"
+    }
+
+    private var groupPromptAction: String {
+        if case .rename = model.groupNamePrompt { return "Rename" }
+        return "Create"
+    }
+
     private func emptyNote(_ text: String) -> some View {
         Text(text)
             .font(.system(size: 12))
@@ -123,8 +177,11 @@ struct SidebarView: View {
     }
 
     @ViewBuilder private var footer: some View {
-        if !model.footerText.isEmpty || !model.trustEnabled {
+        if !model.footerText.isEmpty || !model.trustEnabled || model.groupSuggestion != nil {
             VStack(alignment: .leading, spacing: 8) {
+                if let suggestion = model.groupSuggestion {
+                    GroupSuggestionCard(suggestion: suggestion)
+                }
                 if !model.trustEnabled {
                     VStack(alignment: .leading, spacing: 4) {
                         Text(model.trustIsUpdate
@@ -175,6 +232,7 @@ struct SiteRow: View {
         .padding(.vertical, 2)
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("\(site.address), \(status.summary)")
+        .draggable(site.address)
         .contextMenu {
             Button("Open in Browser") { model.openInBrowser(site) }
                 .disabled(!model.serverRunning)
@@ -182,9 +240,88 @@ struct SiteRow: View {
             Button("Reveal in Finder") { model.revealFolder(site) }
                 .disabled(!site.folderExists)
             Divider()
+            Menu("Move to Group") { GroupChoices(address: site.address) }
+            Divider()
             Button("Remove…") { model.askRemove(site.address) }
                 .disabled(model.isBusy)
         }
+    }
+}
+
+/// The choices for which group a site is in. Used by the row's menu and the detail pane.
+struct GroupChoices: View {
+    @Environment(AppModel.self) private var model
+    var address: String
+
+    var body: some View {
+        let current = model.groups.group(of: address)
+        ForEach(model.sortedGroups) { group in
+            Toggle(group.name, isOn: Binding(
+                get: { current?.id == group.id },
+                set: { model.moveSite(address, to: $0 ? group.id : nil) }))
+        }
+        if !model.sortedGroups.isEmpty { Divider() }
+        Button("New Group…") { model.promptNewGroup(assigning: address) }
+        if current != nil {
+            Button("Remove from Group") { model.moveSite(address, to: nil) }
+        }
+    }
+}
+
+struct GroupHeader: View {
+    @Environment(AppModel.self) private var model
+    var group: SiteGroup
+    var sites: [String]
+
+    var body: some View {
+        let problems = sites.compactMap(model.site).filter { model.status(of: $0).hasProblem }.count
+        HStack(spacing: 6) {
+            Text(group.name)
+                .lineLimit(1)
+            Text("\(sites.count)")
+                .monospacedDigit()
+                .foregroundStyle(.tertiary)
+            if problems > 0 {
+                Glyph(severity: .warning, size: 12)
+                    .help("\(pluralized(problems, "site")) in this group need\(problems == 1 ? "s" : "") attention")
+            }
+            Spacer(minLength: 0)
+        }
+        .contentShape(Rectangle())
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("\(group.name), \(pluralized(sites.count, "site"))\(problems > 0 ? ", \(problems) need attention" : "")")
+        .dropDestination(for: String.self) { addresses, _ in
+            addresses.forEach { model.moveSite($0, to: group.id) }
+            return !addresses.isEmpty
+        }
+        .contextMenu {
+            Button("Rename…") { model.promptRenameGroup(group) }
+            Button("Delete Group") { model.deleteGroup(group) }
+        }
+    }
+}
+
+/// Offers to group sites that look related. Never groups anything by itself.
+struct GroupSuggestionCard: View {
+    @Environment(AppModel.self) private var model
+    var suggestion: SiteGroups.Suggestion
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(verbatim: "\(suggestion.sites.count) sites look related: \(suggestion.sites.joined(separator: ", "))")
+                .lineLimit(3)
+                .foregroundStyle(.primary)
+            HStack(spacing: 12) {
+                Button("Group as “\(suggestion.name)”") { model.applyGroupSuggestion(suggestion) }
+                    .buttonStyle(.patchyLink)
+                    .fontWeight(.medium)
+                Button("Not Now") { model.dismissGroupSuggestion(suggestion) }
+                    .buttonStyle(.plain)
+            }
+        }
+        .padding(9)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(.quaternary.opacity(0.5), in: RoundedRectangle(cornerRadius: 8, style: .continuous))
     }
 }
 

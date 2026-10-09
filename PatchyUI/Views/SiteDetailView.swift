@@ -139,6 +139,17 @@ struct OverviewView: View {
                         }
                     }
                     Divider()
+                    InfoRow(label: "Group") {
+                        Menu {
+                            GroupChoices(address: site.address)
+                        } label: {
+                            Text(model.groups.group(of: site.address)?.name ?? "None")
+                        }
+                        .menuStyle(.button)
+                        .controlSize(.small)
+                        .fixedSize()
+                    }
+                    Divider()
                     InfoRow(label: "Secure connection") {
                         HStack(alignment: .top, spacing: 9) {
                             Glyph(severity: status.certificate.severity)
