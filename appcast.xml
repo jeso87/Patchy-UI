@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Patchy UI</title>
+        <item>
+            <title>1.2.1</title>
+            <pubDate>Fri, 09 Oct 2026 10:37:34 -0400</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>1.2.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="markdown"><![CDATA[### The first release of Patchy UI
+
+Patchy UI puts a window and a menu bar item on top of Patchy, so you can host
+websites on your Mac without opening Terminal.
+
+- See every site and its health at a glance
+- Add a site, remove it, or point it at a different folder
+- Group related sites, such as one customer's domain and subdomains
+- Start, stop and restart the server
+- Follow each site's error and visit logs live
+- Switch PHP version and refresh certificates
+- Set up password-free mode once, with your Mac password
+
+This version is made for **Patchy 1.2.1**. Patchy UI's version number always
+matches the Patchy release it supports.
+]]></description>
+            <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.2.1/PatchyUI-1.2.1.dmg" length="1980091" type="application/octet-stream" sparkle:edSignature="b+WhUWQk3Le/aTxvNZkf8uNpVrByQ0cY8OqRHPC7+YxRu4NKAuThlbeNTJKzEWkdi66zrxGFBN+yDOmHIt8eCA=="/>
+        </item>
+    </channel>
+</rss>
