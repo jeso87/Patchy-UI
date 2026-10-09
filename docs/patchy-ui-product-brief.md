@@ -45,7 +45,7 @@ A designer needs these concepts to understand the screens. The app should rarely
 - **`www.` companion.** A two-part address such as `mysite.test` or `example.com` can also answer at `www.mysite.test`. This is a choice made when the site is added. Addresses with more parts (`shop.example.com`) and addresses that already start with `www.` do not get this choice.
 - **Removing a site never deletes its folder.** Only the address, certificate, and server configuration go away.
 - **Changes need the Mac password unless password-free mode is on.** Adding, removing, starting, and stopping all change routing.
-- **Sites are reachable from other devices on the same network** (useful for testing on a phone). macOS may show a one-time firewall prompt for `httpd`.
+- **Sites open on this Mac only.** The server does listen on the local network, but a site's address is only known to this Mac, so a phone or another computer cannot find it by name. macOS may show a one-time firewall prompt for `httpd`.
 
 ## 4. Scope of the first version
 
