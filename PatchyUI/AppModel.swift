@@ -810,11 +810,56 @@ final class AppModel {
 
 #if DEBUG
 extension AppModel {
+    /// Made-up sites and groups for screenshots, so nothing real is shown. Nothing is read from or
+    /// written to Patchy or the groups file while this is on.
+    fileprivate func loadDemoData() {
+        pauseRefreshForDebug = true
+        groupSavingDisabled = true
+        let day: TimeInterval = 86_400
+        func site(_ address: String, _ folder: String, www: Bool = false, days: Double = 700) -> Site {
+            Site(address: address, aliases: www ? ["www.\(address)"] : [],
+                 folder: NSHomeDirectory() + "/" + folder, folderExists: true,
+                 certificate: .valid(expires: Date().addingTimeInterval(days * day + 3600)), isRouted: true)
+        }
+        var demo = PatchySnapshot()
+        demo.sites = [
+            site("bakery-demo.test", "Websites/bakery-demo.test", www: true, days: 701),
+            site("blog.test", "Sites/blog", www: true, days: 655),
+            site("brightside-dental.test", "Developer/Clients/Brightside Dental/website/public", www: true, days: 512),
+            site("docs.harbor-yoga.test", "Developer/Clients/Harbor Yoga/docs", days: 402),
+            site("harbor-yoga.test", "Developer/Clients/Harbor Yoga/public_html", www: true, days: 402),
+            site("members.northwind.test", "Developer/Clients/Northwind/members/public", days: 233),
+            site("northwind.test", "Developer/Clients/Northwind/site/public", www: true, days: 233),
+            site("pet-rescue.test", "Websites/pet-rescue.test", www: true, days: 705),
+            site("recipes.test", "Sites/recipes", www: true, days: 12),
+            site("shop.northwind.test", "Developer/Clients/Northwind/shop/public", days: 233),
+            site("summer-camp.test", "Websites/summer-camp.test", www: true, days: 544),
+            site("wordpress-sandbox.test", "Developer/Sandbox/wordpress", www: true, days: 620),
+        ].sorted { $0.address < $1.address }
+        demo.serverRunning = true
+        demo.activePHP = snapshot.activePHP ?? "8.4"
+        demo.installedPHP = snapshot.installedPHP
+        demo.trust = .enabled
+        demo.patchyVersion = snapshot.patchyVersion
+        snapshot = demo
+        var demoGroups = SiteGroups()
+        demoGroups.createGroup(named: "Northwind", sites: ["northwind.test", "members.northwind.test", "shop.northwind.test"])
+        demoGroups.createGroup(named: "Harbor Yoga", sites: ["harbor-yoga.test", "docs.harbor-yoga.test"])
+        groups = demoGroups
+        selection = "northwind.test"
+    }
+
     /// Opens the app in a given state for checking layouts, e.g.
     /// `-PatchyDebugSheet add -PatchyDebugName harborcafe.com -PatchyDebugTab errors -PatchyDebugSite mysite.test`.
     /// Nothing here runs a command.
     func applyDebugLaunchState() {
         let defaults = UserDefaults.standard
+        switch defaults.string(forKey: "PatchyDebugAppearance") {
+        case "light": NSApp.appearance = NSAppearance(named: .aqua)
+        case "dark": NSApp.appearance = NSAppearance(named: .darkAqua)
+        default: break
+        }
+        if defaults.bool(forKey: "PatchyDebugDemo") { loadDemoData() }
         if let site = defaults.string(forKey: "PatchyDebugSite"), addresses.contains(site) { selection = site }
         if let tab = defaults.string(forKey: "PatchyDebugTab").flatMap(DetailTab.init(rawValue:)) { self.tab = tab }
         if defaults.string(forKey: "PatchyDebugPhase") == "notinstalled" { phase = .notInstalled(homebrewMissing: false) }
@@ -826,7 +871,8 @@ extension AppModel {
         }
         switch defaults.string(forKey: "PatchyDebugSheet") {
         case "add":
-            add = AddDraft(name: defaults.string(forKey: "PatchyDebugName") ?? "", folder: URL(fileURLWithPath: NSHomeDirectory()).appending(path: "Websites"))
+            let name = defaults.string(forKey: "PatchyDebugName") ?? ""
+            add = AddDraft(name: name, folder: URL(fileURLWithPath: NSHomeDirectory()).appending(path: "Websites/\(AddressRules.finalAddress(from: name))"))
             sheet = .add
         case "addprogress":
             add = AddDraft(name: "harbor-cafe", phase: .progress,

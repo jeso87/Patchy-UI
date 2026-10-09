@@ -11,6 +11,13 @@ A native macOS window and menu bar item for [Patchy](https://github.com/joeworkm
 [![Platform](https://img.shields.io/badge/macOS-14%2B-DC701C)](#requirements)
 [![License](https://img.shields.io/badge/license-MIT-2B2622)](LICENSE)
 
+<!-- GitHub honours prefers-color-scheme in <picture>, so the screenshot follows the reader's theme. -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/main-window-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="docs/screenshots/main-window-light.png">
+  <img src="docs/screenshots/main-window-dark.png" width="760" alt="Patchy UI's main window. The sidebar lists sites in groups, each with a status mark; the selected site shows its address, folder, group, secure connection and whether it is reachable.">
+</picture>
+
 </div>
 
 [Patchy](https://github.com/joeworkman/patchy) is Joe Workman's command-line
@@ -46,6 +53,10 @@ commands for you. It is free, open source, and not affiliated with Joe Workman.
   Mac password.
 - **Menu bar item** with the server's status, start/stop, and a list of sites
   to open. It keeps running when the window is closed.
+
+<div align="center">
+<img src="docs/screenshots/add-site-dark.png" width="760" alt="The Add Site sheet: a large address field showing harbor-cafe with .test added, the folder the site's files live in, a group picker, and a checkbox to also answer at www.">
+</div>
 
 Real web addresses are allowed (`mycompany.com`), with a clear warning first:
 while the server runs, your Mac shows the local copy and cannot reach the live
@@ -207,6 +218,8 @@ The update feed is served by GitHub Pages from `appcast.xml` on the default
 branch, and each release's DMG is attached to its GitHub release.
 
 ## Credits
+
+Patchy UI is made by [Joshua Omilian](https://joshuaomilian.ca).
 
 Patchy is made by [Joe Workman](https://github.com/joeworkman). Patchy UI
 would be nothing without it.
