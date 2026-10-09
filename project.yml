@@ -1,0 +1,52 @@
+name: Patchy UI
+options:
+  bundleIdPrefix: com.87dash
+  deploymentTarget:
+    macOS: "14.0"
+  createIntermediateGroups: true
+packages:
+  PatchyKit:
+    path: PatchyKit
+  Sparkle:
+    url: https://github.com/sparkle-project/Sparkle
+    from: "2.6.0"
+targets:
+  Patchy UI:
+    type: application
+    platform: macOS
+    sources:
+      - PatchyUI
+    dependencies:
+      - package: PatchyKit
+      - package: Sparkle
+    info:
+      path: PatchyUI/Info.plist
+      properties:
+        CFBundleDisplayName: Patchy UI
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSApplicationCategoryType: public.app-category.developer-tools
+        LSMinimumSystemVersion: $(MACOSX_DEPLOYMENT_TARGET)
+        NSHumanReadableCopyright: "Copyright © 2026 Joshua Omilian. MIT License."
+        # Sparkle. The feed is appcast.xml on this repo's GitHub Pages; scripts/release.sh regenerates it.
+        SUFeedURL: https://jeso87.github.io/PatchyUI/appcast.xml
+        # Public half of the EdDSA key release.sh signs updates with (the private half is in the login keychain).
+        SUPublicEDKey: WJdCmygGtLYY1evpoPN3z8zQIJg3FZ3b108A27ynfd8=
+        SUEnableAutomaticChecks: true
+        SUScheduledCheckInterval: 86400
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.87dash.PatchyUI
+        PRODUCT_NAME: Patchy UI
+        # MARKETING_VERSION is the Patchy release this build supports (see PatchyCompatibility).
+        # For an app-only fix on the same Patchy release, add a fourth part: 1.2.1.1.
+        MARKETING_VERSION: "1.2.1"
+        # Sparkle compares this number, not the marketing version. Raise it for every release.
+        CURRENT_PROJECT_VERSION: "1"
+        SWIFT_VERSION: "5.0"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        ENABLE_APP_SANDBOX: NO
+        ENABLE_HARDENED_RUNTIME: YES
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: LY424U3HLD

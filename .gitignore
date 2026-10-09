@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+
+# Build output
+build/
+dist/
+DerivedData/
+.build/
+.swiftpm/
+
+# Xcode per-user state
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.moved-aside
+
+# Signing and notarization material must never be committed
+*.p12
+*.p8
+*.cer
+*.mobileprovision
+*.provisionprofile
+.env
+.env.*
+
+# Editor and tool state
+.idea/
+.vscode/
+.superpowers/
+.claude/settings.local.json
