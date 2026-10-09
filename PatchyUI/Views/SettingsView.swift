@@ -224,6 +224,13 @@ struct AboutSettings: View {
                 LabeledContent("PHP", value: activePHP?.fullVersion ?? model.snapshot.activePHP ?? "–")
             }
             Section {
+                SettingsNote(text: "Patchy UI is free and open source, made by Joshua Omilian.")
+                Link("joshuaomilian.ca", destination: URL(string: "https://joshuaomilian.ca")!)
+                    .foregroundStyle(Theme.link)
+                Link("Patchy UI on GitHub", destination: URL(string: "https://github.com/jeso87/Patchy-UI")!)
+                    .foregroundStyle(Theme.link)
+            }
+            Section {
                 SettingsNote(text: "Patchy UI is a window onto Patchy, the local web server tool made by Joe Workman. Patchy does the real work.")
                 Link("Patchy on GitHub", destination: URL(string: "https://github.com/joeworkman/patchy")!)
                     .foregroundStyle(Theme.link)

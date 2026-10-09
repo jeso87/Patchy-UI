@@ -3,6 +3,21 @@
     <channel>
         <title>Patchy UI</title>
         <item>
+            <title>1.2.1.2</title>
+            <pubDate>Fri, 09 Oct 2026 10:59:15 -0400</pubDate>
+            <sparkle:version>3</sparkle:version>
+            <sparkle:shortVersionString>1.2.1.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="markdown"><![CDATA[### About and links
+
+Settings › About now links to the Patchy UI project on GitHub and to its
+author, Joshua Omilian.
+
+Still made for **Patchy 1.2.1**.
+]]></description>
+            <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.2.1.2/PatchyUI-1.2.1.2.dmg" length="1982286" type="application/octet-stream" sparkle:edSignature="ItQRTHT5CkN2npmbkE/2zEOW1DiUMSElRiZCVHuKa4vJ0lWck5ujyUnRoGWXS1gAq+ecHjE5amks77OpXmLuCw=="/>
+        </item>
+        <item>
             <title>1.2.1.1</title>
             <pubDate>Fri, 09 Oct 2026 10:49:44 -0400</pubDate>
             <sparkle:version>2</sparkle:version>
