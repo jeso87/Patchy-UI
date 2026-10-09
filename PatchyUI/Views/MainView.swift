@@ -94,6 +94,10 @@ struct SidebarView: View {
     var body: some View {
         @Bindable var model = model
         let sections = model.sidebarSections
+        // The footer is stacked under the list, not laid over it as a safe-area inset. As an inset
+        // it covered the last row when the list was scrolled to the end.
+        VStack(spacing: 0) {
+        ScrollViewReader { proxy in
         List(selection: $model.selection) {
             ForEach(sections.groups, id: \.group.id) { entry in
                 // While filtering, groups with no match are hidden and the rest are held open.
@@ -103,7 +107,7 @@ struct SidebarView: View {
                         set: { model.setGroup(entry.group, expanded: $0) })) {
                         ForEach(entry.sites, id: \.self) { address in
                             if let site = model.site(address) {
-                                SiteRow(site: site).tag(address)
+                                SiteRow(site: site).tag(address).id(address)
                             }
                         }
                     } header: {
@@ -126,45 +130,46 @@ struct SidebarView: View {
             }
         }
         .onDeleteCommand { model.askRemove() }
-        .alert(groupPromptTitle, isPresented: Binding(
-            get: { model.groupNamePrompt != nil },
-            set: { if !$0 { model.groupNamePrompt = nil } })) {
+        // Bring a selection made elsewhere into view: a site that was just added, or one picked
+        // from the menu bar.
+        .onChange(of: model.selection) { _, selected in
+            guard let selected else { return }
+            // A row that was only just added isn't laid out yet in this update, and the list
+            // estimates the position of rows it hasn't drawn, so one jump can land short.
+            Task {
+                for delay in [200, 350] {
+                    try? await Task.sleep(for: .milliseconds(delay))
+                    guard model.selection == selected else { return }
+                    proxy.scrollTo(selected, anchor: .center)
+                }
+            }
+        }
+        }
+        .alert(model.groupNameDialogIsRename ? "Rename Group" : "New Group", isPresented: $model.groupNameDialogShown) {
             TextField("Group name", text: $model.groupNameDraft)
-            Button("Cancel", role: .cancel) { model.groupNamePrompt = nil }
-            Button(groupPromptAction) { model.commitGroupName() }
-                .keyboardShortcut(.defaultAction)
+            Button("Cancel", role: .cancel) { model.cancelGroupName() }
+            Button(model.groupNameDialogIsRename ? "Rename" : "Create") { model.commitGroupName() }
         } message: {
             Text("A group keeps related sites together in the sidebar and the menu bar, such as one customer’s sites. It doesn’t change the sites themselves.")
         }
         .overlay(alignment: .top) {
-            if model.sites.isEmpty {
+            if model.sites.isEmpty, model.groups.groups.isEmpty {
                 emptyNote("No sites yet.")
             } else if model.visibleSites.isEmpty {
                 emptyNote("No sites match “\(model.filter)”.")
             }
         }
-        .searchable(text: $model.filter, placement: .sidebar, prompt: "Filter sites")
-        .safeAreaInset(edge: .bottom, spacing: 0) {
-            footer
+        footer
         }
+        .searchable(text: $model.filter, placement: .sidebar, prompt: "Filter sites")
     }
 
     @ViewBuilder private func ungroupedRows(_ addresses: [String]) -> some View {
         ForEach(addresses, id: \.self) { address in
             if let site = model.site(address) {
-                SiteRow(site: site).tag(address)
+                SiteRow(site: site).tag(address).id(address)
             }
         }
-    }
-
-    private var groupPromptTitle: String {
-        if case .rename = model.groupNamePrompt { return "Rename Group" }
-        return "New Group"
-    }
-
-    private var groupPromptAction: String {
-        if case .rename = model.groupNamePrompt { return "Rename" }
-        return "Create"
     }
 
     private func emptyNote(_ text: String) -> some View {
@@ -204,7 +209,6 @@ struct SidebarView: View {
             .padding(.horizontal, 14)
             .padding(.top, 10)
             .padding(.bottom, 12)
-            .background(.bar)
             .overlay(alignment: .top) { Divider() }
         }
     }

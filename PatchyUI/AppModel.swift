@@ -139,7 +139,12 @@ final class AppModel {
     }
     /// Debug layouts try out groups without writing them to the real file.
     @ObservationIgnored private var groupSavingDisabled = false
-    var groupNamePrompt: GroupNamePrompt?
+    /// What the name dialog will do when confirmed. Kept apart from `groupNameDialogShown`
+    /// because SwiftUI closes an alert before it runs the button that was clicked; if closing
+    /// cleared this, the button would find nothing to do.
+    @ObservationIgnored private var groupNamePrompt: GroupNamePrompt?
+    var groupNameDialogShown = false
+    var groupNameDialogIsRename = false
     var groupNameDraft = ""
     @ObservationIgnored private let groupStore = SiteGroupStore.standard
 
@@ -196,13 +201,23 @@ final class AppModel {
     }
 
     func promptNewGroup(assigning address: String? = nil) {
-        groupNameDraft = ""
-        groupNamePrompt = .new(assigning: address)
+        showGroupNameDialog(.new(assigning: address), draft: "")
     }
 
     func promptRenameGroup(_ group: SiteGroup) {
-        groupNameDraft = group.name
-        groupNamePrompt = .rename(group.id)
+        showGroupNameDialog(.rename(group.id), draft: group.name)
+    }
+
+    private func showGroupNameDialog(_ prompt: GroupNamePrompt, draft: String) {
+        groupNamePrompt = prompt
+        groupNameDraft = draft
+        if case .rename = prompt { groupNameDialogIsRename = true } else { groupNameDialogIsRename = false }
+        // Shown a moment after the draft is set; an alert's text field ignores text set in the
+        // same update that presents it, and a rename would open with an empty field.
+        Task {
+            try? await Task.sleep(for: .milliseconds(50))
+            groupNameDialogShown = true
+        }
     }
 
     func commitGroupName() {
@@ -214,6 +229,10 @@ final class AppModel {
         case nil:
             break
         }
+        groupNamePrompt = nil
+    }
+
+    func cancelGroupName() {
         groupNamePrompt = nil
     }
 
