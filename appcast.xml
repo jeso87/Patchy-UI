@@ -3,6 +3,21 @@
     <channel>
         <title>Patchy UI</title>
         <item>
+            <title>1.2.1.1</title>
+            <pubDate>Fri, 09 Oct 2026 10:49:44 -0400</pubDate>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>1.2.1.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="markdown"><![CDATA[### A maintenance release
+
+Nothing changes in how Patchy UI works. This release confirms that updates
+arrive and install correctly, and tidies up how releases are built.
+
+Still made for **Patchy 1.2.1**.
+]]></description>
+            <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.2.1.1/PatchyUI-1.2.1.1.dmg" length="1980111" type="application/octet-stream" sparkle:edSignature="oG7AQ+c/OlaE1hNfrsqvPEHRNeMgsjVB5vEh7HCQOKy+khNKz8o7rqnU5y3zhdszyJroFJzx7eMGweN6q5LaDg=="/>
+        </item>
+        <item>
             <title>1.2.1</title>
             <pubDate>Fri, 09 Oct 2026 10:37:34 -0400</pubDate>
             <sparkle:version>1</sparkle:version>
