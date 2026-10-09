@@ -85,8 +85,13 @@ mkdir -p "$STAGE"
 cp -R "$APP" "$STAGE/"
 ln -s /Applications "$STAGE/Applications"
 cp LICENSE "$STAGE/"
-hdiutil create -volname "Patchy UI" -srcfolder "$STAGE" -ov -format ULFO "$DMG" >/dev/null
-rm -rf "$STAGE"
+# HFS+, built read-write and then compressed. A DMG created directly from a folder comes out
+# APFS on current macOS, and notarytool's local pre-check hangs on it forever without uploading.
+RW_DMG="build/dmg-rw.dmg"
+rm -f "$RW_DMG"
+hdiutil create -volname "Patchy UI" -srcfolder "$STAGE" -ov -fs HFS+ -format UDRW "$RW_DMG" >/dev/null
+hdiutil convert "$RW_DMG" -format ULFO -ov -o "$DMG" >/dev/null
+rm -rf "$RW_DMG" "$STAGE"
 
 echo "==> signing DMG"
 codesign --force --sign "$IDENTITY" --timestamp "$DMG"
