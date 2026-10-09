@@ -183,6 +183,16 @@ struct AddSiteSheet: View {
 
         FolderCard(folder: $model.add.folder)
 
+        if !model.sortedGroups.isEmpty {
+            Picker("Group", selection: $model.add.groupID) {
+                Text("No Group").tag(UUID?.none)
+                ForEach(model.sortedGroups) { group in
+                    Text(group.name).tag(UUID?.some(group.id))
+                }
+            }
+            .fixedSize()
+        }
+
         if valid, draft.offersWWW {
             Toggle(isOn: $model.add.includeWWW) { Text(verbatim: "Also answer at www.\(draft.finalAddress)") }
                 .toggleStyle(.checkbox)

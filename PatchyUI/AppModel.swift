@@ -54,6 +54,13 @@ enum TrustStep: Equatable {
     case explain, password, working, done
 }
 
+/// What the group-name dialog is for.
+enum GroupNamePrompt: Equatable {
+    /// A new group, optionally starting with one site in it.
+    case new(assigning: String?)
+    case rename(UUID)
+}
+
 struct PasswordPrompt: Equatable {
     var error: String?
     var checking = false
@@ -66,6 +73,8 @@ struct AddDraft: Equatable {
 
     var name = ""
     var folder: URL?
+    /// The group the new site joins, if any.
+    var groupID: UUID?
     var includeWWW = true
     var confirmedReal = false
     var phase: Phase = .form
@@ -124,6 +133,16 @@ final class AppModel {
 
     var compatibilityDismissed = false
 
+    /// Sidebar groups. They live only in this app; Patchy knows nothing about them.
+    var groups = SiteGroups() {
+        didSet { if groups != oldValue, !groupSavingDisabled { groupStore.save(groups) } }
+    }
+    /// Debug layouts try out groups without writing them to the real file.
+    @ObservationIgnored private var groupSavingDisabled = false
+    var groupNamePrompt: GroupNamePrompt?
+    var groupNameDraft = ""
+    @ObservationIgnored private let groupStore = SiteGroupStore.standard
+
     /// Created on first use so `--dump-state` never starts Sparkle.
     @ObservationIgnored lazy var updater = AppUpdater()
 
@@ -152,10 +171,66 @@ final class AppModel {
     var selectedSite: Site? { sites.first { $0.address == selection } }
     var addresses: [String] { sites.map(\.address) }
 
+    var isFiltering: Bool { !filter.trimmingCharacters(in: .whitespaces).isEmpty }
+
+    /// Sites matching the filter by address, folder, or the name of their group.
     var visibleSites: [Site] {
         let query = filter.trimmingCharacters(in: .whitespaces).lowercased()
         guard !query.isEmpty else { return sites }
-        return sites.filter { $0.address.contains(query) || $0.folder.lowercased().contains(query) }
+        return sites.filter {
+            $0.address.contains(query) || $0.folder.lowercased().contains(query)
+                || (groups.group(of: $0.address)?.name.lowercased().contains(query) ?? false)
+        }
+    }
+
+    func site(_ address: String) -> Site? { sites.first { $0.address == address } }
+
+    // MARK: Groups
+
+    var sidebarSections: SiteGroups.Sections { groups.sections(for: visibleSites.map(\.address)) }
+    var sortedGroups: [SiteGroup] { groups.sections(for: []).groups.map(\.group) }
+    var groupSuggestion: SiteGroups.Suggestion? { groups.suggestions(for: addresses).first }
+
+    func moveSite(_ address: String, to groupID: UUID?) {
+        groups.assign(address, to: groupID)
+    }
+
+    func promptNewGroup(assigning address: String? = nil) {
+        groupNameDraft = ""
+        groupNamePrompt = .new(assigning: address)
+    }
+
+    func promptRenameGroup(_ group: SiteGroup) {
+        groupNameDraft = group.name
+        groupNamePrompt = .rename(group.id)
+    }
+
+    func commitGroupName() {
+        switch groupNamePrompt {
+        case .new(let address):
+            groups.createGroup(named: groupNameDraft, sites: address.map { [$0] } ?? [])
+        case .rename(let id):
+            groups.rename(id, to: groupNameDraft)
+        case nil:
+            break
+        }
+        groupNamePrompt = nil
+    }
+
+    func deleteGroup(_ group: SiteGroup) {
+        groups.delete(group.id)
+    }
+
+    func setGroup(_ group: SiteGroup, expanded: Bool) {
+        groups.setCollapsed(!expanded, for: group.id)
+    }
+
+    func applyGroupSuggestion(_ suggestion: SiteGroups.Suggestion) {
+        groups.createGroup(named: suggestion.name, sites: suggestion.sites)
+    }
+
+    func dismissGroupSuggestion(_ suggestion: SiteGroups.Suggestion) {
+        groups.dismiss(suggestion)
     }
 
     func status(of site: Site) -> SiteStatus {
@@ -206,6 +281,7 @@ final class AppModel {
     func launch() {
         guard pollTask == nil else { return }
         _ = updater
+        groups = groupStore.load()
         pollTask = Task { [weak self] in
             await self?.detect()
             #if DEBUG
@@ -527,6 +603,7 @@ final class AppModel {
         guard requireTrust(for: .add) else { return }
         let address = add.finalAddress
         let includeWWW = add.offersWWW && add.includeWWW
+        let groupID = add.groupID
         let steps = ["Pointing \(address) at this Mac", "Creating a secure certificate", "Setting up the site",
                      "Checking the setup", "Restarting the server"]
         add.steps = steps
@@ -556,6 +633,7 @@ final class AppModel {
             }
             #endif
             if sites.contains(where: { $0.address == address }) {
+                if let groupID { groups.assign(address, to: groupID) }
                 selection = address
                 tab = .overview
                 filter = ""
@@ -610,6 +688,7 @@ final class AppModel {
                                          message: "The site is still set up exactly as it was. Show Details has the exact message from Patchy.",
                                          details: result.output))
             } else {
+                groups.remove(address)
                 selection = sites.isEmpty ? nil : sites[min(index, sites.count - 1)].address
                 tab = .overview
                 banner = Banner(severity: .ok, text: "\(address) was removed. Its folder is still in place.")
@@ -734,12 +813,17 @@ extension AppModel {
     /// Opens the app in a given state for checking layouts, e.g.
     /// `-PatchyDebugSheet add -PatchyDebugName harborcafe.com -PatchyDebugTab errors -PatchyDebugSite mysite.test`.
     /// Nothing here runs a command.
-    fileprivate func applyDebugLaunchState() {
+    func applyDebugLaunchState() {
         let defaults = UserDefaults.standard
         if let site = defaults.string(forKey: "PatchyDebugSite"), addresses.contains(site) { selection = site }
         if let tab = defaults.string(forKey: "PatchyDebugTab").flatMap(DetailTab.init(rawValue:)) { self.tab = tab }
         if defaults.string(forKey: "PatchyDebugPhase") == "notinstalled" { phase = .notInstalled(homebrewMissing: false) }
         if defaults.string(forKey: "PatchyDebugPhase") == "empty" { snapshot.sites = []; selection = nil; pauseRefreshForDebug = true }
+        if defaults.bool(forKey: "PatchyDebugGroups") {
+            // Turn the first two suggestions into groups, in memory only.
+            groupSavingDisabled = true
+            for suggestion in groups.suggestions(for: addresses).prefix(2) { applyGroupSuggestion(suggestion) }
+        }
         switch defaults.string(forKey: "PatchyDebugSheet") {
         case "add":
             add = AddDraft(name: defaults.string(forKey: "PatchyDebugName") ?? "", folder: URL(fileURLWithPath: NSHomeDirectory()).appending(path: "Websites"))

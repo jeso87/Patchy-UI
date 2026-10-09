@@ -54,6 +54,7 @@ Two layers. Keep anything that isn't UI in the package so it stays testable.
 - `AppModel` (`@Observable`, main actor) owns all state. `runTask` is the single path for changing commands: one at a time, progress steps advanced by matching markers in Patchy's output, then a fresh snapshot. Success is always judged by re-reading state, never by exit code.
 - One sheet at a time, driven by `AppModel.sheet`; `SheetHost` renders it. A sudo password request (`passwordPrompt`) takes over whatever sheet is showing.
 - Changes that touch routing go through `requireTrust`, which offers password-free setup first and then resumes the pending action.
+- Sidebar groups (`SiteGroups` in PatchyKit) exist only in this app, stored in `~/Library/Application Support/Patchy UI/groups.json`. A site is in at most one group; deleting a group only ungroups its sites. Suggestions are offered, never applied. `-PatchyDebugGroups YES` shows demo groups in memory without writing that file.
 - `SiteStatus` turns a site into the plain-language health text used by the list, detail pane and menu.
 - Scenes: the main `Window`, a `MenuBarExtra` (standard menu), and `Settings`. Closing the window leaves the menu bar item running.
 
