@@ -18,16 +18,18 @@ struct MainView: View {
                 ServerPill()
             }
             ToolbarItemGroup(placement: .primaryAction) {
-                if !model.isBusy {
-                    if model.serverRunning {
-                        Button(model.unroutedCount > 0 ? "Repair" : "Restart") { model.restart() }
-                            .help("Restart the server (also repairs addresses)")
-                        Button("Stop") { model.stop() }
-                            .help("Stop the server and release your addresses")
-                    } else {
-                        Button("Start Server") { model.start() }
-                            .buttonStyle(.borderedProminent)
-                    }
+                // The buttons stay in place while a task runs, disabled, so the toolbar doesn't jump.
+                if model.serverRunning {
+                    Button(model.unroutedCount > 0 ? "Repair" : "Restart") { model.restart() }
+                        .help("Restart the server (also repairs addresses)")
+                        .disabled(model.isBusy)
+                    Button("Stop") { model.stop() }
+                        .help("Stop the server and release your addresses")
+                        .disabled(model.isBusy)
+                } else {
+                    Button("Start Server") { model.start() }
+                        .buttonStyle(.borderedProminent)
+                        .disabled(model.isBusy)
                 }
                 Button {
                     model.openAdd()
@@ -105,14 +107,7 @@ struct SidebarView: View {
                 emptyNote("No sites match “\(model.filter)”.")
             }
         }
-        .safeAreaInset(edge: .top, spacing: 0) {
-            TextField("Filter sites", text: $model.filter)
-                .textFieldStyle(.roundedBorder)
-                .padding(.horizontal, 12)
-                .padding(.bottom, 8)
-                .background(.bar)
-                .accessibilityLabel("Filter sites")
-        }
+        .searchable(text: $model.filter, placement: .sidebar, prompt: "Filter sites")
         .safeAreaInset(edge: .bottom, spacing: 0) {
             footer
         }
@@ -199,6 +194,7 @@ struct DetailColumn: View {
     var body: some View {
         VStack(spacing: 0) {
             BannerStack()
+                .layoutPriority(1)
             if model.sites.isEmpty {
                 FirstSiteView()
             } else if let site = model.selectedSite {
@@ -267,9 +263,13 @@ struct BannerRow: View {
     var body: some View {
         HStack(spacing: 10) {
             Glyph(severity: severity)
+            // No vertical fixedSize here. This row sits outside any scroll view, so its height counts
+            // toward the window's minimum height, and a fixed-height text measured at the narrowest
+            // width reports many lines. That pushed the minimum past the window's height and left the
+            // whole window's content taller than the window.
             Text(text)
+                .lineLimit(4)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .fixedSize(horizontal: false, vertical: true)
             if let actionTitle {
                 Button(actionTitle, action: action)
                     .controlSize(.small)

@@ -70,6 +70,8 @@ Two layers. Keep anything that isn't UI in the package so it stays testable.
 - The design source is the Claude Design project "Patchy UI"; the brief it was built from is `docs/patchy-ui-product-brief.md`. Chosen variants: toolbar server controls (1a), name-your-first-site empty state (1d), big-address Add Site sheet (1f), standard menu bar menu (1g), rack icon filling the whole icon shape with no light border.
 - The user always chooses a site's folder. The app never assigns `~/Websites/<address>` by default.
 - UI copy uses plain terms (site, address, folder, server, password-free mode). Technical terms and raw Patchy output appear only behind "Show Details".
+- Never put `.fixedSize(horizontal: false, vertical: true)` on text that sits outside a scroll view in the main window (banners, headers, footers). Its height then counts toward the window's minimum height, measured at the narrowest width, where it wraps to many lines. That once made the window's content 200 points taller than the window, pushing the top under the toolbar. Use `.lineLimit` there. It is fine inside scroll views and sheets.
+- To check a layout change against the add flow without touching Patchy, launch a Debug build with `-PatchyDebugSheet add -PatchyDebugName <name> -PatchyDebugFakeAdd YES`, click Add Site, and compare the split view's size with the window's (System Events: `size of splitter group 1 of group 1 of window 1`).
 - Text that contains a site address must use `Text(verbatim:)`; otherwise SwiftUI turns the address into a link.
 
 ## How Patchy works (what the GUI has to drive)

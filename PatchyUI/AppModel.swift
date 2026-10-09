@@ -537,10 +537,24 @@ final class AppModel {
                 ("Creating SSL certificates", 1), ("Creating Apache config file", 2),
                 ("Syntax OK", 3), ("Restarting Apache", 4),
             ]) { client, askpass, output in
-                await client.addSite(address: address, folder: folder.path, includeWWW: includeWWW,
-                                     askpass: askpass, onOutput: output)
+                #if DEBUG
+                if UserDefaults.standard.bool(forKey: "PatchyDebugFakeAdd") {
+                    try? await Task.sleep(for: .seconds(3))
+                    return CommandResult(exitCode: 0, output: "")
+                }
+                #endif
+                return await client.addSite(address: address, folder: folder.path, includeWWW: includeWWW,
+                                            askpass: askpass, onOutput: output)
             }
             let lastIndex = lastTaskIndex
+            #if DEBUG
+            if UserDefaults.standard.bool(forKey: "PatchyDebugFakeAdd"), var fake = snapshot.sites.first {
+                // Pretend the site now exists, so the real success path runs without touching Patchy.
+                pauseRefreshForDebug = true
+                fake.address = address
+                snapshot.sites = (snapshot.sites + [fake]).sorted { $0.address < $1.address }
+            }
+            #endif
             if sites.contains(where: { $0.address == address }) {
                 selection = address
                 tab = .overview
@@ -737,6 +751,32 @@ extension AppModel {
         case "adderror":
             add = AddDraft(name: "harbor-cafe", phase: .error, errorMessage: Self.addFailureMessage(output: "Rolling back"), errorDetails: "$ patchy add harbor-cafe.test\nApache configuration is invalid.\nRolling back site creation...")
             sheet = .add
+        case "addsuccess":
+            // Replays what the window does when an add finishes, without adding anything.
+            add = AddDraft(name: "harbor-cafe", folder: URL(fileURLWithPath: NSHomeDirectory()))
+            sheet = .add
+            Task {
+                // Start on the form so the address field takes keyboard focus, as it does for a person.
+                try? await Task.sleep(for: .seconds(2))
+                add.steps = ["Pointing harbor-cafe.test at this Mac", "Restarting the server"]
+                add.phase = .progress
+                busy = Busy(steps: add.steps)
+                try? await Task.sleep(for: .seconds(1))
+                busy?.index = 1
+                try? await Task.sleep(for: .seconds(1))
+                // A new row arrives in the same update as the selection change, as in a real add.
+                pauseRefreshForDebug = true
+                var fake = snapshot.sites[0]
+                fake.address = "patchyui-fake.test"
+                snapshot.sites = (snapshot.sites + [fake]).sorted { $0.address < $1.address }
+                busy = nil
+                selection = defaults.string(forKey: "PatchyDebugSelectAfter") ?? fake.address
+                tab = .overview
+                filter = ""
+                add = AddDraft()
+                sheet = nil
+                banner = Banner(severity: .ok, text: "harbor-cafe.test is ready.", openAddress: selection)
+            }
         case "remove": if let selection { sheet = .remove(selection) }
         case "folder": if let selection { sheet = .folder(selection) }
         case "trust": openTrustSetup()
