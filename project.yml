@@ -29,7 +29,7 @@ targets:
         LSMinimumSystemVersion: $(MACOSX_DEPLOYMENT_TARGET)
         NSHumanReadableCopyright: "Copyright © 2026 Joshua Omilian. MIT License."
         # Sparkle. The feed is appcast.xml on this repo's GitHub Pages; scripts/release.sh regenerates it.
-        SUFeedURL: https://jeso87.github.io/PatchyUI/appcast.xml
+        SUFeedURL: https://jeso87.github.io/Patchy-UI/appcast.xml
         # Public half of the EdDSA key release.sh signs updates with (the private half is in the login keychain).
         SUPublicEDKey: WJdCmygGtLYY1evpoPN3z8zQIJg3FZ3b108A27ynfd8=
         SUEnableAutomaticChecks: true

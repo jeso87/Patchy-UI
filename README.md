@@ -7,7 +7,7 @@
 **Host websites on your Mac without opening Terminal.**
 A native macOS window and menu bar item for [Patchy](https://github.com/joeworkman/patchy).
 
-[![Download](https://img.shields.io/github/v/release/jeso87/PatchyUI?label=download&color=B85207)](https://github.com/jeso87/PatchyUI/releases/latest/download/PatchyUI.dmg)
+[![Download](https://img.shields.io/github/v/release/jeso87/Patchy-UI?label=download&color=B85207)](https://github.com/jeso87/Patchy-UI/releases/latest/download/PatchyUI.dmg)
 [![Platform](https://img.shields.io/badge/macOS-14%2B-DC701C)](#requirements)
 [![License](https://img.shields.io/badge/license-MIT-2B2622)](LICENSE)
 
@@ -62,7 +62,7 @@ install Homebrew or Patchy for you.
 
 ## Install
 
-Download [PatchyUI.dmg](https://github.com/jeso87/PatchyUI/releases/latest/download/PatchyUI.dmg),
+Download [PatchyUI.dmg](https://github.com/jeso87/Patchy-UI/releases/latest/download/PatchyUI.dmg),
 open it, and drag Patchy UI to Applications. The app is signed and notarized.
 
 ## Version numbers follow Patchy
@@ -136,8 +136,8 @@ You need Xcode and [XcodeGen](https://github.com/yonaskolb/XcodeGen)
 (`brew install xcodegen`).
 
 ```bash
-git clone https://github.com/jeso87/PatchyUI.git
-cd PatchyUI
+git clone https://github.com/jeso87/Patchy-UI.git
+cd Patchy-UI
 xcodegen generate
 open "Patchy UI.xcodeproj"
 ```
