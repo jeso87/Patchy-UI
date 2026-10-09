@@ -78,7 +78,7 @@ struct SiteStatus {
             reachable = Line(severity: .error, label: "Opens, but shows an error",
                              detail: "There’s no folder to serve files from.")
         } else {
-            reachable = Line(severity: .ok, label: "Yes", detail: "Also from phones and other devices on your network.")
+            reachable = Line(severity: .ok, label: "Yes", detail: "Opens in any browser on this Mac.")
         }
     }
 }
