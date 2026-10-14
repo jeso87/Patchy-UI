@@ -77,7 +77,7 @@ struct MenuBarContent: View {
     var body: some View {
         if model.phase == .ready {
             Text(model.isBusy ? (model.busy?.text ?? "Working…") : model.serverRunning ? "Server running" : "Server stopped")
-            Text("\(pluralized(model.sites.count, "site")) · \(model.phpLabel)")
+            Text(verbatim: "\(Phrases.siteCount(model.sites.count)) · \(model.phpLabel)")
 
             if model.serverRunning {
                 Button(model.unroutedCount > 0 ? "Repair" : "Restart Server") { model.restart() }
@@ -110,7 +110,7 @@ struct MenuBarContent: View {
 
             let problems = model.problemSites.count
             if problems > 0 {
-                Button("\(pluralized(problems, "site")) need\(problems == 1 ? "s" : "") attention…") { model.showAttention() }
+                Button(Phrases.sitesNeedAttention(problems)) { model.showAttention() }
             }
 
             Divider()

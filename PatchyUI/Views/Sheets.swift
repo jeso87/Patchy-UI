@@ -430,7 +430,7 @@ struct RefreshCertificatesSheet: View {
     @Environment(AppModel.self) private var model
 
     var body: some View {
-        SheetTitle(title: "Refresh certificates for \(model.sites.count == 1 ? "your site" : "all \(model.sites.count) sites")?",
+        SheetTitle(title: Phrases.refreshCertificatesTitle(siteCount: model.sites.count),
                    message: "Patchy makes a new certificate for every site at once, so https:// keeps working without browser warnings. This can take up to a minute.")
         VStack(alignment: .leading, spacing: 8) {
             bullet("macOS will ask for your Mac password.")

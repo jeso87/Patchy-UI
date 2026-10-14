@@ -159,7 +159,7 @@ struct LogView: View {
 
             Spacer()
 
-            Button(copied ? "Copied" : log.selected.isEmpty ? "Copy" : "Copy \(pluralized(log.selected.count, "Line"))") {
+            Button(copyTitle) {
                 log.copySelection()
                 copied = true
                 Task {
@@ -182,6 +182,12 @@ struct LogView: View {
         .padding(.leading, 28)
         .padding(.trailing, 16)
         .padding(.vertical, 8)
+    }
+
+    private var copyTitle: String {
+        if copied { return String(localized: "Copied") }
+        if log.selected.isEmpty { return String(localized: "Copy") }
+        return Phrases.copyLines(log.selected.count)
     }
 
     private var emptyState: some View {

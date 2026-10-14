@@ -42,9 +42,9 @@ struct SiteStatus {
                                    detail: "Expired on \(date). Browsers will warn that this site isn’t secure.")
                 certShort = "Certificate expired"
             } else if days <= 30 {
-                certificate = Line(severity: .warning, label: "Expires in \(pluralized(days, "day"))",
+                certificate = Line(severity: .warning, label: Phrases.expiresIn(days: days),
                                    detail: "Valid until \(date). Refresh before then to avoid browser warnings.")
-                certShort = "Certificate expires in \(pluralized(days, "day"))"
+                certShort = Phrases.certificateExpiresIn(days: days)
             } else {
                 certificate = Line(severity: .ok, label: "Secure · \(days) days left", detail: "Valid until \(date).")
                 certShort = "Secure · \(days) days"
@@ -60,7 +60,7 @@ struct SiteStatus {
 
         if let first = issues.first {
             severity = first.severity
-            summary = first.text + (issues.count > 1 ? " · \(issues.count - 1) more" : "")
+            summary = Phrases.statusSummary(first.text, more: issues.count - 1)
         } else if serverRunning {
             severity = .ok
             summary = certShort

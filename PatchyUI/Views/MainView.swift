@@ -12,7 +12,7 @@ struct MainView: View {
             DetailColumn()
         }
         .navigationTitle("Patchy")
-        .navigationSubtitle(pluralized(model.sites.count, "site"))
+        .navigationSubtitle(Phrases.siteCount(model.sites.count))
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 ServerPill()
@@ -298,13 +298,13 @@ struct GroupHeader: View {
                     .foregroundStyle(.tertiary)
                 if problems > 0 {
                     Glyph(severity: .warning, size: 12)
-                        .help("\(pluralized(problems, "site")) in this group need\(problems == 1 ? "s" : "") attention")
+                        .help(Phrases.sitesInGroupNeedAttention(problems))
                 }
                 Spacer(minLength: 0)
             }
             .contentShape(Rectangle())
             .accessibilityElement(children: .ignore)
-            .accessibilityLabel("\(group.name), \(pluralized(sites.count, "site"))\(problems > 0 ? ", \(problems) need attention" : "")")
+            .accessibilityLabel(Phrases.groupAccessibilityLabel(name: group.name, sites: sites.count, problems: problems))
         }
         .contextMenu {
             Button("Rename…") { model.promptRenameGroup(group) }
@@ -411,9 +411,8 @@ struct BannerStack: View {
                 }
             }
             if !model.isBusy, model.unroutedCount > 0 {
-                let count = model.unroutedCount
                 BannerRow(severity: .warning,
-                          text: "\(count) site\(count == 1 ? " isn’t" : "s aren’t") pointing at this Mac right now, so \(count == 1 ? "it won’t" : "they won’t") open. Repair fixes this by restarting the server.",
+                          text: Phrases.unrouted(model.unroutedCount),
                           actionTitle: "Repair", action: { model.restart() })
             }
             if !model.isBusy, !model.sites.isEmpty, !model.serverRunning {
