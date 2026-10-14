@@ -3,6 +3,21 @@
     <channel>
         <title>Patchy UI</title>
         <item>
+            <title>1.2.1.4</title>
+            <pubDate>Wed, 14 Oct 2026 11:29:16 -0400</pubDate>
+            <sparkle:version>5</sparkle:version>
+            <sparkle:shortVersionString>1.2.1.4</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="markdown"><![CDATA[### Fixes
+
+- Setting up password-free mode works again. Before, it failed after you entered your Mac password, with a message that a terminal is required.
+- If password-free mode still can’t be set up from the app, the message now explains how to turn it on from Terminal instead.
+
+Still made for **Patchy 1.2.1**.
+]]></description>
+            <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.2.1.4/PatchyUI-1.2.1.4.dmg" length="1986375" type="application/octet-stream" sparkle:edSignature="HFHJcnka3O2XlQ11ApC2CWIXGBuEflfRCLc4tqaKyBgiuskWSvw6vmIrK2tm0PghHWlHyAWaxSNDZVuFme3qAQ=="/>
+        </item>
+        <item>
             <title>1.2.1.3</title>
             <pubDate>Fri, 09 Oct 2026 20:52:38 -0400</pubDate>
             <sparkle:version>4</sparkle:version>
@@ -32,21 +47,6 @@ author, Joshua Omilian.
 Still made for **Patchy 1.2.1**.
 ]]></description>
             <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.2.1.2/PatchyUI-1.2.1.2.dmg" length="1982286" type="application/octet-stream" sparkle:edSignature="ItQRTHT5CkN2npmbkE/2zEOW1DiUMSElRiZCVHuKa4vJ0lWck5ujyUnRoGWXS1gAq+ecHjE5amks77OpXmLuCw=="/>
-        </item>
-        <item>
-            <title>1.2.1.1</title>
-            <pubDate>Fri, 09 Oct 2026 10:49:44 -0400</pubDate>
-            <sparkle:version>2</sparkle:version>
-            <sparkle:shortVersionString>1.2.1.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### A maintenance release
-
-Nothing changes in how Patchy UI works. This release confirms that updates
-arrive and install correctly, and tidies up how releases are built.
-
-Still made for **Patchy 1.2.1**.
-]]></description>
-            <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.2.1.1/PatchyUI-1.2.1.1.dmg" length="1980111" type="application/octet-stream" sparkle:edSignature="oG7AQ+c/OlaE1hNfrsqvPEHRNeMgsjVB5vEh7HCQOKy+khNKz8o7rqnU5y3zhdszyJroFJzx7eMGweN6q5LaDg=="/>
         </item>
     </channel>
 </rss>
