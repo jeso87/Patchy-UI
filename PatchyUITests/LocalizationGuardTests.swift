@@ -186,6 +186,50 @@ final class LocalizationGuardTests: XCTestCase {
         }
     }
 
+    /// The merge script is the only thing that writes translations into the catalog, so it must
+    /// round-trip without disturbing English. Driven through a throwaway language so the test needs
+    /// no real translations and leaves nothing behind.
+    func testMergingALanguageLeavesEnglishUntouched() throws {
+        let root = Self.repoRoot()
+        let catalog = Self.catalogURL()
+        let before = try String(contentsOf: catalog, encoding: .utf8)
+        let probe = root.appendingPathComponent("translations/zz.json")
+        defer {
+            try? FileManager.default.removeItem(at: probe)
+            try? before.write(to: catalog, atomically: true, encoding: .utf8)
+        }
+        try #"{ "Repair" : "ZZ-REPAIR", "%lld sites" : { "one" : "ZZ %lld", "other" : "ZZ %lld" } }"#
+            .write(to: probe, atomically: true, encoding: .utf8)
+
+        let (status, output) = try Self.runScript("merge-translations.py")
+        XCTAssertEqual(status, 0, output)
+
+        let after = try String(contentsOf: catalog, encoding: .utf8)
+        XCTAssertTrue(after.contains("ZZ-REPAIR"), "the flat translation was not merged")
+        XCTAssertTrue(after.contains("ZZ %lld"), "the plural translation was not merged")
+
+        // Every English value is exactly what it was.
+        func englishValues(_ text: String) throws -> [String: String] {
+            let json = try XCTUnwrap(JSONSerialization.jsonObject(with: Data(text.utf8)) as? [String: Any])
+            let strings = try XCTUnwrap(json["strings"] as? [String: Any])
+            var out: [String: String] = [:]
+            for (key, entry) in strings {
+                let en = (((entry as? [String: Any])?["localizations"] as? [String: Any])?["en"] as? [String: Any]) ?? [:]
+                out[key] = Self.values(of: en).sorted().joined(separator: "|")
+            }
+            return out
+        }
+        XCTAssertEqual(try englishValues(after), try englishValues(before), "English must survive the merge byte for byte")
+    }
+
+    /// Every language that exists must carry every key. One merged half-written would sit in the
+    /// catalog looking finished and fall back to English for whatever it lacks.
+    func testEveryLanguagePresentIsComplete() throws {
+        try XCTSkipIf(Self.translatedLanguages().isEmpty, "no languages have landed yet")
+        let (status, output) = try Self.runScript("merge-translations.py", "--check")
+        XCTAssertEqual(status, 0, "merge-translations.py --check reported an incomplete or stale language:\n\(output)")
+    }
+
     // MARK: - Helpers
 
     static func catalog() throws -> [String: Any] {
@@ -203,5 +247,32 @@ final class LocalizationGuardTests: XCTestCase {
         URL(fileURLWithPath: #filePath)
             .deletingLastPathComponent()  // PatchyUITests
             .deletingLastPathComponent()  // repo root
+    }
+
+    /// Languages with a file in translations/.
+    static func translatedLanguages() -> [String] {
+        let dir = repoRoot().appendingPathComponent("translations")
+        let files = (try? FileManager.default.contentsOfDirectory(atPath: dir.path)) ?? []
+        return files.filter { $0.hasSuffix(".json") }.map { String($0.dropLast(5)) }.filter { $0 != "zz" }.sorted()
+    }
+
+    /// Runs a script in scripts/ with python3 and returns its exit status and combined output.
+    static func runScript(_ name: String, _ arguments: String...) throws -> (Int32, String) {
+        let process = Process()
+        process.executableURL = URL(fileURLWithPath: "/usr/bin/env")
+        process.arguments = ["python3", repoRoot().appendingPathComponent("scripts/\(name)").path] + arguments
+        let pipe = Pipe()
+        process.standardOutput = pipe
+        process.standardError = pipe
+        try process.run()
+        process.waitUntilExit()
+        return (process.terminationStatus, String(decoding: pipe.fileHandleForReading.readDataToEndOfFile(), as: UTF8.self))
+    }
+
+    /// Every stringUnit value in a localization, flat or plural.
+    static func values(of localization: [String: Any]) -> [String] {
+        if let value = (localization["stringUnit"] as? [String: Any])?["value"] as? String { return [value] }
+        guard let plural = (localization["variations"] as? [String: Any])?["plural"] as? [String: Any] else { return [] }
+        return plural.values.compactMap { (($0 as? [String: Any])?["stringUnit"] as? [String: Any])?["value"] as? String }
     }
 }
