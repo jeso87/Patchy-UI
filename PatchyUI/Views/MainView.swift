@@ -349,7 +349,7 @@ struct GroupSuggestionCard: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text(verbatim: "\(suggestion.sites.count) sites look related: \(suggestion.sites.joined(separator: ", "))")
+            Text(verbatim: Phrases.relatedSites(suggestion.sites))
                 .lineLimit(3)
                 .foregroundStyle(.primary)
             HStack(spacing: 12) {

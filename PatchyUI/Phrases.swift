@@ -3,6 +3,23 @@ import Foundation
 /// Copy that changes with a count or a list. Kept in one place so tests can pin the English,
 /// and so the string catalog can give each language its own plural forms and word order.
 enum Phrases {
+    /// Between names in a list. English ", "; CJK languages use "、".
+    static var listSeparator: String {
+        String(localized: "list separator", defaultValue: ", ",
+               comment: "Separates names in a list of websites or apps. English uses a comma and a space; CJK languages use 、")
+    }
+
+    /// The tail of a shortened list: "2 more".
+    static func more(_ count: Int) -> String {
+        String(localized: "\(count) more", comment: "How many names a shortened list left out, e.g. “a.com and b.com and 2 more”.")
+    }
+
+    /// The group suggestion card: "2 sites look related: acme.test, shop.acme.test".
+    static func relatedSites(_ addresses: [String]) -> String {
+        String(localized: "\(addresses.count) sites look related: \(addresses.joined(separator: listSeparator))",
+               comment: "Sidebar suggestion to group websites with similar names. Always two or more. The list is the addresses.")
+    }
+
     /// "1 site", "12 sites".
     static func siteCount(_ count: Int) -> String {
         String(localized: "\(count) sites", comment: "A number of websites, e.g. in the window subtitle and the sidebar footer.")
@@ -15,6 +32,7 @@ enum Phrases {
 
     /// The sidebar footer: "12 sites", or "12 sites · 1 needs attention".
     static func footer(siteCount count: Int, problems: Int) -> String {
+        // " · " joins two separate facts, as the sidebar and menu do elsewhere; it is not grammar.
         problems == 0 ? siteCount(count) : siteCount(count) + " · " + needAttention(problems)
     }
 
@@ -32,7 +50,7 @@ enum Phrases {
     static func groupAccessibilityLabel(name: String, sites: Int, problems: Int) -> String {
         var parts = [name, siteCount(sites)]
         if problems > 0 { parts.append(needAttention(problems)) }
-        return parts.joined(separator: ", ")
+        return parts.joined(separator: listSeparator)
     }
 
     /// Settings › Certificates headline.
@@ -74,23 +92,48 @@ enum Phrases {
 
     /// After stopping the server: which real addresses reach the internet again.
     static func liveAgain(_ addresses: [String]) -> String {
-        let names = addresses.prefix(2).joined(separator: " and ") + (addresses.count > 2 ? " and \(addresses.count - 2) more" : "")
-        return "\(names) now reach\(addresses.count > 1 ? "" : "es") the live website\(addresses.count > 1 ? "s" : "") again."
+        switch addresses.count {
+        case 0:
+            return ""
+        case 1:
+            return String(localized: "\(addresses[0]) now reaches the live website again.",
+                          comment: "Banner after stopping the server. The placeholder is a real web address that this Mac no longer serves locally.")
+        case 2:
+            return String(localized: "\(addresses[0]) and \(addresses[1]) now reach the live websites again.",
+                          comment: "Banner after stopping the server. Both placeholders are real web addresses.")
+        default:
+            return String(localized: "\(addresses[0]) and \(addresses[1]) and \(more(addresses.count - 2)) now reach the live websites again.",
+                          comment: "Banner after stopping the server. Two real web addresses, then “N more”.")
+        }
     }
 
     /// The server couldn't start because other apps hold ports 80 and 443.
     static func portsInUse(holders: [String]) -> String {
-        let who = holders.isEmpty ? "Another app" : holders.joined(separator: ", ")
-        return "\(who) \(holders.count > 1 ? "are" : "is") already using the ports this server needs (80 and 443). Quit \(holders.count > 1 ? "them" : "it"), then start the server again."
+        switch holders.count {
+        case 0:
+            return String(localized: "Another app is already using the ports this server needs (80 and 443). Quit it, then start the server again.",
+                          comment: "Why the web server couldn't start.")
+        case 1:
+            return String(localized: "\(holders[0]) is already using the ports this server needs (80 and 443). Quit it, then start the server again.",
+                          comment: "Why the web server couldn't start. The placeholder is a program name, e.g. nginx.")
+        default:
+            return String(localized: "\(holders.joined(separator: listSeparator)) are already using the ports this server needs (80 and 443). Quit them, then start the server again.",
+                          comment: "Why the web server couldn't start. The placeholder is a list of two or more program names.")
+        }
     }
 
     /// Settings › Certificates: the first four addresses, then how many more.
     static func certificateList(_ addresses: [String]) -> String {
-        addresses.prefix(4).joined(separator: ", ") + (addresses.count > 4 ? " and \(addresses.count - 4) more" : "")
+        let listed = addresses.prefix(4).joined(separator: listSeparator)
+        guard addresses.count > 4 else { return listed }
+        return String(localized: "\(listed) and \(more(addresses.count - 4))",
+                      comment: "A shortened list of web addresses: the first four, then “N more”.")
     }
 
     /// A site's one-line status: its worst issue, then how many others.
-    static func statusSummary(_ first: String, more: Int) -> String {
-        first + (more > 0 ? " · \(more) more" : "")
+    static func statusSummary(_ first: String, more count: Int) -> String {
+        guard count > 0 else { return first }
+        return String(localized: "\(first) · \(more(count))",
+                      comment: "A site's status: its worst problem, then how many other problems it has.")
     }
 }

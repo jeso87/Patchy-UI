@@ -1350,6 +1350,105 @@
           }
         }
       }
+    },
+    "%@ and %@" : {
+      "comment" : "A shortened list of web addresses: the first four, then “N more”.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ and %@" }
+        }
+      }
+    },
+    "%@ and %@ and %@ now reach the live websites again." : {
+      "comment" : "Banner after stopping the server. Two real web addresses, then “N more”.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ and %@ and %@ now reach the live websites again." }
+        }
+      }
+    },
+    "%@ and %@ now reach the live websites again." : {
+      "comment" : "Banner after stopping the server. Both placeholders are real web addresses.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ and %@ now reach the live websites again." }
+        }
+      }
+    },
+    "%@ are already using the ports this server needs (80 and 443). Quit them, then start the server again." : {
+      "comment" : "Why the web server couldn't start. The placeholder is a list of two or more program names.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ are already using the ports this server needs (80 and 443). Quit them, then start the server again." }
+        }
+      }
+    },
+    "%@ is already using the ports this server needs (80 and 443). Quit it, then start the server again." : {
+      "comment" : "Why the web server couldn't start. The placeholder is a program name, e.g. nginx.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ is already using the ports this server needs (80 and 443). Quit it, then start the server again." }
+        }
+      }
+    },
+    "%@ now reaches the live website again." : {
+      "comment" : "Banner after stopping the server. The placeholder is a real web address that this Mac no longer serves locally.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ now reaches the live website again." }
+        }
+      }
+    },
+    "%@ · %@" : {
+      "comment" : "A site's status: its worst problem, then how many other problems it has.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ · %@" }
+        }
+      }
+    },
+    "%lld more" : {
+      "comment" : "How many names a shortened list left out, e.g. “a.com and b.com and 2 more”.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "%lld more" }
+        }
+      }
+    },
+    "%lld sites look related: %@" : {
+      "comment" : "Sidebar suggestion to group websites with similar names. Always two or more. The list is the addresses.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "%lld sites look related: %@" }
+        }
+      }
+    },
+    "Another app is already using the ports this server needs (80 and 443). Quit it, then start the server again." : {
+      "comment" : "Why the web server couldn't start.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Another app is already using the ports this server needs (80 and 443). Quit it, then start the server again." }
+        }
+      }
+    },
+    "list separator" : {
+      "comment" : "Separates names in a list of websites or apps. English uses a comma and a space; CJK languages use 、",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : ", " }
+        }
+      }
     }
   },
   "version" : "1.0"
