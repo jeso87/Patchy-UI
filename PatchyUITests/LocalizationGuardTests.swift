@@ -333,6 +333,143 @@ final class LocalizationGuardTests: XCTestCase {
         XCTAssertGreaterThan(checked, 0, "no plural entries examined — this would have passed vacuously")
     }
 
+    struct Placeholder: Hashable {
+        /// 1-based position for a numbered placeholder (`%2$@`), nil for a plain one (`%@`).
+        var position: Int?
+        /// "@" or "lld".
+        var kind: String
+    }
+
+    static let placeholderRegex = try! NSRegularExpression(pattern: #"%(?:(\d+)\$)?(lld|@)"#)
+
+    /// The placeholders in a string, in the order they appear. "%%" is not a placeholder.
+    static func placeholders(in text: String) -> [Placeholder] {
+        let cleaned = text.replacingOccurrences(of: "%%", with: "")
+        let range = NSRange(cleaned.startIndex..<cleaned.endIndex, in: cleaned)
+        return placeholderRegex.matches(in: cleaned, range: range).map { match in
+            let position = Range(match.range(at: 1), in: cleaned).flatMap { Int(cleaned[$0]) }
+            let kind = String(cleaned[Range(match.range(at: 2), in: cleaned)!])
+            return Placeholder(position: position, kind: kind)
+        }
+    }
+
+    func testPlaceholderParsing() {
+        XCTAssertEqual(Self.placeholders(in: "%lld sites look related: %@"),
+                       [Placeholder(position: nil, kind: "lld"), Placeholder(position: nil, kind: "@")])
+        XCTAssertEqual(Self.placeholders(in: "%2$@ und %1$lld"),
+                       [Placeholder(position: 2, kind: "@"), Placeholder(position: 1, kind: "lld")])
+        XCTAssertEqual(Self.placeholders(in: "100%% sure"), [])
+    }
+
+    /// A dropped placeholder is a crash or a corrupted sentence; a swapped one silently says the
+    /// wrong thing. Both are invisible to anyone who can't read the language. The rules (glossary,
+    /// "Placeholders"):
+    ///
+    /// - English has none: the translation has none.
+    /// - English has one: the translation has exactly one, of the same kind, plain or numbered `%1$`.
+    /// - English has two or more: every placeholder in the translation is numbered, and together
+    ///   they are exactly positions 1…n, each once, each the kind English has at that position.
+    ///
+    /// Plural entries apply the rule per variant with one licence: a variant may leave a
+    /// placeholder out (English's own "Refresh certificates for your site?" does), but none may
+    /// invent or repeat one, and across the language's variants every position must appear.
+    func testEveryTranslationKeepsItsPlaceholders() throws {
+        try XCTSkipIf(Self.translatedLanguages().isEmpty, "no languages have landed yet")
+        let strings = try XCTUnwrap(Self.catalog()["strings"] as? [String: Any])
+
+        var compared = 0
+        var languagesSeen: Set<String> = []
+        for (key, entry) in strings {
+            guard let localizations = (entry as? [String: Any])?["localizations"] as? [String: Any],
+                  let english = localizations["en"] as? [String: Any] else { continue }
+            let isPlural = english["variations"] != nil
+            // English's fullest form: the flat value, or the plural's `other`.
+            let englishText = isPlural
+                ? ((((english["variations"] as? [String: Any])?["plural"] as? [String: Any])?["other"] as? [String: Any])?["stringUnit"] as? [String: Any])?["value"] as? String ?? ""
+                : Self.values(of: english).first ?? ""
+            let expected = Self.placeholders(in: englishText).map(\.kind)
+
+            for (language, body) in localizations where language != "en" {
+                guard let body = body as? [String: Any] else { continue }
+                languagesSeen.insert(language)
+                var covered: Set<Int> = []
+                for value in Self.values(of: body) {
+                    compared += 1
+                    let found = Self.placeholders(in: value)
+                    let context = "“\(key)” in \(language): \(value)"
+                    switch expected.count {
+                    case 0:
+                        XCTAssertTrue(found.isEmpty, "\(context) — invents a placeholder")
+                    case 1:
+                        XCTAssertLessThanOrEqual(found.count, 1, "\(context) — repeats or invents a placeholder")
+                        if let only = found.first {
+                            XCTAssertEqual(only.kind, expected[0], "\(context) — wrong kind")
+                            XCTAssertTrue(only.position == nil || only.position == 1, "\(context) — numbered past 1")
+                            covered.insert(1)
+                        }
+                        if !isPlural { XCTAssertEqual(found.count, 1, "\(context) — drops its placeholder") }
+                    default:
+                        XCTAssertTrue(found.allSatisfy { $0.position != nil },
+                                      "\(context) — English has \(expected.count) placeholders, so every one must be numbered (%1$@)")
+                        let positions = found.compactMap(\.position)
+                        XCTAssertEqual(positions.count, Set(positions).count, "\(context) — repeats a position")
+                        for placeholder in found {
+                            guard let position = placeholder.position else { continue }
+                            XCTAssertTrue((1...expected.count).contains(position), "\(context) — %\(position)$ doesn't exist in English")
+                            if (1...expected.count).contains(position) {
+                                XCTAssertEqual(placeholder.kind, expected[position - 1], "\(context) — %\(position)$ is the wrong kind")
+                            }
+                            covered.insert(position)
+                        }
+                        if !isPlural {
+                            XCTAssertEqual(Set(positions), Set(1...expected.count), "\(context) — drops a placeholder")
+                        }
+                    }
+                }
+                if isPlural, !expected.isEmpty {
+                    XCTAssertEqual(covered, Set(1...expected.count),
+                                   "“\(key)” in \(language): no variant keeps position(s) \(Set(1...expected.count).subtracting(covered).sorted())")
+                }
+            }
+        }
+        XCTAssertGreaterThan(compared, 0, "no translated values compared")
+        XCTAssertEqual(languagesSeen, Set(Self.translatedLanguages()), "the guard didn't reach every translated language")
+    }
+
+    /// A language in translations/ that the build didn't compile into the app would silently show
+    /// English. Checks the app bundle itself, and that a sample string resolves to something other
+    /// than English there.
+    func testEveryTranslatedLanguageIsBuiltIntoTheApp() throws {
+        let languages = Self.translatedLanguages()
+        try XCTSkipIf(languages.isEmpty, "no languages have landed yet")
+        for language in languages {
+            let path = try XCTUnwrap(Bundle.main.path(forResource: language, ofType: "lproj"),
+                                     "the app has no \(language).lproj — did the build compile the catalog?")
+            let bundle = try XCTUnwrap(Bundle(path: path))
+            let shown = bundle.localizedString(forKey: "Show Details", value: nil, table: "Localizable")
+            XCTAssertNotEqual(shown, "Show Details", "\(language).lproj doesn't translate “Show Details”")
+        }
+    }
+
+    /// A plural entry with two arguments (`%lld sites look related: %@`) is formatted through the
+    /// compiled plural rules with numbered placeholders. Checked by formatting it in each language's
+    /// own compiled bundle, which is what the app does, rather than trusting the JSON.
+    func testTwoArgumentPluralsRenderInEveryLanguage() throws {
+        let languages = Self.translatedLanguages()
+        try XCTSkipIf(languages.isEmpty, "no languages have landed yet")
+        let key = "%lld sites look related: %@"
+        for language in languages {
+            let path = try XCTUnwrap(Bundle.main.path(forResource: language, ofType: "lproj"))
+            let bundle = try XCTUnwrap(Bundle(path: path))
+            let format = bundle.localizedString(forKey: key, value: nil, table: "Localizable")
+            XCTAssertNotEqual(format, key, "\(language) has no translation of “\(key)”")
+            let rendered = String(format: format, locale: Locale(identifier: language), 2, "a.test, b.test")
+            XCTAssertTrue(rendered.contains("a.test, b.test") || rendered.contains("a.test"),
+                          "\(language) lost the list: \(rendered)")
+            XCTAssertFalse(rendered.contains("%"), "\(language) left a placeholder unformatted: \(rendered)")
+        }
+    }
+
     // MARK: - Helpers
 
     static func catalog() throws -> [String: Any] {
