@@ -1,0 +1,1158 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@, %@" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@, %@" }
+        }
+      }
+    },
+    "%lld" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "%lld" }
+        }
+      }
+    },
+    "%lld." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "%lld." }
+        }
+      }
+    },
+    "A group keeps related sites together in the sidebar and the menu bar, such as one customer’s sites. It doesn’t change the sites themselves." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "A group keeps related sites together in the sidebar and the menu bar, such as one customer’s sites. It doesn’t change the sites themselves." }
+        }
+      }
+    },
+    "About" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "About" }
+        }
+      }
+    },
+    "Add Site" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Add Site" }
+        }
+      }
+    },
+    "Add Site (⌘N)" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Add Site (⌘N)" }
+        }
+      }
+    },
+    "Add Site…" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Add Site…" }
+        }
+      }
+    },
+    "Address" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Address" }
+        }
+      }
+    },
+    "Addresses ending in .test only exist on your Mac, so they never clash with real websites." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Addresses ending in .test only exist on your Mac, so they never clash with real websites." }
+        }
+      }
+    },
+    "Back" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Back" }
+        }
+      }
+    },
+    "Cancel" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Cancel" }
+        }
+      }
+    },
+    "Certificates" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Certificates" }
+        }
+      }
+    },
+    "Change…" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Change…" }
+        }
+      }
+    },
+    "Check Again" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Check Again" }
+        }
+      }
+    },
+    "Check for Updates…" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Check for Updates…" }
+        }
+      }
+    },
+    "Checking your Mac…" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Checking your Mac…" }
+        }
+      }
+    },
+    "Choose Folder…" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Choose Folder…" }
+        }
+      }
+    },
+    "Choose the folder that holds this site’s files, or make a new one." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Choose the folder that holds this site’s files, or make a new one." }
+        }
+      }
+    },
+    "Choose…" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Choose…" }
+        }
+      }
+    },
+    "Clear" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Clear" }
+        }
+      }
+    },
+    "Clear what’s shown here. The log file isn’t changed." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Clear what’s shown here. The log file isn’t changed." }
+        }
+      }
+    },
+    "Click lines to select them, then copy" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Click lines to select them, then copy" }
+        }
+      }
+    },
+    "Close" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Close" }
+        }
+      }
+    },
+    "Continue" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Continue" }
+        }
+      }
+    },
+    "Copied" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Copied" }
+        }
+      }
+    },
+    "Copy" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Copy" }
+        }
+      }
+    },
+    "Copy Address" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Copy Address" }
+        }
+      }
+    },
+    "Copy Details" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Copy Details" }
+        }
+      }
+    },
+    "Create" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Create" }
+        }
+      }
+    },
+    "Create Site" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Create Site" }
+        }
+      }
+    },
+    "Current" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Current" }
+        }
+      }
+    },
+    "Delete Group" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Delete Group" }
+        }
+      }
+    },
+    "Dismiss" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dismiss" }
+        }
+      }
+    },
+    "Edit and Try Again" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Edit and Try Again" }
+        }
+      }
+    },
+    "Every site has a healthy certificate" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Every site has a healthy certificate" }
+        }
+      }
+    },
+    "Files in" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Files in" }
+        }
+      }
+    },
+    "Files live in" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Files live in" }
+        }
+      }
+    },
+    "Filter lines" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Filter lines" }
+        }
+      }
+    },
+    "Filter log lines" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Filter log lines" }
+        }
+      }
+    },
+    "Filter sites" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Filter sites" }
+        }
+      }
+    },
+    "General" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "General" }
+        }
+      }
+    },
+    "Get Homebrew at brew.sh" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Get Homebrew at brew.sh" }
+        }
+      }
+    },
+    "Group" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Group" }
+        }
+      }
+    },
+    "Group as “%@”" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Group as “%@”" }
+        }
+      }
+    },
+    "Group name" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Group name" }
+        }
+      }
+    },
+    "Hide Details" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Hide Details" }
+        }
+      }
+    },
+    "I understand. Use this address." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "I understand. Use this address." }
+        }
+      }
+    },
+    "joshuaomilian.ca" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
+        }
+      }
+    },
+    "Live" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Live" }
+        }
+      }
+    },
+    "Mac password" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Mac password" }
+        }
+      }
+    },
+    "More versions" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "More versions" }
+        }
+      }
+    },
+    "Move to Group" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Move to Group" }
+        }
+      }
+    },
+    "mysite" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "mysite" }
+        }
+      }
+    },
+    "New" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "New" }
+        }
+      }
+    },
+    "New Group" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "New Group" }
+        }
+      }
+    },
+    "New Group…" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "New Group…" }
+        }
+      }
+    },
+    "New Site" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "New Site" }
+        }
+      }
+    },
+    "No folder chosen yet" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "No folder chosen yet" }
+        }
+      }
+    },
+    "No Group" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "No Group" }
+        }
+      }
+    },
+    "No Homebrew yet? Get it here" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "No Homebrew yet? Get it here" }
+        }
+      }
+    },
+    "No sites yet" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "No sites yet" }
+        }
+      }
+    },
+    "Not Now" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Not Now" }
+        }
+      }
+    },
+    "Open %@" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Open %@" }
+        }
+      }
+    },
+    "Open in Browser" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Open in Browser" }
+        }
+      }
+    },
+    "Open Patchy UI" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Open Patchy UI" }
+        }
+      }
+    },
+    "Open Patchy UI when I log in" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Open Patchy UI when I log in" }
+        }
+      }
+    },
+    "Open Site" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Open Site" }
+        }
+      }
+    },
+    "Open Terminal" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Open Terminal" }
+        }
+      }
+    },
+    "Opening…" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Opening…" }
+        }
+      }
+    },
+    "Opens at" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Opens at" }
+        }
+      }
+    },
+    "Opens at https://%@" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Opens at https://%@" }
+        }
+      }
+    },
+    "Opens at https://mysite.test" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Opens at https://mysite.test" }
+        }
+      }
+    },
+    "Other Sites" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Other Sites" }
+        }
+      }
+    },
+    "Password-Free" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Password-Free" }
+        }
+      }
+    },
+    "Password-free mode is off" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Password-free mode is off" }
+        }
+      }
+    },
+    "Password-free mode is on" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Password-free mode is on" }
+        }
+      }
+    },
+    "Password-free mode is on." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Password-free mode is on." }
+        }
+      }
+    },
+    "Password-free mode is on. Continuing…" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Password-free mode is on. Continuing…" }
+        }
+      }
+    },
+    "Password-free mode needs refreshing" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Password-free mode needs refreshing" }
+        }
+      }
+    },
+    "Patchy" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy" }
+        }
+      }
+    },
+    "Patchy asks for your Mac password on every change." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy asks for your Mac password on every change." }
+        }
+      }
+    },
+    "Patchy isn’t installed yet" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy isn’t installed yet" }
+        }
+      }
+    },
+    "Patchy isn’t on this Mac yet" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy isn’t on this Mac yet" }
+        }
+      }
+    },
+    "Patchy on GitHub" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy on GitHub" }
+        }
+      }
+    },
+    "Patchy UI" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
+        }
+      }
+    },
+    "Patchy UI couldn’t find PHP on this Mac." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI couldn’t find PHP on this Mac." }
+        }
+      }
+    },
+    "Patchy UI on GitHub" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI on GitHub" }
+        }
+      }
+    },
+    "Patchy UI runs on Patchy, a free tool by Joe Workman. You install it once with Homebrew, and this app takes care of the rest." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI runs on Patchy, a free tool by Joe Workman. You install it once with Homebrew, and this app takes care of the rest." }
+        }
+      }
+    },
+    "Patchy was updated, so password-free mode needs refreshing once." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy was updated, so password-free mode needs refreshing once." }
+        }
+      }
+    },
+    "Pause live updates" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Pause live updates" }
+        }
+      }
+    },
+    "Paused" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Paused" }
+        }
+      }
+    },
+    "PHP" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "PHP" }
+        }
+      }
+    },
+    "PHP %@  (%@)" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "PHP %@  (%@)" }
+        }
+      }
+    },
+    "Pick a short name. It becomes the address you type in your browser. Then choose the folder that holds the site’s files, and Patchy serves whatever is in it." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Pick a short name. It becomes the address you type in your browser. Then choose the folder that holds the site’s files, and Patchy serves whatever is in it." }
+        }
+      }
+    },
+    "Quit Patchy UI" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Quit Patchy UI" }
+        }
+      }
+    },
+    "Real web address" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Real web address" }
+        }
+      }
+    },
+    "Refresh Certificates" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Refresh Certificates" }
+        }
+      }
+    },
+    "Refresh Certificates…" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Refresh Certificates…" }
+        }
+      }
+    },
+    "Remove from Group" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Remove from Group" }
+        }
+      }
+    },
+    "Remove Site" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Remove Site" }
+        }
+      }
+    },
+    "Remove Site (Delete)" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Remove Site (Delete)" }
+        }
+      }
+    },
+    "Remove…" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Remove…" }
+        }
+      }
+    },
+    "Rename" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Rename" }
+        }
+      }
+    },
+    "Rename Group" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Rename Group" }
+        }
+      }
+    },
+    "Rename…" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Rename…" }
+        }
+      }
+    },
+    "Repair" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Repair" }
+        }
+      }
+    },
+    "Restart" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Restart" }
+        }
+      }
+    },
+    "Restart Server" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Restart Server" }
+        }
+      }
+    },
+    "Restart the server (also repairs addresses)" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Restart the server (also repairs addresses)" }
+        }
+      }
+    },
+    "Resume live updates" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Resume live updates" }
+        }
+      }
+    },
+    "Reveal in Finder" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Reveal in Finder" }
+        }
+      }
+    },
+    "Reveal Log File" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Reveal Log File" }
+        }
+      }
+    },
+    "Reveal Server Error Log in Finder" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Reveal Server Error Log in Finder" }
+        }
+      }
+    },
+    "Select a site to see its details." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Select a site to see its details." }
+        }
+      }
+    },
+    "Server" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Server" }
+        }
+      }
+    },
+    "Server (Apache)" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Server (Apache)" }
+        }
+      }
+    },
+    "Server: %@" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Server: %@" }
+        }
+      }
+    },
+    "Set Up" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Set Up" }
+        }
+      }
+    },
+    "Set up password-free mode…" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Set up password-free mode…" }
+        }
+      }
+    },
+    "Set Up…" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Set Up…" }
+        }
+      }
+    },
+    "Setting up password-free mode…" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Setting up password-free mode…" }
+        }
+      }
+    },
+    "Settings…" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Settings…" }
+        }
+      }
+    },
+    "Show Details" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Show Details" }
+        }
+      }
+    },
+    "Show Patchy UI in the Dock" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Show Patchy UI in the Dock" }
+        }
+      }
+    },
+    "Since this is your first site, macOS will ask for your Mac password once while Patchy sets up secure connections. That’s expected." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Since this is your first site, macOS will ask for your Mac password once while Patchy sets up secure connections. That’s expected." }
+        }
+      }
+    },
+    "Start Server" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Start Server" }
+        }
+      }
+    },
+    "Start the server to open this site" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Start the server to open this site" }
+        }
+      }
+    },
+    "Stop" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Stop" }
+        }
+      }
+    },
+    "Stop Server" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Stop Server" }
+        }
+      }
+    },
+    "Stop the server and release your addresses" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Stop the server and release your addresses" }
+        }
+      }
+    },
+    "Stop, Then Start" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Stop, Then Start" }
+        }
+      }
+    },
+    "That’s the folder this site already uses." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "That’s the folder this site already uses." }
+        }
+      }
+    },
+    "The current folder is missing, so pointing the site at the right one fixes it." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "The current folder is missing, so pointing the site at the right one fixes it." }
+        }
+      }
+    },
+    "The server is stopped. New lines will appear once it’s running again." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "The server is stopped. New lines will appear once it’s running again." }
+        }
+      }
+    },
+    "This folder isn’t there anymore. Put it back, or click Change… to point the site at the right folder." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "This folder isn’t there anymore. Put it back, or click Change… to point the site at the right folder." }
+        }
+      }
+    },
+    "Update password-free mode…" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Update password-free mode…" }
+        }
+      }
+    },
+    "Update…" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Update…" }
+        }
+      }
+    },
+    "Use This Folder" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Use This Folder" }
+        }
+      }
+    },
+    "Version" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Version" }
+        }
+      }
+    },
+    "View" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "View" }
+        }
+      }
+    },
+    "What should we call it?" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "What should we call it?" }
+        }
+      }
+    },
+    "While the server runs, this Mac shows your local copy and can’t reach the live site. Everyone else still sees the real one." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "While the server runs, this Mac shows your local copy and can’t reach the live site. Everyone else still sees the real one." }
+        }
+      }
+    },
+    "Your first site" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Your first site" }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

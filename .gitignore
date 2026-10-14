@@ -31,3 +31,6 @@ xcuserdata/
 .vscode/
 .superpowers/
 .claude/settings.local.json
+
+# Python bytecode from scripts/
+__pycache__/
