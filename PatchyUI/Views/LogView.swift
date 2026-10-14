@@ -243,6 +243,8 @@ struct LogView: View {
                 .padding(.vertical, 6)
             }
             .background(Theme.logBackground)
+            // Log lines are Apache's English output; they read left to right in every language.
+            .environment(\.layoutDirection, .leftToRight)
             .onChange(of: rows.last?.id, initial: true) { _, last in
                 if log.live, let last { proxy.scrollTo(last, anchor: .bottomLeading) }
             }

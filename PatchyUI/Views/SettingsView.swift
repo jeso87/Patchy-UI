@@ -117,6 +117,8 @@ struct PHPSettings: View {
                     }
                     .controlSize(.small)
                 }
+                // A command to paste reads left to right in every language.
+                .environment(\.layoutDirection, .leftToRight)
             }
         }
         .formStyle(.grouped)

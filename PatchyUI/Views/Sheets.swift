@@ -94,6 +94,8 @@ struct AddressField: View {
                 .font(.system(size: fontSize))
                 .foregroundStyle(Theme.grey)
         }
+        // An address reads left to right in every language, so its .test suffix stays after it.
+        .environment(\.layoutDirection, .leftToRight)
         .padding(.horizontal, 14)
         .frame(height: height)
         .background(Theme.fieldBackground, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
@@ -326,6 +328,8 @@ struct DetailsDisclosure: View {
                         .padding(.vertical, 10)
                 }
                 .frame(maxHeight: 200)
+                // Patchy's raw output is English and reads left to right in every language.
+                .environment(\.layoutDirection, .leftToRight)
                 .background(Theme.fieldBackground, in: RoundedRectangle(cornerRadius: 8))
                 .overlay(RoundedRectangle(cornerRadius: 8).strokeBorder(Theme.sheetCardBorder, lineWidth: 0.5))
                 Button(copied ? "Copied" : "Copy Details") {

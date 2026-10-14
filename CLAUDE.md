@@ -25,6 +25,12 @@ cd PatchyKit && swift test
 swift test --filter VhostTests                 # one suite
 swift test --filter changeFolderRestores       # one test, by name substring
 
+# Test the app: copy, catalog and localization guards (hosted; runs in English)
+xcodebuild test -project "Patchy UI.xcodeproj" -scheme "Patchy UI" -destination 'platform=macOS' -derivedDataPath build
+
+# After changing any on-screen text: build, then merge new strings into the catalog
+python3 scripts/sync-catalog.py --prune
+
 # Print what the app reads from this Mac, without opening a window
 "build/Build/Products/Debug/Patchy UI.app/Contents/MacOS/Patchy UI" --dump-state
 
@@ -56,6 +62,7 @@ Two layers. Keep anything that isn't UI in the package so it stays testable.
 - Changes that touch routing go through `requireTrust`, which offers password-free setup first and then resumes the pending action.
 - Sidebar groups (`SiteGroups` in PatchyKit) exist only in this app, stored in `~/Library/Application Support/Patchy UI/groups.json`. A site is in at most one group; deleting a group only ungroups its sites. Suggestions are offered, never applied. `-PatchyDebugGroups YES` shows demo groups in memory without writing that file.
 - `SiteStatus` turns a site into the plain-language health text used by the list, detail pane and menu.
+- Copy is localized through `PatchyUI/Localizable.xcstrings` (36 languages planned; see `docs/design/specs/2026-10-14-localization-design.md`). Copy created as a `String` is written with `String(localized:)`; copy that depends on a count or a list lives in `Phrases`, and its plural forms live in the catalog, never in Swift. Phrases the app matches in Patchy's output live in `PatchyOutput` and are never localized.
 - Scenes: the main `Window`, a `MenuBarExtra` (standard menu), and `Settings`. Closing the window leaves the menu bar item running.
 
 ## Versioning, updates and releases

@@ -32,6 +32,14 @@ echo "==> testing PatchyKit"
 echo "==> regenerating project"
 xcodegen generate
 
+echo "==> testing the app (copy, catalog and localization guards)"
+xcodebuild test \
+  -project "Patchy UI.xcodeproj" \
+  -scheme "Patchy UI" \
+  -destination 'platform=macOS' \
+  -derivedDataPath "$DERIVED" \
+  | tail -3
+
 echo "==> archiving"
 rm -rf "$ARCHIVE" "$EXPORT"
 xcodebuild archive \

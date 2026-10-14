@@ -135,6 +135,8 @@ struct NotInstalledView: View {
                         .padding(.vertical, 8)
                         .background(Theme.wellBackground, in: RoundedRectangle(cornerRadius: 8))
                         .overlay(RoundedRectangle(cornerRadius: 8).strokeBorder(Theme.sheetCardBorder, lineWidth: 0.5))
+                        // A command to paste reads left to right in every language.
+                        .environment(\.layoutDirection, .leftToRight)
                     }
                     step(homebrewMissing ? 4 : 3, "When it finishes, come back and click Check Again.") { EmptyView() }
                 }
