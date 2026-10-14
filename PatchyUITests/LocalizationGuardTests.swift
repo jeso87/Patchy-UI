@@ -128,6 +128,25 @@ final class LocalizationGuardTests: XCTestCase {
         }
     }
 
+    /// The phrases the app matches in Patchy's output are Patchy's English, not copy. If one were
+    /// localized, progress and error diagnosis would silently stop working in every other language
+    /// while every English test stayed green.
+    func testPatchyOutputIsNeverLocalized() throws {
+        XCTAssertFalse(PatchyOutput.all.isEmpty)
+        let strings = try XCTUnwrap(Self.catalog()["strings"] as? [String: Any])
+        for phrase in PatchyOutput.all {
+            XCTAssertNil(strings[phrase], "“\(phrase)” is matched against Patchy's output and must not be in the catalog")
+        }
+        let source = try String(contentsOf: Self.repoRoot().appendingPathComponent("PatchyUI/PatchyOutput.swift"), encoding: .utf8)
+        XCTAssertFalse(source.contains("localized"), "PatchyOutput.swift must hold plain English only")
+
+        // Every phrase the app matches lives in PatchyOutput, not inline.
+        let model = try String(contentsOf: Self.repoRoot().appendingPathComponent("PatchyUI/AppModel.swift"), encoding: .utf8)
+        for inline in [".contains(\"", "range(of: \"", "markers: [(\""] {
+            XCTAssertFalse(model.contains(inline), "AppModel matches Patchy output inline (\(inline)…) — use PatchyOutput")
+        }
+    }
+
     // MARK: - Helpers
 
     static func catalog() throws -> [String: Any] {

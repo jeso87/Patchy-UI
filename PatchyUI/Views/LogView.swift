@@ -12,7 +12,7 @@ struct LogLine: Identifiable, Equatable {
     let text: String
 
     /// Fatal PHP errors and 5xx responses stand out.
-    var isBad: Bool { text.contains("Fatal") || text.range(of: #"" 5\d\d "#, options: .regularExpression) != nil }
+    var isBad: Bool { text.contains(PatchyOutput.fatal) || text.range(of: #"" 5\d\d "#, options: .regularExpression) != nil }
 }
 
 @MainActor
