@@ -298,7 +298,16 @@ struct FirstCertificateNote: View {
 /// Patchy's exact output, available but never shown by default.
 struct DetailsDisclosure: View {
     var details: String
-    @State private var expanded = false
+    @State private var expanded = Self.startsExpanded
+
+    /// Debug builds can open with the details showing (`-PatchyDebugDetails YES`), for screenshots.
+    private static var startsExpanded: Bool {
+        #if DEBUG
+        UserDefaults.standard.bool(forKey: "PatchyDebugDetails")
+        #else
+        false
+        #endif
+    }
     @State private var copied = false
 
     /// Patchy's output is English in every language. Say so when the app isn't showing English,
