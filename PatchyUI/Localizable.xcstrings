@@ -6,6 +6,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "%@, %@" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%1$@, %2$@" }
         }
       }
     },
@@ -13,6 +16,9 @@
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "%lld" }
+        },
+        "de" : {
           "stringUnit" : { "state" : "translated", "value" : "%lld" }
         }
       }
@@ -22,6 +28,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "%lld." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%lld." }
         }
       }
     },
@@ -30,6 +39,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "A group keeps related sites together in the sidebar and the menu bar, such as one customer’s sites. It doesn’t change the sites themselves." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Eine Gruppe hält zusammengehörige Websites in der Seitenleiste und in der Menüleiste beisammen, etwa die Websites eines Kunden. An den Websites selbst ändert sie nichts." }
         }
       }
     },
@@ -38,6 +50,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "About" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Über" }
         }
       }
     },
@@ -46,6 +61,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Add Site" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Website hinzufügen" }
         }
       }
     },
@@ -54,6 +72,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Add Site (⌘N)" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Website hinzufügen (⌘N)" }
         }
       }
     },
@@ -62,6 +83,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Add Site…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Website hinzufügen …" }
         }
       }
     },
@@ -70,6 +94,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Address" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Adresse" }
         }
       }
     },
@@ -78,6 +105,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Addresses ending in .test only exist on your Mac, so they never clash with real websites." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Adressen auf .test gibt es nur auf deinem Mac, sie kommen echten Websites also nie in die Quere." }
         }
       }
     },
@@ -86,6 +116,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Back" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zurück" }
         }
       }
     },
@@ -94,6 +127,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Cancel" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Abbrechen" }
         }
       }
     },
@@ -102,6 +138,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Certificates" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zertifikate" }
         }
       }
     },
@@ -110,6 +149,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Change…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ändern …" }
         }
       }
     },
@@ -118,6 +160,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Check Again" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Erneut prüfen" }
         }
       }
     },
@@ -126,6 +171,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Check for Updates…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nach Updates suchen …" }
         }
       }
     },
@@ -134,6 +182,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Checking your Mac…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dein Mac wird geprüft …" }
         }
       }
     },
@@ -142,6 +193,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Choose Folder…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ordner wählen …" }
         }
       }
     },
@@ -150,6 +204,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Choose the folder that holds this site’s files, or make a new one." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Wähle den Ordner mit den Dateien dieser Website oder erstelle einen neuen." }
         }
       }
     },
@@ -158,6 +215,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Choose…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Wählen …" }
         }
       }
     },
@@ -166,6 +226,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Clear" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Leeren" }
         }
       }
     },
@@ -174,6 +237,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Clear what’s shown here. The log file isn’t changed." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Leert die Anzeige hier. Die Protokolldatei bleibt unverändert." }
         }
       }
     },
@@ -182,6 +248,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Click lines to select them, then copy" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Klicke auf Zeilen, um sie auszuwählen, und kopiere sie dann" }
         }
       }
     },
@@ -190,6 +259,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Close" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Schließen" }
         }
       }
     },
@@ -198,6 +270,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Continue" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Fortfahren" }
         }
       }
     },
@@ -206,6 +281,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Copied" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopiert" }
         }
       }
     },
@@ -214,6 +292,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Copy" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopieren" }
         }
       }
     },
@@ -222,6 +303,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Copy Address" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Adresse kopieren" }
         }
       }
     },
@@ -230,6 +314,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Copy Details" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Details kopieren" }
         }
       }
     },
@@ -238,6 +325,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Create" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Erstellen" }
         }
       }
     },
@@ -246,6 +336,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Create Site" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Website erstellen" }
         }
       }
     },
@@ -254,6 +347,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Current" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Aktuell" }
         }
       }
     },
@@ -262,6 +358,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Delete Group" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Gruppe löschen" }
         }
       }
     },
@@ -270,6 +369,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Dismiss" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Schließen" }
         }
       }
     },
@@ -278,6 +380,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Edit and Try Again" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bearbeiten und erneut versuchen" }
         }
       }
     },
@@ -286,6 +391,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Every site has a healthy certificate" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Alle Websites haben ein gültiges Zertifikat" }
         }
       }
     },
@@ -294,6 +402,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Files in" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dateien in" }
         }
       }
     },
@@ -302,6 +413,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Files live in" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dateien liegen in" }
         }
       }
     },
@@ -310,6 +424,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Filter lines" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zeilen filtern" }
         }
       }
     },
@@ -318,6 +435,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Filter log lines" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Protokollzeilen filtern" }
         }
       }
     },
@@ -326,6 +446,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Filter sites" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Websites filtern" }
         }
       }
     },
@@ -334,6 +457,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "General" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Allgemein" }
         }
       }
     },
@@ -342,6 +468,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Get Homebrew at brew.sh" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Homebrew auf brew.sh laden" }
         }
       }
     },
@@ -350,6 +479,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Group" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Gruppe" }
         }
       }
     },
@@ -358,6 +490,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Group as “%@”" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Als „%@“ gruppieren" }
         }
       }
     },
@@ -366,6 +501,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Group name" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Gruppenname" }
         }
       }
     },
@@ -374,6 +512,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Hide Details" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Details ausblenden" }
         }
       }
     },
@@ -382,6 +523,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "I understand. Use this address." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Verstanden. Diese Adresse verwenden." }
         }
       }
     },
@@ -389,6 +533,9 @@
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
+        },
+        "de" : {
           "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
         }
       }
@@ -398,6 +545,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Live" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Live" }
         }
       }
     },
@@ -406,6 +556,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Mac password" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Mac-Passwort" }
         }
       }
     },
@@ -414,6 +567,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "More versions" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Weitere Versionen" }
         }
       }
     },
@@ -422,6 +578,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Move to Group" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "In Gruppe bewegen" }
         }
       }
     },
@@ -429,6 +588,9 @@
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "mysite" }
+        },
+        "de" : {
           "stringUnit" : { "state" : "translated", "value" : "mysite" }
         }
       }
@@ -438,6 +600,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "New" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Neu" }
         }
       }
     },
@@ -446,6 +611,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "New Group" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Neue Gruppe" }
         }
       }
     },
@@ -454,6 +622,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "New Group…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Neue Gruppe …" }
         }
       }
     },
@@ -462,6 +633,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "New Site" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Neue Website" }
         }
       }
     },
@@ -470,6 +644,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "No folder chosen yet" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Noch kein Ordner gewählt" }
         }
       }
     },
@@ -478,6 +655,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "No Group" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Keine Gruppe" }
         }
       }
     },
@@ -486,6 +666,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "No Homebrew yet? Get it here" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Noch kein Homebrew? Hier laden" }
         }
       }
     },
@@ -494,6 +677,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "No sites yet" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Noch keine Websites" }
         }
       }
     },
@@ -502,6 +688,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Not Now" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Später" }
         }
       }
     },
@@ -510,6 +699,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Open %@" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ öffnen" }
         }
       }
     },
@@ -518,6 +710,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Open in Browser" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Im Browser öffnen" }
         }
       }
     },
@@ -526,6 +721,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Open Patchy UI" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI öffnen" }
         }
       }
     },
@@ -534,6 +732,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Open Patchy UI when I log in" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI beim Anmelden öffnen" }
         }
       }
     },
@@ -542,6 +743,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Open Site" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Website öffnen" }
         }
       }
     },
@@ -550,6 +754,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Open Terminal" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Terminal öffnen" }
         }
       }
     },
@@ -558,6 +765,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Opening…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Wird geöffnet …" }
         }
       }
     },
@@ -566,6 +776,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Opens at" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Öffnet unter" }
         }
       }
     },
@@ -574,6 +787,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Opens at https://%@" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Öffnet unter https://%@" }
         }
       }
     },
@@ -582,6 +798,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Opens at https://mysite.test" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Öffnet unter https://mysite.test" }
         }
       }
     },
@@ -590,6 +809,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Other Sites" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Weitere Websites" }
         }
       }
     },
@@ -598,6 +820,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Password-Free" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ohne Passwort" }
         }
       }
     },
@@ -606,6 +831,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Password-free mode is off" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Passwortfreier Modus ist aus" }
         }
       }
     },
@@ -614,6 +842,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Password-free mode is on" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Passwortfreier Modus ist an" }
         }
       }
     },
@@ -622,6 +853,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Password-free mode is on." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Passwortfreier Modus ist an." }
         }
       }
     },
@@ -630,6 +864,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Password-free mode is on. Continuing…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Passwortfreier Modus ist an. Es geht weiter …" }
         }
       }
     },
@@ -638,6 +875,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Password-free mode needs refreshing" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Passwortfreier Modus muss erneuert werden" }
         }
       }
     },
@@ -645,6 +885,9 @@
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy" }
+        },
+        "de" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy" }
         }
       }
@@ -654,6 +897,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy asks for your Mac password on every change." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy fragt bei jeder Änderung nach deinem Mac-Passwort." }
         }
       }
     },
@@ -662,6 +908,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy isn’t installed yet" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy ist noch nicht installiert" }
         }
       }
     },
@@ -670,6 +919,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy isn’t on this Mac yet" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy ist noch nicht auf diesem Mac" }
         }
       }
     },
@@ -678,6 +930,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy on GitHub" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy auf GitHub" }
         }
       }
     },
@@ -685,6 +940,9 @@
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
+        },
+        "de" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
         }
       }
@@ -694,6 +952,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy UI couldn’t find PHP on this Mac." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI hat auf diesem Mac kein PHP gefunden." }
         }
       }
     },
@@ -702,6 +963,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy UI on GitHub" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI auf GitHub" }
         }
       }
     },
@@ -710,6 +974,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy UI runs on Patchy, a free tool by Joe Workman. You install it once with Homebrew, and this app takes care of the rest." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI baut auf Patchy auf, einem kostenlosen Werkzeug von Joe Workman. Du installierst es einmal mit Homebrew, um den Rest kümmert sich diese App." }
         }
       }
     },
@@ -718,6 +985,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy was updated, so password-free mode needs refreshing once." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy wurde aktualisiert, daher muss der passwortfreie Modus einmal erneuert werden." }
         }
       }
     },
@@ -726,6 +996,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Pause live updates" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Live-Aktualisierung anhalten" }
         }
       }
     },
@@ -734,6 +1007,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Paused" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Angehalten" }
         }
       }
     },
@@ -741,6 +1017,9 @@
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "PHP" }
+        },
+        "de" : {
           "stringUnit" : { "state" : "translated", "value" : "PHP" }
         }
       }
@@ -750,6 +1029,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "PHP %@  (%@)" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "PHP %1$@  (%2$@)" }
         }
       }
     },
@@ -758,6 +1040,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Pick a short name. It becomes the address you type in your browser. Then choose the folder that holds the site’s files, and Patchy serves whatever is in it." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Such dir einen kurzen Namen aus. Er wird zur Adresse, die du im Browser eingibst. Wähle dann den Ordner mit den Dateien der Website, und Patchy liefert aus, was darin liegt." }
         }
       }
     },
@@ -766,6 +1051,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Quit Patchy UI" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI beenden" }
         }
       }
     },
@@ -774,6 +1062,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Real web address" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Echte Webadresse" }
         }
       }
     },
@@ -782,6 +1073,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Refresh Certificates" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zertifikate erneuern" }
         }
       }
     },
@@ -790,6 +1084,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Refresh Certificates…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zertifikate erneuern …" }
         }
       }
     },
@@ -798,6 +1095,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Remove from Group" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Aus Gruppe entfernen" }
         }
       }
     },
@@ -806,6 +1106,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Remove Site" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Website entfernen" }
         }
       }
     },
@@ -814,6 +1117,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Remove Site (Delete)" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Website entfernen (Rückschritttaste)" }
         }
       }
     },
@@ -822,6 +1128,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Remove…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Entfernen …" }
         }
       }
     },
@@ -830,6 +1139,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Rename" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Umbenennen" }
         }
       }
     },
@@ -838,6 +1150,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Rename Group" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Gruppe umbenennen" }
         }
       }
     },
@@ -846,6 +1161,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Rename…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Umbenennen …" }
         }
       }
     },
@@ -854,6 +1172,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Repair" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Reparieren" }
         }
       }
     },
@@ -862,6 +1183,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Restart" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Neu starten" }
         }
       }
     },
@@ -870,6 +1194,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Restart Server" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Server neu starten" }
         }
       }
     },
@@ -878,6 +1205,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Restart the server (also repairs addresses)" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Server neu starten (repariert auch Adressen)" }
         }
       }
     },
@@ -886,6 +1216,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Resume live updates" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Live-Aktualisierung fortsetzen" }
         }
       }
     },
@@ -894,6 +1227,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Reveal in Finder" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Im Finder zeigen" }
         }
       }
     },
@@ -902,6 +1238,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Reveal Log File" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Protokolldatei zeigen" }
         }
       }
     },
@@ -910,6 +1249,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Reveal Server Error Log in Finder" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Fehlerprotokoll des Servers im Finder zeigen" }
         }
       }
     },
@@ -918,6 +1260,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Select a site to see its details." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Wähle eine Website aus, um ihre Details zu sehen." }
         }
       }
     },
@@ -925,6 +1270,9 @@
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Server" }
+        },
+        "de" : {
           "stringUnit" : { "state" : "translated", "value" : "Server" }
         }
       }
@@ -934,6 +1282,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Server (Apache)" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Server (Apache)" }
         }
       }
     },
@@ -941,6 +1292,9 @@
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Server: %@" }
+        },
+        "de" : {
           "stringUnit" : { "state" : "translated", "value" : "Server: %@" }
         }
       }
@@ -950,6 +1304,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Set Up" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Einrichten" }
         }
       }
     },
@@ -958,6 +1315,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Set up password-free mode…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Passwortfreien Modus einrichten …" }
         }
       }
     },
@@ -966,6 +1326,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Set Up…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Einrichten …" }
         }
       }
     },
@@ -974,6 +1337,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Setting up password-free mode…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Passwortfreier Modus wird eingerichtet …" }
         }
       }
     },
@@ -982,6 +1348,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Settings…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Einstellungen …" }
         }
       }
     },
@@ -990,6 +1359,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Show Details" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Details einblenden" }
         }
       }
     },
@@ -998,6 +1370,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Show Patchy UI in the Dock" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI im Dock anzeigen" }
         }
       }
     },
@@ -1006,6 +1381,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Since this is your first site, macOS will ask for your Mac password once while Patchy sets up secure connections. That’s expected." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Da das deine erste Website ist, fragt macOS einmal nach deinem Mac-Passwort, während Patchy sichere Verbindungen einrichtet. Das ist so vorgesehen." }
         }
       }
     },
@@ -1014,6 +1392,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Start Server" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Server starten" }
         }
       }
     },
@@ -1022,6 +1403,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Start the server to open this site" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Starte den Server, um diese Website zu öffnen" }
         }
       }
     },
@@ -1030,6 +1414,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Stop" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Stoppen" }
         }
       }
     },
@@ -1038,6 +1425,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Stop Server" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Server stoppen" }
         }
       }
     },
@@ -1046,6 +1436,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Stop the server and release your addresses" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Server stoppen und deine Adressen freigeben" }
         }
       }
     },
@@ -1054,6 +1447,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Stop, Then Start" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Stoppen, dann starten" }
         }
       }
     },
@@ -1062,6 +1458,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "That’s the folder this site already uses." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Diesen Ordner verwendet die Website bereits." }
         }
       }
     },
@@ -1070,6 +1469,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "The current folder is missing, so pointing the site at the right one fixes it." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Der aktuelle Ordner fehlt. Wenn du die Website auf den richtigen Ordner umstellst, ist das behoben." }
         }
       }
     },
@@ -1078,6 +1480,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "The server is stopped. New lines will appear once it’s running again." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Der Server ist gestoppt. Neue Zeilen erscheinen, sobald er wieder läuft." }
         }
       }
     },
@@ -1086,6 +1491,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "This folder isn’t there anymore. Put it back, or click Change… to point the site at the right folder." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dieser Ordner ist nicht mehr da. Lege ihn zurück oder klicke auf „Ändern …“, um die Website auf den richtigen Ordner umzustellen." }
         }
       }
     },
@@ -1094,6 +1502,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Update password-free mode…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Passwortfreien Modus aktualisieren …" }
         }
       }
     },
@@ -1102,6 +1513,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Update…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Aktualisieren …" }
         }
       }
     },
@@ -1110,6 +1524,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Use This Folder" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Diesen Ordner verwenden" }
         }
       }
     },
@@ -1117,6 +1534,9 @@
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Version" }
+        },
+        "de" : {
           "stringUnit" : { "state" : "translated", "value" : "Version" }
         }
       }
@@ -1126,6 +1546,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "View" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ansicht" }
         }
       }
     },
@@ -1134,6 +1557,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "What should we call it?" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Wie soll sie heißen?" }
         }
       }
     },
@@ -1142,6 +1568,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "While the server runs, this Mac shows your local copy and can’t reach the live site. Everyone else still sees the real one." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Solange der Server läuft, zeigt dieser Mac deine lokale Kopie und erreicht die Live-Website nicht. Alle anderen sehen weiterhin die echte." }
         }
       }
     },
@@ -1150,6 +1579,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Your first site" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deine erste Website" }
         }
       }
     },
@@ -1165,6 +1597,18 @@
               },
               "other" : {
                 "stringUnit" : { "state" : "translated", "value" : "%lld sites" }
+              }
+            }
+          }
+        },
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld Website" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld Websites" }
               }
             }
           }
@@ -1186,6 +1630,18 @@
               }
             }
           }
+        },
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld braucht Aufmerksamkeit" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld brauchen Aufmerksamkeit" }
+              }
+            }
+          }
         }
       }
     },
@@ -1201,6 +1657,18 @@
               },
               "other" : {
                 "stringUnit" : { "state" : "translated", "value" : "%lld sites aren’t pointing at this Mac right now, so they won’t open. Repair fixes this by restarting the server." }
+              }
+            }
+          }
+        },
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld Website zeigt gerade nicht auf diesen Mac und öffnet sich deshalb nicht. „Reparieren“ behebt das, indem der Server neu gestartet wird." }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld Websites zeigen gerade nicht auf diesen Mac und öffnen sich deshalb nicht. „Reparieren“ behebt das, indem der Server neu gestartet wird." }
               }
             }
           }
@@ -1222,6 +1690,18 @@
               }
             }
           }
+        },
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld Website in dieser Gruppe braucht Aufmerksamkeit" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld Websites in dieser Gruppe brauchen Aufmerksamkeit" }
+              }
+            }
+          }
         }
       }
     },
@@ -1237,6 +1717,18 @@
               },
               "other" : {
                 "stringUnit" : { "state" : "translated", "value" : "%lld sites need a new certificate" }
+              }
+            }
+          }
+        },
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld Website braucht ein neues Zertifikat" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld Websites brauchen ein neues Zertifikat" }
               }
             }
           }
@@ -1258,6 +1750,18 @@
               }
             }
           }
+        },
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld Website braucht Aufmerksamkeit …" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld Websites brauchen Aufmerksamkeit …" }
+              }
+            }
+          }
         }
       }
     },
@@ -1273,6 +1777,18 @@
               },
               "other" : {
                 "stringUnit" : { "state" : "translated", "value" : "Certificate expires in %lld days" }
+              }
+            }
+          }
+        },
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "Zertifikat läuft in %lld Tag ab" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "Zertifikat läuft in %lld Tagen ab" }
               }
             }
           }
@@ -1294,6 +1810,18 @@
               }
             }
           }
+        },
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld Zeile kopieren" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld Zeilen kopieren" }
+              }
+            }
+          }
         }
       }
     },
@@ -1309,6 +1837,18 @@
               },
               "other" : {
                 "stringUnit" : { "state" : "translated", "value" : "Expires in %lld days" }
+              }
+            }
+          }
+        },
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "Läuft in %lld Tag ab" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "Läuft in %lld Tagen ab" }
               }
             }
           }
@@ -1330,6 +1870,18 @@
               }
             }
           }
+        },
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "Neue Zertifikate für %lld Website werden erstellt …" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "Neue Zertifikate für %lld Websites werden erstellt …" }
+              }
+            }
+          }
         }
       }
     },
@@ -1348,6 +1900,18 @@
               }
             }
           }
+        },
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "Zertifikat für deine Website erneuern?" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "Zertifikate für alle %lld Websites erneuern?" }
+              }
+            }
+          }
         }
       }
     },
@@ -1357,6 +1921,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "%@ and %@" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%1$@ und %2$@" }
         }
       }
     },
@@ -1366,6 +1933,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "%@ and %@ and %@ now reach the live websites again." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%1$@, %2$@ und %3$@ führen jetzt wieder zu den Live-Websites." }
         }
       }
     },
@@ -1375,6 +1945,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "%@ and %@ now reach the live websites again." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%1$@ und %2$@ führen jetzt wieder zu den Live-Websites." }
         }
       }
     },
@@ -1384,6 +1957,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "%@ are already using the ports this server needs (80 and 443). Quit them, then start the server again." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ belegen bereits die Ports, die dieser Server braucht (80 und 443). Beende sie und starte den Server dann erneut." }
         }
       }
     },
@@ -1393,6 +1969,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "%@ is already using the ports this server needs (80 and 443). Quit it, then start the server again." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ belegt bereits die Ports, die dieser Server braucht (80 und 443). Beende das Programm und starte den Server dann erneut." }
         }
       }
     },
@@ -1402,6 +1981,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "%@ now reaches the live website again." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ führt jetzt wieder zur Live-Website." }
         }
       }
     },
@@ -1411,6 +1993,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "%@ · %@" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%1$@ · %2$@" }
         }
       }
     },
@@ -1426,6 +2011,18 @@
               },
               "other" : {
                 "stringUnit" : { "state" : "translated", "value" : "%lld more" }
+              }
+            }
+          }
+        },
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld weitere" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld weitere" }
               }
             }
           }
@@ -1447,6 +2044,18 @@
               }
             }
           }
+        },
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "%1$lld Website scheint zusammenzugehören: %2$@" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "%1$lld Websites scheinen zusammenzugehören: %2$@" }
+              }
+            }
+          }
         }
       }
     },
@@ -1456,6 +2065,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Another app is already using the ports this server needs (80 and 443). Quit it, then start the server again." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ein anderes Programm belegt bereits die Ports, die dieser Server braucht (80 und 443). Beende es und starte den Server dann erneut." }
         }
       }
     },
@@ -1465,6 +2077,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : ", " }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : ", " }
         }
       }
     },
@@ -1473,6 +2088,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "%@ already exists. Pick a different address." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ gibt es schon. Wähle eine andere Adresse." }
         }
       }
     },
@@ -1481,6 +2099,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "%@ is a real web address. While the server runs, this Mac opens your local copy and can’t reach the live website. Stop the server to see the live site again." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ ist eine echte Webadresse. Solange der Server läuft, öffnet dieser Mac deine lokale Kopie und erreicht die Live-Website nicht. Stoppe den Server, um die Live-Website wieder zu sehen." }
         }
       }
     },
@@ -1490,6 +2111,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "%@ is ready. Its folder is %@." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%1$@ ist bereit. Der Ordner ist %2$@." }
         }
       }
     },
@@ -1498,6 +2122,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "%@ might be a real website." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ könnte eine echte Website sein." }
         }
       }
     },
@@ -1507,6 +2134,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "%@ now serves files from %@." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%1$@ liefert jetzt Dateien aus %2$@." }
         }
       }
     },
@@ -1516,6 +2146,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "%@ was added, but the server isn’t running" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ wurde hinzugefügt, aber der Server läuft nicht" }
         }
       }
     },
@@ -1525,6 +2158,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "%@ was removed. Its folder is still in place." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ wurde entfernt. Der Ordner ist noch da." }
         }
       }
     },
@@ -1533,6 +2169,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "%@ will reach the live website again." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ führt dann wieder zur Live-Website." }
         }
       }
     },
@@ -1541,6 +2180,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "A certificate is what lets https:// work without a browser warning. They last a little over two years. Refreshing makes new ones for every site at once and asks for your Mac password." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ein Zertifikat sorgt dafür, dass https:// ohne Browserwarnung funktioniert. Es gilt etwas über zwei Jahre. Beim Erneuern entstehen neue Zertifikate für alle Websites auf einmal, und dein Mac-Passwort wird abgefragt." }
         }
       }
     },
@@ -1549,6 +2191,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "A site with this address already exists, so nothing was changed." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Eine Website mit dieser Adresse gibt es schon, daher wurde nichts geändert." }
         }
       }
     },
@@ -1558,6 +2203,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Adding %@" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ wird hinzugefügt" }
         }
       }
     },
@@ -1567,6 +2215,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Also answer at www.%@" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Auch unter www.%@ erreichbar" }
         }
       }
     },
@@ -1576,6 +2227,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Also answers at %@" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Auch erreichbar unter %@" }
         }
       }
     },
@@ -1585,6 +2239,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Another app is using the web ports" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ein anderes Programm belegt die Web-Ports" }
         }
       }
     },
@@ -1593,6 +2250,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Certificate can’t be read" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zertifikat kann nicht gelesen werden" }
         }
       }
     },
@@ -1601,6 +2261,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Certificate expired" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zertifikat abgelaufen" }
         }
       }
     },
@@ -1609,6 +2272,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Certificate unreadable" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zertifikat unlesbar" }
         }
       }
     },
@@ -1618,6 +2284,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Certificates refreshed. If a browser still shows a warning, quit and reopen it." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zertifikate erneuert. Wenn ein Browser noch eine Warnung zeigt, beende ihn und öffne ihn erneut." }
         }
       }
     },
@@ -1627,6 +2296,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Change folder for %@" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ordner für %@ ändern" }
         }
       }
     },
@@ -1636,6 +2308,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Checking every address points here…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Es wird geprüft, ob jede Adresse hierher zeigt …" }
         }
       }
     },
@@ -1645,6 +2320,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Checking the setup" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Einrichtung wird geprüft" }
         }
       }
     },
@@ -1654,6 +2332,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Checking the setup…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Einrichtung wird geprüft …" }
         }
       }
     },
@@ -1662,6 +2343,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Choose" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Wählen" }
         }
       }
     },
@@ -1671,6 +2355,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Choose the folder that holds this site’s files." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Wähle den Ordner mit den Dateien dieser Website." }
         }
       }
     },
@@ -1679,6 +2366,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Copy Update Command" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Update-Befehl kopieren" }
         }
       }
     },
@@ -1688,6 +2378,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Couldn’t add %@" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ konnte nicht hinzugefügt werden" }
         }
       }
     },
@@ -1697,6 +2390,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Couldn’t change the folder for %@" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Der Ordner für %@ konnte nicht geändert werden" }
         }
       }
     },
@@ -1706,6 +2402,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Couldn’t refresh certificates" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zertifikate konnten nicht erneuert werden" }
         }
       }
     },
@@ -1715,6 +2414,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Couldn’t remove %@" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ konnte nicht entfernt werden" }
         }
       }
     },
@@ -1724,6 +2426,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Couldn’t set up password-free mode" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Passwortfreier Modus konnte nicht eingerichtet werden" }
         }
       }
     },
@@ -1733,6 +2438,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Couldn’t switch to PHP %@" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Wechsel zu PHP %@ nicht möglich" }
         }
       }
     },
@@ -1742,6 +2450,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Creating a secure certificate" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sicheres Zertifikat wird erstellt" }
         }
       }
     },
@@ -1751,6 +2462,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Enter your Mac password" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Gib dein Mac-Passwort ein" }
         }
       }
     },
@@ -1760,6 +2474,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Errors" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Fehler" }
         }
       }
     },
@@ -1769,6 +2486,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Every site now runs on PHP %@." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Alle Websites laufen jetzt mit PHP %@." }
         }
       }
     },
@@ -1777,6 +2497,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Every site runs on the same PHP version. Switching takes up to half a minute and restarts the server." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Alle Websites laufen mit derselben PHP-Version. Der Wechsel dauert bis zu einer halben Minute und startet den Server neu." }
         }
       }
     },
@@ -1786,6 +2509,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Expired on %@. Browsers will warn that this site isn’t secure." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Abgelaufen am %@. Browser warnen, dass diese Website nicht sicher ist." }
         }
       }
     },
@@ -1794,6 +2520,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Folder" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ordner" }
         }
       }
     },
@@ -1803,6 +2532,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Folder missing" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ordner fehlt" }
         }
       }
     },
@@ -1812,6 +2544,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Handing addresses back to the internet…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Adressen werden ans Internet zurückgegeben …" }
         }
       }
     },
@@ -1820,6 +2555,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "https:// won’t work for this site until certificates are refreshed." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "https:// funktioniert für diese Website erst, wenn die Zertifikate erneuert sind." }
         }
       }
     },
@@ -1828,6 +2566,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "If a browser still shows a warning afterwards, quit and reopen it." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Wenn ein Browser danach noch eine Warnung zeigt, beende ihn und öffne ihn erneut." }
         }
       }
     },
@@ -1836,6 +2577,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Install Homebrew first. It’s the free installer Patchy comes through." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Installiere zuerst Homebrew. Über dieses kostenlose Installationsprogramm kommt Patchy auf deinen Mac." }
         }
       }
     },
@@ -1845,6 +2589,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "It’s still running and your sites still open. Try again, or look at Show Details." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Er läuft noch, und deine Websites öffnen sich weiterhin. Versuche es erneut oder sieh unter „Details einblenden“ nach." }
         }
       }
     },
@@ -1853,6 +2600,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "macOS asks for your Mac password every time you start or stop the server, or add or remove a site." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "macOS fragt jedes Mal nach deinem Mac-Passwort, wenn du den Server startest oder stoppst oder eine Website hinzufügst oder entfernst." }
         }
       }
     },
@@ -1862,6 +2612,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "macOS didn’t allow that: %@" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "macOS hat das nicht erlaubt: %@" }
         }
       }
     },
@@ -1871,6 +2624,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "macOS needs it to finish this change. It’s the one you use to log in to this Mac. Patchy passes it straight to macOS and doesn’t keep it." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "macOS braucht es, um diese Änderung abzuschließen. Es ist das Passwort, mit dem du dich an diesem Mac anmeldest. Patchy gibt es direkt an macOS weiter und speichert es nicht." }
         }
       }
     },
@@ -1879,6 +2635,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "macOS will ask for your Mac password." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "macOS fragt nach deinem Mac-Passwort." }
         }
       }
     },
@@ -1887,6 +2646,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Needs repair" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Reparatur nötig" }
         }
       }
     },
@@ -1895,6 +2657,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "No certificate" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kein Zertifikat" }
         }
       }
     },
@@ -1903,6 +2668,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "No errors yet" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Noch keine Fehler" }
         }
       }
     },
@@ -1911,6 +2679,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "No matching lines" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Keine passenden Zeilen" }
         }
       }
     },
@@ -1919,6 +2690,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "No sites match “%@”." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Keine Website passt zu „%@“." }
         }
       }
     },
@@ -1927,6 +2701,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "No sites yet." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Noch keine Websites." }
         }
       }
     },
@@ -1935,6 +2712,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "No visits yet" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Noch keine Besuche" }
         }
       }
     },
@@ -1944,6 +2724,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "None" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Keine" }
         }
       }
     },
@@ -1952,6 +2735,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Not installed" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nicht installiert" }
         }
       }
     },
@@ -1961,6 +2747,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Not pointing at this Mac" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zeigt nicht auf diesen Mac" }
         }
       }
     },
@@ -1969,6 +2758,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Not right now" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Gerade nicht" }
         }
       }
     },
@@ -1977,6 +2769,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Nothing in the errors log contains “%@”." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nichts im Fehlerprotokoll enthält „%@“." }
         }
       }
     },
@@ -1985,6 +2780,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Nothing in the visits log contains “%@”." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nichts im Besuchsprotokoll enthält „%@“." }
         }
       }
     },
@@ -1994,6 +2792,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Nothing was changed. Show Details has the exact message from Patchy." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Es wurde nichts geändert. Unter „Details einblenden“ steht die genaue Meldung von Patchy." }
         }
       }
     },
@@ -2002,6 +2803,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Offline while the server is stopped" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Offline, solange der Server gestoppt ist" }
         }
       }
     },
@@ -2010,6 +2814,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Only one PHP version is installed. You can add others with Homebrew; they show up here when they’re ready. For example, in Terminal:" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Es ist nur eine PHP-Version installiert. Weitere kannst du mit Homebrew hinzufügen; sie erscheinen hier, sobald sie bereit sind. Zum Beispiel im Terminal:" }
         }
       }
     },
@@ -2018,6 +2825,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Open Terminal. It’s in Applications › Utilities." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Öffne das Terminal. Es liegt unter Programme › Dienstprogramme." }
         }
       }
     },
@@ -2026,6 +2836,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Open the site in your browser and each page request will show up here." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Öffne die Website im Browser, dann erscheint hier jeder Seitenaufruf." }
         }
       }
     },
@@ -2034,6 +2847,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Opens in any browser on this Mac." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Öffnet sich in jedem Browser auf diesem Mac." }
         }
       }
     },
@@ -2042,6 +2858,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Opens, but shows an error" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Öffnet sich, zeigt aber einen Fehler" }
         }
       }
     },
@@ -2051,6 +2870,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Overview" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Übersicht" }
         }
       }
     },
@@ -2059,6 +2881,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Paste this command and press Return:" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Füge diesen Befehl ein und drücke den Zeilenschalter:" }
         }
       }
     },
@@ -2068,6 +2893,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy %@ is installed, but this Patchy UI was made for Patchy %@. Some things may not work until Patchy UI is updated to match." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy %1$@ ist installiert, aber dieses Patchy UI wurde für Patchy %2$@ gemacht. Manches funktioniert vielleicht erst, wenn Patchy UI passend aktualisiert ist." }
         }
       }
     },
@@ -2076,6 +2904,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy can update your addresses without asking each time." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy kann deine Adressen aktualisieren, ohne jedes Mal zu fragen." }
         }
       }
     },
@@ -2085,6 +2916,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy can’t set this up safely on this Mac, so nothing was changed. You can keep using the app; it will ask for your Mac password when a change needs it." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy kann das auf diesem Mac nicht sicher einrichten, daher wurde nichts geändert. Du kannst die App weiter verwenden; sie fragt nach deinem Mac-Passwort, wenn eine Änderung es braucht." }
         }
       }
     },
@@ -2093,6 +2927,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy couldn’t point the address at this Mac, so nothing was created. Your other sites are fine." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy konnte die Adresse nicht auf diesen Mac lenken, daher wurde nichts erstellt. Deine anderen Websites sind in Ordnung." }
         }
       }
     },
@@ -2101,6 +2938,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy didn’t report anything." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy hat nichts gemeldet." }
         }
       }
     },
@@ -2110,6 +2950,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy makes a new certificate for every site at once, so https:// keeps working without browser warnings. This can take up to a minute." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy erstellt für alle Websites auf einmal ein neues Zertifikat, damit https:// weiter ohne Browserwarnung funktioniert. Das kann bis zu einer Minute dauern." }
         }
       }
     },
@@ -2118,6 +2961,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy UI and Patchy match. Patchy UI’s version number is always the Patchy release it was made for." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI und Patchy passen zusammen. Die Versionsnummer von Patchy UI ist immer die Patchy-Version, für die es gemacht wurde." }
         }
       }
     },
@@ -2126,6 +2972,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy UI is a window onto Patchy, the local web server tool made by Joe Workman. Patchy does the real work." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI ist ein Fenster zu Patchy, dem Werkzeug für lokale Webserver von Joe Workman. Die eigentliche Arbeit macht Patchy." }
         }
       }
     },
@@ -2134,6 +2983,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy UI is free and open source, made by Joshua Omilian." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI ist kostenlos und Open Source, gemacht von Joshua Omilian." }
         }
       }
     },
@@ -2142,6 +2994,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy UI’s version number is always the Patchy release it was made for." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Die Versionsnummer von Patchy UI ist immer die Patchy-Version, für die es gemacht wurde." }
         }
       }
     },
@@ -2150,6 +3005,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy updates where your addresses point without asking for your Mac password. That is the only thing it can do on its own." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy aktualisiert, wohin deine Adressen zeigen, ohne nach deinem Mac-Passwort zu fragen. Das ist das Einzige, was es selbstständig tun kann." }
         }
       }
     },
@@ -2158,6 +3016,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy was updated, so its permission to update your addresses needs to be refreshed once. Until then, macOS asks for your Mac password on every change." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy wurde aktualisiert, daher muss seine Erlaubnis, deine Adressen zu aktualisieren, einmal erneuert werden. Bis dahin fragt macOS bei jeder Änderung nach deinem Mac-Passwort." }
         }
       }
     },
@@ -2166,6 +3027,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy was updated. Refresh this once and the password prompts stop again." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy wurde aktualisiert. Erneuere das einmal, dann hören die Passwortabfragen wieder auf." }
         }
       }
     },
@@ -2175,6 +3039,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy: needs attention" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy: braucht Aufmerksamkeit" }
         }
       }
     },
@@ -2184,6 +3051,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy: server running" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy: Server läuft" }
         }
       }
     },
@@ -2193,6 +3063,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy: server stopped" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy: Server gestoppt" }
         }
       }
     },
@@ -2202,6 +3075,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy: working" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy: arbeitet" }
         }
       }
     },
@@ -2211,6 +3087,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Pointing %@ at the new folder…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ wird auf den neuen Ordner umgestellt …" }
         }
       }
     },
@@ -2220,6 +3099,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Pointing %@ at this Mac" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ wird auf diesen Mac gelenkt" }
         }
       }
     },
@@ -2229,6 +3111,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Pointing your addresses at this Mac…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deine Adressen werden auf diesen Mac gelenkt …" }
         }
       }
     },
@@ -2237,6 +3122,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Reachable" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Erreichbar" }
         }
       }
     },
@@ -2245,6 +3133,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Refresh password-free mode" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Passwortfreien Modus erneuern" }
         }
       }
     },
@@ -2254,6 +3145,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Remove %@?" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ entfernen?" }
         }
       }
     },
@@ -2263,6 +3157,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Removing %@…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ wird entfernt …" }
         }
       }
     },
@@ -2272,6 +3169,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Repaired. Every address points at this Mac again." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Repariert. Alle Adressen zeigen wieder auf diesen Mac." }
         }
       }
     },
@@ -2281,6 +3181,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Restarting the server" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Server wird neu gestartet" }
         }
       }
     },
@@ -2290,6 +3193,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Restarting the server…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Server wird neu gestartet …" }
         }
       }
     },
@@ -2298,6 +3204,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Running" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Läuft" }
         }
       }
     },
@@ -2307,6 +3216,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Running · %@" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Läuft · %@" }
         }
       }
     },
@@ -2315,6 +3227,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Running · needs repair" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Läuft · Reparatur nötig" }
         }
       }
     },
@@ -2323,6 +3238,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Secure connection" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sichere Verbindung" }
         }
       }
     },
@@ -2338,6 +3256,18 @@
               },
               "other" : {
                 "stringUnit" : { "state" : "translated", "value" : "Secure · %lld days" }
+              }
+            }
+          }
+        },
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "Sicher · %lld Tag" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "Sicher · %lld Tage" }
               }
             }
           }
@@ -2359,6 +3289,18 @@
               }
             }
           }
+        },
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "Sicher · noch %lld Tag" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "Sicher · noch %lld Tage" }
+              }
+            }
+          }
         }
       }
     },
@@ -2367,6 +3309,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Server running" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Server läuft" }
         }
       }
     },
@@ -2375,6 +3320,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Server stopped" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Server gestoppt" }
         }
       }
     },
@@ -2384,6 +3332,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Setting up the site" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Website wird eingerichtet" }
         }
       }
     },
@@ -2392,6 +3343,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Show Details has the exact message from Patchy." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Unter „Details einblenden“ steht die genaue Meldung von Patchy." }
         }
       }
     },
@@ -2400,6 +3354,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Skip the password prompts" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Passwortabfragen überspringen" }
         }
       }
     },
@@ -2409,6 +3366,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Some addresses still aren’t pointing at this Mac" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Manche Adressen zeigen noch nicht auf diesen Mac" }
         }
       }
     },
@@ -2418,6 +3378,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Some sites may still show a browser warning. If you cancelled a password prompt, try again and enter your Mac password." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Manche Websites zeigen vielleicht noch eine Browserwarnung. Wenn du eine Passwortabfrage abgebrochen hast, versuche es erneut und gib dein Mac-Passwort ein." }
         }
       }
     },
@@ -2426,6 +3389,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Something stopped the setup partway. Your other sites are fine; Show Details has the exact message from Patchy." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Etwas hat die Einrichtung unterbrochen. Deine anderen Websites sind in Ordnung; unter „Details einblenden“ steht die genaue Meldung von Patchy." }
         }
       }
     },
@@ -2434,6 +3400,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Starting and stopping the server, and adding or removing sites, all tell your Mac where each address lives. Normally macOS asks for your Mac password every time." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Wenn du den Server startest oder stoppst und Websites hinzufügst oder entfernst, wird deinem Mac jedes Mal mitgeteilt, wohin welche Adresse führt. Normalerweise fragt macOS dafür jedes Mal nach deinem Mac-Passwort." }
         }
       }
     },
@@ -2443,6 +3412,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Starting the server…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Server wird gestartet …" }
         }
       }
     },
@@ -2451,6 +3423,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Stopped" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Gestoppt" }
         }
       }
     },
@@ -2460,6 +3435,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Stopping the server…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Server wird gestoppt …" }
         }
       }
     },
@@ -2469,6 +3447,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Switching every site to PHP %@…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Alle Websites werden auf PHP %@ umgestellt …" }
         }
       }
     },
@@ -2477,6 +3458,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "That address looks unfinished. It can’t start or end with a dot or hyphen." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Diese Adresse sieht unvollständig aus. Sie darf nicht mit einem Punkt oder Bindestrich beginnen oder enden." }
         }
       }
     },
@@ -2486,6 +3470,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "That doesn’t match your Mac password. Try again." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Das stimmt nicht mit deinem Mac-Passwort überein. Versuche es erneut." }
         }
       }
     },
@@ -2494,6 +3481,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "That’s the only thing it’s allowed to do on its own." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Das ist das Einzige, was es selbstständig tun darf." }
         }
       }
     },
@@ -2503,6 +3493,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "The address stays the same. Patchy serves files from the new folder instead. Nothing is moved or deleted." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Die Adresse bleibt gleich. Patchy liefert stattdessen die Dateien aus dem neuen Ordner aus. Nichts wird bewegt oder gelöscht." }
         }
       }
     },
@@ -2512,6 +3505,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "The address will stop working on this Mac. The folder and everything in it stay right where they are." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Die Adresse funktioniert auf diesem Mac nicht mehr. Der Ordner und alles darin bleiben, wo sie sind." }
         }
       }
     },
@@ -2521,6 +3517,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "The background service that runs the server didn’t respond. Stopping and starting it again resets it." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Der Hintergrunddienst, der den Server betreibt, hat nicht reagiert. Stoppen und erneutes Starten setzt ihn zurück." }
         }
       }
     },
@@ -2529,6 +3528,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "The certificate file is damaged. Refreshing certificates replaces it." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Die Zertifikatsdatei ist beschädigt. Beim Erneuern der Zertifikate wird sie ersetzt." }
         }
       }
     },
@@ -2538,6 +3540,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "The folder changed, but the server isn’t running" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Der Ordner wurde geändert, aber der Server läuft nicht" }
         }
       }
     },
@@ -2546,6 +3551,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "The folder you choose" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Der Ordner, den du wählst" }
         }
       }
     },
@@ -2554,6 +3562,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "The menu bar item stays either way. With the Dock icon off, open the window from the menu bar item." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Das Symbol in der Menüleiste bleibt in jedem Fall. Ohne Dock-Symbol öffnest du das Fenster über die Menüleiste." }
         }
       }
     },
@@ -2563,6 +3574,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "The one you use to log in to this Mac. Patchy passes it straight to macOS and doesn’t keep it." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Das Passwort, mit dem du dich an diesem Mac anmeldest. Patchy gibt es direkt an macOS weiter und speichert es nicht." }
         }
       }
     },
@@ -2572,6 +3586,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "The server didn’t start" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Der Server ist nicht gestartet" }
         }
       }
     },
@@ -2581,6 +3598,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "The server didn’t stop" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Der Server wurde nicht gestoppt" }
         }
       }
     },
@@ -2589,6 +3609,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "The server is stopped, so none of your sites will open right now." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Der Server ist gestoppt, deshalb öffnet sich gerade keine deiner Websites." }
         }
       }
     },
@@ -2597,6 +3620,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "The server is stopped." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Der Server ist gestoppt." }
         }
       }
     },
@@ -2606,6 +3632,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "The server is stuck" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Der Server hängt" }
         }
       }
     },
@@ -2615,6 +3644,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "The server restarted, but it couldn’t update where your addresses point. Try Repair again." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Der Server wurde neu gestartet, konnte aber nicht aktualisieren, wohin deine Adressen zeigen. Versuche erneut „Reparieren“." }
         }
       }
     },
@@ -2623,6 +3655,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "The server restarts when it’s done." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Danach startet der Server neu." }
         }
       }
     },
@@ -2631,6 +3666,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "The setup check found a problem, so Patchy undid every step. Nothing was added and your other sites are fine." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Die Prüfung der Einrichtung hat ein Problem gefunden, daher hat Patchy jeden Schritt rückgängig gemacht. Es wurde nichts hinzugefügt, und deine anderen Websites sind in Ordnung." }
         }
       }
     },
@@ -2640,6 +3678,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "The setup check found a problem, so the site still uses its previous folder. Nothing else changed." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Die Prüfung der Einrichtung hat ein Problem gefunden, daher verwendet die Website weiterhin ihren bisherigen Ordner. Sonst hat sich nichts geändert." }
         }
       }
     },
@@ -2649,6 +3690,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "The site is still set up exactly as it was. Show Details has the exact message from Patchy." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Die Website ist noch genau so eingerichtet wie vorher. Unter „Details einblenden“ steht die genaue Meldung von Patchy." }
         }
       }
     },
@@ -2657,6 +3701,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "There’s no folder to serve files from." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Es gibt keinen Ordner, aus dem Dateien ausgeliefert werden können." }
         }
       }
     },
@@ -2665,6 +3712,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "This address isn’t pointing at this Mac. Repair fixes it." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Diese Adresse zeigt nicht auf diesen Mac. „Reparieren“ behebt das." }
         }
       }
     },
@@ -2674,6 +3724,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "This Mac account isn’t allowed to make this change. Use an administrator account." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dieser Mac-Account darf diese Änderung nicht vornehmen. Verwende einen Administrator-Account." }
         }
       }
     },
@@ -2683,6 +3736,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "This Mac account isn’t allowed to set this up. Use an administrator account." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dieser Mac-Account darf das nicht einrichten. Verwende einen Administrator-Account." }
         }
       }
     },
@@ -2692,6 +3748,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "This Patchy UI was made for Patchy %@, but Patchy %@ is installed. Update Patchy to avoid problems: paste the command into Terminal." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dieses Patchy UI wurde für Patchy %1$@ gemacht, installiert ist aber Patchy %2$@. Aktualisiere Patchy, um Probleme zu vermeiden: Füge den Befehl im Terminal ein." }
         }
       }
     },
@@ -2700,6 +3759,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "This Patchy UI was made for Patchy %@. Patchy is newer, so some things may not work until Patchy UI is updated." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dieses Patchy UI wurde für Patchy %@ gemacht. Patchy ist neuer, daher funktioniert manches vielleicht erst, wenn Patchy UI aktualisiert ist." }
         }
       }
     },
@@ -2708,6 +3770,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "This Patchy UI was made for Patchy %@. Patchy is older; update it in Terminal with: %@" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dieses Patchy UI wurde für Patchy %1$@ gemacht. Patchy ist älter; aktualisiere es im Terminal mit: %2$@" }
         }
       }
     },
@@ -2717,6 +3782,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "This takes a few seconds." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Das dauert ein paar Sekunden." }
         }
       }
     },
@@ -2725,6 +3793,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Type a name and Patchy adds .test. Or type a full address, like mysite.local." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Gib einen Namen ein, und Patchy hängt .test an. Oder gib eine vollständige Adresse ein, etwa mysite.local." }
         }
       }
     },
@@ -2734,6 +3805,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Untitled Group" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Gruppe ohne Namen" }
         }
       }
     },
@@ -2742,6 +3816,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Use only letters, numbers, hyphens (-), and dots (.)." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Verwende nur Buchstaben, Ziffern, Bindestriche (-) und Punkte (.)." }
         }
       }
     },
@@ -2751,6 +3828,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Valid until %@." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Gültig bis %@." }
         }
       }
     },
@@ -2760,6 +3840,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Valid until %@. Refresh before then to avoid browser warnings." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Gültig bis %@. Erneuere es vorher, um Browserwarnungen zu vermeiden." }
         }
       }
     },
@@ -2767,6 +3850,9 @@
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Version %@" }
+        },
+        "de" : {
           "stringUnit" : { "state" : "translated", "value" : "Version %@" }
         }
       }
@@ -2777,6 +3863,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Visits" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Besuche" }
         }
       }
     },
@@ -2785,6 +3874,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "When it finishes, come back and click Check Again." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Wenn der Befehl fertig ist, komm hierher zurück und klicke auf „Erneut prüfen“." }
         }
       }
     },
@@ -2793,6 +3885,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "When PHP or the server reports a problem with this site, it shows up here." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Wenn PHP oder der Server ein Problem mit dieser Website meldet, erscheint es hier." }
         }
       }
     },
@@ -2801,6 +3896,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Working…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Wird ausgeführt …" }
         }
       }
     },
@@ -2810,6 +3908,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Yes" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ja" }
         }
       }
     },
@@ -2818,6 +3919,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "You can add other versions with Homebrew; they show up here when they’re ready. For example, in Terminal:" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Weitere Versionen kannst du mit Homebrew hinzufügen; sie erscheinen hier, sobald sie bereit sind. Zum Beispiel im Terminal:" }
         }
       }
     },
@@ -2826,6 +3930,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "You enter your Mac password once, now." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Du gibst dein Mac-Passwort einmal ein, jetzt." }
         }
       }
     },
@@ -2835,6 +3942,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Your Mac wouldn’t let the app pass your password along. You can turn on password-free mode yourself instead: open Terminal (in Applications > Utilities), type patchy trust, press Return and enter your Mac password. Then come back here." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dein Mac hat der App nicht erlaubt, dein Passwort weiterzugeben. Du kannst den passwortfreien Modus stattdessen selbst einschalten: Öffne das Terminal (unter Programme > Dienstprogramme), gib patchy trust ein, drücke den Zeilenschalter und gib dein Mac-Passwort ein. Komm danach hierher zurück." }
         }
       }
     },
@@ -2843,6 +3953,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Your sites are running on PHP %@." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deine Websites laufen mit PHP %@." }
         }
       }
     },
@@ -2852,6 +3965,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Your sites won’t open until it’s running. Show Details has the exact message from Patchy." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deine Websites öffnen sich erst, wenn er läuft. Unter „Details einblenden“ steht die genaue Meldung von Patchy." }
         }
       }
     },
@@ -2860,6 +3976,9 @@
       "localizations" : {
         "en" : {
           "stringUnit" : { "state" : "translated", "value" : "Technical details from Patchy, in English." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Technische Details von Patchy, auf Englisch." }
         }
       }
     }
