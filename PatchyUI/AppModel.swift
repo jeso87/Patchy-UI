@@ -306,8 +306,12 @@ final class AppModel {
 
     // MARK: Loading
 
+    /// True inside the unit-test host. The app then stays idle: no polling and no Sparkle.
+    static let isRunningTests = ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil
+        || ProcessInfo.processInfo.environment["XCTestBundlePath"] != nil
+
     func launch() {
-        guard pollTask == nil else { return }
+        guard pollTask == nil, !Self.isRunningTests else { return }
         _ = updater
         groups = groupStore.load()
         pollTask = Task { [weak self] in
