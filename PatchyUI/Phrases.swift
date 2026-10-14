@@ -11,13 +11,13 @@ enum Phrases {
 
     /// The tail of a shortened list: "2 more".
     static func more(_ count: Int) -> String {
-        String(localized: "\(count) more", comment: "How many names a shortened list left out, e.g. “a.com and b.com and 2 more”.")
+        String(localized: "\(count) more", comment: "How many names a shortened list left out, e.g. “a.com and b.com and 2 more”. Always 1 or more; give it your language's plural forms.")
     }
 
     /// The group suggestion card: "2 sites look related: acme.test, shop.acme.test".
     static func relatedSites(_ addresses: [String]) -> String {
         String(localized: "\(addresses.count) sites look related: \(addresses.joined(separator: listSeparator))",
-               comment: "Sidebar suggestion to group websites with similar names. Always two or more. The list is the addresses.")
+               comment: "Sidebar suggestion to group websites with similar names. The count is always 2 or more, but give it your language's plural forms (in Russian, 21 takes the singular). The list is the addresses.")
     }
 
     /// "1 site", "12 sites".

@@ -1415,20 +1415,38 @@
       }
     },
     "%lld more" : {
-      "comment" : "How many names a shortened list left out, e.g. “a.com and b.com and 2 more”.",
-      "extractionState" : "extracted_with_value",
+      "comment" : "How many names a shortened list left out, e.g. “a.com and b.com and 2 more”. Always 1 or more; give it your language's plural forms.",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "%lld more" }
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld more" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld more" }
+              }
+            }
+          }
         }
       }
     },
     "%lld sites look related: %@" : {
-      "comment" : "Sidebar suggestion to group websites with similar names. Always two or more. The list is the addresses.",
-      "extractionState" : "extracted_with_value",
+      "comment" : "Sidebar suggestion to group websites with similar names. The count is always 2 or more, but give it your language's plural forms (in Russian, 21 takes the singular). The list is the addresses.",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "%lld sites look related: %@" }
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld site looks related: %@" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld sites look related: %@" }
+              }
+            }
+          }
         }
       }
     },
@@ -2309,20 +2327,38 @@
       }
     },
     "Secure · %lld days" : {
-      "comment" : "Short status in the sidebar for a healthy site: days until its certificate expires. Always more than 30.",
-      "extractionState" : "extracted_with_value",
+      "comment" : "Short status in the sidebar for a healthy site: days until its certificate expires. English never shows 1 here (it's always over 30), but give it your language's plural forms: in Russian or Polish, 31 takes the singular.",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Secure · %lld days" }
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "Secure · %lld day" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "Secure · %lld days" }
+              }
+            }
+          }
         }
       }
     },
     "Secure · %lld days left" : {
-      "comment" : "Certificate status in a site's details. Always more than 30 days.",
-      "extractionState" : "extracted_with_value",
+      "comment" : "Certificate status in a site's details. English never shows 1 here (it's always over 30), but give it your language's plural forms: in Russian or Polish, 31 takes the singular.",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Secure · %lld days left" }
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "Secure · %lld day left" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "Secure · %lld days left" }
+              }
+            }
+          }
         }
       }
     },

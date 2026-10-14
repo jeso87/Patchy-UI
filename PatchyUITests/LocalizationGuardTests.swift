@@ -147,6 +147,24 @@ final class LocalizationGuardTests: XCTestCase {
         }
     }
 
+    /// Every phrase that shows a count carries plural forms, even where English never needs `one`
+    /// ("Secure · 400 days left" is always over 30). In Russian or Polish 31 takes the singular and
+    /// 32 another form, so a plain entry would give those languages nowhere to put them.
+    /// Bare numbers ("%lld", "%lld.") have no words to inflect and are exempt.
+    func testEveryCountedPhraseHasPluralForms() throws {
+        let strings = try XCTUnwrap(Self.catalog()["strings"] as? [String: Any])
+        var counted = 0
+        for (key, entry) in strings {
+            let words = key.replacingOccurrences(of: "%lld", with: "")
+            guard key.contains("%lld"), words.rangeOfCharacter(from: .letters) != nil else { continue }
+            counted += 1
+            let english = (((entry as? [String: Any])?["localizations"] as? [String: Any])?["en"] as? [String: Any])
+            let plural = (english?["variations"] as? [String: Any])?["plural"]
+            XCTAssertNotNil(plural, "“\(key)” shows a count but has no plural forms")
+        }
+        XCTAssertGreaterThan(counted, 0, "no counted phrases examined — the test would pass vacuously")
+    }
+
     // MARK: - Helpers
 
     static func catalog() throws -> [String: Any] {
