@@ -4,14 +4,14 @@ import SwiftUI
 
 enum FolderPicker {
     /// The standard folder chooser. New folders can be made from inside it.
-    @MainActor static func choose(startingAt start: URL? = nil, prompt: String = "Choose") -> URL? {
+    @MainActor static func choose(startingAt start: URL? = nil, prompt: String = String(localized: "Choose")) -> URL? {
         let panel = NSOpenPanel()
         panel.canChooseDirectories = true
         panel.canChooseFiles = false
         panel.canCreateDirectories = true
         panel.allowsMultipleSelection = false
         panel.prompt = prompt
-        panel.message = "Choose the folder that holds this site’s files."
+        panel.message = String(localized: "Choose the folder that holds this site’s files.", comment: "Message in the folder chooser.")
         panel.directoryURL = start
         return panel.runModal() == .OK ? panel.url : nil
     }
@@ -174,7 +174,7 @@ struct AddSiteSheet: View {
 
         VStack(alignment: .leading, spacing: 8) {
             AddressField(name: $model.add.name, suffix: draft.suffix, hasError: problem != nil)
-            Text(problem ?? "Type a name and Patchy adds .test. Or type a full address, like mysite.local.")
+            Text(problem ?? String(localized: "Type a name and Patchy adds .test. Or type a full address, like mysite.local."))
                 .font(.system(size: 12))
                 .foregroundStyle(problem == nil ? Theme.secondaryText : Theme.redText)
                 .fixedSize(horizontal: false, vertical: true)
@@ -194,7 +194,7 @@ struct AddSiteSheet: View {
         }
 
         if valid, draft.offersWWW {
-            Toggle(isOn: $model.add.includeWWW) { Text(verbatim: "Also answer at www.\(draft.finalAddress)") }
+            Toggle(isOn: $model.add.includeWWW) { Text(verbatim: String(localized: "Also answer at www.\(draft.finalAddress)", comment: "Checkbox in the Add Site sheet. Keep “www.” as is; the placeholder is the address.")) }
                 .toggleStyle(.checkbox)
         }
 
@@ -203,7 +203,7 @@ struct AddSiteSheet: View {
                 HStack(alignment: .top, spacing: 10) {
                     Glyph(severity: .warning)
                     VStack(alignment: .leading, spacing: 3) {
-                        Text(verbatim: "\(draft.finalAddress) might be a real website.").fontWeight(.semibold)
+                        Text(verbatim: String(localized: "\(draft.finalAddress) might be a real website.")).fontWeight(.semibold)
                         Text("While the server runs, this Mac shows your local copy and can’t reach the live site. Everyone else still sees the real one.")
                             .fixedSize(horizontal: false, vertical: true)
                     }
@@ -245,7 +245,7 @@ struct AddSiteSheet: View {
     @ViewBuilder private var progress: some View {
         let steps = model.busy?.steps ?? model.add.steps
         let current = model.busy?.index ?? steps.count
-        SheetTitle(title: "Adding \(model.add.finalAddress)", message: "This takes a few seconds.")
+        SheetTitle(title: String(localized: "Adding \(model.add.finalAddress)", comment: "Sheet title."), message: String(localized: "This takes a few seconds.", comment: "Sheet message."))
         VStack(alignment: .leading, spacing: 9) {
             ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
                 HStack(spacing: 10) {
@@ -266,7 +266,7 @@ struct AddSiteSheet: View {
     @ViewBuilder private var failure: some View {
         HStack(alignment: .top, spacing: 12) {
             Glyph(severity: .error, size: 22)
-            SheetTitle(title: "Couldn’t add \(model.add.finalAddress)", message: model.add.errorMessage)
+            SheetTitle(title: String(localized: "Couldn’t add \(model.add.finalAddress)", comment: "Sheet title."), message: model.add.errorMessage)
         }
         DetailsDisclosure(details: model.add.errorDetails)
         HStack(spacing: 8) {
@@ -306,7 +306,7 @@ struct DetailsDisclosure: View {
                 .font(.system(size: 12))
             if expanded {
                 ScrollView {
-                    Text(details.isEmpty ? "Patchy didn’t report anything." : details)
+                    Text(details.isEmpty ? String(localized: "Patchy didn’t report anything.") : details)
                         .font(.system(size: 11, design: .monospaced))
                         .textSelection(.enabled)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -338,10 +338,10 @@ struct RemoveSheet: View {
     var body: some View {
         let site = model.sites.first { $0.address == address }
         VStack(alignment: .leading, spacing: 8) {
-            SheetTitle(title: "Remove \(address)?",
-                       message: "The address will stop working on this Mac. The folder and everything in it stay right where they are.")
+            SheetTitle(title: String(localized: "Remove \(address)?", comment: "Sheet title."),
+                       message: String(localized: "The address will stop working on this Mac. The folder and everything in it stay right where they are.", comment: "Sheet message."))
             if AddressRules.isRealAddress(address) {
-                Text(verbatim: "\(address) will reach the live website again.")
+                Text(verbatim: String(localized: "\(address) will reach the live website again."))
                     .font(.system(size: 12.5))
                     .foregroundStyle(Theme.bodyText)
             }
@@ -372,8 +372,8 @@ struct FolderSheet: View {
         let site = model.sites.first { $0.address == address }
         let draft = model.folderDraft
         let isSame = draft?.path == site?.folder
-        SheetTitle(title: "Change folder for \(address)",
-                   message: "The address stays the same. Patchy serves files from the new folder instead. Nothing is moved or deleted.")
+        SheetTitle(title: String(localized: "Change folder for \(address)", comment: "Sheet title."),
+                   message: String(localized: "The address stays the same. Patchy serves files from the new folder instead. Nothing is moved or deleted.", comment: "Sheet message."))
         Card(background: Theme.sheetCard, border: Theme.sheetCardBorder) {
             HStack(alignment: .top, spacing: 12) {
                 Text("Current").foregroundStyle(Theme.secondaryText).frame(width: 70, alignment: .leading)
@@ -387,7 +387,7 @@ struct FolderSheet: View {
             Divider()
             HStack(alignment: .center, spacing: 12) {
                 Text("New").foregroundStyle(Theme.secondaryText).frame(width: 70, alignment: .leading)
-                Text(draft?.displayPath ?? "No folder chosen yet")
+                Text(draft?.displayPath ?? String(localized: "No folder chosen yet"))
                     .fontWeight(draft == nil ? .regular : .medium)
                     .opacity(draft == nil ? 0.55 : 1)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -431,7 +431,7 @@ struct RefreshCertificatesSheet: View {
 
     var body: some View {
         SheetTitle(title: Phrases.refreshCertificatesTitle(siteCount: model.sites.count),
-                   message: "Patchy makes a new certificate for every site at once, so https:// keeps working without browser warnings. This can take up to a minute.")
+                   message: String(localized: "Patchy makes a new certificate for every site at once, so https:// keeps working without browser warnings. This can take up to a minute.", comment: "Sheet message."))
         VStack(alignment: .leading, spacing: 8) {
             bullet("macOS will ask for your Mac password.")
             if model.serverRunning { bullet("The server restarts when it’s done.") }
@@ -449,7 +449,7 @@ struct RefreshCertificatesSheet: View {
         .controlSize(.large)
     }
 
-    private func bullet(_ text: String) -> some View {
+    private func bullet(_ text: LocalizedStringKey) -> some View {
         HStack(alignment: .top, spacing: 9) {
             Text("•").foregroundStyle(Theme.secondaryText)
             Text(text).fixedSize(horizontal: false, vertical: true)
@@ -473,10 +473,10 @@ struct TrustSheet: View {
     }
 
     @ViewBuilder private var explain: some View {
-        SheetTitle(title: model.trustIsUpdate ? "Refresh password-free mode" : "Skip the password prompts",
+        SheetTitle(title: model.trustIsUpdate ? String(localized: "Refresh password-free mode") : String(localized: "Skip the password prompts"),
                    message: model.trustIsUpdate
-                       ? "Patchy was updated, so its permission to update your addresses needs to be refreshed once. Until then, macOS asks for your Mac password on every change."
-                       : "Starting and stopping the server, and adding or removing sites, all tell your Mac where each address lives. Normally macOS asks for your Mac password every time.")
+                       ? String(localized: "Patchy was updated, so its permission to update your addresses needs to be refreshed once. Until then, macOS asks for your Mac password on every change.")
+                       : String(localized: "Starting and stopping the server, and adding or removing sites, all tell your Mac where each address lives. Normally macOS asks for your Mac password every time."))
         Card(background: Theme.sheetCard, border: Theme.sheetCardBorder) {
             VStack(alignment: .leading, spacing: 8) {
                 check("Patchy can update your addresses without asking each time.")
@@ -502,7 +502,7 @@ struct TrustSheet: View {
         .controlSize(.large)
     }
 
-    private func check(_ text: String) -> some View {
+    private func check(_ text: LocalizedStringKey) -> some View {
         HStack(alignment: .top, spacing: 9) {
             Image(systemName: "checkmark")
                 .font(.system(size: 11, weight: .bold))
@@ -513,8 +513,8 @@ struct TrustSheet: View {
     }
 
     @ViewBuilder private var passwordStep: some View {
-        SheetTitle(title: "Enter your Mac password",
-                   message: "The one you use to log in to this Mac. Patchy passes it straight to macOS and doesn’t keep it.")
+        SheetTitle(title: String(localized: "Enter your Mac password", comment: "Sheet title."),
+                   message: String(localized: "The one you use to log in to this Mac. Patchy passes it straight to macOS and doesn’t keep it.", comment: "Sheet message."))
         SecureField("Mac password", text: $password)
             .textFieldStyle(.roundedBorder)
             .controlSize(.large)
@@ -573,8 +573,8 @@ struct PasswordSheet: View {
 
     var body: some View {
         let prompt = model.passwordPrompt
-        SheetTitle(title: "Enter your Mac password",
-                   message: "macOS needs it to finish this change. It’s the one you use to log in to this Mac. Patchy passes it straight to macOS and doesn’t keep it.")
+        SheetTitle(title: String(localized: "Enter your Mac password", comment: "Sheet title."),
+                   message: String(localized: "macOS needs it to finish this change. It’s the one you use to log in to this Mac. Patchy passes it straight to macOS and doesn’t keep it.", comment: "Sheet message."))
         SecureField("Mac password", text: $password)
             .textFieldStyle(.roundedBorder)
             .controlSize(.large)

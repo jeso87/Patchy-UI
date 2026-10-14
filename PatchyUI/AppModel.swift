@@ -6,7 +6,13 @@ enum DetailTab: String, CaseIterable, Identifiable {
     case overview, errors, visits
 
     var id: String { rawValue }
-    var title: String { rawValue.capitalized }
+    var title: String {
+        switch self {
+        case .overview: String(localized: "Overview", comment: "Tab in a site's details.")
+        case .errors: String(localized: "Errors", comment: "Tab in a site's details showing its error log.")
+        case .visits: String(localized: "Visits", comment: "Tab in a site's details showing its access log.")
+        }
+    }
 }
 
 struct Busy: Equatable {
@@ -88,9 +94,9 @@ struct AddDraft: Equatable {
 
     func problemText(existing: [String]) -> String? {
         switch AddressRules.problem(with: name, existing: existing) {
-        case .invalidCharacters: "Use only letters, numbers, hyphens (-), and dots (.)."
-        case .unfinished: "That address looks unfinished. It can’t start or end with a dot or hyphen."
-        case .alreadyExists(let address): "\(address) already exists. Pick a different address."
+        case .invalidCharacters: String(localized: "Use only letters, numbers, hyphens (-), and dots (.).")
+        case .unfinished: String(localized: "That address looks unfinished. It can’t start or end with a dot or hyphen.")
+        case .alreadyExists(let address): String(localized: "\(address) already exists. Pick a different address.")
         case nil: nil
         }
     }
@@ -230,11 +236,13 @@ final class AppModel {
     }
 
     func commitGroupName() {
+        let trimmed = groupNameDraft.trimmingCharacters(in: .whitespacesAndNewlines)
+        let groupName = trimmed.isEmpty ? String(localized: "Untitled Group", comment: "Name given to a sidebar group left unnamed.") : trimmed
         switch groupNamePrompt {
         case .new(let address):
-            groups.createGroup(named: groupNameDraft, sites: address.map { [$0] } ?? [])
+            groups.createGroup(named: groupName, sites: address.map { [$0] } ?? [])
         case .rename(let id):
-            groups.rename(id, to: groupNameDraft)
+            groups.rename(id, to: groupName)
         case nil:
             break
         }
@@ -270,15 +278,15 @@ final class AppModel {
     var phpLabel: String { snapshot.activePHP.map { "PHP \($0)" } ?? "PHP" }
 
     var serverTitle: String {
-        if isBusy { return "Working…" }
-        if !serverRunning { return "Stopped" }
-        return unroutedCount > 0 ? "Needs repair" : "Running"
+        if isBusy { return String(localized: "Working…") }
+        if !serverRunning { return String(localized: "Stopped") }
+        return unroutedCount > 0 ? String(localized: "Needs repair") : String(localized: "Running")
     }
 
     var serverPillText: String {
         if let busy { return busy.text }
-        if !serverRunning { return "Stopped" }
-        return unroutedCount > 0 ? "Running · needs repair" : "Running · \(phpLabel)"
+        if !serverRunning { return String(localized: "Stopped") }
+        return unroutedCount > 0 ? String(localized: "Running · needs repair") : String(localized: "Running · \(phpLabel)", comment: "Server status in the toolbar. The placeholder is “PHP 8.4”.")
     }
 
     var footerText: String {
@@ -435,9 +443,9 @@ final class AppModel {
                 passwordContinuation?.resume(returning: password)
                 passwordContinuation = nil
             case .wrong:
-                passwordPrompt = PasswordPrompt(error: "That doesn’t match your Mac password. Try again.")
+                passwordPrompt = PasswordPrompt(error: String(localized: "That doesn’t match your Mac password. Try again.", comment: "Shown under a password field."))
             case .notAllowed:
-                passwordPrompt = PasswordPrompt(error: "This Mac account isn’t allowed to make this change. Use an administrator account.")
+                passwordPrompt = PasswordPrompt(error: String(localized: "This Mac account isn’t allowed to make this change. Use an administrator account.", comment: "Shown under a password field."))
             }
         }
     }
@@ -484,17 +492,17 @@ final class AppModel {
         Task {
             switch await PasswordCheck.validate(password) {
             case .wrong:
-                trustError = "That doesn’t match your Mac password. Try again."
+                trustError = String(localized: "That doesn’t match your Mac password. Try again.", comment: "Shown under a password field.")
                 trustStep = .password
                 return
             case .notAllowed:
-                trustError = "This Mac account isn’t allowed to set this up. Use an administrator account."
+                trustError = String(localized: "This Mac account isn’t allowed to set this up. Use an administrator account.", comment: "Shown under a password field.")
                 trustStep = .password
                 return
             case .valid:
                 break
             }
-            let result = await runTask(steps: ["Setting up password-free mode…"], password: password) { client, askpass, output in
+            let result = await runTask(steps: [String(localized: "Setting up password-free mode…", comment: "Progress step shown while a change runs.")], password: password) { client, askpass, output in
                 guard let askpass else { return CommandResult(exitCode: -1, output: "Could not prepare the password helper.") }
                 return await client.setUpTrust(askpass: askpass, onOutput: output)
             }
@@ -502,14 +510,14 @@ final class AppModel {
                 pendingAction = nil
                 let message: String
                 if result.output.contains("cannot be safely installed") || result.output.contains("trust cannot be safely") {
-                    message = "Patchy can’t set this up safely on this Mac, so nothing was changed. You can keep using the app; it will ask for your Mac password when a change needs it."
+                    message = String(localized: "Patchy can’t set this up safely on this Mac, so nothing was changed. You can keep using the app; it will ask for your Mac password when a change needs it.", comment: "Message in an error sheet.")
                 } else if result.output.contains("a terminal is required to read the password") {
                     // sudo wouldn't take the password from the app. Terminal always works.
-                    message = "Your Mac wouldn’t let the app pass your password along. You can turn on password-free mode yourself instead: open Terminal (in Applications > Utilities), type patchy trust, press Return and enter your Mac password. Then come back here."
+                    message = String(localized: "Your Mac wouldn’t let the app pass your password along. You can turn on password-free mode yourself instead: open Terminal (in Applications > Utilities), type patchy trust, press Return and enter your Mac password. Then come back here.", comment: "Message in an error sheet.")
                 } else {
-                    message = "Nothing was changed. Show Details has the exact message from Patchy."
+                    message = String(localized: "Nothing was changed. Show Details has the exact message from Patchy.", comment: "Message in an error sheet.")
                 }
-                sheet = .error(ErrorInfo(title: "Couldn’t set up password-free mode", message: message, details: result.output))
+                sheet = .error(ErrorInfo(title: String(localized: "Couldn’t set up password-free mode", comment: "Title of an error sheet."), message: message, details: result.output))
                 return
             }
             trustStep = .done
@@ -538,7 +546,7 @@ final class AppModel {
     func start() {
         guard !isBusy, requireTrust(for: .start) else { return }
         Task {
-            let result = await runTask(steps: ["Starting the server…", "Pointing your addresses at this Mac…"],
+            let result = await runTask(steps: [String(localized: "Starting the server…", comment: "Progress step shown while a change runs."), String(localized: "Pointing your addresses at this Mac…", comment: "Progress step shown while a change runs.")],
                                        markers: [("Successfully started", 1)]) { client, askpass, output in
                 await client.start(askpass: askpass, onOutput: output)
             }
@@ -550,13 +558,13 @@ final class AppModel {
         guard !isBusy, requireTrust(for: .stop) else { return }
         let real = sites.filter(\.isRealAddress).map(\.address)
         Task {
-            let result = await runTask(steps: ["Stopping the server…", "Handing addresses back to the internet…"],
+            let result = await runTask(steps: [String(localized: "Stopping the server…", comment: "Progress step shown while a change runs."), String(localized: "Handing addresses back to the internet…", comment: "Progress step shown while a change runs.")],
                                        markers: [("Successfully stopped", 1)]) { client, askpass, output in
                 await client.stop(askpass: askpass, onOutput: output)
             }
             if serverRunning {
-                sheet = .error(ErrorInfo(title: "The server didn’t stop",
-                                         message: "It’s still running and your sites still open. Try again, or look at Show Details.",
+                sheet = .error(ErrorInfo(title: String(localized: "The server didn’t stop", comment: "Title of an error sheet."),
+                                         message: String(localized: "It’s still running and your sites still open. Try again, or look at Show Details.", comment: "Message in an error sheet."),
                                          details: result.output))
             } else if !real.isEmpty {
                 banner = Banner(severity: .info, text: Phrases.liveAgain(real))
@@ -568,17 +576,17 @@ final class AppModel {
         guard !isBusy, requireTrust(for: .restart) else { return }
         let neededRepair = unroutedCount > 0
         Task {
-            let result = await runTask(steps: ["Restarting the server…", "Checking every address points here…"],
+            let result = await runTask(steps: [String(localized: "Restarting the server…", comment: "Progress step shown while a change runs."), String(localized: "Checking every address points here…", comment: "Progress step shown while a change runs.")],
                                        markers: [("Successfully started", 1)]) { client, askpass, output in
                 await client.restart(askpass: askpass, onOutput: output)
             }
             if !serverRunning {
                 sheet = .error(Self.startFailure(output: result.output))
             } else if neededRepair, unroutedCount == 0 {
-                banner = Banner(severity: .ok, text: "Repaired. Every address points at this Mac again.")
+                banner = Banner(severity: .ok, text: String(localized: "Repaired. Every address points at this Mac again.", comment: "Banner under the toolbar."))
             } else if unroutedCount > 0 {
-                sheet = .error(ErrorInfo(title: "Some addresses still aren’t pointing at this Mac",
-                                         message: "The server restarted, but it couldn’t update where your addresses point. Try Repair again.",
+                sheet = .error(ErrorInfo(title: String(localized: "Some addresses still aren’t pointing at this Mac", comment: "Title of an error sheet."),
+                                         message: String(localized: "The server restarted, but it couldn’t update where your addresses point. Try Repair again.", comment: "Message in an error sheet."),
                                          details: result.output))
             }
         }
@@ -588,7 +596,7 @@ final class AppModel {
         guard !isBusy else { return }
         sheet = nil
         Task {
-            let result = await runTask(steps: ["Stopping the server…", "Starting the server…"],
+            let result = await runTask(steps: [String(localized: "Stopping the server…", comment: "Progress step shown while a change runs."), String(localized: "Starting the server…", comment: "Progress step shown while a change runs.")],
                                        markers: [("Starting Apache", 1)]) { client, askpass, output in
                 let stopped = await client.stop(askpass: askpass, onOutput: output)
                 let started = await client.start(askpass: askpass, onOutput: output)
@@ -600,8 +608,8 @@ final class AppModel {
 
     static func startFailure(output: String, offerReset: Bool = true) -> ErrorInfo {
         if output.contains("launchd service is stuck"), offerReset {
-            return ErrorInfo(title: "The server is stuck",
-                             message: "The background service that runs the server didn’t respond. Stopping and starting it again resets it.",
+            return ErrorInfo(title: String(localized: "The server is stuck", comment: "Title of an error sheet."),
+                             message: String(localized: "The background service that runs the server didn’t respond. Stopping and starting it again resets it.", comment: "Message in an error sheet."),
                              details: output, recovery: .stopThenStart)
         }
         if output.contains("Address already in use") {
@@ -612,12 +620,12 @@ final class AppModel {
                     if !holders.contains(String(name)) { holders.append(String(name)) }
                 }
             }
-            return ErrorInfo(title: "Another app is using the web ports",
+            return ErrorInfo(title: String(localized: "Another app is using the web ports", comment: "Title of an error sheet."),
                              message: Phrases.portsInUse(holders: holders),
                              details: output)
         }
-        return ErrorInfo(title: "The server didn’t start",
-                         message: "Your sites won’t open until it’s running. Show Details has the exact message from Patchy.",
+        return ErrorInfo(title: String(localized: "The server didn’t start", comment: "Title of an error sheet."),
+                         message: String(localized: "Your sites won’t open until it’s running. Show Details has the exact message from Patchy.", comment: "Message in an error sheet."),
                          details: output)
     }
 
@@ -636,8 +644,8 @@ final class AppModel {
         let address = add.finalAddress
         let includeWWW = add.offersWWW && add.includeWWW
         let groupID = add.groupID
-        let steps = ["Pointing \(address) at this Mac", "Creating a secure certificate", "Setting up the site",
-                     "Checking the setup", "Restarting the server"]
+        let steps = [String(localized: "Pointing \(address) at this Mac", comment: "Progress step shown while a change runs."), String(localized: "Creating a secure certificate", comment: "Progress step shown while a change runs."), String(localized: "Setting up the site", comment: "Progress step shown while a change runs."),
+                     String(localized: "Checking the setup", comment: "Progress step shown while a change runs."), String(localized: "Restarting the server", comment: "Progress step shown while a change runs.")]
         add.steps = steps
         add.phase = .progress
         sheet = .add
@@ -672,10 +680,10 @@ final class AppModel {
                 add = AddDraft()
                 if serverRunning {
                     sheet = nil
-                    banner = Banner(severity: .ok, text: "\(address) is ready. Its folder is \(folder.displayPath).", openAddress: address)
+                    banner = Banner(severity: .ok, text: String(localized: "\(address) is ready. Its folder is \(folder.displayPath).", comment: "Banner under the toolbar."), openAddress: address)
                 } else {
                     var failure = Self.startFailure(output: result.output)
-                    failure.title = "\(address) was added, but the server isn’t running"
+                    failure.title = String(localized: "\(address) was added, but the server isn’t running", comment: "Title of an error sheet.")
                     sheet = .error(failure)
                 }
             } else {
@@ -690,15 +698,15 @@ final class AppModel {
 
     static func addFailureMessage(output: String) -> String {
         if output.contains("Rolling back") {
-            return "The setup check found a problem, so Patchy undid every step. Nothing was added and your other sites are fine."
+            return String(localized: "The setup check found a problem, so Patchy undid every step. Nothing was added and your other sites are fine.")
         }
         if output.contains("Site already exists") {
-            return "A site with this address already exists, so nothing was changed."
+            return String(localized: "A site with this address already exists, so nothing was changed.")
         }
         if !output.contains("Creating SSL certificates") {
-            return "Patchy couldn’t point the address at this Mac, so nothing was created. Your other sites are fine."
+            return String(localized: "Patchy couldn’t point the address at this Mac, so nothing was created. Your other sites are fine.")
         }
-        return "Something stopped the setup partway. Your other sites are fine; Show Details has the exact message from Patchy."
+        return String(localized: "Something stopped the setup partway. Your other sites are fine; Show Details has the exact message from Patchy.")
     }
 
     func askRemove(_ address: String? = nil) {
@@ -711,19 +719,19 @@ final class AppModel {
         sheet = nil
         let index = sites.firstIndex { $0.address == address } ?? 0
         Task {
-            let result = await runTask(steps: ["Removing \(address)…", "Restarting the server…"],
+            let result = await runTask(steps: [String(localized: "Removing \(address)…", comment: "Progress step shown while a change runs."), String(localized: "Restarting the server…", comment: "Progress step shown while a change runs.")],
                                        markers: [("Restarting Apache", 1)]) { client, askpass, output in
                 await client.removeSites([address], askpass: askpass, onOutput: output)
             }
             if sites.contains(where: { $0.address == address }) {
-                sheet = .error(ErrorInfo(title: "Couldn’t remove \(address)",
-                                         message: "The site is still set up exactly as it was. Show Details has the exact message from Patchy.",
+                sheet = .error(ErrorInfo(title: String(localized: "Couldn’t remove \(address)", comment: "Title of an error sheet."),
+                                         message: String(localized: "The site is still set up exactly as it was. Show Details has the exact message from Patchy.", comment: "Message in an error sheet."),
                                          details: result.output))
             } else {
                 groups.remove(address)
                 selection = sites.isEmpty ? nil : sites[min(index, sites.count - 1)].address
                 tab = .overview
-                banner = Banner(severity: .ok, text: "\(address) was removed. Its folder is still in place.")
+                banner = Banner(severity: .ok, text: String(localized: "\(address) was removed. Its folder is still in place.", comment: "Banner under the toolbar."))
             }
         }
     }
@@ -741,7 +749,7 @@ final class AppModel {
         if restart, !requireTrust(for: .folder(address: address, path: path)) { return }
         sheet = nil
         Task {
-            let result = await runTask(steps: ["Pointing \(address) at the new folder…", "Checking the setup…", "Restarting the server…"],
+            let result = await runTask(steps: [String(localized: "Pointing \(address) at the new folder…", comment: "Progress step shown while a change runs."), String(localized: "Checking the setup…", comment: "Progress step shown while a change runs."), String(localized: "Restarting the server…", comment: "Progress step shown while a change runs.")],
                                        markers: [("Syntax OK", 1), ("Restarting Apache", 2)]) { client, askpass, output in
                 await client.changeFolder(of: address, to: path, restart: restart, askpass: askpass, onOutput: output)
             }
@@ -749,14 +757,14 @@ final class AppModel {
             if sites.first(where: { $0.address == address })?.folder == path {
                 if restart, !serverRunning {
                     var failure = Self.startFailure(output: result.output)
-                    failure.title = "The folder changed, but the server isn’t running"
+                    failure.title = String(localized: "The folder changed, but the server isn’t running", comment: "Title of an error sheet.")
                     sheet = .error(failure)
                 } else {
-                    banner = Banner(severity: .ok, text: "\(address) now serves files from \(display).")
+                    banner = Banner(severity: .ok, text: String(localized: "\(address) now serves files from \(display).", comment: "Banner under the toolbar."))
                 }
             } else {
-                sheet = .error(ErrorInfo(title: "Couldn’t change the folder for \(address)",
-                                         message: "The setup check found a problem, so the site still uses its previous folder. Nothing else changed.",
+                sheet = .error(ErrorInfo(title: String(localized: "Couldn’t change the folder for \(address)", comment: "Title of an error sheet."),
+                                         message: String(localized: "The setup check found a problem, so the site still uses its previous folder. Nothing else changed.", comment: "Message in an error sheet."),
                                          details: result.output))
             }
         }
@@ -776,16 +784,16 @@ final class AppModel {
         let restart = serverRunning
         let count = sites.count
         Task {
-            let result = await runTask(steps: [Phrases.makingCertificates(siteCount: count), "Restarting the server…"],
+            let result = await runTask(steps: [Phrases.makingCertificates(siteCount: count), String(localized: "Restarting the server…", comment: "Progress step shown while a change runs.")],
                                        markers: [("Restarting Apache", 1)]) { client, askpass, output in
                 await client.refreshCertificates(restart: restart, askpass: askpass, onOutput: output)
             }
             if sites.contains(where: { status(of: $0).certificateNeedsRefresh }) || !result.succeeded {
-                sheet = .error(ErrorInfo(title: "Couldn’t refresh certificates",
-                                         message: "Some sites may still show a browser warning. If you cancelled a password prompt, try again and enter your Mac password.",
+                sheet = .error(ErrorInfo(title: String(localized: "Couldn’t refresh certificates", comment: "Title of an error sheet."),
+                                         message: String(localized: "Some sites may still show a browser warning. If you cancelled a password prompt, try again and enter your Mac password.", comment: "Message in an error sheet."),
                                          details: result.output))
             } else {
-                banner = Banner(severity: .ok, text: "Certificates refreshed. If a browser still shows a warning, quit and reopen it.")
+                banner = Banner(severity: .ok, text: String(localized: "Certificates refreshed. If a browser still shows a warning, quit and reopen it.", comment: "Banner under the toolbar."))
             }
         }
     }
@@ -793,16 +801,16 @@ final class AppModel {
     func switchPHP(to version: String) {
         guard !isBusy, version != snapshot.activePHP else { return }
         Task {
-            let result = await runTask(steps: ["Switching every site to PHP \(version)…", "Restarting the server…"],
+            let result = await runTask(steps: [String(localized: "Switching every site to PHP \(version)…", comment: "Progress step shown while a change runs."), String(localized: "Restarting the server…", comment: "Progress step shown while a change runs.")],
                                        markers: [("Restarting Apache", 1)]) { client, askpass, output in
                 await client.switchPHP(to: version, askpass: askpass, onOutput: output)
             }
             if snapshot.activePHP == version, serverRunning {
-                banner = Banner(severity: .ok, text: "Every site now runs on PHP \(version).")
+                banner = Banner(severity: .ok, text: String(localized: "Every site now runs on PHP \(version).", comment: "Banner under the toolbar."))
             } else {
                 openMainWindow?()
-                sheet = .error(ErrorInfo(title: "Couldn’t switch to PHP \(version)",
-                                         message: snapshot.activePHP.map { "Your sites are running on PHP \($0)." } ?? "Show Details has the exact message from Patchy.",
+                sheet = .error(ErrorInfo(title: String(localized: "Couldn’t switch to PHP \(version)", comment: "Title of an error sheet."),
+                                         message: snapshot.activePHP.map { String(localized: "Your sites are running on PHP \($0).") } ?? String(localized: "Show Details has the exact message from Patchy."),
                                          details: result.output))
             }
         }
