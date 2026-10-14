@@ -85,6 +85,10 @@ import Testing
         #expect(Phrases.certificateList(["a", "b", "c", "d", "e", "f"]) == "a, b, c, d and 2 more")
     }
 
+    @Test func relatedSites() {
+        #expect(Phrases.relatedSites(["acme.test", "shop.acme.test"]) == "2 sites look related: acme.test, shop.acme.test")
+    }
+
     @Test func statusSummary() {
         #expect(Phrases.statusSummary("Folder missing", more: 0) == "Folder missing")
         #expect(Phrases.statusSummary("Folder missing", more: 2) == "Folder missing · 2 more")
