@@ -283,9 +283,7 @@ final class AppModel {
 
     var footerText: String {
         guard !sites.isEmpty else { return "" }
-        let problems = problemSites.count
-        let attention = problems == 0 ? "" : " · \(problems) need\(problems == 1 ? "s" : "") attention"
-        return pluralized(sites.count, "site") + attention
+        return Phrases.footer(siteCount: sites.count, problems: problemSites.count)
     }
 
     // MARK: Version match
@@ -561,8 +559,7 @@ final class AppModel {
                                          message: "It’s still running and your sites still open. Try again, or look at Show Details.",
                                          details: result.output))
             } else if !real.isEmpty {
-                let names = real.prefix(2).joined(separator: " and ") + (real.count > 2 ? " and \(real.count - 2) more" : "")
-                banner = Banner(severity: .info, text: "\(names) now reach\(real.count > 1 ? "" : "es") the live website\(real.count > 1 ? "s" : "") again.")
+                banner = Banner(severity: .info, text: Phrases.liveAgain(real))
             }
         }
     }
@@ -615,9 +612,8 @@ final class AppModel {
                     if !holders.contains(String(name)) { holders.append(String(name)) }
                 }
             }
-            let who = holders.isEmpty ? "Another app" : holders.joined(separator: ", ")
             return ErrorInfo(title: "Another app is using the web ports",
-                             message: "\(who) \(holders.count > 1 ? "are" : "is") already using the ports this server needs (80 and 443). Quit \(holders.count > 1 ? "them" : "it"), then start the server again.",
+                             message: Phrases.portsInUse(holders: holders),
                              details: output)
         }
         return ErrorInfo(title: "The server didn’t start",
@@ -780,7 +776,7 @@ final class AppModel {
         let restart = serverRunning
         let count = sites.count
         Task {
-            let result = await runTask(steps: ["Making new certificates for \(pluralized(count, "site"))…", "Restarting the server…"],
+            let result = await runTask(steps: [Phrases.makingCertificates(siteCount: count), "Restarting the server…"],
                                        markers: [("Restarting Apache", 1)]) { client, askpass, output in
                 await client.refreshCertificates(restart: restart, askpass: askpass, onOutput: output)
             }

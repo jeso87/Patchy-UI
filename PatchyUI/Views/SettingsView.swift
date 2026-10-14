@@ -135,8 +135,8 @@ struct CertificateSettings: View {
                         } else if needing.isEmpty {
                             Text("Every site has a healthy certificate").fontWeight(.medium)
                         } else {
-                            Text("\(pluralized(needing.count, "site")) need\(needing.count == 1 ? "s" : "") a new certificate").fontWeight(.medium)
-                            SettingsNote(text: needing.prefix(4).map(\.address).joined(separator: ", ") + (needing.count > 4 ? " and \(needing.count - 4) more" : ""))
+                            Text(Phrases.sitesNeedNewCertificate(needing.count)).fontWeight(.medium)
+                            SettingsNote(text: Phrases.certificateList(needing.map(\.address)))
                         }
                     }
                 }
