@@ -165,6 +165,27 @@ final class LocalizationGuardTests: XCTestCase {
         XCTAssertGreaterThan(counted, 0, "no counted phrases examined — the test would pass vacuously")
     }
 
+    /// The glossary names terms every language must render consistently. A term that no longer
+    /// occurs in any catalog key is guidance about a string that no longer exists, which is how a
+    /// glossary rots into being wrong rather than merely stale. Terms are the bold text at the
+    /// start of each "- **…**" line.
+    func testEveryGlossaryTermStillAppearsInTheCatalog() throws {
+        let glossary = try String(contentsOf: Self.repoRoot().appendingPathComponent("docs/localization-glossary.md"),
+                                  encoding: .utf8)
+        let terms = glossary.split(separator: "\n").compactMap { line -> String? in
+            guard line.hasPrefix("- **"),
+                  let close = line.range(of: "**", range: line.index(line.startIndex, offsetBy: 4)..<line.endIndex)
+            else { return nil }
+            return String(line[line.index(line.startIndex, offsetBy: 4)..<close.lowerBound])
+        }
+        XCTAssertGreaterThan(terms.count, 10, "parsed too few terms; has the glossary's format changed?")
+
+        let keys = try XCTUnwrap(Self.catalog()["strings"] as? [String: Any]).keys.joined(separator: "\n").lowercased()
+        for term in terms {
+            XCTAssertTrue(keys.contains(term.lowercased()), "glossary term “\(term)” appears in no catalog key")
+        }
+    }
+
     // MARK: - Helpers
 
     static func catalog() throws -> [String: Any] {
