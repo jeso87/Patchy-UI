@@ -80,6 +80,31 @@ final class LocalizationGuardTests: XCTestCase {
         }
     }
 
+    /// Every English plural entry has both `one` and `other`. Anchored on the first plural by
+    /// name, so a catalog that lost its plurals can't pass by having none to check.
+    ///
+    /// Phase 2 extends this to every language's own categories, read from the platform's CLDR
+    /// data at test time, never from a hand-written table.
+    func testEnglishPluralEntriesHaveBothCategories() throws {
+        let strings = try XCTUnwrap(Self.catalog()["strings"] as? [String: Any])
+        func plural(_ key: String) -> [String: Any]? {
+            (((strings[key] as? [String: Any])?["localizations"] as? [String: Any])?["en"] as? [String: Any])
+                .flatMap { ($0["variations"] as? [String: Any])?["plural"] as? [String: Any] }
+        }
+        let anchor = try XCTUnwrap(plural("%lld sites"), "'%lld sites' has no English plural variations")
+        XCTAssertNotNil(anchor["one"])
+        XCTAssertNotNil(anchor["other"])
+
+        var examined = 0
+        for key in strings.keys {
+            guard let forms = plural(key) else { continue }
+            examined += 1
+            XCTAssertNotNil(forms["one"], "\(key) has no 'one' form for English")
+            XCTAssertNotNil(forms["other"], "\(key) has no 'other' form for English")
+        }
+        XCTAssertGreaterThan(examined, 0, "no plural entries examined — the test would pass vacuously")
+    }
+
     // MARK: - Helpers
 
     static func catalog() throws -> [String: Any] {

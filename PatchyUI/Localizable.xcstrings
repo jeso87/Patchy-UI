@@ -1152,6 +1152,24 @@
           "stringUnit" : { "state" : "translated", "value" : "Your first site" }
         }
       }
+    },
+    "%lld sites" : {
+      "comment" : "A number of websites, e.g. in the window subtitle and the sidebar footer.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld site" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld sites" }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
