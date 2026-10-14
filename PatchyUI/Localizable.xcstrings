@@ -2818,6 +2818,14 @@
           "stringUnit" : { "state" : "translated", "value" : "Your sites won’t open until it’s running. Show Details has the exact message from Patchy." }
         }
       }
+    },
+    "Technical details from Patchy, in English." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Technical details from Patchy, in English." }
+        }
+      }
     }
   },
   "version" : "1.0"

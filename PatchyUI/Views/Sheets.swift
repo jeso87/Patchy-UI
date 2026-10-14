@@ -299,12 +299,24 @@ struct DetailsDisclosure: View {
     @State private var expanded = false
     @State private var copied = false
 
+    /// Patchy's output is English in every language. Say so when the app isn't showing English,
+    /// or the raw text looks like a translation that went wrong.
+    static func showsEnglishNote(appLanguage: String?) -> Bool {
+        guard let appLanguage else { return false }
+        return !appLanguage.hasPrefix("en")
+    }
+
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Button(expanded ? "Hide Details" : "Show Details") { expanded.toggle() }
                 .buttonStyle(.patchyLink)
                 .font(.system(size: 12))
             if expanded {
+                if Self.showsEnglishNote(appLanguage: Bundle.main.preferredLocalizations.first) {
+                    Text("Technical details from Patchy, in English.")
+                        .font(.system(size: 11.5))
+                        .foregroundStyle(Theme.secondaryText)
+                }
                 ScrollView {
                     Text(details.isEmpty ? String(localized: "Patchy didn’t report anything.") : details)
                         .font(.system(size: 11, design: .monospaced))
