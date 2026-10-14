@@ -5,7 +5,7 @@ import Foundation
 enum Phrases {
     /// "1 site", "12 sites".
     static func siteCount(_ count: Int) -> String {
-        pluralized(count, "site")
+        String(localized: "\(count) sites", comment: "A number of websites, e.g. in the window subtitle and the sidebar footer.")
     }
 
     /// "1 needs attention", "3 need attention".
