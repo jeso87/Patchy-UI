@@ -110,6 +110,10 @@ struct SidebarView: View {
                                 SiteRow(site: site).tag(address).id(address)
                             }
                         }
+                        // Dropping anywhere among a group's sites moves the dragged site into it.
+                        .dropDestination(for: String.self) { addresses, _ in
+                            model.dropSites(addresses, on: entry.group.id)
+                        }
                     } header: {
                         GroupHeader(group: entry.group, sites: entry.sites)
                     }
@@ -117,15 +121,18 @@ struct SidebarView: View {
             }
             if sections.groups.isEmpty {
                 ungroupedRows(sections.ungrouped)
-            } else if !sections.ungrouped.isEmpty {
+            } else if !sections.ungrouped.isEmpty || !model.isFiltering {
+                // Kept even when every site is in a group, so there is somewhere to drag a site
+                // out of its group.
                 Section {
                     ungroupedRows(sections.ungrouped)
-                } header: {
-                    Text("Other Sites")
                         .dropDestination(for: String.self) { addresses, _ in
-                            addresses.forEach { model.moveSite($0, to: nil) }
-                            return !addresses.isEmpty
+                            model.dropSites(addresses, on: nil)
                         }
+                } header: {
+                    DropHeader(groupID: nil) {
+                        Text("Other Sites")
+                    }
                 }
             }
         }
@@ -234,6 +241,9 @@ struct SiteRow: View {
             }
         }
         .padding(.vertical, 2)
+        // The whole width of the row, not just its text, picks the site up.
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .contentShape(Rectangle())
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("\(site.address), \(status.summary)")
         .draggable(site.address)
@@ -279,29 +289,56 @@ struct GroupHeader: View {
 
     var body: some View {
         let problems = sites.compactMap(model.site).filter { model.status(of: $0).hasProblem }.count
-        HStack(spacing: 6) {
-            Text(group.name)
-                .lineLimit(1)
-            Text("\(sites.count)")
-                .monospacedDigit()
-                .foregroundStyle(.tertiary)
-            if problems > 0 {
-                Glyph(severity: .warning, size: 12)
-                    .help("\(pluralized(problems, "site")) in this group need\(problems == 1 ? "s" : "") attention")
+        DropHeader(groupID: group.id) {
+            HStack(spacing: 6) {
+                Text(group.name)
+                    .lineLimit(1)
+                Text("\(sites.count)")
+                    .monospacedDigit()
+                    .foregroundStyle(.tertiary)
+                if problems > 0 {
+                    Glyph(severity: .warning, size: 12)
+                        .help("\(pluralized(problems, "site")) in this group need\(problems == 1 ? "s" : "") attention")
+                }
+                Spacer(minLength: 0)
             }
-            Spacer(minLength: 0)
-        }
-        .contentShape(Rectangle())
-        .accessibilityElement(children: .ignore)
-        .accessibilityLabel("\(group.name), \(pluralized(sites.count, "site"))\(problems > 0 ? ", \(problems) need attention" : "")")
-        .dropDestination(for: String.self) { addresses, _ in
-            addresses.forEach { model.moveSite($0, to: group.id) }
-            return !addresses.isEmpty
+            .contentShape(Rectangle())
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("\(group.name), \(pluralized(sites.count, "site"))\(problems > 0 ? ", \(problems) need attention" : "")")
         }
         .contextMenu {
             Button("Rename…") { model.promptRenameGroup(group) }
             Button("Delete Group") { model.deleteGroup(group) }
         }
+    }
+}
+
+/// A section header that sites can be dropped on, the only target for a collapsed or empty group.
+/// Highlighted while a site is held over it.
+struct DropHeader<Content: View>: View {
+    @Environment(AppModel.self) private var model
+    var groupID: UUID?
+    @ViewBuilder var content: Content
+    @State private var isTargeted = false
+
+    var body: some View {
+        content
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.vertical, 3)
+            .padding(.horizontal, 6)
+            .background(isTargeted ? Color.accentColor.opacity(0.2) : .clear,
+                        in: RoundedRectangle(cornerRadius: 5, style: .continuous))
+            .overlay {
+                if isTargeted {
+                    RoundedRectangle(cornerRadius: 5, style: .continuous)
+                        .strokeBorder(Color.accentColor, lineWidth: 1.5)
+                }
+            }
+            .padding(.horizontal, -6)
+            .contentShape(Rectangle())
+            .dropDestination(for: String.self) { addresses, _ in
+                model.dropSites(addresses, on: groupID)
+            } isTargeted: { isTargeted = $0 }
     }
 }
 
