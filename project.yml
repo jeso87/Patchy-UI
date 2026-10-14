@@ -50,3 +50,43 @@ targets:
         ENABLE_HARDENED_RUNTIME: YES
         CODE_SIGN_STYLE: Automatic
         DEVELOPMENT_TEAM: LY424U3HLD
+  PatchyUITests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - PatchyUITests
+    dependencies:
+      - target: Patchy UI
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.87dash.PatchyUITests
+        # xcodegen's unit-test template generates no Info.plist; without one, signing fails.
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_VERSION: "5.0"
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: LY424U3HLD
+        # Hosted, so tests can `@testable import Patchy_UI` and resolve strings through the
+        # app's own catalog (Bundle.main is the app).
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/Patchy UI.app/Contents/MacOS/Patchy UI"
+        BUNDLE_LOADER: "$(TEST_HOST)"
+schemes:
+  Patchy UI:
+    build:
+      targets:
+        Patchy UI: all
+        PatchyUITests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets: [PatchyUITests]
+      # The copy tests pin English. Run them in English whatever this Mac is set to.
+      commandLineArguments:
+        "-AppleLanguages (en)": true
+        "-AppleLocale en_US": true
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release
