@@ -509,9 +509,9 @@ final class AppModel {
             guard trustEnabled else {
                 pendingAction = nil
                 let message: String
-                if result.output.contains("cannot be safely installed") || result.output.contains("trust cannot be safely") {
+                if result.output.contains(PatchyOutput.trustUnsafe) || result.output.contains(PatchyOutput.trustUnsafeShort) {
                     message = String(localized: "Patchy can’t set this up safely on this Mac, so nothing was changed. You can keep using the app; it will ask for your Mac password when a change needs it.", comment: "Message in an error sheet.")
-                } else if result.output.contains("a terminal is required to read the password") {
+                } else if result.output.contains(PatchyOutput.terminalRequired) {
                     // sudo wouldn't take the password from the app. Terminal always works.
                     message = String(localized: "Your Mac wouldn’t let the app pass your password along. You can turn on password-free mode yourself instead: open Terminal (in Applications > Utilities), type patchy trust, press Return and enter your Mac password. Then come back here.", comment: "Message in an error sheet.")
                 } else {
@@ -547,7 +547,7 @@ final class AppModel {
         guard !isBusy, requireTrust(for: .start) else { return }
         Task {
             let result = await runTask(steps: [String(localized: "Starting the server…", comment: "Progress step shown while a change runs."), String(localized: "Pointing your addresses at this Mac…", comment: "Progress step shown while a change runs.")],
-                                       markers: [("Successfully started", 1)]) { client, askpass, output in
+                                       markers: [(PatchyOutput.started, 1)]) { client, askpass, output in
                 await client.start(askpass: askpass, onOutput: output)
             }
             if !serverRunning { sheet = .error(Self.startFailure(output: result.output)) }
@@ -559,7 +559,7 @@ final class AppModel {
         let real = sites.filter(\.isRealAddress).map(\.address)
         Task {
             let result = await runTask(steps: [String(localized: "Stopping the server…", comment: "Progress step shown while a change runs."), String(localized: "Handing addresses back to the internet…", comment: "Progress step shown while a change runs.")],
-                                       markers: [("Successfully stopped", 1)]) { client, askpass, output in
+                                       markers: [(PatchyOutput.stopped, 1)]) { client, askpass, output in
                 await client.stop(askpass: askpass, onOutput: output)
             }
             if serverRunning {
@@ -577,7 +577,7 @@ final class AppModel {
         let neededRepair = unroutedCount > 0
         Task {
             let result = await runTask(steps: [String(localized: "Restarting the server…", comment: "Progress step shown while a change runs."), String(localized: "Checking every address points here…", comment: "Progress step shown while a change runs.")],
-                                       markers: [("Successfully started", 1)]) { client, askpass, output in
+                                       markers: [(PatchyOutput.started, 1)]) { client, askpass, output in
                 await client.restart(askpass: askpass, onOutput: output)
             }
             if !serverRunning {
@@ -597,7 +597,7 @@ final class AppModel {
         sheet = nil
         Task {
             let result = await runTask(steps: [String(localized: "Stopping the server…", comment: "Progress step shown while a change runs."), String(localized: "Starting the server…", comment: "Progress step shown while a change runs.")],
-                                       markers: [("Starting Apache", 1)]) { client, askpass, output in
+                                       markers: [(PatchyOutput.startingApache, 1)]) { client, askpass, output in
                 let stopped = await client.stop(askpass: askpass, onOutput: output)
                 let started = await client.start(askpass: askpass, onOutput: output)
                 return CommandResult(exitCode: started.exitCode, output: stopped.output + started.output)
@@ -607,14 +607,14 @@ final class AppModel {
     }
 
     static func startFailure(output: String, offerReset: Bool = true) -> ErrorInfo {
-        if output.contains("launchd service is stuck"), offerReset {
+        if output.contains(PatchyOutput.serviceStuck), offerReset {
             return ErrorInfo(title: String(localized: "The server is stuck", comment: "Title of an error sheet."),
                              message: String(localized: "The background service that runs the server didn’t respond. Stopping and starting it again resets it.", comment: "Message in an error sheet."),
                              details: output, recovery: .stopThenStart)
         }
-        if output.contains("Address already in use") {
+        if output.contains(PatchyOutput.addressInUse) {
             var holders: [String] = []
-            if let range = output.range(of: "Something else is listening on port 80/443:") {
+            if let range = output.range(of: PatchyOutput.portHolders) {
                 for line in output[range.upperBound...].split(whereSeparator: \.isNewline).dropFirst() {
                     guard line.hasPrefix("  "), let name = line.split(whereSeparator: \.isWhitespace).first else { break }
                     if !holders.contains(String(name)) { holders.append(String(name)) }
@@ -651,8 +651,8 @@ final class AppModel {
         sheet = .add
         Task {
             let result = await runTask(steps: steps, markers: [
-                ("Creating SSL certificates", 1), ("Creating Apache config file", 2),
-                ("Syntax OK", 3), ("Restarting Apache", 4),
+                (PatchyOutput.creatingCertificates, 1), (PatchyOutput.creatingConfig, 2),
+                (PatchyOutput.syntaxOK, 3), (PatchyOutput.restartingApache, 4),
             ]) { client, askpass, output in
                 #if DEBUG
                 if UserDefaults.standard.bool(forKey: "PatchyDebugFakeAdd") {
@@ -697,13 +697,13 @@ final class AppModel {
     }
 
     static func addFailureMessage(output: String) -> String {
-        if output.contains("Rolling back") {
+        if output.contains(PatchyOutput.rollingBack) {
             return String(localized: "The setup check found a problem, so Patchy undid every step. Nothing was added and your other sites are fine.")
         }
-        if output.contains("Site already exists") {
+        if output.contains(PatchyOutput.siteExists) {
             return String(localized: "A site with this address already exists, so nothing was changed.")
         }
-        if !output.contains("Creating SSL certificates") {
+        if !output.contains(PatchyOutput.creatingCertificates) {
             return String(localized: "Patchy couldn’t point the address at this Mac, so nothing was created. Your other sites are fine.")
         }
         return String(localized: "Something stopped the setup partway. Your other sites are fine; Show Details has the exact message from Patchy.")
@@ -720,7 +720,7 @@ final class AppModel {
         let index = sites.firstIndex { $0.address == address } ?? 0
         Task {
             let result = await runTask(steps: [String(localized: "Removing \(address)…", comment: "Progress step shown while a change runs."), String(localized: "Restarting the server…", comment: "Progress step shown while a change runs.")],
-                                       markers: [("Restarting Apache", 1)]) { client, askpass, output in
+                                       markers: [(PatchyOutput.restartingApache, 1)]) { client, askpass, output in
                 await client.removeSites([address], askpass: askpass, onOutput: output)
             }
             if sites.contains(where: { $0.address == address }) {
@@ -750,7 +750,7 @@ final class AppModel {
         sheet = nil
         Task {
             let result = await runTask(steps: [String(localized: "Pointing \(address) at the new folder…", comment: "Progress step shown while a change runs."), String(localized: "Checking the setup…", comment: "Progress step shown while a change runs."), String(localized: "Restarting the server…", comment: "Progress step shown while a change runs.")],
-                                       markers: [("Syntax OK", 1), ("Restarting Apache", 2)]) { client, askpass, output in
+                                       markers: [(PatchyOutput.syntaxOK, 1), (PatchyOutput.restartingApache, 2)]) { client, askpass, output in
                 await client.changeFolder(of: address, to: path, restart: restart, askpass: askpass, onOutput: output)
             }
             let display = (path as NSString).abbreviatingWithTildeInPath
@@ -785,7 +785,7 @@ final class AppModel {
         let count = sites.count
         Task {
             let result = await runTask(steps: [Phrases.makingCertificates(siteCount: count), String(localized: "Restarting the server…", comment: "Progress step shown while a change runs.")],
-                                       markers: [("Restarting Apache", 1)]) { client, askpass, output in
+                                       markers: [(PatchyOutput.restartingApache, 1)]) { client, askpass, output in
                 await client.refreshCertificates(restart: restart, askpass: askpass, onOutput: output)
             }
             if sites.contains(where: { status(of: $0).certificateNeedsRefresh }) || !result.succeeded {
@@ -802,7 +802,7 @@ final class AppModel {
         guard !isBusy, version != snapshot.activePHP else { return }
         Task {
             let result = await runTask(steps: [String(localized: "Switching every site to PHP \(version)…", comment: "Progress step shown while a change runs."), String(localized: "Restarting the server…", comment: "Progress step shown while a change runs.")],
-                                       markers: [("Restarting Apache", 1)]) { client, askpass, output in
+                                       markers: [(PatchyOutput.restartingApache, 1)]) { client, askpass, output in
                 await client.switchPHP(to: version, askpass: askpass, onOutput: output)
             }
             if snapshot.activePHP == version, serverRunning {
