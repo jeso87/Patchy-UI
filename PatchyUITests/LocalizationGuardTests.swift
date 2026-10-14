@@ -230,6 +230,109 @@ final class LocalizationGuardTests: XCTestCase {
         XCTAssertEqual(status, 0, "merge-translations.py --check reported an incomplete or stale language:\n\(output)")
     }
 
+    /// Which plural categories a language actually reaches for whole numbers,
+    /// asked of the platform rather than read from a table.
+    ///
+    /// Phase 1's spec demoted its own hand-written CLDR table to
+    /// "illustrative" after a reviewer disputed a row nobody could settle.
+    /// This is the replacement: it cannot go stale, because it is measured.
+    ///
+    /// `zero` is deliberately absent from the categories offered below.
+    /// Apple's stringsdict honours a `zero` override for a literal 0 in
+    /// *every* language, English and Japanese included — it is an Apple
+    /// extension layered on top of CLDR, not something CLDR itself grants
+    /// only to some languages. Offering it here would make all 36
+    /// languages appear to reach it, which measures nothing. The cost of
+    /// that omission is real, not just theoretical: CLDR *does* define
+    /// `zero` as a genuine plural category for Arabic, and this probe
+    /// cannot tell that apart from the universal Apple override — there is
+    /// no observation that separates the two. So `pluralCategories` can
+    /// never report `zero`, and the completeness guard below therefore
+    /// treats `zero` as always optional for every language, Arabic
+    /// included. An Arabic plural entry missing its `zero` variant will
+    /// not be caught here; Apple falls back to `other` at runtime, which
+    /// is grammatically wrong for a count of zero in Arabic. Whoever
+    /// authors the Arabic translation must supply `zero` themselves — this
+    /// guard cannot verify it.
+    static func pluralCategories(for language: String) throws -> Set<String> {
+        let dir = URL(fileURLWithPath: NSTemporaryDirectory())
+            .appendingPathComponent("plural-\(language)-\(UUID().uuidString)")
+            .appendingPathComponent("\(language).lproj")
+        try FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
+        defer { try? FileManager.default.removeItem(at: dir.deletingLastPathComponent()) }
+
+        let dict: [String: Any] = [
+            "probe": [
+                "NSStringLocalizedFormatKey": "%#@n@",
+                "n": [
+                    "NSStringFormatSpecTypeKey": "NSStringPluralRuleType",
+                    "NSStringFormatValueTypeKey": "lld",
+                    "one": "one", "two": "two", "few": "few", "many": "many", "other": "other",
+                ],
+            ],
+        ]
+        let data = try PropertyListSerialization.data(fromPropertyList: dict, format: .xml, options: 0)
+        try data.write(to: dir.appendingPathComponent("Localizable.stringsdict"))
+
+        let bundle = try XCTUnwrap(Bundle(path: dir.path), "could not load the probe bundle for \(language)")
+        let format = bundle.localizedString(forKey: "probe", value: nil, table: "Localizable")
+        var seen: Set<String> = []
+        for n in 0...220 {
+            seen.insert(String(format: format, locale: Locale(identifier: language), n))
+        }
+        return seen
+    }
+
+    /// Guards the probe itself. English must come back as exactly one/other;
+    /// Japanese inflects no nouns for number and must come back as other
+    /// alone. If the probe ever returns the raw category names for these, it
+    /// has stopped selecting and is reporting its own input.
+    func testThePluralProbeAgreesWithTwoLanguagesWeCanCheck() throws {
+        XCTAssertEqual(try Self.pluralCategories(for: "en"), ["one", "other"])
+        XCTAssertEqual(try Self.pluralCategories(for: "ja"), ["other"])
+    }
+
+    /// Arabic is the one language here that reaches five categories for whole
+    /// numbers. If this ever returns two, the probe is resolving against the
+    /// wrong bundle and every per-language assertion built on it is worthless.
+    func testThePluralProbeFindsArabicsFiveCategories() throws {
+        XCTAssertEqual(try Self.pluralCategories(for: "ar"), ["one", "two", "few", "many", "other"])
+    }
+
+    /// Every plural entry must carry the categories its language actually
+    /// reaches, plus `other` as the format's universal fallback. Languages
+    /// with no translations yet are skipped, so this tightens on its own as
+    /// Phase 2 lands each one.
+    func testPluralEntriesCarryTheCategoriesTheirLanguageNeeds() throws {
+        let strings = try XCTUnwrap(Self.catalog()["strings"] as? [String: Any])
+
+        var checked = 0
+        for (key, entry) in strings {
+            guard let entry = entry as? [String: Any],
+                  let localizations = entry["localizations"] as? [String: Any] else { continue }
+
+            for (language, body) in localizations {
+                guard let body = body as? [String: Any],
+                      let variations = body["variations"] as? [String: Any],
+                      let plural = variations["plural"] as? [String: Any] else { continue }
+
+                // `required` never contains "zero" — see the note on
+                // `pluralCategories` above for why not, and what that
+                // costs for Arabic. So `supplied` needs no corresponding
+                // subtraction: `isSubset(of:)` already ignores any extra
+                // keys `plural` supplies, "zero" included.
+                let required = try Self.pluralCategories(for: language).union(["other"])
+                let supplied = Set(plural.keys)
+                XCTAssertTrue(
+                    required.isSubset(of: supplied),
+                    "\(key) in \(language) is missing \(required.subtracting(supplied).sorted())"
+                )
+                checked += 1
+            }
+        }
+        XCTAssertGreaterThan(checked, 0, "no plural entries examined — this would have passed vacuously")
+    }
+
     // MARK: - Helpers
 
     static func catalog() throws -> [String: Any] {
