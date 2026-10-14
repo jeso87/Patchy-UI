@@ -268,6 +268,14 @@ private struct FakePrefix {
         #expect(second.output == "secret-2\n")
     }
 
+    /// sudo with no terminal ignores `SUDO_ASKPASS` unless `DISPLAY` is set too.
+    @Test func environmentLetsSudoUseTheScriptWithoutATerminal() throws {
+        let server = try AskpassServer { _ in nil }
+        defer { server.stop() }
+        #expect(server.environment["SUDO_ASKPASS"] != nil)
+        #expect(server.environment["DISPLAY"]?.isEmpty == false)
+    }
+
     @Test func noPasswordMeansEmptyOutput() async throws {
         let server = try AskpassServer { _ in nil }
         defer { server.stop() }

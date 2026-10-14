@@ -489,12 +489,16 @@ final class AppModel {
             }
             guard trustEnabled else {
                 pendingAction = nil
-                sheet = .error(ErrorInfo(
-                    title: "Couldn’t set up password-free mode",
-                    message: result.output.contains("cannot be safely installed") || result.output.contains("trust cannot be safely")
-                        ? "Patchy can’t set this up safely on this Mac, so nothing was changed. You can keep using the app; it will ask for your Mac password when a change needs it."
-                        : "Nothing was changed. Show Details has the exact message from Patchy.",
-                    details: result.output))
+                let message: String
+                if result.output.contains("cannot be safely installed") || result.output.contains("trust cannot be safely") {
+                    message = "Patchy can’t set this up safely on this Mac, so nothing was changed. You can keep using the app; it will ask for your Mac password when a change needs it."
+                } else if result.output.contains("a terminal is required to read the password") {
+                    // sudo wouldn't take the password from the app. Terminal always works.
+                    message = "Your Mac wouldn’t let the app pass your password along. You can turn on password-free mode yourself instead: open Terminal (in Applications > Utilities), type patchy trust, press Return and enter your Mac password. Then come back here."
+                } else {
+                    message = "Nothing was changed. Show Details has the exact message from Patchy."
+                }
+                sheet = .error(ErrorInfo(title: "Couldn’t set up password-free mode", message: message, details: result.output))
                 return
             }
             trustStep = .done
