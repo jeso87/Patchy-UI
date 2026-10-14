@@ -53,10 +53,10 @@ struct MenuBarLabel: View {
 
     private var description: String {
         switch state {
-        case .working: "Patchy: working"
-        case .stopped: "Patchy: server stopped"
-        case .attention: "Patchy: needs attention"
-        case .running: "Patchy: server running"
+        case .working: String(localized: "Patchy: working", comment: "VoiceOver label for the menu bar item.")
+        case .stopped: String(localized: "Patchy: server stopped", comment: "VoiceOver label for the menu bar item.")
+        case .attention: String(localized: "Patchy: needs attention", comment: "VoiceOver label for the menu bar item.")
+        case .running: String(localized: "Patchy: server running", comment: "VoiceOver label for the menu bar item.")
         }
     }
 
@@ -76,7 +76,7 @@ struct MenuBarContent: View {
 
     var body: some View {
         if model.phase == .ready {
-            Text(model.isBusy ? (model.busy?.text ?? "Working…") : model.serverRunning ? "Server running" : "Server stopped")
+            Text(model.isBusy ? (model.busy?.text ?? String(localized: "Working…")) : model.serverRunning ? String(localized: "Server running") : String(localized: "Server stopped"))
             Text(verbatim: "\(Phrases.siteCount(model.sites.count)) · \(model.phpLabel)")
 
             if model.serverRunning {

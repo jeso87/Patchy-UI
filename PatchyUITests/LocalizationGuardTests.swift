@@ -105,6 +105,29 @@ final class LocalizationGuardTests: XCTestCase {
         XCTAssertGreaterThan(examined, 0, "no plural entries examined — the test would pass vacuously")
     }
 
+    /// A sample of copy that is created as a String. Before Task 7 none of it is extracted,
+    /// because `Text(_: String)` never localizes.
+    func testCopyHeldInStringsIsInTheCatalog() throws {
+        let strings = try XCTUnwrap(Self.catalog()["strings"] as? [String: Any])
+        let samples = [
+            "Offline while the server is stopped",       // SiteStatus
+            "Opens in any browser on this Mac.",         // SiteStatus
+            "Overview",                                  // DetailTab
+            "Running · %@",                              // AppModel.serverPillText
+            "Stopping the server…",                      // a progress step
+            "Pointing %@ at this Mac",                   // the add flow's first step
+            "The server didn’t start",                   // ErrorInfo
+            "%@ was removed. Its folder is still in place.", // a banner
+            "Remove %@?",                                // SheetTitle
+            "Patchy didn’t report anything.",            // DetailsDisclosure
+            "Untitled Group",                            // default group name
+            "Patchy: server running",                    // menu bar accessibility
+        ]
+        for key in samples {
+            XCTAssertNotNil(strings[key], "“\(key)” is copy but isn't in the catalog — it is still a plain String")
+        }
+    }
+
     // MARK: - Helpers
 
     static func catalog() throws -> [String: Any] {

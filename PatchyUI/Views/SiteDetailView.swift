@@ -52,7 +52,7 @@ struct SiteDetailView: View {
                 }
             }
             if let www = site.wwwAlias {
-                Text(verbatim: "Also answers at \(www)")
+                Text(verbatim: String(localized: "Also answers at \(www)", comment: "Under a site's address in its details. The placeholder is the www. address."))
                     .font(.system(size: 12))
                     .foregroundStyle(Theme.secondaryText)
             }
@@ -143,7 +143,7 @@ struct OverviewView: View {
                         Menu {
                             GroupChoices(address: site.address)
                         } label: {
-                            Text(model.groups.group(of: site.address)?.name ?? "None")
+                            Text(model.groups.group(of: site.address)?.name ?? String(localized: "None", comment: "The site is in no sidebar group."))
                         }
                         .menuStyle(.button)
                         .controlSize(.small)
@@ -184,7 +184,7 @@ struct OverviewView: View {
                 if site.isRealAddress {
                     HStack(alignment: .top, spacing: 10) {
                         Glyph(severity: .warning)
-                        Text(verbatim: "\(site.address) is a real web address. While the server runs, this Mac opens your local copy and can’t reach the live website. Stop the server to see the live site again.")
+                        Text(verbatim: String(localized: "\(site.address) is a real web address. While the server runs, this Mac opens your local copy and can’t reach the live website. Stop the server to see the live site again."))
                             .font(.system(size: 12.5))
                             .fixedSize(horizontal: false, vertical: true)
                     }
@@ -203,7 +203,7 @@ struct OverviewView: View {
 }
 
 struct InfoRow<Content: View>: View {
-    var label: String
+    var label: LocalizedStringKey
     @ViewBuilder var content: Content
 
     var body: some View {

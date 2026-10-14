@@ -44,7 +44,7 @@ struct FirstSiteView: View {
                     }
                     GridRow {
                         Text("Files in").foregroundStyle(Theme.secondaryText)
-                        Text(draft.folder?.displayPath ?? "The folder you choose")
+                        Text(draft.folder?.displayPath ?? String(localized: "The folder you choose"))
                             .opacity(draft.folder == nil ? 0.5 : 1)
                             .fixedSize(horizontal: false, vertical: true)
                     }
@@ -168,7 +168,7 @@ struct NotInstalledView: View {
         .background(Color(nsColor: .textBackgroundColor))
     }
 
-    private func step<Extra: View>(_ number: Int, _ text: String, @ViewBuilder extra: () -> Extra) -> some View {
+    private func step<Extra: View>(_ number: Int, _ text: LocalizedStringKey, @ViewBuilder extra: () -> Extra) -> some View {
         HStack(alignment: .top, spacing: 8) {
             Text("\(number).")
                 .foregroundStyle(Theme.secondaryText)

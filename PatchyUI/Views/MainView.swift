@@ -179,7 +179,7 @@ struct SidebarView: View {
         }
     }
 
-    private func emptyNote(_ text: String) -> some View {
+    private func emptyNote(_ text: LocalizedStringKey) -> some View {
         Text(text)
             .font(.system(size: 12))
             .foregroundStyle(Theme.secondaryText)
@@ -398,12 +398,12 @@ struct BannerStack: View {
                 switch model.compatibility {
                 case .patchyNewer(let installed, let supported):
                     BannerRow(severity: .warning,
-                              text: "Patchy \(installed) is installed, but this Patchy UI was made for Patchy \(supported). Some things may not work until Patchy UI is updated to match.",
+                              text: String(localized: "Patchy \(installed) is installed, but this Patchy UI was made for Patchy \(supported). Some things may not work until Patchy UI is updated to match.", comment: "Banner. The placeholders are version numbers."),
                               actionTitle: "Check for Updates…", action: { model.updater.checkForUpdates() },
                               onClose: { model.compatibilityDismissed = true })
                 case .patchyOlder(let installed, let supported):
                     BannerRow(severity: .warning,
-                              text: "This Patchy UI was made for Patchy \(supported), but Patchy \(installed) is installed. Update Patchy to avoid problems: paste the command into Terminal.",
+                              text: String(localized: "This Patchy UI was made for Patchy \(supported), but Patchy \(installed) is installed. Update Patchy to avoid problems: paste the command into Terminal.", comment: "Banner. The placeholders are version numbers."),
                               actionTitle: "Copy Update Command", action: { model.copyPatchyUpgradeCommand() },
                               onClose: { model.compatibilityDismissed = true })
                 case .matched, .unknown:
@@ -416,7 +416,7 @@ struct BannerStack: View {
                           actionTitle: "Repair", action: { model.restart() })
             }
             if !model.isBusy, !model.sites.isEmpty, !model.serverRunning {
-                BannerRow(severity: .off, text: "The server is stopped, so none of your sites will open right now.",
+                BannerRow(severity: .off, text: String(localized: "The server is stopped, so none of your sites will open right now."),
                           actionTitle: "Start Server", action: { model.start() })
             }
             if let banner = model.banner {
@@ -433,7 +433,7 @@ struct BannerStack: View {
 struct BannerRow: View {
     var severity: Severity
     var text: String
-    var actionTitle: String?
+    var actionTitle: LocalizedStringKey?
     var action: () -> Void = {}
     var onClose: (() -> Void)?
 

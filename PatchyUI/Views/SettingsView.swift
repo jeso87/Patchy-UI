@@ -22,10 +22,13 @@ struct SettingsView: View {
 }
 
 private struct SettingsNote: View {
-    var text: String
+    private let text: Text
+
+    init(_ key: LocalizedStringKey) { text = Text(key) }
+    init(verbatim string: String) { text = Text(verbatim: string) }
 
     var body: some View {
-        Text(text)
+        text
             .font(.system(size: 12))
             .foregroundStyle(Theme.secondaryText)
             .fixedSize(horizontal: false, vertical: true)
@@ -58,15 +61,15 @@ struct GeneralSettings: View {
                         if enabled { try SMAppService.mainApp.register() } else { try SMAppService.mainApp.unregister() }
                         loginError = nil
                     } catch {
-                        loginError = "macOS didn’t allow that: \(error.localizedDescription)"
+                        loginError = String(localized: "macOS didn’t allow that: \(error.localizedDescription)", comment: "Shown when turning Open at Login on or off fails. The placeholder is macOS’s own reason.")
                         openAtLogin = SMAppService.mainApp.status == .enabled
                     }
                 }
-            if let loginError { SettingsNote(text: loginError) }
+            if let loginError { SettingsNote(verbatim: loginError) }
 
             Toggle("Show Patchy UI in the Dock", isOn: $showDockIcon)
                 .onChange(of: showDockIcon) { AppDelegate.applyDockIconPreference() }
-            SettingsNote(text: "The menu bar item stays either way. With the Dock icon off, open the window from the menu bar item.")
+            SettingsNote("The menu bar item stays either way. With the Dock icon off, open the window from the menu bar item.")
         }
         .formStyle(.grouped)
     }
@@ -96,10 +99,10 @@ struct PHPSettings: View {
                     .disabled(model.isBusy || model.phase != .ready)
                 }
                 BusyRow()
-                SettingsNote(text: "Every site runs on the same PHP version. Switching takes up to half a minute and restarts the server.")
+                SettingsNote("Every site runs on the same PHP version. Switching takes up to half a minute and restarts the server.")
             }
             Section("More versions") {
-                SettingsNote(text: installed.count <= 1
+                SettingsNote(installed.count <= 1
                     ? "Only one PHP version is installed. You can add others with Homebrew; they show up here when they’re ready. For example, in Terminal:"
                     : "You can add other versions with Homebrew; they show up here when they’re ready. For example, in Terminal:")
                 HStack {
@@ -136,14 +139,14 @@ struct CertificateSettings: View {
                             Text("Every site has a healthy certificate").fontWeight(.medium)
                         } else {
                             Text(Phrases.sitesNeedNewCertificate(needing.count)).fontWeight(.medium)
-                            SettingsNote(text: Phrases.certificateList(needing.map(\.address)))
+                            SettingsNote(verbatim: Phrases.certificateList(needing.map(\.address)))
                         }
                     }
                 }
                 Button("Refresh Certificates…") { model.askRefreshCertificates() }
                     .disabled(model.isBusy || model.sites.isEmpty || model.phase != .ready)
                 BusyRow()
-                SettingsNote(text: "A certificate is what lets https:// work without a browser warning. They last a little over two years. Refreshing makes new ones for every site at once and asks for your Mac password.")
+                SettingsNote("A certificate is what lets https:// work without a browser warning. They last a little over two years. Refreshing makes new ones for every site at once and asks for your Mac password.")
             }
         }
         .formStyle(.grouped)
@@ -162,13 +165,13 @@ struct TrustSettings: View {
                         switch model.snapshot.trust {
                         case .enabled:
                             Text("Password-free mode is on").fontWeight(.medium)
-                            SettingsNote(text: "Patchy updates where your addresses point without asking for your Mac password. That is the only thing it can do on its own.")
+                            SettingsNote("Patchy updates where your addresses point without asking for your Mac password. That is the only thing it can do on its own.")
                         case .outdated:
                             Text("Password-free mode needs refreshing").fontWeight(.medium)
-                            SettingsNote(text: "Patchy was updated. Refresh this once and the password prompts stop again.")
+                            SettingsNote("Patchy was updated. Refresh this once and the password prompts stop again.")
                         case .notInstalled:
                             Text("Password-free mode is off").fontWeight(.medium)
-                            SettingsNote(text: "macOS asks for your Mac password every time you start or stop the server, or add or remove a site.")
+                            SettingsNote("macOS asks for your Mac password every time you start or stop the server, or add or remove a site.")
                         }
                     }
                 }
@@ -205,33 +208,33 @@ struct AboutSettings: View {
                     RackLogo(size: 48)
                     VStack(alignment: .leading, spacing: 2) {
                         Text("Patchy UI").font(.system(size: 15, weight: .semibold))
-                        SettingsNote(text: "Version \(appVersion)")
+                        SettingsNote("Version \(appVersion)")
                     }
                 }
-                LabeledContent("Patchy", value: model.snapshot.patchyVersion ?? "Not installed")
+                LabeledContent("Patchy", value: model.snapshot.patchyVersion ?? String(localized: "Not installed"))
                 switch model.compatibility {
                 case .matched:
-                    SettingsNote(text: "Patchy UI and Patchy match. Patchy UI’s version number is always the Patchy release it was made for.")
+                    SettingsNote("Patchy UI and Patchy match. Patchy UI’s version number is always the Patchy release it was made for.")
                 case .patchyNewer(_, let supported):
-                    SettingsNote(text: "This Patchy UI was made for Patchy \(supported). Patchy is newer, so some things may not work until Patchy UI is updated.")
+                    SettingsNote("This Patchy UI was made for Patchy \(supported). Patchy is newer, so some things may not work until Patchy UI is updated.")
                 case .patchyOlder(_, let supported):
-                    SettingsNote(text: "This Patchy UI was made for Patchy \(supported). Patchy is older; update it in Terminal with: \(AppModel.patchyUpgradeCommand)")
+                    SettingsNote("This Patchy UI was made for Patchy \(supported). Patchy is older; update it in Terminal with: \(AppModel.patchyUpgradeCommand)")
                 case .unknown:
-                    SettingsNote(text: "Patchy UI’s version number is always the Patchy release it was made for.")
+                    SettingsNote("Patchy UI’s version number is always the Patchy release it was made for.")
                 }
                 Button("Check for Updates…") { model.updater.checkForUpdates() }
                 LabeledContent("Server (Apache)", value: serverVersion ?? "–")
                 LabeledContent("PHP", value: activePHP?.fullVersion ?? model.snapshot.activePHP ?? "–")
             }
             Section {
-                SettingsNote(text: "Patchy UI is free and open source, made by Joshua Omilian.")
+                SettingsNote("Patchy UI is free and open source, made by Joshua Omilian.")
                 Link("joshuaomilian.ca", destination: URL(string: "https://joshuaomilian.ca")!)
                     .foregroundStyle(Theme.link)
                 Link("Patchy UI on GitHub", destination: URL(string: "https://github.com/jeso87/Patchy-UI")!)
                     .foregroundStyle(Theme.link)
             }
             Section {
-                SettingsNote(text: "Patchy UI is a window onto Patchy, the local web server tool made by Joe Workman. Patchy does the real work.")
+                SettingsNote("Patchy UI is a window onto Patchy, the local web server tool made by Joe Workman. Patchy does the real work.")
                 Link("Patchy on GitHub", destination: URL(string: "https://github.com/joeworkman/patchy")!)
                     .foregroundStyle(Theme.link)
                 if let environment = model.environment {

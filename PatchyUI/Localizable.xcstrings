@@ -1449,6 +1449,1375 @@
           "stringUnit" : { "state" : "translated", "value" : ", " }
         }
       }
+    },
+    "%@ already exists. Pick a different address." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ already exists. Pick a different address." }
+        }
+      }
+    },
+    "%@ is a real web address. While the server runs, this Mac opens your local copy and can’t reach the live website. Stop the server to see the live site again." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ is a real web address. While the server runs, this Mac opens your local copy and can’t reach the live website. Stop the server to see the live site again." }
+        }
+      }
+    },
+    "%@ is ready. Its folder is %@." : {
+      "comment" : "Banner under the toolbar.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ is ready. Its folder is %@." }
+        }
+      }
+    },
+    "%@ might be a real website." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ might be a real website." }
+        }
+      }
+    },
+    "%@ now serves files from %@." : {
+      "comment" : "Banner under the toolbar.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ now serves files from %@." }
+        }
+      }
+    },
+    "%@ was added, but the server isn’t running" : {
+      "comment" : "Title of an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ was added, but the server isn’t running" }
+        }
+      }
+    },
+    "%@ was removed. Its folder is still in place." : {
+      "comment" : "Banner under the toolbar.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ was removed. Its folder is still in place." }
+        }
+      }
+    },
+    "%@ will reach the live website again." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ will reach the live website again." }
+        }
+      }
+    },
+    "A certificate is what lets https:// work without a browser warning. They last a little over two years. Refreshing makes new ones for every site at once and asks for your Mac password." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "A certificate is what lets https:// work without a browser warning. They last a little over two years. Refreshing makes new ones for every site at once and asks for your Mac password." }
+        }
+      }
+    },
+    "A site with this address already exists, so nothing was changed." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "A site with this address already exists, so nothing was changed." }
+        }
+      }
+    },
+    "Adding %@" : {
+      "comment" : "Sheet title.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Adding %@" }
+        }
+      }
+    },
+    "Also answer at www.%@" : {
+      "comment" : "Checkbox in the Add Site sheet. Keep “www.” as is; the placeholder is the address.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Also answer at www.%@" }
+        }
+      }
+    },
+    "Also answers at %@" : {
+      "comment" : "Under a site's address in its details. The placeholder is the www. address.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Also answers at %@" }
+        }
+      }
+    },
+    "Another app is using the web ports" : {
+      "comment" : "Title of an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Another app is using the web ports" }
+        }
+      }
+    },
+    "Certificate can’t be read" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Certificate can’t be read" }
+        }
+      }
+    },
+    "Certificate expired" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Certificate expired" }
+        }
+      }
+    },
+    "Certificate unreadable" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Certificate unreadable" }
+        }
+      }
+    },
+    "Certificates refreshed. If a browser still shows a warning, quit and reopen it." : {
+      "comment" : "Banner under the toolbar.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Certificates refreshed. If a browser still shows a warning, quit and reopen it." }
+        }
+      }
+    },
+    "Change folder for %@" : {
+      "comment" : "Sheet title.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Change folder for %@" }
+        }
+      }
+    },
+    "Checking every address points here…" : {
+      "comment" : "Progress step shown while a change runs.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Checking every address points here…" }
+        }
+      }
+    },
+    "Checking the setup" : {
+      "comment" : "Progress step shown while a change runs.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Checking the setup" }
+        }
+      }
+    },
+    "Checking the setup…" : {
+      "comment" : "Progress step shown while a change runs.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Checking the setup…" }
+        }
+      }
+    },
+    "Choose" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Choose" }
+        }
+      }
+    },
+    "Choose the folder that holds this site’s files." : {
+      "comment" : "Message in the folder chooser.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Choose the folder that holds this site’s files." }
+        }
+      }
+    },
+    "Copy Update Command" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Copy Update Command" }
+        }
+      }
+    },
+    "Couldn’t add %@" : {
+      "comment" : "Sheet title.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Couldn’t add %@" }
+        }
+      }
+    },
+    "Couldn’t change the folder for %@" : {
+      "comment" : "Title of an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Couldn’t change the folder for %@" }
+        }
+      }
+    },
+    "Couldn’t refresh certificates" : {
+      "comment" : "Title of an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Couldn’t refresh certificates" }
+        }
+      }
+    },
+    "Couldn’t remove %@" : {
+      "comment" : "Title of an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Couldn’t remove %@" }
+        }
+      }
+    },
+    "Couldn’t set up password-free mode" : {
+      "comment" : "Title of an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Couldn’t set up password-free mode" }
+        }
+      }
+    },
+    "Couldn’t switch to PHP %@" : {
+      "comment" : "Title of an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Couldn’t switch to PHP %@" }
+        }
+      }
+    },
+    "Creating a secure certificate" : {
+      "comment" : "Progress step shown while a change runs.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Creating a secure certificate" }
+        }
+      }
+    },
+    "Enter your Mac password" : {
+      "comment" : "Sheet title.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Enter your Mac password" }
+        }
+      }
+    },
+    "Errors" : {
+      "comment" : "Tab in a site's details showing its error log.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Errors" }
+        }
+      }
+    },
+    "Every site now runs on PHP %@." : {
+      "comment" : "Banner under the toolbar.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Every site now runs on PHP %@." }
+        }
+      }
+    },
+    "Every site runs on the same PHP version. Switching takes up to half a minute and restarts the server." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Every site runs on the same PHP version. Switching takes up to half a minute and restarts the server." }
+        }
+      }
+    },
+    "Expired on %@. Browsers will warn that this site isn’t secure." : {
+      "comment" : "Certificate detail. The placeholder is a date.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Expired on %@. Browsers will warn that this site isn’t secure." }
+        }
+      }
+    },
+    "Folder" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Folder" }
+        }
+      }
+    },
+    "Folder missing" : {
+      "comment" : "A site's problem, shown in the sidebar list and the menu bar menu.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Folder missing" }
+        }
+      }
+    },
+    "Handing addresses back to the internet…" : {
+      "comment" : "Progress step shown while a change runs.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Handing addresses back to the internet…" }
+        }
+      }
+    },
+    "https:// won’t work for this site until certificates are refreshed." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "https:// won’t work for this site until certificates are refreshed." }
+        }
+      }
+    },
+    "If a browser still shows a warning afterwards, quit and reopen it." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "If a browser still shows a warning afterwards, quit and reopen it." }
+        }
+      }
+    },
+    "Install Homebrew first. It’s the free installer Patchy comes through." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Install Homebrew first. It’s the free installer Patchy comes through." }
+        }
+      }
+    },
+    "It’s still running and your sites still open. Try again, or look at Show Details." : {
+      "comment" : "Message in an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "It’s still running and your sites still open. Try again, or look at Show Details." }
+        }
+      }
+    },
+    "macOS asks for your Mac password every time you start or stop the server, or add or remove a site." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "macOS asks for your Mac password every time you start or stop the server, or add or remove a site." }
+        }
+      }
+    },
+    "macOS didn’t allow that: %@" : {
+      "comment" : "Shown when turning Open at Login on or off fails. The placeholder is macOS’s own reason.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "macOS didn’t allow that: %@" }
+        }
+      }
+    },
+    "macOS needs it to finish this change. It’s the one you use to log in to this Mac. Patchy passes it straight to macOS and doesn’t keep it." : {
+      "comment" : "Sheet message.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "macOS needs it to finish this change. It’s the one you use to log in to this Mac. Patchy passes it straight to macOS and doesn’t keep it." }
+        }
+      }
+    },
+    "macOS will ask for your Mac password." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "macOS will ask for your Mac password." }
+        }
+      }
+    },
+    "Needs repair" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Needs repair" }
+        }
+      }
+    },
+    "No certificate" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "No certificate" }
+        }
+      }
+    },
+    "No errors yet" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "No errors yet" }
+        }
+      }
+    },
+    "No matching lines" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "No matching lines" }
+        }
+      }
+    },
+    "No sites match “%@”." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "No sites match “%@”." }
+        }
+      }
+    },
+    "No sites yet." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "No sites yet." }
+        }
+      }
+    },
+    "No visits yet" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "No visits yet" }
+        }
+      }
+    },
+    "None" : {
+      "comment" : "The site is in no sidebar group.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "None" }
+        }
+      }
+    },
+    "Not installed" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Not installed" }
+        }
+      }
+    },
+    "Not pointing at this Mac" : {
+      "comment" : "A site's problem, shown in the sidebar list and the menu bar menu.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Not pointing at this Mac" }
+        }
+      }
+    },
+    "Not right now" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Not right now" }
+        }
+      }
+    },
+    "Nothing in the errors log contains “%@”." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nothing in the errors log contains “%@”." }
+        }
+      }
+    },
+    "Nothing in the visits log contains “%@”." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nothing in the visits log contains “%@”." }
+        }
+      }
+    },
+    "Nothing was changed. Show Details has the exact message from Patchy." : {
+      "comment" : "Message in an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nothing was changed. Show Details has the exact message from Patchy." }
+        }
+      }
+    },
+    "Offline while the server is stopped" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Offline while the server is stopped" }
+        }
+      }
+    },
+    "Only one PHP version is installed. You can add others with Homebrew; they show up here when they’re ready. For example, in Terminal:" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Only one PHP version is installed. You can add others with Homebrew; they show up here when they’re ready. For example, in Terminal:" }
+        }
+      }
+    },
+    "Open Terminal. It’s in Applications › Utilities." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Open Terminal. It’s in Applications › Utilities." }
+        }
+      }
+    },
+    "Open the site in your browser and each page request will show up here." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Open the site in your browser and each page request will show up here." }
+        }
+      }
+    },
+    "Opens in any browser on this Mac." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Opens in any browser on this Mac." }
+        }
+      }
+    },
+    "Opens, but shows an error" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Opens, but shows an error" }
+        }
+      }
+    },
+    "Overview" : {
+      "comment" : "Tab in a site's details.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Overview" }
+        }
+      }
+    },
+    "Paste this command and press Return:" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Paste this command and press Return:" }
+        }
+      }
+    },
+    "Patchy %@ is installed, but this Patchy UI was made for Patchy %@. Some things may not work until Patchy UI is updated to match." : {
+      "comment" : "Banner. The placeholders are version numbers.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy %@ is installed, but this Patchy UI was made for Patchy %@. Some things may not work until Patchy UI is updated to match." }
+        }
+      }
+    },
+    "Patchy can update your addresses without asking each time." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy can update your addresses without asking each time." }
+        }
+      }
+    },
+    "Patchy can’t set this up safely on this Mac, so nothing was changed. You can keep using the app; it will ask for your Mac password when a change needs it." : {
+      "comment" : "Message in an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy can’t set this up safely on this Mac, so nothing was changed. You can keep using the app; it will ask for your Mac password when a change needs it." }
+        }
+      }
+    },
+    "Patchy couldn’t point the address at this Mac, so nothing was created. Your other sites are fine." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy couldn’t point the address at this Mac, so nothing was created. Your other sites are fine." }
+        }
+      }
+    },
+    "Patchy didn’t report anything." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy didn’t report anything." }
+        }
+      }
+    },
+    "Patchy makes a new certificate for every site at once, so https:// keeps working without browser warnings. This can take up to a minute." : {
+      "comment" : "Sheet message.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy makes a new certificate for every site at once, so https:// keeps working without browser warnings. This can take up to a minute." }
+        }
+      }
+    },
+    "Patchy UI and Patchy match. Patchy UI’s version number is always the Patchy release it was made for." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI and Patchy match. Patchy UI’s version number is always the Patchy release it was made for." }
+        }
+      }
+    },
+    "Patchy UI is a window onto Patchy, the local web server tool made by Joe Workman. Patchy does the real work." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI is a window onto Patchy, the local web server tool made by Joe Workman. Patchy does the real work." }
+        }
+      }
+    },
+    "Patchy UI is free and open source, made by Joshua Omilian." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI is free and open source, made by Joshua Omilian." }
+        }
+      }
+    },
+    "Patchy UI’s version number is always the Patchy release it was made for." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI’s version number is always the Patchy release it was made for." }
+        }
+      }
+    },
+    "Patchy updates where your addresses point without asking for your Mac password. That is the only thing it can do on its own." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy updates where your addresses point without asking for your Mac password. That is the only thing it can do on its own." }
+        }
+      }
+    },
+    "Patchy was updated, so its permission to update your addresses needs to be refreshed once. Until then, macOS asks for your Mac password on every change." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy was updated, so its permission to update your addresses needs to be refreshed once. Until then, macOS asks for your Mac password on every change." }
+        }
+      }
+    },
+    "Patchy was updated. Refresh this once and the password prompts stop again." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy was updated. Refresh this once and the password prompts stop again." }
+        }
+      }
+    },
+    "Patchy: needs attention" : {
+      "comment" : "VoiceOver label for the menu bar item.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy: needs attention" }
+        }
+      }
+    },
+    "Patchy: server running" : {
+      "comment" : "VoiceOver label for the menu bar item.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy: server running" }
+        }
+      }
+    },
+    "Patchy: server stopped" : {
+      "comment" : "VoiceOver label for the menu bar item.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy: server stopped" }
+        }
+      }
+    },
+    "Patchy: working" : {
+      "comment" : "VoiceOver label for the menu bar item.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy: working" }
+        }
+      }
+    },
+    "Pointing %@ at the new folder…" : {
+      "comment" : "Progress step shown while a change runs.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Pointing %@ at the new folder…" }
+        }
+      }
+    },
+    "Pointing %@ at this Mac" : {
+      "comment" : "Progress step shown while a change runs.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Pointing %@ at this Mac" }
+        }
+      }
+    },
+    "Pointing your addresses at this Mac…" : {
+      "comment" : "Progress step shown while a change runs.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Pointing your addresses at this Mac…" }
+        }
+      }
+    },
+    "Reachable" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Reachable" }
+        }
+      }
+    },
+    "Refresh password-free mode" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Refresh password-free mode" }
+        }
+      }
+    },
+    "Remove %@?" : {
+      "comment" : "Sheet title.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Remove %@?" }
+        }
+      }
+    },
+    "Removing %@…" : {
+      "comment" : "Progress step shown while a change runs.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Removing %@…" }
+        }
+      }
+    },
+    "Repaired. Every address points at this Mac again." : {
+      "comment" : "Banner under the toolbar.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Repaired. Every address points at this Mac again." }
+        }
+      }
+    },
+    "Restarting the server" : {
+      "comment" : "Progress step shown while a change runs.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Restarting the server" }
+        }
+      }
+    },
+    "Restarting the server…" : {
+      "comment" : "Progress step shown while a change runs.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Restarting the server…" }
+        }
+      }
+    },
+    "Running" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Running" }
+        }
+      }
+    },
+    "Running · %@" : {
+      "comment" : "Server status in the toolbar. The placeholder is “PHP 8.4”.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Running · %@" }
+        }
+      }
+    },
+    "Running · needs repair" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Running · needs repair" }
+        }
+      }
+    },
+    "Secure connection" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Secure connection" }
+        }
+      }
+    },
+    "Secure · %lld days" : {
+      "comment" : "Short status in the sidebar for a healthy site: days until its certificate expires. Always more than 30.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Secure · %lld days" }
+        }
+      }
+    },
+    "Secure · %lld days left" : {
+      "comment" : "Certificate status in a site's details. Always more than 30 days.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Secure · %lld days left" }
+        }
+      }
+    },
+    "Server running" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Server running" }
+        }
+      }
+    },
+    "Server stopped" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Server stopped" }
+        }
+      }
+    },
+    "Setting up the site" : {
+      "comment" : "Progress step shown while a change runs.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Setting up the site" }
+        }
+      }
+    },
+    "Show Details has the exact message from Patchy." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Show Details has the exact message from Patchy." }
+        }
+      }
+    },
+    "Skip the password prompts" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Skip the password prompts" }
+        }
+      }
+    },
+    "Some addresses still aren’t pointing at this Mac" : {
+      "comment" : "Title of an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Some addresses still aren’t pointing at this Mac" }
+        }
+      }
+    },
+    "Some sites may still show a browser warning. If you cancelled a password prompt, try again and enter your Mac password." : {
+      "comment" : "Message in an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Some sites may still show a browser warning. If you cancelled a password prompt, try again and enter your Mac password." }
+        }
+      }
+    },
+    "Something stopped the setup partway. Your other sites are fine; Show Details has the exact message from Patchy." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Something stopped the setup partway. Your other sites are fine; Show Details has the exact message from Patchy." }
+        }
+      }
+    },
+    "Starting and stopping the server, and adding or removing sites, all tell your Mac where each address lives. Normally macOS asks for your Mac password every time." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Starting and stopping the server, and adding or removing sites, all tell your Mac where each address lives. Normally macOS asks for your Mac password every time." }
+        }
+      }
+    },
+    "Starting the server…" : {
+      "comment" : "Progress step shown while a change runs.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Starting the server…" }
+        }
+      }
+    },
+    "Stopped" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Stopped" }
+        }
+      }
+    },
+    "Stopping the server…" : {
+      "comment" : "Progress step shown while a change runs.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Stopping the server…" }
+        }
+      }
+    },
+    "Switching every site to PHP %@…" : {
+      "comment" : "Progress step shown while a change runs.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Switching every site to PHP %@…" }
+        }
+      }
+    },
+    "That address looks unfinished. It can’t start or end with a dot or hyphen." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "That address looks unfinished. It can’t start or end with a dot or hyphen." }
+        }
+      }
+    },
+    "That doesn’t match your Mac password. Try again." : {
+      "comment" : "Shown under a password field.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "That doesn’t match your Mac password. Try again." }
+        }
+      }
+    },
+    "That’s the only thing it’s allowed to do on its own." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "That’s the only thing it’s allowed to do on its own." }
+        }
+      }
+    },
+    "The address stays the same. Patchy serves files from the new folder instead. Nothing is moved or deleted." : {
+      "comment" : "Sheet message.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "The address stays the same. Patchy serves files from the new folder instead. Nothing is moved or deleted." }
+        }
+      }
+    },
+    "The address will stop working on this Mac. The folder and everything in it stay right where they are." : {
+      "comment" : "Sheet message.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "The address will stop working on this Mac. The folder and everything in it stay right where they are." }
+        }
+      }
+    },
+    "The background service that runs the server didn’t respond. Stopping and starting it again resets it." : {
+      "comment" : "Message in an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "The background service that runs the server didn’t respond. Stopping and starting it again resets it." }
+        }
+      }
+    },
+    "The certificate file is damaged. Refreshing certificates replaces it." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "The certificate file is damaged. Refreshing certificates replaces it." }
+        }
+      }
+    },
+    "The folder changed, but the server isn’t running" : {
+      "comment" : "Title of an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "The folder changed, but the server isn’t running" }
+        }
+      }
+    },
+    "The folder you choose" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "The folder you choose" }
+        }
+      }
+    },
+    "The menu bar item stays either way. With the Dock icon off, open the window from the menu bar item." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "The menu bar item stays either way. With the Dock icon off, open the window from the menu bar item." }
+        }
+      }
+    },
+    "The one you use to log in to this Mac. Patchy passes it straight to macOS and doesn’t keep it." : {
+      "comment" : "Sheet message.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "The one you use to log in to this Mac. Patchy passes it straight to macOS and doesn’t keep it." }
+        }
+      }
+    },
+    "The server didn’t start" : {
+      "comment" : "Title of an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "The server didn’t start" }
+        }
+      }
+    },
+    "The server didn’t stop" : {
+      "comment" : "Title of an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "The server didn’t stop" }
+        }
+      }
+    },
+    "The server is stopped, so none of your sites will open right now." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "The server is stopped, so none of your sites will open right now." }
+        }
+      }
+    },
+    "The server is stopped." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "The server is stopped." }
+        }
+      }
+    },
+    "The server is stuck" : {
+      "comment" : "Title of an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "The server is stuck" }
+        }
+      }
+    },
+    "The server restarted, but it couldn’t update where your addresses point. Try Repair again." : {
+      "comment" : "Message in an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "The server restarted, but it couldn’t update where your addresses point. Try Repair again." }
+        }
+      }
+    },
+    "The server restarts when it’s done." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "The server restarts when it’s done." }
+        }
+      }
+    },
+    "The setup check found a problem, so Patchy undid every step. Nothing was added and your other sites are fine." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "The setup check found a problem, so Patchy undid every step. Nothing was added and your other sites are fine." }
+        }
+      }
+    },
+    "The setup check found a problem, so the site still uses its previous folder. Nothing else changed." : {
+      "comment" : "Message in an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "The setup check found a problem, so the site still uses its previous folder. Nothing else changed." }
+        }
+      }
+    },
+    "The site is still set up exactly as it was. Show Details has the exact message from Patchy." : {
+      "comment" : "Message in an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "The site is still set up exactly as it was. Show Details has the exact message from Patchy." }
+        }
+      }
+    },
+    "There’s no folder to serve files from." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "There’s no folder to serve files from." }
+        }
+      }
+    },
+    "This address isn’t pointing at this Mac. Repair fixes it." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "This address isn’t pointing at this Mac. Repair fixes it." }
+        }
+      }
+    },
+    "This Mac account isn’t allowed to make this change. Use an administrator account." : {
+      "comment" : "Shown under a password field.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "This Mac account isn’t allowed to make this change. Use an administrator account." }
+        }
+      }
+    },
+    "This Mac account isn’t allowed to set this up. Use an administrator account." : {
+      "comment" : "Shown under a password field.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "This Mac account isn’t allowed to set this up. Use an administrator account." }
+        }
+      }
+    },
+    "This Patchy UI was made for Patchy %@, but Patchy %@ is installed. Update Patchy to avoid problems: paste the command into Terminal." : {
+      "comment" : "Banner. The placeholders are version numbers.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "This Patchy UI was made for Patchy %@, but Patchy %@ is installed. Update Patchy to avoid problems: paste the command into Terminal." }
+        }
+      }
+    },
+    "This Patchy UI was made for Patchy %@. Patchy is newer, so some things may not work until Patchy UI is updated." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "This Patchy UI was made for Patchy %@. Patchy is newer, so some things may not work until Patchy UI is updated." }
+        }
+      }
+    },
+    "This Patchy UI was made for Patchy %@. Patchy is older; update it in Terminal with: %@" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "This Patchy UI was made for Patchy %@. Patchy is older; update it in Terminal with: %@" }
+        }
+      }
+    },
+    "This takes a few seconds." : {
+      "comment" : "Sheet message.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "This takes a few seconds." }
+        }
+      }
+    },
+    "Type a name and Patchy adds .test. Or type a full address, like mysite.local." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Type a name and Patchy adds .test. Or type a full address, like mysite.local." }
+        }
+      }
+    },
+    "Untitled Group" : {
+      "comment" : "Name given to a sidebar group left unnamed.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Untitled Group" }
+        }
+      }
+    },
+    "Use only letters, numbers, hyphens (-), and dots (.)." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Use only letters, numbers, hyphens (-), and dots (.)." }
+        }
+      }
+    },
+    "Valid until %@." : {
+      "comment" : "Certificate detail. The placeholder is a date.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Valid until %@." }
+        }
+      }
+    },
+    "Valid until %@. Refresh before then to avoid browser warnings." : {
+      "comment" : "Certificate detail. The placeholder is a date.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Valid until %@. Refresh before then to avoid browser warnings." }
+        }
+      }
+    },
+    "Version %@" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Version %@" }
+        }
+      }
+    },
+    "Visits" : {
+      "comment" : "Tab in a site's details showing its access log.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Visits" }
+        }
+      }
+    },
+    "When it finishes, come back and click Check Again." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "When it finishes, come back and click Check Again." }
+        }
+      }
+    },
+    "When PHP or the server reports a problem with this site, it shows up here." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "When PHP or the server reports a problem with this site, it shows up here." }
+        }
+      }
+    },
+    "Working…" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Working…" }
+        }
+      }
+    },
+    "Yes" : {
+      "comment" : "Answer to “Reachable”: the site opens in a browser.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Yes" }
+        }
+      }
+    },
+    "You can add other versions with Homebrew; they show up here when they’re ready. For example, in Terminal:" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "You can add other versions with Homebrew; they show up here when they’re ready. For example, in Terminal:" }
+        }
+      }
+    },
+    "You enter your Mac password once, now." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "You enter your Mac password once, now." }
+        }
+      }
+    },
+    "Your Mac wouldn’t let the app pass your password along. You can turn on password-free mode yourself instead: open Terminal (in Applications > Utilities), type patchy trust, press Return and enter your Mac password. Then come back here." : {
+      "comment" : "Message in an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Your Mac wouldn’t let the app pass your password along. You can turn on password-free mode yourself instead: open Terminal (in Applications > Utilities), type patchy trust, press Return and enter your Mac password. Then come back here." }
+        }
+      }
+    },
+    "Your sites are running on PHP %@." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Your sites are running on PHP %@." }
+        }
+      }
+    },
+    "Your sites won’t open until it’s running. Show Details has the exact message from Patchy." : {
+      "comment" : "Message in an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Your sites won’t open until it’s running. Show Details has the exact message from Patchy." }
+        }
+      }
     }
   },
   "version" : "1.0"

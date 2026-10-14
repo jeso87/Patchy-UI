@@ -205,15 +205,19 @@ struct LogView: View {
     }
 
     private var emptyTitle: String {
-        if !log.lines.isEmpty { return "No matching lines" }
-        return kind == .errors ? "No errors yet" : "No visits yet"
+        if !log.lines.isEmpty { return String(localized: "No matching lines") }
+        return kind == .errors ? String(localized: "No errors yet") : String(localized: "No visits yet")
     }
 
     private var emptyText: String {
-        if !log.lines.isEmpty { return "Nothing in the \(kind.rawValue) log contains “\(log.filter)”." }
+        if !log.lines.isEmpty {
+            return kind == .errors
+                ? String(localized: "Nothing in the errors log contains “\(log.filter)”.")
+                : String(localized: "Nothing in the visits log contains “\(log.filter)”.")
+        }
         return kind == .errors
-            ? "When PHP or the server reports a problem with this site, it shows up here."
-            : "Open the site in your browser and each page request will show up here."
+            ? String(localized: "When PHP or the server reports a problem with this site, it shows up here.")
+            : String(localized: "Open the site in your browser and each page request will show up here.")
     }
 
     private func lineList(_ rows: [LogLine]) -> some View {
