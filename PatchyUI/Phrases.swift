@@ -10,7 +10,7 @@ enum Phrases {
 
     /// "1 needs attention", "3 need attention".
     static func needAttention(_ count: Int) -> String {
-        "\(count) need\(count == 1 ? "s" : "") attention"
+        String(localized: "\(count) need attention", comment: "How many websites have a problem, after a site count, e.g. “12 sites · 1 needs attention”.")
     }
 
     /// The sidebar footer: "12 sites", or "12 sites · 1 needs attention".
@@ -20,12 +20,12 @@ enum Phrases {
 
     /// The menu bar item that jumps to the first site with a problem.
     static func sitesNeedAttention(_ count: Int) -> String {
-        "\(pluralized(count, "site")) need\(count == 1 ? "s" : "") attention…"
+        String(localized: "\(count) sites need attention…", comment: "Menu bar item that shows the first website with a problem.")
     }
 
     /// Tooltip on a sidebar group's warning mark.
     static func sitesInGroupNeedAttention(_ count: Int) -> String {
-        "\(pluralized(count, "site")) in this group need\(count == 1 ? "s" : "") attention"
+        String(localized: "\(count) sites in this group need attention", comment: "Tooltip on a sidebar group's warning mark.")
     }
 
     /// VoiceOver label for a sidebar group header: "Northwind, 3 sites, 1 needs attention".
@@ -37,37 +37,39 @@ enum Phrases {
 
     /// Settings › Certificates headline.
     static func sitesNeedNewCertificate(_ count: Int) -> String {
-        "\(pluralized(count, "site")) need\(count == 1 ? "s" : "") a new certificate"
+        String(localized: "\(count) sites need a new certificate", comment: "Settings › Certificates headline.")
     }
 
     /// The log view's copy button with lines selected.
     static func copyLines(_ count: Int) -> String {
-        "Copy \(pluralized(count, "Line"))"
+        String(localized: "Copy \(count) Lines", comment: "Button that copies the selected log lines. Title case, like other buttons.")
     }
 
     /// The detail pane's certificate line when it expires within 30 days.
     static func expiresIn(days: Int) -> String {
-        "Expires in \(pluralized(days, "day"))"
+        String(localized: "Expires in \(days) days", comment: "Certificate status in a site's details when it expires within 30 days.")
     }
 
     /// The same, as the short status shown in the sidebar.
     static func certificateExpiresIn(days: Int) -> String {
-        "Certificate expires in \(pluralized(days, "day"))"
+        String(localized: "Certificate expires in \(days) days", comment: "Short status in the sidebar when a site's certificate expires within 30 days.")
     }
 
     /// First progress step of refreshing certificates.
     static func makingCertificates(siteCount count: Int) -> String {
-        "Making new certificates for \(pluralized(count, "site"))…"
+        String(localized: "Making new certificates for \(count) sites…", comment: "Progress step while refreshing every site's certificate.")
     }
 
     /// Title of the Refresh Certificates sheet.
     static func refreshCertificatesTitle(siteCount count: Int) -> String {
-        "Refresh certificates for \(count == 1 ? "your site" : "all \(count) sites")?"
+        String(localized: "Refresh certificates for all \(count) sites?",
+               comment: "Sheet title. English's 'one' form says “your site” with no number; in languages whose 'one' category also covers 21, 31… the 'one' form must include the number.")
     }
 
     /// The banner shown while sites aren't routed to this Mac.
     static func unrouted(_ count: Int) -> String {
-        "\(count) site\(count == 1 ? " isn’t" : "s aren’t") pointing at this Mac right now, so \(count == 1 ? "it won’t" : "they won’t") open. Repair fixes this by restarting the server."
+        String(localized: "\(count) sites aren’t pointing at this Mac right now, so they won’t open. Repair fixes this by restarting the server.",
+               comment: "Banner while some sites' addresses don't lead to this Mac. Repair is the name of a toolbar button.")
     }
 
     /// After stopping the server: which real addresses reach the internet again.

@@ -1170,6 +1170,186 @@
           }
         }
       }
+    },
+    "%lld need attention" : {
+      "comment" : "How many websites have a problem, after a site count, e.g. “12 sites · 1 needs attention”.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld needs attention" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld need attention" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld sites aren’t pointing at this Mac right now, so they won’t open. Repair fixes this by restarting the server." : {
+      "comment" : "Banner while some sites' addresses don't lead to this Mac. Repair is the name of a toolbar button.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld site isn’t pointing at this Mac right now, so it won’t open. Repair fixes this by restarting the server." }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld sites aren’t pointing at this Mac right now, so they won’t open. Repair fixes this by restarting the server." }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld sites in this group need attention" : {
+      "comment" : "Tooltip on a sidebar group's warning mark.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld site in this group needs attention" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld sites in this group need attention" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld sites need a new certificate" : {
+      "comment" : "Settings › Certificates headline.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld site needs a new certificate" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld sites need a new certificate" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld sites need attention…" : {
+      "comment" : "Menu bar item that shows the first website with a problem.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld site needs attention…" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "%lld sites need attention…" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Certificate expires in %lld days" : {
+      "comment" : "Short status in the sidebar when a site's certificate expires within 30 days.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "Certificate expires in %lld day" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "Certificate expires in %lld days" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Copy %lld Lines" : {
+      "comment" : "Button that copies the selected log lines. Title case, like other buttons.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "Copy %lld Line" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "Copy %lld Lines" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Expires in %lld days" : {
+      "comment" : "Certificate status in a site's details when it expires within 30 days.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "Expires in %lld day" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "Expires in %lld days" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Making new certificates for %lld sites…" : {
+      "comment" : "Progress step while refreshing every site's certificate.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "Making new certificates for %lld site…" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "Making new certificates for %lld sites…" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Refresh certificates for all %lld sites?" : {
+      "comment" : "Sheet title. English's 'one' form says “your site” with no number; in languages whose 'one' category also covers 21, 31… the 'one' form must include the number.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : { "state" : "translated", "value" : "Refresh certificates for your site?" }
+              },
+              "other" : {
+                "stringUnit" : { "state" : "translated", "value" : "Refresh certificates for all %lld sites?" }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

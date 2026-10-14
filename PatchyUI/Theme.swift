@@ -151,7 +151,3 @@ struct Card<Content: View>: View {
             .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).strokeBorder(border, lineWidth: 0.5))
     }
 }
-
-func pluralized(_ count: Int, _ singular: String, _ plural: String? = nil) -> String {
-    "\(count) \(count == 1 ? singular : (plural ?? singular + "s"))"
-}
