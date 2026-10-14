@@ -200,6 +200,15 @@ final class AppModel {
         groups.assign(address, to: groupID)
     }
 
+    /// Sites dragged onto a group, or onto Other Sites when `groupID` is nil. Anything that isn't
+    /// a site's address (text dragged in from another app) is ignored.
+    @discardableResult
+    func dropSites(_ addresses: [String], on groupID: UUID?) -> Bool {
+        let moving = addresses.filter { site($0) != nil && groups.group(of: $0)?.id != groupID }
+        moving.forEach { moveSite($0, to: groupID) }
+        return !moving.isEmpty
+    }
+
     func promptNewGroup(assigning address: String? = nil) {
         showGroupNameDialog(.new(assigning: address), draft: "")
     }
