@@ -213,3 +213,48 @@ password-free setup, first run), so the catalog will be larger and that cost
 higher. The 35 translations are LLM-produced without native review; the
 glossary, the plural guard and the screenshot pass reduce that risk without
 removing it.
+
+## Carried out of Phase 1
+
+Phase 1 is done. A doubled-strings sweep (`-NSDoubleLocalizedStrings YES`, and
+`-NSAccentuateLocalizedStrings YES` for Settings) found no copy that bypasses the
+catalog: the main window, every sheet, the log view, the empty and not-installed
+states, all five Settings tabs and the menu bar menu. These are what it found and
+did not fix.
+
+**For Phase 3 — controls that clip at double length.**
+
+- The Refresh Certificates sheet's default button truncates ("Refresh Certific…").
+- The Change Folder sheet's label column is a fixed 70 points; "Current" and
+  "New" wrap onto two lines.
+- The Settings toolbar overflows: with longer tab names, Password-Free and About
+  move behind the » menu. The Settings window is a fixed 500 points wide.
+- The Add Site sheet's "Opens at https://…" line truncates in the middle, by
+  design, but a longer phrase leaves less of the address visible.
+
+Everything else wrapped or reflowed: banners, sheet messages, Settings notes and
+the first-site view.
+
+**For Phase 3 — right-to-left.** Under forced right-to-left the window mirrors
+correctly. Log lines, Show Details' raw output, the commands to paste and the
+Add Site address field are pinned left-to-right. Folder paths shown as plain
+text (the detail pane's Folder row, the Change Folder sheet, the folder card) are
+not pinned and render with their slashes reordered; they should get the same
+treatment, along with any other place a path or address sits alone in a `Text`.
+
+**For Phase 2 — notes for translators.**
+
+- The debug-only launch states show hard-coded English progress steps; that is
+  debug code, not a missed string.
+- The step numbers on the not-installed screen are a catalog key (`%lld.`).
+  Translators should leave it as is unless their language writes ordinals
+  differently.
+- Keys with several placeholders (`%@ and %@ and %@ now reach the live websites
+  again.`) need positional placeholders (`%1$@`) wherever a language reorders
+  them.
+
+**Not localization, noticed along the way.** With groups present and no sites
+(`-PatchyDebugPhase empty`), the sidebar shows "No sites match “”." over an empty
+Other Sites header. The empty header comes from the drag-and-drop change that
+keeps Other Sites visible whenever groups exist; the message comes from the
+overlay checking `visibleSites` rather than whether a filter is set.
