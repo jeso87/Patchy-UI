@@ -39,7 +39,11 @@ public final class AskpassServer: @unchecked Sendable {
     }
 
     /// Merge into the environment of any command that may call sudo.
-    public var environment: [String: String] { ["SUDO_ASKPASS": script.path] }
+    ///
+    /// Patchy calls plain `sudo`, without `-A`. With no terminal, sudo then only runs the askpass
+    /// program when `DISPLAY` is set as well; otherwise it gives up with "a terminal is required to
+    /// read the password". Nothing reads the value.
+    public var environment: [String: String] { ["SUDO_ASKPASS": script.path, "DISPLAY": ":0"] }
 
     public func stop() {
         lock.lock()
