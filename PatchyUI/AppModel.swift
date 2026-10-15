@@ -143,6 +143,8 @@ final class AppModel {
     /// Shares asked to stop that haven't finished stopping.
     var stoppingShares: Set<String> = []
     @ObservationIgnored private var shareSessions: [String: ShareSession] = [:]
+    /// Whether the previous read found the server stopped; see `sharesToStop`.
+    @ObservationIgnored private var serverSeenDown = false
 
     var compatibilityDismissed = false
 
@@ -391,7 +393,11 @@ final class AppModel {
             client.snapshot(checkTrust: checkTrust, previousTrust: previousTrust)
         }.value
         if fresh != snapshot { snapshot = fresh }
-        for address in Self.sharesToStop(Array(shareSessions.keys), snapshot: snapshot) { stopSharing(address) }
+        let serverWasDown = serverSeenDown
+        serverSeenDown = !snapshot.serverRunning
+        for address in Self.sharesToStop(Array(shareSessions.keys), snapshot: snapshot, serverWasDown: serverWasDown) {
+            stopSharing(address)
+        }
         for address in shares.keys where shareSessions[address] == nil && site(address) == nil { shares[address] = nil }
         if selection == nil || !sites.contains(where: { $0.address == selection }) {
             selection = sites.first?.address
@@ -855,10 +861,11 @@ final class AppModel {
         return cloudflaredInstalled ? .start : .install
     }
 
-    /// Shares to end: all of them once the server stops, otherwise those whose site is gone.
-    /// Restarts don't end shares; the tunnel waits out the second the server is down.
-    static func sharesToStop(_ shared: [String], snapshot: PatchySnapshot) -> [String] {
-        guard snapshot.serverRunning else { return shared.sorted() }
+    /// Shares to end: all of them once the server has been seen stopped twice in a row, otherwise
+    /// those whose site is gone. A restart takes the server down for a moment, and one read in that
+    /// moment mustn't end shares; the tunnel waits it out.
+    static func sharesToStop(_ shared: [String], snapshot: PatchySnapshot, serverWasDown: Bool) -> [String] {
+        guard snapshot.serverRunning else { return serverWasDown ? shared.sorted() : [] }
         let present = Set(snapshot.sites.map(\.address))
         return shared.filter { !present.contains($0) }.sorted()
     }

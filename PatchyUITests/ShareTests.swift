@@ -50,12 +50,18 @@ import Testing
     }
 
     @Test func sharesStopWhenTheServerStops() {
-        #expect(AppModel.sharesToStop(["b.test", "a.test"], snapshot: snapshot(running: false, sites: ["a.test", "b.test"])) == ["a.test", "b.test"])
+        #expect(AppModel.sharesToStop(["b.test", "a.test"], snapshot: snapshot(running: false, sites: ["a.test", "b.test"]),
+                                      serverWasDown: true) == ["a.test", "b.test"])
+    }
+
+    /// A restart takes the server down for a moment; one read in that moment must not end shares.
+    @Test func oneDownReadDuringARestartStopsNothing() {
+        #expect(AppModel.sharesToStop(["a.test"], snapshot: snapshot(running: false, sites: ["a.test"]), serverWasDown: false) == [])
     }
 
     @Test func sharesStopWhenTheirSiteIsGone() {
-        #expect(AppModel.sharesToStop(["a.test", "gone.test"], snapshot: snapshot(running: true, sites: ["a.test"])) == ["gone.test"])
-        #expect(AppModel.sharesToStop(["a.test"], snapshot: snapshot(running: true, sites: ["a.test"])) == [])
+        #expect(AppModel.sharesToStop(["a.test", "gone.test"], snapshot: snapshot(running: true, sites: ["a.test"]), serverWasDown: false) == ["gone.test"])
+        #expect(AppModel.sharesToStop(["a.test"], snapshot: snapshot(running: true, sites: ["a.test"]), serverWasDown: true) == [])
     }
 
     @Test func sharingPhrasesAreMatchedNotLocalized() {
