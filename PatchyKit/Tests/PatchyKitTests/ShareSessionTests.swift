@@ -158,3 +158,45 @@ final class StateLog: @unchecked Sendable {
         #expect(await log.wait(until: { $0.last == .stopped }, seconds: 8))
     }
 }
+
+@Suite struct SharingSupportTests {
+    @Test func sharingSupportIsReadFromTheScript() {
+        #expect(ServerReader.supportsSharing(inScript: "case \"${1:-}\" in\n    share)\n        case \"${2:-}\" in\n"))
+        #expect(!ServerReader.supportsSharing(inScript: "case \"${1:-}\" in\n    rm)\n    errors)\n"))
+        #expect(!ServerReader.supportsSharing(inScript: "# patchy share is not here\n"))
+    }
+
+    @Test func snapshotReportsSharingSupport() throws {
+        let prefix = try FakePrefix(patchyScript: "#!/bin/zsh\ncase \"$1\" in\n    share)\n        ;;\nesac\n")
+        defer { prefix.remove() }
+        #expect(PatchyClient(environment: prefix.environment).snapshot(checkTrust: false).supportsSharing)
+    }
+
+    @Test func cloudflaredIsLookedForInTheHomebrewPrefix() throws {
+        let prefix = try FakePrefix(patchyScript: "#!/bin/zsh\n")
+        defer { prefix.remove() }
+        #expect(!ServerReader.cloudflaredInstalled(prefix.environment))
+        let tool = prefix.root.appending(path: "bin/cloudflared")
+        try "#!/bin/zsh\n".write(to: tool, atomically: true, encoding: .utf8)
+        try FileManager.default.setAttributes([.posixPermissions: 0o755], ofItemAtPath: tool.path)
+        #expect(ServerReader.cloudflaredInstalled(prefix.environment))
+    }
+
+    @Test func installRunsHomebrew() async throws {
+        let prefix = try FakePrefix(patchyScript: "#!/bin/zsh\n")
+        defer { prefix.remove() }
+        let brew = prefix.root.appending(path: "bin/brew")
+        try "#!/bin/zsh\necho \"brew $*\"\n".write(to: brew, atomically: true, encoding: .utf8)
+        try FileManager.default.setAttributes([.posixPermissions: 0o755], ofItemAtPath: brew.path)
+        let result = await PatchyClient(environment: prefix.environment).installCloudflared()
+        #expect(result.succeeded)
+        #expect(result.output.contains("brew install cloudflared"))
+    }
+
+    @Test func overrideReplacesOnlyThePatchyBinary() {
+        var environment = PatchyEnvironment(brewPrefix: URL(fileURLWithPath: "/opt/homebrew"))
+        environment.patchyOverride = URL(fileURLWithPath: "/Users/me/patchy/bin/patchy")
+        #expect(environment.patchyBinary.path == "/Users/me/patchy/bin/patchy")
+        #expect(environment.sitesDir.path == "/opt/homebrew/etc/httpd/sites")
+    }
+}

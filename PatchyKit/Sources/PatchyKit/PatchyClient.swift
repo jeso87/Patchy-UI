@@ -24,6 +24,7 @@ public struct PatchyClient: Sendable {
         snapshot.trust = checkTrust ? ServerReader.trust(environment) : previousTrust
         snapshot.patchyVersion = ServerReader.patchyVersion(environment)
         snapshot.certificateAuthorityInstalled = ServerReader.certificateAuthorityInstalled()
+        snapshot.supportsSharing = ServerReader.supportsSharing(environment)
         return snapshot
     }
 
@@ -74,6 +75,13 @@ public struct PatchyClient: Sendable {
 
     public func setUpTrust(askpass: AskpassServer, onOutput: Output? = nil) async -> CommandResult {
         await patchy(["trust"], askpass: askpass, onOutput: onOutput)
+    }
+
+    /// Installs cloudflared, which `patchy share` needs. Patchy leaves installing it to the person,
+    /// so this is the one place the app runs Homebrew itself.
+    public func installCloudflared(onOutput: Output? = nil) async -> CommandResult {
+        await ProcessRunner.run(environment.brewPrefix.appending(path: "bin/brew"), ["install", "cloudflared"],
+                                environment: environment.processEnvironment(), onOutput: onOutput)
     }
 
     /// Points a site at a different folder. Patchy has no command for this, so the site's config is

@@ -32,6 +32,8 @@ public struct PatchySnapshot: Sendable, Equatable {
     public var patchyVersion: String?
     /// False until the first certificate has been made; creating it asks for the Mac password.
     public var certificateAuthorityInstalled = true
+    /// The installed Patchy has `patchy share` (added after 1.2.1).
+    public var supportsSharing = false
 
     public init() {}
 }
@@ -108,6 +110,22 @@ public enum ServerReader {
         let script = (try? String(contentsOf: environment.patchyBinary, encoding: .utf8)) ?? ""
         guard let expected = expectedHelperVersion(inScript: script) else { return .enabled }
         return result.output.trimmingCharacters(in: .whitespacesAndNewlines) == expected ? .enabled : .outdated
+    }
+
+    // MARK: Sharing
+
+    /// Patchy's command list is a `case` block; `share)` is in it from the release that added sharing.
+    static func supportsSharing(inScript text: String) -> Bool {
+        text.split(whereSeparator: \.isNewline).contains { $0.trimmingCharacters(in: .whitespaces) == "share)" }
+    }
+
+    public static func supportsSharing(_ environment: PatchyEnvironment) -> Bool {
+        supportsSharing(inScript: (try? String(contentsOf: environment.patchyBinary, encoding: .utf8)) ?? "")
+    }
+
+    /// `patchy share` needs Cloudflare's cloudflared, installed with Homebrew.
+    public static func cloudflaredInstalled(_ environment: PatchyEnvironment) -> Bool {
+        FileManager.default.isExecutableFile(atPath: environment.brewPrefix.appending(path: "bin/cloudflared").path)
     }
 
     // MARK: Versions

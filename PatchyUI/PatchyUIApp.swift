@@ -79,6 +79,7 @@ struct PatchyUIApp: App {
             print("php: active \(snapshot.activePHP ?? "?"), installed \(snapshot.installedPHP.map(\.fullVersion))")
             print("trust: \(snapshot.trust)")
             print("certificate authority installed: \(snapshot.certificateAuthorityInstalled)")
+            print("sharing: \(snapshot.supportsSharing ? "supported" : "not in this Patchy"), cloudflared \(ServerReader.cloudflaredInstalled(environment) ? "installed" : "missing")")
             print("sites: \(snapshot.sites.count)")
             for site in snapshot.sites {
                 let status = SiteStatus(site: site, serverRunning: snapshot.serverRunning)

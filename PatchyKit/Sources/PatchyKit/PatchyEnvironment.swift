@@ -3,6 +3,8 @@ import Foundation
 /// Where Patchy and its files live on this Mac. Everything hangs off the Homebrew prefix.
 public struct PatchyEnvironment: Sendable, Equatable {
     public let brewPrefix: URL
+    /// Debug builds can run a Patchy from elsewhere, such as a clone with unreleased commands.
+    public var patchyOverride: URL?
 
     public init(brewPrefix: URL) {
         self.brewPrefix = brewPrefix
@@ -33,7 +35,7 @@ public struct PatchyEnvironment: Sendable, Equatable {
         return foundBrew ? .missingPatchy : .missingHomebrew
     }
 
-    public var patchyBinary: URL { brewPrefix.appending(path: "bin/patchy") }
+    public var patchyBinary: URL { patchyOverride ?? brewPrefix.appending(path: "bin/patchy") }
     public var httpdDir: URL { brewPrefix.appending(path: "etc/httpd") }
     public var httpdConf: URL { httpdDir.appending(path: "httpd.conf") }
     public var patchyConf: URL { httpdDir.appending(path: "patchy.conf") }
