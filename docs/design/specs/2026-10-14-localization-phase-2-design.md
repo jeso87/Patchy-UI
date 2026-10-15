@@ -1,7 +1,7 @@
 # Localization Phase 2 — Design
 
 **Date:** 2026-10-14
-**Status:** Draft, for approval
+**Status:** Carried out (see the end of this document)
 **Follows:** `docs/design/specs/2026-10-14-localization-design.md` (Phase 1, merged)
 **Reference:** Shrinker Pro's Phase 2 (`~/Developer/Apps/Shrinker Pro`,
 `docs/design/specs/2026-09-21-localization-phase-2-design.md`), followed except
@@ -153,3 +153,42 @@ and a correction is a one-line change to one language's file.
 language on, adding or rewording a string means updating every
 `translations/<lang>.json`; `merge-translations.py --check` fails until they
 are. That is the price of the feature, paid on every release.
+
+## Carried out of Phase 2
+
+**What shipped.** 35 translations, each written by one agent and reviewed by
+another, all passing the structural gate and the guard tests; English
+unchanged across the phase. German is the only one with screenshots for a
+human reader (`docs/design/notes/2026-10-14-german-review.md`); the other 34
+have a review note listing every judgement call and every wording a reviewer
+was unsure of (`docs/design/notes/2026-10-14-translation-review.md`). None has
+had a native reader yet.
+
+**Found on the way, and settled here.**
+
+- Arabic, Hebrew and Persian needed invisible direction marks: SwiftUI takes
+  a paragraph's direction from its first letter, so sentences starting with
+  "Patchy", an address or a number laid out left to right. Checked on screen
+  with the window mirrored. Launching with `-AppleLanguages` alone doesn't
+  mirror the window; the force-RTL flags do.
+- A translator comment said 31 takes the singular in Polish; it doesn't. Fixed
+  in the English source.
+- Several Finder localizations on current macOS name the folders "Apps" rather
+  than "Applications"; each language uses this Mac's names.
+
+**For a decision by the developer.** In Catalan, Romanian, Croatian and both
+Simplified and Traditional (Taiwan) Chinese, Sparkle's register (which the
+glossary says to follow) disagrees with macOS or with Shrinker Pro's reviewed
+translation. Each file follows Sparkle; the review note lists both sides.
+
+**Clips.** German clipped nowhere. No other language was screenshotted beyond
+the three right-to-left ones, which didn't clip. Labels longer than German's
+in the known tight spots, to check first in Phase 3: Greek "Open in Browser",
+Finnish "Restart", the About tab in Slovak and Slovenian, the Password-Free
+tab in French and Korean.
+
+**For Phase 3.** The layout fixes already listed (Refresh Certificates button,
+Change Folder labels, Settings toolbar, the Add Site "Opens at" line,
+unpinned folder paths under right-to-left), now with the labels above as the
+real test cases; release notes and the appcast per language; native readers
+for as many of the 35 as can be found, starting from the review notes.

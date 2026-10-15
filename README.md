@@ -53,6 +53,11 @@ commands for you. It is free, open source, and not affiliated with Joe Workman.
   Mac password.
 - **Menu bar item** with the server's status, start/stop, and a list of sites
   to open. It keeps running when the window is closed.
+- **In your language.** Patchy UI is available in 36 languages and follows
+  the language set for it in System Settings › General › Language & Region.
+  Patchy's own messages, shown under Show Details, stay in English. The
+  translations are machine-made; corrections are welcome as pull requests to
+  `translations/<lang>.json`.
 
 <div align="center">
 <img src="docs/screenshots/add-site-dark.png" width="760" alt="The Add Site sheet: a large address field showing harbor-cafe with .test added, the folder the site's files live in, a group picker, and a checkbox to also answer at www.">
