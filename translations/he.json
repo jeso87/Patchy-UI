@@ -1,7 +1,7 @@
 {
   "%@ already exists. Pick a different address.": "האתר %@ כבר קיים. יש לבחור כתובת אחרת.",
   "%@ and %@": "‏%1$@ ו%2$@",
-  "%@ and %@ and %@ now reach the live websites again.": "הכתובות %1$@, %2$@ ו%3$@ מובילות שוב לאתרים החיים.",
+  "%@ and %@ and %@ now reach the live websites again.": "הכתובות %1$@,‏ %2$@ ו%3$@ מובילות שוב לאתרים החיים.",
   "%@ and %@ now reach the live websites again.": "הכתובות %1$@ ו-%2$@ מובילות שוב לאתרים החיים.",
   "%@ are already using the ports this server needs (80 and 443). Quit them, then start the server again.": "היישומים %@ כבר משתמשים ביציאות שהשרת הזה צריך (80 ו-443). יש לסיים אותם ואז להפעיל את השרת שוב.",
   "%@ is a real web address. While the server runs, this Mac opens your local copy and can’t reach the live website. Stop the server to see the live site again.": "הכתובת %@ היא כתובת אינטרנט אמיתית. כל עוד השרת פועל, ה-Mac הזה פותח את העותק המקומי שלך ולא יכול להגיע לאתר החי. כדי לראות שוב את האתר החי, יש לעצור את השרת.",

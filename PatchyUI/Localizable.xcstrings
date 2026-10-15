@@ -21573,7 +21573,7 @@
           "stringUnit" : { "state" : "translated", "value" : "%1$@, %2$@ et %3$@ mènent de nouveau aux sites en ligne." }
         },
         "he" : {
-          "stringUnit" : { "state" : "translated", "value" : "הכתובות %1$@, %2$@ ו%3$@ מובילות שוב לאתרים החיים." }
+          "stringUnit" : { "state" : "translated", "value" : "הכתובות %1$@,‏ %2$@ ו%3$@ מובילות שוב לאתרים החיים." }
         },
         "hr" : {
           "stringUnit" : { "state" : "translated", "value" : "%1$@, %2$@ i %3$@ sada ponovno vode na web-stranice na internetu." }

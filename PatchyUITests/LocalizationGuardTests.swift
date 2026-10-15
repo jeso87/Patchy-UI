@@ -224,6 +224,23 @@ final class LocalizationGuardTests: XCTestCase {
 
     /// Every language that exists must carry every key. One merged half-written would sit in the
     /// catalog looking finished and fall back to English for whatever it lacks.
+    /// A correction made to `translations/<lang>.json` and never merged would
+    /// pass every other guard and ship the old wording. `--check` must see
+    /// that the catalog no longer matches the language files.
+    func testCheckFailsWhenALanguageFileWasNotMerged() throws {
+        let file = Self.repoRoot().appendingPathComponent("translations/fr.json")
+        try XCTSkipUnless(FileManager.default.fileExists(atPath: file.path), "French hasn't landed")
+        let before = try String(contentsOf: file, encoding: .utf8)
+        defer { try? before.write(to: file, atomically: true, encoding: .utf8) }
+        let original = try XCTUnwrap((try JSONSerialization.jsonObject(with: Data(before.utf8)) as? [String: Any])?["Repair"] as? String)
+        try before.replacingOccurrences(of: "\"Repair\": \"\(original)\"", with: "\"Repair\": \"UNMERGED\"")
+            .write(to: file, atomically: true, encoding: .utf8)
+        XCTAssertNotEqual(try String(contentsOf: file, encoding: .utf8), before, "the probe edit didn't apply")
+
+        let (status, output) = try Self.runScript("merge-translations.py", "--check")
+        XCTAssertEqual(status, 5, "an unmerged edit must fail --check with 'catalog out of date':\n\(output)")
+    }
+
     func testEveryLanguagePresentIsComplete() throws {
         try XCTSkipIf(Self.translatedLanguages().isEmpty, "no languages have landed yet")
         let (status, output) = try Self.runScript("merge-translations.py", "--check")
