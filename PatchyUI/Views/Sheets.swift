@@ -33,6 +33,7 @@ struct SheetHost: View {
                 case .trust: TrustSheet()
                 case .refreshCertificates: RefreshCertificatesSheet()
                 case .error(let info): ErrorSheet(info: info)
+                case .installCloudflared: EmptyView()
                 case nil: EmptyView()
                 }
             }

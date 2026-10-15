@@ -54,6 +54,7 @@ enum Sheet: Equatable {
     case trust
     case refreshCertificates
     case error(ErrorInfo)
+    case installCloudflared(String)
 }
 
 enum TrustStep: Equatable {
@@ -136,6 +137,12 @@ final class AppModel {
     var trustError: String?
     var passwordPrompt: PasswordPrompt?
     var recheckInProgress = false
+
+    /// Sites being shared, by address. A failed share stays until it's dismissed.
+    var shares: [String: ShareState] = [:]
+    /// Shares asked to stop that haven't finished stopping.
+    var stoppingShares: Set<String> = []
+    @ObservationIgnored private var shareSessions: [String: ShareSession] = [:]
 
     var compatibilityDismissed = false
 
@@ -323,6 +330,10 @@ final class AppModel {
         guard pollTask == nil, !Self.isRunningTests else { return }
         _ = updater
         groups = groupStore.load()
+        // Links shouldn't outlive the app. Patchy stops cloudflared when asked.
+        NotificationCenter.default.addObserver(forName: NSApplication.willTerminateNotification, object: nil, queue: .main) { [weak self] _ in
+            MainActor.assumeIsolated { self?.stopAllSharing() }
+        }
         pollTask = Task { [weak self] in
             await self?.detect()
             #if DEBUG
@@ -342,7 +353,12 @@ final class AppModel {
 
     func detect() async {
         switch PatchyEnvironment.detect() {
-        case .ready(let environment):
+        case .ready(var environment):
+            #if DEBUG
+            if let path = UserDefaults.standard.string(forKey: "PatchyDebugPatchyPath") {
+                environment.patchyOverride = URL(fileURLWithPath: (path as NSString).expandingTildeInPath)
+            }
+            #endif
             client = PatchyClient(environment: environment)
             await refresh(checkTrust: true)
             phase = .ready
@@ -375,6 +391,8 @@ final class AppModel {
             client.snapshot(checkTrust: checkTrust, previousTrust: previousTrust)
         }.value
         if fresh != snapshot { snapshot = fresh }
+        for address in Self.sharesToStop(Array(shareSessions.keys), snapshot: snapshot) { stopSharing(address) }
+        for address in shares.keys where shareSessions[address] == nil && site(address) == nil { shares[address] = nil }
         if selection == nil || !sites.contains(where: { $0.address == selection }) {
             selection = sites.first?.address
         }
@@ -567,6 +585,7 @@ final class AppModel {
         guard !isBusy, requireTrust(for: .stop) else { return }
         let real = sites.filter(\.isRealAddress).map(\.address)
         Task {
+            stopAllSharing()
             let result = await runTask(steps: [String(localized: "Stopping the server…", comment: "Progress step shown while a change runs."), String(localized: "Handing addresses back to the internet…", comment: "Progress step shown while a change runs.")],
                                        markers: [(PatchyOutput.stopped, 1)]) { client, askpass, output in
                 await client.stop(askpass: askpass, onOutput: output)
@@ -725,6 +744,7 @@ final class AppModel {
 
     func confirmRemove(_ address: String) {
         guard !isBusy, requireTrust(for: .remove(address)) else { return }
+        stopSharing(address)
         sheet = nil
         let index = sites.firstIndex { $0.address == address } ?? 0
         Task {
@@ -825,6 +845,140 @@ final class AppModel {
         }
     }
 
+    // MARK: Sharing
+
+    enum ShareDecision: Equatable { case start, install, ignore }
+
+    /// Whether a click on Share starts a share, asks to install cloudflared first, or does nothing.
+    static func shareDecision(canShare: Bool, serverRunning: Bool, alreadySharing: Bool, cloudflaredInstalled: Bool) -> ShareDecision {
+        guard canShare, serverRunning, !alreadySharing else { return .ignore }
+        return cloudflaredInstalled ? .start : .install
+    }
+
+    /// Shares to end: all of them once the server stops, otherwise those whose site is gone.
+    /// Restarts don't end shares; the tunnel waits out the second the server is down.
+    static func sharesToStop(_ shared: [String], snapshot: PatchySnapshot) -> [String] {
+        guard snapshot.serverRunning else { return shared.sorted() }
+        let present = Set(snapshot.sites.map(\.address))
+        return shared.filter { !present.contains($0) }.sorted()
+    }
+
+    var canShare: Bool { snapshot.supportsSharing }
+
+    func isSharing(_ address: String) -> Bool {
+        switch shares[address] {
+        case .starting?, .sharing?: true
+        default: false
+        }
+    }
+
+    /// Shared sites with a working link, for the menu bar.
+    var sharedAddresses: [String] {
+        shares.compactMap { address, state in if case .sharing = state { address } else { nil } }.sorted()
+    }
+
+    func share(_ site: Site, quick: Bool = false) {
+        guard let client else { return }
+        let decision = Self.shareDecision(canShare: canShare, serverRunning: serverRunning,
+                                          alreadySharing: shareSessions[site.address] != nil,
+                                          cloudflaredInstalled: ServerReader.cloudflaredInstalled(client.environment))
+        switch decision {
+        case .ignore:
+            return
+        case .install:
+            sheet = .installCloudflared(site.address)
+            openMainWindow?()
+        case .start:
+            let address = site.address
+            let session = ShareSession(environment: client.environment, address: address, quick: quick) { [weak self] state in
+                MainActor.assumeIsolated { self?.shareChanged(address, state) }
+            }
+            shareSessions[address] = session
+            shares[address] = .starting
+            session.start()
+        }
+    }
+
+    private func shareChanged(_ address: String, _ state: ShareState) {
+        switch state {
+        case .stopped:
+            shareSessions[address] = nil
+            stoppingShares.remove(address)
+            shares[address] = nil
+        case .failed(let output, _):
+            shareSessions[address] = nil
+            stoppingShares.remove(address)
+            if output.contains(PatchyOutput.cloudflaredRequired) {
+                shares[address] = nil
+                sheet = .installCloudflared(address)
+                openMainWindow?()
+            } else {
+                shares[address] = state
+            }
+        case .starting, .sharing:
+            if shareSessions[address] != nil { shares[address] = state }
+        }
+    }
+
+    func stopSharing(_ address: String) {
+        guard let session = shareSessions[address] else { return }
+        stoppingShares.insert(address)
+        session.stop()
+    }
+
+    func stopAllSharing() {
+        for address in shareSessions.keys { stopSharing(address) }
+    }
+
+    func retryShare(_ address: String) {
+        shares[address] = nil
+        if let site = site(address) { share(site) }
+    }
+
+    func dismissShareProblem(_ address: String) {
+        if case .failed? = shares[address] { shares[address] = nil }
+    }
+
+    func showShareProblem(_ address: String) {
+        guard case .failed(let output, let wasSharing)? = shares[address] else { return }
+        sheet = .error(ErrorInfo(title: String(localized: "Couldn’t share \(address)", comment: "Title of an error sheet."),
+                                 message: ShareCopy.problem(output: output, wasSharing: wasSharing),
+                                 details: output))
+    }
+
+    private func access(_ address: String) -> ShareAccess? {
+        if case .sharing(let access)? = shares[address] { access } else { nil }
+    }
+
+    func copyShareLink(_ address: String) {
+        guard let access = access(address) else { return }
+        NSPasteboard.general.clearContents()
+        NSPasteboard.general.setString(access.url.absoluteString, forType: .string)
+    }
+
+    func copyShareDetails(_ address: String) {
+        guard let access = access(address) else { return }
+        NSPasteboard.general.clearContents()
+        NSPasteboard.general.setString(ShareCopy.clientMessage(for: access), forType: .string)
+    }
+
+    func installCloudflared(thenShare address: String) {
+        guard !isBusy else { return }
+        Task {
+            let result = await runTask(steps: [String(localized: "Installing cloudflared…", comment: "Progress step shown while a change runs.")]) { client, _, output in
+                await client.installCloudflared(onOutput: output)
+            }
+            guard let environment, ServerReader.cloudflaredInstalled(environment) else {
+                sheet = .error(ErrorInfo(title: String(localized: "Couldn’t install cloudflared", comment: "Title of an error sheet."),
+                                         message: String(localized: "Nothing was changed. Show Details has the exact message from Homebrew.", comment: "Message in an error sheet."),
+                                         details: result.output))
+                return
+            }
+            sheet = nil
+            if let site = site(address) { share(site) }
+        }
+    }
+
     // MARK: Site shortcuts
 
     func openInBrowser(_ site: Site) {
@@ -918,6 +1072,16 @@ extension AppModel {
             groupSavingDisabled = true
             for suggestion in groups.suggestions(for: addresses).prefix(2) { applyGroupSuggestion(suggestion) }
         }
+        if let address = defaults.string(forKey: "PatchyDebugShare"), addresses.contains(address) {
+            // Shows a site as shared without starting anything.
+            let name = address.split(separator: ".").first.map(String.init) ?? address
+            switch defaults.string(forKey: "PatchyDebugShareState") {
+            case "starting": shares[address] = .starting
+            case "stable": shares[address] = .sharing(ShareAccess(url: URL(string: "https://\(name).example.com")!, username: "preview", password: "k7Rm-4vQx-92Ld"))
+            case "failed": shares[address] = .failed(output: "cloudflared stopped before the link was ready:\nERR failed to request quick Tunnel", wasSharing: false)
+            default: shares[address] = .sharing(ShareAccess(url: URL(string: "https://quiet-river-banana.trycloudflare.com")!))
+            }
+        }
         switch defaults.string(forKey: "PatchyDebugSheet") {
         case "add":
             let name = defaults.string(forKey: "PatchyDebugName") ?? ""
@@ -962,6 +1126,7 @@ extension AppModel {
         case "trustpassword": openTrustSetup(); trustStep = .password
         case "password": passwordPrompt = PasswordPrompt()
         case "certs": sheet = .refreshCertificates
+        case "cloudflared": if let selection { sheet = .installCloudflared(selection) }
         case "error": sheet = .error(Self.startFailure(output: "Apache's startup error:\n  (48)Address already in use: AH00072: make_sock: could not bind to address [::]:80\nSomething else is listening on port 80/443:\n  COMMAND PID USER\n  nginx 412 joe"))
         default: break
         }

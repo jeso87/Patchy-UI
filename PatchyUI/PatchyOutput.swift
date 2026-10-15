@@ -1,3 +1,5 @@
+import PatchyKit
+
 /// Phrases that Patchy and Apache print, which the app matches to follow progress and explain
 /// failures. This is Patchy's own English output, not copy: never localize it, or matching
 /// silently stops working in every other language. Patchy has no machine-readable output, so if
@@ -21,6 +23,8 @@ enum PatchyOutput {
     static let trustUnsafe = "cannot be safely installed"
     static let trustUnsafeShort = "trust cannot be safely"
     static let terminalRequired = "a terminal is required to read the password"
+    static let apacheNotRunning = "Apache isn't running"
+    static let cloudflaredRequired = "cloudflared is required"
 
     // Log lines.
     static let fatal = "Fatal"
@@ -28,6 +32,7 @@ enum PatchyOutput {
     static let all = [
         started, stopped, startingApache, creatingCertificates, creatingConfig, syntaxOK, restartingApache,
         rollingBack, siteExists, serviceStuck, addressInUse, portHolders, trustUnsafe, trustUnsafeShort,
-        terminalRequired, fatal,
+        terminalRequired, fatal, apacheNotRunning, cloudflaredRequired,
+        ShareOutput.sharing, ShareOutput.username, ShareOutput.password, ShareOutput.ready,
     ]
 }
