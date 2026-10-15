@@ -1044,6 +1044,7 @@ extension AppModel {
         demo.installedPHP = snapshot.installedPHP
         demo.trust = .enabled
         demo.patchyVersion = snapshot.patchyVersion
+        demo.supportsSharing = snapshot.supportsSharing
         snapshot = demo
         var demoGroups = SiteGroups()
         demoGroups.createGroup(named: "Northwind", sites: ["northwind.test", "members.northwind.test", "shop.northwind.test"])

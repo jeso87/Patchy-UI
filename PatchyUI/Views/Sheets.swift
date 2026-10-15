@@ -33,7 +33,7 @@ struct SheetHost: View {
                 case .trust: TrustSheet()
                 case .refreshCertificates: RefreshCertificatesSheet()
                 case .error(let info): ErrorSheet(info: info)
-                case .installCloudflared: EmptyView()
+                case .installCloudflared(let address): InstallCloudflaredSheet(address: address)
                 case nil: EmptyView()
                 }
             }
@@ -47,7 +47,7 @@ struct SheetHost: View {
         if model.passwordPrompt != nil { return 420 }
         switch model.sheet {
         case .remove: return 380
-        case .trust, .folder, .refreshCertificates: return 420
+        case .trust, .folder, .refreshCertificates, .installCloudflared: return 420
         default: return 500
         }
     }
@@ -479,6 +479,34 @@ struct RefreshCertificatesSheet: View {
         HStack(alignment: .top, spacing: 9) {
             Text("•").foregroundStyle(Theme.secondaryText)
             Text(text).fixedSize(horizontal: false, vertical: true)
+        }
+    }
+}
+
+// MARK: - Sharing
+
+struct InstallCloudflaredSheet: View {
+    @Environment(AppModel.self) private var model
+    var address: String
+
+    var body: some View {
+        if model.isBusy {
+            HStack(spacing: 10) {
+                ProgressView().controlSize(.small)
+                Text(model.busy?.text ?? "")
+            }
+        } else {
+            SheetTitle(title: String(localized: "Sharing needs one more tool", comment: "Sheet title."),
+                       message: String(localized: "Sharing uses cloudflared, a free tool from Cloudflare. Install it once and Patchy UI takes care of the rest.", comment: "Sheet message."))
+            HStack(spacing: 8) {
+                Spacer()
+                Button("Cancel", role: .cancel) { model.closeSheet() }
+                    .keyboardShortcut(.cancelAction)
+                Button("Install") { model.installCloudflared(thenShare: address) }
+                    .buttonStyle(.borderedProminent)
+                    .keyboardShortcut(.defaultAction)
+            }
+            .controlSize(.large)
         }
     }
 }

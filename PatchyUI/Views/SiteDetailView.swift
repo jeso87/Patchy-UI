@@ -12,6 +12,9 @@ struct SiteDetailView: View {
             VStack(alignment: .leading, spacing: 14) {
                 header
                 actions
+                if let state = model.shares[site.address], state != .stopped {
+                    SharePanel(address: site.address, state: state)
+                }
                 Picker("View", selection: $model.tab) {
                     ForEach(DetailTab.allCases) { tab in
                         Text(tab.title).tag(tab)
@@ -23,6 +26,8 @@ struct SiteDetailView: View {
             }
             .padding(.horizontal, 28)
             .padding(.top, 22)
+            // The tab content below scrolls, so it gives up height before the header does.
+            .layoutPriority(1)
 
             switch model.tab {
             case .overview:
@@ -94,6 +99,24 @@ struct SiteDetailView: View {
             .labelStyle(compact ? AnyLabelStyle(.iconOnly) : AnyLabelStyle(.titleOnly))
             .help(compact ? "Reveal in Finder" : "")
             .disabled(!site.folderExists)
+
+            if model.canShare {
+                if model.isSharing(site.address) {
+                    Button { model.stopSharing(site.address) } label: {
+                        Label("Stop Sharing", systemImage: "stop.circle")
+                    }
+                    .labelStyle(compact ? AnyLabelStyle(.iconOnly) : AnyLabelStyle(.titleOnly))
+                    .help(compact ? "Stop Sharing" : "")
+                    .disabled(model.stoppingShares.contains(site.address))
+                } else {
+                    Button { model.share(site) } label: {
+                        Label("Share", systemImage: "link")
+                    }
+                    .labelStyle(compact ? AnyLabelStyle(.iconOnly) : AnyLabelStyle(.titleOnly))
+                    .help(model.serverRunning ? "Share this site at a public link" : "Start the server to share this site")
+                    .disabled(!model.serverRunning)
+                }
+            }
 
             Spacer(minLength: 8)
 

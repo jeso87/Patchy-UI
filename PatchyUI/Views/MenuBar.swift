@@ -113,6 +113,21 @@ struct MenuBarContent: View {
                 Button(Phrases.sitesNeedAttention(problems)) { model.showAttention() }
             }
 
+            let shared = model.sharedAddresses
+            if !shared.isEmpty {
+                Divider()
+                Section("Sharing") {
+                    ForEach(shared, id: \.self) { address in
+                        Menu {
+                            Button("Copy Link") { model.copyShareLink(address) }
+                            Button("Stop Sharing") { model.stopSharing(address) }
+                        } label: {
+                            Text(verbatim: address)
+                        }
+                    }
+                }
+            }
+
             Divider()
 
             Button("Add Site…") { model.openAdd() }

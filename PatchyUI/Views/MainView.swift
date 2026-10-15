@@ -230,10 +230,15 @@ struct SiteRow: View {
         HStack(spacing: 9) {
             Glyph(severity: status.severity)
             VStack(alignment: .leading, spacing: 1) {
-                Text(site.address)
-                    .fontWeight(.medium)
-                    .lineLimit(1)
-                    .truncationMode(.middle)
+                HStack(spacing: 4) {
+                    Text(site.address)
+                        .fontWeight(.medium)
+                        .lineLimit(1)
+                        .truncationMode(.middle)
+                    if model.isSharing(site.address) {
+                        Image(systemName: "link").font(.system(size: 10)).foregroundStyle(.secondary)
+                    }
+                }
                 Text(status.summary)
                     .font(.system(size: 11))
                     .foregroundStyle(.secondary)
@@ -246,6 +251,7 @@ struct SiteRow: View {
         .contentShape(Rectangle())
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("\(site.address), \(status.summary)")
+        .accessibilityValue(model.isSharing(site.address) ? String(localized: "Shared", comment: "VoiceOver value for a site being shared.") : "")
         .draggable(site.address)
         .contextMenu {
             Button("Open in Browser") { model.openInBrowser(site) }
@@ -253,6 +259,15 @@ struct SiteRow: View {
             Button("Copy Address") { model.copyAddress(site) }
             Button("Reveal in Finder") { model.revealFolder(site) }
                 .disabled(!site.folderExists)
+            if model.canShare {
+                if model.isSharing(site.address) {
+                    Button("Copy Link") { model.copyShareLink(site.address) }
+                    Button("Stop Sharing") { model.stopSharing(site.address) }
+                } else {
+                    Button("Share") { model.share(site) }
+                        .disabled(!model.serverRunning)
+                }
+            }
             Divider()
             Menu("Move to Group") { GroupChoices(address: site.address) }
             Divider()
