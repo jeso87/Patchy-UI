@@ -39,6 +39,11 @@ commands for you. It is free, open source, and not affiliated with Joe Workman.
 - **Change a site's folder** without removing and re-adding it. Nothing is
   moved or deleted.
 - **Remove a site.** The address stops working; the folder stays where it is.
+- **Share a site at a public link** so someone else can see it, for example a
+  client reviewing a preview. One click gives a temporary link that works until
+  you stop sharing. If you've set up your own domain with
+  `patchy share setup`, the site gets a stable address with a password instead.
+  Sharing needs Cloudflare's free `cloudflared`; the app offers to install it.
 - **Group related sites,** such as one customer's domain and subdomains. Groups
   show in the sidebar and as submenus in the menu bar. The app suggests groups
   for sites that look related, and never groups anything by itself. Groups
@@ -129,8 +134,10 @@ against a signing key built into the app before they are installed.
 ## What it does and doesn't do
 
 **Network.** The daily update check, and the download if you accept an update,
-are the only network requests Patchy UI makes. It has no analytics, no
-accounts and no telemetry.
+are the only network requests Patchy UI makes on its own. When you share a
+site, Patchy runs Cloudflare's `cloudflared`, and visitors to the link reach
+your site through Cloudflare until you stop sharing or quit the app. It has no
+analytics, no accounts and no telemetry.
 
 **Your Mac password.** Some changes need administrator rights: setting up
 password-free mode, creating the first certificate, and refreshing
@@ -156,7 +163,9 @@ and puts the file back exactly as it was if the check fails.
 the Homebrew prefix, which the App Sandbox does not allow. That is also why it
 is distributed here and not on the Mac App Store.
 
-**Not included:** installing Homebrew, Patchy, PHP versions or PHP extensions;
+**Not included:** installing Homebrew, Patchy, PHP versions or PHP extensions
+(the one exception is `cloudflared`, installed with Homebrew when you ask to
+share a site);
 editing `httpd.conf` or `php.ini`; turning password-free mode off (use
 `patchy untrust`).
 
