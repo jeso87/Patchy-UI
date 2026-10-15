@@ -50,7 +50,8 @@ commands for you. It is free, open source, and not affiliated with Joe Workman.
 - **Switch PHP version** between the versions Homebrew has installed.
 - **Refresh certificates** when they get close to expiring.
 - **Set up password-free mode once,** so everyday changes stop asking for your
-  Mac password.
+  Mac password. Or skip it, and the app asks for your password when a change
+  needs it.
 - **Menu bar item** with the server's status, start/stop, and a list of sites
   to open. It keeps running when the window is closed.
 - **In your language.** Patchy UI is available in 36 languages and follows
@@ -110,7 +111,7 @@ The current versions are always in Patchy UI › About Patchy UI.
 
 Patchy UI checks for a new version once a day using
 [Sparkle](https://sparkle-project.org), and you can check any time with
-**Check for Updates…**. There is no setting to turn the daily check off,
+**Check for Updates…** in the Patchy UI menu or Settings › General. There is no setting to turn the daily check off,
 because an out-of-date app is the thing most likely to cause problems after a
 Patchy upgrade. Installing an update is never automatic: you are always shown
 what changed and asked first.
@@ -126,7 +127,9 @@ accounts and no telemetry.
 
 **Your Mac password.** Some changes need administrator rights: setting up
 password-free mode, creating the first certificate, and refreshing
-certificates. When that happens the app asks for your Mac password in its own
+certificates. Without password-free mode, so does every change that updates
+your addresses: starting or stopping the server, and adding or removing a
+site. When that happens the app asks for your Mac password in its own
 window, checks it with macOS, and hands it to `sudo` for that one task. It is
 never written to disk, never logged, and forgotten as soon as the task ends.
 
