@@ -104,7 +104,7 @@ matching Patchy UI release, built and tested against it.
 A fix to Patchy UI alone, for the same Patchy release, adds a fourth number:
 1.2.1.1 still means "made for Patchy 1.2.1".
 
-The current versions are always in Settings › About.
+The current versions are always in Patchy UI › About Patchy UI.
 
 ## Updates
 

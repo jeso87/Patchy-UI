@@ -453,119 +453,6 @@
         }
       }
     },
-    "About" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "About" }
-        },
-        "ar" : {
-          "stringUnit" : { "state" : "translated", "value" : "حول" }
-        },
-        "ca" : {
-          "stringUnit" : { "state" : "translated", "value" : "Informació" }
-        },
-        "cs" : {
-          "stringUnit" : { "state" : "translated", "value" : "O aplikaci" }
-        },
-        "da" : {
-          "stringUnit" : { "state" : "translated", "value" : "Om" }
-        },
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Über" }
-        },
-        "el" : {
-          "stringUnit" : { "state" : "translated", "value" : "Πληροφορίες" }
-        },
-        "es" : {
-          "stringUnit" : { "state" : "translated", "value" : "Acerca de" }
-        },
-        "fa" : {
-          "stringUnit" : { "state" : "translated", "value" : "درباره" }
-        },
-        "fi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Tietoja" }
-        },
-        "fr" : {
-          "stringUnit" : { "state" : "translated", "value" : "À propos" }
-        },
-        "he" : {
-          "stringUnit" : { "state" : "translated", "value" : "אודות" }
-        },
-        "hr" : {
-          "stringUnit" : { "state" : "translated", "value" : "O aplikaciji" }
-        },
-        "hu" : {
-          "stringUnit" : { "state" : "translated", "value" : "Névjegy" }
-        },
-        "is" : {
-          "stringUnit" : { "state" : "translated", "value" : "Um" }
-        },
-        "it" : {
-          "stringUnit" : { "state" : "translated", "value" : "Info" }
-        },
-        "ja" : {
-          "stringUnit" : { "state" : "translated", "value" : "情報" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "정보" }
-        },
-        "nb" : {
-          "stringUnit" : { "state" : "translated", "value" : "Om" }
-        },
-        "nl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Over" }
-        },
-        "nn" : {
-          "stringUnit" : { "state" : "translated", "value" : "Om" }
-        },
-        "pl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Informacje" }
-        },
-        "pt-BR" : {
-          "stringUnit" : { "state" : "translated", "value" : "Sobre" }
-        },
-        "pt-PT" : {
-          "stringUnit" : { "state" : "translated", "value" : "Acerca de" }
-        },
-        "ro" : {
-          "stringUnit" : { "state" : "translated", "value" : "Despre" }
-        },
-        "ru" : {
-          "stringUnit" : { "state" : "translated", "value" : "О программе" }
-        },
-        "sk" : {
-          "stringUnit" : { "state" : "translated", "value" : "O aplikácii" }
-        },
-        "sl" : {
-          "stringUnit" : { "state" : "translated", "value" : "O aplikaciji" }
-        },
-        "sv" : {
-          "stringUnit" : { "state" : "translated", "value" : "Om" }
-        },
-        "th" : {
-          "stringUnit" : { "state" : "translated", "value" : "เกี่ยวกับ" }
-        },
-        "tr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Hakkında" }
-        },
-        "uk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Про програму" }
-        },
-        "vi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Giới thiệu" }
-        },
-        "zh-HK" : {
-          "stringUnit" : { "state" : "translated", "value" : "關於" }
-        },
-        "zh-Hans" : {
-          "stringUnit" : { "state" : "translated", "value" : "关于" }
-        },
-        "zh-Hant" : {
-          "stringUnit" : { "state" : "translated", "value" : "關於" }
-        }
-      }
-    },
     "Add Site" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
@@ -5425,119 +5312,6 @@
         }
       }
     },
-    "joshuaomilian.ca" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "ar" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "ca" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "cs" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "da" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "el" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "es" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "fa" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "fi" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "fr" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "he" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "hr" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "hu" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "is" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "it" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "ja" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "nb" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "nl" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "nn" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "pl" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "pt-BR" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "pt-PT" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "ro" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "ru" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "sk" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "sl" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "sv" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "th" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "tr" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "uk" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "vi" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "zh-HK" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "zh-Hans" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        },
-        "zh-Hant" : {
-          "stringUnit" : { "state" : "translated", "value" : "joshuaomilian.ca" }
-        }
-      }
-    },
     "Live" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
@@ -9603,119 +9377,6 @@
         },
         "zh-Hant" : {
           "stringUnit" : { "state" : "translated", "value" : "GitHub上的Patchy" }
-        }
-      }
-    },
-    "Patchy UI" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "ar" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "ca" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "cs" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "da" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "el" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "es" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "fa" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "fi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "fr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "he" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "hr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "hu" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "is" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "it" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "ja" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "nb" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "nl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "nn" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "pl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "pt-BR" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "pt-PT" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "ro" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "ru" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "sk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "sl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "sv" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "th" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "tr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "uk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "vi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "zh-HK" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "zh-Hans" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
-        },
-        "zh-Hant" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI" }
         }
       }
     },
@@ -29742,119 +29403,6 @@
         }
       }
     },
-    "Not installed" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Not installed" }
-        },
-        "ar" : {
-          "stringUnit" : { "state" : "translated", "value" : "غير مثبّت" }
-        },
-        "ca" : {
-          "stringUnit" : { "state" : "translated", "value" : "No instal·lat" }
-        },
-        "cs" : {
-          "stringUnit" : { "state" : "translated", "value" : "Není nainstalováno" }
-        },
-        "da" : {
-          "stringUnit" : { "state" : "translated", "value" : "Ikke installeret" }
-        },
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Nicht installiert" }
-        },
-        "el" : {
-          "stringUnit" : { "state" : "translated", "value" : "Δεν είναι εγκατεστημένο" }
-        },
-        "es" : {
-          "stringUnit" : { "state" : "translated", "value" : "No instalado" }
-        },
-        "fa" : {
-          "stringUnit" : { "state" : "translated", "value" : "نصب نشده" }
-        },
-        "fi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Ei asennettu" }
-        },
-        "fr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Non installé" }
-        },
-        "he" : {
-          "stringUnit" : { "state" : "translated", "value" : "לא מותקן" }
-        },
-        "hr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Nije instaliran" }
-        },
-        "hu" : {
-          "stringUnit" : { "state" : "translated", "value" : "Nincs telepítve" }
-        },
-        "is" : {
-          "stringUnit" : { "state" : "translated", "value" : "Ekki uppsett" }
-        },
-        "it" : {
-          "stringUnit" : { "state" : "translated", "value" : "Non installato" }
-        },
-        "ja" : {
-          "stringUnit" : { "state" : "translated", "value" : "インストールされていません" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "설치되지 않음" }
-        },
-        "nb" : {
-          "stringUnit" : { "state" : "translated", "value" : "Ikke installert" }
-        },
-        "nl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Niet geïnstalleerd" }
-        },
-        "nn" : {
-          "stringUnit" : { "state" : "translated", "value" : "Ikkje installert" }
-        },
-        "pl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Nie zainstalowano" }
-        },
-        "pt-BR" : {
-          "stringUnit" : { "state" : "translated", "value" : "Não instalado" }
-        },
-        "pt-PT" : {
-          "stringUnit" : { "state" : "translated", "value" : "Não instalado" }
-        },
-        "ro" : {
-          "stringUnit" : { "state" : "translated", "value" : "Neinstalat" }
-        },
-        "ru" : {
-          "stringUnit" : { "state" : "translated", "value" : "Не установлен" }
-        },
-        "sk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Nenainštalovaný" }
-        },
-        "sl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Ni nameščeno" }
-        },
-        "sv" : {
-          "stringUnit" : { "state" : "translated", "value" : "Inte installerat" }
-        },
-        "th" : {
-          "stringUnit" : { "state" : "translated", "value" : "ไม่ได้ติดตั้ง" }
-        },
-        "tr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Yüklü değil" }
-        },
-        "uk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Не встановлено" }
-        },
-        "vi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Chưa cài đặt" }
-        },
-        "zh-HK" : {
-          "stringUnit" : { "state" : "translated", "value" : "未安裝" }
-        },
-        "zh-Hans" : {
-          "stringUnit" : { "state" : "translated", "value" : "未安装" }
-        },
-        "zh-Hant" : {
-          "stringUnit" : { "state" : "translated", "value" : "未安裝" }
-        }
-      }
-    },
     "Not pointing at this Mac" : {
       "comment" : "A site's problem, shown in the sidebar list and the menu bar menu.",
       "extractionState" : "extracted_with_value",
@@ -32008,232 +31556,6 @@
         }
       }
     },
-    "Patchy UI and Patchy match. Patchy UI’s version number is always the Patchy release it was made for." : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI and Patchy match. Patchy UI’s version number is always the Patchy release it was made for." }
-        },
-        "ar" : {
-          "stringUnit" : { "state" : "translated", "value" : "‏Patchy UI وPatchy متوافقان. رقم إصدار Patchy UI هو دائمًا رقم إصدار Patchy الذي صُمِّم له." }
-        },
-        "ca" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI i Patchy coincideixen. El número de versió de Patchy UI sempre és la versió de Patchy per a la qual es va fer." }
-        },
-        "cs" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI a Patchy si odpovídají. Číslo verze Patchy UI vždy odpovídá vydání Patchy, pro které aplikace vznikla." }
-        },
-        "da" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI og Patchy passer sammen. Patchy UI’s versionsnummer er altid den Patchy-version, den blev lavet til." }
-        },
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI und Patchy passen zusammen. Die Versionsnummer von Patchy UI ist immer die Patchy-Version, für die es gemacht wurde." }
-        },
-        "el" : {
-          "stringUnit" : { "state" : "translated", "value" : "Το Patchy UI και το Patchy ταιριάζουν. Ο αριθμός έκδοσης του Patchy UI είναι πάντα η έκδοση του Patchy για την οποία φτιάχτηκε." }
-        },
-        "es" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI y Patchy coinciden. El número de versión de Patchy UI siempre es la versión de Patchy para la que se hizo." }
-        },
-        "fa" : {
-          "stringUnit" : { "state" : "translated", "value" : "‏Patchy UI و Patchy با هم سازگارند. شمارهٔ نسخهٔ Patchy UI همیشه همان نسخه‌ای از Patchy است که برای آن ساخته شده." }
-        },
-        "fi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI ja Patchy sopivat yhteen. Patchy UI:n versionumero on aina sen Patchy-julkaisun numero, jota varten se on tehty." }
-        },
-        "fr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI et Patchy correspondent. Le numéro de version de Patchy UI est toujours celui de la version de Patchy pour laquelle il a été conçu." }
-        },
-        "he" : {
-          "stringUnit" : { "state" : "translated", "value" : "‏Patchy UI ו-Patchy תואמים. מספר הגרסה של Patchy UI הוא תמיד גרסת Patchy שעבורה הוא נבנה." }
-        },
-        "hr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI i Patchy se podudaraju. Broj verzije aplikacije Patchy UI uvijek je verzija Patchyja za koju je izrađena." }
-        },
-        "hu" : {
-          "stringUnit" : { "state" : "translated", "value" : "A Patchy UI és a Patchy verziója egyezik. A Patchy UI verziószáma mindig annak a Patchy-kiadásnak felel meg, amelyhez készült." }
-        },
-        "is" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI og Patchy passa saman. Útgáfunúmer Patchy UI er alltaf sú útgáfa Patchy sem það var gert fyrir." }
-        },
-        "it" : {
-          "stringUnit" : { "state" : "translated", "value" : "Le versioni di Patchy UI e Patchy corrispondono. Il numero di versione di Patchy UI è sempre quello della versione di Patchy per cui è stata creata." }
-        },
-        "ja" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UIとPatchyのバージョンは一致しています。Patchy UIのバージョン番号は、常に対応するPatchyのリリースと同じです。" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI와 Patchy의 버전이 일치합니다. Patchy UI의 버전 번호는 항상 이 앱이 맞춰 만들어진 Patchy 버전과 같습니다." }
-        },
-        "nb" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI og Patchy passer sammen. Versjonsnummeret til Patchy UI er alltid den Patchy-versjonen appen er laget for." }
-        },
-        "nl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI en Patchy passen bij elkaar. Het versienummer van Patchy UI is altijd de Patchy-versie waarvoor het is gemaakt." }
-        },
-        "nn" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI og Patchy passar saman. Versjonsnummeret til Patchy UI er alltid den Patchy-versjonen appen vart laga for." }
-        },
-        "pl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI i Patchy są zgodne. Numer wersji Patchy UI to zawsze wydanie Patchy, dla którego powstał." }
-        },
-        "pt-BR" : {
-          "stringUnit" : { "state" : "translated", "value" : "O Patchy UI e o Patchy são compatíveis. O número de versão do Patchy UI é sempre o da versão do Patchy para a qual ele foi feito." }
-        },
-        "pt-PT" : {
-          "stringUnit" : { "state" : "translated", "value" : "O Patchy UI e o Patchy correspondem. O número de versão do Patchy UI é sempre a versão do Patchy para a qual foi feito." }
-        },
-        "ro" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI și Patchy se potrivesc. Numărul versiunii Patchy UI este întotdeauna versiunea Patchy pentru care a fost făcut." }
-        },
-        "ru" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI и Patchy соответствуют друг другу. Номер версии Patchy UI всегда совпадает с версией Patchy, для которой он создан." }
-        },
-        "sk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI a Patchy sa zhodujú. Číslo verzie Patchy UI je vždy rovnaké ako vydanie Patchy, pre ktoré bola aplikácia vytvorená." }
-        },
-        "sl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI in Patchy se ujemata. Številka različice Patchy UI je vedno izdaja programa Patchy, za katero je bil narejen." }
-        },
-        "sv" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI och Patchy passar ihop. Versionsnumret för Patchy UI är alltid den Patchy-version det gjordes för." }
-        },
-        "th" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI และ Patchy ตรงกัน หมายเลขเวอร์ชั่นของ Patchy UI จะตรงกับรุ่นของ Patchy ที่สร้างมาให้เสมอ" }
-        },
-        "tr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI ve Patchy uyumlu. Patchy UI’ın sürüm numarası her zaman, birlikte çalışmak üzere yapıldığı Patchy sürümünün numarasıdır." }
-        },
-        "uk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI і Patchy сумісні. Номер версії Patchy UI завжди збігається з випуском Patchy, для якого його створено." }
-        },
-        "vi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI và Patchy khớp nhau. Số phiên bản của Patchy UI luôn trùng với bản phát hành Patchy mà ứng dụng được làm ra để dùng cùng." }
-        },
-        "zh-HK" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI與Patchy版本相符。Patchy UI的版本號碼一律與它所針對的Patchy版本相同。" }
-        },
-        "zh-Hans" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI 与 Patchy 版本一致。Patchy UI 的版本号始终与其所适配的 Patchy 版本相同。" }
-        },
-        "zh-Hant" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI與Patchy版本相符。Patchy UI的版本號碼一律與其所對應的Patchy版本相同。" }
-        }
-      }
-    },
-    "Patchy UI is a window onto Patchy, the local web server tool made by Joe Workman. Patchy does the real work." : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI is a window onto Patchy, the local web server tool made by Joe Workman. Patchy does the real work." }
-        },
-        "ar" : {
-          "stringUnit" : { "state" : "translated", "value" : "‏Patchy UI نافذة على Patchy، أداة خادم الويب المحلي التي صنعها Joe Workman. وPatchy هو من يقوم بالعمل الفعلي." }
-        },
-        "ca" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI és una finestra oberta a Patchy, l’eina de servidor web local creada per Joe Workman. Qui fa la feina de veritat és Patchy." }
-        },
-        "cs" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI je okno do Patchy, nástroje pro místní webový server od Joea Workmana. Skutečnou práci dělá Patchy." }
-        },
-        "da" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI er et vindue ind til Patchy, værktøjet til lokale webservere lavet af Joe Workman. Det er Patchy, der gør det egentlige arbejde." }
-        },
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI ist ein Fenster zu Patchy, dem Werkzeug für lokale Webserver von Joe Workman. Die eigentliche Arbeit macht Patchy." }
-        },
-        "el" : {
-          "stringUnit" : { "state" : "translated", "value" : "Το Patchy UI είναι ένα παράθυρο στο Patchy, το εργαλείο τοπικού διακομιστή ιστού του Joe Workman. Την πραγματική δουλειά την κάνει το Patchy." }
-        },
-        "es" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI es una ventana a Patchy, la herramienta de servidor web local creada por Joe Workman. El trabajo de verdad lo hace Patchy." }
-        },
-        "fa" : {
-          "stringUnit" : { "state" : "translated", "value" : "‏Patchy UI پنجره‌ای به Patchy است، ابزار سرور وب محلی ساختهٔ Joe Workman. کار اصلی را Patchy انجام می‌دهد." }
-        },
-        "fi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI on ikkuna Patchyyn, Joe Workmanin tekemään paikallisen verkkopalvelimen työkaluun. Varsinaisen työn tekee Patchy." }
-        },
-        "fr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI est une fenêtre sur Patchy, l’outil de serveur web local créé par Joe Workman. C’est Patchy qui fait le vrai travail." }
-        },
-        "he" : {
-          "stringUnit" : { "state" : "translated", "value" : "‏Patchy UI הוא חלון אל Patchy, הכלי להפעלת שרת אינטרנט מקומי שפיתח Joe Workman. Patchy עושה את העבודה האמיתית." }
-        },
-        "hr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI je prozor u Patchy, alat za lokalni web-poslužitelj koji je izradio Joe Workman. Pravi posao obavlja Patchy." }
-        },
-        "hu" : {
-          "stringUnit" : { "state" : "translated", "value" : "A Patchy UI ablakot nyit a Patchyre, Joe Workman helyi webszerver-eszközére. A valódi munkát a Patchy végzi." }
-        },
-        "is" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI er gluggi inn í Patchy, verkfæri frá Joe Workman til að keyra vefi á þessum Mac. Patchy vinnur sjálfa vinnuna." }
-        },
-        "it" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI è una finestra su Patchy, lo strumento per server web locali creato da Joe Workman. Il vero lavoro lo fa Patchy." }
-        },
-        "ja" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UIは、Joe Workmanが作ったローカルWebサーバツールPatchyの窓口です。実際の作業はPatchyが行います。" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI는 Joe Workman이 만든 로컬 웹 서버 도구인 Patchy를 보여 주는 창입니다. 실제 작업은 Patchy가 합니다." }
-        },
-        "nb" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI er et vindu inn til Patchy, verktøyet for lokale nettservere laget av Joe Workman. Det er Patchy som gjør selve jobben." }
-        },
-        "nl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI is een venster op Patchy, het hulpprogramma voor lokale webservers van Joe Workman. Patchy doet het echte werk." }
-        },
-        "nn" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI er eit vindauge mot Patchy, verktøyet for lokal nettserver laga av Joe Workman. Det er Patchy som gjer det verkelege arbeidet." }
-        },
-        "pl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI to okno na Patchy, narzędzie do lokalnego serwera WWW autorstwa Joe Workmana. Właściwą pracę wykonuje Patchy." }
-        },
-        "pt-BR" : {
-          "stringUnit" : { "state" : "translated", "value" : "O Patchy UI é uma janela para o Patchy, a ferramenta de servidor web local criada por Joe Workman. Quem faz o trabalho de verdade é o Patchy." }
-        },
-        "pt-PT" : {
-          "stringUnit" : { "state" : "translated", "value" : "O Patchy UI é uma janela para o Patchy, a ferramenta de servidor web local criada por Joe Workman. É o Patchy que faz o trabalho a sério." }
-        },
-        "ro" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI este o fereastră către Patchy, instrumentul pentru servere web locale creat de Joe Workman. Patchy face munca propriu-zisă." }
-        },
-        "ru" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI — это окно в Patchy, инструмент для локального веб-сервера от Joe Workman. Всю настоящую работу делает Patchy." }
-        },
-        "sk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI je okno do Patchy, nástroja na lokálny webový server, ktorý vytvoril Joe Workman. Skutočnú prácu robí Patchy." }
-        },
-        "sl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI je okno v program Patchy, orodje za lokalni spletni strežnik, ki ga je izdelal Joe Workman. Pravo delo opravi Patchy." }
-        },
-        "sv" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI är ett fönster mot Patchy, verktyget för lokala webbservrar som Joe Workman har gjort. Det är Patchy som gör själva jobbet." }
-        },
-        "th" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI เป็นหน้าต่างสำหรับใช้งาน Patchy เครื่องมือเว็บเซิร์ฟเวอร์ในเครื่องที่สร้างโดย Joe Workman โดย Patchy เป็นผู้ทำงานจริงทั้งหมด" }
-        },
-        "tr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI, Joe Workman’ın yaptığı yerel web sunucusu aracı Patchy’ye açılan bir penceredir. Asıl işi Patchy yapar." }
-        },
-        "uk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI — це вікно до Patchy, інструмента для локального вебсервера від Joe Workman. Усю справжню роботу виконує Patchy." }
-        },
-        "vi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI là cửa sổ để dùng Patchy, công cụ máy chủ web cục bộ do Joe Workman tạo ra. Mọi việc thực sự đều do Patchy làm." }
-        },
-        "zh-HK" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI是Patchy的操作視窗。Patchy是Joe Workman製作的本機網站伺服器工具，實際工作都由Patchy完成。" }
-        },
-        "zh-Hans" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI 是 Patchy 的操作窗口。Patchy 是 Joe Workman 制作的本地网页服务器工具，真正的工作由 Patchy 完成。" }
-        },
-        "zh-Hant" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI是Patchy的操作視窗。Patchy是由Joe Workman製作的本機網頁伺服器工具，實際的工作都由Patchy完成。" }
-        }
-      }
-    },
     "Patchy UI is free and open source, made by Joshua Omilian." : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
@@ -32344,119 +31666,6 @@
         },
         "zh-Hant" : {
           "stringUnit" : { "state" : "translated", "value" : "Patchy UI是免費的開放原始碼軟體，由Joshua Omilian製作。" }
-        }
-      }
-    },
-    "Patchy UI’s version number is always the Patchy release it was made for." : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI’s version number is always the Patchy release it was made for." }
-        },
-        "ar" : {
-          "stringUnit" : { "state" : "translated", "value" : "رقم إصدار Patchy UI هو دائمًا رقم إصدار Patchy الذي صُمِّم له." }
-        },
-        "ca" : {
-          "stringUnit" : { "state" : "translated", "value" : "El número de versió de Patchy UI sempre és la versió de Patchy per a la qual es va fer." }
-        },
-        "cs" : {
-          "stringUnit" : { "state" : "translated", "value" : "Číslo verze Patchy UI vždy odpovídá vydání Patchy, pro které aplikace vznikla." }
-        },
-        "da" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI’s versionsnummer er altid den Patchy-version, den blev lavet til." }
-        },
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Die Versionsnummer von Patchy UI ist immer die Patchy-Version, für die es gemacht wurde." }
-        },
-        "el" : {
-          "stringUnit" : { "state" : "translated", "value" : "Ο αριθμός έκδοσης του Patchy UI είναι πάντα η έκδοση του Patchy για την οποία φτιάχτηκε." }
-        },
-        "es" : {
-          "stringUnit" : { "state" : "translated", "value" : "El número de versión de Patchy UI siempre es la versión de Patchy para la que se hizo." }
-        },
-        "fa" : {
-          "stringUnit" : { "state" : "translated", "value" : "شمارهٔ نسخهٔ Patchy UI همیشه همان نسخه‌ای از Patchy است که برای آن ساخته شده." }
-        },
-        "fi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI:n versionumero on aina sen Patchy-julkaisun numero, jota varten se on tehty." }
-        },
-        "fr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Le numéro de version de Patchy UI est toujours celui de la version de Patchy pour laquelle il a été conçu." }
-        },
-        "he" : {
-          "stringUnit" : { "state" : "translated", "value" : "מספר הגרסה של Patchy UI הוא תמיד גרסת Patchy שעבורה הוא נבנה." }
-        },
-        "hr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Broj verzije aplikacije Patchy UI uvijek je verzija Patchyja za koju je izrađena." }
-        },
-        "hu" : {
-          "stringUnit" : { "state" : "translated", "value" : "A Patchy UI verziószáma mindig annak a Patchy-kiadásnak felel meg, amelyhez készült." }
-        },
-        "is" : {
-          "stringUnit" : { "state" : "translated", "value" : "Útgáfunúmer Patchy UI er alltaf sú útgáfa Patchy sem það var gert fyrir." }
-        },
-        "it" : {
-          "stringUnit" : { "state" : "translated", "value" : "Il numero di versione di Patchy UI è sempre quello della versione di Patchy per cui è stata creata." }
-        },
-        "ja" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UIのバージョン番号は、常に対応するPatchyのリリースと同じです。" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI의 버전 번호는 항상 이 앱이 맞춰 만들어진 Patchy 버전과 같습니다." }
-        },
-        "nb" : {
-          "stringUnit" : { "state" : "translated", "value" : "Versjonsnummeret til Patchy UI er alltid den Patchy-versjonen appen er laget for." }
-        },
-        "nl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Het versienummer van Patchy UI is altijd de Patchy-versie waarvoor het is gemaakt." }
-        },
-        "nn" : {
-          "stringUnit" : { "state" : "translated", "value" : "Versjonsnummeret til Patchy UI er alltid den Patchy-versjonen appen vart laga for." }
-        },
-        "pl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Numer wersji Patchy UI to zawsze wydanie Patchy, dla którego powstał." }
-        },
-        "pt-BR" : {
-          "stringUnit" : { "state" : "translated", "value" : "O número de versão do Patchy UI é sempre o da versão do Patchy para a qual ele foi feito." }
-        },
-        "pt-PT" : {
-          "stringUnit" : { "state" : "translated", "value" : "O número de versão do Patchy UI é sempre a versão do Patchy para a qual foi feito." }
-        },
-        "ro" : {
-          "stringUnit" : { "state" : "translated", "value" : "Numărul versiunii Patchy UI este întotdeauna versiunea Patchy pentru care a fost făcut." }
-        },
-        "ru" : {
-          "stringUnit" : { "state" : "translated", "value" : "Номер версии Patchy UI всегда совпадает с версией Patchy, для которой он создан." }
-        },
-        "sk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Číslo verzie Patchy UI je vždy rovnaké ako vydanie Patchy, pre ktoré bola aplikácia vytvorená." }
-        },
-        "sl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Številka različice Patchy UI je vedno izdaja programa Patchy, za katero je bil narejen." }
-        },
-        "sv" : {
-          "stringUnit" : { "state" : "translated", "value" : "Versionsnumret för Patchy UI är alltid den Patchy-version det gjordes för." }
-        },
-        "th" : {
-          "stringUnit" : { "state" : "translated", "value" : "หมายเลขเวอร์ชั่นของ Patchy UI จะตรงกับรุ่นของ Patchy ที่สร้างมาให้เสมอ" }
-        },
-        "tr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI’ın sürüm numarası her zaman, birlikte çalışmak üzere yapıldığı Patchy sürümünün numarasıdır." }
-        },
-        "uk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Номер версії Patchy UI завжди збігається з випуском Patchy, для якого його створено." }
-        },
-        "vi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Số phiên bản của Patchy UI luôn trùng với bản phát hành Patchy mà ứng dụng được làm ra để dùng cùng." }
-        },
-        "zh-HK" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI的版本號碼一律與它所針對的Patchy版本相同。" }
-        },
-        "zh-Hans" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI 的版本号始终与其所适配的 Patchy 版本相同。" }
-        },
-        "zh-Hant" : {
-          "stringUnit" : { "state" : "translated", "value" : "Patchy UI的版本號碼一律與其所對應的Patchy版本相同。" }
         }
       }
     },
@@ -41118,119 +40327,6 @@
         }
       }
     },
-    "Version %@" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Version %@" }
-        },
-        "ar" : {
-          "stringUnit" : { "state" : "translated", "value" : "الإصدار %@" }
-        },
-        "ca" : {
-          "stringUnit" : { "state" : "translated", "value" : "Versió %@" }
-        },
-        "cs" : {
-          "stringUnit" : { "state" : "translated", "value" : "Verze %@" }
-        },
-        "da" : {
-          "stringUnit" : { "state" : "translated", "value" : "Version %@" }
-        },
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Version %@" }
-        },
-        "el" : {
-          "stringUnit" : { "state" : "translated", "value" : "Έκδοση %@" }
-        },
-        "es" : {
-          "stringUnit" : { "state" : "translated", "value" : "Versión %@" }
-        },
-        "fa" : {
-          "stringUnit" : { "state" : "translated", "value" : "نسخهٔ %@" }
-        },
-        "fi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Versio %@" }
-        },
-        "fr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Version %@" }
-        },
-        "he" : {
-          "stringUnit" : { "state" : "translated", "value" : "גרסה %@" }
-        },
-        "hr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Verzija %@" }
-        },
-        "hu" : {
-          "stringUnit" : { "state" : "translated", "value" : "%@ verzió" }
-        },
-        "is" : {
-          "stringUnit" : { "state" : "translated", "value" : "Útgáfa %@" }
-        },
-        "it" : {
-          "stringUnit" : { "state" : "translated", "value" : "Versione %@" }
-        },
-        "ja" : {
-          "stringUnit" : { "state" : "translated", "value" : "バージョン%@" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "버전 %@" }
-        },
-        "nb" : {
-          "stringUnit" : { "state" : "translated", "value" : "Versjon %@" }
-        },
-        "nl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Versie %@" }
-        },
-        "nn" : {
-          "stringUnit" : { "state" : "translated", "value" : "Versjon %@" }
-        },
-        "pl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Wersja %@" }
-        },
-        "pt-BR" : {
-          "stringUnit" : { "state" : "translated", "value" : "Versão %@" }
-        },
-        "pt-PT" : {
-          "stringUnit" : { "state" : "translated", "value" : "Versão %@" }
-        },
-        "ro" : {
-          "stringUnit" : { "state" : "translated", "value" : "Versiunea %@" }
-        },
-        "ru" : {
-          "stringUnit" : { "state" : "translated", "value" : "Версия %@" }
-        },
-        "sk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Verzia %@" }
-        },
-        "sl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Različica %@" }
-        },
-        "sv" : {
-          "stringUnit" : { "state" : "translated", "value" : "Version %@" }
-        },
-        "th" : {
-          "stringUnit" : { "state" : "translated", "value" : "เวอร์ชั่น %@" }
-        },
-        "tr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Sürüm %@" }
-        },
-        "uk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Версія %@" }
-        },
-        "vi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Phiên bản %@" }
-        },
-        "zh-HK" : {
-          "stringUnit" : { "state" : "translated", "value" : "版本%@" }
-        },
-        "zh-Hans" : {
-          "stringUnit" : { "state" : "translated", "value" : "版本 %@" }
-        },
-        "zh-Hant" : {
-          "stringUnit" : { "state" : "translated", "value" : "版本%@" }
-        }
-      }
-    },
     "Visits" : {
       "comment" : "Tab in a site's details showing its access log.",
       "extractionState" : "extracted_with_value",
@@ -42475,6 +41571,232 @@
         },
         "zh-Hant" : {
           "stringUnit" : { "state" : "translated", "value" : "來自Patchy的技術詳細資訊（英文）。" }
+        }
+      }
+    },
+    "About Patchy UI" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "About Patchy UI" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "حول Patchy UI" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sobre el Patchy UI" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "O aplikaci Patchy UI" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Om Patchy UI" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Über Patchy UI" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Πληροφορίες για το Patchy UI" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Acerca de Patchy UI" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "درباره Patchy UI" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tietoja: Patchy UI" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "À propos de Patchy UI" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "מידע על Patchy UI" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Više o aplikaciji Patchy UI" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "A Patchy UI névjegye" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Um Patchy UI" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Informazioni su Patchy UI" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UIについて" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI에 관하여" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Om Patchy UI" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Over Patchy UI" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Om Patchy UI" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI – informacje" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sobre o Patchy UI" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Acerca do Patchy UI" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Despre Patchy UI" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "О приложении Patchy UI" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "O aplikácii Patchy UI" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "O aplikaciji Patchy UI" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Om Patchy UI" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "เกี่ยวกับ Patchy UI" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI Hakkında" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Про Patchy UI" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Giới thiệu về Patchy UI" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "關於 Patchy UI" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "关于 Patchy UI" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "關於 Patchy UI" }
+        }
+      }
+    },
+    "Patchy is made by Joe Workman." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy is made by Joe Workman." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "‏Patchy من صنع Joe Workman." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy és obra de Joe Workman." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy vytvořil Joe Workman." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy er lavet af Joe Workman." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy stammt von Joe Workman." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Το Patchy είναι δημιουργία του Joe Workman." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy es obra de Joe Workman." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "‏Patchy ساختهٔ Joe Workman است." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchyn on tehnyt Joe Workman." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy est l’œuvre de Joe Workman." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "‏Patchy פותח על ידי Joe Workman." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy je izradio Joe Workman." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "A Patchyt Joe Workman készítette." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy er gert af Joe Workman." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy è realizzato da Joe Workman." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "PatchyはJoe Workmanが作りました。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy는 Joe Workman이 만들었습니다." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy er laget av Joe Workman." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy is gemaakt door Joe Workman." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy er laga av Joe Workman." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy jest dziełem Joe Workmana." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "O Patchy é feito por Joe Workman." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "O Patchy é feito por Joe Workman." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy este creat de Joe Workman." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Автор Patchy — Joe Workman." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy vytvoril Joe Workman." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy je ustvaril Joe Workman." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy är skapat av Joe Workman." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy สร้างโดย Joe Workman" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy, Joe Workman tarafından yapılmıştır." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Автор Patchy — Joe Workman." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy do Joe Workman tạo ra." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy 由 Joe Workman 開發。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy 由 Joe Workman 开发。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy 由 Joe Workman 開發。" }
         }
       }
     }

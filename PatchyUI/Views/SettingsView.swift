@@ -14,8 +14,6 @@ struct SettingsView: View {
                 .tabItem { Label("Certificates", systemImage: "lock") }
             TrustSettings()
                 .tabItem { Label("Password-Free", systemImage: "key") }
-            AboutSettings()
-                .tabItem { Label("About", systemImage: "info.circle") }
         }
         .frame(width: 500)
     }
@@ -49,6 +47,7 @@ private struct BusyRow: View {
 }
 
 struct GeneralSettings: View {
+    @Environment(AppModel.self) private var model
     @AppStorage(AppDelegate.showDockIconKey) private var showDockIcon = true
     @State private var openAtLogin = SMAppService.mainApp.status == .enabled
     @State private var loginError: String?
@@ -70,6 +69,10 @@ struct GeneralSettings: View {
             Toggle("Show Patchy UI in the Dock", isOn: $showDockIcon)
                 .onChange(of: showDockIcon) { AppDelegate.applyDockIconPreference() }
             SettingsNote("The menu bar item stays either way. With the Dock icon off, open the window from the menu bar item.")
+
+            Section {
+                Button("Check for Updates…") { model.updater.checkForUpdates() }
+            }
         }
         .formStyle(.grouped)
     }
@@ -180,69 +183,6 @@ struct TrustSettings: View {
                 if !model.trustEnabled {
                     Button(model.trustIsUpdate ? "Update…" : "Set Up…") { model.openTrustSetup() }
                         .disabled(model.isBusy || model.phase != .ready)
-                }
-            }
-        }
-        .formStyle(.grouped)
-    }
-}
-
-struct AboutSettings: View {
-    @Environment(AppModel.self) private var model
-
-    private var appVersion: String {
-        Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "–"
-    }
-
-    /// Homebrew keeps each formula under a folder named for its version.
-    private var serverVersion: String? {
-        guard let environment = model.environment else { return nil }
-        let link = environment.optDir.appending(path: "httpd")
-        guard FileManager.default.fileExists(atPath: link.path) else { return nil }
-        return link.resolvingSymlinksInPath().lastPathComponent.split(separator: "_").first.map(String.init)
-    }
-
-    var body: some View {
-        let activePHP = model.snapshot.installedPHP.first { $0.version == model.snapshot.activePHP }
-        Form {
-            Section {
-                HStack(spacing: 14) {
-                    RackLogo(size: 48)
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("Patchy UI").font(.system(size: 15, weight: .semibold))
-                        SettingsNote("Version \(appVersion)")
-                    }
-                }
-                LabeledContent("Patchy", value: model.snapshot.patchyVersion ?? String(localized: "Not installed"))
-                switch model.compatibility {
-                case .matched:
-                    SettingsNote("Patchy UI and Patchy match. Patchy UI’s version number is always the Patchy release it was made for.")
-                case .patchyNewer(_, let supported):
-                    SettingsNote("This Patchy UI was made for Patchy \(supported). Patchy is newer, so some things may not work until Patchy UI is updated.")
-                case .patchyOlder(_, let supported):
-                    SettingsNote("This Patchy UI was made for Patchy \(supported). Patchy is older; update it in Terminal with: \(AppModel.patchyUpgradeCommand)")
-                case .unknown:
-                    SettingsNote("Patchy UI’s version number is always the Patchy release it was made for.")
-                }
-                Button("Check for Updates…") { model.updater.checkForUpdates() }
-                LabeledContent("Server (Apache)", value: serverVersion ?? "–")
-                LabeledContent("PHP", value: activePHP?.fullVersion ?? model.snapshot.activePHP ?? "–")
-            }
-            Section {
-                SettingsNote("Patchy UI is free and open source, made by Joshua Omilian.")
-                Link("joshuaomilian.ca", destination: URL(string: "https://joshuaomilian.ca")!)
-                    .foregroundStyle(Theme.link)
-                Link("Patchy UI on GitHub", destination: URL(string: "https://github.com/jeso87/Patchy-UI")!)
-                    .foregroundStyle(Theme.link)
-            }
-            Section {
-                SettingsNote("Patchy UI is a window onto Patchy, the local web server tool made by Joe Workman. Patchy does the real work.")
-                Link("Patchy on GitHub", destination: URL(string: "https://github.com/joeworkman/patchy")!)
-                    .foregroundStyle(Theme.link)
-                if let environment = model.environment {
-                    Button("Reveal Server Error Log in Finder") {
-                        NSWorkspace.shared.activateFileViewerSelecting([environment.serverErrorLog])
-                    }
                 }
             }
         }
