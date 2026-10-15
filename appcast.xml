@@ -3,6 +3,27 @@
     <channel>
         <title>Patchy UI</title>
         <item>
+            <title>1.2.1.5</title>
+            <pubDate>Thu, 15 Oct 2026 11:27:20 -0400</pubDate>
+            <sparkle:version>6</sparkle:version>
+            <sparkle:shortVersionString>1.2.1.5</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="markdown"><![CDATA[### New
+
+- Patchy UI now speaks 36 languages. It follows the language set for it in System Settings › General › Language & Region. Patchy's own messages, under Show Details, stay in English.
+- **About Patchy UI** in the Patchy UI menu now shows the Patchy, Apache and PHP versions on your Mac. **Check for Updates…** is also in Settings › General.
+
+### Fixes
+
+- Choosing **Not Now** when offered password-free mode no longer cancels what you were doing. The change goes ahead and asks for your Mac password.
+- Dragging a site onto a group in the sidebar now works anywhere on the group, not only on its header.
+- In a narrow window, the buttons above a site no longer cut off their labels.
+
+Still made for **Patchy 1.2.1**.
+]]></description>
+            <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.2.1.5/PatchyUI-1.2.1.5.dmg" length="2436658" type="application/octet-stream" sparkle:edSignature="Z4QVYTcxW9GMV0ljDQBXCRVuZ5XzY0dsTsTOPhyuRalvxDMomllWlohIC0ifqDd7lYOmn19/k1MnIKBkInEkBg=="/>
+        </item>
+        <item>
             <title>1.2.1.4</title>
             <pubDate>Wed, 14 Oct 2026 11:29:16 -0400</pubDate>
             <sparkle:version>5</sparkle:version>
@@ -32,21 +53,6 @@ Still made for **Patchy 1.2.1**.
 Still made for **Patchy 1.2.1**.
 ]]></description>
             <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.2.1.3/PatchyUI-1.2.1.3.dmg" length="1983878" type="application/octet-stream" sparkle:edSignature="fiRMCdZXNw+r5FPkQuAIxp0pLHDLhQuqZJ4URN3Bwwhsx9WQ2hy0z/y48TzHMVsLirG8IOnpIxoOR59r1cPCCw=="/>
-        </item>
-        <item>
-            <title>1.2.1.2</title>
-            <pubDate>Fri, 09 Oct 2026 10:59:15 -0400</pubDate>
-            <sparkle:version>3</sparkle:version>
-            <sparkle:shortVersionString>1.2.1.2</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### About and links
-
-Settings › About now links to the Patchy UI project on GitHub and to its
-author, Joshua Omilian.
-
-Still made for **Patchy 1.2.1**.
-]]></description>
-            <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.2.1.2/PatchyUI-1.2.1.2.dmg" length="1982286" type="application/octet-stream" sparkle:edSignature="ItQRTHT5CkN2npmbkE/2zEOW1DiUMSElRiZCVHuKa4vJ0lWck5ujyUnRoGWXS1gAq+ecHjE5amks77OpXmLuCw=="/>
         </item>
     </channel>
 </rss>
