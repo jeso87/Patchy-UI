@@ -30,7 +30,9 @@ Usage:
     python3 scripts/merge-translations.py [--check]
 
 Options:
-    --check   Report only; never writes the catalog. A language missing
+    --check   Report only; never writes the catalog. It also fails (exit 5)
+              when the catalog no longer matches the language files, i.e.
+              a language file was edited and never merged. A language missing
               catalog keys is only a FAILURE under --check (exit 3) — the
               expensive direction, since it means a language sits in the
               catalog looking present and silently falls back to English
@@ -117,6 +119,7 @@ CLEAN = 0
 EXTRA_KEYS = 1
 MISSING_KEYS = 3
 INTERNAL_ERROR = 4
+CATALOG_OUT_OF_DATE = 5
 
 
 def die_internal(message: str) -> NoReturn:
@@ -471,6 +474,13 @@ def main() -> None:
 
     if args.check and any_missing:
         sys.exit(MISSING_KEYS)
+    if args.check and text != load_catalog_text():
+        print(
+            "The catalog doesn't match the translation files: a language "
+            "file was changed and not merged. Run "
+            "python3 scripts/merge-translations.py"
+        )
+        sys.exit(CATALOG_OUT_OF_DATE)
     if any_extra:
         sys.exit(EXTRA_KEYS)
     sys.exit(CLEAN)
