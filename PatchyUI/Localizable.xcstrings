@@ -41799,6 +41799,3185 @@
           "stringUnit" : { "state" : "translated", "value" : "Patchy 由 Joe Workman 開發。" }
         }
       }
+    },
+    "Anyone with this address and password can see this site until you stop sharing." : {
+      "comment" : "Under a shared site's address and password.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Anyone with this address and password can see this site until you stop sharing." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "يمكن لأي شخص لديه هذا العنوان وكلمة السر رؤية هذا الموقع حتى توقف المشاركة." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Qualsevol persona amb aquesta adreça i la contrasenya pot veure aquest lloc web fins que deixis de compartir-lo." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kdokoli s touto adresou a heslem může tento web vidět, dokud sdílení neukončíte." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Alle med denne adresse og adgangskoden kan se dette websted, indtil du stopper deling." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Alle, die diese Adresse und das Passwort haben, können diese Website sehen, bis du das Teilen beendest." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Όποιος έχει αυτήν τη διεύθυνση και τον κωδικό μπορεί να δει αυτόν τον ιστότοπο μέχρι να διακόψετε την κοινή χρήση." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Cualquiera con esta dirección y la contraseña puede ver este sitio hasta que dejes de compartirlo." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "هر کسی که این نشانی و رمز را داشته باشد، تا وقتی اشتراک‌گذاری را متوقف نکرده‌اید می‌تواند این سایت را ببیند." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kuka tahansa, jolla on tämä osoite ja salasana, voi nähdä tämän sivuston, kunnes lopetat jakamisen." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Toute personne disposant de cette adresse et du mot de passe peut voir ce site tant que vous ne cessez pas le partage." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "כל מי שיש לו את הכתובת והסיסמה יכול לראות את האתר עד שיופסק השיתוף." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Svatko s ovom adresom i lozinkom može vidjeti ovu web-stranicu dok ne prestanete dijeliti." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bárki, akinél megvan ez a cím és a jelszó, láthatja ezt a webhelyet, amíg le nem állítja a megosztást." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Allir sem hafa þetta veffang og lykilorðið geta séð þennan vef þar til þú hættir að deila." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Chiunque abbia questo indirizzo e la password può vedere questo sito finché non interrompi la condivisione." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "このアドレスとパスワードを知っている人は、共有を停止するまでこのサイトを見ることができます。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "이 주소와 암호를 아는 사람은 누구나 공유를 중단할 때까지 이 사이트를 볼 수 있습니다." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Alle med denne adressen og passordet kan se dette nettstedet til du slutter å dele." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Iedereen met dit adres en het wachtwoord kan deze website zien tot je stopt met delen." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Alle med denne adressa og passordet kan sjå denne nettstaden til du sluttar å dele." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Każdy, kto zna ten adres i hasło, może oglądać tę witrynę, dopóki nie zatrzymasz udostępniania." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Qualquer pessoa com este endereço e a senha pode ver este site até você parar de compartilhar." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Qualquer pessoa com este endereço e a palavra-passe pode ver este site até deixar de o partilhar." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Oricine are această adresă și parola poate vedea acest site până când opriți partajarea." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Любой, у кого есть этот адрес и пароль, может открыть этот сайт, пока вы не остановите общий доступ." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ktokoľvek s touto adresou a heslom môže tento web vidieť, kým zdieľanie neukončíte." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kdor koli ima ta naslov in geslo, lahko vidi to spletno mesto, dokler ne prenehate deliti." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Alla som har den här adressen och lösenordet kan se den här webbplatsen tills du slutar dela." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "ทุกคนที่มีที่อยู่และรหัสผ่านนี้จะดูเว็บไซต์นี้ได้จนกว่าคุณจะหยุดแชร์" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bu adrese ve parolaya sahip olan herkes, siz paylaşımı durdurana kadar bu siteyi görebilir." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Будь-хто з цією адресою та паролем може переглядати цей сайт, доки ви не зупините спільний доступ." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bất kỳ ai có địa chỉ và mật khẩu này đều xem được trang web này cho đến khi bạn dừng chia sẻ." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "任何擁有此網址和密碼的人都可以查看這個網站，直至你停止分享。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "任何拥有此地址和密码的人都可以查看此网站，直到你停止共享。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "任何擁有此網址和密碼的人都可以查看此網站，直到你停止分享。" }
+        }
+      }
+    },
+    "Anyone with this address can see this site until you stop sharing." : {
+      "comment" : "Under a shared site's address when it needs no password.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Anyone with this address can see this site until you stop sharing." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "يمكن لأي شخص لديه هذا العنوان رؤية هذا الموقع حتى توقف المشاركة." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Qualsevol persona amb aquesta adreça pot veure aquest lloc web fins que deixis de compartir-lo." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kdokoli s touto adresou může tento web vidět, dokud sdílení neukončíte." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Alle med denne adresse kan se dette websted, indtil du stopper deling." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Alle, die diese Adresse haben, können diese Website sehen, bis du das Teilen beendest." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Όποιος έχει αυτήν τη διεύθυνση μπορεί να δει αυτόν τον ιστότοπο μέχρι να διακόψετε την κοινή χρήση." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Cualquiera con esta dirección puede ver este sitio hasta que dejes de compartirlo." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "هر کسی که این نشانی را داشته باشد، تا وقتی اشتراک‌گذاری را متوقف نکرده‌اید می‌تواند این سایت را ببیند." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kuka tahansa, jolla on tämä osoite, voi nähdä tämän sivuston, kunnes lopetat jakamisen." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Toute personne disposant de cette adresse peut voir ce site tant que vous ne cessez pas le partage." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "כל מי שיש לו את הכתובת יכול לראות את האתר עד שיופסק השיתוף." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Svatko s ovom adresom može vidjeti ovu web-stranicu dok ne prestanete dijeliti." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bárki, akinél megvan ez a cím, láthatja ezt a webhelyet, amíg le nem állítja a megosztást." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Allir sem hafa þetta veffang geta séð þennan vef þar til þú hættir að deila." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Chiunque abbia questo indirizzo può vedere questo sito finché non interrompi la condivisione." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "このアドレスを知っている人は、共有を停止するまでこのサイトを見ることができます。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "이 주소를 아는 사람은 누구나 공유를 중단할 때까지 이 사이트를 볼 수 있습니다." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Alle med denne adressen kan se dette nettstedet til du slutter å dele." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Iedereen met dit adres kan deze website zien tot je stopt met delen." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Alle med denne adressa kan sjå denne nettstaden til du sluttar å dele." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Każdy, kto zna ten adres, może oglądać tę witrynę, dopóki nie zatrzymasz udostępniania." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Qualquer pessoa com este endereço pode ver este site até você parar de compartilhar." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Qualquer pessoa com este endereço pode ver este site até deixar de o partilhar." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Oricine are această adresă poate vedea acest site până când opriți partajarea." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Любой, у кого есть этот адрес, может открыть этот сайт, пока вы не остановите общий доступ." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ktokoľvek s touto adresou môže tento web vidieť, kým zdieľanie neukončíte." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kdor koli ima ta naslov, lahko vidi to spletno mesto, dokler ne prenehate deliti." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Alla som har den här adressen kan se den här webbplatsen tills du slutar dela." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "ทุกคนที่มีที่อยู่นี้จะดูเว็บไซต์นี้ได้จนกว่าคุณจะหยุดแชร์" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bu adrese sahip olan herkes, siz paylaşımı durdurana kadar bu siteyi görebilir." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Будь-хто з цією адресою може переглядати цей сайт, доки ви не зупините спільний доступ." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bất kỳ ai có địa chỉ này đều xem được trang web này cho đến khi bạn dừng chia sẻ." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "任何擁有此網址的人都可以查看這個網站，直至你停止分享。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "任何拥有此地址的人都可以查看此网站，直到你停止共享。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "任何擁有此網址的人都可以查看此網站，直到你停止分享。" }
+        }
+      }
+    },
+    "Anyone with this link can see this site until you stop sharing." : {
+      "comment" : "Under a shared site's temporary link.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Anyone with this link can see this site until you stop sharing." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "يمكن لأي شخص لديه هذا الرابط رؤية هذا الموقع حتى توقف المشاركة." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Qualsevol persona amb aquest enllaç pot veure aquest lloc web fins que deixis de compartir-lo." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kdokoli s tímto odkazem může tento web vidět, dokud sdílení neukončíte." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Alle med dette link kan se dette websted, indtil du stopper deling." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Alle, die diesen Link haben, können diese Website sehen, bis du das Teilen beendest." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Όποιος έχει αυτόν τον σύνδεσμο μπορεί να δει αυτόν τον ιστότοπο μέχρι να διακόψετε την κοινή χρήση." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Cualquiera con este enlace puede ver este sitio hasta que dejes de compartirlo." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "هر کسی که این پیوند را داشته باشد، تا وقتی اشتراک‌گذاری را متوقف نکرده‌اید می‌تواند این سایت را ببیند." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kuka tahansa, jolla on tämä linkki, voi nähdä tämän sivuston, kunnes lopetat jakamisen." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Toute personne disposant de ce lien peut voir ce site tant que vous ne cessez pas le partage." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "כל מי שיש לו את הקישור יכול לראות את האתר עד שיופסק השיתוף." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Svatko s ovom poveznicom može vidjeti ovu web-stranicu dok ne prestanete dijeliti." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bárki, akinél megvan ez a link, láthatja ezt a webhelyet, amíg le nem állítja a megosztást." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Allir sem hafa þennan tengil geta séð þennan vef þar til þú hættir að deila." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Chiunque abbia questo link può vedere questo sito finché non interrompi la condivisione." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "このリンクを知っている人は、共有を停止するまでこのサイトを見ることができます。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "이 링크를 아는 사람은 누구나 공유를 중단할 때까지 이 사이트를 볼 수 있습니다." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Alle med denne lenken kan se dette nettstedet til du slutter å dele." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Iedereen met deze link kan deze website zien tot je stopt met delen." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Alle med denne lenkja kan sjå denne nettstaden til du sluttar å dele." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Każdy, kto ma ten link, może oglądać tę witrynę, dopóki nie zatrzymasz udostępniania." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Qualquer pessoa com este link pode ver este site até você parar de compartilhar." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Qualquer pessoa com esta ligação pode ver este site até deixar de o partilhar." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Oricine are acest link poate vedea acest site până când opriți partajarea." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Любой, у кого есть эта ссылка, может открыть этот сайт, пока вы не остановите общий доступ." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ktokoľvek s týmto odkazom môže tento web vidieť, kým zdieľanie neukončíte." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kdor koli ima to povezavo, lahko vidi to spletno mesto, dokler ne prenehate deliti." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Alla som har den här länken kan se den här webbplatsen tills du slutar dela." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "ทุกคนที่มีลิงก์นี้จะดูเว็บไซต์นี้ได้จนกว่าคุณจะหยุดแชร์" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bu bağlantıya sahip olan herkes, siz paylaşımı durdurana kadar bu siteyi görebilir." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Будь-хто з цим посиланням може переглядати цей сайт, доки ви не зупините спільний доступ." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bất kỳ ai có liên kết này đều xem được trang web này cho đến khi bạn dừng chia sẻ." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "任何擁有此連結的人都可以查看這個網站，直至你停止分享。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "任何拥有此链接的人都可以查看此网站，直到你停止共享。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "任何擁有此連結的人都可以查看此網站，直到你停止分享。" }
+        }
+      }
+    },
+    "Copy Address and Password" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Copy Address and Password" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "نسخ العنوان وكلمة السر" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Copia l’adreça i la contrasenya" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zkopírovat adresu a heslo" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopier adresse og adgangskode" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Adresse und Passwort kopieren" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Αντιγραφή διεύθυνσης και κωδικού" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Copiar dirección y contraseña" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "کپی نشانی و رمز" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopioi osoite ja salasana" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Copier l’adresse et le mot de passe" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "העתקת הכתובת והסיסמה" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopiraj adresu i lozinku" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Cím és jelszó másolása" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Afrita veffang og lykilorð" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Copia indirizzo e password" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "アドレスとパスワードをコピー" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "주소 및 암호 복사하기" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopier adresse og passord" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopieer adres en wachtwoord" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopier adressa og passordet" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopiuj adres i hasło" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Copiar Endereço e Senha" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Copiar endereço e palavra-passe" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Copiați adresa și parola" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Скопировать адрес и пароль" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopírovať adresu a heslo" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopiraj naslov in geslo" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopiera adress och lösenord" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "คัดลอกที่อยู่และรหัสผ่าน" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Adresi ve Parolayı Kopyala" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Скопіювати адресу й пароль" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sao chép địa chỉ và mật khẩu" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "複製網址和密碼" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "拷贝地址和密码" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "拷貝網址和密碼" }
+        }
+      }
+    },
+    "Copy Link" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Copy Link" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "نسخ الرابط" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Copia l’enllaç" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zkopírovat odkaz" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopier link" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Link kopieren" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Αντιγραφή συνδέσμου" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Copiar enlace" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "کپی پیوند" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopioi linkki" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Copier le lien" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "העתקת הקישור" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopiraj poveznicu" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Link másolása" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Afrita tengil" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Copia link" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "リンクをコピー" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "링크 복사하기" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopier lenke" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopieer link" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopier lenkja" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopiuj link" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Copiar Link" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Copiar ligação" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Copiați linkul" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Скопировать ссылку" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopírovať odkaz" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopiraj povezavo" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kopiera länk" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "คัดลอกลิงก์" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bağlantıyı Kopyala" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Скопіювати посилання" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sao chép liên kết" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "複製連結" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "拷贝链接" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "拷貝連結" }
+        }
+      }
+    },
+    "Couldn’t get a public link. Check your internet connection and try again." : {
+      "comment" : "Shown when sharing a site failed.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Couldn’t get a public link. Check your internet connection and try again." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "تعذّر الحصول على رابط عام. تحقّق من اتصالك بالإنترنت وحاول مرة أخرى." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "No s’ha pogut obtenir un enllaç públic. Comprova la connexió a internet i torna-ho a provar." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Veřejný odkaz se nepodařilo získat. Zkontrolujte připojení k internetu a zkuste to znovu." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Der kunne ikke oprettes et offentligt link. Tjek din internetforbindelse, og prøv igen." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Es konnte kein öffentlicher Link erstellt werden. Prüfe deine Internetverbindung und versuche es erneut." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Δεν ήταν δυνατή η λήψη δημόσιου συνδέσμου. Ελέγξτε τη σύνδεσή σας στο διαδίκτυο και δοκιμάστε ξανά." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "No se ha podido obtener un enlace público. Comprueba tu conexión a internet y vuelve a intentarlo." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "دریافت پیوند عمومی ممکن نشد. اتصال اینترنت خود را بررسی کنید و دوباره امتحان کنید." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Julkista linkkiä ei saatu. Tarkista internetyhteys ja yritä uudelleen." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Impossible d’obtenir un lien public. Vérifiez votre connexion à Internet et réessayez." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "לא ניתן היה לקבל קישור ציבורי. יש לבדוק את החיבור לאינטרנט ולנסות שוב." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nije moguće dobiti javnu poveznicu. Provjerite internetsku vezu i pokušajte ponovno." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nem sikerült nyilvános linket kérni. Ellenőrizze az internetkapcsolatot, és próbálja újra." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ekki tókst að fá opinberan tengil. Athugaðu nettenginguna og reyndu aftur." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Impossibile ottenere un link pubblico. Controlla la connessione a Internet e riprova." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "公開リンクを取得できませんでした。インターネット接続を確認して、もう一度お試しください。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "공개 링크를 받을 수 없습니다. 인터넷 연결을 확인한 다음 다시 시도하십시오." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kunne ikke hente en offentlig lenke. Sjekk internettforbindelsen og prøv igjen." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kan geen openbare link krijgen. Controleer je internetverbinding en probeer het opnieuw." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kunne ikkje hente ei offentleg lenkje. Sjekk internettsambandet og prøv igjen." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nie udało się uzyskać linku publicznego. Sprawdź połączenie z internetem i spróbuj ponownie." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Não foi possível obter um link público. Verifique sua conexão com a internet e tente novamente." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Não foi possível obter uma ligação pública. Verifique a ligação à internet e tente novamente." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nu s-a putut obține un link public. Verificați conexiunea la internet și încercați din nou." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Не удалось получить публичную ссылку. Проверьте подключение к интернету и повторите попытку." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Verejný odkaz sa nepodarilo získať. Skontrolujte pripojenie na internet a skúste to znova." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Javne povezave ni bilo mogoče dobiti. Preverite internetno povezavo in poskusite znova." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Det gick inte att få en offentlig länk. Kontrollera internetanslutningen och försök igen." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "รับลิงก์สาธารณะไม่ได้ ตรวจสอบการเชื่อมต่ออินเทอร์เน็ตแล้วลองอีกครั้ง" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Herkese açık bağlantı alınamadı. İnternet bağlantınızı denetleyip yeniden deneyin." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Не вдалося отримати публічне посилання. Перевірте підключення до інтернету й повторіть спробу." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Không thể lấy liên kết công khai. Hãy kiểm tra kết nối internet rồi thử lại." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "無法取得公開連結。請檢查你的互聯網連線，然後再試一次。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "无法获取公开链接。请检查你的互联网连接，然后重试。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "無法取得公開連結。請檢查你的網際網路連線，然後再試一次。" }
+        }
+      }
+    },
+    "Couldn’t install cloudflared" : {
+      "comment" : "Title of an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Couldn’t install cloudflared" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "تعذّر تثبيت cloudflared" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "No s’ha pogut instal·lar cloudflared" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "cloudflared se nepodařilo nainstalovat" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "cloudflared kunne ikke installeres" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "cloudflared konnte nicht installiert werden" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Δεν ήταν δυνατή η εγκατάσταση του cloudflared" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "No se ha podido instalar cloudflared" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "نصب cloudflared ممکن نشد" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "cloudflaredin asentaminen epäonnistui" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Impossible d’installer cloudflared" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "לא ניתן היה להתקין את cloudflared" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nije moguće instalirati cloudflared" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nem sikerült telepíteni a cloudflared eszközt" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ekki tókst að setja upp cloudflared" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Impossibile installare cloudflared" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "cloudflaredをインストールできませんでした" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "cloudflared를 설치할 수 없음" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kunne ikke installere cloudflared" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kan cloudflared niet installeren" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kunne ikkje installere cloudflared" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nie udało się zainstalować cloudflared" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Não foi possível instalar o cloudflared" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Não foi possível instalar o cloudflared" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nu s-a putut instala cloudflared" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Не удалось установить cloudflared" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "cloudflared sa nepodarilo nainštalovať" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Programa cloudflared ni bilo mogoče namestiti" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Det gick inte att installera cloudflared" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "ติดตั้ง cloudflared ไม่ได้" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "cloudflared yüklenemedi" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Не вдалося встановити cloudflared" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Không thể cài đặt cloudflared" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "無法安裝cloudflared" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "无法安装 cloudflared" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "無法安裝cloudflared" }
+        }
+      }
+    },
+    "Couldn’t share %@" : {
+      "comment" : "Title of an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Couldn’t share %@" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "تعذّرت مشاركة %@" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "No s’ha pogut compartir %@" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Web %@ se nepodařilo sdílet" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ kunne ikke deles" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ konnte nicht geteilt werden" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Δεν ήταν δυνατή η κοινή χρήση του %@" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "No se ha podido compartir %@" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "اشتراک‌گذاری %@ ممکن نشد" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sivuston %@ jakaminen epäonnistui" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Impossible de partager %@" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "לא ניתן היה לשתף את %@" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nije moguće podijeliti %@" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nem sikerült megosztani: %@" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ekki tókst að deila %@" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Impossibile condividere %@" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@を共有できませんでした" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ 사이트를 공유할 수 없음" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kunne ikke dele %@" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kan %@ niet delen" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kunne ikkje dele %@" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nie udało się udostępnić witryny %@" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Não foi possível compartilhar %@" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Não foi possível partilhar %@" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nu s-a putut partaja %@" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Не удалось открыть общий доступ к %@" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ sa nepodarilo zdieľať" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Spletnega mesta %@ ni bilo mogoče deliti" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Det gick inte att dela %@" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "แชร์ %@ ไม่ได้" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ paylaşılamadı" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Не вдалося надати спільний доступ до %@" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Không thể chia sẻ %@" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "無法分享%@" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "无法共享 %@" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "無法分享%@" }
+        }
+      }
+    },
+    "Getting a public link…" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Getting a public link…" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "جارٍ الحصول على رابط عام…" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "S’està obtenint un enllaç públic…" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Získává se veřejný odkaz…" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Opretter et offentligt link…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Öffentlicher Link wird erstellt …" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Λήψη δημόσιου συνδέσμου…" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Obteniendo un enlace público…" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "در حال دریافت پیوند عمومی…" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Haetaan julkista linkkiä…" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Obtention d’un lien public…" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "מתקבל קישור ציבורי…" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dohvaćanje javne poveznice…" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nyilvános link kérése…" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sæki opinberan tengil…" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Creazione del link pubblico…" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "公開リンクを取得中…" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "공개 링크를 받는 중…" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Henter en offentlig lenke…" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Openbare link ophalen…" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Hentar ei offentleg lenkje…" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Uzyskiwanie linku publicznego…" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Obtendo um link público…" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "A obter uma ligação pública…" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Se obține un link public…" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Получение публичной ссылки…" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Získava sa verejný odkaz…" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Pridobivanje javne povezave …" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Hämtar en offentlig länk…" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "กำลังรับลิงก์สาธารณะ…" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Herkese açık bağlantı alınıyor…" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Отримання публічного посилання…" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Đang lấy liên kết công khai…" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "正在取得公開連結⋯" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "正在获取公开链接…" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "正在取得公開連結⋯" }
+        }
+      }
+    },
+    "Install" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Install" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "تثبيت" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Instal·la" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Instalovat" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Installer" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Installieren" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Εγκατάσταση" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Instalar" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "نصب" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Asenna" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Installer" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "התקנה" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Instaliraj" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Telepítés" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Setja upp" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Installa" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "インストール" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "설치" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Installer" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Installeer" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Installer" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zainstaluj" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Instalar" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Instalar" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Instalați" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Установить" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Inštalovať" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Namesti" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Installera" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "ติดตั้ง" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Yükle" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Встановити" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Cài đặt" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "安裝" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "安装" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "安裝" }
+        }
+      }
+    },
+    "Installing cloudflared…" : {
+      "comment" : "Progress step shown while a change runs.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Installing cloudflared…" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "جارٍ تثبيت cloudflared…" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "S’està instal·lant cloudflared…" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Instaluje se cloudflared…" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Installerer cloudflared…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "cloudflared wird installiert …" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Εγκατάσταση του cloudflared…" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Instalando cloudflared…" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "در حال نصب cloudflared…" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Asennetaan cloudflaredia…" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Installation de cloudflared…" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "מתבצעת התקנה של cloudflared…" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Instaliranje alata cloudflared…" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "A cloudflared telepítése…" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Set upp cloudflared…" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Installazione di cloudflared…" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "cloudflaredをインストール中…" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "cloudflared 설치 중…" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Installerer cloudflared…" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "cloudflared installeren…" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Installerer cloudflared…" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Instalowanie cloudflared…" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Instalando o cloudflared…" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "A instalar o cloudflared…" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Se instalează cloudflared…" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Установка cloudflared…" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Inštaluje sa cloudflared…" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nameščanje programa cloudflared …" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Installerar cloudflared…" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "กำลังติดตั้ง cloudflared…" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "cloudflared yükleniyor…" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Встановлення cloudflared…" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Đang cài đặt cloudflared…" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "正在安裝cloudflared⋯" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "正在安装 cloudflared…" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "正在安裝cloudflared⋯" }
+        }
+      }
+    },
+    "New links can take a few seconds to start working." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "New links can take a few seconds to start working." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "قد تستغرق الروابط الجديدة بضع ثوانٍ لتبدأ بالعمل." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Els enllaços nous poden trigar uns segons a començar a funcionar." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Novým odkazům může trvat několik sekund, než začnou fungovat." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nye links kan være et par sekunder om at begynde at virke." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Neue Links können ein paar Sekunden brauchen, bis sie funktionieren." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Οι νέοι σύνδεσμοι μπορεί να χρειαστούν λίγα δευτερόλεπτα για να λειτουργήσουν." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Los enlaces nuevos pueden tardar unos segundos en empezar a funcionar." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "ممکن است چند ثانیه طول بکشد تا پیوندهای تازه کار کنند." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Uusien linkkien toimiminen voi kestää muutaman sekunnin." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Les nouveaux liens peuvent mettre quelques secondes à fonctionner." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "ייתכן שיעברו כמה שניות עד שקישורים חדשים יתחילו לעבוד." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Novim poveznicama može trebati nekoliko sekundi da prorade." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Az új linkek működéséhez néhány másodperc is kellhet." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nýir tenglar geta þurft nokkrar sekúndur áður en þeir virka." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "I nuovi link possono impiegare qualche secondo per iniziare a funzionare." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "新しいリンクが使えるようになるまで数秒かかることがあります。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "새 링크가 작동하기까지 몇 초 정도 걸릴 수 있습니다." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nye lenker kan bruke noen sekunder før de virker." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Het kan een paar seconden duren voordat nieuwe links werken." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nye lenkjer kan bruke nokre sekund før dei verkar." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nowe linki mogą zacząć działać dopiero po kilku sekundach." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Links novos podem levar alguns segundos para começar a funcionar." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "As novas ligações podem demorar alguns segundos a começar a funcionar." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Linkurile noi pot avea nevoie de câteva secunde ca să funcționeze." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Новые ссылки могут заработать через несколько секунд." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nové odkazy môžu začať fungovať až o niekoľko sekúnd." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nove povezave lahko začnejo delovati šele po nekaj sekundah." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Det kan ta några sekunder innan nya länkar börjar fungera." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "ลิงก์ใหม่อาจใช้เวลาสักครู่กว่าจะเริ่มใช้งานได้" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Yeni bağlantıların çalışmaya başlaması birkaç saniye sürebilir." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Нові посилання можуть запрацювати лише за кілька секунд." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Liên kết mới có thể mất vài giây mới bắt đầu hoạt động." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "新連結可能需要幾秒才開始運作。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "新链接可能需要几秒钟才能开始使用。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "新連結可能需要幾秒鐘才能開始使用。" }
+        }
+      }
+    },
+    "Nothing was changed. Show Details has the exact message from Homebrew." : {
+      "comment" : "Message in an error sheet.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nothing was changed. Show Details has the exact message from Homebrew." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "لم يتغيّر شيء. تجد في «إظهار التفاصيل» رسالة Homebrew كما هي." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "No s’ha canviat res. A “Mostra els detalls” hi ha el missatge exacte de Homebrew." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nic se nezměnilo. Přesnou zprávu od Homebrew najdete pod „Zobrazit podrobnosti“." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Intet blev ændret. Under “Vis oplysninger” står den præcise meddelelse fra Homebrew." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Es wurde nichts geändert. Unter „Details einblenden“ steht die genaue Meldung von Homebrew." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Δεν άλλαξε τίποτα. Η «Εμφάνιση λεπτομερειών» περιέχει το ακριβές μήνυμα του Homebrew." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "No se ha cambiado nada. En “Mostrar detalles” está el mensaje exacto de Homebrew." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "چیزی تغییر نکرد. پیام دقیق Homebrew در «نمایش جزئیات» است." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Mitään ei muutettu. Homebrew’n tarkka viesti löytyy kohdasta ”Näytä tiedot”." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Rien n’a été modifié. « Afficher les détails » contient le message exact de Homebrew." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "לא שונה דבר. ב״הצגת פרטים״ מופיעה ההודעה המדויקת מ-Homebrew." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ništa nije promijenjeno. Pod “Prikaži detalje” nalazi se točna poruka od Homebrewa." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Semmi sem változott. A Homebrew pontos üzenete a „Részletek megjelenítése” alatt látható." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Engu var breytt. Undir „Sýna upplýsingar“ eru nákvæm skilaboð frá Homebrew." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Non è stato modificato nulla. In “Mostra dettagli” trovi il messaggio esatto di Homebrew." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "何も変更されていません。Homebrewからの正確なメッセージは「詳細を表示」で確認できます。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "아무것도 변경되지 않았습니다. Homebrew가 보낸 정확한 메시지는 ‘세부사항 보기’에 있습니다." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ingenting ble endret. Under «Vis detaljer» finner du den nøyaktige meldingen fra Homebrew." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Er is niets gewijzigd. Bij 'Toon details' staat de precieze melding van Homebrew." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ingenting vart endra. Under «Vis detaljar» finn du den nøyaktige meldinga frå Homebrew." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nic nie zostało zmienione. W „Pokaż szczegóły” znajdziesz dokładny komunikat od Homebrew." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nada foi alterado. A mensagem exata do Homebrew está em Mostrar Detalhes." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nada foi alterado. Em “Mostrar detalhes” encontra a mensagem exata do Homebrew." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nu s-a schimbat nimic. „Afișați detaliile” conține mesajul exact de la Homebrew." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ничего не изменено. Нажмите «Показать подробности», чтобы увидеть точное сообщение Homebrew." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nič sa nezmenilo. Presné hlásenie od Homebrew nájdete v časti „Zobraziť podrobnosti“." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nič ni bilo spremenjeno. Pod »Prikaži podrobnosti« je natančno sporočilo programa Homebrew." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Inget ändrades. Under ”Visa detaljer” finns det exakta meddelandet från Homebrew." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "ไม่มีการเปลี่ยนแปลงใดๆ ดูข้อความที่ตรงตามจริงจาก Homebrew ได้ที่ “แสดงรายละเอียด”" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Hiçbir şey değiştirilmedi. Homebrew’un tam iletisi “Ayrıntıları Göster”de." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Нічого не змінено. Натисніть «Показати деталі», щоб побачити точне повідомлення Homebrew." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Không có gì thay đổi. “Hiển thị chi tiết” có thông báo chính xác từ Homebrew." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "沒有作出任何改動。「顯示詳情」中有Homebrew的原始訊息。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "未做任何更改。“显示详情”中有来自 Homebrew 的确切信息。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "沒有做任何更動。「顯示詳細資訊」中有Homebrew的完整訊息。" }
+        }
+      }
+    },
+    "Password" : {
+      "comment" : "Label for a shared site's password.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Password" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "كلمة السر" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Contrasenya" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Heslo" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Adgangskode" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Passwort" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Κωδικός" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Contraseña" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "رمز" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Salasana" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Mot de passe" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "סיסמה" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Lozinka" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Jelszó" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Lykilorð" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Password" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "パスワード" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "암호" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Passord" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Wachtwoord" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Passord" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Hasło" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Senha" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Palavra-passe" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Parolă" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Пароль" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Heslo" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Geslo" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Lösenord" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "รหัสผ่าน" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Parola" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Пароль" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Mật khẩu" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "密碼" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "密码" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "密碼" }
+        }
+      }
+    },
+    "Share" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Share" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "مشاركة" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Comparteix" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sdílet" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Del" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Teilen" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Κοινή χρήση" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Compartir" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "اشتراک‌گذاری" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Jaa" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partager" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "שיתוף" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Podijeli" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Megosztás" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deila" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Condividi" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "共有" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "공유" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Del" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deel" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Del" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Udostępnij" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Compartilhar" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partilhar" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partajați" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Поделиться" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zdieľať" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deli" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dela" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "แชร์" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Paylaş" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Поділитися" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Chia sẻ" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "分享" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "共享" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "分享" }
+        }
+      }
+    },
+    "Share this site at a public link" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Share this site at a public link" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "مشاركة هذا الموقع عبر رابط عام" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Comparteix aquest lloc web amb un enllaç públic" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sdílet tento web přes veřejný odkaz" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Del dette websted via et offentligt link" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Diese Website über einen öffentlichen Link teilen" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Κοινή χρήση αυτού του ιστότοπου με δημόσιο σύνδεσμο" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Compartir este sitio con un enlace público" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "اشتراک‌گذاری این سایت با یک پیوند عمومی" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Jaa tämä sivusto julkisella linkillä" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partager ce site via un lien public" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "שיתוף האתר הזה בקישור ציבורי" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Podijeli ovu web-stranicu javnom poveznicom" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "A webhely megosztása nyilvános linkkel" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deila þessum vef með opinberum tengli" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Condividi questo sito con un link pubblico" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "公開リンクでこのサイトを共有" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "공개 링크로 이 사이트 공유하기" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Del dette nettstedet med en offentlig lenke" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deel deze website via een openbare link" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Del denne nettstaden med ei offentleg lenkje" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Udostępnij tę witrynę przez link publiczny" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Compartilhar este site com um link público" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partilhar este site com uma ligação pública" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partajați acest site printr-un link public" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Поделиться этим сайтом по публичной ссылке" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zdieľať tento web cez verejný odkaz" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deli to spletno mesto z javno povezavo" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dela den här webbplatsen via en offentlig länk" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "แชร์เว็บไซต์นี้ด้วยลิงก์สาธารณะ" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bu siteyi herkese açık bir bağlantıyla paylaş" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Поділитися цим сайтом через публічне посилання" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Chia sẻ trang web này bằng liên kết công khai" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "以公開連結分享這個網站" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "通过公开链接共享此网站" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "以公開連結分享此網站" }
+        }
+      }
+    },
+    "Shared" : {
+      "comment" : "VoiceOver value for a site being shared.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Shared" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "قيد المشاركة" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Compartit" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sdíleno" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Delt" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Geteilt" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Σε κοινή χρήση" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Compartido" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "در حال اشتراک‌گذاری" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Jaettu" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partagé" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "משותף" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dijeli se" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Megosztva" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deilt" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Condiviso" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "共有中" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "공유 중" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Delt" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Gedeeld" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Delt" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Udostępniona" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Compartilhado" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partilhado" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partajat" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Общий доступ открыт" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zdieľané" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "V skupni rabi" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Delas" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "กำลังแชร์" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Paylaşılıyor" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Спільний доступ відкрито" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Đang chia sẻ" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "分享中" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "共享中" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "分享中" }
+        }
+      }
+    },
+    "Sharing" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sharing" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "المشاركة" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Compartits" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sdílení" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deling" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Geteilt" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Κοινή χρήση" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Compartiendo" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "اشتراک‌گذاری" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Jakaminen" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partage" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "שיתוף" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dijeljenje" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Megosztás" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deiling" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Condivisione" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "共有中" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "공유 중" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deling" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Delen" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deling" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Udostępnianie" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Compartilhando" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "A partilhar" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partajare" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Общий доступ" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zdieľanie" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deljenje" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Delning" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "การแชร์" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Paylaşım" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Спільний доступ" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Đang chia sẻ" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "分享中" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "共享中" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "分享中" }
+        }
+      }
+    },
+    "Sharing needs one more tool" : {
+      "comment" : "Sheet title.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sharing needs one more tool" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "تحتاج المشاركة إلى أداة إضافية" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Per compartir cal una eina més" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ke sdílení je potřeba ještě jeden nástroj" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deling kræver ét værktøj mere" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zum Teilen fehlt noch ein Werkzeug" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Η κοινή χρήση χρειάζεται ένα ακόμη εργαλείο" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Para compartir hace falta una herramienta más" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "اشتراک‌گذاری به یک ابزار دیگر نیاز دارد" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Jakaminen tarvitsee vielä yhden työkalun" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Le partage nécessite un outil de plus" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "לשיתוף נדרש כלי נוסף" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Za dijeljenje treba još jedan alat" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "A megosztáshoz még egy eszköz kell" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Til að deila þarf eitt verkfæri í viðbót" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Per condividere serve un altro strumento" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "共有にはもう1つツールが必要です" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "공유하려면 도구가 하나 더 필요함" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deling trenger ett verktøy til" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Voor delen is nog één hulpmiddel nodig" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deling treng eitt verktøy til" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Do udostępniania potrzebne jest jeszcze jedno narzędzie" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Para compartilhar, falta uma ferramenta" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Para partilhar falta mais uma ferramenta" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Pentru partajare mai trebuie un instrument" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Для общего доступа нужен ещё один инструмент" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Na zdieľanie treba ešte jeden nástroj" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Za deljenje potrebujete še eno orodje" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Delning kräver ett verktyg till" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "การแชร์ต้องใช้เครื่องมืออีกหนึ่งตัว" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Paylaşım için bir araç daha gerekiyor" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Для спільного доступу потрібен ще один інструмент" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Cần thêm một công cụ để chia sẻ" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "分享需要多一個工具" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "共享还需要一个工具" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "分享還需要一個工具" }
+        }
+      }
+    },
+    "Sharing stopped on its own, so the link no longer works." : {
+      "comment" : "Shown when a shared site's link stopped working.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sharing stopped on its own, so the link no longer works." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "توقفت المشاركة من تلقاء نفسها، لذا لم يعد الرابط يعمل." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "S’ha deixat de compartir sol i l’enllaç ja no funciona." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sdílení se samo ukončilo, odkaz už nefunguje." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Delingen stoppede af sig selv, så linket virker ikke længere." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Das Teilen wurde von selbst beendet, der Link funktioniert nicht mehr." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Η κοινή χρήση σταμάτησε μόνη της, οπότε ο σύνδεσμος δεν λειτουργεί πια." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Se ha dejado de compartir por sí solo, así que el enlace ya no funciona." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "اشتراک‌گذاری خودبه‌خود متوقف شد و پیوند دیگر کار نمی‌کند." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Jakaminen loppui itsestään, joten linkki ei enää toimi." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Le partage s’est arrêté de lui-même et le lien ne fonctionne plus." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "השיתוף הופסק מעצמו, ולכן הקישור כבר לא עובד." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dijeljenje se samo zaustavilo pa poveznica više ne radi." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "A megosztás magától leállt, így a link már nem működik." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deilingin stöðvaðist af sjálfu sér svo tengillinn virkar ekki lengur." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "La condivisione si è interrotta da sola, quindi il link non funziona più." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "共有が自動的に停止したため、リンクは使えなくなりました。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "공유가 저절로 중단되어 링크가 더 이상 작동하지 않습니다." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Delingen stoppet av seg selv, så lenken virker ikke lenger." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Het delen is vanzelf gestopt, dus de link werkt niet meer." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Delinga stoppa av seg sjølv, så lenkja verkar ikkje lenger." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Udostępnianie zatrzymało się samo, więc link już nie działa." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "O compartilhamento parou sozinho, então o link não funciona mais." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "A partilha parou sozinha, por isso a ligação já não funciona." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partajarea s-a oprit singură, așa că linkul nu mai funcționează." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Общий доступ прекратился сам, поэтому ссылка больше не работает." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zdieľanie sa samo ukončilo, odkaz už nefunguje." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deljenje se je ustavilo samo, zato povezava ne deluje več." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Delningen slutade av sig själv, så länken fungerar inte längre." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "การแชร์หยุดไปเอง ลิงก์จึงใช้ไม่ได้แล้ว" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Paylaşım kendiliğinden durdu, bu yüzden bağlantı artık çalışmıyor." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Спільний доступ припинився сам, тож посилання більше не працює." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Việc chia sẻ đã tự dừng nên liên kết không còn hoạt động." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "分享已自行停止，所以連結已無法使用。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "共享已自行停止，链接已无法使用。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "分享已自行停止，連結已無法使用。" }
+        }
+      }
+    },
+    "Sharing uses cloudflared, a free tool from Cloudflare. Install it once and Patchy UI takes care of the rest." : {
+      "comment" : "Sheet message.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sharing uses cloudflared, a free tool from Cloudflare. Install it once and Patchy UI takes care of the rest." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "تستخدم المشاركة cloudflared، وهي أداة مجانية من Cloudflare. ثبّتها مرة واحدة وسيتولى Patchy UI الباقي." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Per compartir s’utilitza cloudflared, una eina gratuïta de Cloudflare. Instal·la-la una vegada i Patchy UI s’encarrega de la resta." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ke sdílení se používá cloudflared, bezplatný nástroj od Cloudflare. Nainstalujte ho jednou a o zbytek se postará Patchy UI." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deling bruger cloudflared, et gratis værktøj fra Cloudflare. Installer det én gang, så klarer Patchy UI resten." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zum Teilen wird cloudflared verwendet, ein kostenloses Werkzeug von Cloudflare. Installiere es einmal, um den Rest kümmert sich Patchy UI." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Η κοινή χρήση γίνεται με το cloudflared, ένα δωρεάν εργαλείο της Cloudflare. Εγκαταστήστε το μία φορά και το Patchy UI αναλαμβάνει τα υπόλοιπα." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Para compartir se usa cloudflared, una herramienta gratuita de Cloudflare. Instálala una vez y Patchy UI se encarga del resto." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "اشتراک‌گذاری از cloudflared استفاده می‌کند، ابزاری رایگان از Cloudflare. یک بار نصبش کنید و بقیه کارها با Patchy UI است." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Jakamiseen käytetään cloudflaredia, Cloudflaren ilmaista työkalua. Asenna se kerran, niin Patchy UI hoitaa loput." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Le partage utilise cloudflared, un outil gratuit de Cloudflare. Installez-le une fois et Patchy UI s’occupe du reste." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "השיתוף משתמש ב-cloudflared, כלי חינמי של Cloudflare. מתקינים אותו פעם אחת ו-Patchy UI מטפל בכל השאר." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Za dijeljenje se koristi cloudflared, besplatan alat tvrtke Cloudflare. Instalirajte ga jednom, a Patchy UI pobrinut će se za ostalo." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "A megosztás a cloudflared nevű ingyenes Cloudflare-eszközt használja. Egyszer kell telepítenie, a többit a Patchy UI elintézi." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deiling notar cloudflared, ókeypis verkfæri frá Cloudflare. Settu það upp einu sinni og Patchy UI sér um afganginn." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "La condivisione usa cloudflared, uno strumento gratuito di Cloudflare. Installalo una volta e Patchy UI pensa al resto." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "共有にはCloudflareの無料ツールcloudflaredを使います。一度インストールすれば、あとはPatchy UIが処理します。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "공유에는 Cloudflare의 무료 도구인 cloudflared를 사용합니다. 한 번만 설치하면 나머지는 Patchy UI가 처리합니다." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deling bruker cloudflared, et gratis verktøy fra Cloudflare. Installer det én gang, så tar Patchy UI seg av resten." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Delen gebruikt cloudflared, een gratis hulpmiddel van Cloudflare. Installeer het één keer en Patchy UI regelt de rest." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deling brukar cloudflared, eit gratis verktøy frå Cloudflare. Installer det éin gong, så tek Patchy UI seg av resten." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Do udostępniania służy cloudflared, bezpłatne narzędzie od Cloudflare. Zainstaluj je raz, a resztą zajmie się Patchy UI." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "O compartilhamento usa o cloudflared, uma ferramenta gratuita da Cloudflare. Instale uma vez e o Patchy UI cuida do resto." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "A partilha usa o cloudflared, uma ferramenta gratuita da Cloudflare. Instale-o uma vez e o Patchy UI trata do resto." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partajarea folosește cloudflared, un instrument gratuit de la Cloudflare. Instalați-l o dată și Patchy UI se ocupă de rest." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Для общего доступа используется cloudflared — бесплатный инструмент Cloudflare. Установите его один раз, а остальное сделает Patchy UI." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Na zdieľanie sa používa cloudflared, bezplatný nástroj od Cloudflare. Nainštalujte ho raz a o zvyšok sa postará Patchy UI." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Za deljenje se uporablja cloudflared, brezplačno orodje podjetja Cloudflare. Namestite ga enkrat, za ostalo poskrbi Patchy UI." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Delning använder cloudflared, ett kostnadsfritt verktyg från Cloudflare. Installera det en gång så sköter Patchy UI resten." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "การแชร์ใช้ cloudflared ซึ่งเป็นเครื่องมือฟรีจาก Cloudflare ติดตั้งครั้งเดียว แล้ว Patchy UI จะจัดการส่วนที่เหลือให้" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Paylaşım, Cloudflare’in ücretsiz aracı cloudflared’i kullanır. Bir kez yükleyin, gerisini Patchy UI halleder." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Для спільного доступу використовується cloudflared — безплатний інструмент від Cloudflare. Встановіть його один раз, а решту зробить Patchy UI." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tính năng chia sẻ dùng cloudflared, một công cụ miễn phí của Cloudflare. Hãy cài đặt một lần, Patchy UI sẽ lo phần còn lại." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "分享會使用cloudflared，這是Cloudflare提供的免費工具。只需安裝一次，其餘交給Patchy UI處理。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "共享使用 cloudflared，这是 Cloudflare 提供的免费工具。只需安装一次，其余的由 Patchy UI 处理。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "分享會使用cloudflared，這是Cloudflare提供的免費工具。只要安裝一次，其餘交給Patchy UI處理。" }
+        }
+      }
+    },
+    "Sites with a fixed web address, like WordPress, may send visitors to the local address instead." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sites with a fixed web address, like WordPress, may send visitors to the local address instead." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "قد ترسل المواقع ذات العنوان الثابت، مثل WordPress، الزوار إلى العنوان المحلي بدلاً من ذلك." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Els llocs web amb una adreça fixa, com WordPress, poden enviar els visitants a l’adreça local." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Weby s pevnou webovou adresou, například WordPress, mohou návštěvníky přesměrovat na místní adresu." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Websteder med en fast webadresse, f.eks. WordPress, sender måske besøgende videre til den lokale adresse." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Websites mit fester Webadresse, etwa WordPress, leiten Besucher womöglich zur lokalen Adresse weiter." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ιστότοποι με σταθερή διεύθυνση, όπως το WordPress, μπορεί να στέλνουν τους επισκέπτες στην τοπική διεύθυνση." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Los sitios con una dirección web fija, como WordPress, pueden enviar a los visitantes a la dirección local." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "سایت‌هایی با نشانی وب ثابت، مثل WordPress، ممکن است بازدیدکنندگان را به نشانی محلی بفرستند." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sivustot, joilla on kiinteä verkko-osoite, kuten WordPress, voivat ohjata vierailijat paikalliseen osoitteeseen." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Les sites dont l’adresse web est fixe, comme WordPress, peuvent rediriger les visiteurs vers l’adresse locale." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "אתרים עם כתובת קבועה, כמו WordPress, עשויים לשלוח מבקרים לכתובת המקומית." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Web-stranice sa stalnom web-adresom, poput WordPressa, mogu posjetitelje preusmjeriti na lokalnu adresu." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Az állandó webcímű webhelyek, például a WordPress, a helyi címre irányíthatják a látogatókat." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Vefir með fast veffang, eins og WordPress, gætu sent gesti á staðbundna veffangið í staðinn." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "I siti con un indirizzo web fisso, come WordPress, potrebbero rimandare i visitatori all’indirizzo locale." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "WordPressのようにWebアドレスが固定されているサイトでは、訪問者がローカルアドレスに送られることがあります。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "WordPress처럼 웹 주소가 고정된 사이트는 방문자를 로컬 주소로 보낼 수 있습니다." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nettsteder med en fast nettadresse, som WordPress, kan sende besøkende til den lokale adressen i stedet." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Websites met een vast webadres, zoals WordPress, sturen bezoekers mogelijk naar het lokale adres." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nettstader med ei fast nettadresse, som WordPress, kan sende besøkjande til den lokale adressa i staden." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Witryny ze stałym adresem, takie jak WordPress, mogą przekierowywać odwiedzających na adres lokalny." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sites com um endereço fixo, como o WordPress, podem enviar os visitantes para o endereço local." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sites com um endereço web fixo, como o WordPress, podem encaminhar os visitantes para o endereço local." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Site-urile cu o adresă web fixă, cum ar fi WordPress, pot trimite vizitatorii la adresa locală." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Сайты с постоянным веб-адресом, например WordPress, могут перенаправлять посетителей на локальный адрес." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Weby s pevnou webovou adresou, napríklad WordPress, môžu návštevníkov presmerovať na miestnu adresu." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Spletna mesta s stalnim spletnim naslovom, kot je WordPress, lahko obiskovalce preusmerijo na lokalni naslov." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Webbplatser med en fast webbadress, som WordPress, kan skicka besökare till den lokala adressen i stället." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "เว็บไซต์ที่มีที่อยู่เว็บตายตัว เช่น WordPress อาจส่งผู้เยี่ยมชมไปยังที่อยู่ในเครื่องแทน" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "WordPress gibi sabit web adresi olan siteler, ziyaretçileri yerel adrese yönlendirebilir." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Сайти з постійною вебадресою, як-от WordPress, можуть перенаправляти відвідувачів на локальну адресу." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Các trang web có địa chỉ cố định, như WordPress, có thể đưa khách truy cập về địa chỉ cục bộ." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "像WordPress這類網址固定的網站，可能會把訪客帶到本機網址。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "像 WordPress 这样网址固定的网站，可能会把访问者转到本地地址。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "像WordPress這類網址固定的網站，可能會把訪客導向本機網址。" }
+        }
+      }
+    },
+    "Start the server to share this site" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Start the server to share this site" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "شغّل الخادم لمشاركة هذا الموقع" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Inicia el servidor per compartir aquest lloc web" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Chcete-li sdílet tento web, spusťte server" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Start serveren for at dele dette websted" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Starte den Server, um diese Website zu teilen" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ξεκινήστε τον διακομιστή για να μοιραστείτε αυτόν τον ιστότοπο" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Inicia el servidor para compartir este sitio" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "برای اشتراک‌گذاری این سایت، سرور را روشن کنید" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Käynnistä palvelin jakaaksesi tämän sivuston" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Démarrez le serveur pour partager ce site" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "יש להפעיל את השרת כדי לשתף את האתר הזה" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Pokrenite poslužitelj da podijelite ovu web-stranicu" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Indítsa el a szervert a webhely megosztásához" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ræstu vefþjóninn til að deila þessum vef" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Avvia il server per condividere questo sito" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "このサイトを共有するにはサーバを起動してください" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "이 사이트를 공유하려면 서버를 시작하십시오" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Start serveren for å dele dette nettstedet" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Start de server om deze website te delen" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Start serveren for å dele denne nettstaden" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Uruchom serwer, aby udostępnić tę witrynę" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Inicie o servidor para compartilhar este site" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Inicie o servidor para partilhar este site" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Porniți serverul ca să partajați acest site" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Запустите сервер, чтобы поделиться этим сайтом" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ak chcete zdieľať tento web, spustite server" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zaženite strežnik, da delite to spletno mesto" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Starta servern för att dela den här webbplatsen" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "เริ่มเซิร์ฟเวอร์เพื่อแชร์เว็บไซต์นี้" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bu siteyi paylaşmak için sunucuyu başlatın" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Запустіть сервер, щоб поділитися цим сайтом" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Hãy khởi động máy chủ để chia sẻ trang web này" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "啟動伺服器以分享這個網站" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "启动服务器以共享此网站" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "啟動伺服器以分享此網站" }
+        }
+      }
+    },
+    "Stop Sharing" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Stop Sharing" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "إيقاف المشاركة" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deixa de compartir" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ukončit sdílení" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Stop deling" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Teilen beenden" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Διακοπή κοινής χρήσης" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dejar de compartir" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "توقف اشتراک‌گذاری" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Lopeta jakaminen" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Arrêter le partage" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "הפסקת השיתוף" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Prestani dijeliti" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Megosztás leállítása" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Hætta að deila" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Interrompi condivisione" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "共有を停止" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "공유 중단" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Slutt å dele" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Stop met delen" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Slutt å dele" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zatrzymaj udostępnianie" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Parar de Compartilhar" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deixar de partilhar" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Opriți partajarea" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Остановить общий доступ" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ukončiť zdieľanie" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Prenehaj deliti" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sluta dela" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "หยุดแชร์" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Paylaşımı Durdur" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Зупинити спільний доступ" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dừng chia sẻ" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "停止分享" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "停止共享" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "停止分享" }
+        }
+      }
+    },
+    "Stopping…" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Stopping…" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "جارٍ الإيقاف…" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "S’està aturant…" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ukončuje se…" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Stopper…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Wird beendet …" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Διακοπή…" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deteniendo…" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "در حال توقف…" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Lopetetaan…" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Arrêt…" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "השיתוף נעצר…" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zaustavljanje…" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Leállítás…" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Stöðva…" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Interruzione…" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "停止中…" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "중단하는 중…" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Stopper…" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Stoppen…" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Stoppar…" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zatrzymywanie…" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Parando…" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "A parar…" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Se oprește…" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Остановка…" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ukončuje sa…" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ustavljanje …" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Stoppar…" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "กำลังหยุด…" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Durduruluyor…" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Зупинення…" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Đang dừng…" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "正在停止⋯" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "正在停止…" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "正在停止⋯" }
+        }
+      }
+    },
+    "The server isn’t running. Start it, then share again." : {
+      "comment" : "Shown when sharing a site failed.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "The server isn’t running. Start it, then share again." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "الخادم لا يعمل. شغّله ثم شارك مرة أخرى." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "El servidor no està en marxa. Inicia’l i torna a compartir." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Server neběží. Spusťte ho a sdílejte znovu." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Serveren kører ikke. Start den, og del igen." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Der Server läuft nicht. Starte ihn und teile dann erneut." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ο διακομιστής δεν εκτελείται. Ξεκινήστε τον και μοιραστείτε ξανά." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "El servidor no está en marcha. Inícialo y vuelve a compartir." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "سرور روشن نیست. آن را روشن کنید و دوباره به اشتراک بگذارید." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Palvelin ei ole käynnissä. Käynnistä se ja jaa uudelleen." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Le serveur n’est pas démarré. Démarrez-le, puis partagez à nouveau." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "השרת לא פועל. יש להפעיל אותו ולשתף שוב." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Poslužitelj nije pokrenut. Pokrenite ga pa ponovno podijelite." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "A szerver nem fut. Indítsa el, majd ossza meg újra." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Vefþjónninn er ekki í gangi. Ræstu hann og deildu aftur." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Il server non è in esecuzione. Avvialo, poi condividi di nuovo." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "サーバが動作していません。起動してから、もう一度共有してください。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "서버가 실행 중이 아닙니다. 서버를 시작한 다음 다시 공유하십시오." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Serveren kjører ikke. Start den, og del på nytt." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "De server draait niet. Start hem en deel opnieuw." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Serveren køyrer ikkje. Start han, og del på nytt." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Serwer nie działa. Uruchom go i udostępnij ponownie." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "O servidor não está em execução. Inicie-o e compartilhe novamente." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "O servidor não está em execução. Inicie-o e volte a partilhar." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Serverul nu rulează. Porniți-l, apoi partajați din nou." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Сервер не запущен. Запустите его и поделитесь снова." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Server nebeží. Spustite ho a zdieľajte znova." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Strežnik ne deluje. Zaženite ga in znova delite." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Servern körs inte. Starta den och dela igen." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "เซิร์ฟเวอร์ไม่ได้ทำงานอยู่ เริ่มเซิร์ฟเวอร์แล้วแชร์อีกครั้ง" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sunucu çalışmıyor. Başlatın, sonra yeniden paylaşın." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Сервер не запущено. Запустіть його й поділіться знову." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Máy chủ không chạy. Hãy khởi động máy chủ rồi chia sẻ lại." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "伺服器沒有運行。請啟動伺服器，然後再分享一次。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "服务器未运行。请启动服务器，然后再次共享。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "伺服器未在執行。請啟動伺服器，然後再分享一次。" }
+        }
+      }
+    },
+    "Try Again" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Try Again" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "إعادة المحاولة" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Torna-ho a provar" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zkusit znovu" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Prøv igen" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Erneut versuchen" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Δοκιμή ξανά" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Reintentar" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "دوباره امتحان کنید" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Yritä uudelleen" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Réessayer" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "ניסיון חוזר" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Pokušaj ponovno" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Újra" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Reyna aftur" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Riprova" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "再試行" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "다시 시도" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Prøv igjen" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Probeer opnieuw" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Prøv igjen" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Spróbuj ponownie" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tentar Novamente" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tentar novamente" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Încercați din nou" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Повторить" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Skúsiť znova" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Poskusi znova" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Försök igen" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "ลองอีกครั้ง" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Yeniden Dene" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Повторити" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Thử lại" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "再試一次" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "重试" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "再試一次" }
+        }
+      }
+    },
+    "Username" : {
+      "comment" : "Label for a shared site's username.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Username" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "اسم المستخدم" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nom d’usuari" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Uživatelské jméno" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Brugernavn" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Benutzername" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Όνομα χρήστη" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nombre de usuario" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "نام کاربری" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Käyttäjätunnus" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nom d’utilisateur" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "שם משתמש" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Korisničko ime" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Felhasználónév" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Notandanafn" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nome utente" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "ユーザ名" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "사용자 이름" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Brukernavn" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Gebruikersnaam" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Brukarnamn" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nazwa użytkownika" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nome de usuário" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nome de utilizador" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nume de utilizator" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Имя пользователя" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Používateľské meno" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Uporabniško ime" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Användarnamn" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "ชื่อผู้ใช้" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kullanıcı adı" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ім’я користувача" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tên người dùng" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "用戶名稱" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "用户名" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "使用者名稱" }
+        }
+      }
     }
   },
   "version" : "1.0"

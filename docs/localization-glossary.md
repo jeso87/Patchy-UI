@@ -29,11 +29,13 @@ non-technical person uses, never the technical term the English avoided.
 - **live website** — the real site on the internet, as opposed to the local copy. Used with "real web address", the warning that a name like `harbor.com` may be a real website.
 - **group** — a set of related sites in the sidebar, chosen by the person. **Other Sites** is the sidebar heading for sites in no group.
 - **Show Details** — the link that reveals Patchy's raw output, with **Hide Details** as its opposite. Other strings refer to it by name ("Show Details has the exact message from Patchy"), so the link and those mentions must match exactly.
+- **sharing** (and **Share**) — putting a site on a public link so someone else can open it from anywhere. Use the everyday verb people use for sharing a link, not "publish" or "deploy". **Stop Sharing** is its opposite and is referred to by name ("until you stop sharing"), so the button and those sentences must match.
+- **public link** — the address someone else opens to see a shared site. "Link" in the everyday sense, as in "Copy Link".
 
 ## Never translate
 
 - **Patchy** and **Patchy UI**. Product names. Keep them in Latin script in every language, including Arabic, Persian, Hebrew, Thai and the CJK languages, as Apple does with its own product names.
-- **PHP**, **Apache**, **Homebrew**, **mkcert**. Product names.
+- **PHP**, **Apache**, **Homebrew**, **mkcert**, **Cloudflare**, **cloudflared**, **WordPress**. Product names.
 - **.test** and **.local**, every address (`mysite.test`, `harbor.com`), every path, URL and command (`brew install …`, `patchy trust`). They are typed, not read.
 - **https://** wherever it appears.
 - Placeholders: `%@`, `%lld` and their numbered forms. See the rules below.
