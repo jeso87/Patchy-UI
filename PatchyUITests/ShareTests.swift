@@ -17,6 +17,14 @@ import Testing
         #expect(!ShareCopy.isTemporary(stable))
     }
 
+    /// With a domain connected, Share asks which link to make; without one, it makes a temporary link.
+    @Test func shareChoices() {
+        #expect(ShareCopy.choices(sharingDomain: nil).isEmpty)
+        let choices = ShareCopy.choices(sharingDomain: "87dash.com")
+        #expect(choices.map(\.title) == ["Share at 87dash.com", "Share with a Temporary Link"])
+        #expect(choices.map(\.quick) == [false, true])
+    }
+
     @Test func problems() {
         #expect(ShareCopy.problem(output: "Apache isn't running. Start it with: patchy start", wasSharing: false)
                 == "The server isn’t running. Start it, then share again.")

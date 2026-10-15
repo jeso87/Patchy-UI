@@ -397,5 +397,7 @@
   "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.": "Η σύνδεσή σας στο Cloudflare έληξε. Για να συνδέσετε ξανά τον τομέα σας, εκτελέστε patchy share setup στο Τερματικό.",
   "This site has no secure certificate yet. Refresh certificates, then share again.": "Αυτός ο ιστότοπος δεν έχει ακόμη πιστοποιητικό ασφαλείας. Ανανεώστε τα πιστοποιητικά και μοιραστείτε ξανά.",
   "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "Η διεύθυνση αυτού του ιστότοπου εξακολουθεί να δείχνει σε ένα τούνελ που διαγράφηκε στο Cloudflare. Διαγράψτε την εγγραφή DNS της στον πίνακα ελέγχου του Cloudflare και μοιραστείτε ξανά.",
-  "Couldn’t share this site. Show Details has the exact message from Patchy.": "Δεν ήταν δυνατή η κοινή χρήση αυτού του ιστότοπου. Η «Εμφάνιση λεπτομερειών» περιέχει το ακριβές μήνυμα του Patchy."
+  "Couldn’t share this site. Show Details has the exact message from Patchy.": "Δεν ήταν δυνατή η κοινή χρήση αυτού του ιστότοπου. Η «Εμφάνιση λεπτομερειών» περιέχει το ακριβές μήνυμα του Patchy.",
+  "Share at %@": "Κοινή χρήση στο %@",
+  "Share with a Temporary Link": "Κοινή χρήση με προσωρινό σύνδεσμο"
 }

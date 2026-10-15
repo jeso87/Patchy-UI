@@ -412,5 +412,7 @@
   "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.": "Autentificarea dvs. în Cloudflare a expirat. Ca să vă conectați din nou domeniul, rulați patchy share setup în Terminal.",
   "This site has no secure certificate yet. Refresh certificates, then share again.": "Acest site nu are încă un certificat de securitate. Reînnoiți certificatele, apoi partajați din nou.",
   "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "Adresa acestui site indică încă un tunel care a fost șters în Cloudflare. Ștergeți înregistrarea DNS a acestuia din panoul Cloudflare, apoi partajați din nou.",
-  "Couldn’t share this site. Show Details has the exact message from Patchy.": "Nu s-a putut partaja acest site. „Afișați detaliile” conține mesajul exact de la Patchy."
+  "Couldn’t share this site. Show Details has the exact message from Patchy.": "Nu s-a putut partaja acest site. „Afișați detaliile” conține mesajul exact de la Patchy.",
+  "Share at %@": "Partajați pe %@",
+  "Share with a Temporary Link": "Partajați printr-un link temporar"
 }

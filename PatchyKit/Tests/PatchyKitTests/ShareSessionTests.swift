@@ -172,6 +172,22 @@ final class StateLog: @unchecked Sendable {
         #expect(PatchyClient(environment: prefix.environment).snapshot(checkTrust: false).supportsSharing)
     }
 
+    /// Patchy shares at the domain only when both its login and the domain are saved (`share_ready`).
+    @Test func sharingDomainIsReadFromPatchysShareFolder() throws {
+        let prefix = try FakePrefix(patchyScript: "#!/bin/zsh\n")
+        defer { prefix.remove() }
+        let share = prefix.root.appending(path: "etc/httpd/share")
+        try FileManager.default.createDirectory(at: share, withIntermediateDirectories: true)
+        #expect(ServerReader.sharingDomain(prefix.environment) == nil)
+        try "87dash.com\n".write(to: share.appending(path: "domain"), atomically: true, encoding: .utf8)
+        #expect(ServerReader.sharingDomain(prefix.environment) == nil)
+        try "login".write(to: share.appending(path: "cert.pem"), atomically: true, encoding: .utf8)
+        #expect(ServerReader.sharingDomain(prefix.environment) == "87dash.com")
+        #expect(PatchyClient(environment: prefix.environment).snapshot(checkTrust: false).sharingDomain == "87dash.com")
+        try "".write(to: share.appending(path: "domain"), atomically: true, encoding: .utf8)
+        #expect(ServerReader.sharingDomain(prefix.environment) == nil)
+    }
+
     @Test func cloudflaredIsLookedForInTheHomebrewPrefix() throws {
         let prefix = try FakePrefix(patchyScript: "#!/bin/zsh\n")
         defer { prefix.remove() }

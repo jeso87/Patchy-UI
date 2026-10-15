@@ -54,7 +54,7 @@ enum Sheet: Equatable {
     case trust
     case refreshCertificates
     case error(ErrorInfo)
-    case installCloudflared(String)
+    case installCloudflared(String, quick: Bool)
 }
 
 enum TrustStep: Equatable {
@@ -872,6 +872,14 @@ final class AppModel {
 
     var canShare: Bool { snapshot.supportsSharing }
 
+    /// The domain Patchy shares at, if one is connected. In Debug, `-PatchyDebugShareDomain` stands in for one.
+    var sharingDomain: String? {
+        #if DEBUG
+        if let domain = UserDefaults.standard.string(forKey: "PatchyDebugShareDomain") { return domain }
+        #endif
+        return snapshot.sharingDomain
+    }
+
     func isSharing(_ address: String) -> Bool {
         switch shares[address] {
         case .starting?, .sharing?: true
@@ -893,7 +901,7 @@ final class AppModel {
         case .ignore:
             return
         case .install:
-            sheet = .installCloudflared(site.address)
+            sheet = .installCloudflared(site.address, quick: quick)
             openMainWindow?()
         case .start:
             let address = site.address
@@ -913,11 +921,12 @@ final class AppModel {
             stoppingShares.remove(address)
             shares[address] = nil
         case .failed(let output, _):
+            let quick = shareSessions[address]?.quick ?? false
             shareSessions[address] = nil
             stoppingShares.remove(address)
             if output.contains(PatchyOutput.cloudflaredRequired) {
                 shares[address] = nil
-                sheet = .installCloudflared(address)
+                sheet = .installCloudflared(address, quick: quick)
                 openMainWindow?()
             } else {
                 shares[address] = state
@@ -969,7 +978,7 @@ final class AppModel {
         NSPasteboard.general.setString(ShareCopy.clientMessage(for: access), forType: .string)
     }
 
-    func installCloudflared(thenShare address: String) {
+    func installCloudflared(thenShare address: String, quick: Bool) {
         guard !isBusy else { return }
         Task {
             let result = await runTask(steps: [String(localized: "Installing cloudflared…", comment: "Progress step shown while a change runs.")]) { client, _, output in
@@ -982,7 +991,7 @@ final class AppModel {
                 return
             }
             sheet = nil
-            if let site = site(address) { share(site) }
+            if let site = site(address) { share(site, quick: quick) }
         }
     }
 
@@ -1052,6 +1061,7 @@ extension AppModel {
         demo.trust = .enabled
         demo.patchyVersion = snapshot.patchyVersion
         demo.supportsSharing = snapshot.supportsSharing
+        demo.sharingDomain = snapshot.sharingDomain
         snapshot = demo
         var demoGroups = SiteGroups()
         demoGroups.createGroup(named: "Northwind", sites: ["northwind.test", "members.northwind.test", "shop.northwind.test"])
@@ -1134,7 +1144,7 @@ extension AppModel {
         case "trustpassword": openTrustSetup(); trustStep = .password
         case "password": passwordPrompt = PasswordPrompt()
         case "certs": sheet = .refreshCertificates
-        case "cloudflared": if let selection { sheet = .installCloudflared(selection) }
+        case "cloudflared": if let selection { sheet = .installCloudflared(selection, quick: false) }
         case "error": sheet = .error(Self.startFailure(output: "Apache's startup error:\n  (48)Address already in use: AH00072: make_sock: could not bind to address [::]:80\nSomething else is listening on port 80/443:\n  COMMAND PID USER\n  nginx 412 joe"))
         default: break
         }

@@ -34,6 +34,8 @@ public struct PatchySnapshot: Sendable, Equatable {
     public var certificateAuthorityInstalled = true
     /// The installed Patchy has `patchy share` (added after 1.2.1).
     public var supportsSharing = false
+    /// The domain `patchy share setup` connected, if any. Share then offers the domain or a temporary link.
+    public var sharingDomain: String?
 
     public init() {}
 }
@@ -121,6 +123,15 @@ public enum ServerReader {
 
     public static func supportsSharing(_ environment: PatchyEnvironment) -> Bool {
         supportsSharing(inScript: (try? String(contentsOf: environment.patchyBinary, encoding: .utf8)) ?? "")
+    }
+
+    /// Mirrors Patchy's `share_ready`: a saved login and a saved domain, neither empty.
+    public static func sharingDomain(_ environment: PatchyEnvironment) -> String? {
+        let dir = environment.httpdDir.appending(path: "share")
+        guard let login = try? Data(contentsOf: dir.appending(path: "cert.pem")), !login.isEmpty,
+              let text = try? String(contentsOf: dir.appending(path: "domain"), encoding: .utf8) else { return nil }
+        let domain = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        return domain.isEmpty ? nil : domain
     }
 
     /// `patchy share` needs Cloudflare's cloudflared, installed with Homebrew.

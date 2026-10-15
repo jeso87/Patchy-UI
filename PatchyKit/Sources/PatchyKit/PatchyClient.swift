@@ -25,6 +25,7 @@ public struct PatchyClient: Sendable {
         snapshot.patchyVersion = ServerReader.patchyVersion(environment)
         snapshot.certificateAuthorityInstalled = ServerReader.certificateAuthorityInstalled()
         snapshot.supportsSharing = ServerReader.supportsSharing(environment)
+        snapshot.sharingDomain = ServerReader.sharingDomain(environment)
         return snapshot
     }
 

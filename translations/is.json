@@ -397,5 +397,7 @@
   "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.": "Innskráning þín hjá Cloudflare er útrunnin. Til að tengja lénið aftur skaltu keyra patchy share setup í Terminal.",
   "This site has no secure certificate yet. Refresh certificates, then share again.": "Þessi vefur er ekki enn með öryggisskilríki. Endurnýjaðu skilríkin og deildu svo aftur.",
   "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "Veffang þessa vefjar vísar enn á göng sem var eytt í Cloudflare. Eyddu DNS-færslu þess á stjórnborði Cloudflare og deildu svo aftur.",
-  "Couldn’t share this site. Show Details has the exact message from Patchy.": "Ekki tókst að deila þessum vef. Undir „Sýna upplýsingar“ eru nákvæm skilaboð frá Patchy."
+  "Couldn’t share this site. Show Details has the exact message from Patchy.": "Ekki tókst að deila þessum vef. Undir „Sýna upplýsingar“ eru nákvæm skilaboð frá Patchy.",
+  "Share at %@": "Deila á %@",
+  "Share with a Temporary Link": "Deila með tímabundnum tengli"
 }

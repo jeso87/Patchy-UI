@@ -382,5 +382,7 @@
   "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.": "Cloudflareへのログインの有効期限が切れました。ドメインをもう一度接続するには、ターミナルでpatchy share setupを実行してください。",
   "This site has no secure certificate yet. Refresh certificates, then share again.": "このサイトにはまだセキュリティ証明書がありません。証明書を更新してから、もう一度共有してください。",
   "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "このサイトのアドレスは、Cloudflareで削除されたトンネルをまだ指しています。CloudflareのダッシュボードでそのDNSレコードを削除してから、もう一度共有してください。",
-  "Couldn’t share this site. Show Details has the exact message from Patchy.": "このサイトを共有できませんでした。Patchyからの正確なメッセージは「詳細を表示」で確認できます。"
+  "Couldn’t share this site. Show Details has the exact message from Patchy.": "このサイトを共有できませんでした。Patchyからの正確なメッセージは「詳細を表示」で確認できます。",
+  "Share at %@": "%@で共有",
+  "Share with a Temporary Link": "一時的なリンクで共有"
 }

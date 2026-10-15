@@ -397,5 +397,7 @@
   "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.": "Cloudflare-kirjautumisesi on vanhentunut. Yhdistä verkkotunnuksesi uudelleen suorittamalla Päätteessä patchy share setup.",
   "This site has no secure certificate yet. Refresh certificates, then share again.": "Tällä sivustolla ei ole vielä suojausvarmennetta. Uusi varmenteet ja jaa sitten uudelleen.",
   "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "Tämän sivuston osoite osoittaa yhä tunneliin, joka poistettiin Cloudflaresta. Poista sen DNS-tietue Cloudflaren hallintapaneelista ja jaa sitten uudelleen.",
-  "Couldn’t share this site. Show Details has the exact message from Patchy.": "Sivuston jakaminen epäonnistui. Patchyn tarkka viesti löytyy kohdasta ”Näytä tiedot”."
+  "Couldn’t share this site. Show Details has the exact message from Patchy.": "Sivuston jakaminen epäonnistui. Patchyn tarkka viesti löytyy kohdasta ”Näytä tiedot”.",
+  "Share at %@": "Jaa osoitteessa %@",
+  "Share with a Temporary Link": "Jaa väliaikaisella linkillä"
 }

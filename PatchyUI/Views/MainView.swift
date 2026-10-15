@@ -264,8 +264,16 @@ struct SiteRow: View {
                     Button("Copy Link") { model.copyShareLink(site.address) }
                     Button("Stop Sharing") { model.stopSharing(site.address) }
                 } else {
-                    Button("Share") { model.share(site) }
-                        .disabled(!model.serverRunning)
+                    let choices = ShareCopy.choices(sharingDomain: model.sharingDomain)
+                    if choices.isEmpty {
+                        Button("Share") { model.share(site) }
+                            .disabled(!model.serverRunning)
+                    } else {
+                        ForEach(choices, id: \.self) { choice in
+                            Button(choice.title) { model.share(site, quick: choice.quick) }
+                                .disabled(!model.serverRunning)
+                        }
+                    }
                 }
             }
             Divider()

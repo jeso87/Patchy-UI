@@ -427,5 +427,7 @@
   "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.": "Термін вашого входу в Cloudflare минув. Щоб знову під’єднати домен, виконайте patchy share setup у Терміналі.",
   "This site has no secure certificate yet. Refresh certificates, then share again.": "Цей сайт ще не має сертифіката безпеки. Оновіть сертифікати й поділіться знову.",
   "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "Адреса цього сайту досі вказує на тунель, видалений у Cloudflare. Видаліть його DNS-запис на панелі Cloudflare й поділіться знову.",
-  "Couldn’t share this site. Show Details has the exact message from Patchy.": "Не вдалося надати спільний доступ до цього сайту. Натисніть «Показати деталі», щоб побачити точне повідомлення Patchy."
+  "Couldn’t share this site. Show Details has the exact message from Patchy.": "Не вдалося надати спільний доступ до цього сайту. Натисніть «Показати деталі», щоб побачити точне повідомлення Patchy.",
+  "Share at %@": "Поділитися на %@",
+  "Share with a Temporary Link": "Поділитися через тимчасове посилання"
 }

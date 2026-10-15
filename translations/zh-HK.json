@@ -382,5 +382,7 @@
   "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.": "你的Cloudflare登入已過期。如要重新連接你的網域，請在「終端機」執行patchy share setup。",
   "This site has no secure certificate yet. Refresh certificates, then share again.": "這個網站仍未有安全證書。請更新證書，然後再分享一次。",
   "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "這個網站的網址仍然指向一條已在Cloudflare刪除的通道。請在Cloudflare控制台刪除它的DNS記錄，然後再分享一次。",
-  "Couldn’t share this site. Show Details has the exact message from Patchy.": "無法分享這個網站。「顯示詳情」中有Patchy的原始訊息。"
+  "Couldn’t share this site. Show Details has the exact message from Patchy.": "無法分享這個網站。「顯示詳情」中有Patchy的原始訊息。",
+  "Share at %@": "在 %@ 分享",
+  "Share with a Temporary Link": "以臨時連結分享"
 }

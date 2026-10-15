@@ -412,5 +412,7 @@
   "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.": "Vaša prijava u Cloudflare je istekla. Da biste ponovno povezali svoju domenu, pokrenite patchy share setup u Terminalu.",
   "This site has no secure certificate yet. Refresh certificates, then share again.": "Ova web-stranica još nema sigurnosni certifikat. Obnovite certifikate pa ponovno podijelite.",
   "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "Adresa ove web-stranice i dalje upućuje na tunel koji je izbrisan u Cloudflareu. Izbrišite njezin DNS zapis na nadzornoj ploči Cloudflarea pa ponovno podijelite.",
-  "Couldn’t share this site. Show Details has the exact message from Patchy.": "Nije moguće podijeliti ovu web-stranicu. Pod “Prikaži detalje” nalazi se točna poruka od Patchyja."
+  "Couldn’t share this site. Show Details has the exact message from Patchy.": "Nije moguće podijeliti ovu web-stranicu. Pod “Prikaži detalje” nalazi se točna poruka od Patchyja.",
+  "Share at %@": "Podijeli na %@",
+  "Share with a Temporary Link": "Podijeli privremenom poveznicom"
 }

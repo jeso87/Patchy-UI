@@ -8,6 +8,20 @@ enum ShareCopy {
         access.url.host?.hasSuffix(".trycloudflare.com") ?? false
     }
 
+    struct Choice: Hashable {
+        let title: String
+        let quick: Bool
+    }
+
+    /// What Share offers once a domain is connected. Empty without one: Share then makes a temporary link.
+    static func choices(sharingDomain: String?) -> [Choice] {
+        guard let domain = sharingDomain else { return [] }
+        return [
+            Choice(title: String(localized: "Share at \(domain)", comment: "Share menu item: a stable address on the person's own domain. The placeholder is a domain like example.com."), quick: false),
+            Choice(title: String(localized: "Share with a Temporary Link", comment: "Share menu item: a random link that works until sharing stops."), quick: true),
+        ]
+    }
+
     static func notice(for access: ShareAccess) -> String {
         if access.password != nil {
             return String(localized: "Anyone with this address and password can see this site until you stop sharing.", comment: "Under a shared site's address and password.")

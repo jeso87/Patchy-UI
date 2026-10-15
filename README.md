@@ -42,7 +42,8 @@ commands for you. It is free, open source, and not affiliated with Joe Workman.
 - **Share a site at a public link** so someone else can see it, for example a
   client reviewing a preview. One click gives a temporary link that works until
   you stop sharing. If you've set up your own domain with
-  `patchy share setup`, the site gets a stable address with a password instead.
+  `patchy share setup`, Share asks each time: a stable address on your domain
+  with a password, or a temporary link.
   Sharing needs Cloudflare's free `cloudflared`; the app offers to install it.
 - **Group related sites,** such as one customer's domain and subdomains. Groups
   show in the sidebar and as submenus in the menu bar. The app suggests groups

@@ -45434,6 +45434,234 @@
           "stringUnit" : { "state" : "translated", "value" : "你的Cloudflare登入已過期。若要重新連接你的網域，請在「終端機」中執行patchy share setup。" }
         }
       }
+    },
+    "Share at %@" : {
+      "comment" : "Share menu item: a stable address on the person's own domain. The placeholder is a domain like example.com.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Share at %@" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "مشاركة على %@" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Comparteix a %@" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sdílet na %@" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Del på %@" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Unter %@ teilen" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Κοινή χρήση στο %@" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Compartir en %@" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "اشتراک‌گذاری در %@" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Jaa osoitteessa %@" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partager sur %@" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "שיתוף ב־%@" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Podijeli na %@" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Megosztás itt: %@" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deila á %@" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Condividi su %@" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@で共有" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@에서 공유하기" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Del på %@" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deel op %@" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Del på %@" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Udostępnij w %@" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Compartilhar em %@" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partilhar em %@" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partajați pe %@" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Поделиться на %@" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zdieľať na %@" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deli na %@" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dela på %@" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "แชร์ที่ %@" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ üzerinde paylaş" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Поділитися на %@" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Chia sẻ tại %@" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "在 %@ 分享" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "在 %@ 上共享" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "在 %@ 分享" }
+        }
+      }
+    },
+    "Share with a Temporary Link" : {
+      "comment" : "Share menu item: a random link that works until sharing stops.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Share with a Temporary Link" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "مشاركة برابط مؤقت" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Comparteix amb un enllaç temporal" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sdílet přes dočasný odkaz" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Del via et midlertidigt link" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Über einen temporären Link teilen" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Κοινή χρήση με προσωρινό σύνδεσμο" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Compartir con un enlace temporal" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "اشتراک‌گذاری با یک پیوند موقت" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Jaa väliaikaisella linkillä" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partager via un lien temporaire" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "שיתוף בקישור זמני" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Podijeli privremenom poveznicom" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Megosztás ideiglenes linkkel" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deila með tímabundnum tengli" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Condividi con un link temporaneo" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "一時的なリンクで共有" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "임시 링크로 공유하기" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Del med en midlertidig lenke" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deel via een tijdelijke link" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Del med ei mellombels lenkje" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Udostępnij przez link tymczasowy" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Compartilhar com um Link Temporário" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partilhar com uma ligação temporária" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partajați printr-un link temporar" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Поделиться по временной ссылке" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zdieľať cez dočasný odkaz" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deli z začasno povezavo" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dela via en tillfällig länk" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "แชร์ด้วยลิงก์ชั่วคราว" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Geçici bir bağlantıyla paylaş" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Поділитися через тимчасове посилання" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Chia sẻ bằng liên kết tạm thời" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "以臨時連結分享" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "通过临时链接共享" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "以臨時連結分享" }
+        }
+      }
     }
   },
   "version" : "1.0"

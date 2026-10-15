@@ -57,7 +57,7 @@ public enum ShareOutput {
 public final class ShareSession: @unchecked Sendable {
     public let address: String
     private let environment: PatchyEnvironment
-    private let quick: Bool
+    public let quick: Bool
     private let callbackQueue: DispatchQueue
     private let onChange: @Sendable (ShareState) -> Void
     private let process = Process()

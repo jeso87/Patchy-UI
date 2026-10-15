@@ -109,9 +109,7 @@ struct SiteDetailView: View {
                     .help(compact ? "Stop Sharing" : "")
                     .disabled(model.stoppingShares.contains(site.address))
                 } else {
-                    Button { model.share(site) } label: {
-                        Label("Share", systemImage: "link")
-                    }
+                    shareButton
                     .labelStyle(compact ? AnyLabelStyle(.iconOnly) : AnyLabelStyle(.titleOnly))
                     .help(model.serverRunning ? "Share this site at a public link" : "Start the server to share this site")
                     .disabled(!model.serverRunning)
@@ -124,6 +122,25 @@ struct SiteDetailView: View {
                 .foregroundStyle(Theme.redText)
                 .disabled(model.isBusy)
                 .help("Remove Site (Delete)")
+        }
+    }
+
+    /// With a domain connected, Share asks which link to make; otherwise it makes a temporary link.
+    @ViewBuilder private var shareButton: some View {
+        let choices = ShareCopy.choices(sharingDomain: model.sharingDomain)
+        if choices.isEmpty {
+            Button { model.share(site) } label: {
+                Label("Share", systemImage: "link")
+            }
+        } else {
+            Menu {
+                ForEach(choices, id: \.self) { choice in
+                    Button(choice.title) { model.share(site, quick: choice.quick) }
+                }
+            } label: {
+                Label("Share", systemImage: "link")
+            }
+            .fixedSize()
         }
     }
 
