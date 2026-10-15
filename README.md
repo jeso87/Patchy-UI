@@ -60,6 +60,13 @@ commands for you. It is free, open source, and not affiliated with Joe Workman.
   translations are machine-made; corrections are welcome as pull requests to
   `translations/<lang>.json`.
 
+  Arabic, Catalan, Chinese (Simplified), Chinese (Traditional, Hong Kong),
+  Chinese (Traditional, Taiwan), Croatian, Czech, Danish, Dutch, English,
+  Finnish, French, German, Greek, Hebrew, Hungarian, Icelandic, Italian,
+  Japanese, Korean, Norwegian Bokmål, Norwegian Nynorsk, Persian, Polish,
+  Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Slovak,
+  Slovenian, Spanish, Swedish, Thai, Turkish, Ukrainian and Vietnamese.
+
 <div align="center">
 <img src="docs/screenshots/add-site-dark.png" width="760" alt="The Add Site sheet: a large address field showing harbor-cafe with .test added, the folder the site's files live in, a group picker, and a checkbox to also answer at www.">
 </div>
