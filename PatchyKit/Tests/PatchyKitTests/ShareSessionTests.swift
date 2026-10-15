@@ -200,3 +200,45 @@ final class StateLog: @unchecked Sendable {
         #expect(environment.sitesDir.path == "/opt/homebrew/etc/httpd/sites")
     }
 }
+
+@Suite(.serialized) struct ShareWatcherTests {
+    /// The app holds the write end of Patchy's standard input. If the app dies without stopping a
+    /// share (a crash, Force Quit), that end closes, and the share must stop on its own.
+    @Test func closingStandardInputStopsTheShare() async throws {
+        let prefix = try FakePrefix(patchyScript: ShareSessionTests.script(printing: ShareSessionTests.quickBody))
+        defer { prefix.remove() }
+        let process = Process()
+        process.executableURL = URL(fileURLWithPath: "/bin/zsh")
+        process.arguments = ["-c", ShareSession.watcherScript, "patchy-share", prefix.environment.patchyBinary.path, "share", "harbor.test"]
+        let input = Pipe()
+        let output = Pipe()
+        process.standardInput = input
+        process.standardOutput = output
+        process.standardError = output
+        let collected = Collected()
+        output.fileHandleForReading.readabilityHandler = { handle in
+            let data = handle.availableData
+            if !data.isEmpty { collected.add(String(decoding: data, as: UTF8.self)) }
+        }
+        try process.run()
+
+        var ready = false
+        for _ in 0..<100 where !ready {
+            ready = collected.text.contains("Press Ctrl-C to stop sharing.")
+            if !ready { try await Task.sleep(for: .milliseconds(50)) }
+        }
+        #expect(ready)
+
+        try input.fileHandleForWriting.close()   // what the kernel does when the app dies
+        var exited = false
+        for _ in 0..<100 where !exited {
+            exited = !process.isRunning
+            if !exited { try await Task.sleep(for: .milliseconds(50)) }
+        }
+        #expect(exited)
+        try await Task.sleep(for: .milliseconds(200))
+        #expect(collected.text.contains("Stopped sharing harbor.test."))
+        output.fileHandleForReading.readabilityHandler = nil
+        if process.isRunning { process.terminate() }
+    }
+}

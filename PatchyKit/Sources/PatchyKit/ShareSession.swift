@@ -65,6 +65,24 @@ public final class ShareSession: @unchecked Sendable {
     private var output = ""
     private var access: ShareAccess?
     private var stopRequested = false
+    /// The app's end of Patchy's standard input. Closing it, or the app dying, stops the share.
+    private var lifeline: FileHandle?
+
+    /// Runs `patchy share` and stops it (TERM, which Patchy forwards to cloudflared) when its
+    /// standard input reaches end of file: when the app closes it on Stop, or when the app is gone
+    /// for any reason, a crash and Force Quit included. TERM rather than INT, because a background
+    /// job in a script starts with INT ignored. Arguments: the Patchy binary, then its arguments.
+    static let watcherScript = """
+    exec 3<&0
+    "$1" "${@:2}" </dev/null &
+    p=$!
+    trap 'kill -TERM $p 2>/dev/null' INT TERM HUP
+    { read -r _ <&3; kill -TERM $p 2>/dev/null } &
+    w=$!
+    exec 3<&-
+    while kill -0 $p 2>/dev/null; do wait $p 2>/dev/null; done
+    kill $w 2>/dev/null
+    """
 
     public init(environment: PatchyEnvironment, address: String, quick: Bool = false,
                 callbackQueue: DispatchQueue = .main, onChange: @escaping @Sendable (ShareState) -> Void) {
@@ -76,10 +94,13 @@ public final class ShareSession: @unchecked Sendable {
     }
 
     public func start() {
-        process.executableURL = environment.patchyBinary
-        process.arguments = ["share", address] + (quick ? ["--quick"] : [])
+        process.executableURL = URL(fileURLWithPath: "/bin/zsh")
+        process.arguments = ["-c", Self.watcherScript, "patchy-share", environment.patchyBinary.path,
+                             "share", address] + (quick ? ["--quick"] : [])
         process.environment = environment.processEnvironment()
-        process.standardInput = FileHandle.nullDevice
+        let input = Pipe()
+        process.standardInput = input
+        lifeline = input.fileHandleForWriting
         let pipe = Pipe()
         process.standardOutput = pipe
         process.standardError = pipe
@@ -100,6 +121,7 @@ public final class ShareSession: @unchecked Sendable {
             return
         }
         try? pipe.fileHandleForWriting.close()
+        try? input.fileHandleForReading.close()
 
         let handle = pipe.fileHandleForReading
         Thread {
@@ -117,15 +139,18 @@ public final class ShareSession: @unchecked Sendable {
         }.start()
     }
 
-    /// Asks Patchy to stop sharing (Ctrl-C), then insists (TERM) if it hasn't after 3 seconds.
+    /// Asks Patchy to stop sharing, then insists if it hasn't after 3 seconds; a second TERM
+    /// makes cloudflared skip its grace period.
     public func stop() {
         lock.lock()
         let alreadyStopping = stopRequested
         stopRequested = true
+        let lifeline = lifeline
+        self.lifeline = nil
         lock.unlock()
         guard !alreadyStopping, process.isRunning else { return }
+        try? lifeline?.close()
         let pid = process.processIdentifier
-        kill(pid, SIGINT)
         let process = process
         DispatchQueue.global().asyncAfter(deadline: .now() + 3) {
             if process.isRunning { kill(pid, SIGTERM) }
@@ -147,6 +172,8 @@ public final class ShareSession: @unchecked Sendable {
     private func finished() {
         process.terminationHandler = nil
         lock.lock()
+        try? lifeline?.close()
+        lifeline = nil
         let state: ShareState = stopRequested ? .stopped : .failed(output: output, wasSharing: access != nil)
         lock.unlock()
         report(state)
