@@ -325,7 +325,7 @@
   "Start the server to open this site": "Запустите сервер, чтобы открыть этот сайт",
   "Starting and stopping the server, and adding or removing sites, all tell your Mac where each address lives. Normally macOS asks for your Mac password every time.": "Когда вы запускаете или останавливаете сервер, добавляете или удаляете сайты, ваш Mac узнаёт, куда ведёт каждый адрес. Обычно macOS каждый раз запрашивает при этом пароль от Mac.",
   "Starting the server…": "Запуск сервера…",
-  "Stop": "Остановить",
+  "Stop": "Стоп",
   "Stop Server": "Остановить сервер",
   "Stop the server and release your addresses": "Остановить сервер и освободить ваши адреса",
   "Stop, Then Start": "Остановить и запустить",
