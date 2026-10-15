@@ -29,8 +29,11 @@ way Sparkle's update dialog (which ships inside the app) does. In:
   Pro says 你.
 - **Croatian** Sparkle says *ti*; Shrinker Pro says *Vi*.
 
-Each followed Sparkle. If you'd rather match macOS or Shrinker Pro in any of
-these, it's a rewrite of that one language's sentences (buttons mostly stay).
+Each first followed Sparkle. On 2026-10-15 the developer decided these five
+match Shrinker Pro instead (Catalan *tu*, Romanian *dvs.*, Croatian *Vi*,
+Chinese 你), and the files were rewritten; the glossary records the exception.
+Romanian's buttons became formal imperatives too, as in Shrinker Pro
+(„Reparați”, „Afișați detaliile”).
 
 Hong Kong Chinese is the exception the other way: Sparkle's zh_HK is
 colloquial Cantonese, so the file uses 你 like Sparkle but standard written
@@ -88,7 +91,7 @@ worth a native reader's eye.
 | | Register | Applications › Utilities | Reviewer changed |
 |---|---|---|---|
 | ar | masculine imperatives, as Sparkle | التطبيقات › الأدوات المساعدة | 41 (37 right-to-left) |
-| ca | vós (Sparkle) | Apps › Utilitats | 10 |
+| ca | tu (Shrinker Pro) | Apps › Utilitats | 10 |
 | cs | vy | Aplikace › Utility | 11 |
 | da | du | Apps › Hjælpeapps | 7 |
 | el | εσείς | Εφαρμογές › Βοηθήματα | 19 |
@@ -97,7 +100,7 @@ worth a native reader's eye.
 | fi | sinä | Apit › Lisäapit | 6 |
 | fr | vous | Applications › Utilitaires | 5 |
 | he | gender-neutral noun forms | יישומים › כלי עזר | 38 (about 32 right-to-left) |
-| hr | ti (Sparkle) | Aplikacije › Uslužni programi | 33 |
+| hr | Vi (Shrinker Pro) | Aplikacije › Uslužni programi | 33 |
 | hu | Ön | Alkalmazások › Segédprogramok | 5 |
 | is | þú | Applications › Utilities | 6 |
 | it | tu | Applicazioni › Utility | 18 |
@@ -109,7 +112,7 @@ worth a native reader's eye.
 | pl | ty | Aplikacje › Narzędzia | 16 |
 | pt-BR | você | Aplicativos › Utilitários | 31 |
 | pt-PT | formal third person | Aplicações › Utilitários | 6 |
-| ro | tu (Sparkle) | Aplicații › Utilitare | 14 |
+| ro | dvs. (Shrinker Pro) | Aplicații › Utilitare | 14 |
 | ru | вы | Программы › Утилиты | 7 |
 | sk | vy | Aplikácie › Utility | 14 |
 | sl | vi | Aplikacije › Pripomočki | 15 |
@@ -118,8 +121,8 @@ worth a native reader's eye.
 | tr | siz | Uygulamalar › İzlenceler | 7 |
 | uk | ви | Програми › Утиліти | 11 |
 | vi | bạn | Ứng dụng › Tiện ích | 14 |
-| zh-Hans | 您 (Sparkle) | “应用程序” › “实用工具” | 7 |
-| zh-Hant | 您 (Sparkle) | 「應用程式」›「工具程式」 | 14 |
+| zh-Hans | 你 (Shrinker Pro) | “应用程序” › “实用工具” | 7 |
+| zh-Hant | 你 (Shrinker Pro) | 「應用程式」›「工具程式」 | 14 |
 | zh-HK | 你 | 應用程式 › 工具程式 | 16 |
 
 ### Worth a native reader's eye

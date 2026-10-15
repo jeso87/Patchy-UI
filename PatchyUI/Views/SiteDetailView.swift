@@ -59,7 +59,17 @@ struct SiteDetailView: View {
         }
     }
 
+    /// When the labels don't fit (a narrow window in a language with long words), Copy Address
+    /// and Reveal in Finder show only their icons; their names stay as tooltips and for VoiceOver.
     private var actions: some View {
+        ViewThatFits(in: .horizontal) {
+            actionRow(compact: false)
+            actionRow(compact: true)
+        }
+        .controlSize(.large)
+    }
+
+    private func actionRow(compact: Bool) -> some View {
         HStack(spacing: 8) {
             Button(flash == "open" ? "Opening…" : "Open in Browser") {
                 model.openInBrowser(site)
@@ -69,22 +79,29 @@ struct SiteDetailView: View {
             .disabled(!model.serverRunning)
             .help(model.serverRunning ? "Open \(site.url.absoluteString)" : "Start the server to open this site")
 
-            Button(flash == "copy" ? "Copied" : "Copy Address") {
+            Button {
                 model.copyAddress(site)
                 showFlash("copy")
+            } label: {
+                Label(flash == "copy" ? "Copied" : "Copy Address", systemImage: flash == "copy" ? "checkmark" : "doc.on.doc")
             }
+            .labelStyle(compact ? AnyLabelStyle(.iconOnly) : AnyLabelStyle(.titleOnly))
+            .help(compact ? "Copy Address" : "")
 
-            Button("Reveal in Finder") { model.revealFolder(site) }
-                .disabled(!site.folderExists)
+            Button { model.revealFolder(site) } label: {
+                Label("Reveal in Finder", systemImage: "folder")
+            }
+            .labelStyle(compact ? AnyLabelStyle(.iconOnly) : AnyLabelStyle(.titleOnly))
+            .help(compact ? "Reveal in Finder" : "")
+            .disabled(!site.folderExists)
 
-            Spacer()
+            Spacer(minLength: 8)
 
             Button("Remove…", role: .destructive) { model.askRemove(site.address) }
                 .foregroundStyle(Theme.redText)
                 .disabled(model.isBusy)
                 .help("Remove Site (Delete)")
         }
-        .controlSize(.large)
     }
 
     private func showFlash(_ key: String) {
@@ -217,4 +234,13 @@ struct InfoRow<Content: View>: View {
         .padding(.horizontal, 16)
         .padding(.vertical, 12)
     }
+}
+
+/// Picks a label style at run time.
+private struct AnyLabelStyle: LabelStyle {
+    private let make: (Configuration) -> AnyView
+
+    init(_ style: some LabelStyle) { make = { AnyView(style.makeBody(configuration: $0)) } }
+
+    func makeBody(configuration: Configuration) -> some View { make(configuration) }
 }

@@ -287,7 +287,7 @@
   "Reveal in Finder": "Показати у Finder",
   "Running": "Працює",
   "Running · %@": "Працює · %@",
-  "Running · needs repair": "Працює · потрібне виправлення",
+  "Running · needs repair": "Працює · треба виправити",
   "Secure connection": "Захищене зʼєднання",
   "Secure · %lld days": {
     "one": "Захищено · %lld день",
@@ -325,7 +325,7 @@
   "Start the server to open this site": "Запустіть сервер, щоб відкрити цей сайт",
   "Starting and stopping the server, and adding or removing sites, all tell your Mac where each address lives. Normally macOS asks for your Mac password every time.": "Запуск і зупинка сервера, додавання й вилучення сайтів — усе це повідомляє вашому Mac, куди веде кожна адреса. Зазвичай macOS щоразу запитує пароль Mac.",
   "Starting the server…": "Запуск сервера…",
-  "Stop": "Зупинити",
+  "Stop": "Стоп",
   "Stop Server": "Зупинити сервер",
   "Stop the server and release your addresses": "Зупинити сервер і звільнити ваші адреси",
   "Stop, Then Start": "Зупинити й запустити",

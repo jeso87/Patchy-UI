@@ -162,6 +162,9 @@ final class AppModel {
 
     @ObservationIgnored private var client: PatchyClient?
     @ObservationIgnored private var pendingAction: PendingAction?
+    /// Set when someone picks Not Now: for the rest of this session, changes go ahead and macOS
+    /// asks for the Mac password instead of the app offering password-free mode each time.
+    @ObservationIgnored private var trustDeclined = false
     @ObservationIgnored private var sessionPassword: String?
     @ObservationIgnored private var passwordContinuation: CheckedContinuation<String?, Never>?
     @ObservationIgnored private var taskOutput = ""
@@ -460,7 +463,7 @@ final class AppModel {
 
     /// Changes that touch routing are offered password-free setup first, as the design asks.
     private func requireTrust(for action: PendingAction) -> Bool {
-        if trustEnabled { return true }
+        if trustEnabled || trustDeclined { return true }
         pendingAction = action
         trustStep = .explain
         trustError = nil
@@ -480,9 +483,15 @@ final class AppModel {
     var trustIsUpdate: Bool { snapshot.trust == .outdated }
     var trustHasPendingAction: Bool { pendingAction != nil }
 
+    /// Not Now on the offer that came before a change carries on with that change; macOS then
+    /// asks for the Mac password.
     func dismissTrust() {
-        sheet = pendingAction == .add ? .add : nil
+        let pending = pendingAction
         pendingAction = nil
+        sheet = pending == .add ? .add : nil
+        guard let pending else { return }
+        trustDeclined = true
+        run(pending)
     }
 
     func submitTrustPassword(_ password: String) {

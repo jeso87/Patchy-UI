@@ -66,6 +66,12 @@ reader informally (German "du"), so does Patchy UI; if formally, so does Patchy
 UI. A change of register halfway through the app's own update dialog reads as
 two different products.
 
+Exception, by decision: where Sparkle disagrees with the developer's other app,
+Shrinker Pro, Patchy UI matches Shrinker Pro, so the two apps speak to the
+reader the same way. That is Catalan (*tu*), Romanian (*dvs.*), Croatian (*Vi*),
+and Simplified and Traditional (Taiwan) Chinese (你). Sparkle's update dialog
+keeps its own wording.
+
 ## Placeholders
 
 - A key with **one** placeholder: keep it, as `%@` or `%lld`, anywhere in the sentence.
