@@ -46,8 +46,8 @@ struct SiteStatus {
                                    detail: String(localized: "Valid until \(date). Refresh before then to avoid browser warnings.", comment: "Certificate detail. The placeholder is a date."))
                 certShort = Phrases.certificateExpiresIn(days: days)
             } else {
-                certificate = Line(severity: .ok, label: String(localized: "Secure · \(days) days left", comment: "Certificate status in a site's details. English never shows 1 here (it's always over 30), but give it your language's plural forms: in Russian or Polish, 31 takes the singular."), detail: String(localized: "Valid until \(date).", comment: "Certificate detail. The placeholder is a date."))
-                certShort = String(localized: "Secure · \(days) days", comment: "Short status in the sidebar for a healthy site: days until its certificate expires. English never shows 1 here (it's always over 30), but give it your language's plural forms: in Russian or Polish, 31 takes the singular.")
+                certificate = Line(severity: .ok, label: String(localized: "Secure · \(days) days left", comment: "Certificate status in a site's details. English never shows 1 here (it's always over 30), but give it your language's plural forms: in Russian or Ukrainian, 21 and 31 take the singular."), detail: String(localized: "Valid until \(date).", comment: "Certificate detail. The placeholder is a date."))
+                certShort = String(localized: "Secure · \(days) days", comment: "Short status in the sidebar for a healthy site: days until its certificate expires. English never shows 1 here (it's always over 30), but give it your language's plural forms: in Russian or Ukrainian, 21 and 31 take the singular.")
             }
         }
         certificateNeedsRefresh = certificate.severity != .ok
