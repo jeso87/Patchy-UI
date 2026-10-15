@@ -142,7 +142,7 @@ private let sampleVhost = """
 }
 
 /// A throwaway Homebrew prefix with a fake `patchy` so commands can run without touching the real one.
-private struct FakePrefix {
+struct FakePrefix {
     let root: URL
     let environment: PatchyEnvironment
 
@@ -305,7 +305,7 @@ private struct FakePrefix {
     }
 }
 
-private final class Collected: @unchecked Sendable {
+final class Collected: @unchecked Sendable {
     private let lock = NSLock()
     private var buffer = ""
     func add(_ chunk: String) { lock.lock(); buffer += chunk; lock.unlock() }
