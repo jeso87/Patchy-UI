@@ -23,6 +23,11 @@ struct PatchyUIApp: App {
         }
         .defaultSize(width: 1060, height: 720)
         .commands {
+            // The standard panel, with credits naming the author and Patchy, and the versions
+            // this Mac runs.
+            CommandGroup(replacing: .appInfo) {
+                Button("About Patchy UI") { AboutPanel.show(model) }
+            }
             CommandGroup(after: .appInfo) {
                 Button("Check for Updates…") { model.updater.checkForUpdates() }
             }
@@ -41,6 +46,11 @@ struct PatchyUIApp: App {
                 }
                 Divider()
                 Button("Refresh Certificates…") { model.askRefreshCertificates() }
+                if let environment = model.environment {
+                    Button("Reveal Server Error Log in Finder") {
+                        NSWorkspace.shared.activateFileViewerSelecting([environment.serverErrorLog])
+                    }
+                }
             }
         }
 
