@@ -378,5 +378,9 @@
   "Stopping…": "Đang dừng…",
   "The server isn’t running. Start it, then share again.": "Máy chủ không chạy. Hãy khởi động máy chủ rồi chia sẻ lại.",
   "Try Again": "Thử lại",
-  "Username": "Tên người dùng"
+  "Username": "Tên người dùng",
+  "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.": "Phiên đăng nhập Cloudflare của bạn đã hết hạn. Để kết nối lại tên miền, hãy chạy patchy share setup trong Terminal.",
+  "This site has no secure certificate yet. Refresh certificates, then share again.": "Trang web này chưa có chứng chỉ bảo mật. Hãy làm mới chứng chỉ rồi chia sẻ lại.",
+  "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "Địa chỉ của trang web này vẫn trỏ đến một đường hầm đã bị xóa trong Cloudflare. Hãy xóa bản ghi DNS của địa chỉ này trong bảng điều khiển Cloudflare rồi chia sẻ lại.",
+  "Couldn’t share this site. Show Details has the exact message from Patchy.": "Không thể chia sẻ trang web này. “Hiển thị chi tiết” có thông báo chính xác từ Patchy."
 }

@@ -393,5 +393,9 @@
   "Stopping…": "Interruzione…",
   "The server isn’t running. Start it, then share again.": "Il server non è in esecuzione. Avvialo, poi condividi di nuovo.",
   "Try Again": "Riprova",
-  "Username": "Nome utente"
+  "Username": "Nome utente",
+  "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.": "Il tuo accesso a Cloudflare è scaduto. Per ricollegare il tuo dominio, esegui patchy share setup in Terminale.",
+  "This site has no secure certificate yet. Refresh certificates, then share again.": "Questo sito non ha ancora un certificato di sicurezza. Rinnova i certificati, poi condividi di nuovo.",
+  "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "L’indirizzo di questo sito punta ancora a un tunnel eliminato in Cloudflare. Elimina il suo record DNS nella dashboard di Cloudflare, poi condividi di nuovo.",
+  "Couldn’t share this site. Show Details has the exact message from Patchy.": "Impossibile condividere questo sito. In “Mostra dettagli” trovi il messaggio esatto di Patchy."
 }

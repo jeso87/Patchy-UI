@@ -408,5 +408,9 @@
   "Stopping…": "השיתוף נעצר…",
   "The server isn’t running. Start it, then share again.": "השרת לא פועל. יש להפעיל אותו ולשתף שוב.",
   "Try Again": "ניסיון חוזר",
-  "Username": "שם משתמש"
+  "Username": "שם משתמש",
+  "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.": "פג תוקף ההתחברות ל-Cloudflare. כדי לחבר שוב את הדומיין, יש להריץ patchy share setup במסוף.",
+  "This site has no secure certificate yet. Refresh certificates, then share again.": "לאתר הזה עדיין אין אישור אבטחה. יש לחדש את האישורים ולשתף שוב.",
+  "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "הכתובת של האתר עדיין מפנה למנהרה שנמחקה ב-Cloudflare. יש למחוק את רשומת ה-DNS שלה בלוח הבקרה של Cloudflare ולשתף שוב.",
+  "Couldn’t share this site. Show Details has the exact message from Patchy.": "לא ניתן היה לשתף את האתר. ב״הצגת פרטים״ מופיעה ההודעה המדויקת מ-Patchy."
 }

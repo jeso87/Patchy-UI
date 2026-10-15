@@ -393,5 +393,9 @@
   "Stopping…": "در حال توقف…",
   "The server isn’t running. Start it, then share again.": "سرور روشن نیست. آن را روشن کنید و دوباره به اشتراک بگذارید.",
   "Try Again": "دوباره امتحان کنید",
-  "Username": "نام کاربری"
+  "Username": "نام کاربری",
+  "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.": "ورود شما به Cloudflare منقضی شده است. برای وصل کردن دوبارهٔ دامنه، در Terminal دستور patchy share setup را اجرا کنید.",
+  "This site has no secure certificate yet. Refresh certificates, then share again.": "این سایت هنوز گواهی امنیتی ندارد. گواهی‌ها را تازه کنید و دوباره به اشتراک بگذارید.",
+  "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "نشانی این سایت هنوز به تونلی اشاره می‌کند که در Cloudflare حذف شده است. رکورد DNS آن را در داشبورد Cloudflare حذف کنید و دوباره به اشتراک بگذارید.",
+  "Couldn’t share this site. Show Details has the exact message from Patchy.": "اشتراک‌گذاری این سایت ممکن نشد. پیام دقیق Patchy در «نمایش جزئیات» است."
 }

@@ -393,5 +393,9 @@
   "Stopping…": "Stoppar…",
   "The server isn’t running. Start it, then share again.": "Servern körs inte. Starta den och dela igen.",
   "Try Again": "Försök igen",
-  "Username": "Användarnamn"
+  "Username": "Användarnamn",
+  "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.": "Din Cloudflare-inloggning har gått ut. Kör patchy share setup i Terminal för att ansluta din domän igen.",
+  "This site has no secure certificate yet. Refresh certificates, then share again.": "Den här webbplatsen har inget säkerhetscertifikat ännu. Förnya certifikaten och dela igen.",
+  "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "Den här webbplatsens adress pekar fortfarande på en tunnel som har raderats i Cloudflare. Radera dess DNS-post i Cloudflares kontrollpanel och dela igen.",
+  "Couldn’t share this site. Show Details has the exact message from Patchy.": "Det gick inte att dela den här webbplatsen. Under ”Visa detaljer” finns det exakta meddelandet från Patchy."
 }

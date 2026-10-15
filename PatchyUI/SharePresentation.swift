@@ -25,7 +25,19 @@ enum ShareCopy {
         if wasSharing {
             return String(localized: "Sharing stopped on its own, so the link no longer works.", comment: "Shown when a shared site's link stopped working.")
         }
-        return String(localized: "Couldn’t get a public link. Check your internet connection and try again.", comment: "Shown when sharing a site failed.")
+        if output.contains(PatchyOutput.shareLoginExpired) {
+            return String(localized: "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.", comment: "Shown when sharing a site failed. “patchy share setup” is a command; don't translate it.")
+        }
+        if output.contains(PatchyOutput.shareNoCertificate) {
+            return String(localized: "This site has no secure certificate yet. Refresh certificates, then share again.", comment: "Shown when sharing a site failed.")
+        }
+        if output.contains(PatchyOutput.shareDeletedTunnel) {
+            return String(localized: "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.", comment: "Shown when sharing a site failed. DNS record is the technical name people see in Cloudflare's dashboard.")
+        }
+        if output.contains(PatchyOutput.shareTunnelFailed) {
+            return String(localized: "Couldn’t get a public link. Check your internet connection and try again.", comment: "Shown when sharing a site failed.")
+        }
+        return String(localized: "Couldn’t share this site. Show Details has the exact message from Patchy.", comment: "Shown when sharing a site failed.")
     }
 
     /// What Copy Address and Password puts on the clipboard, ready to paste into a message.

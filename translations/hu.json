@@ -393,5 +393,9 @@
   "Stopping…": "Leállítás…",
   "The server isn’t running. Start it, then share again.": "A szerver nem fut. Indítsa el, majd ossza meg újra.",
   "Try Again": "Újra",
-  "Username": "Felhasználónév"
+  "Username": "Felhasználónév",
+  "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.": "A Cloudflare-bejelentkezése lejárt. A domain újbóli csatlakoztatásához futtassa a Terminalban a patchy share setup parancsot.",
+  "This site has no secure certificate yet. Refresh certificates, then share again.": "Ennek a webhelynek még nincs biztonsági tanúsítványa. Frissítse a tanúsítványokat, majd ossza meg újra.",
+  "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "A webhely címe még mindig egy olyan alagútra mutat, amelyet törölt a Cloudflare-ben. Törölje a DNS-rekordját a Cloudflare irányítópultján, majd ossza meg újra.",
+  "Couldn’t share this site. Show Details has the exact message from Patchy.": "Nem sikerült megosztani ezt a webhelyet. A Patchy pontos üzenete a „Részletek megjelenítése” alatt látható."
 }

@@ -26,6 +26,20 @@ import Testing
                 == "Couldn’t get a public link. Check your internet connection and try again.")
     }
 
+    /// Patchy says what's wrong for problems that aren't the network; the app passes that on.
+    @Test func problemsThatAreNotTheNetwork() {
+        #expect(ShareCopy.problem(output: "Your Cloudflare login has expired. Run 'patchy share setup example.com' again.", wasSharing: false)
+                == "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.")
+        #expect(ShareCopy.problem(output: "harbor.test has no certificate yet. Run 'patchy refresh-certs' first.", wasSharing: false)
+                == "This site has no secure certificate yet. Refresh certificates, then share again.")
+        #expect(ShareCopy.problem(output: "harbor.example.com still points at the deleted tunnel. Delete its DNS record in the Cloudflare dashboard (DNS), then share again.", wasSharing: false)
+                == "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.")
+        #expect(ShareCopy.problem(output: "Apache's configuration check failed, so nothing was set up for harbor.test:", wasSharing: false)
+                == "Couldn’t share this site. Show Details has the exact message from Patchy.")
+        #expect(ShareCopy.problem(output: "harbor.example.com is already used on example.com. Choose another name with --name.", wasSharing: false)
+                == "Couldn’t share this site. Show Details has the exact message from Patchy.")
+    }
+
     @Test func clientMessage() {
         #expect(ShareCopy.clientMessage(for: stable) == "https://harbor.example.com\nUsername: preview\nPassword: k7Rm-4vQx-92Ld")
         #expect(ShareCopy.clientMessage(for: quick) == "https://quiet-river-banana.trycloudflare.com")
@@ -66,7 +80,9 @@ import Testing
 
     @Test func sharingPhrasesAreMatchedNotLocalized() {
         for phrase in [ShareOutput.sharing, ShareOutput.username, ShareOutput.password, ShareOutput.ready,
-                       PatchyOutput.apacheNotRunning, PatchyOutput.cloudflaredRequired] {
+                       PatchyOutput.apacheNotRunning, PatchyOutput.cloudflaredRequired,
+                       PatchyOutput.shareLoginExpired, PatchyOutput.shareNoCertificate,
+                       PatchyOutput.shareDeletedTunnel, PatchyOutput.shareTunnelFailed] {
             #expect(PatchyOutput.all.contains(phrase))
         }
     }

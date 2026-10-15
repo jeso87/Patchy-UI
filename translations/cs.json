@@ -408,5 +408,9 @@
   "Stopping…": "Ukončuje se…",
   "The server isn’t running. Start it, then share again.": "Server neběží. Spusťte ho a sdílejte znovu.",
   "Try Again": "Zkusit znovu",
-  "Username": "Uživatelské jméno"
+  "Username": "Uživatelské jméno",
+  "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.": "Vaše přihlášení ke Cloudflare vypršelo. Chcete-li doménu znovu připojit, spusťte v Terminálu patchy share setup.",
+  "This site has no secure certificate yet. Refresh certificates, then share again.": "Tento web zatím nemá bezpečnostní certifikát. Obnovte certifikáty a sdílejte znovu.",
+  "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "Adresa tohoto webu stále ukazuje na tunel, který byl v Cloudflare smazán. Smažte jeho záznam DNS na nástěnce Cloudflare a sdílejte znovu.",
+  "Couldn’t share this site. Show Details has the exact message from Patchy.": "Tento web se nepodařilo sdílet. Přesnou zprávu od Patchy najdete pod „Zobrazit podrobnosti“."
 }

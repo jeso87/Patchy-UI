@@ -453,5 +453,9 @@
   "Stopping…": "جارٍ الإيقاف…",
   "The server isn’t running. Start it, then share again.": "الخادم لا يعمل. شغّله ثم شارك مرة أخرى.",
   "Try Again": "إعادة المحاولة",
-  "Username": "اسم المستخدم"
+  "Username": "اسم المستخدم",
+  "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.": "انتهت صلاحية تسجيل دخولك إلى Cloudflare. لربط نطاقك مرة أخرى، شغّل patchy share setup في الوحدة الطرفية.",
+  "This site has no secure certificate yet. Refresh certificates, then share again.": "لا توجد لهذا الموقع شهادة أمان بعد. جدّد الشهادات، ثم شارك مرة أخرى.",
+  "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "لا يزال عنوان هذا الموقع يشير إلى نفق حُذف في Cloudflare. احذف سجل DNS الخاص به من لوحة تحكم Cloudflare، ثم شارك مرة أخرى.",
+  "Couldn’t share this site. Show Details has the exact message from Patchy.": "تعذّرت مشاركة هذا الموقع. تجد في «إظهار التفاصيل» رسالة Patchy كما هي."
 }

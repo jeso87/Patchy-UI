@@ -25,6 +25,10 @@ enum PatchyOutput {
     static let terminalRequired = "a terminal is required to read the password"
     static let apacheNotRunning = "Apache isn't running"
     static let cloudflaredRequired = "cloudflared is required"
+    static let shareLoginExpired = "Your Cloudflare login has expired"
+    static let shareNoCertificate = "has no certificate yet"
+    static let shareDeletedTunnel = "still points at the deleted tunnel"
+    static let shareTunnelFailed = "cloudflared stopped before the link was ready"
 
     // Log lines.
     static let fatal = "Fatal"
@@ -33,6 +37,7 @@ enum PatchyOutput {
         started, stopped, startingApache, creatingCertificates, creatingConfig, syntaxOK, restartingApache,
         rollingBack, siteExists, serviceStuck, addressInUse, portHolders, trustUnsafe, trustUnsafeShort,
         terminalRequired, fatal, apacheNotRunning, cloudflaredRequired,
+        shareLoginExpired, shareNoCertificate, shareDeletedTunnel, shareTunnelFailed,
         ShareOutput.sharing, ShareOutput.username, ShareOutput.password, ShareOutput.ready,
     ]
 }

@@ -44978,6 +44978,462 @@
           "stringUnit" : { "state" : "translated", "value" : "使用者名稱" }
         }
       }
+    },
+    "Couldn’t share this site. Show Details has the exact message from Patchy." : {
+      "comment" : "Shown when sharing a site failed.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Couldn’t share this site. Show Details has the exact message from Patchy." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "تعذّرت مشاركة هذا الموقع. تجد في «إظهار التفاصيل» رسالة Patchy كما هي." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "No s’ha pogut compartir aquest lloc web. A “Mostra els detalls” hi ha el missatge exacte de Patchy." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tento web se nepodařilo sdílet. Přesnou zprávu od Patchy najdete pod „Zobrazit podrobnosti“." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dette websted kunne ikke deles. Under “Vis oplysninger” står den præcise meddelelse fra Patchy." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Diese Website konnte nicht geteilt werden. Unter „Details einblenden“ steht die genaue Meldung von Patchy." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Δεν ήταν δυνατή η κοινή χρήση αυτού του ιστότοπου. Η «Εμφάνιση λεπτομερειών» περιέχει το ακριβές μήνυμα του Patchy." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "No se ha podido compartir este sitio. En “Mostrar detalles” está el mensaje exacto de Patchy." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "اشتراک‌گذاری این سایت ممکن نشد. پیام دقیق Patchy در «نمایش جزئیات» است." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sivuston jakaminen epäonnistui. Patchyn tarkka viesti löytyy kohdasta ”Näytä tiedot”." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Impossible de partager ce site. « Afficher les détails » contient le message exact de Patchy." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "לא ניתן היה לשתף את האתר. ב״הצגת פרטים״ מופיעה ההודעה המדויקת מ-Patchy." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nije moguće podijeliti ovu web-stranicu. Pod “Prikaži detalje” nalazi se točna poruka od Patchyja." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nem sikerült megosztani ezt a webhelyet. A Patchy pontos üzenete a „Részletek megjelenítése” alatt látható." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ekki tókst að deila þessum vef. Undir „Sýna upplýsingar“ eru nákvæm skilaboð frá Patchy." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Impossibile condividere questo sito. In “Mostra dettagli” trovi il messaggio esatto di Patchy." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "このサイトを共有できませんでした。Patchyからの正確なメッセージは「詳細を表示」で確認できます。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "이 사이트를 공유할 수 없습니다. Patchy가 보낸 정확한 메시지는 ‘세부사항 보기’에 있습니다." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kunne ikke dele dette nettstedet. Under «Vis detaljer» finner du den nøyaktige meldingen fra Patchy." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kan deze website niet delen. Bij 'Toon details' staat de precieze melding van Patchy." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kunne ikkje dele denne nettstaden. Under «Vis detaljar» finn du den nøyaktige meldinga frå Patchy." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nie udało się udostępnić tej witryny. W „Pokaż szczegóły” znajdziesz dokładny komunikat od Patchy." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Não foi possível compartilhar este site. A mensagem exata do Patchy está em Mostrar Detalhes." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Não foi possível partilhar este site. Em “Mostrar detalhes” encontra a mensagem exata do Patchy." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nu s-a putut partaja acest site. „Afișați detaliile” conține mesajul exact de la Patchy." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Не удалось открыть общий доступ к этому сайту. Нажмите «Показать подробности», чтобы увидеть точное сообщение Patchy." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tento web sa nepodarilo zdieľať. Presné hlásenie od Patchy nájdete v časti „Zobraziť podrobnosti“." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tega spletnega mesta ni bilo mogoče deliti. Pod »Prikaži podrobnosti« je natančno sporočilo programa Patchy." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Det gick inte att dela den här webbplatsen. Under ”Visa detaljer” finns det exakta meddelandet från Patchy." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "แชร์เว็บไซต์นี้ไม่ได้ ดูข้อความที่ตรงตามจริงจาก Patchy ได้ที่ “แสดงรายละเอียด”" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bu site paylaşılamadı. Patchy’nin tam iletisi “Ayrıntıları Göster”de." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Не вдалося надати спільний доступ до цього сайту. Натисніть «Показати деталі», щоб побачити точне повідомлення Patchy." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Không thể chia sẻ trang web này. “Hiển thị chi tiết” có thông báo chính xác từ Patchy." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "無法分享這個網站。「顯示詳情」中有Patchy的原始訊息。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "无法共享此网站。“显示详情”中有来自 Patchy 的确切信息。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "無法分享此網站。「顯示詳細資訊」中有Patchy的完整訊息。" }
+        }
+      }
+    },
+    "This site has no secure certificate yet. Refresh certificates, then share again." : {
+      "comment" : "Shown when sharing a site failed.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "This site has no secure certificate yet. Refresh certificates, then share again." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "لا توجد لهذا الموقع شهادة أمان بعد. جدّد الشهادات، ثم شارك مرة أخرى." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Aquest lloc web encara no té cap certificat de seguretat. Renova els certificats i torna a compartir." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tento web zatím nemá bezpečnostní certifikát. Obnovte certifikáty a sdílejte znovu." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dette websted har endnu ikke et sikkerhedscertifikat. Forny certifikater, og del igen." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Diese Website hat noch kein Sicherheitszertifikat. Erneuere die Zertifikate und teile sie dann erneut." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Αυτός ο ιστότοπος δεν έχει ακόμη πιστοποιητικό ασφαλείας. Ανανεώστε τα πιστοποιητικά και μοιραστείτε ξανά." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Este sitio aún no tiene certificado de seguridad. Renueva los certificados y vuelve a compartir." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "این سایت هنوز گواهی امنیتی ندارد. گواهی‌ها را تازه کنید و دوباره به اشتراک بگذارید." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tällä sivustolla ei ole vielä suojausvarmennetta. Uusi varmenteet ja jaa sitten uudelleen." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ce site n’a pas encore de certificat de sécurité. Renouvelez les certificats, puis partagez à nouveau." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "לאתר הזה עדיין אין אישור אבטחה. יש לחדש את האישורים ולשתף שוב." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ova web-stranica još nema sigurnosni certifikat. Obnovite certifikate pa ponovno podijelite." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ennek a webhelynek még nincs biztonsági tanúsítványa. Frissítse a tanúsítványokat, majd ossza meg újra." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Þessi vefur er ekki enn með öryggisskilríki. Endurnýjaðu skilríkin og deildu svo aftur." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Questo sito non ha ancora un certificato di sicurezza. Rinnova i certificati, poi condividi di nuovo." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "このサイトにはまだセキュリティ証明書がありません。証明書を更新してから、もう一度共有してください。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "이 사이트에는 아직 보안 인증서가 없습니다. 인증서를 갱신한 다음 다시 공유하십시오." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dette nettstedet har ikke et sikkerhetssertifikat ennå. Forny sertifikatene, og del på nytt." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deze website heeft nog geen beveiligingscertificaat. Vernieuw de certificaten en deel opnieuw." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Denne nettstaden har ikkje eit tryggleikssertifikat enno. Forny sertifikata, og del på nytt." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ta witryna nie ma jeszcze certyfikatu bezpieczeństwa. Odśwież certyfikaty i udostępnij ponownie." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Este site ainda não tem um certificado de segurança. Renove os certificados e compartilhe novamente." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Este site ainda não tem um certificado de segurança. Renove os certificados e volte a partilhar." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Acest site nu are încă un certificat de securitate. Reînnoiți certificatele, apoi partajați din nou." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "У этого сайта ещё нет сертификата безопасности. Обновите сертификаты и поделитесь снова." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tento web ešte nemá bezpečnostný certifikát. Obnovte certifikáty a zdieľajte znova." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "To spletno mesto še nima varnostnega potrdila. Osvežite potrdila in znova delite." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Den här webbplatsen har inget säkerhetscertifikat ännu. Förnya certifikaten och dela igen." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "เว็บไซต์นี้ยังไม่มีใบรับรองความปลอดภัย รีเฟรชใบรับรองแล้วแชร์อีกครั้ง" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bu sitenin henüz bir güvenlik sertifikası yok. Sertifikaları yenileyin, sonra yeniden paylaşın." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Цей сайт ще не має сертифіката безпеки. Оновіть сертифікати й поділіться знову." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Trang web này chưa có chứng chỉ bảo mật. Hãy làm mới chứng chỉ rồi chia sẻ lại." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "這個網站仍未有安全證書。請更新證書，然後再分享一次。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "此网站还没有安全证书。请刷新证书，然后再次共享。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "此網站尚未有安全憑證。請更新憑證，然後再分享一次。" }
+        }
+      }
+    },
+    "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again." : {
+      "comment" : "Shown when sharing a site failed. DNS record is the technical name people see in Cloudflare's dashboard.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "لا يزال عنوان هذا الموقع يشير إلى نفق حُذف في Cloudflare. احذف سجل DNS الخاص به من لوحة تحكم Cloudflare، ثم شارك مرة أخرى." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "L’adreça d’aquest lloc web encara apunta a un túnel que es va eliminar a Cloudflare. Elimina’n el registre DNS al tauler de Cloudflare i torna a compartir." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Adresa tohoto webu stále ukazuje na tunel, který byl v Cloudflare smazán. Smažte jeho záznam DNS na nástěnce Cloudflare a sdílejte znovu." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dette websteds adresse peger stadig på en tunnel, der er slettet i Cloudflare. Slet dens DNS-post i Cloudflare-kontrolpanelet, og del igen." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Die Adresse dieser Website verweist noch auf einen Tunnel, der in Cloudflare gelöscht wurde. Lösche ihren DNS-Eintrag im Cloudflare-Dashboard und teile dann erneut." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Η διεύθυνση αυτού του ιστότοπου εξακολουθεί να δείχνει σε ένα τούνελ που διαγράφηκε στο Cloudflare. Διαγράψτε την εγγραφή DNS της στον πίνακα ελέγχου του Cloudflare και μοιραστείτε ξανά." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "La dirección de este sitio aún apunta a un túnel que se eliminó en Cloudflare. Elimina su registro DNS en el panel de Cloudflare y vuelve a compartir." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "نشانی این سایت هنوز به تونلی اشاره می‌کند که در Cloudflare حذف شده است. رکورد DNS آن را در داشبورد Cloudflare حذف کنید و دوباره به اشتراک بگذارید." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tämän sivuston osoite osoittaa yhä tunneliin, joka poistettiin Cloudflaresta. Poista sen DNS-tietue Cloudflaren hallintapaneelista ja jaa sitten uudelleen." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "L’adresse de ce site pointe toujours vers un tunnel supprimé dans Cloudflare. Supprimez son enregistrement DNS dans le tableau de bord Cloudflare, puis partagez à nouveau." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "הכתובת של האתר עדיין מפנה למנהרה שנמחקה ב-Cloudflare. יש למחוק את רשומת ה-DNS שלה בלוח הבקרה של Cloudflare ולשתף שוב." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Adresa ove web-stranice i dalje upućuje na tunel koji je izbrisan u Cloudflareu. Izbrišite njezin DNS zapis na nadzornoj ploči Cloudflarea pa ponovno podijelite." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "A webhely címe még mindig egy olyan alagútra mutat, amelyet törölt a Cloudflare-ben. Törölje a DNS-rekordját a Cloudflare irányítópultján, majd ossza meg újra." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Veffang þessa vefjar vísar enn á göng sem var eytt í Cloudflare. Eyddu DNS-færslu þess á stjórnborði Cloudflare og deildu svo aftur." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "L’indirizzo di questo sito punta ancora a un tunnel eliminato in Cloudflare. Elimina il suo record DNS nella dashboard di Cloudflare, poi condividi di nuovo." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "このサイトのアドレスは、Cloudflareで削除されたトンネルをまだ指しています。CloudflareのダッシュボードでそのDNSレコードを削除してから、もう一度共有してください。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "이 사이트의 주소가 Cloudflare에서 삭제된 터널을 여전히 가리키고 있습니다. Cloudflare 대시보드에서 해당 DNS 레코드를 삭제한 다음 다시 공유하십시오." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Adressen til dette nettstedet peker fortsatt på en tunnel som ble slettet i Cloudflare. Slett DNS-oppføringen i Cloudflare-kontrollpanelet, og del på nytt." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Het adres van deze website verwijst nog naar een tunnel die in Cloudflare is verwijderd. Verwijder het DNS-record ervan in het Cloudflare-dashboard en deel opnieuw." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Adressa til denne nettstaden peikar framleis på ein tunnel som vart sletta i Cloudflare. Slett DNS-oppføringa i Cloudflare-kontrollpanelet, og del på nytt." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Adres tej witryny nadal wskazuje tunel usunięty w Cloudflare. Usuń jego rekord DNS w panelu Cloudflare i udostępnij ponownie." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "O endereço deste site ainda aponta para um túnel que foi apagado no Cloudflare. Apague o registro DNS dele no painel do Cloudflare e compartilhe novamente." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "O endereço deste site ainda aponta para um túnel que foi eliminado na Cloudflare. Elimine o respetivo registo DNS no painel da Cloudflare e volte a partilhar." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Adresa acestui site indică încă un tunel care a fost șters în Cloudflare. Ștergeți înregistrarea DNS a acestuia din panoul Cloudflare, apoi partajați din nou." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Адрес этого сайта всё ещё указывает на туннель, удалённый в Cloudflare. Удалите его DNS-запись в панели Cloudflare и поделитесь снова." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Adresa tohto webu stále ukazuje na tunel, ktorý bol v Cloudflare vymazaný. Vymažte jeho záznam DNS na paneli Cloudflare a zdieľajte znova." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Naslov tega spletnega mesta še vedno kaže na tunel, ki je bil v Cloudflaru izbrisan. Izbrišite njegov zapis DNS na nadzorni plošči Cloudflare in znova delite." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Den här webbplatsens adress pekar fortfarande på en tunnel som har raderats i Cloudflare. Radera dess DNS-post i Cloudflares kontrollpanel och dela igen." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "ที่อยู่ของเว็บไซต์นี้ยังชี้ไปยังทันเนลที่ถูกลบใน Cloudflare ลบระเบียน DNS ของที่อยู่นี้ในแดชบอร์ด Cloudflare แล้วแชร์อีกครั้ง" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bu sitenin adresi hâlâ Cloudflare’de silinmiş bir tüneli gösteriyor. Cloudflare panosunda DNS kaydını silin, sonra yeniden paylaşın." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Адреса цього сайту досі вказує на тунель, видалений у Cloudflare. Видаліть його DNS-запис на панелі Cloudflare й поділіться знову." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Địa chỉ của trang web này vẫn trỏ đến một đường hầm đã bị xóa trong Cloudflare. Hãy xóa bản ghi DNS của địa chỉ này trong bảng điều khiển Cloudflare rồi chia sẻ lại." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "這個網站的網址仍然指向一條已在Cloudflare刪除的通道。請在Cloudflare控制台刪除它的DNS記錄，然後再分享一次。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "此网站的地址仍指向一个已在 Cloudflare 中删除的隧道。请在 Cloudflare 控制面板中删除它的 DNS 记录，然后再次共享。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "此網站的網址仍指向一個已在Cloudflare中刪除的通道。請在Cloudflare儀表板中刪除它的DNS記錄，然後再分享一次。" }
+        }
+      }
+    },
+    "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal." : {
+      "comment" : "Shown when sharing a site failed. “patchy share setup” is a command; don't translate it.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "انتهت صلاحية تسجيل دخولك إلى Cloudflare. لربط نطاقك مرة أخرى، شغّل patchy share setup في الوحدة الطرفية." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "La sessió de Cloudflare ha caducat. Per tornar a connectar el teu domini, executa patchy share setup al Terminal." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Vaše přihlášení ke Cloudflare vypršelo. Chcete-li doménu znovu připojit, spusťte v Terminálu patchy share setup." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dit Cloudflare-login er udløbet. Kør patchy share setup i Terminal for at forbinde dit domæne igen." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deine Cloudflare-Anmeldung ist abgelaufen. Um deine Domain wieder zu verbinden, führe im Terminal patchy share setup aus." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Η σύνδεσή σας στο Cloudflare έληξε. Για να συνδέσετε ξανά τον τομέα σας, εκτελέστε patchy share setup στο Τερματικό." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tu sesión de Cloudflare ha caducado. Para volver a conectar tu dominio, ejecuta patchy share setup en Terminal." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "ورود شما به Cloudflare منقضی شده است. برای وصل کردن دوبارهٔ دامنه، در Terminal دستور patchy share setup را اجرا کنید." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Cloudflare-kirjautumisesi on vanhentunut. Yhdistä verkkotunnuksesi uudelleen suorittamalla Päätteessä patchy share setup." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Votre connexion à Cloudflare a expiré. Pour reconnecter votre domaine, exécutez patchy share setup dans Terminal." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "פג תוקף ההתחברות ל-Cloudflare. כדי לחבר שוב את הדומיין, יש להריץ patchy share setup במסוף." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Vaša prijava u Cloudflare je istekla. Da biste ponovno povezali svoju domenu, pokrenite patchy share setup u Terminalu." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "A Cloudflare-bejelentkezése lejárt. A domain újbóli csatlakoztatásához futtassa a Terminalban a patchy share setup parancsot." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Innskráning þín hjá Cloudflare er útrunnin. Til að tengja lénið aftur skaltu keyra patchy share setup í Terminal." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Il tuo accesso a Cloudflare è scaduto. Per ricollegare il tuo dominio, esegui patchy share setup in Terminale." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "Cloudflareへのログインの有効期限が切れました。ドメインをもう一度接続するには、ターミナルでpatchy share setupを実行してください。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "Cloudflare 로그인이 만료되었습니다. 도메인을 다시 연결하려면 터미널에서 patchy share setup을 실행하십시오." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Cloudflare-påloggingen din er utløpt. Kjør patchy share setup i Terminal for å koble til domenet ditt igjen." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Je Cloudflare-login is verlopen. Voer patchy share setup uit in Terminal om je domein opnieuw te koppelen." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Cloudflare-innlogginga di har gått ut. Køyr patchy share setup i Terminal for å kople til domenet ditt igjen." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Twoje logowanie do Cloudflare wygasło. Aby ponownie połączyć domenę, uruchom patchy share setup w Terminalu." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Seu login no Cloudflare expirou. Para conectar seu domínio de novo, execute patchy share setup no Terminal." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "A sua sessão na Cloudflare expirou. Para voltar a ligar o seu domínio, execute patchy share setup no Terminal." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Autentificarea dvs. în Cloudflare a expirat. Ca să vă conectați din nou domeniul, rulați patchy share setup în Terminal." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Срок вашего входа в Cloudflare истёк. Чтобы снова подключить домен, выполните patchy share setup в Терминале." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Vaše prihlásenie do Cloudflare vypršalo. Ak chcete doménu znova pripojiť, spustite v Termináli patchy share setup." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Vaša prijava v Cloudflare je potekla. Če želite domeno znova povezati, v Terminalu zaženite patchy share setup." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Din Cloudflare-inloggning har gått ut. Kör patchy share setup i Terminal för att ansluta din domän igen." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "การเข้าสู่ระบบ Cloudflare ของคุณหมดอายุแล้ว หากต้องการเชื่อมต่อโดเมนอีกครั้ง ให้เรียกใช้ patchy share setup ในเทอร์มินัล" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Cloudflare oturumunuzun süresi doldu. Alan adınızı yeniden bağlamak için Terminal’de patchy share setup komutunu çalıştırın." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Термін вашого входу в Cloudflare минув. Щоб знову під’єднати домен, виконайте patchy share setup у Терміналі." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Phiên đăng nhập Cloudflare của bạn đã hết hạn. Để kết nối lại tên miền, hãy chạy patchy share setup trong Terminal." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "你的Cloudflare登入已過期。如要重新連接你的網域，請在「終端機」執行patchy share setup。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "你的 Cloudflare 登录已过期。要重新连接你的域名，请在“终端”中运行 patchy share setup。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "你的Cloudflare登入已過期。若要重新連接你的網域，請在「終端機」中執行patchy share setup。" }
+        }
+      }
     }
   },
   "version" : "1.0"

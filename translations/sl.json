@@ -423,5 +423,9 @@
   "Stopping…": "Ustavljanje …",
   "The server isn’t running. Start it, then share again.": "Strežnik ne deluje. Zaženite ga in znova delite.",
   "Try Again": "Poskusi znova",
-  "Username": "Uporabniško ime"
+  "Username": "Uporabniško ime",
+  "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.": "Vaša prijava v Cloudflare je potekla. Če želite domeno znova povezati, v Terminalu zaženite patchy share setup.",
+  "This site has no secure certificate yet. Refresh certificates, then share again.": "To spletno mesto še nima varnostnega potrdila. Osvežite potrdila in znova delite.",
+  "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "Naslov tega spletnega mesta še vedno kaže na tunel, ki je bil v Cloudflaru izbrisan. Izbrišite njegov zapis DNS na nadzorni plošči Cloudflare in znova delite.",
+  "Couldn’t share this site. Show Details has the exact message from Patchy.": "Tega spletnega mesta ni bilo mogoče deliti. Pod »Prikaži podrobnosti« je natančno sporočilo programa Patchy."
 }

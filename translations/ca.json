@@ -393,5 +393,9 @@
   "Stopping…": "S’està aturant…",
   "The server isn’t running. Start it, then share again.": "El servidor no està en marxa. Inicia’l i torna a compartir.",
   "Try Again": "Torna-ho a provar",
-  "Username": "Nom d’usuari"
+  "Username": "Nom d’usuari",
+  "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.": "La sessió de Cloudflare ha caducat. Per tornar a connectar el teu domini, executa patchy share setup al Terminal.",
+  "This site has no secure certificate yet. Refresh certificates, then share again.": "Aquest lloc web encara no té cap certificat de seguretat. Renova els certificats i torna a compartir.",
+  "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "L’adreça d’aquest lloc web encara apunta a un túnel que es va eliminar a Cloudflare. Elimina’n el registre DNS al tauler de Cloudflare i torna a compartir.",
+  "Couldn’t share this site. Show Details has the exact message from Patchy.": "No s’ha pogut compartir aquest lloc web. A “Mostra els detalls” hi ha el missatge exacte de Patchy."
 }

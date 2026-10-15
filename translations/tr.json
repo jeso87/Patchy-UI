@@ -393,5 +393,9 @@
   "Stopping…": "Durduruluyor…",
   "The server isn’t running. Start it, then share again.": "Sunucu çalışmıyor. Başlatın, sonra yeniden paylaşın.",
   "Try Again": "Yeniden Dene",
-  "Username": "Kullanıcı adı"
+  "Username": "Kullanıcı adı",
+  "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.": "Cloudflare oturumunuzun süresi doldu. Alan adınızı yeniden bağlamak için Terminal’de patchy share setup komutunu çalıştırın.",
+  "This site has no secure certificate yet. Refresh certificates, then share again.": "Bu sitenin henüz bir güvenlik sertifikası yok. Sertifikaları yenileyin, sonra yeniden paylaşın.",
+  "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "Bu sitenin adresi hâlâ Cloudflare’de silinmiş bir tüneli gösteriyor. Cloudflare panosunda DNS kaydını silin, sonra yeniden paylaşın.",
+  "Couldn’t share this site. Show Details has the exact message from Patchy.": "Bu site paylaşılamadı. Patchy’nin tam iletisi “Ayrıntıları Göster”de."
 }

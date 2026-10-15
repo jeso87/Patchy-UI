@@ -378,5 +378,9 @@
   "Stopping…": "중단하는 중…",
   "The server isn’t running. Start it, then share again.": "서버가 실행 중이 아닙니다. 서버를 시작한 다음 다시 공유하십시오.",
   "Try Again": "다시 시도",
-  "Username": "사용자 이름"
+  "Username": "사용자 이름",
+  "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.": "Cloudflare 로그인이 만료되었습니다. 도메인을 다시 연결하려면 터미널에서 patchy share setup을 실행하십시오.",
+  "This site has no secure certificate yet. Refresh certificates, then share again.": "이 사이트에는 아직 보안 인증서가 없습니다. 인증서를 갱신한 다음 다시 공유하십시오.",
+  "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "이 사이트의 주소가 Cloudflare에서 삭제된 터널을 여전히 가리키고 있습니다. Cloudflare 대시보드에서 해당 DNS 레코드를 삭제한 다음 다시 공유하십시오.",
+  "Couldn’t share this site. Show Details has the exact message from Patchy.": "이 사이트를 공유할 수 없습니다. Patchy가 보낸 정확한 메시지는 ‘세부사항 보기’에 있습니다."
 }
