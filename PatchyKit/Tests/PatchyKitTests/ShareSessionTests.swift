@@ -80,8 +80,8 @@ final class StateLog: @unchecked Sendable {
     echo "Anyone with this link can see the site. Press Ctrl-C to stop sharing."
     """
 
-    func session(_ prefix: FakePrefix, quick: Bool = false, log: StateLog) -> ShareSession {
-        ShareSession(environment: prefix.environment, address: "harbor.test", quick: quick,
+    func session(_ prefix: FakePrefix, mode: ShareMode = .standard, log: StateLog) -> ShareSession {
+        ShareSession(environment: prefix.environment, address: "harbor.test", mode: mode,
                      callbackQueue: DispatchQueue(label: "ShareSessionTests")) { log.add($0) }
     }
 
@@ -99,14 +99,20 @@ final class StateLog: @unchecked Sendable {
         #expect(await log.wait { $0.last == .stopped })
     }
 
-    @Test func passesShareAndQuick() async throws {
-        let prefix = try FakePrefix(patchyScript: "#!/bin/zsh\necho \"args: $*\"\nexit 1\n")
+    /// The domain choices always pass --password or --open: Patchy remembers either per site,
+    /// so leaving it out would reuse whatever was picked last time.
+    @Test(arguments: [(ShareMode.standard, "share harbor.test"),
+                      (.temporary, "share harbor.test --quick"),
+                      (.domainWithPassword, "share harbor.test --password"),
+                      (.domainWithoutPassword, "share harbor.test --open")])
+    func passesTheModesOptions(mode: ShareMode, expected: String) async throws {
+        let prefix = try FakePrefix(patchyScript: "#!/bin/zsh\necho \"args: $* end\"\nexit 1\n")
         defer { prefix.remove() }
         let log = StateLog()
-        session(prefix, quick: true, log: log).start()
+        session(prefix, mode: mode, log: log).start()
         #expect(await log.wait { if case .failed = $0.last { true } else { false } })
         guard case .failed(let output, let wasSharing) = log.states.last else { return }
-        #expect(output.contains("args: share harbor.test --quick"))
+        #expect(output.contains("args: \(expected) end"))
         #expect(!wasSharing)
     }
 

@@ -135,7 +135,8 @@ struct SiteDetailView: View {
         } else {
             Menu {
                 ForEach(choices, id: \.self) { choice in
-                    Button(choice.title) { model.share(site, quick: choice.quick) }
+                    if choice.mode == .temporary { Divider() }
+                    Button(choice.title) { model.share(site, mode: choice.mode) }
                 }
             } label: {
                 Label("Share", systemImage: "link")

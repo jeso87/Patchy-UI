@@ -21,8 +21,8 @@ import Testing
     @Test func shareChoices() {
         #expect(ShareCopy.choices(sharingDomain: nil).isEmpty)
         let choices = ShareCopy.choices(sharingDomain: "87dash.com")
-        #expect(choices.map(\.title) == ["Share at 87dash.com", "Share with a Temporary Link"])
-        #expect(choices.map(\.quick) == [false, true])
+        #expect(choices.map(\.title) == ["Share at 87dash.com", "Share at 87dash.com, No Password", "Share with a Temporary Link"])
+        #expect(choices.map(\.mode) == [.domainWithPassword, .domainWithoutPassword, .temporary])
     }
 
     @Test func problems() {

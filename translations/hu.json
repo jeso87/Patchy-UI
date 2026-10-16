@@ -399,5 +399,6 @@
   "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "A webhely címe még mindig egy olyan alagútra mutat, amelyet törölt a Cloudflare-ben. Törölje a DNS-rekordját a Cloudflare irányítópultján, majd ossza meg újra.",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Nem sikerült megosztani ezt a webhelyet. A Patchy pontos üzenete a „Részletek megjelenítése” alatt látható.",
   "Share at %@": "Megosztás itt: %@",
-  "Share with a Temporary Link": "Megosztás ideiglenes linkkel"
+  "Share with a Temporary Link": "Megosztás ideiglenes linkkel",
+  "Share at %@, No Password": "Megosztás itt: %@, jelszó nélkül"
 }

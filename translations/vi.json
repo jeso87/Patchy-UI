@@ -384,5 +384,6 @@
   "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "Địa chỉ của trang web này vẫn trỏ đến một đường hầm đã bị xóa trong Cloudflare. Hãy xóa bản ghi DNS của địa chỉ này trong bảng điều khiển Cloudflare rồi chia sẻ lại.",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Không thể chia sẻ trang web này. “Hiển thị chi tiết” có thông báo chính xác từ Patchy.",
   "Share at %@": "Chia sẻ tại %@",
-  "Share with a Temporary Link": "Chia sẻ bằng liên kết tạm thời"
+  "Share with a Temporary Link": "Chia sẻ bằng liên kết tạm thời",
+  "Share at %@, No Password": "Chia sẻ tại %@ không cần mật khẩu"
 }

@@ -270,7 +270,8 @@ struct SiteRow: View {
                             .disabled(!model.serverRunning)
                     } else {
                         ForEach(choices, id: \.self) { choice in
-                            Button(choice.title) { model.share(site, quick: choice.quick) }
+                            if choice.mode == .temporary { Divider() }
+                            Button(choice.title) { model.share(site, mode: choice.mode) }
                                 .disabled(!model.serverRunning)
                         }
                     }

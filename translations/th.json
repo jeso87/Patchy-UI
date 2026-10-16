@@ -384,5 +384,6 @@
   "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "ที่อยู่ของเว็บไซต์นี้ยังชี้ไปยังทันเนลที่ถูกลบใน Cloudflare ลบระเบียน DNS ของที่อยู่นี้ในแดชบอร์ด Cloudflare แล้วแชร์อีกครั้ง",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "แชร์เว็บไซต์นี้ไม่ได้ ดูข้อความที่ตรงตามจริงจาก Patchy ได้ที่ “แสดงรายละเอียด”",
   "Share at %@": "แชร์ที่ %@",
-  "Share with a Temporary Link": "แชร์ด้วยลิงก์ชั่วคราว"
+  "Share with a Temporary Link": "แชร์ด้วยลิงก์ชั่วคราว",
+  "Share at %@, No Password": "แชร์ที่ %@ โดยไม่ใช้รหัสผ่าน"
 }

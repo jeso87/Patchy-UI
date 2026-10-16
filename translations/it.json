@@ -399,5 +399,6 @@
   "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "L’indirizzo di questo sito punta ancora a un tunnel eliminato in Cloudflare. Elimina il suo record DNS nella dashboard di Cloudflare, poi condividi di nuovo.",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Impossibile condividere questo sito. In “Mostra dettagli” trovi il messaggio esatto di Patchy.",
   "Share at %@": "Condividi su %@",
-  "Share with a Temporary Link": "Condividi con un link temporaneo"
+  "Share with a Temporary Link": "Condividi con un link temporaneo",
+  "Share at %@, No Password": "Condividi su %@ senza password"
 }

@@ -414,5 +414,6 @@
   "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "הכתובת של האתר עדיין מפנה למנהרה שנמחקה ב-Cloudflare. יש למחוק את רשומת ה-DNS שלה בלוח הבקרה של Cloudflare ולשתף שוב.",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "לא ניתן היה לשתף את האתר. ב״הצגת פרטים״ מופיעה ההודעה המדויקת מ-Patchy.",
   "Share at %@": "שיתוף ב־%@",
-  "Share with a Temporary Link": "שיתוף בקישור זמני"
+  "Share with a Temporary Link": "שיתוף בקישור זמני",
+  "Share at %@, No Password": "שיתוף ב־%@ ללא סיסמה"
 }

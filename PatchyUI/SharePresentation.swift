@@ -10,15 +10,17 @@ enum ShareCopy {
 
     struct Choice: Hashable {
         let title: String
-        let quick: Bool
+        let mode: ShareMode
     }
 
     /// What Share offers once a domain is connected. Empty without one: Share then makes a temporary link.
+    /// The temporary link comes last; the menus put a divider before it.
     static func choices(sharingDomain: String?) -> [Choice] {
         guard let domain = sharingDomain else { return [] }
         return [
-            Choice(title: String(localized: "Share at \(domain)", comment: "Share menu item: a stable address on the person's own domain. The placeholder is a domain like example.com."), quick: false),
-            Choice(title: String(localized: "Share with a Temporary Link", comment: "Share menu item: a random link that works until sharing stops."), quick: true),
+            Choice(title: String(localized: "Share at \(domain)", comment: "Share menu item: a stable address on the person's own domain, with a password. The placeholder is a domain like example.com."), mode: .domainWithPassword),
+            Choice(title: String(localized: "Share at \(domain), No Password", comment: "Share menu item: a stable address on the person's own domain that anyone can open. The placeholder is a domain like example.com."), mode: .domainWithoutPassword),
+            Choice(title: String(localized: "Share with a Temporary Link", comment: "Share menu item: a random link that works until sharing stops."), mode: .temporary),
         ]
     }
 

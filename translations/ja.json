@@ -384,5 +384,6 @@
   "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "このサイトのアドレスは、Cloudflareで削除されたトンネルをまだ指しています。CloudflareのダッシュボードでそのDNSレコードを削除してから、もう一度共有してください。",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "このサイトを共有できませんでした。Patchyからの正確なメッセージは「詳細を表示」で確認できます。",
   "Share at %@": "%@で共有",
-  "Share with a Temporary Link": "一時的なリンクで共有"
+  "Share with a Temporary Link": "一時的なリンクで共有",
+  "Share at %@, No Password": "%@で共有（パスワードなし）"
 }

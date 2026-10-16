@@ -414,5 +414,6 @@
   "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "Adresa tohto webu stále ukazuje na tunel, ktorý bol v Cloudflare vymazaný. Vymažte jeho záznam DNS na paneli Cloudflare a zdieľajte znova.",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Tento web sa nepodarilo zdieľať. Presné hlásenie od Patchy nájdete v časti „Zobraziť podrobnosti“.",
   "Share at %@": "Zdieľať na %@",
-  "Share with a Temporary Link": "Zdieľať cez dočasný odkaz"
+  "Share with a Temporary Link": "Zdieľať cez dočasný odkaz",
+  "Share at %@, No Password": "Zdieľať na %@ bez hesla"
 }

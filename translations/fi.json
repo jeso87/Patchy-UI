@@ -399,5 +399,6 @@
   "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "Tämän sivuston osoite osoittaa yhä tunneliin, joka poistettiin Cloudflaresta. Poista sen DNS-tietue Cloudflaren hallintapaneelista ja jaa sitten uudelleen.",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Sivuston jakaminen epäonnistui. Patchyn tarkka viesti löytyy kohdasta ”Näytä tiedot”.",
   "Share at %@": "Jaa osoitteessa %@",
-  "Share with a Temporary Link": "Jaa väliaikaisella linkillä"
+  "Share with a Temporary Link": "Jaa väliaikaisella linkillä",
+  "Share at %@, No Password": "Jaa osoitteessa %@ ilman salasanaa"
 }

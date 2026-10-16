@@ -54,7 +54,7 @@ enum Sheet: Equatable {
     case trust
     case refreshCertificates
     case error(ErrorInfo)
-    case installCloudflared(String, quick: Bool)
+    case installCloudflared(String, mode: ShareMode)
 }
 
 enum TrustStep: Equatable {
@@ -892,7 +892,7 @@ final class AppModel {
         shares.compactMap { address, state in if case .sharing = state { address } else { nil } }.sorted()
     }
 
-    func share(_ site: Site, quick: Bool = false) {
+    func share(_ site: Site, mode: ShareMode = .standard) {
         guard let client else { return }
         let decision = Self.shareDecision(canShare: canShare, serverRunning: serverRunning,
                                           alreadySharing: shareSessions[site.address] != nil,
@@ -901,11 +901,11 @@ final class AppModel {
         case .ignore:
             return
         case .install:
-            sheet = .installCloudflared(site.address, quick: quick)
+            sheet = .installCloudflared(site.address, mode: mode)
             openMainWindow?()
         case .start:
             let address = site.address
-            let session = ShareSession(environment: client.environment, address: address, quick: quick) { [weak self] state in
+            let session = ShareSession(environment: client.environment, address: address, mode: mode) { [weak self] state in
                 MainActor.assumeIsolated { self?.shareChanged(address, state) }
             }
             shareSessions[address] = session
@@ -921,12 +921,12 @@ final class AppModel {
             stoppingShares.remove(address)
             shares[address] = nil
         case .failed(let output, _):
-            let quick = shareSessions[address]?.quick ?? false
+            let mode = shareSessions[address]?.mode ?? .standard
             shareSessions[address] = nil
             stoppingShares.remove(address)
             if output.contains(PatchyOutput.cloudflaredRequired) {
                 shares[address] = nil
-                sheet = .installCloudflared(address, quick: quick)
+                sheet = .installCloudflared(address, mode: mode)
                 openMainWindow?()
             } else {
                 shares[address] = state
@@ -978,7 +978,7 @@ final class AppModel {
         NSPasteboard.general.setString(ShareCopy.clientMessage(for: access), forType: .string)
     }
 
-    func installCloudflared(thenShare address: String, quick: Bool) {
+    func installCloudflared(thenShare address: String, mode: ShareMode) {
         guard !isBusy else { return }
         Task {
             let result = await runTask(steps: [String(localized: "Installing cloudflared…", comment: "Progress step shown while a change runs.")]) { client, _, output in
@@ -991,7 +991,7 @@ final class AppModel {
                 return
             }
             sheet = nil
-            if let site = site(address) { share(site, quick: quick) }
+            if let site = site(address) { share(site, mode: mode) }
         }
     }
 
@@ -1144,7 +1144,7 @@ extension AppModel {
         case "trustpassword": openTrustSetup(); trustStep = .password
         case "password": passwordPrompt = PasswordPrompt()
         case "certs": sheet = .refreshCertificates
-        case "cloudflared": if let selection { sheet = .installCloudflared(selection, quick: false) }
+        case "cloudflared": if let selection { sheet = .installCloudflared(selection, mode: .standard) }
         case "error": sheet = .error(Self.startFailure(output: "Apache's startup error:\n  (48)Address already in use: AH00072: make_sock: could not bind to address [::]:80\nSomething else is listening on port 80/443:\n  COMMAND PID USER\n  nginx 412 joe"))
         default: break
         }

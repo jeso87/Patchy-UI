@@ -399,5 +399,6 @@
   "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.": "نشانی این سایت هنوز به تونلی اشاره می‌کند که در Cloudflare حذف شده است. رکورد DNS آن را در داشبورد Cloudflare حذف کنید و دوباره به اشتراک بگذارید.",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "اشتراک‌گذاری این سایت ممکن نشد. پیام دقیق Patchy در «نمایش جزئیات» است.",
   "Share at %@": "اشتراک‌گذاری در %@",
-  "Share with a Temporary Link": "اشتراک‌گذاری با یک پیوند موقت"
+  "Share with a Temporary Link": "اشتراک‌گذاری با یک پیوند موقت",
+  "Share at %@, No Password": "اشتراک‌گذاری در %@ بدون رمز"
 }

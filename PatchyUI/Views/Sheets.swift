@@ -33,7 +33,7 @@ struct SheetHost: View {
                 case .trust: TrustSheet()
                 case .refreshCertificates: RefreshCertificatesSheet()
                 case .error(let info): ErrorSheet(info: info)
-                case .installCloudflared(let address, let quick): InstallCloudflaredSheet(address: address, quick: quick)
+                case .installCloudflared(let address, let mode): InstallCloudflaredSheet(address: address, mode: mode)
                 case nil: EmptyView()
                 }
             }
@@ -488,7 +488,7 @@ struct RefreshCertificatesSheet: View {
 struct InstallCloudflaredSheet: View {
     @Environment(AppModel.self) private var model
     var address: String
-    var quick: Bool
+    var mode: ShareMode
 
     var body: some View {
         if model.isBusy {
@@ -503,7 +503,7 @@ struct InstallCloudflaredSheet: View {
                 Spacer()
                 Button("Cancel", role: .cancel) { model.closeSheet() }
                     .keyboardShortcut(.cancelAction)
-                Button("Install") { model.installCloudflared(thenShare: address, quick: quick) }
+                Button("Install") { model.installCloudflared(thenShare: address, mode: mode) }
                     .buttonStyle(.borderedProminent)
                     .keyboardShortcut(.defaultAction)
             }

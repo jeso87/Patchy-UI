@@ -52,12 +52,33 @@ public enum ShareOutput {
     }
 }
 
+/// Which link `patchy share` makes.
+public enum ShareMode: Sendable, Hashable {
+    /// No options: Patchy uses the connected domain, or a temporary link without one.
+    case standard
+    /// A temporary trycloudflare.com link, even with a domain connected.
+    case temporary
+    /// The site's address on the connected domain. Patchy remembers `--password`/`--open`
+    /// per site, so these always pass one rather than reuse the last choice.
+    case domainWithPassword
+    case domainWithoutPassword
+
+    var arguments: [String] {
+        switch self {
+        case .standard: []
+        case .temporary: ["--quick"]
+        case .domainWithPassword: ["--password"]
+        case .domainWithoutPassword: ["--open"]
+        }
+    }
+}
+
 /// Runs `patchy share <address>` for as long as the site is shared, and reports its state.
 /// Patchy forwards a stop signal to cloudflared itself, so signalling this one process is enough.
 public final class ShareSession: @unchecked Sendable {
     public let address: String
     private let environment: PatchyEnvironment
-    public let quick: Bool
+    public let mode: ShareMode
     private let callbackQueue: DispatchQueue
     private let onChange: @Sendable (ShareState) -> Void
     private let process = Process()
@@ -84,11 +105,11 @@ public final class ShareSession: @unchecked Sendable {
     kill $w 2>/dev/null
     """
 
-    public init(environment: PatchyEnvironment, address: String, quick: Bool = false,
+    public init(environment: PatchyEnvironment, address: String, mode: ShareMode = .standard,
                 callbackQueue: DispatchQueue = .main, onChange: @escaping @Sendable (ShareState) -> Void) {
         self.environment = environment
         self.address = address
-        self.quick = quick
+        self.mode = mode
         self.callbackQueue = callbackQueue
         self.onChange = onChange
     }
@@ -96,7 +117,7 @@ public final class ShareSession: @unchecked Sendable {
     public func start() {
         process.executableURL = URL(fileURLWithPath: "/bin/zsh")
         process.arguments = ["-c", Self.watcherScript, "patchy-share", environment.patchyBinary.path,
-                             "share", address] + (quick ? ["--quick"] : [])
+                             "share", address] + mode.arguments
         process.environment = environment.processEnvironment()
         let input = Pipe()
         process.standardInput = input
