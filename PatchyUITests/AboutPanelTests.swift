@@ -34,13 +34,16 @@ import Testing
         #expect(credits(patchy: nil).string.contains("Patchy – ·"))
     }
 
+    /// The Patchy release this build was made for, from its own version.
+    let supported = PatchyCompatibility.supportedPatchyVersion(appVersion: AppModel.appVersion)
+
     @Test func explainsTheVersionsOnlyWhenTheyDontMatch() {
-        #expect(!credits(patchy: "1.2.1").string.contains("made for Patchy"))
-        #expect(credits(patchy: "1.1.0").string.contains("This Patchy UI was made for Patchy 1.2.1. Patchy is older"))
+        #expect(!credits(patchy: supported).string.contains("made for Patchy"))
+        #expect(credits(patchy: "1.1.0").string.contains("This Patchy UI was made for Patchy \(supported). Patchy is older"))
     }
 
     @Test func linksAreClickable() {
-        #expect(links(in: credits(patchy: "1.2.1")) == [
+        #expect(links(in: credits(patchy: supported)) == [
             URL(string: "https://joshuaomilian.ca")!,
             URL(string: "https://github.com/jeso87/Patchy-UI")!,
             URL(string: "https://github.com/joeworkman/patchy")!,
