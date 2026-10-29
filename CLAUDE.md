@@ -70,7 +70,7 @@ Two layers. Keep anything that isn't UI in the package so it stays testable.
 
 ## Versioning, updates and releases
 
-- **The app's version is the Patchy release it supports.** `MARKETING_VERSION` in `project.yml` must equal the Patchy version the build was tested against (currently 1.3.0). An app-only fix adds a fourth part (1.3.0.1). `PatchyCompatibility` compares the first three parts with the installed Patchy and the app shows a warning banner on a mismatch. When Patchy releases a new version: upgrade Patchy, read `patchy docs` (the README's "Scripts and AI agents" and "JSON output" sections, and the error code table) for changes to the `--json` shapes, `schema` and error codes, run the live test, then bump the version.
+- **The app's version is the Patchy release it supports.** `MARKETING_VERSION` in `project.yml` must equal the Patchy version the build was tested against (currently 1.4.0). An app-only fix adds a fourth part (1.3.0.1). `PatchyCompatibility` compares the first three parts with the installed Patchy and the app shows a warning banner on a mismatch. When Patchy releases a new version: upgrade Patchy, read `patchy docs` (the README's "Scripts and AI agents" and "JSON output" sections, and the error code table) for changes to the `--json` shapes, `schema` and error codes, run the live test, then bump the version.
 - **`CURRENT_PROJECT_VERSION` must rise with every release.** Sparkle compares it, not the marketing version.
 - **Sparkle** comes in as a Swift package. The feed is `appcast.xml` at the repo root, served by GitHub Pages at the `SUFeedURL` in `project.yml` (`jeso87/Patchy-UI`). The EdDSA public key in `project.yml` is the same one Shrinker Pro uses; the private key lives in the developer's login keychain. Update checks are daily and not optional, by decision.
 - **`scripts/release.sh`** tests, archives, exports with Developer ID, notarizes, builds the DMG and regenerates `appcast.xml`. It publishes nothing and fails if the installed Patchy doesn't match the version being released. It needs release notes at `docs/release-notes/<version>.md`. It mirrors the release script in `~/Developer/Apps/Shrinker Pro`, the developer's other MIT-licensed app, which is the reference for conventions here.
@@ -89,7 +89,7 @@ Two layers. Keep anything that isn't UI in the package so it stays testable.
 
 ## How Patchy works (what the GUI has to drive)
 
-Patchy is a zsh script, `/opt/homebrew/bin/patchy`, with its commands in `libexec/*.zsh` beside it (v1.3.0 installed; source clone at `~/Developer/Apps/patchy`). `patchy docs` prints its README, which is the spec for scripts and apps: read its "Scripts and AI agents" and "JSON output" sections and the error code table before changing an integration.
+Patchy is a zsh script, `/opt/homebrew/bin/patchy`, with its commands in `libexec/*.zsh` beside it (v1.4.0 installed; source clone at `~/Developer/Apps/patchy`). `patchy docs` prints its README, which is the spec for scripts and apps: read its "Scripts and AI agents" and "JSON output" sections and the error code table before changing an integration.
 
 Joe's rules for callers, which the app follows:
 
