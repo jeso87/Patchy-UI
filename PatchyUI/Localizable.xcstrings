@@ -7346,119 +7346,6 @@
         }
       }
     },
-    "Open Site" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Open Site" }
-        },
-        "ar" : {
-          "stringUnit" : { "state" : "translated", "value" : "فتح الموقع" }
-        },
-        "ca" : {
-          "stringUnit" : { "state" : "translated", "value" : "Obre el lloc web" }
-        },
-        "cs" : {
-          "stringUnit" : { "state" : "translated", "value" : "Otevřít web" }
-        },
-        "da" : {
-          "stringUnit" : { "state" : "translated", "value" : "Åbn websted" }
-        },
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Website öffnen" }
-        },
-        "el" : {
-          "stringUnit" : { "state" : "translated", "value" : "Άνοιγμα ιστότοπου" }
-        },
-        "es" : {
-          "stringUnit" : { "state" : "translated", "value" : "Abrir sitio" }
-        },
-        "fa" : {
-          "stringUnit" : { "state" : "translated", "value" : "باز کردن سایت" }
-        },
-        "fi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Avaa sivusto" }
-        },
-        "fr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Ouvrir le site" }
-        },
-        "he" : {
-          "stringUnit" : { "state" : "translated", "value" : "פתיחת אתר" }
-        },
-        "hr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Otvori web-stranicu" }
-        },
-        "hu" : {
-          "stringUnit" : { "state" : "translated", "value" : "Webhely megnyitása" }
-        },
-        "is" : {
-          "stringUnit" : { "state" : "translated", "value" : "Opna vef" }
-        },
-        "it" : {
-          "stringUnit" : { "state" : "translated", "value" : "Apri sito" }
-        },
-        "ja" : {
-          "stringUnit" : { "state" : "translated", "value" : "サイトを開く" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "사이트 열기" }
-        },
-        "nb" : {
-          "stringUnit" : { "state" : "translated", "value" : "Åpne nettsted" }
-        },
-        "nl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Open website" }
-        },
-        "nn" : {
-          "stringUnit" : { "state" : "translated", "value" : "Opne nettstad" }
-        },
-        "pl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Otwórz witrynę" }
-        },
-        "pt-BR" : {
-          "stringUnit" : { "state" : "translated", "value" : "Abrir Site" }
-        },
-        "pt-PT" : {
-          "stringUnit" : { "state" : "translated", "value" : "Abrir site" }
-        },
-        "ro" : {
-          "stringUnit" : { "state" : "translated", "value" : "Deschideți site-ul" }
-        },
-        "ru" : {
-          "stringUnit" : { "state" : "translated", "value" : "Открыть сайт" }
-        },
-        "sk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Otvoriť web" }
-        },
-        "sl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Odpri spletno mesto" }
-        },
-        "sv" : {
-          "stringUnit" : { "state" : "translated", "value" : "Öppna webbplats" }
-        },
-        "th" : {
-          "stringUnit" : { "state" : "translated", "value" : "เปิดเว็บไซต์" }
-        },
-        "tr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Siteyi Aç" }
-        },
-        "uk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Відкрити сайт" }
-        },
-        "vi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Mở trang web" }
-        },
-        "zh-HK" : {
-          "stringUnit" : { "state" : "translated", "value" : "開啟網站" }
-        },
-        "zh-Hans" : {
-          "stringUnit" : { "state" : "translated", "value" : "打开网站" }
-        },
-        "zh-Hant" : {
-          "stringUnit" : { "state" : "translated", "value" : "打開網站" }
-        }
-      }
-    },
     "Open Terminal" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
@@ -45774,6 +45661,1142 @@
         },
         "zh-Hant" : {
           "stringUnit" : { "state" : "translated", "value" : "在 %@ 分享（無需密碼）" }
+        }
+      }
+    },
+    "Another app already uses that shortcut. Try a different one." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Another app already uses that shortcut. Try a different one." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "تطبيق آخر يستخدم هذا الاختصار بالفعل. جرّب اختصارًا آخر." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Una altra app ja fa servir aquesta drecera. Prova’n una altra." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tuto zkratku už používá jiná aplikace. Zkuste jinou." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "En anden app bruger allerede den genvej. Prøv en anden." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dieser Kurzbefehl wird bereits von einer anderen App verwendet. Versuche einen anderen." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Μια άλλη εφαρμογή χρησιμοποιεί ήδη αυτήν τη συντόμευση. Δοκιμάστε μια άλλη." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Otra app ya usa ese atajo. Prueba con otro." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "برنامهٔ دیگری از قبل از این میان‌بر استفاده می‌کند. میان‌بر دیگری را امتحان کنید." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Toinen appi käyttää jo tätä pikanäppäintä. Kokeile toista." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Une autre app utilise déjà ce raccourci. Essayez-en un autre." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "יישום אחר כבר משתמש בקיצור הזה. נסו קיצור אחר." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Druga aplikacija već koristi taj prečac. Pokušajte s drugim." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Egy másik app már használja ezt a billentyűparancsot. Próbáljon meg egy másikat." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Annað forrit notar þegar þessa flýtileið. Prófaðu aðra." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Un’altra app usa già questa abbreviazione. Provane un’altra." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "このショートカットはほかのアプリで使用されています。別のショートカットを試してください。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "다른 앱에서 이미 이 단축키를 사용하고 있습니다. 다른 단축키를 사용해 보십시오." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "En annen app bruker allerede den snarveien. Prøv en annen." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Een andere app gebruikt die toetscombinatie al. Probeer een andere." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ein annan app brukar allereie den snarvegen. Prøv ein annan." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Inna aplikacja używa już tego skrótu. Wypróbuj inny." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Outro app já usa esse atalho. Tente outro." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Outra app já usa esse atalho. Experimente outro." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "O altă aplicație folosește deja această scurtătură. Încercați alta." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Это сочетание клавиш уже использует другое приложение. Попробуйте другое." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Túto skratku už používa iná aplikácia. Skúste inú." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Druga aplikacija že uporablja to bližnjico. Poskusite drugo." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "En annan app använder redan det kortkommandot. Prova ett annat." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "มีแอปอื่นใช้ปุ่มลัดนี้อยู่แล้ว ลองใช้ปุ่มลัดอื่น" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Başka bir uygulama bu kestirmeyi zaten kullanıyor. Başka bir tane deneyin." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Це скорочення вже використовує інша програма. Спробуйте інше." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Một ứng dụng khác đã sử dụng phím tắt đó. Hãy thử phím tắt khác." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "另一個App已在使用該快速鍵。請嘗試其他快速鍵。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "另一个 App 已在使用该快捷键。请尝试其他快捷键。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "另一個App已在使用該快速鍵。請嘗試其他快速鍵。" }
+        }
+      }
+    },
+    "Find a site" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Find a site" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "ابحث عن موقع" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Cerca un lloc web" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Najít web" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Find et websted" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Website suchen" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Εύρεση ιστοτόπου" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Buscar un sitio" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "پیدا کردن سایت" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Etsi sivusto" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Rechercher un site" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "חיפוש אתר" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Pronađi web-stranicu" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Webhely keresése" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Finna vef" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Trova un sito" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "サイトを検索" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "사이트 찾기" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Finn et nettsted" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zoek een website" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Finn ein nettstad" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Znajdź witrynę" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Buscar um site" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Procurar um site" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Găsiți un site" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Найти сайт" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nájsť web" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Poišči spletno mesto" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Hitta en webbplats" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "ค้นหาเว็บไซต์" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Site Bul" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Знайти сайт" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tìm trang web" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "尋找網站" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "查找网站" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "尋找網站" }
+        }
+      }
+    },
+    "Needs Attention" : {
+      "comment" : "Heading in the menu bar panel over sites that have a problem.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Needs Attention" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "يحتاج إلى انتباه" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Requereix atenció" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Vyžaduje pozornost" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kræver opmærksomhed" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Erfordert Aufmerksamkeit" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Χρειάζεται προσοχή" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Requiere atención" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "نیاز به توجه" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Vaatii huomiota" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Requiert votre attention" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "דורש תשומת לב" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Potrebna je pažnja" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Figyelmet igényel" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Þarfnast athygli" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Richiede attenzione" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "要確認" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "확인 필요" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Krever oppmerksomhet" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Vereist aandacht" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Krev merksemd" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Wymaga uwagi" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Requer Atenção" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Requer atenção" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Necesită atenție" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Требуют внимания" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Vyžaduje pozornosť" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Potrebuje pozornost" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kräver uppmärksamhet" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "ต้องให้ความสนใจ" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "İlgilenilmesi Gerekiyor" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Потребують уваги" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Cần chú ý" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "需要注意" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "需要注意" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "需要注意" }
+        }
+      }
+    },
+    "No sites match" : {
+      "comment" : "Menu bar panel: nothing matches the search.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "No sites match" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "لا توجد مواقع مطابقة" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Cap lloc web coincideix" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Žádný web neodpovídá" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ingen websteder passer" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Keine passenden Websites" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Κανένας ιστότοπος δεν ταιριάζει" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ningún sitio coincide" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "هیچ سایتی مطابقت ندارد" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ei vastaavia sivustoja" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Aucun site ne correspond" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "אין אתרים תואמים" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nijedna web-stranica ne odgovara" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nincs egyező webhely" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Enginn vefur passar" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nessun sito corrisponde" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "一致するサイトはありません" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "일치하는 사이트 없음" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ingen nettsteder samsvarer" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Geen overeenkomende websites" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ingen nettstader samsvarer" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Brak pasujących witryn" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nenhum site corresponde" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nenhum site corresponde" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Niciun site nu corespunde" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Нет подходящих сайтов" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Žiadny web nezodpovedá" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nobeno spletno mesto se ne ujema" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Inga webbplatser matchar" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "ไม่มีเว็บไซต์ที่ตรงกัน" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Eşleşen site yok" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Немає відповідних сайтів" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Không có trang web nào khớp" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "沒有相符的網站" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "没有匹配的网站" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "沒有相符的網站" }
+        }
+      }
+    },
+    "Open the menu bar panel" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Open the menu bar panel" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "فتح لوحة شريط القائمة" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Obre el tauler de la barra de menús" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Otevřít panel v řádku nabídek" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Åbn panelet på menulinjen" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bereich in der Menüleiste öffnen" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Άνοιγμα του πλαισίου στη γραμμή μενού" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Abrir el panel de la barra de menús" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "باز کردن پانل نوار منو" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Avaa valikkorivin paneeli" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ouvrir le panneau de la barre des menus" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "פתיחת החלונית בשורת התפריטים" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Otvori ploču na traci s izbornicima" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "A menüsor paneljének megnyitása" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Opna spjaldið á valmyndastikunni" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Apri il pannello nella barra dei menu" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "メニューバーのパネルを開く" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "메뉴 막대 패널 열기" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Åpne panelet i menylinjen" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Open het paneel in de menubalk" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Opne panelet i menylinja" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Otwórz panel na pasku menu" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Abrir o painel da barra de menus" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Abrir o painel da barra de menus" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deschideți panoul din bara de meniu" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Открыть панель в строке меню" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Otvoriť panel na lište ponúk" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Odpri ploščo v menijski vrstici" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Öppna panelen i menyraden" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "เปิดแผงในแถบเมนู" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Menü çubuğu panelini aç" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Відкрити панель на смузі меню" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Mở bảng trên thanh menu" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "開啟選單列面板" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "打开菜单栏面板" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "打開選單列面板" }
+        }
+      }
+    },
+    "Press a shortcut…" : {
+      "comment" : "Settings: waiting for the keys of a new shortcut.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Press a shortcut…" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "اضغط على اختصار…" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Prem una drecera…" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Stiskněte zkratku…" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tryk på en genvej…" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kurzbefehl drücken …" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Πατήστε μια συντόμευση…" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Pulsa un atajo…" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "یک میان‌بر را فشار دهید…" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Paina pikanäppäintä…" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Appuyez sur un raccourci…" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "הקישו על קיצור…" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Pritisnite prečac…" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nyomjon le egy billentyűparancsot…" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ýttu á flýtileið…" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Premi un’abbreviazione…" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "ショートカットを押してください…" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "단축키를 누르십시오…" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Trykk på en snarvei …" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Druk op een toetscombinatie…" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Trykk på ein snarveg …" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Naciśnij skrót…" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Pressione um atalho…" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Prima um atalho…" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Apăsați o scurtătură…" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Нажмите сочетание клавиш…" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Stlačte skratku…" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Pritisnite bližnjico …" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tryck på ett kortkommando …" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "กดปุ่มลัด…" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bir kestirmeye basın…" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Натисніть скорочення…" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nhấn phím tắt…" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "請按下快速鍵⋯" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "请按下快捷键…" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "請按下快速鍵⋯" }
+        }
+      }
+    },
+    "Record Shortcut" : {
+      "comment" : "Settings: button that starts recording a keyboard shortcut.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Record Shortcut" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "تسجيل اختصار" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Enregistra una drecera" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nahrát zkratku" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Optag genvej" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kurzbefehl aufnehmen" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Εγγραφή συντόμευσης" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Grabar atajo" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "ضبط میان‌بر" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tallenna pikanäppäin" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Enregistrer un raccourci" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "הקלטת קיצור" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Snimi prečac" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Billentyűparancs rögzítése" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Taka upp flýtileið" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Registra abbreviazione" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "ショートカットを記録" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "단축키 기록" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ta opp snarvei" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Neem toetscombinatie op" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ta opp snarveg" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nagraj skrót" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Gravar Atalho" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Gravar atalho" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Înregistrați scurtătura" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Записать сочетание клавиш" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nahrať skratku" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Posnemi bližnjico" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Spela in kortkommando" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "บันทึกปุ่มลัด" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kestirmeyi Kaydet" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Записати скорочення" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ghi phím tắt" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "錄製快速鍵" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "录制快捷键" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "錄製快速鍵" }
+        }
+      }
+    },
+    "Remove Shortcut" : {
+      "comment" : "Settings: tooltip on the button that clears the keyboard shortcut.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Remove Shortcut" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "إزالة الاختصار" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Elimina la drecera" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Odstranit zkratku" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Fjern genvej" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kurzbefehl entfernen" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Αφαίρεση συντόμευσης" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Eliminar atajo" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "حذف میان‌بر" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Poista pikanäppäin" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Supprimer le raccourci" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "הסרת הקיצור" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ukloni prečac" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Billentyűparancs eltávolítása" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Fjarlægja flýtileið" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Rimuovi abbreviazione" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "ショートカットを削除" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "단축키 제거" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Fjern snarvei" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Verwijder toetscombinatie" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Fjern snarveg" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Usuń skrót" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Remover Atalho" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Remover atalho" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Eliminați scurtătura" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Удалить сочетание клавиш" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Odstrániť skratku" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Odstrani bližnjico" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ta bort kortkommando" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "ลบปุ่มลัด" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kestirmeyi Kaldır" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Вилучити скорочення" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Xóa phím tắt" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "移除快速鍵" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "移除快捷键" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "移除快速鍵" }
+        }
+      }
+    },
+    "Show in Patchy UI" : {
+      "comment" : "Tooltip on a site in the menu bar panel.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Show in Patchy UI" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "عرض في Patchy UI" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Mostra a Patchy UI" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zobrazit v Patchy UI" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Vis i Patchy UI" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "In Patchy UI zeigen" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Εμφάνιση στο Patchy UI" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Mostrar en Patchy UI" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "نمایش در Patchy UI" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Näytä Patchy UI:ssa" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Afficher dans Patchy UI" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "הצגה ב‑Patchy UI" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Prikaži u aplikaciji Patchy UI" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Megjelenítés a Patchy UI-ban" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sýna í Patchy UI" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Mostra in Patchy UI" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UIで表示" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI에서 보기" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Vis i Patchy UI" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Toon in Patchy UI" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Vis i Patchy UI" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Pokaż w Patchy UI" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Mostrar no Patchy UI" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Mostrar no Patchy UI" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Afișați în Patchy UI" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Показать в Patchy UI" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zobraziť v Patchy UI" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Pokaži v Patchy UI" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Visa i Patchy UI" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "แสดงใน Patchy UI" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy UI’da Göster" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Показати в Patchy UI" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Hiển thị trong Patchy UI" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "在Patchy UI中顯示" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "在 Patchy UI 中显示" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "在Patchy UI中顯示" }
+        }
+      }
+    },
+    "Works from any app. Type part of a site’s name, then press Return to open it." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Works from any app. Type part of a site’s name, then press Return to open it." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "يعمل من أي تطبيق. اكتب جزءًا من اسم الموقع، ثم اضغط على Return لفتحه." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Funciona des de qualsevol app. Escriu part del nom d’un lloc web i prem Retorn per obrir-lo." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Funguje z libovolné aplikace. Napište část názvu webu a stiskněte Return, web se otevře." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Virker fra alle apps. Skriv en del af et websteds navn, og tryk på Retur for at åbne det." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Funktioniert in jeder App. Gib einen Teil des Namens einer Website ein und drücke den Zeilenschalter, um sie zu öffnen." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Λειτουργεί από οποιαδήποτε εφαρμογή. Πληκτρολογήστε μέρος του ονόματος ενός ιστοτόπου και πατήστε Return για να ανοίξει." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Funciona desde cualquier app. Escribe parte del nombre de un sitio y pulsa Retorno para abrirlo." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "در هر برنامه‌ای کار می‌کند. بخشی از نام سایت را تایپ کنید و برای باز کردن آن Return را فشار دهید." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Toimii missä tahansa apissa. Kirjoita osa sivuston nimestä ja avaa se painamalla rivinvaihtonäppäintä." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Fonctionne depuis n’importe quelle app. Saisissez une partie du nom d’un site, puis appuyez sur Retour pour l’ouvrir." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "עובד מכל יישום. הקלידו חלק משם האתר ולחצו על Return כדי לפתוח אותו." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Radi iz bilo koje aplikacije. Upišite dio naziva web-stranice, zatim pritisnite Return da biste je otvorili." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bármelyik appból működik. Írja be egy webhely nevének egy részét, majd nyomja meg a Return billentyűt a megnyitáshoz." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Virkar úr hvaða forriti sem er. Sláðu inn hluta af heiti vefs og ýttu á Return til að opna hann." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Funziona da qualsiasi app. Digita parte del nome di un sito, poi premi A capo per aprirlo." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "どのアプリからでも使えます。サイト名の一部を入力してReturnキーを押すと開きます。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "모든 앱에서 작동합니다. 사이트 이름의 일부를 입력한 다음 Return 키를 눌러 여십시오." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Virker fra alle apper. Skriv inn en del av navnet på et nettsted, og trykk på returtasten for å åpne det." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Werkt vanuit elke app. Typ een deel van de naam van een website en druk op Return om hem te openen." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Verkar frå alle appar. Skriv inn ein del av namnet på ein nettstad, og trykk på returtasten for å opne han." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Działa w każdej aplikacji. Wpisz część nazwy witryny i naciśnij Return, aby ją otworzyć." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Funciona em qualquer app. Digite parte do nome de um site e pressione Return para abri-lo." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Funciona em qualquer app. Escreva parte do nome de um site e prima Return para o abrir." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Funcționează din orice aplicație. Tastați o parte din numele unui site, apoi apăsați Return pentru a-l deschide." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Работает в любом приложении. Введите часть имени сайта и нажмите Return, чтобы открыть его." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Funguje v ľubovoľnej aplikácii. Napíšte časť názvu webu a stlačením klávesu Return ho otvorte." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deluje v vsaki aplikaciji. Vnesite del imena spletnega mesta in pritisnite Return, da ga odprete." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Fungerar i alla appar. Skriv en del av en webbplats namn och tryck på returtangenten för att öppna den." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "ใช้ได้จากทุกแอป พิมพ์ชื่อเว็บไซต์บางส่วน แล้วกด Return เพื่อเปิด" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Her uygulamadan çalışır. Bir sitenin adının bir kısmını yazın, ardından açmak için Return tuşuna basın." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Працює з будь-якої програми. Введіть частину назви сайту й натисніть Return, щоб відкрити його." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Hoạt động từ mọi ứng dụng. Nhập một phần tên trang web, sau đó nhấn Return để mở." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "在任何App中均可使用。輸入網站名稱的一部分，然後按下Return鍵即可開啟。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "在任何 App 中都可使用。输入网站名称的一部分，然后按下 Return 键即可打开。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "在任何App中皆可使用。輸入網站名稱的一部分，然後按下Return鍵即可打開。" }
         }
       }
     }

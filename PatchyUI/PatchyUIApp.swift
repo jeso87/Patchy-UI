@@ -5,13 +5,19 @@ import SwiftUI
 @main
 struct PatchyUIApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
-    @State private var model = AppModel()
+    @State private var model: AppModel
 
     init() {
         // `Patchy UI --dump-state` prints what the app reads from this Mac, then exits.
         if CommandLine.arguments.contains("--dump-state") {
             Self.dumpState()
             exit(0)
+        }
+        let model = AppModel()
+        _model = State(initialValue: model)
+        // The menu bar item is AppKit's, made once the app has finished starting up.
+        DispatchQueue.main.async {
+            StatusItemController.shared = StatusItemController(model: model)
         }
     }
 
@@ -54,14 +60,6 @@ struct PatchyUIApp: App {
             }
         }
 
-        MenuBarExtra {
-            MenuBarContent()
-                .environment(model)
-        } label: {
-            MenuBarLabel()
-                .environment(model)
-        }
-
         Settings {
             SettingsView()
                 .environment(model)
@@ -95,6 +93,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         UserDefaults.standard.register(defaults: [Self.showDockIconKey: true])
         Self.applyDockIconPreference()
+        PanelShortcut.shared.register()
     }
 
     /// Closing the window leaves the menu bar item running.

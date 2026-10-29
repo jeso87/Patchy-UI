@@ -177,7 +177,6 @@
   "Open %@": "Obre %@",
   "Open Patchy UI": "Obre Patchy UI",
   "Open Patchy UI when I log in": "Obre Patchy UI en iniciar la sessió",
-  "Open Site": "Obre el lloc web",
   "Open Terminal": "Obre el Terminal",
   "Open Terminal. It’s in Applications › Utilities.": "Obre el Terminal. És a Apps › Utilitats.",
   "Open in Browser": "Obre al navegador",
@@ -400,5 +399,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "No s’ha pogut compartir aquest lloc web. A “Mostra els detalls” hi ha el missatge exacte de Patchy.",
   "Share at %@": "Comparteix a %@",
   "Share with a Temporary Link": "Comparteix amb un enllaç temporal",
-  "Share at %@, No Password": "Comparteix a %@ sense contrasenya"
+  "Share at %@, No Password": "Comparteix a %@ sense contrasenya",
+  "Another app already uses that shortcut. Try a different one.": "Una altra app ja fa servir aquesta drecera. Prova’n una altra.",
+  "Find a site": "Cerca un lloc web",
+  "Needs Attention": "Requereix atenció",
+  "No sites match": "Cap lloc web coincideix",
+  "Open the menu bar panel": "Obre el tauler de la barra de menús",
+  "Press a shortcut…": "Prem una drecera…",
+  "Record Shortcut": "Enregistra una drecera",
+  "Remove Shortcut": "Elimina la drecera",
+  "Show in Patchy UI": "Mostra a Patchy UI",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "Funciona des de qualsevol app. Escriu part del nom d’un lloc web i prem Retorn per obrir-lo."
 }

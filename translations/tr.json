@@ -177,7 +177,6 @@
   "Open %@": "%@ adresini aç",
   "Open Patchy UI": "Patchy UI’ı Aç",
   "Open Patchy UI when I log in": "Oturum açtığımda Patchy UI’ı aç",
-  "Open Site": "Siteyi Aç",
   "Open Terminal": "Terminal’i Aç",
   "Open Terminal. It’s in Applications › Utilities.": "Terminal’i açın. Uygulamalar › İzlenceler klasöründedir.",
   "Open in Browser": "Tarayıcıda Aç",
@@ -400,5 +399,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Bu site paylaşılamadı. Patchy’nin tam iletisi “Ayrıntıları Göster”de.",
   "Share at %@": "%@ üzerinde paylaş",
   "Share with a Temporary Link": "Geçici bir bağlantıyla paylaş",
-  "Share at %@, No Password": "%@ üzerinde parolasız paylaş"
+  "Share at %@, No Password": "%@ üzerinde parolasız paylaş",
+  "Another app already uses that shortcut. Try a different one.": "Başka bir uygulama bu kestirmeyi zaten kullanıyor. Başka bir tane deneyin.",
+  "Find a site": "Site Bul",
+  "Needs Attention": "İlgilenilmesi Gerekiyor",
+  "No sites match": "Eşleşen site yok",
+  "Open the menu bar panel": "Menü çubuğu panelini aç",
+  "Press a shortcut…": "Bir kestirmeye basın…",
+  "Record Shortcut": "Kestirmeyi Kaydet",
+  "Remove Shortcut": "Kestirmeyi Kaldır",
+  "Show in Patchy UI": "Patchy UI’da Göster",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "Her uygulamadan çalışır. Bir sitenin adının bir kısmını yazın, ardından açmak için Return tuşuna basın."
 }

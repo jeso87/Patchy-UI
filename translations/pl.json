@@ -201,7 +201,6 @@
   "Open %@": "Otwórz %@",
   "Open Patchy UI": "Otwórz Patchy UI",
   "Open Patchy UI when I log in": "Otwieraj Patchy UI podczas logowania",
-  "Open Site": "Otwórz witrynę",
   "Open Terminal": "Otwórz Terminal",
   "Open Terminal. It’s in Applications › Utilities.": "Otwórz Terminal. Znajdziesz go w folderze Aplikacje › Narzędzia.",
   "Open in Browser": "Otwórz w przeglądarce",
@@ -430,5 +429,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Nie udało się udostępnić tej witryny. W „Pokaż szczegóły” znajdziesz dokładny komunikat od Patchy.",
   "Share at %@": "Udostępnij w %@",
   "Share with a Temporary Link": "Udostępnij przez link tymczasowy",
-  "Share at %@, No Password": "Udostępnij w %@ bez hasła"
+  "Share at %@, No Password": "Udostępnij w %@ bez hasła",
+  "Another app already uses that shortcut. Try a different one.": "Inna aplikacja używa już tego skrótu. Wypróbuj inny.",
+  "Find a site": "Znajdź witrynę",
+  "Needs Attention": "Wymaga uwagi",
+  "No sites match": "Brak pasujących witryn",
+  "Open the menu bar panel": "Otwórz panel na pasku menu",
+  "Press a shortcut…": "Naciśnij skrót…",
+  "Record Shortcut": "Nagraj skrót",
+  "Remove Shortcut": "Usuń skrót",
+  "Show in Patchy UI": "Pokaż w Patchy UI",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "Działa w każdej aplikacji. Wpisz część nazwy witryny i naciśnij Return, aby ją otworzyć."
 }

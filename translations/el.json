@@ -177,7 +177,6 @@
   "Open %@": "Άνοιγμα του %@",
   "Open Patchy UI": "Άνοιγμα του Patchy UI",
   "Open Patchy UI when I log in": "Άνοιγμα του Patchy UI κατά τη σύνδεση",
-  "Open Site": "Άνοιγμα ιστότοπου",
   "Open Terminal": "Άνοιγμα Τερματικού",
   "Open Terminal. It’s in Applications › Utilities.": "Ανοίξτε το Τερματικό. Βρίσκεται στις Εφαρμογές › Βοηθήματα.",
   "Open in Browser": "Άνοιγμα σε πρόγραμμα περιήγησης",
@@ -400,5 +399,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Δεν ήταν δυνατή η κοινή χρήση αυτού του ιστότοπου. Η «Εμφάνιση λεπτομερειών» περιέχει το ακριβές μήνυμα του Patchy.",
   "Share at %@": "Κοινή χρήση στο %@",
   "Share with a Temporary Link": "Κοινή χρήση με προσωρινό σύνδεσμο",
-  "Share at %@, No Password": "Κοινή χρήση στο %@ χωρίς κωδικό"
+  "Share at %@, No Password": "Κοινή χρήση στο %@ χωρίς κωδικό",
+  "Another app already uses that shortcut. Try a different one.": "Μια άλλη εφαρμογή χρησιμοποιεί ήδη αυτήν τη συντόμευση. Δοκιμάστε μια άλλη.",
+  "Find a site": "Εύρεση ιστοτόπου",
+  "Needs Attention": "Χρειάζεται προσοχή",
+  "No sites match": "Κανένας ιστότοπος δεν ταιριάζει",
+  "Open the menu bar panel": "Άνοιγμα του πλαισίου στη γραμμή μενού",
+  "Press a shortcut…": "Πατήστε μια συντόμευση…",
+  "Record Shortcut": "Εγγραφή συντόμευσης",
+  "Remove Shortcut": "Αφαίρεση συντόμευσης",
+  "Show in Patchy UI": "Εμφάνιση στο Patchy UI",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "Λειτουργεί από οποιαδήποτε εφαρμογή. Πληκτρολογήστε μέρος του ονόματος ενός ιστοτόπου και πατήστε Return για να ανοίξει."
 }

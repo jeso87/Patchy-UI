@@ -177,7 +177,6 @@
   "Open %@": "Åbn %@",
   "Open Patchy UI": "Åbn Patchy UI",
   "Open Patchy UI when I log in": "Åbn Patchy UI, når jeg logger ind",
-  "Open Site": "Åbn websted",
   "Open Terminal": "Åbn Terminal",
   "Open Terminal. It’s in Applications › Utilities.": "Åbn Terminal. Den ligger i Apps › Hjælpeapps.",
   "Open in Browser": "Åbn i browser",
@@ -400,5 +399,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Dette websted kunne ikke deles. Under “Vis oplysninger” står den præcise meddelelse fra Patchy.",
   "Share at %@": "Del på %@",
   "Share with a Temporary Link": "Del via et midlertidigt link",
-  "Share at %@, No Password": "Del på %@ uden adgangskode"
+  "Share at %@, No Password": "Del på %@ uden adgangskode",
+  "Another app already uses that shortcut. Try a different one.": "En anden app bruger allerede den genvej. Prøv en anden.",
+  "Find a site": "Find et websted",
+  "Needs Attention": "Kræver opmærksomhed",
+  "No sites match": "Ingen websteder passer",
+  "Open the menu bar panel": "Åbn panelet på menulinjen",
+  "Press a shortcut…": "Tryk på en genvej…",
+  "Record Shortcut": "Optag genvej",
+  "Remove Shortcut": "Fjern genvej",
+  "Show in Patchy UI": "Vis i Patchy UI",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "Virker fra alle apps. Skriv en del af et websteds navn, og tryk på Retur for at åbne det."
 }

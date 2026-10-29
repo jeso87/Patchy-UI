@@ -189,7 +189,6 @@
   "Open %@": "פתיחת %@",
   "Open Patchy UI": "פתיחת Patchy UI",
   "Open Patchy UI when I log in": "פתיחת Patchy UI בעת ההתחברות",
-  "Open Site": "פתיחת אתר",
   "Open Terminal": "פתיחת המסוף",
   "Open Terminal. It’s in Applications › Utilities.": "יש לפתוח את המסוף. הוא נמצא ב״יישומים › כלי עזר״.",
   "Open in Browser": "פתיחה בדפדפן",
@@ -415,5 +414,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "לא ניתן היה לשתף את האתר. ב״הצגת פרטים״ מופיעה ההודעה המדויקת מ-Patchy.",
   "Share at %@": "שיתוף ב־%@",
   "Share with a Temporary Link": "שיתוף בקישור זמני",
-  "Share at %@, No Password": "שיתוף ב־%@ ללא סיסמה"
+  "Share at %@, No Password": "שיתוף ב־%@ ללא סיסמה",
+  "Another app already uses that shortcut. Try a different one.": "יישום אחר כבר משתמש בקיצור הזה. נסו קיצור אחר.",
+  "Find a site": "חיפוש אתר",
+  "Needs Attention": "דורש תשומת לב",
+  "No sites match": "אין אתרים תואמים",
+  "Open the menu bar panel": "פתיחת החלונית בשורת התפריטים",
+  "Press a shortcut…": "הקישו על קיצור…",
+  "Record Shortcut": "הקלטת קיצור",
+  "Remove Shortcut": "הסרת הקיצור",
+  "Show in Patchy UI": "הצגה ב‑Patchy UI",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "עובד מכל יישום. הקלידו חלק משם האתר ולחצו על Return כדי לפתוח אותו."
 }

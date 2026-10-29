@@ -177,7 +177,6 @@
   "Open %@": "Opne %@",
   "Open Patchy UI": "Opne Patchy UI",
   "Open Patchy UI when I log in": "Opne Patchy UI når eg loggar inn",
-  "Open Site": "Opne nettstad",
   "Open Terminal": "Opne Terminal",
   "Open Terminal. It’s in Applications › Utilities.": "Opne Terminal. Programmet ligg i Apper › Verktøy.",
   "Open in Browser": "Opne i nettlesar",
@@ -400,5 +399,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Kunne ikkje dele denne nettstaden. Under «Vis detaljar» finn du den nøyaktige meldinga frå Patchy.",
   "Share at %@": "Del på %@",
   "Share with a Temporary Link": "Del med ei mellombels lenkje",
-  "Share at %@, No Password": "Del på %@ utan passord"
+  "Share at %@, No Password": "Del på %@ utan passord",
+  "Another app already uses that shortcut. Try a different one.": "Ein annan app brukar allereie den snarvegen. Prøv ein annan.",
+  "Find a site": "Finn ein nettstad",
+  "Needs Attention": "Krev merksemd",
+  "No sites match": "Ingen nettstader samsvarer",
+  "Open the menu bar panel": "Opne panelet i menylinja",
+  "Press a shortcut…": "Trykk på ein snarveg …",
+  "Record Shortcut": "Ta opp snarveg",
+  "Remove Shortcut": "Fjern snarveg",
+  "Show in Patchy UI": "Vis i Patchy UI",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "Verkar frå alle appar. Skriv inn ein del av namnet på ein nettstad, og trykk på returtasten for å opne han."
 }

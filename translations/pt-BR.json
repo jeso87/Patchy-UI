@@ -177,7 +177,6 @@
   "Open %@": "Abrir %@",
   "Open Patchy UI": "Abrir Patchy UI",
   "Open Patchy UI when I log in": "Abrir o Patchy UI no início da sessão",
-  "Open Site": "Abrir Site",
   "Open Terminal": "Abrir o Terminal",
   "Open Terminal. It’s in Applications › Utilities.": "Abra o Terminal. Ele fica em Aplicativos › Utilitários.",
   "Open in Browser": "Abrir no Navegador",
@@ -400,5 +399,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Não foi possível compartilhar este site. A mensagem exata do Patchy está em Mostrar Detalhes.",
   "Share at %@": "Compartilhar em %@",
   "Share with a Temporary Link": "Compartilhar com um Link Temporário",
-  "Share at %@, No Password": "Compartilhar em %@ sem Senha"
+  "Share at %@, No Password": "Compartilhar em %@ sem Senha",
+  "Another app already uses that shortcut. Try a different one.": "Outro app já usa esse atalho. Tente outro.",
+  "Find a site": "Buscar um site",
+  "Needs Attention": "Requer Atenção",
+  "No sites match": "Nenhum site corresponde",
+  "Open the menu bar panel": "Abrir o painel da barra de menus",
+  "Press a shortcut…": "Pressione um atalho…",
+  "Record Shortcut": "Gravar Atalho",
+  "Remove Shortcut": "Remover Atalho",
+  "Show in Patchy UI": "Mostrar no Patchy UI",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "Funciona em qualquer app. Digite parte do nome de um site e pressione Return para abri-lo."
 }

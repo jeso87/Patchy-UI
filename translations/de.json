@@ -177,7 +177,6 @@
   "Open %@": "%@ öffnen",
   "Open Patchy UI": "Patchy UI öffnen",
   "Open Patchy UI when I log in": "Patchy UI beim Anmelden öffnen",
-  "Open Site": "Website öffnen",
   "Open Terminal": "Terminal öffnen",
   "Open Terminal. It’s in Applications › Utilities.": "Öffne das Terminal. Es liegt unter Programme › Dienstprogramme.",
   "Open in Browser": "Im Browser öffnen",
@@ -400,5 +399,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Diese Website konnte nicht geteilt werden. Unter „Details einblenden“ steht die genaue Meldung von Patchy.",
   "Share at %@": "Unter %@ teilen",
   "Share with a Temporary Link": "Über einen temporären Link teilen",
-  "Share at %@, No Password": "Unter %@ ohne Passwort teilen"
+  "Share at %@, No Password": "Unter %@ ohne Passwort teilen",
+  "Another app already uses that shortcut. Try a different one.": "Dieser Kurzbefehl wird bereits von einer anderen App verwendet. Versuche einen anderen.",
+  "Find a site": "Website suchen",
+  "Needs Attention": "Erfordert Aufmerksamkeit",
+  "No sites match": "Keine passenden Websites",
+  "Open the menu bar panel": "Bereich in der Menüleiste öffnen",
+  "Press a shortcut…": "Kurzbefehl drücken …",
+  "Record Shortcut": "Kurzbefehl aufnehmen",
+  "Remove Shortcut": "Kurzbefehl entfernen",
+  "Show in Patchy UI": "In Patchy UI zeigen",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "Funktioniert in jeder App. Gib einen Teil des Namens einer Website ein und drücke den Zeilenschalter, um sie zu öffnen."
 }

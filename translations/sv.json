@@ -177,7 +177,6 @@
   "Open %@": "Öppna %@",
   "Open Patchy UI": "Öppna Patchy UI",
   "Open Patchy UI when I log in": "Öppna Patchy UI vid inloggning",
-  "Open Site": "Öppna webbplats",
   "Open Terminal": "Öppna Terminal",
   "Open Terminal. It’s in Applications › Utilities.": "Öppna Terminal. Det finns i Appar › Verktyg.",
   "Open in Browser": "Öppna i webbläsare",
@@ -400,5 +399,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Det gick inte att dela den här webbplatsen. Under ”Visa detaljer” finns det exakta meddelandet från Patchy.",
   "Share at %@": "Dela på %@",
   "Share with a Temporary Link": "Dela via en tillfällig länk",
-  "Share at %@, No Password": "Dela på %@ utan lösenord"
+  "Share at %@, No Password": "Dela på %@ utan lösenord",
+  "Another app already uses that shortcut. Try a different one.": "En annan app använder redan det kortkommandot. Prova ett annat.",
+  "Find a site": "Hitta en webbplats",
+  "Needs Attention": "Kräver uppmärksamhet",
+  "No sites match": "Inga webbplatser matchar",
+  "Open the menu bar panel": "Öppna panelen i menyraden",
+  "Press a shortcut…": "Tryck på ett kortkommando …",
+  "Record Shortcut": "Spela in kortkommando",
+  "Remove Shortcut": "Ta bort kortkommando",
+  "Show in Patchy UI": "Visa i Patchy UI",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "Fungerar i alla appar. Skriv en del av en webbplats namn och tryck på returtangenten för att öppna den."
 }

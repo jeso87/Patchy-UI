@@ -201,7 +201,6 @@
   "Open %@": "Открыть %@",
   "Open Patchy UI": "Открыть Patchy UI",
   "Open Patchy UI when I log in": "Открывать Patchy UI при входе",
-  "Open Site": "Открыть сайт",
   "Open Terminal": "Открыть Терминал",
   "Open Terminal. It’s in Applications › Utilities.": "Откройте Терминал. Он находится в папке Программы › Утилиты.",
   "Open in Browser": "Открыть в браузере",
@@ -430,5 +429,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Не удалось открыть общий доступ к этому сайту. Нажмите «Показать подробности», чтобы увидеть точное сообщение Patchy.",
   "Share at %@": "Поделиться на %@",
   "Share with a Temporary Link": "Поделиться по временной ссылке",
-  "Share at %@, No Password": "Поделиться на %@ без пароля"
+  "Share at %@, No Password": "Поделиться на %@ без пароля",
+  "Another app already uses that shortcut. Try a different one.": "Это сочетание клавиш уже использует другое приложение. Попробуйте другое.",
+  "Find a site": "Найти сайт",
+  "Needs Attention": "Требуют внимания",
+  "No sites match": "Нет подходящих сайтов",
+  "Open the menu bar panel": "Открыть панель в строке меню",
+  "Press a shortcut…": "Нажмите сочетание клавиш…",
+  "Record Shortcut": "Записать сочетание клавиш",
+  "Remove Shortcut": "Удалить сочетание клавиш",
+  "Show in Patchy UI": "Показать в Patchy UI",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "Работает в любом приложении. Введите часть имени сайта и нажмите Return, чтобы открыть его."
 }

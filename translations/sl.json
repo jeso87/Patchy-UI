@@ -201,7 +201,6 @@
   "Open %@": "Odpri %@",
   "Open Patchy UI": "Odpri Patchy UI",
   "Open Patchy UI when I log in": "Odpri Patchy UI ob prijavi",
-  "Open Site": "Odpri spletno mesto",
   "Open Terminal": "Odpri Terminal",
   "Open Terminal. It’s in Applications › Utilities.": "Odprite Terminal. Najdete ga v mapi Aplikacije › Pripomočki.",
   "Open in Browser": "Odpri v brskalniku",
@@ -430,5 +429,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Tega spletnega mesta ni bilo mogoče deliti. Pod »Prikaži podrobnosti« je natančno sporočilo programa Patchy.",
   "Share at %@": "Deli na %@",
   "Share with a Temporary Link": "Deli z začasno povezavo",
-  "Share at %@, No Password": "Deli na %@ brez gesla"
+  "Share at %@, No Password": "Deli na %@ brez gesla",
+  "Another app already uses that shortcut. Try a different one.": "Druga aplikacija že uporablja to bližnjico. Poskusite drugo.",
+  "Find a site": "Poišči spletno mesto",
+  "Needs Attention": "Potrebuje pozornost",
+  "No sites match": "Nobeno spletno mesto se ne ujema",
+  "Open the menu bar panel": "Odpri ploščo v menijski vrstici",
+  "Press a shortcut…": "Pritisnite bližnjico …",
+  "Record Shortcut": "Posnemi bližnjico",
+  "Remove Shortcut": "Odstrani bližnjico",
+  "Show in Patchy UI": "Pokaži v Patchy UI",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "Deluje v vsaki aplikaciji. Vnesite del imena spletnega mesta in pritisnite Return, da ga odprete."
 }

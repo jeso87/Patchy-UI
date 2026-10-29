@@ -177,7 +177,6 @@
   "Open %@": "Avaa %@",
   "Open Patchy UI": "Avaa Patchy UI",
   "Open Patchy UI when I log in": "Avaa Patchy UI sisäänkirjauduttaessa",
-  "Open Site": "Avaa sivusto",
   "Open Terminal": "Avaa Pääte",
   "Open Terminal. It’s in Applications › Utilities.": "Avaa Pääte. Se on kansiossa Apit › Lisäapit.",
   "Open in Browser": "Avaa selaimessa",
@@ -400,5 +399,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Sivuston jakaminen epäonnistui. Patchyn tarkka viesti löytyy kohdasta ”Näytä tiedot”.",
   "Share at %@": "Jaa osoitteessa %@",
   "Share with a Temporary Link": "Jaa väliaikaisella linkillä",
-  "Share at %@, No Password": "Jaa osoitteessa %@ ilman salasanaa"
+  "Share at %@, No Password": "Jaa osoitteessa %@ ilman salasanaa",
+  "Another app already uses that shortcut. Try a different one.": "Toinen appi käyttää jo tätä pikanäppäintä. Kokeile toista.",
+  "Find a site": "Etsi sivusto",
+  "Needs Attention": "Vaatii huomiota",
+  "No sites match": "Ei vastaavia sivustoja",
+  "Open the menu bar panel": "Avaa valikkorivin paneeli",
+  "Press a shortcut…": "Paina pikanäppäintä…",
+  "Record Shortcut": "Tallenna pikanäppäin",
+  "Remove Shortcut": "Poista pikanäppäin",
+  "Show in Patchy UI": "Näytä Patchy UI:ssa",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "Toimii missä tahansa apissa. Kirjoita osa sivuston nimestä ja avaa se painamalla rivinvaihtonäppäintä."
 }

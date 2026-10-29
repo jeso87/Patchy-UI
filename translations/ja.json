@@ -165,7 +165,6 @@
   "Open %@": "%@を開く",
   "Open Patchy UI": "Patchy UIを開く",
   "Open Patchy UI when I log in": "ログイン時にPatchy UIを開く",
-  "Open Site": "サイトを開く",
   "Open Terminal": "ターミナルを開く",
   "Open Terminal. It’s in Applications › Utilities.": "ターミナルを開いてください。「アプリケーション › ユーティリティ」にあります。",
   "Open in Browser": "ブラウザで開く",
@@ -385,5 +384,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "このサイトを共有できませんでした。Patchyからの正確なメッセージは「詳細を表示」で確認できます。",
   "Share at %@": "%@で共有",
   "Share with a Temporary Link": "一時的なリンクで共有",
-  "Share at %@, No Password": "%@で共有（パスワードなし）"
+  "Share at %@, No Password": "%@で共有（パスワードなし）",
+  "Another app already uses that shortcut. Try a different one.": "このショートカットはほかのアプリで使用されています。別のショートカットを試してください。",
+  "Find a site": "サイトを検索",
+  "Needs Attention": "要確認",
+  "No sites match": "一致するサイトはありません",
+  "Open the menu bar panel": "メニューバーのパネルを開く",
+  "Press a shortcut…": "ショートカットを押してください…",
+  "Record Shortcut": "ショートカットを記録",
+  "Remove Shortcut": "ショートカットを削除",
+  "Show in Patchy UI": "Patchy UIで表示",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "どのアプリからでも使えます。サイト名の一部を入力してReturnキーを押すと開きます。"
 }

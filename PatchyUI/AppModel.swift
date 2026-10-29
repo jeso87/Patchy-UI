@@ -1010,6 +1010,23 @@ final class AppModel {
         NSWorkspace.shared.selectFile(nil, inFileViewerRootedAtPath: site.folder)
     }
 
+    /// Every site as the menu bar panel shows it: a problem's few words, nothing for a healthy site.
+    var menuPanelRows: [MenuPanelList.Row] {
+        sites.map { site in
+            let status = status(of: site)
+            return MenuPanelList.Row(address: site.address, severity: status.severity,
+                                     note: status.hasProblem ? status.summary : "")
+        }
+    }
+
+    /// Opens the main window on one site.
+    func showSite(_ address: String) {
+        selection = address
+        tab = .overview
+        filter = ""
+        openMainWindow?()
+    }
+
     func showAttention() {
         if let first = problemSites.first {
             selection = first.address

@@ -165,7 +165,6 @@
   "Open %@": "Mở %@",
   "Open Patchy UI": "Mở Patchy UI",
   "Open Patchy UI when I log in": "Mở Patchy UI khi đăng nhập",
-  "Open Site": "Mở trang web",
   "Open Terminal": "Mở Terminal",
   "Open Terminal. It’s in Applications › Utilities.": "Mở Terminal. Ứng dụng này nằm trong Ứng dụng › Tiện ích.",
   "Open in Browser": "Mở trong trình duyệt",
@@ -385,5 +384,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Không thể chia sẻ trang web này. “Hiển thị chi tiết” có thông báo chính xác từ Patchy.",
   "Share at %@": "Chia sẻ tại %@",
   "Share with a Temporary Link": "Chia sẻ bằng liên kết tạm thời",
-  "Share at %@, No Password": "Chia sẻ tại %@ không cần mật khẩu"
+  "Share at %@, No Password": "Chia sẻ tại %@ không cần mật khẩu",
+  "Another app already uses that shortcut. Try a different one.": "Một ứng dụng khác đã sử dụng phím tắt đó. Hãy thử phím tắt khác.",
+  "Find a site": "Tìm trang web",
+  "Needs Attention": "Cần chú ý",
+  "No sites match": "Không có trang web nào khớp",
+  "Open the menu bar panel": "Mở bảng trên thanh menu",
+  "Press a shortcut…": "Nhấn phím tắt…",
+  "Record Shortcut": "Ghi phím tắt",
+  "Remove Shortcut": "Xóa phím tắt",
+  "Show in Patchy UI": "Hiển thị trong Patchy UI",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "Hoạt động từ mọi ứng dụng. Nhập một phần tên trang web, sau đó nhấn Return để mở."
 }

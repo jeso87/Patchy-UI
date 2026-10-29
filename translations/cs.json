@@ -189,7 +189,6 @@
   "Open %@": "Otevřít %@",
   "Open Patchy UI": "Otevřít Patchy UI",
   "Open Patchy UI when I log in": "Otevřít Patchy UI při přihlášení",
-  "Open Site": "Otevřít web",
   "Open Terminal": "Otevřít Terminál",
   "Open Terminal. It’s in Applications › Utilities.": "Otevřete Terminál. Najdete ho ve složce Aplikace › Utility.",
   "Open in Browser": "Otevřít v prohlížeči",
@@ -415,5 +414,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Tento web se nepodařilo sdílet. Přesnou zprávu od Patchy najdete pod „Zobrazit podrobnosti“.",
   "Share at %@": "Sdílet na %@",
   "Share with a Temporary Link": "Sdílet přes dočasný odkaz",
-  "Share at %@, No Password": "Sdílet na %@ bez hesla"
+  "Share at %@, No Password": "Sdílet na %@ bez hesla",
+  "Another app already uses that shortcut. Try a different one.": "Tuto zkratku už používá jiná aplikace. Zkuste jinou.",
+  "Find a site": "Najít web",
+  "Needs Attention": "Vyžaduje pozornost",
+  "No sites match": "Žádný web neodpovídá",
+  "Open the menu bar panel": "Otevřít panel v řádku nabídek",
+  "Press a shortcut…": "Stiskněte zkratku…",
+  "Record Shortcut": "Nahrát zkratku",
+  "Remove Shortcut": "Odstranit zkratku",
+  "Show in Patchy UI": "Zobrazit v Patchy UI",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "Funguje z libovolné aplikace. Napište část názvu webu a stiskněte Return, web se otevře."
 }

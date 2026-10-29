@@ -177,7 +177,6 @@
   "Open %@": "باز کردن %@",
   "Open Patchy UI": "باز کردن Patchy UI",
   "Open Patchy UI when I log in": "باز کردن Patchy UI هنگام ورود به سیستم",
-  "Open Site": "باز کردن سایت",
   "Open Terminal": "باز کردن Terminal",
   "Open Terminal. It’s in Applications › Utilities.": "‏Terminal را باز کنید. در Applications › Utilities قرار دارد.",
   "Open in Browser": "باز کردن در مرورگر",
@@ -400,5 +399,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "اشتراک‌گذاری این سایت ممکن نشد. پیام دقیق Patchy در «نمایش جزئیات» است.",
   "Share at %@": "اشتراک‌گذاری در %@",
   "Share with a Temporary Link": "اشتراک‌گذاری با یک پیوند موقت",
-  "Share at %@, No Password": "اشتراک‌گذاری در %@ بدون رمز"
+  "Share at %@, No Password": "اشتراک‌گذاری در %@ بدون رمز",
+  "Another app already uses that shortcut. Try a different one.": "برنامهٔ دیگری از قبل از این میان‌بر استفاده می‌کند. میان‌بر دیگری را امتحان کنید.",
+  "Find a site": "پیدا کردن سایت",
+  "Needs Attention": "نیاز به توجه",
+  "No sites match": "هیچ سایتی مطابقت ندارد",
+  "Open the menu bar panel": "باز کردن پانل نوار منو",
+  "Press a shortcut…": "یک میان‌بر را فشار دهید…",
+  "Record Shortcut": "ضبط میان‌بر",
+  "Remove Shortcut": "حذف میان‌بر",
+  "Show in Patchy UI": "نمایش در Patchy UI",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "در هر برنامه‌ای کار می‌کند. بخشی از نام سایت را تایپ کنید و برای باز کردن آن Return را فشار دهید."
 }

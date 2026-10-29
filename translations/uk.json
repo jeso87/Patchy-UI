@@ -201,7 +201,6 @@
   "Open %@": "Відкрити %@",
   "Open Patchy UI": "Відкрити Patchy UI",
   "Open Patchy UI when I log in": "Відкривати Patchy UI під час входу в систему",
-  "Open Site": "Відкрити сайт",
   "Open Terminal": "Відкрити Термінал",
   "Open Terminal. It’s in Applications › Utilities.": "Відкрийте Термінал. Він у папці Програми › Утиліти.",
   "Open in Browser": "Відкрити в браузері",
@@ -430,5 +429,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Не вдалося надати спільний доступ до цього сайту. Натисніть «Показати деталі», щоб побачити точне повідомлення Patchy.",
   "Share at %@": "Поділитися на %@",
   "Share with a Temporary Link": "Поділитися через тимчасове посилання",
-  "Share at %@, No Password": "Поділитися на %@ без пароля"
+  "Share at %@, No Password": "Поділитися на %@ без пароля",
+  "Another app already uses that shortcut. Try a different one.": "Це скорочення вже використовує інша програма. Спробуйте інше.",
+  "Find a site": "Знайти сайт",
+  "Needs Attention": "Потребують уваги",
+  "No sites match": "Немає відповідних сайтів",
+  "Open the menu bar panel": "Відкрити панель на смузі меню",
+  "Press a shortcut…": "Натисніть скорочення…",
+  "Record Shortcut": "Записати скорочення",
+  "Remove Shortcut": "Вилучити скорочення",
+  "Show in Patchy UI": "Показати в Patchy UI",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "Працює з будь-якої програми. Введіть частину назви сайту й натисніть Return, щоб відкрити його."
 }

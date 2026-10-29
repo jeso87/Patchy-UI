@@ -1,4 +1,5 @@
 import AppKit
+import Carbon.HIToolbox
 import PatchyKit
 import ServiceManagement
 import SwiftUI
@@ -71,10 +72,103 @@ struct GeneralSettings: View {
             SettingsNote("The menu bar item stays either way. With the Dock icon off, open the window from the menu bar item.")
 
             Section {
+                LabeledContent("Open the menu bar panel") {
+                    ShortcutRecorder()
+                }
+                SettingsNote("Works from any app. Type part of a site’s name, then press Return to open it.")
+            }
+
+            Section {
                 Button("Check for Updates…") { model.updater.checkForUpdates() }
             }
         }
         .formStyle(.grouped)
+    }
+}
+
+/// Records the shortcut that opens the menu bar panel: click, then press the keys.
+private struct ShortcutRecorder: View {
+    @State private var shortcut = PanelShortcut.shared.current
+    @State private var recording = false
+    @State private var monitor: Any?
+    @State private var refused = false
+
+    var body: some View {
+        VStack(alignment: .trailing, spacing: 4) {
+            HStack(spacing: 6) {
+                Button {
+                    recording ? stop() : start()
+                } label: {
+                    Group {
+                        if recording {
+                            Text("Press a shortcut…", comment: "Settings: waiting for the keys of a new shortcut.")
+                        } else if let shortcut {
+                            Text(verbatim: shortcut.display)
+                        } else {
+                            Text("Record Shortcut", comment: "Settings: button that starts recording a keyboard shortcut.")
+                        }
+                    }
+                    .frame(minWidth: 110)
+                }
+                if shortcut != nil, !recording {
+                    Button {
+                        PanelShortcut.shared.current = nil
+                        shortcut = nil
+                        refused = false
+                    } label: {
+                        Image(systemName: "xmark.circle.fill")
+                    }
+                    .buttonStyle(.borderless)
+                    .foregroundStyle(.secondary)
+                    .help(String(localized: "Remove Shortcut", comment: "Settings: tooltip on the button that clears the keyboard shortcut."))
+                    .accessibilityLabel(String(localized: "Remove Shortcut", comment: "Settings: tooltip on the button that clears the keyboard shortcut."))
+                }
+            }
+            if refused {
+                Text("Another app already uses that shortcut. Try a different one.")
+                    .font(.system(size: 11))
+                    .foregroundStyle(Theme.redText)
+            }
+        }
+        .onDisappear(perform: stop)
+    }
+
+    private func start() {
+        recording = true
+        refused = false
+        monitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { event in
+            switch Int(event.keyCode) {
+            case kVK_Escape:
+                stop()
+            case kVK_Delete, kVK_ForwardDelete:
+                PanelShortcut.shared.current = nil
+                shortcut = nil
+                stop()
+            default:
+                guard let new = KeyShortcut(keyCode: event.keyCode, modifiers: event.modifierFlags,
+                                            key: event.charactersIgnoringModifiers ?? "") else {
+                    // Needs Command, Option or Control; keep listening.
+                    NSSound.beep()
+                    return nil
+                }
+                PanelShortcut.shared.current = new
+                if PanelShortcut.shared.register() {
+                    shortcut = new
+                } else {
+                    PanelShortcut.shared.current = nil
+                    shortcut = nil
+                    refused = true
+                }
+                stop()
+            }
+            return nil
+        }
+    }
+
+    private func stop() {
+        if let monitor { NSEvent.removeMonitor(monitor) }
+        monitor = nil
+        recording = false
     }
 }
 

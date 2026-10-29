@@ -66,7 +66,7 @@ Two layers. Keep anything that isn't UI in the package so it stays testable.
 - Shares (`AppModel.shares`) stop when the server is stopped, when a shared site disappears, or when the app quits; never on restart, since every add, remove, PHP switch and folder change restarts Apache and a tunnel survives that.
 - `SiteStatus` turns a site into the plain-language health text used by the list, detail pane and menu.
 - Copy is localized through `PatchyUI/Localizable.xcstrings` (36 languages; see `docs/design/specs/2026-10-14-localization-design.md` and the Phase 2 spec beside it). Copy created as a `String` is written with `String(localized:)`; copy that depends on a count or a list lives in `Phrases`, and its plural forms live in the catalog, never in Swift. Phrases the app matches in Patchy's output live in `PatchyOutput` and are never localized.
-- Scenes: the main `Window`, a `MenuBarExtra` (standard menu), and `Settings`. Closing the window leaves the menu bar item running.
+- Scenes: the main `Window` and `Settings`. The menu bar item is AppKit, not `MenuBarExtra`: `StatusItemController` owns an `NSStatusItem` and a borderless non-activating `NSPanel` hosting `MenuBarContent`, because SwiftUI has no way to open a `MenuBarExtra` from code and the global shortcut (`PanelShortcut`, Carbon `RegisterEventHotKey`, set in Settings › General) must. The panel takes typing without bringing the app forward. On macOS 27 icon clicks arrive through `expandedInterfaceDelegate` sessions; on 14–26 through the button's action; the shortcut shows the panel directly, since starting a session isn't public. On macOS 27 a click on our own icon also reaches the global click monitor, so `clickedOutside` ignores it unless a session needs ending. `MenuPanelList` decides what the panel lists. Closing the window leaves the menu bar item running.
 
 ## Versioning, updates and releases
 
@@ -78,7 +78,7 @@ Two layers. Keep anything that isn't UI in the package so it stays testable.
 
 ## Product decisions
 
-- The design source is the Claude Design project "Patchy UI"; the brief it was built from is `docs/patchy-ui-product-brief.md`. Chosen variants: toolbar server controls (1a), name-your-first-site empty state (1d), big-address Add Site sheet (1f), standard menu bar menu (1g), rack icon filling the whole icon shape with no light border.
+- The design source is the Claude Design project "Patchy UI"; the brief it was built from is `docs/patchy-ui-product-brief.md`. Chosen variants: toolbar server controls (1a), name-your-first-site empty state (1d), big-address Add Site sheet (1f), menu bar panel with search (1h, at 400 points wide so the footer fits; it replaced the standard menu, 1g), rack icon filling the whole icon shape with no light border.
 - The user always chooses a site's folder. The app never assigns `~/Websites/<address>` by default.
 - UI copy uses plain terms (site, address, folder, server, password-free mode). Technical terms and raw Patchy output appear only behind "Show Details".
 - Never put `.fixedSize(horizontal: false, vertical: true)` on text that sits outside a scroll view in the main window (banners, headers, footers). Its height then counts toward the window's minimum height, measured at the narrowest width, where it wraps to many lines. That once made the window's content 200 points taller than the window, pushing the top under the toolbar. Use `.lineLimit` there. It is fine inside scroll views and sheets.

@@ -177,7 +177,6 @@
   "Open %@": "%@ megnyitása",
   "Open Patchy UI": "Patchy UI megnyitása",
   "Open Patchy UI when I log in": "Patchy UI megnyitása bejelentkezéskor",
-  "Open Site": "Webhely megnyitása",
   "Open Terminal": "Terminal megnyitása",
   "Open Terminal. It’s in Applications › Utilities.": "Nyissa meg a Terminal appot. Az Alkalmazások › Segédprogramok mappában található.",
   "Open in Browser": "Megnyitás böngészőben",
@@ -400,5 +399,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Nem sikerült megosztani ezt a webhelyet. A Patchy pontos üzenete a „Részletek megjelenítése” alatt látható.",
   "Share at %@": "Megosztás itt: %@",
   "Share with a Temporary Link": "Megosztás ideiglenes linkkel",
-  "Share at %@, No Password": "Megosztás itt: %@, jelszó nélkül"
+  "Share at %@, No Password": "Megosztás itt: %@, jelszó nélkül",
+  "Another app already uses that shortcut. Try a different one.": "Egy másik app már használja ezt a billentyűparancsot. Próbáljon meg egy másikat.",
+  "Find a site": "Webhely keresése",
+  "Needs Attention": "Figyelmet igényel",
+  "No sites match": "Nincs egyező webhely",
+  "Open the menu bar panel": "A menüsor paneljének megnyitása",
+  "Press a shortcut…": "Nyomjon le egy billentyűparancsot…",
+  "Record Shortcut": "Billentyűparancs rögzítése",
+  "Remove Shortcut": "Billentyűparancs eltávolítása",
+  "Show in Patchy UI": "Megjelenítés a Patchy UI-ban",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "Bármelyik appból működik. Írja be egy webhely nevének egy részét, majd nyomja meg a Return billentyűt a megnyitáshoz."
 }

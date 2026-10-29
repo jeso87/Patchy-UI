@@ -189,7 +189,6 @@
   "Open %@": "Deschideți %@",
   "Open Patchy UI": "Deschideți Patchy UI",
   "Open Patchy UI when I log in": "Deschideți Patchy UI la login",
-  "Open Site": "Deschideți site-ul",
   "Open Terminal": "Deschideți Terminal",
   "Open Terminal. It’s in Applications › Utilities.": "Deschideți Terminal. Se află în Aplicații › Utilitare.",
   "Open in Browser": "Deschideți în browser",
@@ -415,5 +414,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Nu s-a putut partaja acest site. „Afișați detaliile” conține mesajul exact de la Patchy.",
   "Share at %@": "Partajați pe %@",
   "Share with a Temporary Link": "Partajați printr-un link temporar",
-  "Share at %@, No Password": "Partajați pe %@ fără parolă"
+  "Share at %@, No Password": "Partajați pe %@ fără parolă",
+  "Another app already uses that shortcut. Try a different one.": "O altă aplicație folosește deja această scurtătură. Încercați alta.",
+  "Find a site": "Găsiți un site",
+  "Needs Attention": "Necesită atenție",
+  "No sites match": "Niciun site nu corespunde",
+  "Open the menu bar panel": "Deschideți panoul din bara de meniu",
+  "Press a shortcut…": "Apăsați o scurtătură…",
+  "Record Shortcut": "Înregistrați scurtătura",
+  "Remove Shortcut": "Eliminați scurtătura",
+  "Show in Patchy UI": "Afișați în Patchy UI",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "Funcționează din orice aplicație. Tastați o parte din numele unui site, apoi apăsați Return pentru a-l deschide."
 }

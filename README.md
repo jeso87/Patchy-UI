@@ -46,7 +46,7 @@ commands for you. It is free, open source, and not affiliated with Joe Workman.
   with or without a password, or a temporary link.
   Sharing needs Cloudflare's free `cloudflared`; the app offers to install it.
 - **Group related sites,** such as one customer's domain and subdomains. Groups
-  show in the sidebar and as submenus in the menu bar. The app suggests groups
+  show in the sidebar and as headings in the menu bar panel. The app suggests groups
   for sites that look related, and never groups anything by itself. Groups
   belong to Patchy UI only; Patchy itself is not changed.
 - **Start, stop and restart the server** from the toolbar or the menu bar. If
@@ -58,8 +58,10 @@ commands for you. It is free, open source, and not affiliated with Joe Workman.
 - **Set up password-free mode once,** so everyday changes stop asking for your
   Mac password. Or skip it, and the app asks for your password when a change
   needs it.
-- **Menu bar item** with the server's status, start/stop, and a list of sites
-  to open. It keeps running when the window is closed.
+- **Menu bar panel** with the server's status, start/stop, and every site,
+  problems first. Type part of a site's name and press Return to open it. Set a
+  keyboard shortcut in Settings to open the panel from any app without touching
+  the mouse. It keeps running when the window is closed.
 - **In your language.** Patchy UI is available in 36 languages and follows
   the language set for it in System Settings › General › Language & Region.
   Patchy's own messages, shown under Show Details, stay in English. The

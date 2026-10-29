@@ -177,7 +177,6 @@
   "Open %@": "Open %@",
   "Open Patchy UI": "Open Patchy UI",
   "Open Patchy UI when I log in": "Open Patchy UI bij inloggen",
-  "Open Site": "Open website",
   "Open Terminal": "Open Terminal",
   "Open Terminal. It’s in Applications › Utilities.": "Open Terminal. Je vindt het in Apps › Hulpprogramma's.",
   "Open in Browser": "Open in browser",
@@ -400,5 +399,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Kan deze website niet delen. Bij 'Toon details' staat de precieze melding van Patchy.",
   "Share at %@": "Deel op %@",
   "Share with a Temporary Link": "Deel via een tijdelijke link",
-  "Share at %@, No Password": "Deel op %@ zonder wachtwoord"
+  "Share at %@, No Password": "Deel op %@ zonder wachtwoord",
+  "Another app already uses that shortcut. Try a different one.": "Een andere app gebruikt die toetscombinatie al. Probeer een andere.",
+  "Find a site": "Zoek een website",
+  "Needs Attention": "Vereist aandacht",
+  "No sites match": "Geen overeenkomende websites",
+  "Open the menu bar panel": "Open het paneel in de menubalk",
+  "Press a shortcut…": "Druk op een toetscombinatie…",
+  "Record Shortcut": "Neem toetscombinatie op",
+  "Remove Shortcut": "Verwijder toetscombinatie",
+  "Show in Patchy UI": "Toon in Patchy UI",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "Werkt vanuit elke app. Typ een deel van de naam van een website en druk op Return om hem te openen."
 }

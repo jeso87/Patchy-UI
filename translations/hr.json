@@ -189,7 +189,6 @@
   "Open %@": "Otvori %@",
   "Open Patchy UI": "Otvori Patchy UI",
   "Open Patchy UI when I log in": "Otvori Patchy UI kod prijave",
-  "Open Site": "Otvori web-stranicu",
   "Open Terminal": "Otvori Terminal",
   "Open Terminal. It’s in Applications › Utilities.": "Otvorite Terminal. Nalazi se u mapi Aplikacije › Uslužni programi.",
   "Open in Browser": "Otvori u pregledniku",
@@ -415,5 +414,15 @@
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Nije moguće podijeliti ovu web-stranicu. Pod “Prikaži detalje” nalazi se točna poruka od Patchyja.",
   "Share at %@": "Podijeli na %@",
   "Share with a Temporary Link": "Podijeli privremenom poveznicom",
-  "Share at %@, No Password": "Podijeli na %@ bez lozinke"
+  "Share at %@, No Password": "Podijeli na %@ bez lozinke",
+  "Another app already uses that shortcut. Try a different one.": "Druga aplikacija već koristi taj prečac. Pokušajte s drugim.",
+  "Find a site": "Pronađi web-stranicu",
+  "Needs Attention": "Potrebna je pažnja",
+  "No sites match": "Nijedna web-stranica ne odgovara",
+  "Open the menu bar panel": "Otvori ploču na traci s izbornicima",
+  "Press a shortcut…": "Pritisnite prečac…",
+  "Record Shortcut": "Snimi prečac",
+  "Remove Shortcut": "Ukloni prečac",
+  "Show in Patchy UI": "Prikaži u aplikaciji Patchy UI",
+  "Works from any app. Type part of a site’s name, then press Return to open it.": "Radi iz bilo koje aplikacije. Upišite dio naziva web-stranice, zatim pritisnite Return da biste je otvorili."
 }
