@@ -7,6 +7,21 @@ public struct CommandResult: Sendable, Equatable {
 
     public var succeeded: Bool { exitCode == 0 }
 
+    /// The result line a command run with `--json` ends with.
+    public var result: PatchyResult? { PatchyResult.parse(output) }
+
+    /// The stable code for why it failed, when Patchy gave one.
+    public var errorCode: String? { result?.error }
+
+    /// What Show Details shows: Patchy's explanation and any extra lines, or the raw output
+    /// when there was no result line.
+    public var details: String {
+        guard let result else { return output }
+        var lines = [result.message, result.details].compactMap { $0 }.filter { !$0.isEmpty }
+        lines += result.warnings.map(\.message)
+        return lines.isEmpty ? output : lines.joined(separator: "\n")
+    }
+
     public init(exitCode: Int32, output: String) {
         self.exitCode = exitCode
         self.output = output
@@ -19,9 +34,6 @@ public enum ProcessRunner {
         case none
         /// Bytes piped to standard input.
         case pipe(Data)
-        /// Standard input is a terminal. Each line is typed in advance, then end-of-input is sent,
-        /// so a prompt the caller didn't predict gets no answer instead of waiting forever.
-        case terminal(lines: [String])
     }
 
     public static func run(_ executable: URL, _ arguments: [String] = [], environment: [String: String],
@@ -46,8 +58,6 @@ public enum ProcessRunner {
         process.standardOutput = outPipe
         process.standardError = outPipe
 
-        var master: Int32 = -1
-        var slave: Int32 = -1
         var inPipe: Pipe?
         switch input {
         case .none:
@@ -56,22 +66,15 @@ public enum ProcessRunner {
             let pipe = Pipe()
             inPipe = pipe
             process.standardInput = pipe
-        case .terminal:
-            guard openpty(&master, &slave, nil, nil, nil) == 0 else {
-                return CommandResult(exitCode: -1, output: "Could not open a terminal for \(executable.lastPathComponent).")
-            }
-            process.standardInput = FileHandle(fileDescriptor: slave, closeOnDealloc: false)
         }
 
         do {
             try process.run()
         } catch {
-            if master >= 0 { close(master); close(slave) }
             return CommandResult(exitCode: -1, output: "Could not run \(executable.path): \(error.localizedDescription)")
         }
 
         try? outPipe.fileHandleForWriting.close()
-        if slave >= 0 { close(slave) }
 
         switch input {
         case .none:
@@ -80,9 +83,6 @@ public enum ProcessRunner {
             let handle = inPipe!.fileHandleForWriting
             try? handle.write(contentsOf: data)
             try? handle.close()
-        case .terminal(let lines):
-            let typed = lines.map { $0 + "\n" }.joined() + "\u{04}"
-            _ = typed.withCString { write(master, $0, strlen($0)) }
         }
 
         let collector = OutputCollector()
@@ -107,7 +107,6 @@ public enum ProcessRunner {
         process.waitUntilExit()
         // A grandchild that outlives the command can keep the pipe open; don't wait on it forever.
         _ = collector.finished.wait(timeout: .now() + 2)
-        if master >= 0 { close(master) }
 
         return CommandResult(exitCode: process.terminationStatus, output: collector.text)
     }

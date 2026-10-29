@@ -9,8 +9,10 @@ final class StatusItemController: NSObject {
 
     private let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     private let panel: MenuPanelWindow
+    private let model: AppModel
 
     init(model: AppModel) {
+        self.model = model
         let controller = NSHostingController(rootView: MenuPanelChrome().environment(model))
         controller.sizingOptions = .preferredContentSize
         panel = MenuPanelWindow(contentViewController: controller)
@@ -86,10 +88,12 @@ final class StatusItemController: NSObject {
         place()
         panel.makeKeyAndOrderFront(nil)
         if !sessionOpen { statusItem.button?.highlight(true) }
+        model.panelVisible = true
     }
 
     private func hide() {
         panel.orderOut(nil)
+        model.panelVisible = false
         statusItem.button?.highlight(false)
     }
 

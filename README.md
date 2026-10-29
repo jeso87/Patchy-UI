@@ -26,7 +26,7 @@ local HTTPS and friendly `.test` addresses, one command per site. Patchy UI
 puts all of that behind a window, for people who would rather click than type.
 
 Patchy UI does not replace Patchy. Patchy does the real work and stays the
-source of truth; this app reads what Patchy has set up and runs Patchy's own
+source of truth; this app asks Patchy what it has set up and runs Patchy's own
 commands for you. It is free, open source, and not affiliated with Joe Workman.
 
 ## What it does
@@ -43,7 +43,8 @@ commands for you. It is free, open source, and not affiliated with Joe Workman.
   client reviewing a preview. One click gives a temporary link that works until
   you stop sharing. If you've set up your own domain with
   `patchy share setup`, Share asks each time: a stable address on your domain,
-  with or without a password, or a temporary link.
+  with or without a password, or a temporary address on your domain that is
+  new each time.
   Sharing needs Cloudflare's free `cloudflared`; the app offers to install it.
 - **Group related sites,** such as one customer's domain and subdomains. Groups
   show in the sidebar and as headings in the menu bar panel. The app suggests groups
@@ -103,11 +104,11 @@ open it, and drag Patchy UI to Applications. The app is signed and notarized.
 
 ## Version numbers follow Patchy
 
-**Patchy UI's version is the Patchy release it was made for.** Patchy UI 1.2.1
-supports Patchy 1.2.1.
+**Patchy UI's version is the Patchy release it was made for.** Patchy UI 1.3.0
+supports Patchy 1.3.0, and needs at least that release.
 
-Patchy UI works by running Patchy's commands and reading the files Patchy
-writes, so it is only dependable when the two match. Each Patchy release gets a
+Patchy UI works by running Patchy's commands and reading their machine-readable
+(`--json`) output, so it is only dependable when the two match. Each Patchy release gets a
 matching Patchy UI release, built and tested against it.
 
 - If the versions match, there is nothing to see.
@@ -118,7 +119,7 @@ matching Patchy UI release, built and tested against it.
   command to update Patchy (`brew upgrade joeworkman/patchy/patchy`).
 
 A fix to Patchy UI alone, for the same Patchy release, adds a fourth number:
-1.2.1.1 still means "made for Patchy 1.2.1".
+1.3.0.1 still means "made for Patchy 1.3.0".
 
 The current versions are always in Patchy UI › About Patchy UI.
 
@@ -158,9 +159,8 @@ add any privileged components of its own.
 **Your files.** Patchy UI never moves or deletes a site's folder. Removing a
 site removes its address, certificate and server configuration only.
 
-**Changing a folder** is the one thing the app does that Patchy has no command
-for. It edits that site's configuration file, asks Patchy to check the result,
-and puts the file back exactly as it was if the check fails.
+**Changing a folder** runs Patchy's `patchy folder`, which checks the change
+and leaves the site as it was if Apache rejects it.
 
 **Not sandboxed.** The app has to run Homebrew's tools and read files under
 the Homebrew prefix, which the App Sandbox does not allow. That is also why it
@@ -215,10 +215,10 @@ PATCHY_LIVE_TEST=1 swift test --filter LiveTests
 
 ### How it's put together
 
-- **`PatchyKit/`** — everything that isn't UI. It reads Patchy's state
-  straight from disk (site configuration files, certificates, `/etc/hosts`)
-  and makes changes by running the `patchy` command on a pseudo-terminal, so it
-  can answer Patchy's questions.
+- **`PatchyKit/`** — everything that isn't UI. It reads Patchy's state with
+  `patchy status --json` and `patchy list --json`, and makes every change by
+  running the `patchy` command with `--json`, so failures arrive as stable
+  error codes rather than text to match. It never reads Patchy's own files.
 - **`PatchyUI/`** — the SwiftUI app: main window, menu bar item, settings.
 
 `CLAUDE.md` has a fuller description for contributors, including the facts

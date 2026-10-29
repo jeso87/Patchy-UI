@@ -3,11 +3,6 @@ import PatchyKit
 
 /// Plain-language text about a site's public link.
 enum ShareCopy {
-    /// Temporary links come from Cloudflare's trycloudflare.com; anything else is the person's own domain.
-    static func isTemporary(_ access: ShareAccess) -> Bool {
-        access.url.host?.hasSuffix(".trycloudflare.com") ?? false
-    }
-
     struct Choice: Hashable {
         let title: String
         let mode: ShareMode
@@ -28,32 +23,31 @@ enum ShareCopy {
         if access.password != nil {
             return String(localized: "Anyone with this address and password can see this site until you stop sharing.", comment: "Under a shared site's address and password.")
         }
-        if isTemporary(access) {
+        if access.isTemporary {
             return String(localized: "Anyone with this link can see this site until you stop sharing.", comment: "Under a shared site's temporary link.")
         }
         return String(localized: "Anyone with this address can see this site until you stop sharing.", comment: "Under a shared site's address when it needs no password.")
     }
 
-    static func problem(output: String, wasSharing: Bool) -> String {
-        if output.contains(PatchyOutput.apacheNotRunning) {
+    static func problem(_ failure: ShareFailure) -> String {
+        if failure.code == PatchyError.apacheNotRunning {
             return String(localized: "The server isn’t running. Start it, then share again.", comment: "Shown when sharing a site failed.")
         }
-        if wasSharing {
+        if failure.wasSharing {
             return String(localized: "Sharing stopped on its own, so the link no longer works.", comment: "Shown when a shared site's link stopped working.")
         }
-        if output.contains(PatchyOutput.shareLoginExpired) {
+        switch failure.code {
+        case PatchyError.cloudflareLoginExpired:
             return String(localized: "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.", comment: "Shown when sharing a site failed. “patchy share setup” is a command; don't translate it.")
-        }
-        if output.contains(PatchyOutput.shareNoCertificate) {
+        case PatchyError.certificateMissing:
             return String(localized: "This site has no secure certificate yet. Refresh certificates, then share again.", comment: "Shown when sharing a site failed.")
-        }
-        if output.contains(PatchyOutput.shareDeletedTunnel) {
-            return String(localized: "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.", comment: "Shown when sharing a site failed. DNS record is the technical name people see in Cloudflare's dashboard.")
-        }
-        if output.contains(PatchyOutput.shareTunnelFailed) {
+        case PatchyError.tunnelDeleted:
+            return String(localized: "This site’s tunnel was deleted in Cloudflare. Share again to set up a new one.", comment: "Shown when sharing a site failed. A tunnel is what Cloudflare calls the connection that carries a shared site.")
+        case PatchyError.tunnelFailed, PatchyError.cloudflareError:
             return String(localized: "Couldn’t get a public link. Check your internet connection and try again.", comment: "Shown when sharing a site failed.")
+        default:
+            return String(localized: "Couldn’t share this site. Show Details has the exact message from Patchy.", comment: "Shown when sharing a site failed.")
         }
-        return String(localized: "Couldn’t share this site. Show Details has the exact message from Patchy.", comment: "Shown when sharing a site failed.")
     }
 
     /// What Copy Address and Password puts on the clipboard, ready to paste into a message.

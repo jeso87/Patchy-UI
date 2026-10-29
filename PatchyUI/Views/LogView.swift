@@ -106,9 +106,9 @@ struct LogView: View {
     @State private var log = LogViewModel()
     @State private var copied = false
 
+    /// The log Patchy reports for the site.
     private var file: URL? {
-        guard let environment = model.environment else { return nil }
-        return kind == .errors ? environment.errorLog(for: site.address) : environment.accessLog(for: site.address)
+        (kind == .errors ? site.errorLog : site.accessLog).map { URL(fileURLWithPath: $0) }
     }
 
     var body: some View {

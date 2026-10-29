@@ -1,6 +1,7 @@
 import Foundation
 
-/// Where Patchy and its files live on this Mac. Everything hangs off the Homebrew prefix.
+/// Where Homebrew and the `patchy` command are on this Mac. Patchy's own files are internal to it,
+/// so the app asks the command rather than reading them.
 public struct PatchyEnvironment: Sendable, Equatable {
     public let brewPrefix: URL
     /// Debug builds can run a Patchy from elsewhere, such as a clone with unreleased commands.
@@ -36,20 +37,7 @@ public struct PatchyEnvironment: Sendable, Equatable {
     }
 
     public var patchyBinary: URL { patchyOverride ?? brewPrefix.appending(path: "bin/patchy") }
-    public var httpdDir: URL { brewPrefix.appending(path: "etc/httpd") }
-    public var httpdConf: URL { httpdDir.appending(path: "httpd.conf") }
-    public var patchyConf: URL { httpdDir.appending(path: "patchy.conf") }
-    public var sitesDir: URL { httpdDir.appending(path: "sites") }
-    public var certsDir: URL { httpdDir.appending(path: "certs") }
-    public var logDir: URL { brewPrefix.appending(path: "var/log/httpd") }
-    public var pidFile: URL { brewPrefix.appending(path: "var/run/httpd/httpd.pid") }
     public var optDir: URL { brewPrefix.appending(path: "opt") }
-
-    public func vhostFile(for address: String) -> URL { sitesDir.appending(path: "\(address).conf") }
-    public func certificateFile(for address: String) -> URL { certsDir.appending(path: "\(address).pem") }
-    public func errorLog(for address: String) -> URL { logDir.appending(path: "\(address)-error_log") }
-    public func accessLog(for address: String) -> URL { logDir.appending(path: "\(address)-access_log") }
-    public var serverErrorLog: URL { logDir.appending(path: "error_log") }
 
     /// Environment for child processes. An app launched from Finder has no shell PATH,
     /// and patchy shells out to brew, jq, mkcert, apachectl and php.

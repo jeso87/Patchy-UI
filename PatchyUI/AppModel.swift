@@ -176,11 +176,13 @@ final class AppModel {
     @ObservationIgnored private var trustDeclined = false
     @ObservationIgnored private var sessionPassword: String?
     @ObservationIgnored private var passwordContinuation: CheckedContinuation<String?, Never>?
-    @ObservationIgnored private var taskOutput = ""
-    @ObservationIgnored private var markers: [(text: String, step: Int)] = []
     @ObservationIgnored private var pollTask: Task<Void, Never>?
-    /// How far the most recent task's steps got, for showing where a failure happened.
-    @ObservationIgnored private var lastTaskIndex = 0
+    /// Counts reads of Patchy's state, so a slow read that finishes after a newer one is dropped.
+    @ObservationIgnored private var refreshCount = 0
+    /// Set while the menu bar panel shows, which keeps the state fresh like an active window.
+    @ObservationIgnored var panelVisible = false {
+        didSet { if panelVisible, !oldValue { refreshSoon() } }
+    }
     #if DEBUG
     @ObservationIgnored fileprivate var pauseRefreshForDebug = false
     #endif
@@ -336,21 +338,34 @@ final class AppModel {
         NotificationCenter.default.addObserver(forName: NSApplication.willTerminateNotification, object: nil, queue: .main) { [weak self] _ in
             MainActor.assumeIsolated { self?.stopAllSharing() }
         }
+        NotificationCenter.default.addObserver(forName: NSApplication.didBecomeActiveNotification, object: nil, queue: .main) { [weak self] _ in
+            MainActor.assumeIsolated { self?.refreshSoon() }
+        }
         pollTask = Task { [weak self] in
             await self?.detect()
             #if DEBUG
             self?.applyDebugLaunchState()
             #endif
-            var tick = 0
+            var waited = 0
             while !Task.isCancelled {
-                try? await Task.sleep(for: .seconds(3))
+                try? await Task.sleep(for: .seconds(1))
                 guard let self else { return }
-                tick += 1
-                if self.phase == .ready, !self.isBusy {
-                    await self.refresh(checkTrust: tick % 5 == 0)
+                waited += 1
+                if waited >= self.pollInterval, self.phase == .ready, !self.isBusy {
+                    waited = 0
+                    await self.refresh()
                 }
             }
         }
+    }
+
+    /// Seconds between reads. Each read runs `patchy status` and `list`, which take a few seconds
+    /// of work, so they run often only while someone is looking.
+    private var pollInterval: Int { NSApp.isActive || panelVisible ? 3 : 30 }
+
+    private func refreshSoon() {
+        guard phase == .ready, !isBusy else { return }
+        Task { await refresh() }
     }
 
     func detect() async {
@@ -362,7 +377,7 @@ final class AppModel {
             }
             #endif
             client = PatchyClient(environment: environment)
-            await refresh(checkTrust: true)
+            await refresh()
             phase = .ready
         case .missingPatchy:
             client = nil
@@ -383,15 +398,22 @@ final class AppModel {
         }
     }
 
-    func refresh(checkTrust: Bool) async {
+    func refresh() async {
         guard let client else { return }
         #if DEBUG
         if pauseRefreshForDebug { return }
         #endif
-        let previousTrust = snapshot.trust
-        let fresh = await Task.detached(priority: .utility) {
-            client.snapshot(checkTrust: checkTrust, previousTrust: previousTrust)
-        }.value
+        refreshCount += 1
+        let count = refreshCount
+        let read = await client.snapshot()
+        guard count == refreshCount else { return }
+        guard let fresh = read else {
+            // Patchy couldn't say, as an older one without --json can't. Keep what's shown; the
+            // version banner explains when it's the wrong Patchy.
+            let version = await client.version()?.version
+            if version != snapshot.patchyVersion { snapshot.patchyVersion = version }
+            return
+        }
         if fresh != snapshot { snapshot = fresh }
         let serverWasDown = serverSeenDown
         serverSeenDown = !snapshot.serverRunning
@@ -410,41 +432,24 @@ final class AppModel {
 
     private typealias CommandBody = @Sendable (PatchyClient, AskpassServer?, @escaping PatchyClient.Output) async -> CommandResult
 
-    /// Runs one changing command at a time, showing its progress and re-reading state when it ends.
-    private func runTask(steps: [String], markers: [(text: String, step: Int)] = [], password: String? = nil,
-                         _ body: @escaping CommandBody) async -> CommandResult {
+    /// Runs one changing command at a time, showing what it's doing and re-reading state when it ends.
+    /// With `--json` Patchy reports no progress, only its result, so each change shows one step.
+    private func runTask(step: String, password: String? = nil, _ body: @escaping CommandBody) async -> CommandResult {
         guard let client, busy == nil else { return CommandResult(exitCode: -1, output: "") }
-        busy = Busy(steps: steps)
+        busy = Busy(steps: [step])
         banner = nil
-        taskOutput = ""
-        self.markers = markers
         sessionPassword = password
 
         let askpass = try? AskpassServer { [weak self] _ in
             await self?.passwordForSudo() ?? nil
         }
-        let output: PatchyClient.Output = { [weak self] chunk in
-            Task { @MainActor in self?.noteOutput(chunk) }
-        }
-        let result = await body(client, askpass, output)
-        // Output arrives through the main actor; let the last progress update land.
-        try? await Task.sleep(for: .milliseconds(100))
-        lastTaskIndex = busy?.index ?? 0
+        let result = await body(client, askpass, { _ in })
         askpass?.stop()
         sessionPassword = nil
         if passwordPrompt != nil { cancelPasswordPrompt() }
-        await refresh(checkTrust: true)
+        await refresh()
         busy = nil
         return result
-    }
-
-    private func noteOutput(_ chunk: String) {
-        taskOutput += chunk
-        guard var current = busy else { return }
-        for marker in markers where marker.step > current.index && taskOutput.contains(marker.text) {
-            current.index = marker.step
-        }
-        if current != busy { busy = current }
     }
 
     // MARK: Passwords
@@ -535,22 +540,22 @@ final class AppModel {
             case .valid:
                 break
             }
-            let result = await runTask(steps: [String(localized: "Setting up password-free mode…", comment: "Progress step shown while a change runs.")], password: password) { client, askpass, output in
+            let result = await runTask(step: String(localized: "Setting up password-free mode…", comment: "Progress step shown while a change runs."), password: password) { client, askpass, output in
                 guard let askpass else { return CommandResult(exitCode: -1, output: "Could not prepare the password helper.") }
                 return await client.setUpTrust(askpass: askpass, onOutput: output)
             }
             guard trustEnabled else {
                 pendingAction = nil
                 let message: String
-                if result.output.contains(PatchyOutput.trustUnsafe) || result.output.contains(PatchyOutput.trustUnsafeShort) {
+                if result.errorCode == PatchyError.unsafePath {
                     message = String(localized: "Patchy can’t set this up safely on this Mac, so nothing was changed. You can keep using the app; it will ask for your Mac password when a change needs it.", comment: "Message in an error sheet.")
-                } else if result.output.contains(PatchyOutput.terminalRequired) {
+                } else if result.errorCode == PatchyError.terminalRequired {
                     // sudo wouldn't take the password from the app. Terminal always works.
                     message = String(localized: "Your Mac wouldn’t let the app pass your password along. You can turn on password-free mode yourself instead: open Terminal (in Applications > Utilities), type patchy trust, press Return and enter your Mac password. Then come back here.", comment: "Message in an error sheet.")
                 } else {
                     message = String(localized: "Nothing was changed. Show Details has the exact message from Patchy.", comment: "Message in an error sheet.")
                 }
-                sheet = .error(ErrorInfo(title: String(localized: "Couldn’t set up password-free mode", comment: "Title of an error sheet."), message: message, details: result.output))
+                sheet = .error(ErrorInfo(title: String(localized: "Couldn’t set up password-free mode", comment: "Title of an error sheet."), message: message, details: result.details))
                 return
             }
             trustStep = .done
@@ -579,11 +584,10 @@ final class AppModel {
     func start() {
         guard !isBusy, requireTrust(for: .start) else { return }
         Task {
-            let result = await runTask(steps: [String(localized: "Starting the server…", comment: "Progress step shown while a change runs."), String(localized: "Pointing your addresses at this Mac…", comment: "Progress step shown while a change runs.")],
-                                       markers: [(PatchyOutput.started, 1)]) { client, askpass, output in
+            let result = await runTask(step: String(localized: "Starting the server…", comment: "Progress step shown while a change runs.")) { client, askpass, output in
                 await client.start(askpass: askpass, onOutput: output)
             }
-            if !serverRunning { sheet = .error(Self.startFailure(output: result.output)) }
+            if !serverRunning { sheet = .error(Self.startFailure(result)) }
         }
     }
 
@@ -592,14 +596,13 @@ final class AppModel {
         let real = sites.filter(\.isRealAddress).map(\.address)
         Task {
             stopAllSharing()
-            let result = await runTask(steps: [String(localized: "Stopping the server…", comment: "Progress step shown while a change runs."), String(localized: "Handing addresses back to the internet…", comment: "Progress step shown while a change runs.")],
-                                       markers: [(PatchyOutput.stopped, 1)]) { client, askpass, output in
+            let result = await runTask(step: String(localized: "Stopping the server…", comment: "Progress step shown while a change runs.")) { client, askpass, output in
                 await client.stop(askpass: askpass, onOutput: output)
             }
             if serverRunning {
                 sheet = .error(ErrorInfo(title: String(localized: "The server didn’t stop", comment: "Title of an error sheet."),
                                          message: String(localized: "It’s still running and your sites still open. Try again, or look at Show Details.", comment: "Message in an error sheet."),
-                                         details: result.output))
+                                         details: result.details))
             } else if !real.isEmpty {
                 banner = Banner(severity: .info, text: Phrases.liveAgain(real))
             }
@@ -610,18 +613,17 @@ final class AppModel {
         guard !isBusy, requireTrust(for: .restart) else { return }
         let neededRepair = unroutedCount > 0
         Task {
-            let result = await runTask(steps: [String(localized: "Restarting the server…", comment: "Progress step shown while a change runs."), String(localized: "Checking every address points here…", comment: "Progress step shown while a change runs.")],
-                                       markers: [(PatchyOutput.started, 1)]) { client, askpass, output in
+            let result = await runTask(step: String(localized: "Restarting the server…", comment: "Progress step shown while a change runs.")) { client, askpass, output in
                 await client.restart(askpass: askpass, onOutput: output)
             }
             if !serverRunning {
-                sheet = .error(Self.startFailure(output: result.output))
+                sheet = .error(Self.startFailure(result))
             } else if neededRepair, unroutedCount == 0 {
                 banner = Banner(severity: .ok, text: String(localized: "Repaired. Every address points at this Mac again.", comment: "Banner under the toolbar."))
             } else if unroutedCount > 0 {
                 sheet = .error(ErrorInfo(title: String(localized: "Some addresses still aren’t pointing at this Mac", comment: "Title of an error sheet."),
                                          message: String(localized: "The server restarted, but it couldn’t update where your addresses point. Try Repair again.", comment: "Message in an error sheet."),
-                                         details: result.output))
+                                         details: result.details))
             }
         }
     }
@@ -630,37 +632,41 @@ final class AppModel {
         guard !isBusy else { return }
         sheet = nil
         Task {
-            let result = await runTask(steps: [String(localized: "Stopping the server…", comment: "Progress step shown while a change runs."), String(localized: "Starting the server…", comment: "Progress step shown while a change runs.")],
-                                       markers: [(PatchyOutput.startingApache, 1)]) { client, askpass, output in
-                let stopped = await client.stop(askpass: askpass, onOutput: output)
-                let started = await client.start(askpass: askpass, onOutput: output)
-                return CommandResult(exitCode: started.exitCode, output: stopped.output + started.output)
+            let result = await runTask(step: String(localized: "Starting the server…", comment: "Progress step shown while a change runs.")) { client, askpass, output in
+                _ = await client.stop(askpass: askpass, onOutput: output)
+                return await client.start(askpass: askpass, onOutput: output)
             }
-            if !serverRunning { sheet = .error(Self.startFailure(output: result.output, offerReset: false)) }
+            if !serverRunning { sheet = .error(Self.startFailure(result, offerReset: false)) }
         }
     }
 
-    static func startFailure(output: String, offerReset: Bool = true) -> ErrorInfo {
-        if output.contains(PatchyOutput.serviceStuck), offerReset {
+    static func startFailure(_ result: CommandResult, offerReset: Bool = true) -> ErrorInfo {
+        if result.errorCode == PatchyError.serviceStuck, offerReset {
             return ErrorInfo(title: String(localized: "The server is stuck", comment: "Title of an error sheet."),
                              message: String(localized: "The background service that runs the server didn’t respond. Stopping and starting it again resets it.", comment: "Message in an error sheet."),
-                             details: output, recovery: .stopThenStart)
+                             details: result.details, recovery: .stopThenStart)
         }
-        if output.contains(PatchyOutput.addressInUse) {
-            var holders: [String] = []
-            if let range = output.range(of: PatchyOutput.portHolders) {
-                for line in output[range.upperBound...].split(whereSeparator: \.isNewline).dropFirst() {
-                    guard line.hasPrefix("  "), let name = line.split(whereSeparator: \.isWhitespace).first else { break }
-                    if !holders.contains(String(name)) { holders.append(String(name)) }
-                }
-            }
+        if result.errorCode == PatchyError.portInUse {
             return ErrorInfo(title: String(localized: "Another app is using the web ports", comment: "Title of an error sheet."),
-                             message: Phrases.portsInUse(holders: holders),
-                             details: output)
+                             message: Phrases.portsInUse(holders: portHolders(in: result.result?.details ?? "")),
+                             details: result.details)
         }
         return ErrorInfo(title: String(localized: "The server didn’t start", comment: "Title of an error sheet."),
                          message: String(localized: "Your sites won’t open until it’s running. Show Details has the exact message from Patchy.", comment: "Message in an error sheet."),
-                         details: output)
+                         details: result.details)
+    }
+
+    /// The apps holding the web ports, from the `lsof` table Patchy puts in `port_in_use`'s details:
+    /// a COMMAND header, then one indented row per app.
+    static func portHolders(in details: String) -> [String] {
+        let lines = details.split(whereSeparator: \.isNewline)
+        guard let header = lines.firstIndex(where: { $0.trimmingCharacters(in: .whitespaces).hasPrefix("COMMAND ") }) else { return [] }
+        var holders: [String] = []
+        for line in lines[(header + 1)...] {
+            guard line.hasPrefix("  "), let name = line.split(whereSeparator: \.isWhitespace).first else { break }
+            if !holders.contains(String(name)) { holders.append(String(name)) }
+        }
+        return holders
     }
 
     // MARK: Sites
@@ -678,16 +684,12 @@ final class AppModel {
         let address = add.finalAddress
         let includeWWW = add.offersWWW && add.includeWWW
         let groupID = add.groupID
-        let steps = [String(localized: "Pointing \(address) at this Mac", comment: "Progress step shown while a change runs."), String(localized: "Creating a secure certificate", comment: "Progress step shown while a change runs."), String(localized: "Setting up the site", comment: "Progress step shown while a change runs."),
-                     String(localized: "Checking the setup", comment: "Progress step shown while a change runs."), String(localized: "Restarting the server", comment: "Progress step shown while a change runs.")]
-        add.steps = steps
+        let step = String(localized: "Setting up the site", comment: "Progress step shown while a change runs.")
+        add.steps = [step]
         add.phase = .progress
         sheet = .add
         Task {
-            let result = await runTask(steps: steps, markers: [
-                (PatchyOutput.creatingCertificates, 1), (PatchyOutput.creatingConfig, 2),
-                (PatchyOutput.syntaxOK, 3), (PatchyOutput.restartingApache, 4),
-            ]) { client, askpass, output in
+            let result = await runTask(step: step) { client, askpass, output in
                 #if DEBUG
                 if UserDefaults.standard.bool(forKey: "PatchyDebugFakeAdd") {
                     try? await Task.sleep(for: .seconds(3))
@@ -697,7 +699,6 @@ final class AppModel {
                 return await client.addSite(address: address, folder: folder.path, includeWWW: includeWWW,
                                             askpass: askpass, onOutput: output)
             }
-            let lastIndex = lastTaskIndex
             #if DEBUG
             if UserDefaults.standard.bool(forKey: "PatchyDebugFakeAdd"), var fake = snapshot.sites.first {
                 // Pretend the site now exists, so the real success path runs without touching Patchy.
@@ -716,31 +717,31 @@ final class AppModel {
                     sheet = nil
                     banner = Banner(severity: .ok, text: String(localized: "\(address) is ready. Its folder is \(folder.displayPath).", comment: "Banner under the toolbar."), openAddress: address)
                 } else {
-                    var failure = Self.startFailure(output: result.output)
+                    var failure = Self.startFailure(result)
                     failure.title = String(localized: "\(address) was added, but the server isn’t running", comment: "Title of an error sheet.")
                     sheet = .error(failure)
                 }
             } else {
-                add.failedIndex = lastIndex
-                add.errorDetails = "$ patchy add \(address) \(folder.path)\n" + result.output
-                add.errorMessage = Self.addFailureMessage(output: result.output)
+                add.failedIndex = 0
+                add.errorDetails = "$ patchy add \(address) \(folder.path)\n" + result.details
+                add.errorMessage = Self.addFailureMessage(code: result.errorCode)
                 add.phase = .error
                 sheet = .add
             }
         }
     }
 
-    static func addFailureMessage(output: String) -> String {
-        if output.contains(PatchyOutput.rollingBack) {
-            return String(localized: "The setup check found a problem, so Patchy undid every step. Nothing was added and your other sites are fine.")
+    static func addFailureMessage(code: String?) -> String {
+        switch code {
+        case PatchyError.configInvalid:
+            String(localized: "The setup check found a problem, so Patchy undid every step. Nothing was added and your other sites are fine.")
+        case PatchyError.siteExists:
+            String(localized: "A site with this address already exists, so nothing was changed.")
+        case PatchyError.hostsUpdateFailed, PatchyError.sudoRequired, PatchyError.cancelled:
+            String(localized: "Patchy couldn’t point the address at this Mac, so nothing was created. Your other sites are fine.")
+        default:
+            String(localized: "Something stopped the setup partway. Your other sites are fine; Show Details has the exact message from Patchy.")
         }
-        if output.contains(PatchyOutput.siteExists) {
-            return String(localized: "A site with this address already exists, so nothing was changed.")
-        }
-        if !output.contains(PatchyOutput.creatingCertificates) {
-            return String(localized: "Patchy couldn’t point the address at this Mac, so nothing was created. Your other sites are fine.")
-        }
-        return String(localized: "Something stopped the setup partway. Your other sites are fine; Show Details has the exact message from Patchy.")
     }
 
     func askRemove(_ address: String? = nil) {
@@ -754,14 +755,13 @@ final class AppModel {
         sheet = nil
         let index = sites.firstIndex { $0.address == address } ?? 0
         Task {
-            let result = await runTask(steps: [String(localized: "Removing \(address)…", comment: "Progress step shown while a change runs."), String(localized: "Restarting the server…", comment: "Progress step shown while a change runs.")],
-                                       markers: [(PatchyOutput.restartingApache, 1)]) { client, askpass, output in
+            let result = await runTask(step: String(localized: "Removing \(address)…", comment: "Progress step shown while a change runs.")) { client, askpass, output in
                 await client.removeSites([address], askpass: askpass, onOutput: output)
             }
             if sites.contains(where: { $0.address == address }) {
                 sheet = .error(ErrorInfo(title: String(localized: "Couldn’t remove \(address)", comment: "Title of an error sheet."),
                                          message: String(localized: "The site is still set up exactly as it was. Show Details has the exact message from Patchy.", comment: "Message in an error sheet."),
-                                         details: result.output))
+                                         details: result.details))
             } else {
                 groups.remove(address)
                 selection = sites.isEmpty ? nil : sites[min(index, sites.count - 1)].address
@@ -779,19 +779,18 @@ final class AppModel {
 
     func saveFolder(for address: String, path: String) {
         guard !isBusy else { return }
-        // Only a running server is restarted, and only the restart touches routing.
+        // Patchy restarts only a running server, and only the restart touches routing.
         let restart = serverRunning
         if restart, !requireTrust(for: .folder(address: address, path: path)) { return }
         sheet = nil
         Task {
-            let result = await runTask(steps: [String(localized: "Pointing \(address) at the new folder…", comment: "Progress step shown while a change runs."), String(localized: "Checking the setup…", comment: "Progress step shown while a change runs."), String(localized: "Restarting the server…", comment: "Progress step shown while a change runs.")],
-                                       markers: [(PatchyOutput.syntaxOK, 1), (PatchyOutput.restartingApache, 2)]) { client, askpass, output in
-                await client.changeFolder(of: address, to: path, restart: restart, askpass: askpass, onOutput: output)
+            let result = await runTask(step: String(localized: "Pointing \(address) at the new folder…", comment: "Progress step shown while a change runs.")) { client, askpass, output in
+                await client.changeFolder(of: address, to: path, askpass: askpass, onOutput: output)
             }
             let display = (path as NSString).abbreviatingWithTildeInPath
             if sites.first(where: { $0.address == address })?.folder == path {
                 if restart, !serverRunning {
-                    var failure = Self.startFailure(output: result.output)
+                    var failure = Self.startFailure(result)
                     failure.title = String(localized: "The folder changed, but the server isn’t running", comment: "Title of an error sheet.")
                     sheet = .error(failure)
                 } else {
@@ -800,7 +799,7 @@ final class AppModel {
             } else {
                 sheet = .error(ErrorInfo(title: String(localized: "Couldn’t change the folder for \(address)", comment: "Title of an error sheet."),
                                          message: String(localized: "The setup check found a problem, so the site still uses its previous folder. Nothing else changed.", comment: "Message in an error sheet."),
-                                         details: result.output))
+                                         details: result.details))
             }
         }
     }
@@ -816,17 +815,15 @@ final class AppModel {
     func refreshCertificates() {
         guard !isBusy else { return }
         sheet = nil
-        let restart = serverRunning
         let count = sites.count
         Task {
-            let result = await runTask(steps: [Phrases.makingCertificates(siteCount: count), String(localized: "Restarting the server…", comment: "Progress step shown while a change runs.")],
-                                       markers: [(PatchyOutput.restartingApache, 1)]) { client, askpass, output in
-                await client.refreshCertificates(restart: restart, askpass: askpass, onOutput: output)
+            let result = await runTask(step: Phrases.makingCertificates(siteCount: count)) { client, askpass, output in
+                await client.refreshCertificates(askpass: askpass, onOutput: output)
             }
             if sites.contains(where: { status(of: $0).certificateNeedsRefresh }) || !result.succeeded {
                 sheet = .error(ErrorInfo(title: String(localized: "Couldn’t refresh certificates", comment: "Title of an error sheet."),
                                          message: String(localized: "Some sites may still show a browser warning. If you cancelled a password prompt, try again and enter your Mac password.", comment: "Message in an error sheet."),
-                                         details: result.output))
+                                         details: result.details))
             } else {
                 banner = Banner(severity: .ok, text: String(localized: "Certificates refreshed. If a browser still shows a warning, quit and reopen it.", comment: "Banner under the toolbar."))
             }
@@ -836,8 +833,7 @@ final class AppModel {
     func switchPHP(to version: String) {
         guard !isBusy, version != snapshot.activePHP else { return }
         Task {
-            let result = await runTask(steps: [String(localized: "Switching every site to PHP \(version)…", comment: "Progress step shown while a change runs."), String(localized: "Restarting the server…", comment: "Progress step shown while a change runs.")],
-                                       markers: [(PatchyOutput.restartingApache, 1)]) { client, askpass, output in
+            let result = await runTask(step: String(localized: "Switching every site to PHP \(version)…", comment: "Progress step shown while a change runs.")) { client, askpass, output in
                 await client.switchPHP(to: version, askpass: askpass, onOutput: output)
             }
             if snapshot.activePHP == version, serverRunning {
@@ -846,7 +842,7 @@ final class AppModel {
                 openMainWindow?()
                 sheet = .error(ErrorInfo(title: String(localized: "Couldn’t switch to PHP \(version)", comment: "Title of an error sheet."),
                                          message: snapshot.activePHP.map { String(localized: "Your sites are running on PHP \($0).") } ?? String(localized: "Show Details has the exact message from Patchy."),
-                                         details: result.output))
+                                         details: result.details))
             }
         }
     }
@@ -896,7 +892,7 @@ final class AppModel {
         guard let client else { return }
         let decision = Self.shareDecision(canShare: canShare, serverRunning: serverRunning,
                                           alreadySharing: shareSessions[site.address] != nil,
-                                          cloudflaredInstalled: ServerReader.cloudflaredInstalled(client.environment))
+                                          cloudflaredInstalled: snapshot.cloudflaredInstalled)
         switch decision {
         case .ignore:
             return
@@ -920,11 +916,11 @@ final class AppModel {
             shareSessions[address] = nil
             stoppingShares.remove(address)
             shares[address] = nil
-        case .failed(let output, _):
+        case .failed(let failure):
             let mode = shareSessions[address]?.mode ?? .standard
             shareSessions[address] = nil
             stoppingShares.remove(address)
-            if output.contains(PatchyOutput.cloudflaredRequired) {
+            if failure.code == PatchyError.cloudflaredMissing {
                 shares[address] = nil
                 sheet = .installCloudflared(address, mode: mode)
                 openMainWindow?()
@@ -956,10 +952,10 @@ final class AppModel {
     }
 
     func showShareProblem(_ address: String) {
-        guard case .failed(let output, let wasSharing)? = shares[address] else { return }
+        guard case .failed(let failure)? = shares[address] else { return }
         sheet = .error(ErrorInfo(title: String(localized: "Couldn’t share \(address)", comment: "Title of an error sheet."),
-                                 message: ShareCopy.problem(output: output, wasSharing: wasSharing),
-                                 details: output))
+                                 message: ShareCopy.problem(failure),
+                                 details: failure.details))
     }
 
     private func access(_ address: String) -> ShareAccess? {
@@ -981,10 +977,10 @@ final class AppModel {
     func installCloudflared(thenShare address: String, mode: ShareMode) {
         guard !isBusy else { return }
         Task {
-            let result = await runTask(steps: [String(localized: "Installing cloudflared…", comment: "Progress step shown while a change runs.")]) { client, _, output in
+            let result = await runTask(step: String(localized: "Installing cloudflared…", comment: "Progress step shown while a change runs.")) { client, _, output in
                 await client.installCloudflared(onOutput: output)
             }
-            guard let environment, ServerReader.cloudflaredInstalled(environment) else {
+            guard snapshot.cloudflaredInstalled else {
                 sheet = .error(ErrorInfo(title: String(localized: "Couldn’t install cloudflared", comment: "Title of an error sheet."),
                                          message: String(localized: "Nothing was changed. Show Details has the exact message from Homebrew.", comment: "Message in an error sheet."),
                                          details: result.output))
@@ -1079,6 +1075,7 @@ extension AppModel {
         demo.patchyVersion = snapshot.patchyVersion
         demo.supportsSharing = snapshot.supportsSharing
         demo.sharingDomain = snapshot.sharingDomain
+        demo.cloudflaredInstalled = snapshot.cloudflaredInstalled
         snapshot = demo
         var demoGroups = SiteGroups()
         demoGroups.createGroup(named: "Northwind", sites: ["northwind.test", "members.northwind.test", "shop.northwind.test"])
@@ -1113,8 +1110,8 @@ extension AppModel {
             switch defaults.string(forKey: "PatchyDebugShareState") {
             case "starting": shares[address] = .starting
             case "stable": shares[address] = .sharing(ShareAccess(url: URL(string: "https://\(name).example.com")!, username: "preview", password: "k7Rm-4vQx-92Ld"))
-            case "failed": shares[address] = .failed(output: "cloudflared stopped before the link was ready:\nERR failed to request quick Tunnel", wasSharing: false)
-            default: shares[address] = .sharing(ShareAccess(url: URL(string: "https://quiet-river-banana.trycloudflare.com")!))
+            case "failed": shares[address] = .failed(ShareFailure(code: PatchyError.tunnelFailed, details: "cloudflared stopped before the link was ready:\nERR failed to request quick Tunnel", wasSharing: false))
+            default: shares[address] = .sharing(ShareAccess(url: URL(string: "https://quiet-river-banana.trycloudflare.com")!, isTemporary: true))
             }
         }
         switch defaults.string(forKey: "PatchyDebugSheet") {
@@ -1123,11 +1120,10 @@ extension AppModel {
             add = AddDraft(name: name, folder: URL(fileURLWithPath: NSHomeDirectory()).appending(path: "Websites/\(AddressRules.finalAddress(from: name))"))
             sheet = .add
         case "addprogress":
-            add = AddDraft(name: "harbor-cafe", phase: .progress,
-                           steps: ["Pointing harbor-cafe.test at this Mac", "Creating a secure certificate", "Setting up the site", "Checking the setup", "Restarting the server"])
+            add = AddDraft(name: "harbor-cafe", phase: .progress, steps: ["Setting up the site"])
             sheet = .add
         case "adderror":
-            add = AddDraft(name: "harbor-cafe", phase: .error, errorMessage: Self.addFailureMessage(output: "Rolling back"), errorDetails: "$ patchy add harbor-cafe.test\nApache configuration is invalid.\nRolling back site creation...")
+            add = AddDraft(name: "harbor-cafe", phase: .error, errorMessage: Self.addFailureMessage(code: PatchyError.configInvalid), errorDetails: "$ patchy add harbor-cafe.test\nApache rejected harbor-cafe.test's config, so the site was rolled back")
             sheet = .add
         case "addsuccess":
             // Replays what the window does when an add finishes, without adding anything.
@@ -1136,12 +1132,10 @@ extension AppModel {
             Task {
                 // Start on the form so the address field takes keyboard focus, as it does for a person.
                 try? await Task.sleep(for: .seconds(2))
-                add.steps = ["Pointing harbor-cafe.test at this Mac", "Restarting the server"]
+                add.steps = ["Setting up the site"]
                 add.phase = .progress
                 busy = Busy(steps: add.steps)
-                try? await Task.sleep(for: .seconds(1))
-                busy?.index = 1
-                try? await Task.sleep(for: .seconds(1))
+                try? await Task.sleep(for: .seconds(2))
                 // A new row arrives in the same update as the selection change, as in a real add.
                 pauseRefreshForDebug = true
                 var fake = snapshot.sites[0]
@@ -1162,7 +1156,7 @@ extension AppModel {
         case "password": passwordPrompt = PasswordPrompt()
         case "certs": sheet = .refreshCertificates
         case "cloudflared": if let selection { sheet = .installCloudflared(selection, mode: .standard) }
-        case "error": sheet = .error(Self.startFailure(output: "Apache's startup error:\n  (48)Address already in use: AH00072: make_sock: could not bind to address [::]:80\nSomething else is listening on port 80/443:\n  COMMAND PID USER\n  nginx 412 joe"))
+        case "error": sheet = .error(Self.startFailure(CommandResult(exitCode: 1, output: #"{"schema":1,"ok":false,"error":"port_in_use","message":"Apache didn't start","details":"Apache's startup error:\n  (48)Address already in use: AH00072: make_sock: could not bind to address [::]:80\nSomething else is listening on port 80/443:\n  COMMAND PID USER\n  nginx 412 joe","warnings":[]}"#)))
         default: break
         }
     }

@@ -1,80 +1,90 @@
 import Darwin
 import Foundation
 
-/// Where a shared site can be reached, as `patchy share` printed it.
+/// Where a shared site can be reached, as `patchy share` reported it.
 public struct ShareAccess: Sendable, Equatable {
     public var url: URL
-    /// Set when the site is shared on the person's own domain with a password.
+    /// A random link, new each share, rather than the site's own address on the person's domain.
+    public var isTemporary: Bool
+    /// Set when the share asks for a password.
     public var username: String?
     public var password: String?
 
-    public init(url: URL, username: String? = nil, password: String? = nil) {
+    public init(url: URL, isTemporary: Bool = false, username: String? = nil, password: String? = nil) {
         self.url = url
+        self.isTemporary = isTemporary
         self.username = username
         self.password = password
+    }
+}
+
+/// Why a share ended without being asked to.
+public struct ShareFailure: Sendable, Equatable {
+    /// Patchy's stable error code (see `PatchyError`); nil when Patchy didn't give one.
+    public var code: String?
+    /// Patchy's explanation and any extra lines, for Show Details.
+    public var details: String
+    /// True when the link had been working.
+    public var wasSharing: Bool
+
+    public init(code: String?, details: String, wasSharing: Bool) {
+        self.code = code
+        self.details = details
+        self.wasSharing = wasSharing
     }
 }
 
 public enum ShareState: Sendable, Equatable {
     case starting
     case sharing(ShareAccess)
-    /// Patchy's output. `wasSharing` is true when the link had been working.
-    case failed(output: String, wasSharing: Bool)
+    case failed(ShareFailure)
     case stopped
 }
 
-/// The lines `patchy share` prints in a fixed format. This is Patchy's English, matched by the app,
-/// never localized.
-public enum ShareOutput {
-    public static let sharing = "Sharing "
-    public static let username = "Username: "
-    public static let password = "   Password: "
-    /// The last line Patchy prints once the link works; everything before it is complete.
-    public static let ready = "Press Ctrl-C to stop sharing."
+/// The events `patchy share --json` prints, one JSON object per line.
+enum ShareEvents {
+    /// The link once Patchy reports it ready. Only whole lines count, so a line that arrives in
+    /// two reads is never read early.
+    static func access(in text: String) -> ShareAccess? {
+        guard let event = events(in: text).first(where: { $0.event == "ready" }),
+              let url = event.url.flatMap(URL.init(string:)), url.scheme == "https", url.host != nil else { return nil }
+        return ShareAccess(url: url, isTemporary: event.mode != "stable",
+                           username: event.auth?.username, password: event.auth?.password)
+    }
 
-    /// The link, and the password when there is one, once Patchy has printed them all.
-    /// Only whole lines count, so a link that arrives in two reads is never cut short.
-    public static func access(in text: String, address: String) -> ShareAccess? {
-        let lines = text.split(separator: "\n", omittingEmptySubsequences: false).dropLast()
-            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
-        guard lines.contains(where: { $0.hasSuffix(ready) }) else { return nil }
-        let prefix = sharing + address + " at "
-        guard let line = lines.first(where: { $0.hasPrefix(prefix) }),
-              let url = URL(string: String(line.dropFirst(prefix.count))),
-              url.scheme == "https", url.host != nil else { return nil }
-        var access = ShareAccess(url: url)
-        if let credentials = lines.first(where: { $0.hasPrefix(username) }),
-           let split = credentials.range(of: password) {
-            access.username = String(credentials[credentials.index(credentials.startIndex, offsetBy: username.count)..<split.lowerBound])
-            access.password = String(credentials[split.upperBound...])
-        }
-        return access
+    /// The `error` event, if Patchy sent one.
+    static func error(in text: String) -> PatchyJSON.ShareEvent? {
+        events(in: text).last { $0.event == "error" }
+    }
+
+    private static func events(in text: String) -> [PatchyJSON.ShareEvent] {
+        text.split(separator: "\n", omittingEmptySubsequences: false).dropLast()
+            .compactMap { try? JSONDecoder().decode(PatchyJSON.ShareEvent.self, from: Data($0.utf8)) }
     }
 }
 
 /// Which link `patchy share` makes.
 public enum ShareMode: Sendable, Hashable {
-    /// No options: Patchy uses the connected domain, or a temporary link without one.
+    /// No options: the site's address on the connected domain, or an anonymous link without one.
     case standard
-    /// A temporary trycloudflare.com link, even with a domain connected.
+    /// A random address on the connected domain, new each share.
     case temporary
-    /// The site's address on the connected domain. Patchy remembers `--password`/`--open`
-    /// per site, so these always pass one rather than reuse the last choice.
+    /// The site's address on the connected domain, asking for a new password each share.
     case domainWithPassword
+    /// The site's address on the connected domain, open to anyone with it.
     case domainWithoutPassword
 
     var arguments: [String] {
         switch self {
-        case .standard: []
-        case .temporary: ["--quick"]
-        case .domainWithPassword: ["--password"]
-        case .domainWithoutPassword: ["--open"]
+        case .standard, .domainWithoutPassword: []
+        case .temporary: ["--temp"]
+        case .domainWithPassword: ["--auth"]
         }
     }
 }
 
-/// Runs `patchy share <address>` for as long as the site is shared, and reports its state.
-/// Patchy forwards a stop signal to cloudflared itself, so signalling this one process is enough.
+/// Runs `patchy share <address> --json` for as long as the site is shared, and reports its state.
+/// Patchy stops cloudflared itself when signalled, so signalling this one process is enough.
 public final class ShareSession: @unchecked Sendable {
     public let address: String
     private let environment: PatchyEnvironment
@@ -117,7 +127,7 @@ public final class ShareSession: @unchecked Sendable {
     public func start() {
         process.executableURL = URL(fileURLWithPath: "/bin/zsh")
         process.arguments = ["-c", Self.watcherScript, "patchy-share", environment.patchyBinary.path,
-                             "share", address] + mode.arguments
+                             "share", address] + mode.arguments + ["--json"]
         process.environment = environment.processEnvironment()
         let input = Pipe()
         process.standardInput = input
@@ -138,7 +148,7 @@ public final class ShareSession: @unchecked Sendable {
         do {
             try process.run()
         } catch {
-            report(.failed(output: "Could not run \(environment.patchyBinary.path): \(error.localizedDescription)", wasSharing: false))
+            report(.failed(ShareFailure(code: nil, details: "Could not run \(environment.patchyBinary.path): \(error.localizedDescription)", wasSharing: false)))
             return
         }
         try? pipe.fileHandleForWriting.close()
@@ -182,7 +192,7 @@ public final class ShareSession: @unchecked Sendable {
         lock.lock()
         output += chunk
         var found: ShareAccess?
-        if access == nil, let parsed = ShareOutput.access(in: output, address: address) {
+        if access == nil, let parsed = ShareEvents.access(in: output) {
             access = parsed
             found = parsed
         }
@@ -195,9 +205,17 @@ public final class ShareSession: @unchecked Sendable {
         lock.lock()
         try? lifeline?.close()
         lifeline = nil
-        let state: ShareState = stopRequested ? .stopped : .failed(output: output, wasSharing: access != nil)
+        let state: ShareState = stopRequested ? .stopped : .failed(Self.failure(in: output, wasSharing: access != nil))
         lock.unlock()
         report(state)
+    }
+
+    static func failure(in output: String, wasSharing: Bool) -> ShareFailure {
+        guard let error = ShareEvents.error(in: output + "\n") else {
+            return ShareFailure(code: nil, details: output, wasSharing: wasSharing)
+        }
+        let details = [error.message, error.details].compactMap { $0 }.filter { !$0.isEmpty }.joined(separator: "\n")
+        return ShareFailure(code: error.error, details: details, wasSharing: wasSharing)
     }
 
     private func report(_ state: ShareState) {

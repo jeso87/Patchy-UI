@@ -14,7 +14,7 @@ struct LiveTests {
             return
         }
         let client = PatchyClient(environment: environment)
-        let before = client.snapshot()
+        let before = try #require(await client.snapshot())
         try #require(before.trust == .enabled, "Password-free mode must be on for the live test")
         try #require(!before.sites.contains { $0.address == Self.address }, "\(Self.address) already exists")
 
@@ -26,33 +26,33 @@ struct LiveTests {
         try "second".write(to: second.appending(path: "index.html"), atomically: true, encoding: .utf8)
         defer { try? FileManager.default.removeItem(at: root) }
 
-        // Add, declining the www alias — only possible because the command runs on a terminal.
+        // Add, declining the www alias.
         let added = await client.addSite(address: Self.address, folder: first.path, includeWWW: false)
         print("--- add ---\n\(added.output)")
-        var site = try #require(client.snapshot().sites.first { $0.address == Self.address })
+        #expect(added.result?.ok == true)
+        var site = try #require(await client.snapshot()?.sites.first { $0.address == Self.address })
         #expect(site.folder == first.path)
         #expect(site.aliases.isEmpty)
         #expect(site.isRouted)
         #expect((site.certificate.daysLeft() ?? 0) > 30)
-        #expect(client.snapshot().serverRunning)
+        #expect(await client.snapshot()?.serverRunning == true)
         #expect(await fetch() == "first")
 
-        let changed = await client.changeFolder(of: Self.address, to: second.path, restart: true)
+        let changed = await client.changeFolder(of: Self.address, to: second.path)
         print("--- change folder ---\n\(changed.output)")
         #expect(changed.succeeded)
-        site = try #require(client.snapshot().sites.first { $0.address == Self.address })
+        site = try #require(await client.snapshot()?.sites.first { $0.address == Self.address })
         #expect(site.folder == second.path)
         #expect(await fetch() == "second")
 
         let removed = await client.removeSites([Self.address])
         print("--- remove ---\n\(removed.output)")
-        let after = client.snapshot()
+        let after = try #require(await client.snapshot())
         #expect(!after.sites.contains { $0.address == Self.address })
         #expect(after.serverRunning)
         #expect(after.sites.map(\.address) == before.sites.map(\.address))
         let allRouted = after.sites.allSatisfy { $0.isRouted }
         #expect(allRouted)
-        #expect(!FileManager.default.fileExists(atPath: environment.certificateFile(for: Self.address).path))
     }
 
     /// What the site serves over https, straight from this Mac.

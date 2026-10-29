@@ -2,30 +2,6 @@ import Foundation
 import Testing
 @testable import PatchyKit
 
-private let sampleVhost = """
-<Directory "/Users/joe/Sites/My Site/public">
-    Options Indexes FollowSymLinks
-    AllowOverride All
-    Require all granted
-</Directory>
-
-<VirtualHost *:80>
-    DocumentRoot "/Users/joe/Sites/My Site/public"
-    ServerName mysite.test
-    ServerAlias www.mysite.test
-    ErrorLog "/opt/homebrew/var/log/httpd/mysite.test-error_log"
-</VirtualHost>
-
-<VirtualHost *:443>
-    DocumentRoot "/Users/joe/Sites/My Site/public"
-    ServerName mysite.test
-    ServerAlias www.mysite.test
-    SSLEngine on
-    SSLCertificateFile "/opt/homebrew/etc/httpd/certs/mysite.test.pem"
-</VirtualHost>
-
-"""
-
 @Suite struct AddressRulesTests {
     @Test func bareNameGetsTestSuffix() {
         #expect(AddressRules.finalAddress(from: " MySite ") == "mysite.test")
@@ -54,53 +30,6 @@ private let sampleVhost = """
         #expect(!AddressRules.isRealAddress("intranet.local"))
         #expect(AddressRules.isRealAddress("example.com"))
     }
-
-    @Test func promptAnswersFollowPatchysOrder() {
-        #expect(AddressRules.addPromptAnswers(address: "mysite.test", includeWWW: true) == ["y"])
-        #expect(AddressRules.addPromptAnswers(address: "mysite.test", includeWWW: false) == ["n"])
-        #expect(AddressRules.addPromptAnswers(address: "example.com", includeWWW: false) == ["n", "y"])
-        #expect(AddressRules.addPromptAnswers(address: "shop.example.com", includeWWW: true) == ["y"])
-        #expect(AddressRules.addPromptAnswers(address: "a.b.test", includeWWW: true) == [])
-    }
-}
-
-@Suite struct VhostTests {
-    @Test func parsesFolderAndAliases() {
-        let parsed = Vhost.parse(sampleVhost)
-        #expect(parsed.folder == "/Users/joe/Sites/My Site/public")
-        #expect(parsed.aliases == ["www.mysite.test"])
-    }
-
-    @Test func replacesEveryFolderReference() throws {
-        let updated = try #require(Vhost.replacingFolder(in: sampleVhost, with: "/Users/joe/New Place"))
-        #expect(Vhost.parse(updated).folder == "/Users/joe/New Place")
-        #expect(!updated.contains("My Site"))
-        #expect(updated.components(separatedBy: "/Users/joe/New Place").count == 4)
-        #expect(updated.contains("    DocumentRoot \"/Users/joe/New Place\""))
-        // Everything else is untouched, line for line.
-        #expect(updated.components(separatedBy: "\n").count == sampleVhost.components(separatedBy: "\n").count)
-        #expect(updated.contains("ServerAlias www.mysite.test"))
-    }
-
-    @Test func refusesFoldersThatCannotBeQuoted() {
-        #expect(Vhost.replacingFolder(in: sampleVhost, with: "/Users/joe/bad\"name") == nil)
-        #expect(Vhost.replacingFolder(in: sampleVhost, with: "") == nil)
-        #expect(Vhost.replacingFolder(in: "ServerName x.test\n", with: "/tmp") == nil)
-    }
-}
-
-@Suite struct HostsFileTests {
-    @Test func routedNamesNeedBothLines() {
-        let hosts = """
-        127.0.0.1 localhost
-        127.0.0.1 a.test # patchy
-        ::1 a.test # patchy
-        127.0.0.1 b.test # patchy
-        127.0.0.1 c.test
-        ::1 c.test
-        """
-        #expect(HostsFile.routedNames(in: hosts) == ["a.test"])
-    }
 }
 
 @Suite struct CompatibilityTests {
@@ -120,27 +49,6 @@ private let sampleVhost = """
     }
 }
 
-@Suite struct ServerReaderTests {
-    @Test func phpVersions() {
-        #expect(ServerReader.phpVersion(fromCellarName: "8.5.11_1") == PHPInstall(version: "8.5", fullVersion: "8.5.11"))
-        #expect(ServerReader.phpVersion(fromCellarName: "7.4.33") == PHPInstall(version: "7.4", fullVersion: "7.4.33"))
-        #expect(ServerReader.phpVersion(fromCellarName: "HEAD-abc") == nil)
-    }
-
-    @Test func phpFormulaFromPatchyConf() {
-        let conf = """
-        LoadModule ssl_module lib/httpd/modules/mod_ssl.so
-        LoadModule php_module /opt/homebrew/opt/php@8.3/lib/httpd/modules/libphp.so
-        """
-        #expect(ServerReader.phpFormula(inPatchyConf: conf) == "php@8.3")
-    }
-
-    @Test func helperVersion() {
-        #expect(ServerReader.expectedHelperVersion(inScript: "#!/bin/zsh\nHELPER_VERSION=\"2\"\n") == "2")
-        #expect(ServerReader.expectedHelperVersion(inScript: "#!/bin/zsh\n") == nil)
-    }
-}
-
 /// A throwaway Homebrew prefix with a fake `patchy` so commands can run without touching the real one.
 struct FakePrefix {
     let root: URL
@@ -150,7 +58,7 @@ struct FakePrefix {
         root = FileManager.default.temporaryDirectory.appending(path: "PatchyKitTests-\(UUID().uuidString)")
         environment = PatchyEnvironment(brewPrefix: root)
         let fm = FileManager.default
-        for dir in ["bin", "etc/httpd/sites", "etc/httpd/certs", "var/log/httpd", "var/run/httpd", "opt"] {
+        for dir in ["bin", "opt"] {
             try fm.createDirectory(at: root.appending(path: dir), withIntermediateDirectories: true)
         }
         try patchyScript.write(to: environment.patchyBinary, atomically: true, encoding: .utf8)
@@ -160,27 +68,120 @@ struct FakePrefix {
     func remove() { try? FileManager.default.removeItem(at: root) }
 }
 
-@Suite struct CommandTests {
-    /// Asks the same two questions as `patchy add`, with the same terminal test.
-    static let promptingScript = """
-    #!/bin/zsh
-    if [ ! -t 0 ]; then echo "no terminal"; exit 3; fi
-    printf "Also serve www.%s? [Y/n] " "$2" >&2
-    read -r www
-    printf "Continue? [y/N] "
-    read -r go
-    echo "www=$www go=$go folder=$3"
-    read -r extra || echo "no more input"
+/// What a fake `patchy` prints for `status`, `list` and `version` with `--json`, shaped like 1.3.0's.
+enum SampleJSON {
+    static let status = """
+    {"schema": 1, "apache": {"running": true},
+     "php": {"active": "8.4", "installed": [{"formula": "php", "full": "8.5.12", "version": "8.5"},
+                                            {"formula": "php@8.4", "full": "8.4.27", "version": "8.4"}]},
+     "hosts": {"names": 3, "routed": 3, "missing": []},
+     "trust": "outdated", "certificate_authority": {"exists": true, "trusted": true},
+     "share": {"domain": "example.com", "cloudflared": true},
+     "paths": {"error_log": "/opt/homebrew/var/log/httpd/error_log",
+               "httpd_conf": "/opt/homebrew/etc/httpd/httpd.conf",
+               "php_ini": "/opt/homebrew/etc/php/8.4/php.ini"}}
     """
 
-    @Test func addAnswersPromptsThroughATerminal() async throws {
-        let prefix = try FakePrefix(patchyScript: Self.promptingScript)
+    static let list = """
+    {"schema": 1, "sites": [
+      {"domain": "mysite.test", "docroot": "/Users/joe/Sites/My Site/public", "docroot_exists": false,
+       "aliases": ["www.mysite.test"],
+       "certificate": {"state": "expired", "days_left": -3, "expires": "2026-10-26T12:00:00Z"},
+       "routed": false,
+       "logs": {"error": "/opt/homebrew/var/log/httpd/mysite.test-error_log",
+                "access": "/opt/homebrew/var/log/httpd/mysite.test-access_log"},
+       "share": {"address": "https://mysite.example.com", "running": null}},
+      {"domain": "harbor.test", "docroot": "/tmp", "docroot_exists": true, "aliases": [],
+       "certificate": {"state": "none", "days_left": null, "expires": null},
+       "routed": true, "logs": {"error": null, "access": null},
+       "share": {"address": null, "running": null}}]}
+    """
+
+    static let version = """
+    {"schema": 1, "version": "1.3.0", "features": ["json", "add_yes", "folder", "share", "share_auth"]}
+    """
+
+    /// A fake `patchy` answering the three, and echoing anything else.
+    static let script = """
+    #!/bin/zsh
+    case "$1" in
+        status) cat <<'JSON'
+    \(status)
+    JSON
+        ;;
+        list) cat <<'JSON'
+    \(list)
+    JSON
+        ;;
+        version) echo '\(version)' ;;
+        *) echo "args: $*" ;;
+    esac
+    """
+}
+
+@Suite struct ReadingTests {
+    @Test func snapshotComesFromStatusListAndVersion() async throws {
+        let prefix = try FakePrefix(patchyScript: SampleJSON.script)
+        defer { prefix.remove() }
+        let snapshot = try #require(await PatchyClient(environment: prefix.environment).snapshot())
+        #expect(snapshot.serverRunning)
+        #expect(snapshot.activePHP == "8.4")
+        #expect(snapshot.installedPHP == [PHPInstall(version: "8.5", fullVersion: "8.5.12"), PHPInstall(version: "8.4", fullVersion: "8.4.27")])
+        #expect(snapshot.trust == .outdated)
+        #expect(snapshot.patchyVersion == "1.3.0")
+        #expect(snapshot.supportsSharing)
+        #expect(snapshot.sharingDomain == "example.com")
+        #expect(snapshot.cloudflaredInstalled)
+        #expect(snapshot.certificateAuthorityInstalled)
+        #expect(snapshot.serverErrorLog == "/opt/homebrew/var/log/httpd/error_log")
+
+        #expect(snapshot.sites.map(\.address) == ["harbor.test", "mysite.test"])
+        let site = try #require(snapshot.sites.last)
+        #expect(site.folder == "/Users/joe/Sites/My Site/public")
+        #expect(!site.folderExists)
+        #expect(site.wwwAlias == "www.mysite.test")
+        #expect(!site.isRouted)
+        #expect(site.certificate == .valid(expires: try Date("2026-10-26T12:00:00Z", strategy: .iso8601)))
+        #expect(site.errorLog == "/opt/homebrew/var/log/httpd/mysite.test-error_log")
+        #expect(site.shareAddress == "https://mysite.example.com")
+        #expect(snapshot.sites.first?.certificate == .missing)
+    }
+
+    @Test func noJSONMeansNoSnapshotButAVersion() async throws {
+        let prefix = try FakePrefix(patchyScript: "#!/bin/zsh\necho \"patchy 1.2.1\"\n")
         defer { prefix.remove() }
         let client = PatchyClient(environment: prefix.environment)
-        let result = await client.addSite(address: "example.com", folder: "/tmp/site folder", includeWWW: false)
-        #expect(result.succeeded)
-        #expect(result.output.contains("www=n go=y folder=/tmp/site folder"))
-        #expect(result.output.contains("no more input"))
+        #expect(await client.snapshot() == nil)
+        #expect(await client.version() == PatchyVersion(version: "1.2.1", features: []))
+    }
+
+    @Test func unreadableCertificatesAreInvalid() throws {
+        let json = #"{"sites": [{"domain": "a.test", "docroot": "/tmp", "docroot_exists": true, "aliases": [], "certificate": {"state": "invalid", "expires": null}, "routed": true, "logs": {}, "share": {}}]}"#
+        let list = try #require(PatchyJSON.document(PatchyJSON.List.self, in: json))
+        #expect(Site(list.sites[0]).certificate == .invalid)
+    }
+}
+
+@Suite struct CommandTests {
+    @Test(arguments: [
+        ("example.com", true, "args: add example.com /tmp/site folder --yes --www --json"),
+        ("mysite.test", false, "args: add mysite.test /tmp/site folder --yes --no-www --json"),
+    ])
+    func addAnswersPatchysQuestionsWithFlags(address: String, www: Bool, expected: String) async throws {
+        let prefix = try FakePrefix(patchyScript: SampleJSON.script)
+        defer { prefix.remove() }
+        let result = await PatchyClient(environment: prefix.environment).addSite(address: address, folder: "/tmp/site folder", includeWWW: www)
+        #expect(result.output.trimmingCharacters(in: .newlines) == expected)
+    }
+
+    @Test func changesRunWithJSON() async throws {
+        let prefix = try FakePrefix(patchyScript: SampleJSON.script)
+        defer { prefix.remove() }
+        let client = PatchyClient(environment: prefix.environment)
+        #expect(await client.changeFolder(of: "a.test", to: "/tmp/x").output.contains("args: folder a.test /tmp/x --json"))
+        #expect(await client.refreshCertificates().output.contains("args: refresh-certs --json"))
+        #expect(await client.removeSites(["a.test", "b.test"]).output.contains("args: rm a.test b.test --json"))
+        #expect(await client.switchPHP(to: "8.4").output.contains("args: php 8.4 --json"))
     }
 
     @Test func outputIsStreamedAndExitCodeReported() async throws {
@@ -193,67 +194,22 @@ struct FakePrefix {
         #expect(seen.text == result.output)
     }
 
-    @Test func changeFolderRewritesConfigWhenCheckPasses() async throws {
-        let prefix = try FakePrefix(patchyScript: "#!/bin/zsh\necho \"ran $1\"\n")
-        defer { prefix.remove() }
-        let file = prefix.environment.vhostFile(for: "mysite.test")
-        try sampleVhost.write(to: file, atomically: true, encoding: .utf8)
-        let newFolder = prefix.root.appending(path: "new folder")
-        try FileManager.default.createDirectory(at: newFolder, withIntermediateDirectories: true)
+    @Test func resultLineGivesTheCodeAndDetails() {
+        let failed = CommandResult(exitCode: 1, output: """
+        brew noise on stderr
+        {"schema":1,"ok":false,"error":"port_in_use","message":"Apache didn't start","details":"line one\\nline two","warnings":[{"code":"sudo_required","message":"Couldn't update /etc/hosts"}]}
 
-        let result = await PatchyClient(environment: prefix.environment)
-            .changeFolder(of: "mysite.test", to: newFolder.path, restart: true)
-        #expect(result.succeeded)
-        #expect(result.output.contains("ran check") && result.output.contains("ran restart"))
-        #expect(Vhost.parse(try String(contentsOf: file, encoding: .utf8)).folder == newFolder.path)
-    }
+        """)
+        #expect(failed.errorCode == PatchyError.portInUse)
+        #expect(failed.details == "Apache didn't start\nline one\nline two\nCouldn't update /etc/hosts")
 
-    @Test func changeFolderRestoresConfigWhenCheckFails() async throws {
-        let prefix = try FakePrefix(patchyScript: "#!/bin/zsh\necho \"Apache configuration is invalid.\"\nexit 1\n")
-        defer { prefix.remove() }
-        let file = prefix.environment.vhostFile(for: "mysite.test")
-        try sampleVhost.write(to: file, atomically: true, encoding: .utf8)
+        let fine = CommandResult(exitCode: 0, output: #"{"schema":1,"ok":true,"warnings":[]}"#)
+        #expect(fine.result?.ok == true)
+        #expect(fine.errorCode == nil)
 
-        let result = await PatchyClient(environment: prefix.environment)
-            .changeFolder(of: "mysite.test", to: prefix.root.path, restart: true)
-        #expect(!result.succeeded)
-        #expect(try String(contentsOf: file, encoding: .utf8) == sampleVhost)
-    }
-
-    @Test func changeFolderRejectsMissingFolder() async throws {
-        let prefix = try FakePrefix(patchyScript: "#!/bin/zsh\nexit 0\n")
-        defer { prefix.remove() }
-        let file = prefix.environment.vhostFile(for: "mysite.test")
-        try sampleVhost.write(to: file, atomically: true, encoding: .utf8)
-        let result = await PatchyClient(environment: prefix.environment)
-            .changeFolder(of: "mysite.test", to: "/nonexistent/patchy-ui", restart: false)
-        #expect(!result.succeeded)
-        #expect(try String(contentsOf: file, encoding: .utf8) == sampleVhost)
-    }
-
-    @Test func snapshotReadsSitesFromDisk() throws {
-        let prefix = try FakePrefix(patchyScript: "#!/bin/zsh\nHELPER_VERSION=\"2\"\n")
-        defer { prefix.remove() }
-        try sampleVhost.write(to: prefix.environment.vhostFile(for: "mysite.test"), atomically: true, encoding: .utf8)
-        let hosts = prefix.root.appending(path: "hosts")
-        try "127.0.0.1 mysite.test # patchy\n::1 mysite.test # patchy\n".write(to: hosts, atomically: true, encoding: .utf8)
-
-        var client = PatchyClient(environment: prefix.environment)
-        client.hostsFile = hosts
-        let snapshot = client.snapshot(checkTrust: false)
-        #expect(snapshot.sites.count == 1)
-        let site = try #require(snapshot.sites.first)
-        #expect(site.address == "mysite.test")
-        #expect(site.wwwAlias == "www.mysite.test")
-        #expect(site.certificate == .missing)
-        #expect(!site.folderExists)
-        // www.mysite.test has no hosts line, so the site is only partly routed.
-        #expect(!site.isRouted)
-        #expect(!snapshot.serverRunning)
-
-        // Apache records its process ID here; a live process means the server is running.
-        try "\(ProcessInfo.processInfo.processIdentifier)\n".write(to: prefix.environment.pidFile, atomically: true, encoding: .utf8)
-        #expect(client.snapshot(checkTrust: false).serverRunning)
+        let plain = CommandResult(exitCode: 1, output: "Could not run patchy")
+        #expect(plain.result == nil)
+        #expect(plain.details == "Could not run patchy")
     }
 }
 

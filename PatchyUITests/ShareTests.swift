@@ -5,7 +5,7 @@ import Testing
 
 @MainActor
 @Suite struct ShareTests {
-    let quick = ShareAccess(url: URL(string: "https://quiet-river-banana.trycloudflare.com")!)
+    let quick = ShareAccess(url: URL(string: "https://quiet-river-banana.trycloudflare.com")!, isTemporary: true)
     let stable = ShareAccess(url: URL(string: "https://harbor.example.com")!, username: "preview", password: "k7Rm-4vQx-92Ld")
     let open = ShareAccess(url: URL(string: "https://harbor.example.com")!)
 
@@ -13,8 +13,6 @@ import Testing
         #expect(ShareCopy.notice(for: quick) == "Anyone with this link can see this site until you stop sharing.")
         #expect(ShareCopy.notice(for: stable) == "Anyone with this address and password can see this site until you stop sharing.")
         #expect(ShareCopy.notice(for: open) == "Anyone with this address can see this site until you stop sharing.")
-        #expect(ShareCopy.isTemporary(quick))
-        #expect(!ShareCopy.isTemporary(stable))
     }
 
     /// With a domain connected, Share asks which link to make; without one, it makes a temporary link.
@@ -25,27 +23,26 @@ import Testing
         #expect(choices.map(\.mode) == [.domainWithPassword, .domainWithoutPassword, .temporary])
     }
 
-    @Test func problems() {
-        #expect(ShareCopy.problem(output: "Apache isn't running. Start it with: patchy start", wasSharing: false)
-                == "The server isn’t running. Start it, then share again.")
-        #expect(ShareCopy.problem(output: "The link stopped working because cloudflared quit:", wasSharing: true)
-                == "Sharing stopped on its own, so the link no longer works.")
-        #expect(ShareCopy.problem(output: "cloudflared stopped before the link was ready:", wasSharing: false)
-                == "Couldn’t get a public link. Check your internet connection and try again.")
+    func failure(_ code: String?, wasSharing: Bool = false) -> ShareFailure {
+        ShareFailure(code: code, details: "", wasSharing: wasSharing)
     }
 
-    /// Patchy says what's wrong for problems that aren't the network; the app passes that on.
+    @Test func problems() {
+        #expect(ShareCopy.problem(failure("apache_not_running")) == "The server isn’t running. Start it, then share again.")
+        #expect(ShareCopy.problem(failure("tunnel_stopped", wasSharing: true)) == "Sharing stopped on its own, so the link no longer works.")
+        #expect(ShareCopy.problem(failure("tunnel_failed")) == "Couldn’t get a public link. Check your internet connection and try again.")
+        #expect(ShareCopy.problem(failure("cloudflare_error")) == "Couldn’t get a public link. Check your internet connection and try again.")
+    }
+
+    /// Patchy's code says what's wrong for problems that aren't the network; the app passes that on.
     @Test func problemsThatAreNotTheNetwork() {
-        #expect(ShareCopy.problem(output: "Your Cloudflare login has expired. Run 'patchy share setup example.com' again.", wasSharing: false)
+        #expect(ShareCopy.problem(failure("cloudflare_login_expired"))
                 == "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal.")
-        #expect(ShareCopy.problem(output: "harbor.test has no certificate yet. Run 'patchy refresh-certs' first.", wasSharing: false)
-                == "This site has no secure certificate yet. Refresh certificates, then share again.")
-        #expect(ShareCopy.problem(output: "harbor.example.com still points at the deleted tunnel. Delete its DNS record in the Cloudflare dashboard (DNS), then share again.", wasSharing: false)
-                == "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again.")
-        #expect(ShareCopy.problem(output: "Apache's configuration check failed, so nothing was set up for harbor.test:", wasSharing: false)
-                == "Couldn’t share this site. Show Details has the exact message from Patchy.")
-        #expect(ShareCopy.problem(output: "harbor.example.com is already used on example.com. Choose another name with --name.", wasSharing: false)
-                == "Couldn’t share this site. Show Details has the exact message from Patchy.")
+        #expect(ShareCopy.problem(failure("certificate_missing")) == "This site has no secure certificate yet. Refresh certificates, then share again.")
+        #expect(ShareCopy.problem(failure("tunnel_deleted")) == "This site’s tunnel was deleted in Cloudflare. Share again to set up a new one.")
+        #expect(ShareCopy.problem(failure("config_invalid")) == "Couldn’t share this site. Show Details has the exact message from Patchy.")
+        #expect(ShareCopy.problem(failure("name_taken")) == "Couldn’t share this site. Show Details has the exact message from Patchy.")
+        #expect(ShareCopy.problem(failure(nil)) == "Couldn’t share this site. Show Details has the exact message from Patchy.")
     }
 
     @Test func clientMessage() {
@@ -84,14 +81,5 @@ import Testing
     @Test func sharesStopWhenTheirSiteIsGone() {
         #expect(AppModel.sharesToStop(["a.test", "gone.test"], snapshot: snapshot(running: true, sites: ["a.test"]), serverWasDown: false) == ["gone.test"])
         #expect(AppModel.sharesToStop(["a.test"], snapshot: snapshot(running: true, sites: ["a.test"]), serverWasDown: true) == [])
-    }
-
-    @Test func sharingPhrasesAreMatchedNotLocalized() {
-        for phrase in [ShareOutput.sharing, ShareOutput.username, ShareOutput.password, ShareOutput.ready,
-                       PatchyOutput.apacheNotRunning, PatchyOutput.cloudflaredRequired,
-                       PatchyOutput.shareLoginExpired, PatchyOutput.shareNoCertificate,
-                       PatchyOutput.shareDeletedTunnel, PatchyOutput.shareTunnelFailed] {
-            #expect(PatchyOutput.all.contains(phrase))
-        }
     }
 }

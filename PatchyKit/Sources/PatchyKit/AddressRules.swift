@@ -1,6 +1,6 @@
 import Foundation
 
-/// The rules Patchy applies to site addresses, mirrored so the app can predict its prompts.
+/// The rules Patchy applies to site addresses, mirrored so the app can explain them before adding a site.
 public enum AddressRules {
     public enum Problem: Error, Equatable, Sendable {
         case invalidCharacters
@@ -44,12 +44,4 @@ public enum AddressRules {
         return tld != "test" && tld != "local"
     }
 
-    /// The lines `patchy add` reads from its terminal, in the order it asks:
-    /// the www question (two-label addresses), then the real-address confirmation.
-    public static func addPromptAnswers(address: String, includeWWW: Bool) -> [String] {
-        var answers: [String] = []
-        if offersWWW(address) { answers.append(includeWWW ? "y" : "n") }
-        if isRealAddress(address) { answers.append("y") }
-        return answers
-    }
 }

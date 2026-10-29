@@ -22,8 +22,8 @@ xcodebuild -project "Patchy UI.xcodeproj" -scheme "Patchy UI" -configuration Deb
 
 # Test the core library (Swift Testing, no app launch needed)
 cd PatchyKit && swift test
-swift test --filter VhostTests                 # one suite
-swift test --filter changeFolderRestores       # one test, by name substring
+swift test --filter ReadingTests               # one suite
+swift test --filter resultLineGivesTheCode     # one test, by name substring
 
 # Test the app: copy, catalog and localization guards (hosted; runs in English)
 xcodebuild test -project "Patchy UI.xcodeproj" -scheme "Patchy UI" -destination 'platform=macOS' -derivedDataPath build
@@ -43,34 +43,34 @@ swift Tools/make-icon.swift PatchyUI/Assets.xcassets/AppIcon.appiconset
 
 `Patchy UI.xcodeproj` is generated from `project.yml` by XcodeGen. It is not committed (same convention as Shrinker Pro); run `xcodegen generate` after cloning. Change build settings in `project.yml`, not in Xcode, or they are lost on the next generate.
 
-Debug builds accept launch arguments that open the app in a given state for checking layouts without running any command, e.g. `-PatchyDebugSheet add -PatchyDebugName example.com`, `-PatchyDebugSheet folder`, `-PatchyDebugTab errors -PatchyDebugSite <address>`, `-PatchyDebugPhase empty|notinstalled`, `-PatchyDebugDetails YES` (Show Details starts expanded). `-PatchyDebugPatchyPath <path>` runs another Patchy, such as `~/Developer/Apps/patchy/bin/patchy` (the fork with `share`); `-PatchyDebugShare <address>` with `-PatchyDebugShareState starting|sharing|stable|failed` shows a site as shared without starting anything; `-PatchyDebugShareDomain <domain>` makes Share offer that domain's choices, as when one is connected; `-PatchyDebugSheet cloudflared` opens the install sheet. `-PatchyDebugDemo YES` replaces everything shown with made-up sites and groups, and `-PatchyDebugAppearance light|dark` forces the appearance; the README screenshots in `docs/screenshots/` were taken that way and must never show the developer's real sites. See `applyDebugLaunchState` in `AppModel.swift` for the full list. If a Debug build launches with no window, add `-ApplePersistenceIgnoreState YES`: it shares saved window state with the installed app, and a closed window stays closed.
+Debug builds accept launch arguments that open the app in a given state for checking layouts without running any command, e.g. `-PatchyDebugSheet add -PatchyDebugName example.com`, `-PatchyDebugSheet folder`, `-PatchyDebugTab errors -PatchyDebugSite <address>`, `-PatchyDebugPhase empty|notinstalled`, `-PatchyDebugDetails YES` (Show Details starts expanded). `-PatchyDebugPatchyPath <path>` runs another Patchy, such as a clone at `~/Developer/Apps/patchy/bin/patchy`; `-PatchyDebugShare <address>` with `-PatchyDebugShareState starting|sharing|stable|failed` shows a site as shared without starting anything; `-PatchyDebugShareDomain <domain>` makes Share offer that domain's choices, as when one is connected; `-PatchyDebugSheet cloudflared` opens the install sheet. `-PatchyDebugDemo YES` replaces everything shown with made-up sites and groups, and `-PatchyDebugAppearance light|dark` forces the appearance; the README screenshots in `docs/screenshots/` were taken that way and must never show the developer's real sites. See `applyDebugLaunchState` in `AppModel.swift` for the full list. If a Debug build launches with no window, add `-ApplePersistenceIgnoreState YES`: it shares saved window state with the installed app, and a closed window stays closed.
 
 ## Architecture
 
 Two layers. Keep anything that isn't UI in the package so it stays testable.
 
 **`PatchyKit/` (local Swift package)** — no SwiftUI.
-- `PatchyEnvironment` finds the Homebrew prefix and derives every path; `processEnvironment()` builds the PATH child processes need.
-- Readers (`SiteReader`, `Vhost`, `HostsFile`, `CertificateReader`, `ServerReader`) build a `PatchySnapshot` straight from disk. Nothing parses `patchy list`/`status` output.
-- `PatchyClient` is the only thing that changes anything. Every change runs the real `patchy` CLI, except `changeFolder`, which Patchy has no command for: it rewrites the site's vhost file, runs `patchy check`, restores the original on failure, then `patchy restart`.
-- `installCloudflared` is the one other exception to running only `patchy`: Patchy leaves `cloudflared` to the person, so the app runs `brew install cloudflared` itself, only when someone asks to share.
-- `ShareSession` runs `patchy share <site>` for as long as a site is shared, outside `runTask`. `ShareOutput` parses Patchy's fixed lines (link, username/password, ready line), only once they are whole. Stopping sends INT, then TERM after 3 s; Patchy stops `cloudflared` itself. `ServerReader.supportsSharing` reads whether the installed Patchy has `share` (1.2.1 doesn't, so the Share button is hidden). `ServerReader.sharingDomain` reads the domain `patchy share setup` connected; with one, Share becomes a menu offering that domain with a password (`--password`), without one (`--open`), or a temporary link (`--quick`), so the app never picks for the person. `ShareMode` always passes `--password` or `--open` for the domain, because Patchy remembers either per site.
-- `ProcessRunner` gives `patchy` a pseudo-terminal for stdin (`patchy trust` refuses to run without one, and `patchy add` only asks the www question on one). Answers to `add`'s prompts are typed in advance in the order Patchy asks, followed by end-of-input; `AddressRules.addPromptAnswers` must stay in step with `prompt_www_alias` and `confirm_real_domain` in the patchy script.
-- `AskpassServer` is how sudo gets a password with no terminal: it sets `SUDO_ASKPASS` to a script that reads a private named pipe, and the app writes the password into the pipe on demand. The password is never stored, logged or put in the environment.
+- `PatchyEnvironment` finds the Homebrew prefix and the `patchy` binary; `processEnvironment()` builds the PATH child processes need.
+- The app talks to Patchy only through the CLI and its `--json` output (Patchy 1.3.0+); it never reads Patchy's files, which Joe treats as internal and changes between releases. `PatchyJSON` decodes the documents. `PatchyClient.snapshot()` runs `status --json`, `list --json` and `version --json` concurrently and builds a `PatchySnapshot`; it returns nil when Patchy can't answer (an older Patchy), and `version()` still parses the plain `patchy 1.2.1` so the version banner can explain.
+- `PatchyClient` makes every change with `--json`: `add <site> <dir> --yes --www|--no-www`, `rm`, `folder`, `start`, `stop`, `restart`, `php`, `refresh-certs` (restarts a running server itself), `trust`. Each ends with one result line; `CommandResult.result`/`errorCode`/`details` read it. `PatchyError` holds the stable error codes the app matches; never match Patchy's English messages. With `--json` Patchy prints no progress, so each change shows a single progress step.
+- `installCloudflared` is the one exception to running only `patchy`: the app runs `brew install cloudflared` itself when sharing finds it missing (Patchy's formula depends on it, so that's rare).
+- `ShareSession` runs `patchy share <site> --json` for as long as a site is shared, outside `runTask`, and reads its JSON events (`ShareEvents`): `ready` gives the URL, mode and any username/password; `error` gives a code (`ShareFailure`). Stopping closes the watcher's stdin (TERM), then TERM again after 3 s; Patchy stops `cloudflared` itself. Sharing shows when `version --json` lists the `share` feature. With a domain from `patchy share setup` (`status` reports it), Share is a menu: the site's address with a password (`--auth`, a new password each share), without one (the default, open), or a temporary address on the domain (`--temp`). Without a domain, Patchy makes an anonymous trycloudflare link.
+- `ProcessRunner` runs commands with stdin closed and stdout/stderr merged; `PatchyJSON` skips anything around the JSON.
+- `AskpassServer` is how sudo gets a password with no terminal: it sets `SUDO_ASKPASS` to a script that reads a private named pipe, and the app writes the password into the pipe on demand. Patchy then runs `sudo -A`, which also lets `patchy trust` run without a terminal. The password is never stored, logged or put in the environment.
 
 **`PatchyUI/` (app target, SwiftUI, macOS 14+)**
-- `AppModel` (`@Observable`, main actor) owns all state. `runTask` is the single path for changing commands: one at a time, progress steps advanced by matching markers in Patchy's output, then a fresh snapshot. Success is always judged by re-reading state, never by exit code.
+- `AppModel` (`@Observable`, main actor) owns all state. `runTask` is the single path for changing commands: one at a time, one progress step, then a fresh snapshot. Success is judged by re-reading state; the error code only picks the explanation. A snapshot costs a few seconds of CPU, so the poll runs every 3 s while the app is active or the menu bar panel is open, and every 30 s otherwise; a read that finishes after a newer one is dropped.
 - One sheet at a time, driven by `AppModel.sheet`; `SheetHost` renders it. A sudo password request (`passwordPrompt`) takes over whatever sheet is showing.
 - Changes that touch routing go through `requireTrust`, which offers password-free setup first and then resumes the pending action.
 - Sidebar groups (`SiteGroups` in PatchyKit) exist only in this app, stored in `~/Library/Application Support/Patchy UI/groups.json`. A site is in at most one group; deleting a group only ungroups its sites. Suggestions are offered, never applied. `-PatchyDebugGroups YES` shows demo groups in memory without writing that file.
 - Shares (`AppModel.shares`) stop when the server is stopped, when a shared site disappears, or when the app quits; never on restart, since every add, remove, PHP switch and folder change restarts Apache and a tunnel survives that.
 - `SiteStatus` turns a site into the plain-language health text used by the list, detail pane and menu.
-- Copy is localized through `PatchyUI/Localizable.xcstrings` (36 languages; see `docs/design/specs/2026-10-14-localization-design.md` and the Phase 2 spec beside it). Copy created as a `String` is written with `String(localized:)`; copy that depends on a count or a list lives in `Phrases`, and its plural forms live in the catalog, never in Swift. Phrases the app matches in Patchy's output live in `PatchyOutput` and are never localized.
+- Copy is localized through `PatchyUI/Localizable.xcstrings` (36 languages; see `docs/design/specs/2026-10-14-localization-design.md` and the Phase 2 spec beside it). Copy created as a `String` is written with `String(localized:)`; copy that depends on a count or a list lives in `Phrases`, and its plural forms live in the catalog, never in Swift. The few phrases still matched as text (log lines) live in `PatchyOutput` and are never localized.
 - Scenes: the main `Window` and `Settings`. The menu bar item is AppKit, not `MenuBarExtra`: `StatusItemController` owns an `NSStatusItem` and a borderless non-activating `NSPanel` hosting `MenuBarContent`, because SwiftUI has no way to open a `MenuBarExtra` from code and the global shortcut (`PanelShortcut`, Carbon `RegisterEventHotKey`, set in Settings › General) must. The panel takes typing without bringing the app forward. On macOS 27 icon clicks arrive through `expandedInterfaceDelegate` sessions; on 14–26 through the button's action; the shortcut shows the panel directly, since starting a session isn't public. On macOS 27 a click on our own icon also reaches the global click monitor, so `clickedOutside` ignores it unless a session needs ending. `MenuPanelList` decides what the panel lists. Closing the window leaves the menu bar item running.
 
 ## Versioning, updates and releases
 
-- **The app's version is the Patchy release it supports.** `MARKETING_VERSION` in `project.yml` must equal the Patchy version the build was tested against (currently 1.2.1). An app-only fix adds a fourth part (1.2.1.1). `PatchyCompatibility` compares the first three parts with the installed Patchy and the app shows a warning banner on a mismatch. When Patchy releases a new version: upgrade Patchy, re-read the script for changes to prompts and file layout, run the live test, then bump the version.
+- **The app's version is the Patchy release it supports.** `MARKETING_VERSION` in `project.yml` must equal the Patchy version the build was tested against (currently 1.3.0). An app-only fix adds a fourth part (1.3.0.1). `PatchyCompatibility` compares the first three parts with the installed Patchy and the app shows a warning banner on a mismatch. When Patchy releases a new version: upgrade Patchy, read `patchy docs` (the README's "Scripts and AI agents" and "JSON output" sections, and the error code table) for changes to the `--json` shapes, `schema` and error codes, run the live test, then bump the version.
 - **`CURRENT_PROJECT_VERSION` must rise with every release.** Sparkle compares it, not the marketing version.
 - **Sparkle** comes in as a Swift package. The feed is `appcast.xml` at the repo root, served by GitHub Pages at the `SUFeedURL` in `project.yml` (`jeso87/Patchy-UI`). The EdDSA public key in `project.yml` is the same one Shrinker Pro uses; the private key lives in the developer's login keychain. Update checks are daily and not optional, by decision.
 - **`scripts/release.sh`** tests, archives, exports with Developer ID, notarizes, builds the DMG and regenerates `appcast.xml`. It publishes nothing and fails if the installed Patchy doesn't match the version being released. It needs release notes at `docs/release-notes/<version>.md`. It mirrors the release script in `~/Developer/Apps/Shrinker Pro`, the developer's other MIT-licensed app, which is the reference for conventions here.
@@ -89,40 +89,27 @@ Two layers. Keep anything that isn't UI in the package so it stays testable.
 
 ## How Patchy works (what the GUI has to drive)
 
-Patchy is a single ~1400-line zsh script at `/opt/homebrew/bin/patchy` (v1.2.1 installed; its README is at `/opt/homebrew/opt/patchy/README.md`). Read the script before designing any integration — it is the only spec. It has no JSON or machine-readable output mode.
+Patchy is a zsh script, `/opt/homebrew/bin/patchy`, with its commands in `libexec/*.zsh` beside it (v1.3.0 installed; source clone at `~/Developer/Apps/patchy`). `patchy docs` prints its README, which is the spec for scripts and apps: read its "Scripts and AI agents" and "JSON output" sections and the error code table before changing an integration.
 
-Commands: `list`, `add <domain> [dir]`, `rm <domain>...`, `status`, `start`, `stop`, `restart`, `check`, `info`, `version`, `php <version>`, `pecl`, `refresh-certs`, `setup`, `trust`, `untrust`, `config`, `ini`, `errors [lines|-f]`, `logs`.
+Joe's rules for callers, which the app follows:
 
-### State lives on disk, not in the CLI
-
-Everything Patchy knows is derived from files, so the app can read state directly instead of parsing human-formatted CLI output (`$BREW` = `brew --prefix`, `/opt/homebrew` here):
-
-| What | Where |
-|---|---|
-| Sites | one `$BREW/etc/httpd/sites/<domain>.conf` per site — the file's existence *is* the site |
-| Docroot / www alias | `DocumentRoot "..."` and `ServerAlias` lines inside that conf |
-| Certificates | `$BREW/etc/httpd/certs/<domain>.pem` and `<domain>-key.pem` (mkcert) |
-| Logs | `$BREW/var/log/httpd/<domain>-{access,error}_log`, plus global `error_log` |
-| Apache running | live process ID in `$BREW/var/run/httpd/httpd.pid` (Patchy itself asks `brew services`, which is too slow to poll) |
-| Routing active | lines ending in `# patchy` in `/etc/hosts` (one `127.0.0.1` and one `::1` line per name) |
-| Active PHP | the `LoadModule php…` line in `$BREW/etc/httpd/patchy.conf` (file is rewritten in full by Patchy — never edit it) |
-| Trust enabled | `/usr/local/libexec/patchy-hosts` + `/etc/sudoers.d/patchy`; verify with `sudo -n /usr/local/libexec/patchy-hosts check` |
-
-Mutations (`add`, `rm`, `start`, `stop`, `php`, `refresh-certs`) should still go through the `patchy` CLI so its ordering, rollback and hosts-sync logic is preserved.
+- Add `--json` to every command that takes it. Output is then only JSON, nothing prompts, and failures carry a stable `error` code. `message` is for people and may change.
+- Read state through `status --json` and `list --json`, never Patchy's files (vhosts, certs, `patchy.conf`, the share folder). They are internal and change between releases (1.3.0 moved the share login to `~/.config/patchy/share`).
+- `add` takes `--yes` (real domains) and `--www`/`--no-www` instead of prompts.
+- `sudo_required` means a password is needed and there was no `SUDO_ASKPASS`; the app always provides one through `AskpassServer`.
+- `share` runs until stopped: read lines until `ready`, stop with SIGTERM. Don't run `logs` or `errors -f`; the app tails the log files `list --json` names (`logs.error`/`logs.access`).
+- Every top-level object has `"schema": 1`; the number goes up only when a change could break a caller.
 
 ### Constraints that shape the app
 
-- **PATH.** Patchy runs `brew --prefix` on its first line and shells out to `brew`, `jq`, `mkcert`, `apachectl`, `php`, `openssl`. An app launched from Finder does not inherit the shell's PATH, so child processes need `/opt/homebrew/bin` (Apple silicon) or `/usr/local/bin` (Intel) added explicitly.
-- **No App Sandbox.** The app has to spawn Homebrew binaries and read under the Homebrew prefix and `/etc/hosts`, which rules out sandboxing (and therefore the Mac App Store).
-- **sudo with no terminal.** Editing `/etc/hosts` needs root. Without `patchy trust`, Patchy calls plain `sudo`, which has no TTY to prompt on when spawned from a GUI. `patchy trust` itself and the hosts step of `patchy setup` refuse to run unless stdin is a TTY. Getting a non-terminal user through first-run trust is the central onboarding problem.
-- **Interactive prompts in `add`.** Two prompts behave differently when stdin is not a TTY:
-  - The `Also serve www.<domain>? [Y/n]` prompt is skipped and defaults to yes, so every two-label domain (`foo.test`, `example.com`) silently gets a `www.` alias. There is no flag to decline.
-  - The real-domain confirmation (any TLD other than `.test`/`.local`) always reads stdin and aborts on anything but `y`, so the app must write `y\n` to the process's stdin for real TLDs — after showing its own warning that the live site becomes unreachable on this Mac.
-- **Editor commands are useless in a GUI.** `config` and `ini` open `$VISUAL`/`$EDITOR`/`nano`. Open the underlying files directly instead (`$BREW/etc/httpd/httpd.conf`; php.ini path from `php --ini`).
-- **Streaming commands never exit.** `logs` and `errors -f` are `tail -f`; read the log files directly or manage the process lifetime.
-- **Slow, blocking commands.** `start`/`restart` poll for up to 3 seconds; `add` and `rm` end with a restart; `php` relinks Homebrew formulae; `pecl` compiles extensions. All must run off the main thread with progress shown.
-- **Exit codes are coarse.** Failures are mostly reported as text on stdout/stderr, and `brew services` can return 0 when Apache did not actually come up — confirm outcomes by re-reading state.
-- **PHP switching** only works for versions already installed via Homebrew (`php`, `php@8.3`, …); Patchy prints the `brew install` command otherwise.
+- **PATH.** Patchy runs `brew --prefix` on its first line and shells out to `brew`, `jq`, `mkcert`, `apachectl`, `php`, `openssl`, `cloudflared`. An app launched from Finder does not inherit the shell's PATH, so child processes need `/opt/homebrew/bin` (Apple silicon) or `/usr/local/bin` (Intel) added explicitly.
+- **No App Sandbox.** The app has to spawn Homebrew binaries and read log files under the Homebrew prefix, which rules out sandboxing (and therefore the Mac App Store).
+- **sudo with no terminal.** Editing `/etc/hosts` needs root. Without `patchy trust`, Patchy needs sudo for every routing change; with `SUDO_ASKPASS` set it runs `sudo -A`. mkcert's first `-install` is the exception: macOS shows its own password dialog for that.
+- **Editor commands are useless in a GUI.** `config` and `ini` open `$VISUAL`/`$EDITOR`/`nano`.
+- **Slow commands.** `status --json` and `list --json` take 2–3 s each (they shell out per site); `start`/`restart` poll for up to 3 s; `add`, `rm` and `folder` end with a restart; `php` relinks Homebrew formulae; `pecl` compiles extensions. All run off the main thread.
+- **Exit codes and `brew services` can mislead.** Confirm outcomes by re-reading state.
+- **PHP switching** only works for versions already installed via Homebrew (`php`, `php@8.3`, …); Patchy fails with `php_not_installed` otherwise.
+- **The Homebrew formula runs `patchy setup` after every install or upgrade.** Its `/etc/hosts` step needs sudo and fails when run without a terminal; that's harmless when routing is already set up.
 
 ## This Mac is a live Patchy install
 

@@ -25088,348 +25088,6 @@
         }
       }
     },
-    "Checking every address points here…" : {
-      "comment" : "Progress step shown while a change runs.",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Checking every address points here…" }
-        },
-        "ar" : {
-          "stringUnit" : { "state" : "translated", "value" : "جارٍ التحقق من أن كل العناوين تشير إلى هنا…" }
-        },
-        "ca" : {
-          "stringUnit" : { "state" : "translated", "value" : "S’està comprovant que cada adreça apunti aquí…" }
-        },
-        "cs" : {
-          "stringUnit" : { "state" : "translated", "value" : "Kontroluje se, zda každá adresa vede sem…" }
-        },
-        "da" : {
-          "stringUnit" : { "state" : "translated", "value" : "Kontrollerer, at alle adresser peger hertil…" }
-        },
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Es wird geprüft, ob jede Adresse hierher zeigt …" }
-        },
-        "el" : {
-          "stringUnit" : { "state" : "translated", "value" : "Έλεγχος ότι κάθε διεύθυνση οδηγεί εδώ…" }
-        },
-        "es" : {
-          "stringUnit" : { "state" : "translated", "value" : "Comprobando que todas las direcciones apuntan aquí…" }
-        },
-        "fa" : {
-          "stringUnit" : { "state" : "translated", "value" : "در حال بررسی اینکه همهٔ نشانی‌ها به اینجا هدایت می‌شوند…" }
-        },
-        "fi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Tarkistetaan, että jokainen osoite ohjautuu tänne…" }
-        },
-        "fr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Vérification que chaque adresse pointe vers ce Mac…" }
-        },
-        "he" : {
-          "stringUnit" : { "state" : "translated", "value" : "בדיקה שכל כתובת מפנה לכאן…" }
-        },
-        "hr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Provjera jesu li sve adrese usmjerene ovamo…" }
-        },
-        "hu" : {
-          "stringUnit" : { "state" : "translated", "value" : "Annak ellenőrzése, hogy minden cím ide mutat-e…" }
-        },
-        "is" : {
-          "stringUnit" : { "state" : "translated", "value" : "Athuga hvort öll vefföng vísi hingað…" }
-        },
-        "it" : {
-          "stringUnit" : { "state" : "translated", "value" : "Verifica che ogni indirizzo sia collegato a questo Mac…" }
-        },
-        "ja" : {
-          "stringUnit" : { "state" : "translated", "value" : "すべてのアドレスがこのMacを指しているか確認しています…" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "모든 주소가 이 Mac을 가리키는지 확인하는 중…" }
-        },
-        "nb" : {
-          "stringUnit" : { "state" : "translated", "value" : "Sjekker at alle adressene peker hit…" }
-        },
-        "nl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Controleren of elk adres hierheen verwijst…" }
-        },
-        "nn" : {
-          "stringUnit" : { "state" : "translated", "value" : "Sjekkar at alle adressene peikar hit…" }
-        },
-        "pl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Sprawdzanie, czy każdy adres kieruje tutaj…" }
-        },
-        "pt-BR" : {
-          "stringUnit" : { "state" : "translated", "value" : "Verificando se todos os endereços apontam para cá…" }
-        },
-        "pt-PT" : {
-          "stringUnit" : { "state" : "translated", "value" : "A verificar se todos os endereços apontam para aqui…" }
-        },
-        "ro" : {
-          "stringUnit" : { "state" : "translated", "value" : "Se verifică dacă fiecare adresă indică spre acest Mac…" }
-        },
-        "ru" : {
-          "stringUnit" : { "state" : "translated", "value" : "Проверка, что каждый адрес ведёт сюда…" }
-        },
-        "sk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Kontroluje sa, či každá adresa smeruje sem…" }
-        },
-        "sl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Preverjanje, ali vsi naslovi kažejo sem …" }
-        },
-        "sv" : {
-          "stringUnit" : { "state" : "translated", "value" : "Kontrollerar att alla adresser pekar hit…" }
-        },
-        "th" : {
-          "stringUnit" : { "state" : "translated", "value" : "กำลังตรวจสอบว่าทุกที่อยู่ชี้มาที่นี่…" }
-        },
-        "tr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Tüm adreslerin bu Mac’e yönlendiği denetleniyor…" }
-        },
-        "uk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Перевірка, чи всі адреси ведуть сюди…" }
-        },
-        "vi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Đang kiểm tra xem mọi địa chỉ có trỏ đến đây không…" }
-        },
-        "zh-HK" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在檢查每個網址是否都指向這裏⋯" }
-        },
-        "zh-Hans" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在检查每个地址是否都指向这里…" }
-        },
-        "zh-Hant" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在檢查每個網址是否都指向這裡⋯" }
-        }
-      }
-    },
-    "Checking the setup" : {
-      "comment" : "Progress step shown while a change runs.",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Checking the setup" }
-        },
-        "ar" : {
-          "stringUnit" : { "state" : "translated", "value" : "جارٍ التحقق من الإعداد" }
-        },
-        "ca" : {
-          "stringUnit" : { "state" : "translated", "value" : "S’està comprovant la configuració" }
-        },
-        "cs" : {
-          "stringUnit" : { "state" : "translated", "value" : "Kontroluje se nastavení" }
-        },
-        "da" : {
-          "stringUnit" : { "state" : "translated", "value" : "Kontrollerer opsætningen" }
-        },
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Einrichtung wird geprüft" }
-        },
-        "el" : {
-          "stringUnit" : { "state" : "translated", "value" : "Έλεγχος της ρύθμισης" }
-        },
-        "es" : {
-          "stringUnit" : { "state" : "translated", "value" : "Comprobando la configuración" }
-        },
-        "fa" : {
-          "stringUnit" : { "state" : "translated", "value" : "بررسی تنظیمات" }
-        },
-        "fi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Tarkistetaan asetuksia" }
-        },
-        "fr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Vérification de la configuration" }
-        },
-        "he" : {
-          "stringUnit" : { "state" : "translated", "value" : "בדיקת ההגדרה" }
-        },
-        "hr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Provjera postavljanja" }
-        },
-        "hu" : {
-          "stringUnit" : { "state" : "translated", "value" : "A beállítás ellenőrzése" }
-        },
-        "is" : {
-          "stringUnit" : { "state" : "translated", "value" : "Athuga uppsetninguna" }
-        },
-        "it" : {
-          "stringUnit" : { "state" : "translated", "value" : "Controllo della configurazione" }
-        },
-        "ja" : {
-          "stringUnit" : { "state" : "translated", "value" : "設定を確認しています" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "설정 확인 중" }
-        },
-        "nb" : {
-          "stringUnit" : { "state" : "translated", "value" : "Sjekker oppsettet" }
-        },
-        "nl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Configuratie controleren" }
-        },
-        "nn" : {
-          "stringUnit" : { "state" : "translated", "value" : "Sjekkar oppsettet" }
-        },
-        "pl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Sprawdzanie ustawień" }
-        },
-        "pt-BR" : {
-          "stringUnit" : { "state" : "translated", "value" : "Verificando a configuração" }
-        },
-        "pt-PT" : {
-          "stringUnit" : { "state" : "translated", "value" : "A verificar a configuração" }
-        },
-        "ro" : {
-          "stringUnit" : { "state" : "translated", "value" : "Se verifică configurația" }
-        },
-        "ru" : {
-          "stringUnit" : { "state" : "translated", "value" : "Проверка настройки" }
-        },
-        "sk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Kontroluje sa nastavenie" }
-        },
-        "sl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Preverjanje nastavitev" }
-        },
-        "sv" : {
-          "stringUnit" : { "state" : "translated", "value" : "Kontrollerar inställningarna" }
-        },
-        "th" : {
-          "stringUnit" : { "state" : "translated", "value" : "กำลังตรวจสอบการตั้งค่า" }
-        },
-        "tr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Kurulum denetleniyor" }
-        },
-        "uk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Перевірка налаштувань" }
-        },
-        "vi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Đang kiểm tra thiết lập" }
-        },
-        "zh-HK" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在檢查設定" }
-        },
-        "zh-Hans" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在检查设置" }
-        },
-        "zh-Hant" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在檢查設定" }
-        }
-      }
-    },
-    "Checking the setup…" : {
-      "comment" : "Progress step shown while a change runs.",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Checking the setup…" }
-        },
-        "ar" : {
-          "stringUnit" : { "state" : "translated", "value" : "جارٍ التحقق من الإعداد…" }
-        },
-        "ca" : {
-          "stringUnit" : { "state" : "translated", "value" : "S’està comprovant la configuració…" }
-        },
-        "cs" : {
-          "stringUnit" : { "state" : "translated", "value" : "Kontroluje se nastavení…" }
-        },
-        "da" : {
-          "stringUnit" : { "state" : "translated", "value" : "Kontrollerer opsætningen…" }
-        },
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Einrichtung wird geprüft …" }
-        },
-        "el" : {
-          "stringUnit" : { "state" : "translated", "value" : "Έλεγχος της ρύθμισης…" }
-        },
-        "es" : {
-          "stringUnit" : { "state" : "translated", "value" : "Comprobando la configuración…" }
-        },
-        "fa" : {
-          "stringUnit" : { "state" : "translated", "value" : "در حال بررسی تنظیمات…" }
-        },
-        "fi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Tarkistetaan asetuksia…" }
-        },
-        "fr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Vérification de la configuration…" }
-        },
-        "he" : {
-          "stringUnit" : { "state" : "translated", "value" : "בדיקת ההגדרה…" }
-        },
-        "hr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Provjera postavljanja…" }
-        },
-        "hu" : {
-          "stringUnit" : { "state" : "translated", "value" : "A beállítás ellenőrzése…" }
-        },
-        "is" : {
-          "stringUnit" : { "state" : "translated", "value" : "Athuga uppsetninguna…" }
-        },
-        "it" : {
-          "stringUnit" : { "state" : "translated", "value" : "Controllo della configurazione…" }
-        },
-        "ja" : {
-          "stringUnit" : { "state" : "translated", "value" : "設定を確認しています…" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "설정 확인 중…" }
-        },
-        "nb" : {
-          "stringUnit" : { "state" : "translated", "value" : "Sjekker oppsettet…" }
-        },
-        "nl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Configuratie controleren…" }
-        },
-        "nn" : {
-          "stringUnit" : { "state" : "translated", "value" : "Sjekkar oppsettet…" }
-        },
-        "pl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Sprawdzanie ustawień…" }
-        },
-        "pt-BR" : {
-          "stringUnit" : { "state" : "translated", "value" : "Verificando a configuração…" }
-        },
-        "pt-PT" : {
-          "stringUnit" : { "state" : "translated", "value" : "A verificar a configuração…" }
-        },
-        "ro" : {
-          "stringUnit" : { "state" : "translated", "value" : "Se verifică configurația…" }
-        },
-        "ru" : {
-          "stringUnit" : { "state" : "translated", "value" : "Проверка настройки…" }
-        },
-        "sk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Kontroluje sa nastavenie…" }
-        },
-        "sl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Preverjanje nastavitev …" }
-        },
-        "sv" : {
-          "stringUnit" : { "state" : "translated", "value" : "Kontrollerar inställningarna…" }
-        },
-        "th" : {
-          "stringUnit" : { "state" : "translated", "value" : "กำลังตรวจสอบการตั้งค่า…" }
-        },
-        "tr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Kurulum denetleniyor…" }
-        },
-        "uk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Перевірка налаштувань…" }
-        },
-        "vi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Đang kiểm tra thiết lập…" }
-        },
-        "zh-HK" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在檢查設定⋯" }
-        },
-        "zh-Hans" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在检查设置…" }
-        },
-        "zh-Hant" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在檢查設定⋯" }
-        }
-      }
-    },
     "Choose" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
@@ -26454,120 +26112,6 @@
         }
       }
     },
-    "Creating a secure certificate" : {
-      "comment" : "Progress step shown while a change runs.",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Creating a secure certificate" }
-        },
-        "ar" : {
-          "stringUnit" : { "state" : "translated", "value" : "جارٍ إنشاء شهادة آمنة" }
-        },
-        "ca" : {
-          "stringUnit" : { "state" : "translated", "value" : "S’està creant un certificat segur" }
-        },
-        "cs" : {
-          "stringUnit" : { "state" : "translated", "value" : "Vytváří se bezpečnostní certifikát" }
-        },
-        "da" : {
-          "stringUnit" : { "state" : "translated", "value" : "Opretter et sikkert certifikat" }
-        },
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Sicheres Zertifikat wird erstellt" }
-        },
-        "el" : {
-          "stringUnit" : { "state" : "translated", "value" : "Δημιουργία ασφαλούς πιστοποιητικού" }
-        },
-        "es" : {
-          "stringUnit" : { "state" : "translated", "value" : "Creando un certificado seguro" }
-        },
-        "fa" : {
-          "stringUnit" : { "state" : "translated", "value" : "ساختن گواهی امن" }
-        },
-        "fi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Luodaan suojattua varmennetta" }
-        },
-        "fr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Création d’un certificat de sécurité" }
-        },
-        "he" : {
-          "stringUnit" : { "state" : "translated", "value" : "יצירת אישור לחיבור מאובטח" }
-        },
-        "hr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Izrada sigurnosnog certifikata" }
-        },
-        "hu" : {
-          "stringUnit" : { "state" : "translated", "value" : "Biztonsági tanúsítvány létrehozása" }
-        },
-        "is" : {
-          "stringUnit" : { "state" : "translated", "value" : "Bý til örugg skilríki" }
-        },
-        "it" : {
-          "stringUnit" : { "state" : "translated", "value" : "Creazione di un certificato sicuro" }
-        },
-        "ja" : {
-          "stringUnit" : { "state" : "translated", "value" : "安全な接続のための証明書を作成しています" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "보안 인증서 생성 중" }
-        },
-        "nb" : {
-          "stringUnit" : { "state" : "translated", "value" : "Lager et sikkert sertifikat" }
-        },
-        "nl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Veilig certificaat aanmaken" }
-        },
-        "nn" : {
-          "stringUnit" : { "state" : "translated", "value" : "Lagar eit sikkert sertifikat" }
-        },
-        "pl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Tworzenie certyfikatu bezpieczeństwa" }
-        },
-        "pt-BR" : {
-          "stringUnit" : { "state" : "translated", "value" : "Criando um certificado de segurança" }
-        },
-        "pt-PT" : {
-          "stringUnit" : { "state" : "translated", "value" : "A criar um certificado de segurança" }
-        },
-        "ro" : {
-          "stringUnit" : { "state" : "translated", "value" : "Se creează un certificat de securitate" }
-        },
-        "ru" : {
-          "stringUnit" : { "state" : "translated", "value" : "Создание сертификата безопасности" }
-        },
-        "sk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Vytvára sa bezpečnostný certifikát" }
-        },
-        "sl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Ustvarjanje varnega potrdila" }
-        },
-        "sv" : {
-          "stringUnit" : { "state" : "translated", "value" : "Skapar ett säkert certifikat" }
-        },
-        "th" : {
-          "stringUnit" : { "state" : "translated", "value" : "กำลังสร้างใบรับรองความปลอดภัย" }
-        },
-        "tr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Güvenli sertifika oluşturuluyor" }
-        },
-        "uk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Створення сертифіката безпеки" }
-        },
-        "vi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Đang tạo chứng chỉ bảo mật" }
-        },
-        "zh-HK" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在製作安全證書" }
-        },
-        "zh-Hans" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在创建安全证书" }
-        },
-        "zh-Hant" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在製作安全憑證" }
-        }
-      }
-    },
     "Enter your Mac password" : {
       "comment" : "Sheet title.",
       "extractionState" : "extracted_with_value",
@@ -27361,120 +26905,6 @@
         },
         "zh-Hant" : {
           "stringUnit" : { "state" : "translated", "value" : "找不到檔案夾" }
-        }
-      }
-    },
-    "Handing addresses back to the internet…" : {
-      "comment" : "Progress step shown while a change runs.",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Handing addresses back to the internet…" }
-        },
-        "ar" : {
-          "stringUnit" : { "state" : "translated", "value" : "جارٍ إعادة العناوين إلى الإنترنت…" }
-        },
-        "ca" : {
-          "stringUnit" : { "state" : "translated", "value" : "S’estan retornant les adreces a internet…" }
-        },
-        "cs" : {
-          "stringUnit" : { "state" : "translated", "value" : "Adresy se vracejí zpět na internet…" }
-        },
-        "da" : {
-          "stringUnit" : { "state" : "translated", "value" : "Giver adresserne tilbage til internettet…" }
-        },
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Adressen werden ans Internet zurückgegeben …" }
-        },
-        "el" : {
-          "stringUnit" : { "state" : "translated", "value" : "Επιστροφή των διευθύνσεων στο διαδίκτυο…" }
-        },
-        "es" : {
-          "stringUnit" : { "state" : "translated", "value" : "Devolviendo las direcciones a internet…" }
-        },
-        "fa" : {
-          "stringUnit" : { "state" : "translated", "value" : "در حال بازگرداندن نشانی‌ها به اینترنت…" }
-        },
-        "fi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Palautetaan osoitteet internetiin…" }
-        },
-        "fr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Restitution des adresses à Internet…" }
-        },
-        "he" : {
-          "stringUnit" : { "state" : "translated", "value" : "החזרת הכתובות לאינטרנט…" }
-        },
-        "hr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Vraćanje adresa internetu…" }
-        },
-        "hu" : {
-          "stringUnit" : { "state" : "translated", "value" : "A címek visszaadása az internetnek…" }
-        },
-        "is" : {
-          "stringUnit" : { "state" : "translated", "value" : "Skila vefföngunum aftur til netsins…" }
-        },
-        "it" : {
-          "stringUnit" : { "state" : "translated", "value" : "Restituzione degli indirizzi a internet…" }
-        },
-        "ja" : {
-          "stringUnit" : { "state" : "translated", "value" : "アドレスをインターネットに戻しています…" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "주소를 인터넷으로 되돌리는 중…" }
-        },
-        "nb" : {
-          "stringUnit" : { "state" : "translated", "value" : "Gir adressene tilbake til internett…" }
-        },
-        "nl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Adressen teruggeven aan het internet…" }
-        },
-        "nn" : {
-          "stringUnit" : { "state" : "translated", "value" : "Gjev adressene tilbake til internett…" }
-        },
-        "pl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Oddawanie adresów z powrotem do internetu…" }
-        },
-        "pt-BR" : {
-          "stringUnit" : { "state" : "translated", "value" : "Devolvendo os endereços à internet…" }
-        },
-        "pt-PT" : {
-          "stringUnit" : { "state" : "translated", "value" : "A devolver os endereços à internet…" }
-        },
-        "ro" : {
-          "stringUnit" : { "state" : "translated", "value" : "Se predau adresele înapoi internetului…" }
-        },
-        "ru" : {
-          "stringUnit" : { "state" : "translated", "value" : "Возврат адресов в интернет…" }
-        },
-        "sk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Adresy sa vracajú internetu…" }
-        },
-        "sl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Vračanje naslovov internetu …" }
-        },
-        "sv" : {
-          "stringUnit" : { "state" : "translated", "value" : "Lämnar tillbaka adresserna till internet…" }
-        },
-        "th" : {
-          "stringUnit" : { "state" : "translated", "value" : "กำลังคืนที่อยู่ให้กับอินเทอร์เน็ต…" }
-        },
-        "tr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Adresler internete geri veriliyor…" }
-        },
-        "uk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Повернення адрес до інтернету…" }
-        },
-        "vi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Đang trả các địa chỉ lại cho internet…" }
-        },
-        "zh-HK" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在將網址交還給互聯網⋯" }
-        },
-        "zh-Hans" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在将地址交还给互联网…" }
-        },
-        "zh-Hant" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在將網址交還給網際網路⋯" }
         }
       }
     },
@@ -32465,234 +31895,6 @@
         }
       }
     },
-    "Pointing %@ at this Mac" : {
-      "comment" : "Progress step shown while a change runs.",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Pointing %@ at this Mac" }
-        },
-        "ar" : {
-          "stringUnit" : { "state" : "translated", "value" : "جارٍ توجيه %@ إلى جهاز Mac هذا" }
-        },
-        "ca" : {
-          "stringUnit" : { "state" : "translated", "value" : "S’està fent que %@ apunti a aquest Mac" }
-        },
-        "cs" : {
-          "stringUnit" : { "state" : "translated", "value" : "%@ se směruje na tento Mac" }
-        },
-        "da" : {
-          "stringUnit" : { "state" : "translated", "value" : "Får %@ til at pege på denne Mac" }
-        },
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "%@ wird auf diesen Mac gelenkt" }
-        },
-        "el" : {
-          "stringUnit" : { "state" : "translated", "value" : "Το %@ ρυθμίζεται να οδηγεί σε αυτό το Mac" }
-        },
-        "es" : {
-          "stringUnit" : { "state" : "translated", "value" : "Haciendo que %@ apunte a este Mac" }
-        },
-        "fa" : {
-          "stringUnit" : { "state" : "translated", "value" : "هدایت %@ به این Mac" }
-        },
-        "fi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Ohjataan %@ tähän Maciin" }
-        },
-        "fr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Redirection de %@ vers ce Mac" }
-        },
-        "he" : {
-          "stringUnit" : { "state" : "translated", "value" : "הפניית %@ ל-Mac הזה" }
-        },
-        "hr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Usmjeravanje adrese %@ na ovaj Mac" }
-        },
-        "hu" : {
-          "stringUnit" : { "state" : "translated", "value" : "A(z) %@ irányítása erre a Macre" }
-        },
-        "is" : {
-          "stringUnit" : { "state" : "translated", "value" : "Læt %@ vísa á þennan Mac" }
-        },
-        "it" : {
-          "stringUnit" : { "state" : "translated", "value" : "Collegamento di %@ a questo Mac" }
-        },
-        "ja" : {
-          "stringUnit" : { "state" : "translated", "value" : "%@がこのMacを指すように設定しています" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "%@ 주소가 이 Mac을 가리키게 하는 중" }
-        },
-        "nb" : {
-          "stringUnit" : { "state" : "translated", "value" : "Lar %@ peke til denne Macen" }
-        },
-        "nl" : {
-          "stringUnit" : { "state" : "translated", "value" : "%@ naar deze Mac laten verwijzen" }
-        },
-        "nn" : {
-          "stringUnit" : { "state" : "translated", "value" : "Peikar %@ til denne Macen" }
-        },
-        "pl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Kierowanie adresu %@ do tego Maca" }
-        },
-        "pt-BR" : {
-          "stringUnit" : { "state" : "translated", "value" : "Fazendo %@ apontar para este Mac" }
-        },
-        "pt-PT" : {
-          "stringUnit" : { "state" : "translated", "value" : "A apontar %@ para este Mac" }
-        },
-        "ro" : {
-          "stringUnit" : { "state" : "translated", "value" : "Se direcționează %@ spre acest Mac" }
-        },
-        "ru" : {
-          "stringUnit" : { "state" : "translated", "value" : "Перенаправление %@ на этот Mac" }
-        },
-        "sk" : {
-          "stringUnit" : { "state" : "translated", "value" : "%@ sa nasmerúva na tento Mac" }
-        },
-        "sl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Usmerjanje naslova %@ na ta Mac" }
-        },
-        "sv" : {
-          "stringUnit" : { "state" : "translated", "value" : "Pekar %@ på den här Macen" }
-        },
-        "th" : {
-          "stringUnit" : { "state" : "translated", "value" : "กำลังชี้ %@ มาที่ Mac เครื่องนี้" }
-        },
-        "tr" : {
-          "stringUnit" : { "state" : "translated", "value" : "%@ bu Mac’e yönlendiriliyor" }
-        },
-        "uk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Спрямування %@ на цей Mac" }
-        },
-        "vi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Đang trỏ %@ đến máy Mac này" }
-        },
-        "zh-HK" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在將%@指向這部Mac" }
-        },
-        "zh-Hans" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在让 %@ 指向这台 Mac" }
-        },
-        "zh-Hant" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在將%@指向這台Mac" }
-        }
-      }
-    },
-    "Pointing your addresses at this Mac…" : {
-      "comment" : "Progress step shown while a change runs.",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Pointing your addresses at this Mac…" }
-        },
-        "ar" : {
-          "stringUnit" : { "state" : "translated", "value" : "جارٍ توجيه عناوينك إلى جهاز Mac هذا…" }
-        },
-        "ca" : {
-          "stringUnit" : { "state" : "translated", "value" : "S’està fent que les teves adreces apuntin a aquest Mac…" }
-        },
-        "cs" : {
-          "stringUnit" : { "state" : "translated", "value" : "Vaše adresy se směrují na tento Mac…" }
-        },
-        "da" : {
-          "stringUnit" : { "state" : "translated", "value" : "Får dine adresser til at pege på denne Mac…" }
-        },
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Deine Adressen werden auf diesen Mac gelenkt …" }
-        },
-        "el" : {
-          "stringUnit" : { "state" : "translated", "value" : "Οι διευθύνσεις σας ρυθμίζονται να οδηγούν σε αυτό το Mac…" }
-        },
-        "es" : {
-          "stringUnit" : { "state" : "translated", "value" : "Haciendo que tus direcciones apunten a este Mac…" }
-        },
-        "fa" : {
-          "stringUnit" : { "state" : "translated", "value" : "در حال هدایت نشانی‌های شما به این Mac…" }
-        },
-        "fi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Ohjataan osoitteesi tähän Maciin…" }
-        },
-        "fr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Redirection de vos adresses vers ce Mac…" }
-        },
-        "he" : {
-          "stringUnit" : { "state" : "translated", "value" : "הפניית הכתובות שלך ל-Mac הזה…" }
-        },
-        "hr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Usmjeravanje Vaših adresa na ovaj Mac…" }
-        },
-        "hu" : {
-          "stringUnit" : { "state" : "translated", "value" : "A címek irányítása erre a Macre…" }
-        },
-        "is" : {
-          "stringUnit" : { "state" : "translated", "value" : "Læt vefföngin þín vísa á þennan Mac…" }
-        },
-        "it" : {
-          "stringUnit" : { "state" : "translated", "value" : "Collegamento dei tuoi indirizzi a questo Mac…" }
-        },
-        "ja" : {
-          "stringUnit" : { "state" : "translated", "value" : "アドレスがこのMacを指すように設定しています…" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "주소가 이 Mac을 가리키게 하는 중…" }
-        },
-        "nb" : {
-          "stringUnit" : { "state" : "translated", "value" : "Lar adressene dine peke til denne Macen…" }
-        },
-        "nl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Je adressen naar deze Mac laten verwijzen…" }
-        },
-        "nn" : {
-          "stringUnit" : { "state" : "translated", "value" : "Peikar adressene dine til denne Macen…" }
-        },
-        "pl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Kierowanie twoich adresów do tego Maca…" }
-        },
-        "pt-BR" : {
-          "stringUnit" : { "state" : "translated", "value" : "Fazendo os seus endereços apontarem para este Mac…" }
-        },
-        "pt-PT" : {
-          "stringUnit" : { "state" : "translated", "value" : "A apontar os seus endereços para este Mac…" }
-        },
-        "ro" : {
-          "stringUnit" : { "state" : "translated", "value" : "Se direcționează adresele dvs. spre acest Mac…" }
-        },
-        "ru" : {
-          "stringUnit" : { "state" : "translated", "value" : "Перенаправление ваших адресов на этот Mac…" }
-        },
-        "sk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Vaše adresy sa nasmerúvajú na tento Mac…" }
-        },
-        "sl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Usmerjanje vaših naslovov na ta Mac …" }
-        },
-        "sv" : {
-          "stringUnit" : { "state" : "translated", "value" : "Pekar dina adresser på den här Macen…" }
-        },
-        "th" : {
-          "stringUnit" : { "state" : "translated", "value" : "กำลังชี้ที่อยู่ของคุณมาที่ Mac เครื่องนี้…" }
-        },
-        "tr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Adresleriniz bu Mac’e yönlendiriliyor…" }
-        },
-        "uk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Спрямування ваших адрес на цей Mac…" }
-        },
-        "vi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Đang trỏ các địa chỉ của bạn đến máy Mac này…" }
-        },
-        "zh-HK" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在將你的網址指向這部Mac⋯" }
-        },
-        "zh-Hans" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在让你的地址指向这台 Mac…" }
-        },
-        "zh-Hant" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在將你的網址指向這台Mac⋯" }
-        }
-      }
-    },
     "Reachable" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
@@ -33258,120 +32460,6 @@
         },
         "zh-Hant" : {
           "stringUnit" : { "state" : "translated", "value" : "已修復。所有網址都再次指向這台Mac。" }
-        }
-      }
-    },
-    "Restarting the server" : {
-      "comment" : "Progress step shown while a change runs.",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Restarting the server" }
-        },
-        "ar" : {
-          "stringUnit" : { "state" : "translated", "value" : "جارٍ إعادة تشغيل الخادم" }
-        },
-        "ca" : {
-          "stringUnit" : { "state" : "translated", "value" : "S’està reiniciant el servidor" }
-        },
-        "cs" : {
-          "stringUnit" : { "state" : "translated", "value" : "Restartuje se server" }
-        },
-        "da" : {
-          "stringUnit" : { "state" : "translated", "value" : "Genstarter serveren" }
-        },
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Server wird neu gestartet" }
-        },
-        "el" : {
-          "stringUnit" : { "state" : "translated", "value" : "Επανεκκίνηση του διακομιστή" }
-        },
-        "es" : {
-          "stringUnit" : { "state" : "translated", "value" : "Reiniciando el servidor" }
-        },
-        "fa" : {
-          "stringUnit" : { "state" : "translated", "value" : "راه‌اندازی مجدد سرور" }
-        },
-        "fi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Käynnistetään palvelin uudelleen" }
-        },
-        "fr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Redémarrage du serveur" }
-        },
-        "he" : {
-          "stringUnit" : { "state" : "translated", "value" : "הפעלת השרת מחדש" }
-        },
-        "hr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Ponovno pokretanje poslužitelja" }
-        },
-        "hu" : {
-          "stringUnit" : { "state" : "translated", "value" : "A szerver újraindítása" }
-        },
-        "is" : {
-          "stringUnit" : { "state" : "translated", "value" : "Endurræsi vefþjóninn" }
-        },
-        "it" : {
-          "stringUnit" : { "state" : "translated", "value" : "Riavvio del server" }
-        },
-        "ja" : {
-          "stringUnit" : { "state" : "translated", "value" : "サーバを再起動しています" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "서버 재시작 중" }
-        },
-        "nb" : {
-          "stringUnit" : { "state" : "translated", "value" : "Starter serveren på nytt" }
-        },
-        "nl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Server herstarten" }
-        },
-        "nn" : {
-          "stringUnit" : { "state" : "translated", "value" : "Startar serveren på nytt" }
-        },
-        "pl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Ponowne uruchamianie serwera" }
-        },
-        "pt-BR" : {
-          "stringUnit" : { "state" : "translated", "value" : "Reiniciando o servidor" }
-        },
-        "pt-PT" : {
-          "stringUnit" : { "state" : "translated", "value" : "A reiniciar o servidor" }
-        },
-        "ro" : {
-          "stringUnit" : { "state" : "translated", "value" : "Se repornește serverul" }
-        },
-        "ru" : {
-          "stringUnit" : { "state" : "translated", "value" : "Перезапуск сервера" }
-        },
-        "sk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Server sa reštartuje" }
-        },
-        "sl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Ponovni zagon strežnika" }
-        },
-        "sv" : {
-          "stringUnit" : { "state" : "translated", "value" : "Startar om servern" }
-        },
-        "th" : {
-          "stringUnit" : { "state" : "translated", "value" : "กำลังเริ่มเซิร์ฟเวอร์ใหม่" }
-        },
-        "tr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Sunucu yeniden başlatılıyor" }
-        },
-        "uk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Перезапуск сервера" }
-        },
-        "vi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Đang khởi động lại máy chủ" }
-        },
-        "zh-HK" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在重新啟動伺服器" }
-        },
-        "zh-Hans" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在重启服务器" }
-        },
-        "zh-Hant" : {
-          "stringUnit" : { "state" : "translated", "value" : "正在重新啟動伺服器" }
         }
       }
     },
@@ -45094,120 +44182,6 @@
         }
       }
     },
-    "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again." : {
-      "comment" : "Shown when sharing a site failed. DNS record is the technical name people see in Cloudflare's dashboard.",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "This site’s address still points at a tunnel that was deleted in Cloudflare. Delete its DNS record in the Cloudflare dashboard, then share again." }
-        },
-        "ar" : {
-          "stringUnit" : { "state" : "translated", "value" : "لا يزال عنوان هذا الموقع يشير إلى نفق حُذف في Cloudflare. احذف سجل DNS الخاص به من لوحة تحكم Cloudflare، ثم شارك مرة أخرى." }
-        },
-        "ca" : {
-          "stringUnit" : { "state" : "translated", "value" : "L’adreça d’aquest lloc web encara apunta a un túnel que es va eliminar a Cloudflare. Elimina’n el registre DNS al tauler de Cloudflare i torna a compartir." }
-        },
-        "cs" : {
-          "stringUnit" : { "state" : "translated", "value" : "Adresa tohoto webu stále ukazuje na tunel, který byl v Cloudflare smazán. Smažte jeho záznam DNS na nástěnce Cloudflare a sdílejte znovu." }
-        },
-        "da" : {
-          "stringUnit" : { "state" : "translated", "value" : "Dette websteds adresse peger stadig på en tunnel, der er slettet i Cloudflare. Slet dens DNS-post i Cloudflare-kontrolpanelet, og del igen." }
-        },
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Die Adresse dieser Website verweist noch auf einen Tunnel, der in Cloudflare gelöscht wurde. Lösche ihren DNS-Eintrag im Cloudflare-Dashboard und teile dann erneut." }
-        },
-        "el" : {
-          "stringUnit" : { "state" : "translated", "value" : "Η διεύθυνση αυτού του ιστότοπου εξακολουθεί να δείχνει σε ένα τούνελ που διαγράφηκε στο Cloudflare. Διαγράψτε την εγγραφή DNS της στον πίνακα ελέγχου του Cloudflare και μοιραστείτε ξανά." }
-        },
-        "es" : {
-          "stringUnit" : { "state" : "translated", "value" : "La dirección de este sitio aún apunta a un túnel que se eliminó en Cloudflare. Elimina su registro DNS en el panel de Cloudflare y vuelve a compartir." }
-        },
-        "fa" : {
-          "stringUnit" : { "state" : "translated", "value" : "نشانی این سایت هنوز به تونلی اشاره می‌کند که در Cloudflare حذف شده است. رکورد DNS آن را در داشبورد Cloudflare حذف کنید و دوباره به اشتراک بگذارید." }
-        },
-        "fi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Tämän sivuston osoite osoittaa yhä tunneliin, joka poistettiin Cloudflaresta. Poista sen DNS-tietue Cloudflaren hallintapaneelista ja jaa sitten uudelleen." }
-        },
-        "fr" : {
-          "stringUnit" : { "state" : "translated", "value" : "L’adresse de ce site pointe toujours vers un tunnel supprimé dans Cloudflare. Supprimez son enregistrement DNS dans le tableau de bord Cloudflare, puis partagez à nouveau." }
-        },
-        "he" : {
-          "stringUnit" : { "state" : "translated", "value" : "הכתובת של האתר עדיין מפנה למנהרה שנמחקה ב-Cloudflare. יש למחוק את רשומת ה-DNS שלה בלוח הבקרה של Cloudflare ולשתף שוב." }
-        },
-        "hr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Adresa ove web-stranice i dalje upućuje na tunel koji je izbrisan u Cloudflareu. Izbrišite njezin DNS zapis na nadzornoj ploči Cloudflarea pa ponovno podijelite." }
-        },
-        "hu" : {
-          "stringUnit" : { "state" : "translated", "value" : "A webhely címe még mindig egy olyan alagútra mutat, amelyet törölt a Cloudflare-ben. Törölje a DNS-rekordját a Cloudflare irányítópultján, majd ossza meg újra." }
-        },
-        "is" : {
-          "stringUnit" : { "state" : "translated", "value" : "Veffang þessa vefjar vísar enn á göng sem var eytt í Cloudflare. Eyddu DNS-færslu þess á stjórnborði Cloudflare og deildu svo aftur." }
-        },
-        "it" : {
-          "stringUnit" : { "state" : "translated", "value" : "L’indirizzo di questo sito punta ancora a un tunnel eliminato in Cloudflare. Elimina il suo record DNS nella dashboard di Cloudflare, poi condividi di nuovo." }
-        },
-        "ja" : {
-          "stringUnit" : { "state" : "translated", "value" : "このサイトのアドレスは、Cloudflareで削除されたトンネルをまだ指しています。CloudflareのダッシュボードでそのDNSレコードを削除してから、もう一度共有してください。" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "이 사이트의 주소가 Cloudflare에서 삭제된 터널을 여전히 가리키고 있습니다. Cloudflare 대시보드에서 해당 DNS 레코드를 삭제한 다음 다시 공유하십시오." }
-        },
-        "nb" : {
-          "stringUnit" : { "state" : "translated", "value" : "Adressen til dette nettstedet peker fortsatt på en tunnel som ble slettet i Cloudflare. Slett DNS-oppføringen i Cloudflare-kontrollpanelet, og del på nytt." }
-        },
-        "nl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Het adres van deze website verwijst nog naar een tunnel die in Cloudflare is verwijderd. Verwijder het DNS-record ervan in het Cloudflare-dashboard en deel opnieuw." }
-        },
-        "nn" : {
-          "stringUnit" : { "state" : "translated", "value" : "Adressa til denne nettstaden peikar framleis på ein tunnel som vart sletta i Cloudflare. Slett DNS-oppføringa i Cloudflare-kontrollpanelet, og del på nytt." }
-        },
-        "pl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Adres tej witryny nadal wskazuje tunel usunięty w Cloudflare. Usuń jego rekord DNS w panelu Cloudflare i udostępnij ponownie." }
-        },
-        "pt-BR" : {
-          "stringUnit" : { "state" : "translated", "value" : "O endereço deste site ainda aponta para um túnel que foi apagado no Cloudflare. Apague o registro DNS dele no painel do Cloudflare e compartilhe novamente." }
-        },
-        "pt-PT" : {
-          "stringUnit" : { "state" : "translated", "value" : "O endereço deste site ainda aponta para um túnel que foi eliminado na Cloudflare. Elimine o respetivo registo DNS no painel da Cloudflare e volte a partilhar." }
-        },
-        "ro" : {
-          "stringUnit" : { "state" : "translated", "value" : "Adresa acestui site indică încă un tunel care a fost șters în Cloudflare. Ștergeți înregistrarea DNS a acestuia din panoul Cloudflare, apoi partajați din nou." }
-        },
-        "ru" : {
-          "stringUnit" : { "state" : "translated", "value" : "Адрес этого сайта всё ещё указывает на туннель, удалённый в Cloudflare. Удалите его DNS-запись в панели Cloudflare и поделитесь снова." }
-        },
-        "sk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Adresa tohto webu stále ukazuje na tunel, ktorý bol v Cloudflare vymazaný. Vymažte jeho záznam DNS na paneli Cloudflare a zdieľajte znova." }
-        },
-        "sl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Naslov tega spletnega mesta še vedno kaže na tunel, ki je bil v Cloudflaru izbrisan. Izbrišite njegov zapis DNS na nadzorni plošči Cloudflare in znova delite." }
-        },
-        "sv" : {
-          "stringUnit" : { "state" : "translated", "value" : "Den här webbplatsens adress pekar fortfarande på en tunnel som har raderats i Cloudflare. Radera dess DNS-post i Cloudflares kontrollpanel och dela igen." }
-        },
-        "th" : {
-          "stringUnit" : { "state" : "translated", "value" : "ที่อยู่ของเว็บไซต์นี้ยังชี้ไปยังทันเนลที่ถูกลบใน Cloudflare ลบระเบียน DNS ของที่อยู่นี้ในแดชบอร์ด Cloudflare แล้วแชร์อีกครั้ง" }
-        },
-        "tr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Bu sitenin adresi hâlâ Cloudflare’de silinmiş bir tüneli gösteriyor. Cloudflare panosunda DNS kaydını silin, sonra yeniden paylaşın." }
-        },
-        "uk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Адреса цього сайту досі вказує на тунель, видалений у Cloudflare. Видаліть його DNS-запис на панелі Cloudflare й поділіться знову." }
-        },
-        "vi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Địa chỉ của trang web này vẫn trỏ đến một đường hầm đã bị xóa trong Cloudflare. Hãy xóa bản ghi DNS của địa chỉ này trong bảng điều khiển Cloudflare rồi chia sẻ lại." }
-        },
-        "zh-HK" : {
-          "stringUnit" : { "state" : "translated", "value" : "這個網站的網址仍然指向一條已在Cloudflare刪除的通道。請在Cloudflare控制台刪除它的DNS記錄，然後再分享一次。" }
-        },
-        "zh-Hans" : {
-          "stringUnit" : { "state" : "translated", "value" : "此网站的地址仍指向一个已在 Cloudflare 中删除的隧道。请在 Cloudflare 控制面板中删除它的 DNS 记录，然后再次共享。" }
-        },
-        "zh-Hant" : {
-          "stringUnit" : { "state" : "translated", "value" : "此網站的網址仍指向一個已在Cloudflare中刪除的通道。請在Cloudflare儀表板中刪除它的DNS記錄，然後再分享一次。" }
-        }
-      }
-    },
     "Your Cloudflare login has expired. To connect your domain again, run patchy share setup in Terminal." : {
       "comment" : "Shown when sharing a site failed. “patchy share setup” is a command; don't translate it.",
       "extractionState" : "extracted_with_value",
@@ -46797,6 +45771,120 @@
         },
         "zh-Hant" : {
           "stringUnit" : { "state" : "translated", "value" : "在任何App中皆可使用。輸入網站名稱的一部分，然後按下Return鍵即可打開。" }
+        }
+      }
+    },
+    "This site’s tunnel was deleted in Cloudflare. Share again to set up a new one." : {
+      "comment" : "Shown when sharing a site failed. A tunnel is what Cloudflare calls the connection that carries a shared site.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "This site’s tunnel was deleted in Cloudflare. Share again to set up a new one." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "حُذف نفق هذا الموقع في Cloudflare. شارك مرة أخرى لإعداد نفق جديد." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "El túnel d’aquest lloc web es va eliminar a Cloudflare. Torna a compartir per configurar-ne un de nou." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tunel tohoto webu byl v Cloudflare smazán. Sdílejte znovu a nastaví se nový." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dette websteds tunnel er slettet i Cloudflare. Del igen for at oprette en ny." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Der Tunnel dieser Website wurde in Cloudflare gelöscht. Teile erneut, um einen neuen einzurichten." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Το τούνελ αυτού του ιστότοπου διαγράφηκε στο Cloudflare. Μοιραστείτε ξανά για να ρυθμιστεί ένα νέο." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "El túnel de este sitio se eliminó en Cloudflare. Vuelve a compartir para configurar uno nuevo." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "تونل این سایت در Cloudflare حذف شده است. دوباره به اشتراک بگذارید تا تونل تازه‌ای راه‌اندازی شود." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tämän sivuston tunneli poistettiin Cloudflaresta. Jaa uudelleen, niin uusi tunneli otetaan käyttöön." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Le tunnel de ce site a été supprimé dans Cloudflare. Partagez à nouveau pour en configurer un nouveau." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "המנהרה של האתר נמחקה ב-Cloudflare. יש לשתף שוב כדי להגדיר מנהרה חדשה." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tunel ove web-stranice izbrisan je u Cloudflareu. Ponovno podijelite kako biste postavili novi." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "A webhely alagútját törölték a Cloudflare-ben. Ossza meg újra, és új alagút jön létre." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Göngum þessa vefjar var eytt í Cloudflare. Deildu aftur til að setja upp ný." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Il tunnel di questo sito è stato eliminato in Cloudflare. Condividi di nuovo per configurarne uno nuovo." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "このサイトのトンネルはCloudflareで削除されました。もう一度共有すると、新しいトンネルが設定されます。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "이 사이트의 터널이 Cloudflare에서 삭제되었습니다. 다시 공유하면 새 터널이 설정됩니다." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tunnelen til dette nettstedet ble slettet i Cloudflare. Del på nytt for å sette opp en ny." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "De tunnel van deze website is in Cloudflare verwijderd. Deel opnieuw om een nieuwe in te stellen." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tunnelen til denne nettstaden vart sletta i Cloudflare. Del på nytt for å setje opp ein ny." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tunel tej witryny został usunięty w Cloudflare. Udostępnij ponownie, aby skonfigurować nowy." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "O túnel deste site foi apagado no Cloudflare. Compartilhe novamente para configurar um novo." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "O túnel deste site foi eliminado na Cloudflare. Volte a partilhar para configurar um novo." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tunelul acestui site a fost șters în Cloudflare. Partajați din nou pentru a configura unul nou." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Туннель этого сайта удалён в Cloudflare. Поделитесь снова, чтобы настроить новый." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tunel tohto webu bol v Cloudflare vymazaný. Zdieľajte znova a nastaví sa nový." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Tunel tega spletnega mesta je bil v Cloudflaru izbrisan. Znova delite, da nastavite novega." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Den här webbplatsens tunnel har raderats i Cloudflare. Dela igen för att konfigurera en ny." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "ทันเนลของเว็บไซต์นี้ถูกลบใน Cloudflare แชร์อีกครั้งเพื่อตั้งค่าทันเนลใหม่" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bu sitenin tüneli Cloudflare’de silindi. Yeni bir tünel kurmak için yeniden paylaşın." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Тунель цього сайту видалено в Cloudflare. Поділіться знову, щоб налаштувати новий." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Đường hầm của trang web này đã bị xóa trong Cloudflare. Hãy chia sẻ lại để thiết lập đường hầm mới." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "這個網站的通道已在Cloudflare刪除。請再分享一次以設定新的通道。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "此网站的隧道已在 Cloudflare 中删除。请再次共享以设置新的隧道。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "此網站的通道已在Cloudflare中刪除。請再分享一次以設定新的通道。" }
         }
       }
     }

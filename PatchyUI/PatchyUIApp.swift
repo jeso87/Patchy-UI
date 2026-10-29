@@ -52,9 +52,9 @@ struct PatchyUIApp: App {
                 }
                 Divider()
                 Button("Refresh Certificates…") { model.askRefreshCertificates() }
-                if let environment = model.environment {
+                if let log = model.snapshot.serverErrorLog {
                     Button("Reveal Server Error Log in Finder") {
-                        NSWorkspace.shared.activateFileViewerSelecting([environment.serverErrorLog])
+                        NSWorkspace.shared.activateFileViewerSelecting([URL(fileURLWithPath: log)])
                     }
                 }
             }
@@ -71,13 +71,24 @@ struct PatchyUIApp: App {
         case .missingHomebrew: print("Homebrew not found")
         case .missingPatchy: print("Patchy not found")
         case .ready(let environment):
-            let snapshot = PatchyClient(environment: environment).snapshot()
+            // Runs before the app starts, so wait here for Patchy's answers.
+            let done = DispatchSemaphore(value: 0)
+            let box = SnapshotBox()
+            Task.detached {
+                box.value = await PatchyClient(environment: environment).snapshot()
+                done.signal()
+            }
+            done.wait()
+            guard let snapshot = box.value else {
+                print("Patchy at \(environment.brewPrefix.path) didn't answer status --json and list --json")
+                return
+            }
             print("patchy \(snapshot.patchyVersion ?? "?") at \(environment.brewPrefix.path)")
             print("server running: \(snapshot.serverRunning)")
             print("php: active \(snapshot.activePHP ?? "?"), installed \(snapshot.installedPHP.map(\.fullVersion))")
             print("trust: \(snapshot.trust)")
             print("certificate authority installed: \(snapshot.certificateAuthorityInstalled)")
-            print("sharing: \(snapshot.supportsSharing ? "supported" : "not in this Patchy"), cloudflared \(ServerReader.cloudflaredInstalled(environment) ? "installed" : "missing")")
+            print("sharing: \(snapshot.supportsSharing ? "supported" : "not in this Patchy"), domain \(snapshot.sharingDomain ?? "none"), cloudflared \(snapshot.cloudflaredInstalled ? "installed" : "missing")")
             print("sites: \(snapshot.sites.count)")
             for site in snapshot.sites {
                 let status = SiteStatus(site: site, serverRunning: snapshot.serverRunning)
@@ -85,6 +96,10 @@ struct PatchyUIApp: App {
             }
         }
     }
+}
+
+private final class SnapshotBox: @unchecked Sendable {
+    var value: PatchySnapshot?
 }
 
 final class AppDelegate: NSObject, NSApplicationDelegate {

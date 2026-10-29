@@ -4,7 +4,7 @@ import Testing
 @testable import Patchy_UI
 
 /// Pins the copy AppModel builds: the server pill, the footer, tab titles, the add form's
-/// problems and every error message derived from Patchy's output.
+/// problems and every error message derived from Patchy's error codes.
 @MainActor
 @Suite struct AppModelCopyTests {
     func model(running: Bool, sites: [Site] = [], php: String? = "8.4") -> AppModel {
@@ -49,29 +49,38 @@ import Testing
         #expect(AddDraft(name: "mysite").problemText(existing: []) == nil)
     }
 
+    /// A `--json` result line, as a failing command ends with.
+    func failed(_ code: String, details: String? = nil) -> CommandResult {
+        let detailsJSON = details.map { #""\#($0.replacingOccurrences(of: "\n", with: "\\n"))""# } ?? "null"
+        return CommandResult(exitCode: 1, output: #"{"schema":1,"ok":false,"error":"\#(code)","message":"Apache didn't start","details":\#(detailsJSON),"warnings":[]}"#)
+    }
+
     @Test func startFailures() {
-        let stuck = AppModel.startFailure(output: "Error: launchd service is stuck")
+        let stuck = AppModel.startFailure(failed("service_stuck"))
         #expect(stuck.title == "The server is stuck")
         #expect(stuck.message == "The background service that runs the server didn’t respond. Stopping and starting it again resets it.")
         #expect(stuck.recovery == .stopThenStart)
 
-        let stuckNoReset = AppModel.startFailure(output: "Error: launchd service is stuck", offerReset: false)
+        let stuckNoReset = AppModel.startFailure(failed("service_stuck"), offerReset: false)
         #expect(stuckNoReset.title == "The server didn’t start")
 
-        let ports = AppModel.startFailure(output: "Apache's startup error:\n  (48)Address already in use: AH00072\nSomething else is listening on port 80/443:\n  COMMAND PID USER\n  nginx 412 joe")
+        let ports = AppModel.startFailure(failed("port_in_use", details: "Apache's startup error:\n  (48)Address already in use: AH00072\nSomething else is listening on port 80/443:\n  COMMAND PID USER\n  nginx 412 joe\n  nginx 413 joe\n  httpd 90 root"))
         #expect(ports.title == "Another app is using the web ports")
-        #expect(ports.message == "nginx is already using the ports this server needs (80 and 443). Quit it, then start the server again.")
+        #expect(AppModel.portHolders(in: "  COMMAND PID USER\n  nginx 412 joe\n  nginx 413 joe\n  httpd 90 root") == ["nginx", "httpd"])
+        #expect(AppModel.portHolders(in: "Apache's startup error:\n  (48)Address already in use") == [])
 
-        let generic = AppModel.startFailure(output: "something else")
+        let generic = AppModel.startFailure(failed("apache_start_failed", details: "AH00526: Syntax error"))
         #expect(generic.title == "The server didn’t start")
         #expect(generic.message == "Your sites won’t open until it’s running. Show Details has the exact message from Patchy.")
-        #expect(generic.details == "something else")
+        #expect(generic.details == "Apache didn't start\nAH00526: Syntax error")
     }
 
     @Test func addFailures() {
-        #expect(AppModel.addFailureMessage(output: "Rolling back site creation") == "The setup check found a problem, so Patchy undid every step. Nothing was added and your other sites are fine.")
-        #expect(AppModel.addFailureMessage(output: "Site already exists") == "A site with this address already exists, so nothing was changed.")
-        #expect(AppModel.addFailureMessage(output: "sudo: no password") == "Patchy couldn’t point the address at this Mac, so nothing was created. Your other sites are fine.")
-        #expect(AppModel.addFailureMessage(output: "Creating SSL certificates\nboom") == "Something stopped the setup partway. Your other sites are fine; Show Details has the exact message from Patchy.")
+        #expect(AppModel.addFailureMessage(code: "config_invalid") == "The setup check found a problem, so Patchy undid every step. Nothing was added and your other sites are fine.")
+        #expect(AppModel.addFailureMessage(code: "site_exists") == "A site with this address already exists, so nothing was changed.")
+        #expect(AppModel.addFailureMessage(code: "sudo_required") == "Patchy couldn’t point the address at this Mac, so nothing was created. Your other sites are fine.")
+        #expect(AppModel.addFailureMessage(code: "hosts_update_failed") == "Patchy couldn’t point the address at this Mac, so nothing was created. Your other sites are fine.")
+        #expect(AppModel.addFailureMessage(code: "cert_failed") == "Something stopped the setup partway. Your other sites are fine; Show Details has the exact message from Patchy.")
+        #expect(AppModel.addFailureMessage(code: nil) == "Something stopped the setup partway. Your other sites are fine; Show Details has the exact message from Patchy.")
     }
 }

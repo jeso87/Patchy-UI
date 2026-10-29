@@ -115,7 +115,7 @@ final class LocalizationGuardTests: XCTestCase {
             "Overview",                                  // DetailTab
             "Running · %@",                              // AppModel.serverPillText
             "Stopping the server…",                      // a progress step
-            "Pointing %@ at this Mac",                   // the add flow's first step
+            "Pointing %@ at the new folder…",            // the folder change step
             "The server didn’t start",                   // ErrorInfo
             "%@ was removed. Its folder is still in place.", // a banner
             "Remove %@?",                                // SheetTitle

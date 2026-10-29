@@ -19,10 +19,10 @@ struct SharePanel: View {
                 }
             case .sharing(let access):
                 sharing(access)
-            case .failed(let output, let wasSharing):
+            case .failed(let failure):
                 HStack(alignment: .center, spacing: 8) {
                     Glyph(severity: .error, size: 14)
-                    Text(ShareCopy.problem(output: output, wasSharing: wasSharing))
+                    Text(ShareCopy.problem(failure))
                         .lineLimit(2)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     Button("Show Details") { model.showShareProblem(address) }
@@ -67,7 +67,7 @@ struct SharePanel: View {
         Text(ShareCopy.notice(for: access))
             .foregroundStyle(Theme.secondaryText)
             .lineLimit(2)
-        if ShareCopy.isTemporary(access) {
+        if access.isTemporary {
             Text("Sites with a fixed web address, like WordPress, may send visitors to the local address instead.")
                 .foregroundStyle(Theme.secondaryText)
                 .lineLimit(2)
