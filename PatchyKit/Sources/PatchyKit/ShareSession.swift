@@ -69,17 +69,39 @@ public enum ShareMode: Sendable, Hashable {
     case standard
     /// A random address on the connected domain, new each share.
     case temporary
+    /// A random address on the connected domain, asking for a new password each share.
+    case temporaryWithPassword
     /// The site's address on the connected domain, asking for a new password each share.
     case domainWithPassword
     /// The site's address on the connected domain, open to anyone with it.
     case domainWithoutPassword
+    /// The site's address under a name of the person's choosing, which Patchy remembers for the site.
+    case named(String, password: Bool)
+    /// An anonymous trycloudflare.com link, even with a domain connected.
+    case anonymous
 
     var arguments: [String] {
         switch self {
         case .standard, .domainWithoutPassword: []
         case .temporary: ["--temp"]
+        case .temporaryWithPassword: ["--temp", "--auth"]
         case .domainWithPassword: ["--auth"]
+        case .named(let name, let password): ["--name", name] + (password ? ["--auth"] : [])
+        case .anonymous: ["--anonymous"]
         }
+    }
+
+    /// The name Patchy gives a site's address when none was chosen: the local address without
+    /// its last part, dots as hyphens (harbor.test → harbor, shop.harbor.test → shop-harbor).
+    public static func defaultName(for address: String) -> String {
+        var parts = address.split(separator: ".")
+        if parts.count > 1 { parts.removeLast() }
+        return parts.joined(separator: "-")
+    }
+
+    /// One DNS label, as Patchy accepts it: Cloudflare's free certificates cover one level.
+    public static func isValidName(_ name: String) -> Bool {
+        name.wholeMatch(of: #/[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?/#) != nil
     }
 }
 

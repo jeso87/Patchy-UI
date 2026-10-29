@@ -34,6 +34,7 @@ struct SheetHost: View {
                 case .refreshCertificates: RefreshCertificatesSheet()
                 case .error(let info): ErrorSheet(info: info)
                 case .installCloudflared(let address, let mode): InstallCloudflaredSheet(address: address, mode: mode)
+                case .shareName(let address): ShareNameSheet(address: address)
                 case nil: EmptyView()
                 }
             }
@@ -449,6 +450,67 @@ struct FolderSheet: View {
             .disabled(draft == nil || isSame || model.isBusy)
         }
         .controlSize(.large)
+    }
+}
+
+/// Change Address…: the name before the domain in a site's shared address. Patchy remembers it,
+/// so later shares of the site use it too.
+struct ShareNameSheet: View {
+    @Environment(AppModel.self) private var model
+    var address: String
+    @State private var name = ""
+    @State private var password = true
+    @FocusState private var focused: Bool
+
+    var body: some View {
+        let domain = model.sharingDomain ?? ""
+        let site = model.sites.first { $0.address == address }
+        let typed = name.trimmingCharacters(in: .whitespaces).lowercased()
+        let valid = ShareMode.isValidName(typed)
+        SheetTitle(title: String(localized: "Change the shared address for \(address)", comment: "Sheet title. The placeholder is a local site address."),
+                   message: String(localized: "Choose the name before \(domain). Patchy remembers it, so this site is shared at the same address every time.", comment: "Sheet message. The placeholder is a domain like example.com."))
+        HStack(spacing: 4) {
+            TextField("Name", text: $name)
+                .textFieldStyle(.roundedBorder)
+                .focused($focused)
+                .frame(maxWidth: .infinity)
+            Text(verbatim: ".\(domain)")
+                .foregroundStyle(Theme.secondaryText)
+        }
+        .font(.system(size: 15))
+        // A web address reads left to right in every language.
+        .environment(\.layoutDirection, .leftToRight)
+        if !typed.isEmpty && !valid {
+            Text("Use lowercase letters, numbers and hyphens, without a hyphen at the start or end.")
+                .font(.system(size: 12))
+                .foregroundStyle(Theme.redText)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        Toggle("Ask visitors for a password", isOn: $password)
+        Text("A new password is made each time you share.")
+            .font(.system(size: 12))
+            .foregroundStyle(Theme.bodyText)
+        HStack(spacing: 8) {
+            Spacer()
+            Button("Cancel", role: .cancel) { model.closeSheet() }
+                .keyboardShortcut(.cancelAction)
+            Button("Share") {
+                guard let site else { return }
+                model.closeSheet()
+                model.share(site, mode: .named(typed, password: password))
+            }
+            .buttonStyle(.borderedProminent)
+            .keyboardShortcut(.defaultAction)
+            .disabled(!valid || site == nil || !model.serverRunning)
+        }
+        .controlSize(.large)
+        .onAppear {
+            if let site {
+                let host = ShareCopy.host(for: site, sharingDomain: domain)
+                name = String(host.dropLast(domain.count + 1))
+            }
+            focused = true
+        }
     }
 }
 

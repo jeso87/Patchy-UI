@@ -15,12 +15,35 @@ import Testing
         #expect(ShareCopy.notice(for: open) == "Anyone with this address can see this site until you stop sharing.")
     }
 
-    /// With a domain connected, Share asks which link to make; without one, it makes a temporary link.
+    /// With a domain connected, Share offers every kind of link Patchy makes; without one, it makes an anonymous link.
     @Test func shareChoices() {
-        #expect(ShareCopy.choices(sharingDomain: nil).isEmpty)
-        let choices = ShareCopy.choices(sharingDomain: "87dash.com")
-        #expect(choices.map(\.title) == ["Share at 87dash.com", "Share at 87dash.com, No Password", "Share with a Temporary Link"])
-        #expect(choices.map(\.mode) == [.domainWithPassword, .domainWithoutPassword, .temporary])
+        let site = Site(address: "harbor.test", folder: "/tmp", folderExists: true, certificate: .missing, isRouted: true)
+        #expect(ShareCopy.choices(for: site, sharingDomain: nil).isEmpty)
+        let choices = ShareCopy.choices(for: site, sharingDomain: "87dash.com")
+        #expect(choices.map(\.title) == ["Share at harbor.87dash.com", "Share at harbor.87dash.com, No Password", "Change Address…",
+                                         "Share at a Random 87dash.com Address", "Share at a Random 87dash.com Address, with Password",
+                                         "Share with a Public Link (trycloudflare.com)"])
+        #expect(choices.map(\.mode) == [.domainWithPassword, .domainWithoutPassword, nil, .temporary, .temporaryWithPassword, .anonymous])
+        #expect(choices.map(\.section) == [0, 0, 0, 1, 1, 2])
+    }
+
+    /// The address a site was last shared at wins over the one Patchy would pick; another domain's doesn't.
+    @Test func shareHost() {
+        var site = Site(address: "shop.harbor.test", folder: "/tmp", folderExists: true, certificate: .missing, isRouted: true)
+        #expect(ShareCopy.host(for: site, sharingDomain: "example.com") == "shop-harbor.example.com")
+        site.shareAddress = "https://harbor-preview.example.com"
+        #expect(ShareCopy.host(for: site, sharingDomain: "example.com") == "harbor-preview.example.com")
+        site.shareAddress = "https://harbor-preview.old-domain.com"
+        #expect(ShareCopy.host(for: site, sharingDomain: "example.com") == "shop-harbor.example.com")
+    }
+
+    @Test func shareNames() {
+        #expect(ShareMode.isValidName("harbor-preview"))
+        #expect(ShareMode.isValidName("a"))
+        #expect(!ShareMode.isValidName("Harbor"))
+        #expect(!ShareMode.isValidName("-harbor"))
+        #expect(!ShareMode.isValidName("harbor."))
+        #expect(!ShareMode.isValidName("shop.harbor"))
     }
 
     func failure(_ code: String?, wasSharing: Bool = false) -> ShareFailure {
@@ -41,7 +64,8 @@ import Testing
         #expect(ShareCopy.problem(failure("certificate_missing")) == "This site has no secure certificate yet. Refresh certificates, then share again.")
         #expect(ShareCopy.problem(failure("tunnel_deleted")) == "This site’s tunnel was deleted in Cloudflare. Share again to set up a new one.")
         #expect(ShareCopy.problem(failure("config_invalid")) == "Couldn’t share this site. Show Details has the exact message from Patchy.")
-        #expect(ShareCopy.problem(failure("name_taken")) == "Couldn’t share this site. Show Details has the exact message from Patchy.")
+        #expect(ShareCopy.problem(failure("name_taken")) == "That address is already used on your domain. Use Change Address… to choose another.")
+        #expect(ShareCopy.problem(failure("invalid_name")) == "That name can’t be used in a web address. Use lowercase letters, numbers and hyphens.")
         #expect(ShareCopy.problem(failure(nil)) == "Couldn’t share this site. Show Details has the exact message from Patchy.")
     }
 

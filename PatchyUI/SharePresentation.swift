@@ -5,17 +5,34 @@ import PatchyKit
 enum ShareCopy {
     struct Choice: Hashable {
         let title: String
-        let mode: ShareMode
+        /// What sharing runs. Nil for Change Address…, which asks for a name first.
+        let mode: ShareMode?
+        /// Menus put a divider between sections.
+        let section: Int
     }
 
-    /// What Share offers once a domain is connected. Empty without one: Share then makes a temporary link.
-    /// The temporary link comes last; the menus put a divider before it.
-    static func choices(sharingDomain: String?) -> [Choice] {
+    /// The host a site is shared at on the domain: the address it was last shared at, or the one
+    /// Patchy would give it (harbor.test → harbor.example.com).
+    static func host(for site: Site, sharingDomain domain: String) -> String {
+        if let address = site.shareAddress, let host = URL(string: address)?.host, host.hasSuffix(".\(domain)") {
+            return host
+        }
+        return "\(ShareMode.defaultName(for: site.address)).\(domain)"
+    }
+
+    /// What Share offers once a domain is connected: the site's own address with or without a
+    /// password, a random address on the domain with or without one, and an anonymous link.
+    /// Empty without a domain: Share then makes an anonymous link.
+    static func choices(for site: Site, sharingDomain: String?) -> [Choice] {
         guard let domain = sharingDomain else { return [] }
+        let host = host(for: site, sharingDomain: domain)
         return [
-            Choice(title: String(localized: "Share at \(domain)", comment: "Share menu item: a stable address on the person's own domain, with a password. The placeholder is a domain like example.com."), mode: .domainWithPassword),
-            Choice(title: String(localized: "Share at \(domain), No Password", comment: "Share menu item: a stable address on the person's own domain that anyone can open. The placeholder is a domain like example.com."), mode: .domainWithoutPassword),
-            Choice(title: String(localized: "Share with a Temporary Link", comment: "Share menu item: a random link that works until sharing stops."), mode: .temporary),
+            Choice(title: String(localized: "Share at \(host)", comment: "Share menu item: the site's own address on the person's domain, with a password. The placeholder is an address like harbor.example.com."), mode: .domainWithPassword, section: 0),
+            Choice(title: String(localized: "Share at \(host), No Password", comment: "Share menu item: the site's own address on the person's domain, open to anyone. The placeholder is an address like harbor.example.com."), mode: .domainWithoutPassword, section: 0),
+            Choice(title: String(localized: "Change Address…", comment: "Share menu item: choose the name before the domain in the site's shared address."), mode: nil, section: 0),
+            Choice(title: String(localized: "Share at a Random \(domain) Address", comment: "Share menu item: a random address on the person's domain, new each time, open to anyone. The placeholder is a domain like example.com."), mode: .temporary, section: 1),
+            Choice(title: String(localized: "Share at a Random \(domain) Address, with Password", comment: "Share menu item: a random address on the person's domain, new each time, with a password. The placeholder is a domain like example.com."), mode: .temporaryWithPassword, section: 1),
+            Choice(title: String(localized: "Share with a Public Link (trycloudflare.com)", comment: "Share menu item: an anonymous link on trycloudflare.com that works until sharing stops. Keep “trycloudflare.com” as it is."), mode: .anonymous, section: 2),
         ]
     }
 
@@ -43,6 +60,10 @@ enum ShareCopy {
             return String(localized: "This site has no secure certificate yet. Refresh certificates, then share again.", comment: "Shown when sharing a site failed.")
         case PatchyError.tunnelDeleted:
             return String(localized: "This site’s tunnel was deleted in Cloudflare. Share again to set up a new one.", comment: "Shown when sharing a site failed. A tunnel is what Cloudflare calls the connection that carries a shared site.")
+        case PatchyError.nameTaken:
+            return String(localized: "That address is already used on your domain. Use Change Address… to choose another.", comment: "Shown when sharing a site failed. “Change Address…” is a menu item.")
+        case PatchyError.invalidName:
+            return String(localized: "That name can’t be used in a web address. Use lowercase letters, numbers and hyphens.", comment: "Shown when sharing a site failed.")
         case PatchyError.tunnelFailed, PatchyError.cloudflareError:
             return String(localized: "Couldn’t get a public link. Check your internet connection and try again.", comment: "Shown when sharing a site failed.")
         default:

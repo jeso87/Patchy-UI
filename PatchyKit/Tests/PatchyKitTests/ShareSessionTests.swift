@@ -97,7 +97,11 @@ final class StateLog: @unchecked Sendable {
     @Test(arguments: [(ShareMode.standard, "share harbor.test --json"),
                       (.temporary, "share harbor.test --temp --json"),
                       (.domainWithPassword, "share harbor.test --auth --json"),
-                      (.domainWithoutPassword, "share harbor.test --json")])
+                      (.domainWithoutPassword, "share harbor.test --json"),
+                      (.temporaryWithPassword, "share harbor.test --temp --auth --json"),
+                      (.anonymous, "share harbor.test --anonymous --json"),
+                      (.named("harbor-preview", password: false), "share harbor.test --name harbor-preview --json"),
+                      (.named("harbor-preview", password: true), "share harbor.test --name harbor-preview --auth --json")])
     func passesTheModesOptions(mode: ShareMode, expected: String) async throws {
         let prefix = try FakePrefix(patchyScript: "#!/bin/zsh\necho \"args: $* end\"\nexit 1\n")
         defer { prefix.remove() }

@@ -106,3 +106,21 @@ struct SharePanel: View {
         }
     }
 }
+
+/// Share's choices once a domain is connected, for the detail pane's Share menu and a row's
+/// right-click menu.
+struct ShareMenuItems: View {
+    @Environment(AppModel.self) private var model
+    var site: Site
+
+    var body: some View {
+        let choices = ShareCopy.choices(for: site, sharingDomain: model.sharingDomain)
+        ForEach(choices, id: \.self) { choice in
+            if choice.section > 0, choice == choices.first(where: { $0.section == choice.section }) { Divider() }
+            Button(choice.title) {
+                if let mode = choice.mode { model.share(site, mode: mode) } else { model.askShareName(site.address) }
+            }
+            .disabled(!model.serverRunning)
+        }
+    }
+}

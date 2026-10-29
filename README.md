@@ -42,19 +42,23 @@ commands for you. It is free, open source, and not affiliated with Joe Workman.
 - **Share a site at a public link** so someone else can see it, for example a
   client reviewing a preview. One click gives a temporary link that works until
   you stop sharing. If you've set up your own domain with
-  `patchy share setup`, Share asks each time: a stable address on your domain,
-  with or without a password, or a temporary address on your domain that is
-  new each time.
+  `patchy share setup`, Share asks each time: the site's own address on your
+  domain (with or without a password, and you can change the name before the
+  domain), a random address on your domain that is new each time (with or
+  without a password), or an anonymous trycloudflare.com link. Settings can
+  disconnect the domain again.
   Sharing needs Cloudflare's free `cloudflared`; the app offers to install it.
 - **Group related sites,** such as one customer's domain and subdomains. Groups
   show in the sidebar and as headings in the menu bar panel. The app suggests groups
   for sites that look related, and never groups anything by itself. Groups
   belong to Patchy UI only; Patchy itself is not changed.
-- **Start, stop and restart the server** from the toolbar or the menu bar. If
-  some addresses stop pointing at your Mac, one Repair button fixes them.
-- **Read the logs.** Each site's errors and visits, live, with filtering,
-  pause, and copy.
-- **Switch PHP version** between the versions Homebrew has installed.
+- **Start, stop and restart the server** from the toolbar's status menu or the
+  menu bar. If some addresses stop pointing at your Mac, one Repair button
+  fixes them.
+- **Read the logs.** Each site's page counts today's errors and visits; its
+  Errors and Visits tabs show them live, with filtering, pause, and copy.
+- **Switch PHP version** between the versions Homebrew has installed, from the
+  toolbar's status menu or Settings.
 - **Refresh certificates** when they get close to expiring.
 - **Set up password-free mode once,** so everyday changes stop asking for your
   Mac password. Or skip it, and the app asks for your password when a change
