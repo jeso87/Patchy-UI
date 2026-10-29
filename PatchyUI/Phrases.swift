@@ -63,6 +63,20 @@ enum Phrases {
         String(localized: "Copy \(count) Lines", comment: "Button that copies the selected log lines. Title case, like other buttons.")
     }
 
+    /// The Today card's Errors row: "None", "1 error", "4 errors".
+    static func errorsToday(_ count: Int) -> String {
+        count == 0
+            ? String(localized: "no errors today", defaultValue: "None", comment: "Value beside “Errors” under a site's Today heading: nothing went wrong today.")
+            : String(localized: "\(count) errors", comment: "Value beside “Errors” under a site's Today heading: how many errors the site logged today. Always 1 or more.")
+    }
+
+    /// The Today card's Visits row: "None", "1 visit", "196 visits". Each page, image and stylesheet counts.
+    static func visitsToday(_ count: Int) -> String {
+        count == 0
+            ? String(localized: "no visits today", defaultValue: "None", comment: "Value beside “Visits” under a site's Today heading: nothing has opened the site today.")
+            : String(localized: "\(count) visits", comment: "Value beside “Visits” under a site's Today heading: how many requests the site answered today. Always 1 or more.")
+    }
+
     /// The detail pane's certificate line when it expires within 30 days.
     static func expiresIn(days: Int) -> String {
         String(localized: "Expires in \(days) days", comment: "Certificate status in a site's details when it expires within 30 days.")

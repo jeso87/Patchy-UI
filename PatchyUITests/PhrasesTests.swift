@@ -4,6 +4,15 @@ import Testing
 /// Pins the exact English of every count- and list-dependent phrase. From Task 3 on these
 /// strings come from the catalog; these tests must keep passing unmodified.
 @Suite struct PhrasesTests {
+    @Test func todayCounts() {
+        #expect(Phrases.errorsToday(0) == "None")
+        #expect(Phrases.errorsToday(1) == "1 error")
+        #expect(Phrases.errorsToday(4) == "4 errors")
+        #expect(Phrases.visitsToday(0) == "None")
+        #expect(Phrases.visitsToday(1) == "1 visit")
+        #expect(Phrases.visitsToday(196) == "196 visits")
+    }
+
     @Test func siteCount() {
         #expect(Phrases.siteCount(0) == "0 sites")
         #expect(Phrases.siteCount(1) == "1 site")

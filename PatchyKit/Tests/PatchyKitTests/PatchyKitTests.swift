@@ -261,6 +261,58 @@ enum SampleJSON {
     }
 }
 
+@Suite struct LogCountsTests {
+    private let today = DateComponents(year: 2026, month: 10, day: 29)
+
+    private func write(_ text: String) throws -> URL {
+        let file = FileManager.default.temporaryDirectory.appending(path: "PatchyKitTests-\(UUID().uuidString).log")
+        try text.write(to: file, atomically: true, encoding: .utf8)
+        return file
+    }
+
+    @Test func readsBothDateFormats() {
+        #expect(LogCounts.day(of: #"::1 - - [29/Oct/2026:16:15:56 -0400] "GET / HTTP/1.1" 200 25023"#) == today)
+        #expect(LogCounts.day(of: "[Thu Oct 29 09:05:12.497454 2026] [php:error] [pid 1] PHP Fatal error") == today)
+        #expect(LogCounts.day(of: "[Mon Oct  5 20:05:12.497454 2026] [ssl:error]") == DateComponents(year: 2026, month: 10, day: 5))
+        #expect(LogCounts.day(of: "Stack trace:") == nil)
+    }
+
+    @Test func countsTodaysVisitsButNotApachePings() throws {
+        let file = try write("""
+            ::1 - - [28/Oct/2026:23:59:59 -0400] "GET / HTTP/1.1" 200 10
+            ::1 - - [29/Oct/2026:08:00:00 -0400] "GET / HTTP/1.1" 200 10
+            ::1 - - [29/Oct/2026:08:00:01 -0400] "OPTIONS * HTTP/1.0" 200 -
+            ::1 - - [29/Oct/2026:08:00:02 -0400] "GET /style.css HTTP/1.1" 200 10
+
+            """)
+        defer { try? FileManager.default.removeItem(at: file) }
+        #expect(LogCounts.countLines(in: file, kind: .visits, day: today) == 2)
+    }
+
+    @Test func countsErrorsWithoutTheirContinuationLines() throws {
+        let file = try write("""
+            [Wed Oct 28 10:00:00.000000 2026] [php:error] old
+            [Thu Oct 29 10:00:00.000000 2026] [php:error] PHP Fatal error: boom
+            Stack trace:
+            #0 {main}
+            [Thu Oct 29 11:00:00.000000 2026] [php:warn] PHP Warning: hmm
+            """)
+        defer { try? FileManager.default.removeItem(at: file) }
+        #expect(LogCounts.countLines(in: file, kind: .errors, day: today) == 2)
+    }
+
+    @Test func readsAcrossChunks() throws {
+        let line = #"::1 - - [29/Oct/2026:08:00:00 -0400] "GET /a-page-with-a-long-name HTTP/1.1" 200 10"#
+        let file = try write(Array(repeating: line, count: 3000).joined(separator: "\n") + "\n")
+        defer { try? FileManager.default.removeItem(at: file) }
+        #expect(LogCounts.countLines(in: file, kind: .visits, day: today) == 3000)
+    }
+
+    @Test func missingLogCountsNothing() {
+        #expect(LogCounts.today(errorLog: "/nonexistent/error_log", accessLog: nil) == LogCounts(errors: 0, visits: 0))
+    }
+}
+
 final class Collected: @unchecked Sendable {
     private let lock = NSLock()
     private var buffer = ""
