@@ -388,7 +388,7 @@
   "This site has no secure certificate yet. Refresh certificates, then share again.": "Þessi vefur er ekki enn með öryggisskilríki. Endurnýjaðu skilríkin og deildu svo aftur.",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Ekki tókst að deila þessum vef. Undir „Sýna upplýsingar“ eru nákvæm skilaboð frá Patchy.",
   "Share at %@": "Deila á %@",
-  "Share at %@, No Password": "Deila á %@ án lykilorðs",
+  "Share at %@, with Password": "Deila á %@ með lykilorði",
   "Another app already uses that shortcut. Try a different one.": "Annað forrit notar þegar þessa flýtileið. Prófaðu aðra.",
   "Find a site": "Finna vef",
   "Needs Attention": "Þarfnast athygli",

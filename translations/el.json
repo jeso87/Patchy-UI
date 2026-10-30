@@ -388,7 +388,7 @@
   "This site has no secure certificate yet. Refresh certificates, then share again.": "Αυτός ο ιστότοπος δεν έχει ακόμη πιστοποιητικό ασφαλείας. Ανανεώστε τα πιστοποιητικά και μοιραστείτε ξανά.",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Δεν ήταν δυνατή η κοινή χρήση αυτού του ιστότοπου. Η «Εμφάνιση λεπτομερειών» περιέχει το ακριβές μήνυμα του Patchy.",
   "Share at %@": "Κοινή χρήση στο %@",
-  "Share at %@, No Password": "Κοινή χρήση στο %@ χωρίς κωδικό",
+  "Share at %@, with Password": "Κοινή χρήση στο %@ με κωδικό",
   "Another app already uses that shortcut. Try a different one.": "Μια άλλη εφαρμογή χρησιμοποιεί ήδη αυτήν τη συντόμευση. Δοκιμάστε μια άλλη.",
   "Find a site": "Εύρεση ιστοτόπου",
   "Needs Attention": "Χρειάζεται προσοχή",

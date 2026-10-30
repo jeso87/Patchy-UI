@@ -388,7 +388,7 @@
   "This site has no secure certificate yet. Refresh certificates, then share again.": "Questo sito non ha ancora un certificato di sicurezza. Rinnova i certificati, poi condividi di nuovo.",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Impossibile condividere questo sito. In “Mostra dettagli” trovi il messaggio esatto di Patchy.",
   "Share at %@": "Condividi su %@",
-  "Share at %@, No Password": "Condividi su %@ senza password",
+  "Share at %@, with Password": "Condividi su %@, con password",
   "Another app already uses that shortcut. Try a different one.": "Un’altra app usa già questa abbreviazione. Provane un’altra.",
   "Find a site": "Trova un sito",
   "Needs Attention": "Richiede attenzione",

@@ -388,7 +388,7 @@
   "This site has no secure certificate yet. Refresh certificates, then share again.": "Deze website heeft nog geen beveiligingscertificaat. Vernieuw de certificaten en deel opnieuw.",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Kan deze website niet delen. Bij 'Toon details' staat de precieze melding van Patchy.",
   "Share at %@": "Deel op %@",
-  "Share at %@, No Password": "Deel op %@ zonder wachtwoord",
+  "Share at %@, with Password": "Deel op %@ met wachtwoord",
   "Another app already uses that shortcut. Try a different one.": "Een andere app gebruikt die toetscombinatie al. Probeer een andere.",
   "Find a site": "Zoek een website",
   "Needs Attention": "Vereist aandacht",

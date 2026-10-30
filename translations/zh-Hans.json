@@ -373,7 +373,7 @@
   "This site has no secure certificate yet. Refresh certificates, then share again.": "此网站还没有安全证书。请刷新证书，然后再次共享。",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "无法共享此网站。“显示详情”中有来自 Patchy 的确切信息。",
   "Share at %@": "在 %@ 上共享",
-  "Share at %@, No Password": "在 %@ 上共享（无需密码）",
+  "Share at %@, with Password": "在 %@ 上共享（需要密码）",
   "Another app already uses that shortcut. Try a different one.": "另一个 App 已在使用该快捷键。请尝试其他快捷键。",
   "Find a site": "查找网站",
   "Needs Attention": "需要注意",

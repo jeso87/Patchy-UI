@@ -373,7 +373,7 @@
   "This site has no secure certificate yet. Refresh certificates, then share again.": "このサイトにはまだセキュリティ証明書がありません。証明書を更新してから、もう一度共有してください。",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "このサイトを共有できませんでした。Patchyからの正確なメッセージは「詳細を表示」で確認できます。",
   "Share at %@": "%@で共有",
-  "Share at %@, No Password": "%@で共有（パスワードなし）",
+  "Share at %@, with Password": "%@で共有（パスワードあり）",
   "Another app already uses that shortcut. Try a different one.": "このショートカットはほかのアプリで使用されています。別のショートカットを試してください。",
   "Find a site": "サイトを検索",
   "Needs Attention": "要確認",

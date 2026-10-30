@@ -20,10 +20,10 @@ import Testing
         let site = Site(address: "harbor.test", folder: "/tmp", folderExists: true, certificate: .missing, isRouted: true)
         #expect(ShareCopy.choices(for: site, sharingDomain: nil).isEmpty)
         let choices = ShareCopy.choices(for: site, sharingDomain: "87dash.com")
-        #expect(choices.map(\.title) == ["Share at harbor.87dash.com", "Share at harbor.87dash.com, No Password", "Change Address…",
+        #expect(choices.map(\.title) == ["Share at harbor.87dash.com", "Share at harbor.87dash.com, with Password", "Change Address…",
                                          "Share at a Random 87dash.com Address", "Share at a Random 87dash.com Address, with Password",
                                          "Share with a Public Link (trycloudflare.com)"])
-        #expect(choices.map(\.mode) == [.domainWithPassword, .domainWithoutPassword, nil, .temporary, .temporaryWithPassword, .anonymous])
+        #expect(choices.map(\.mode) == [.domainWithoutPassword, .domainWithPassword, nil, .temporary, .temporaryWithPassword, .anonymous])
         #expect(choices.map(\.section) == [0, 0, 0, 1, 1, 2])
     }
 

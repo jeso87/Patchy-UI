@@ -418,7 +418,7 @@
   "This site has no secure certificate yet. Refresh certificates, then share again.": "Ta witryna nie ma jeszcze certyfikatu bezpieczeństwa. Odśwież certyfikaty i udostępnij ponownie.",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Nie udało się udostępnić tej witryny. W „Pokaż szczegóły” znajdziesz dokładny komunikat od Patchy.",
   "Share at %@": "Udostępnij w %@",
-  "Share at %@, No Password": "Udostępnij w %@ bez hasła",
+  "Share at %@, with Password": "Udostępnij w %@ z hasłem",
   "Another app already uses that shortcut. Try a different one.": "Inna aplikacja używa już tego skrótu. Wypróbuj inny.",
   "Find a site": "Znajdź witrynę",
   "Needs Attention": "Wymaga uwagi",

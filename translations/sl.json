@@ -418,7 +418,7 @@
   "This site has no secure certificate yet. Refresh certificates, then share again.": "To spletno mesto še nima varnostnega potrdila. Osvežite potrdila in znova delite.",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Tega spletnega mesta ni bilo mogoče deliti. Pod »Prikaži podrobnosti« je natančno sporočilo programa Patchy.",
   "Share at %@": "Deli na %@",
-  "Share at %@, No Password": "Deli na %@ brez gesla",
+  "Share at %@, with Password": "Deli na %@ z geslom",
   "Another app already uses that shortcut. Try a different one.": "Druga aplikacija že uporablja to bližnjico. Poskusite drugo.",
   "Find a site": "Poišči spletno mesto",
   "Needs Attention": "Potrebuje pozornost",

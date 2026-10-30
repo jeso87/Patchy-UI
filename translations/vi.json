@@ -373,7 +373,7 @@
   "This site has no secure certificate yet. Refresh certificates, then share again.": "Trang web này chưa có chứng chỉ bảo mật. Hãy làm mới chứng chỉ rồi chia sẻ lại.",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Không thể chia sẻ trang web này. “Hiển thị chi tiết” có thông báo chính xác từ Patchy.",
   "Share at %@": "Chia sẻ tại %@",
-  "Share at %@, No Password": "Chia sẻ tại %@ không cần mật khẩu",
+  "Share at %@, with Password": "Chia sẻ tại %@, có mật khẩu",
   "Another app already uses that shortcut. Try a different one.": "Một ứng dụng khác đã sử dụng phím tắt đó. Hãy thử phím tắt khác.",
   "Find a site": "Tìm trang web",
   "Needs Attention": "Cần chú ý",

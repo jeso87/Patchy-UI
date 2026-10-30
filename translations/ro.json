@@ -403,7 +403,7 @@
   "This site has no secure certificate yet. Refresh certificates, then share again.": "Acest site nu are încă un certificat de securitate. Reînnoiți certificatele, apoi partajați din nou.",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Nu s-a putut partaja acest site. „Afișați detaliile” conține mesajul exact de la Patchy.",
   "Share at %@": "Partajați pe %@",
-  "Share at %@, No Password": "Partajați pe %@ fără parolă",
+  "Share at %@, with Password": "Partajați pe %@, cu parolă",
   "Another app already uses that shortcut. Try a different one.": "O altă aplicație folosește deja această scurtătură. Încercați alta.",
   "Find a site": "Găsiți un site",
   "Needs Attention": "Necesită atenție",

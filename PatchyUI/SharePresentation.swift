@@ -27,8 +27,8 @@ enum ShareCopy {
         guard let domain = sharingDomain else { return [] }
         let host = host(for: site, sharingDomain: domain)
         return [
-            Choice(title: String(localized: "Share at \(host)", comment: "Share menu item: the site's own address on the person's domain, with a password. The placeholder is an address like harbor.example.com."), mode: .domainWithPassword, section: 0),
-            Choice(title: String(localized: "Share at \(host), No Password", comment: "Share menu item: the site's own address on the person's domain, open to anyone. The placeholder is an address like harbor.example.com."), mode: .domainWithoutPassword, section: 0),
+            Choice(title: String(localized: "Share at \(host)", comment: "Share menu item: the site's own address on the person's domain, open to anyone. The placeholder is an address like harbor.example.com."), mode: .domainWithoutPassword, section: 0),
+            Choice(title: String(localized: "Share at \(host), with Password", comment: "Share menu item: the site's own address on the person's domain, with a password. The placeholder is an address like harbor.example.com."), mode: .domainWithPassword, section: 0),
             Choice(title: String(localized: "Change Address…", comment: "Share menu item: choose the name before the domain in the site's shared address."), mode: nil, section: 0),
             Choice(title: String(localized: "Share at a Random \(domain) Address", comment: "Share menu item: a random address on the person's domain, new each time, open to anyone. The placeholder is a domain like example.com."), mode: .temporary, section: 1),
             Choice(title: String(localized: "Share at a Random \(domain) Address, with Password", comment: "Share menu item: a random address on the person's domain, new each time, with a password. The placeholder is a domain like example.com."), mode: .temporaryWithPassword, section: 1),

@@ -388,7 +388,7 @@
   "This site has no secure certificate yet. Refresh certificates, then share again.": "این سایت هنوز گواهی امنیتی ندارد. گواهی‌ها را تازه کنید و دوباره به اشتراک بگذارید.",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "اشتراک‌گذاری این سایت ممکن نشد. پیام دقیق Patchy در «نمایش جزئیات» است.",
   "Share at %@": "اشتراک‌گذاری در %@",
-  "Share at %@, No Password": "اشتراک‌گذاری در %@ بدون رمز",
+  "Share at %@, with Password": "اشتراک‌گذاری در %@ با رمز",
   "Another app already uses that shortcut. Try a different one.": "برنامهٔ دیگری از قبل از این میان‌بر استفاده می‌کند. میان‌بر دیگری را امتحان کنید.",
   "Find a site": "پیدا کردن سایت",
   "Needs Attention": "نیاز به توجه",

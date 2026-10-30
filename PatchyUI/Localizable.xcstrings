@@ -44297,120 +44297,6 @@
         }
       }
     },
-    "Share at %@, No Password" : {
-      "comment" : "Share menu item: a stable address on the person's own domain that anyone can open. The placeholder is a domain like example.com.",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Share at %@, No Password" }
-        },
-        "ar" : {
-          "stringUnit" : { "state" : "translated", "value" : "مشاركة على %@ بدون كلمة سر" }
-        },
-        "ca" : {
-          "stringUnit" : { "state" : "translated", "value" : "Comparteix a %@ sense contrasenya" }
-        },
-        "cs" : {
-          "stringUnit" : { "state" : "translated", "value" : "Sdílet na %@ bez hesla" }
-        },
-        "da" : {
-          "stringUnit" : { "state" : "translated", "value" : "Del på %@ uden adgangskode" }
-        },
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Unter %@ ohne Passwort teilen" }
-        },
-        "el" : {
-          "stringUnit" : { "state" : "translated", "value" : "Κοινή χρήση στο %@ χωρίς κωδικό" }
-        },
-        "es" : {
-          "stringUnit" : { "state" : "translated", "value" : "Compartir en %@ sin contraseña" }
-        },
-        "fa" : {
-          "stringUnit" : { "state" : "translated", "value" : "اشتراک‌گذاری در %@ بدون رمز" }
-        },
-        "fi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Jaa osoitteessa %@ ilman salasanaa" }
-        },
-        "fr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Partager sur %@ sans mot de passe" }
-        },
-        "he" : {
-          "stringUnit" : { "state" : "translated", "value" : "שיתוף ב־%@ ללא סיסמה" }
-        },
-        "hr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Podijeli na %@ bez lozinke" }
-        },
-        "hu" : {
-          "stringUnit" : { "state" : "translated", "value" : "Megosztás itt: %@, jelszó nélkül" }
-        },
-        "is" : {
-          "stringUnit" : { "state" : "translated", "value" : "Deila á %@ án lykilorðs" }
-        },
-        "it" : {
-          "stringUnit" : { "state" : "translated", "value" : "Condividi su %@ senza password" }
-        },
-        "ja" : {
-          "stringUnit" : { "state" : "translated", "value" : "%@で共有（パスワードなし）" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "%@에서 암호 없이 공유하기" }
-        },
-        "nb" : {
-          "stringUnit" : { "state" : "translated", "value" : "Del på %@ uten passord" }
-        },
-        "nl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Deel op %@ zonder wachtwoord" }
-        },
-        "nn" : {
-          "stringUnit" : { "state" : "translated", "value" : "Del på %@ utan passord" }
-        },
-        "pl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Udostępnij w %@ bez hasła" }
-        },
-        "pt-BR" : {
-          "stringUnit" : { "state" : "translated", "value" : "Compartilhar em %@ sem Senha" }
-        },
-        "pt-PT" : {
-          "stringUnit" : { "state" : "translated", "value" : "Partilhar em %@ sem palavra-passe" }
-        },
-        "ro" : {
-          "stringUnit" : { "state" : "translated", "value" : "Partajați pe %@ fără parolă" }
-        },
-        "ru" : {
-          "stringUnit" : { "state" : "translated", "value" : "Поделиться на %@ без пароля" }
-        },
-        "sk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Zdieľať na %@ bez hesla" }
-        },
-        "sl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Deli na %@ brez gesla" }
-        },
-        "sv" : {
-          "stringUnit" : { "state" : "translated", "value" : "Dela på %@ utan lösenord" }
-        },
-        "th" : {
-          "stringUnit" : { "state" : "translated", "value" : "แชร์ที่ %@ โดยไม่ใช้รหัสผ่าน" }
-        },
-        "tr" : {
-          "stringUnit" : { "state" : "translated", "value" : "%@ üzerinde parolasız paylaş" }
-        },
-        "uk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Поділитися на %@ без пароля" }
-        },
-        "vi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Chia sẻ tại %@ không cần mật khẩu" }
-        },
-        "zh-HK" : {
-          "stringUnit" : { "state" : "translated", "value" : "在 %@ 分享（無需密碼）" }
-        },
-        "zh-Hans" : {
-          "stringUnit" : { "state" : "translated", "value" : "在 %@ 上共享（无需密码）" }
-        },
-        "zh-Hant" : {
-          "stringUnit" : { "state" : "translated", "value" : "在 %@ 分享（無需密碼）" }
-        }
-      }
-    },
     "Another app already uses that shortcut. Try a different one." : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
@@ -50000,6 +49886,120 @@
         },
         "zh-Hant" : {
           "stringUnit" : { "state" : "translated", "value" : "此網址已在你的網域上使用。請使用「更改網址⋯」選擇其他網址。" }
+        }
+      }
+    },
+    "Share at %@, with Password" : {
+      "comment" : "Share menu item: the site's own address on the person's domain, with a password. The placeholder is an address like harbor.example.com.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Share at %@, with Password" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "مشاركة على %@ مع كلمة سر" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Comparteix a %@ amb contrasenya" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Sdílet na %@ s heslem" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Del på %@ med adgangskode" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Unter %@ mit Passwort teilen" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Κοινή χρήση στο %@ με κωδικό" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Compartir en %@, con contraseña" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "اشتراک‌گذاری در %@ با رمز" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Jaa osoitteessa %@ salasanalla" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partager sur %@, avec mot de passe" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "שיתוף ב־%@ עם סיסמה" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Podijeli na %@ s lozinkom" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Megosztás itt: %@, jelszóval" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deila á %@ með lykilorði" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Condividi su %@, con password" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@で共有（パスワードあり）" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@에서 암호와 함께 공유하기" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Del på %@ med passord" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deel op %@ met wachtwoord" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Del på %@ med passord" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Udostępnij w %@ z hasłem" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Compartilhar em %@ com Senha" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partilhar em %@ com palavra-passe" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Partajați pe %@, cu parolă" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Поделиться на %@ с паролем" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Zdieľať na %@ s heslom" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Deli na %@ z geslom" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dela på %@ med lösenord" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "แชร์ที่ %@ พร้อมรหัสผ่าน" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "%@ üzerinde parolayla paylaş" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Поділитися на %@ з паролем" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Chia sẻ tại %@, có mật khẩu" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "在 %@ 分享（需要密碼）" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "在 %@ 上共享（需要密码）" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "在 %@ 分享（需要密碼）" }
         }
       }
     }

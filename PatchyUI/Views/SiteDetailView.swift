@@ -68,45 +68,30 @@ struct SiteDetailView: View {
                         .foregroundStyle(Theme.realTagText)
                 }
             }
-            addressLine
-        }
-    }
-
-    /// The address as a link, a small Copy, and the www. address when there is one.
-    private var addressLine: some View {
-        HStack(spacing: 12) {
-            Button {
-                model.openInBrowser(site)
-            } label: {
-                Text(verbatim: site.url.absoluteString)
-            }
-            .buttonStyle(.patchyLink)
-            .disabled(!model.serverRunning)
-            .help(model.serverRunning ? "Open \(site.url.absoluteString)" : "Start the server to open this site")
-
-            Button {
-                model.copyAddress(site)
-                showFlash("copy")
-            } label: {
-                Label(flash == "copy" ? "Copied" : "Copy", systemImage: flash == "copy" ? "checkmark" : "doc.on.doc")
-                    .labelStyle(SmallIconLabelStyle())
-            }
-            .buttonStyle(.plain)
-            .foregroundStyle(Theme.secondaryText)
-            .help("Copy Address")
-
             if let www = site.wwwAlias {
                 Text(verbatim: String(localized: "Also answers at \(www)", comment: "Under a site's address in its details. The placeholder is the www. address."))
+                    .font(.system(size: 13))
                     .foregroundStyle(Theme.secondaryText)
                     .lineLimit(1)
             }
         }
-        .font(.system(size: 12))
     }
 
-    /// Open in Browser, Share as an icon, and the rest in a “…” menu.
+    /// Copy Address, Open in Browser, Share as an icon, and the rest in a “…” menu.
     private var actions: some View {
         HStack(spacing: 8) {
+            Button {
+                model.copyAddress(site)
+                showFlash("copy")
+            } label: {
+                // Both titles take space, so the row doesn't shift when it flashes Copied.
+                ZStack {
+                    Text("Copy Address").opacity(flash == "copy" ? 0 : 1)
+                    Text("Copied").opacity(flash == "copy" ? 1 : 0)
+                }
+            }
+            .help(site.url.absoluteString)
+
             Button(flash == "open" ? "Opening…" : "Open in Browser") {
                 model.openInBrowser(site)
                 showFlash("open")
@@ -347,15 +332,5 @@ struct InfoRow<Content: View>: View {
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 12)
-    }
-}
-
-/// A small icon beside its title, for the Copy link under a site's name.
-private struct SmallIconLabelStyle: LabelStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        HStack(spacing: 4) {
-            configuration.icon.font(.system(size: 10.5))
-            configuration.title
-        }
     }
 }

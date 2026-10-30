@@ -403,7 +403,7 @@
   "This site has no secure certificate yet. Refresh certificates, then share again.": "Tento web ešte nemá bezpečnostný certifikát. Obnovte certifikáty a zdieľajte znova.",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Tento web sa nepodarilo zdieľať. Presné hlásenie od Patchy nájdete v časti „Zobraziť podrobnosti“.",
   "Share at %@": "Zdieľať na %@",
-  "Share at %@, No Password": "Zdieľať na %@ bez hesla",
+  "Share at %@, with Password": "Zdieľať na %@ s heslom",
   "Another app already uses that shortcut. Try a different one.": "Túto skratku už používa iná aplikácia. Skúste inú.",
   "Find a site": "Nájsť web",
   "Needs Attention": "Vyžaduje pozornosť",

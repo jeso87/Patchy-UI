@@ -388,7 +388,7 @@
   "This site has no secure certificate yet. Refresh certificates, then share again.": "Den här webbplatsen har inget säkerhetscertifikat ännu. Förnya certifikaten och dela igen.",
   "Couldn’t share this site. Show Details has the exact message from Patchy.": "Det gick inte att dela den här webbplatsen. Under ”Visa detaljer” finns det exakta meddelandet från Patchy.",
   "Share at %@": "Dela på %@",
-  "Share at %@, No Password": "Dela på %@ utan lösenord",
+  "Share at %@, with Password": "Dela på %@ med lösenord",
   "Another app already uses that shortcut. Try a different one.": "En annan app använder redan det kortkommandot. Prova ett annat.",
   "Find a site": "Hitta en webbplats",
   "Needs Attention": "Kräver uppmärksamhet",
