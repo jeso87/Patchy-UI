@@ -15,7 +15,7 @@ A native macOS window and menu bar item for [Patchy](https://github.com/joeworkm
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/main-window-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="docs/screenshots/main-window-light.png">
-  <img src="docs/screenshots/main-window-dark.png" width="760" alt="Patchy UI's main window. The sidebar lists sites in groups, each with a status mark; the selected site shows its address, folder, group, secure connection and whether it is reachable.">
+  <img src="docs/screenshots/main-window-dark.png" width="760" alt="Patchy UI's main window. The sidebar lists sites in groups, with a mark beside any that need attention; the selected site shows Copy Address, Open in Browser, Share and More buttons, then its folder, group, secure connection, whether it is reachable, and today's errors and visits.">
 </picture>
 
 </div>
