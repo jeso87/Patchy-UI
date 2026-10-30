@@ -55,6 +55,7 @@ enum Sheet: Equatable {
     case refreshCertificates
     case error(ErrorInfo)
     case installCloudflared(String, mode: ShareMode)
+    case shareName(String)
 }
 
 enum TrustStep: Equatable {
@@ -929,6 +930,37 @@ final class AppModel {
             }
         case .starting, .sharing:
             if shareSessions[address] != nil { shares[address] = state }
+        }
+    }
+
+    /// True while any site is shared or starting to be.
+    var hasRunningShares: Bool {
+        shares.values.contains { if case .failed = $0 { false } else { $0 != .stopped } }
+    }
+
+    /// Change Address…: asks for the name before the domain, then shares at it.
+    func askShareName(_ address: String) {
+        sheet = .shareName(address)
+        openMainWindow?()
+    }
+
+    /// Disconnects the sharing domain, so Share makes anonymous links again. Running shares on
+    /// the domain would lose their tunnels, so this waits until none are running.
+    func disconnectSharingDomain() {
+        guard !isBusy, !hasRunningShares, let domain = sharingDomain else { return }
+        Task {
+            let result = await runTask(step: String(localized: "Disconnecting \(domain)…", comment: "Progress step shown while the sharing domain is disconnected. The placeholder is a domain like example.com.")) { client, _, output in
+                await client.resetSharing(onOutput: output)
+            }
+            if sharingDomain == nil {
+                banner = (result.result?.warnings.contains { $0.code == PatchyError.tunnelDeleteFailed } ?? false)
+                    ? Banner(severity: .warning, text: String(localized: "Disconnected \(domain). Some tunnels are still on Cloudflare; you can delete them in the Cloudflare dashboard under Networks › Tunnels.", comment: "Banner under the toolbar. The placeholder is a domain like example.com. “Networks › Tunnels” is a place in Cloudflare's dashboard."))
+                    : Banner(severity: .ok, text: String(localized: "Disconnected \(domain). Share now makes public links on trycloudflare.com.", comment: "Banner under the toolbar. The placeholder is a domain like example.com."))
+            } else {
+                sheet = .error(ErrorInfo(title: String(localized: "Couldn’t disconnect \(domain)", comment: "Title of an error sheet. The placeholder is a domain like example.com."),
+                                         message: String(localized: "Show Details has the exact message from Patchy."),
+                                         details: result.details))
+            }
         }
     }
 

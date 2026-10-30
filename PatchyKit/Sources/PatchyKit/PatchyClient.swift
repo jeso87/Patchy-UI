@@ -79,6 +79,12 @@ public struct PatchyClient: Sendable {
         await change(["refresh-certs"], askpass: askpass, onOutput: onOutput)
     }
 
+    /// Disconnects the sharing domain. Patchy deletes each site's tunnel on Cloudflare; one it
+    /// couldn't delete comes back as a `tunnel_delete_failed` warning.
+    public func resetSharing(onOutput: Output? = nil) async -> CommandResult {
+        await change(["share", "reset"], askpass: nil, onOutput: onOutput)
+    }
+
     /// With `SUDO_ASKPASS` set, `patchy trust` needs no terminal.
     public func setUpTrust(askpass: AskpassServer, onOutput: Output? = nil) async -> CommandResult {
         await change(["trust"], askpass: askpass, onOutput: onOutput)

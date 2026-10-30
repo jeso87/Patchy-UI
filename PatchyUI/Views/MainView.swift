@@ -18,15 +18,8 @@ struct MainView: View {
                 ServerPill()
             }
             ToolbarItemGroup(placement: .primaryAction) {
-                // The buttons stay in place while a task runs, disabled, so the toolbar doesn't jump.
-                if model.serverRunning {
-                    Button(model.unroutedCount > 0 ? "Repair" : "Restart") { model.restart() }
-                        .help("Restart the server (also repairs addresses)")
-                        .disabled(model.isBusy)
-                    Button("Stop") { model.stop() }
-                        .help("Stop the server and release your addresses")
-                        .disabled(model.isBusy)
-                } else {
+                // Start stays a button of its own: one click, where Restart and Stop live in the pill's menu.
+                if !model.serverRunning {
                     Button("Start Server") { model.start() }
                         .buttonStyle(.borderedProminent)
                         .disabled(model.isBusy)
@@ -43,11 +36,45 @@ struct MainView: View {
     }
 }
 
-/// Always-visible server status. Shows the current step while a task runs.
+/// Always-visible server status. Shows the current step while a task runs. While the server
+/// runs it is also a menu: Restart (or Repair), Stop Server and the PHP version.
 struct ServerPill: View {
     @Environment(AppModel.self) private var model
 
     var body: some View {
+        if model.serverRunning && !model.isBusy {
+            Menu {
+                Button(model.unroutedCount > 0 ? "Repair" : "Restart Server") { model.restart() }
+                    .help("Restart the server (also repairs addresses)")
+                Button("Stop Server") { model.stop() }
+                    .help("Stop the server and release your addresses")
+                let installed = model.snapshot.installedPHP
+                if installed.count > 1 {
+                    Divider()
+                    Picker("PHP version", selection: Binding(
+                        get: { model.snapshot.activePHP ?? "" },
+                        set: { model.switchPHP(to: $0) })) {
+                        ForEach(installed) { php in
+                            Text(verbatim: "PHP \(php.version)").tag(php.version)
+                        }
+                    }
+                    .pickerStyle(.inline)
+                }
+            } label: {
+                content
+            }
+            .menuStyle(.button)
+            .buttonStyle(.plain)
+            .fixedSize()
+            .accessibilityLabel("Server: \(model.serverPillText)")
+        } else {
+            content
+                .accessibilityElement(children: .combine)
+                .accessibilityLabel("Server: \(model.serverPillText)")
+        }
+    }
+
+    private var content: some View {
         HStack(spacing: 7) {
             if model.isBusy {
                 ProgressView()
@@ -61,12 +88,18 @@ struct ServerPill: View {
                 .font(.system(size: 12))
                 .lineLimit(1)
                 .truncationMode(.tail)
+            if model.serverRunning && !model.isBusy {
+                Image(systemName: "chevron.down")
+                    .font(.system(size: 8.5, weight: .bold))
+                    .foregroundStyle(.secondary)
+            }
         }
-        .padding(.horizontal, 6)
+        // More room on the left, so the dot doesn't sit against the edge of the capsule.
+        .padding(.leading, 12)
+        .padding(.trailing, 6)
         .frame(maxWidth: 300)
         .modifier(PillBackground())
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel("Server: \(model.serverPillText)")
+        .contentShape(Rectangle())
     }
 }
 
@@ -227,22 +260,19 @@ struct SiteRow: View {
 
     var body: some View {
         let status = model.status(of: site)
-        HStack(spacing: 9) {
-            Glyph(severity: status.severity)
-            VStack(alignment: .leading, spacing: 1) {
-                HStack(spacing: 4) {
-                    Text(site.address)
-                        .fontWeight(.medium)
-                        .lineLimit(1)
-                        .truncationMode(.middle)
-                    if model.isSharing(site.address) {
-                        Image(systemName: "link").font(.system(size: 10)).foregroundStyle(.secondary)
-                    }
-                }
-                Text(status.summary)
-                    .font(.system(size: 11))
-                    .foregroundStyle(.secondary)
-                    .lineLimit(1)
+        HStack(spacing: 6) {
+            Text(site.address)
+                .fontWeight(.medium)
+                .lineLimit(1)
+                .truncationMode(.middle)
+            if model.isSharing(site.address) {
+                Image(systemName: "link").font(.system(size: 10)).foregroundStyle(.secondary)
+            }
+            Spacer(minLength: 4)
+            // Only problems are marked; the details are on the site's page.
+            if let issue = status.issues.first {
+                Glyph(severity: issue.severity, size: 12)
+                    .help(status.summary)
             }
         }
         .padding(.vertical, 2)
@@ -264,16 +294,11 @@ struct SiteRow: View {
                     Button("Copy Link") { model.copyShareLink(site.address) }
                     Button("Stop Sharing") { model.stopSharing(site.address) }
                 } else {
-                    let choices = ShareCopy.choices(sharingDomain: model.sharingDomain)
-                    if choices.isEmpty {
+                    if model.sharingDomain == nil {
                         Button("Share") { model.share(site) }
                             .disabled(!model.serverRunning)
                     } else {
-                        ForEach(choices, id: \.self) { choice in
-                            if choice.mode == .temporary { Divider() }
-                            Button(choice.title) { model.share(site, mode: choice.mode) }
-                                .disabled(!model.serverRunning)
-                        }
+                        Menu("Share") { ShareMenuItems(site: site) }
                     }
                 }
             }

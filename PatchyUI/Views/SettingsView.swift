@@ -52,6 +52,7 @@ struct GeneralSettings: View {
     @AppStorage(AppDelegate.showDockIconKey) private var showDockIcon = true
     @State private var openAtLogin = SMAppService.mainApp.status == .enabled
     @State private var loginError: String?
+    @State private var confirmDisconnect = false
 
     var body: some View {
         Form {
@@ -78,11 +79,36 @@ struct GeneralSettings: View {
                 SettingsNote("Works from any app. Type part of a site’s name, then press Return to open it.")
             }
 
+            if model.canShare {
+                Section {
+                    if let domain = model.sharingDomain {
+                        LabeledContent("Sharing domain") {
+                            HStack(spacing: 10) {
+                                Text(verbatim: domain)
+                                Button("Disconnect…") { confirmDisconnect = true }
+                                    .disabled(model.isBusy || model.hasRunningShares)
+                            }
+                        }
+                        SettingsNote(!model.hasRunningShares
+                            ? "Sites are shared at addresses on this domain. Disconnecting it removes their tunnels from Cloudflare, and Share makes trycloudflare.com links instead."
+                            : "Stop sharing every site before disconnecting the domain.")
+                    } else {
+                        SettingsNote("Share makes public links on trycloudflare.com. To share at addresses on your own Cloudflare domain instead, run patchy share setup followed by your domain in Terminal.")
+                    }
+                }
+            }
+
             Section {
                 Button("Check for Updates…") { model.updater.checkForUpdates() }
             }
         }
         .formStyle(.grouped)
+        .confirmationDialog(Text(verbatim: String(localized: "Disconnect \(model.sharingDomain ?? "")?", comment: "Confirmation title in Settings. The placeholder is a domain like example.com.")),
+                            isPresented: $confirmDisconnect) {
+            Button("Disconnect", role: .destructive) { model.disconnectSharingDomain() }
+        } message: {
+            Text("Shared addresses on this domain stop working. To use the domain again later, run patchy share setup in Terminal.")
+        }
     }
 }
 

@@ -173,4 +173,9 @@ public enum PatchyError {
     public static let tunnelFailed = "tunnel_failed"
     public static let tunnelStopped = "tunnel_stopped"
     public static let cloudflareError = "cloudflare_error"
+    public static let invalidName = "invalid_name"
+    public static let nameTaken = "name_taken"
+    public static let vhostUnsupported = "vhost_unsupported"
+    /// A warning from `share reset`: Cloudflare kept a tunnel.
+    public static let tunnelDeleteFailed = "tunnel_delete_failed"
 }
