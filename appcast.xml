@@ -3,6 +3,37 @@
     <channel>
         <title>Patchy UI</title>
         <item>
+            <title>1.4.0</title>
+            <pubDate>Thu, 29 Oct 2026 21:52:39 -0400</pubDate>
+            <sparkle:version>8</sparkle:version>
+            <sparkle:shortVersionString>1.4.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="markdown"><![CDATA[### A tidier site page
+
+- **One row of actions** beside the site's name: **Copy Address**, **Open in Browser**, **Share**, and a **…** menu with Reveal in Finder and Remove Site.
+- **Today at a glance.** Each site's page now counts today's errors and visits. Click either one to jump straight to that log.
+- **A more compact sidebar.** Each site takes one line, and a mark appears only beside sites that need attention. Certificate details live on the site's page.
+
+### Server controls in one menu
+
+Click **Running · PHP 8.5** in the toolbar to restart or stop the server. When more than one version of PHP is installed, you can also switch between them there.
+
+### Every way to share
+
+Patchy 1.4.0 adds new ways to share a site, and Share now offers all of them once you've connected your own domain:
+
+- **Your site's own address** on your domain, open to anyone or **with a password**.
+- **Change Address…** picks the name before your domain, such as `preview.example.com`. Patchy remembers it for next time.
+- **A random address** on your domain that is new each time, open or with a password.
+- **A public link** on trycloudflare.com, even when a domain is connected.
+
+To stop using your domain, go to **Settings › General** and choose **Disconnect**.
+
+Made for **Patchy 1.4.0**. Update Patchy first, in Terminal: `brew upgrade joeworkman/patchy/patchy`
+]]></description>
+            <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.4.0/PatchyUI-1.4.0.dmg" length="2879167" type="application/octet-stream" sparkle:edSignature="+53vDrMOaCc09HhJFsYqDygHyWF/SuaDweG1nl+bpvZRYc9pMxALdPwHwjFuO5Xrc+A1CxB6BeXD91zwKh1lDw=="/>
+        </item>
+        <item>
             <title>1.3.0</title>
             <pubDate>Thu, 29 Oct 2026 16:27:19 -0400</pubDate>
             <sparkle:version>7</sparkle:version>
@@ -56,21 +87,6 @@ Made for **Patchy 1.3.0**. Update Patchy first, in Terminal: `brew upgrade joewo
 Still made for **Patchy 1.2.1**.
 ]]></description>
             <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.2.1.5/PatchyUI-1.2.1.5.dmg" length="2436658" type="application/octet-stream" sparkle:edSignature="Z4QVYTcxW9GMV0ljDQBXCRVuZ5XzY0dsTsTOPhyuRalvxDMomllWlohIC0ifqDd7lYOmn19/k1MnIKBkInEkBg=="/>
-        </item>
-        <item>
-            <title>1.2.1.4</title>
-            <pubDate>Wed, 14 Oct 2026 11:29:16 -0400</pubDate>
-            <sparkle:version>5</sparkle:version>
-            <sparkle:shortVersionString>1.2.1.4</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Fixes
-
-- Setting up password-free mode works again. Before, it failed after you entered your Mac password, with a message that a terminal is required.
-- If password-free mode still can’t be set up from the app, the message now explains how to turn it on from Terminal instead.
-
-Still made for **Patchy 1.2.1**.
-]]></description>
-            <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.2.1.4/PatchyUI-1.2.1.4.dmg" length="1986375" type="application/octet-stream" sparkle:edSignature="HFHJcnka3O2XlQ11ApC2CWIXGBuEflfRCLc4tqaKyBgiuskWSvw6vmIrK2tm0PghHWlHyAWaxSNDZVuFme3qAQ=="/>
         </item>
     </channel>
 </rss>
