@@ -454,5 +454,9 @@
   "Today": "Astăzi",
   "Use lowercase letters, numbers and hyphens, without a hyphen at the start or end.": "Folosiți litere mici, cifre și cratime, fără cratimă la început sau la sfârșit.",
   "no errors today": "Niciuna",
-  "no visits today": "Niciuna"
+  "no visits today": "Niciuna",
+  "Finish Setup": "Finalizați configurarea",
+  "Finishing Patchy’s setup": "Se finalizează configurarea Patchy",
+  "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site.": "Patchy nu este încă configurat complet pe acest Mac, așa că nu s-a adăugat nimic. „Finalizați configurarea” o încheie, apoi adaugă site-ul.",
+  "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy.": "Configurarea Patchy nu s-a încheiat, așa că site-ul nu a fost adăugat. Celelalte site-uri ale dvs. sunt în regulă; „Afișați detaliile” conține mesajul exact de la Patchy."
 }

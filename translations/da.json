@@ -437,5 +437,9 @@
   "Today": "I dag",
   "Use lowercase letters, numbers and hyphens, without a hyphen at the start or end.": "Brug små bogstaver, tal og bindestreger, uden bindestreg i starten eller slutningen.",
   "no errors today": "Ingen",
-  "no visits today": "Ingen"
+  "no visits today": "Ingen",
+  "Finish Setup": "Færdiggør opsætning",
+  "Finishing Patchy’s setup": "Færdiggør opsætningen af Patchy",
+  "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site.": "Patchy er ikke sat helt op på denne Mac endnu, så intet blev tilføjet. “Færdiggør opsætning” gør det færdigt og tilføjer derefter webstedet.",
+  "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy.": "Opsætningen af Patchy blev ikke færdig, så webstedet blev ikke tilføjet. Dine andre websteder er i orden; under “Vis oplysninger” står den præcise meddelelse fra Patchy."
 }

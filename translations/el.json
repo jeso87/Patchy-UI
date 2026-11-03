@@ -437,5 +437,9 @@
   "Today": "Σήμερα",
   "Use lowercase letters, numbers and hyphens, without a hyphen at the start or end.": "Χρησιμοποιήστε πεζά γράμματα, αριθμούς και παύλες, χωρίς παύλα στην αρχή ή στο τέλος.",
   "no errors today": "Κανένα",
-  "no visits today": "Καμία"
+  "no visits today": "Καμία",
+  "Finish Setup": "Ολοκλήρωση ρύθμισης",
+  "Finishing Patchy’s setup": "Ολοκλήρωση της ρύθμισης του Patchy",
+  "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site.": "Το Patchy δεν έχει ολοκληρώσει ακόμη τη ρύθμισή του σε αυτό το Mac, οπότε δεν προστέθηκε τίποτα. Η «Ολοκλήρωση ρύθμισης» την ολοκληρώνει και μετά προσθέτει τον ιστότοπο.",
+  "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy.": "Η ρύθμιση του Patchy δεν ολοκληρώθηκε, οπότε ο ιστότοπος δεν προστέθηκε. Οι άλλοι ιστότοποί σας είναι εντάξει· η «Εμφάνιση λεπτομερειών» περιέχει το ακριβές μήνυμα του Patchy."
 }

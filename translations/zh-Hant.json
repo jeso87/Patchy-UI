@@ -420,5 +420,9 @@
   "Today": "今天",
   "Use lowercase letters, numbers and hyphens, without a hyphen at the start or end.": "請使用小寫字母、數字和連字號，開頭和結尾不可以是連字號。",
   "no errors today": "無",
-  "no visits today": "無"
+  "no visits today": "無",
+  "Finish Setup": "完成設定",
+  "Finishing Patchy’s setup": "正在完成Patchy的設定",
+  "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site.": "Patchy在這台Mac上尚未完成設定，因此沒有加入任何內容。「完成設定」會先完成設定，然後加入網站。",
+  "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy.": "Patchy的設定未能完成，因此沒有加入網站。你的其他網站都沒有問題；「顯示詳細資訊」中有Patchy的完整訊息。"
 }

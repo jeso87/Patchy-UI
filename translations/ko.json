@@ -420,5 +420,9 @@
   "Today": "오늘",
   "Use lowercase letters, numbers and hyphens, without a hyphen at the start or end.": "영문 소문자, 숫자, 하이픈을 사용하되 하이픈으로 시작하거나 끝나지 않아야 합니다.",
   "no errors today": "없음",
-  "no visits today": "없음"
+  "no visits today": "없음",
+  "Finish Setup": "설정 완료하기",
+  "Finishing Patchy’s setup": "Patchy 설정을 완료하는 중",
+  "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site.": "이 Mac에서 Patchy 설정이 아직 끝나지 않아 아무것도 추가되지 않았습니다. ‘설정 완료하기’를 누르면 설정을 마친 다음 사이트를 추가합니다.",
+  "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy.": "Patchy 설정이 완료되지 않아 사이트가 추가되지 않았습니다. 다른 사이트는 문제없으며, Patchy가 보낸 정확한 메시지는 ‘세부사항 보기’에 있습니다."
 }

@@ -437,5 +437,9 @@
   "Today": "امروز",
   "Use lowercase letters, numbers and hyphens, without a hyphen at the start or end.": "از حروف کوچک لاتین، اعداد و خط تیره استفاده کنید، بدون خط تیره در ابتدا یا انتها.",
   "no errors today": "هیچ",
-  "no visits today": "هیچ"
+  "no visits today": "هیچ",
+  "Finish Setup": "تکمیل آماده‌سازی",
+  "Finishing Patchy’s setup": "در حال تکمیل آماده‌سازی Patchy",
+  "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site.": "آماده‌سازی Patchy روی این Mac هنوز کامل نشده است، پس چیزی اضافه نشد. «تکمیل آماده‌سازی» آن را کامل می‌کند و سپس سایت را اضافه می‌کند.",
+  "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy.": "آماده‌سازی Patchy کامل نشد، پس سایت اضافه نشد. سایت‌های دیگر شما سالم‌اند؛ پیام دقیق Patchy در «نمایش جزئیات» است."
 }

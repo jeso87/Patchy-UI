@@ -437,5 +437,9 @@
   "Today": "Avui",
   "Use lowercase letters, numbers and hyphens, without a hyphen at the start or end.": "Fes servir lletres minúscules, números i guionets, sense cap guionet al principi ni al final.",
   "no errors today": "Cap",
-  "no visits today": "Cap"
+  "no visits today": "Cap",
+  "Finish Setup": "Acaba la configuració",
+  "Finishing Patchy’s setup": "S’està acabant la configuració de Patchy",
+  "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site.": "Patchy encara no ha acabat de configurar-se en aquest Mac, així que no s’ha afegit res. “Acaba la configuració” la completa i després afegeix el lloc web.",
+  "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy.": "La configuració de Patchy no s’ha acabat, així que el lloc web no s’ha afegit. Els teus altres llocs web estan bé; a “Mostra els detalls” hi ha el missatge exacte de Patchy."
 }

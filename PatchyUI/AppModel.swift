@@ -90,6 +90,8 @@ struct AddDraft: Equatable {
     var failedIndex = 0
     var errorMessage = ""
     var errorDetails = ""
+    /// The add stopped because Patchy's one-time setup hasn't run, so the sheet offers to run it.
+    var needsSetup = false
 
     var finalAddress: String { AddressRules.finalAddress(from: name) }
     var suffix: String { AddressRules.usesDefaultSuffix(name) ? ".test" : "" }
@@ -726,6 +728,32 @@ final class AppModel {
                 add.failedIndex = 0
                 add.errorDetails = "$ patchy add \(address) \(folder.path)\n" + result.details
                 add.errorMessage = Self.addFailureMessage(code: result.errorCode)
+                add.needsSetup = result.errorCode == PatchyError.setupRequired
+                add.phase = .error
+                sheet = .add
+            }
+        }
+    }
+
+    /// Runs `patchy setup`, which Patchy 1.4.1+ requires before `add`, then adds the site again.
+    func finishSetupAndAdd() {
+        guard !isBusy, add.needsSetup else { return }
+        let step = String(localized: "Finishing Patchy’s setup", comment: "Progress step shown while a change runs.")
+        add.needsSetup = false
+        add.steps = [step]
+        add.phase = .progress
+        sheet = .add
+        Task {
+            let result = await runTask(step: step) { client, askpass, output in
+                guard let askpass else { return CommandResult(exitCode: -1, output: "") }
+                return await client.runSetup(askpass: askpass, onOutput: output)
+            }
+            if result.succeeded {
+                submitAdd()
+            } else {
+                add.failedIndex = 0
+                add.errorDetails = "$ patchy setup\n" + result.output
+                add.errorMessage = String(localized: "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy.")
                 add.phase = .error
                 sheet = .add
             }
@@ -734,6 +762,8 @@ final class AppModel {
 
     static func addFailureMessage(code: String?) -> String {
         switch code {
+        case PatchyError.setupRequired:
+            String(localized: "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site.")
         case PatchyError.configInvalid:
             String(localized: "The setup check found a problem, so Patchy undid every step. Nothing was added and your other sites are fine.")
         case PatchyError.siteExists:
@@ -1156,6 +1186,9 @@ extension AppModel {
             sheet = .add
         case "adderror":
             add = AddDraft(name: "harbor-cafe", phase: .error, errorMessage: Self.addFailureMessage(code: PatchyError.configInvalid), errorDetails: "$ patchy add harbor-cafe.test\nApache rejected harbor-cafe.test's config, so the site was rolled back")
+            sheet = .add
+        case "addsetup":
+            add = AddDraft(name: "harbor-cafe", folder: URL(fileURLWithPath: NSHomeDirectory()), phase: .error, errorMessage: Self.addFailureMessage(code: PatchyError.setupRequired), errorDetails: "$ patchy add harbor-cafe.test\nPatchy isn't set up yet. Run patchy setup first, then add the site again.", needsSetup: true)
             sheet = .add
         case "addsuccess":
             // Replays what the window does when an add finishes, without adding anything.

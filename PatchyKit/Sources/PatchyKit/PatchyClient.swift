@@ -90,6 +90,12 @@ public struct PatchyClient: Sendable {
         await change(["trust"], askpass: askpass, onOutput: onOutput)
     }
 
+    /// Patchy's one-time setup. It doesn't take `--json`, so success is its exit code; it asks for a
+    /// password through `askpass` when it edits `/etc/hosts`. Safe to run again.
+    public func runSetup(askpass: AskpassServer, onOutput: Output? = nil) async -> CommandResult {
+        await patchy(["setup"], askpass: askpass, onOutput: onOutput)
+    }
+
     /// Installs cloudflared, which `patchy share` needs. Patchy's formula depends on it, so this
     /// is only for a Patchy installed some other way; it is the one place the app runs Homebrew.
     public func installCloudflared(onOutput: Output? = nil) async -> CommandResult {

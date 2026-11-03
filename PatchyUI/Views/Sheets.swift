@@ -277,9 +277,15 @@ struct AddSiteSheet: View {
             Spacer()
             Button("Close") { model.add.phase = .form; model.closeSheet() }
                 .keyboardShortcut(.cancelAction)
-            Button("Edit and Try Again") { model.add.phase = .form }
-                .buttonStyle(.borderedProminent)
-                .keyboardShortcut(.defaultAction)
+            if model.add.needsSetup {
+                Button("Finish Setup") { model.finishSetupAndAdd() }
+                    .buttonStyle(.borderedProminent)
+                    .keyboardShortcut(.defaultAction)
+            } else {
+                Button("Edit and Try Again") { model.add.phase = .form }
+                    .buttonStyle(.borderedProminent)
+                    .keyboardShortcut(.defaultAction)
+            }
         }
         .controlSize(.large)
     }

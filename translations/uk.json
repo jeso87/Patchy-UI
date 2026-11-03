@@ -471,5 +471,9 @@
   "Today": "Сьогодні",
   "Use lowercase letters, numbers and hyphens, without a hyphen at the start or end.": "Використовуйте малі літери, цифри й дефіси, без дефіса на початку чи в кінці.",
   "no errors today": "Немає",
-  "no visits today": "Немає"
+  "no visits today": "Немає",
+  "Finish Setup": "Завершити налаштування",
+  "Finishing Patchy’s setup": "Завершення налаштування Patchy",
+  "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site.": "Patchy ще не до кінця налаштовано на цьому Mac, тому нічого не додано. «Завершити налаштування» доведе його до кінця, а потім додасть сайт.",
+  "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy.": "Налаштування Patchy не завершилося, тому сайт не додано. З іншими вашими сайтами все гаразд; натисніть «Показати деталі», щоб побачити точне повідомлення Patchy."
 }

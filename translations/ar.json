@@ -505,5 +505,9 @@
   "Today": "اليوم",
   "Use lowercase letters, numbers and hyphens, without a hyphen at the start or end.": "استخدم أحرفًا لاتينية صغيرة وأرقامًا وشَرطات، دون شَرطة في البداية أو النهاية.",
   "no errors today": "لا شيء",
-  "no visits today": "لا شيء"
+  "no visits today": "لا شيء",
+  "Finish Setup": "إكمال الإعداد",
+  "Finishing Patchy’s setup": "جارٍ إكمال إعداد Patchy",
+  "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site.": "لم يكتمل إعداد Patchy على هذا الـMac بعد، لذا لم تتم إضافة شيء. يُكمل «إكمال الإعداد» الإعداد ثم يضيف الموقع.",
+  "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy.": "لم يكتمل إعداد Patchy، لذا لم تتم إضافة الموقع. مواقعك الأخرى سليمة، وتجد في «إظهار التفاصيل» رسالة Patchy كما هي."
 }

@@ -471,5 +471,9 @@
   "Today": "Dzisiaj",
   "Use lowercase letters, numbers and hyphens, without a hyphen at the start or end.": "Użyj małych liter, cyfr i łączników, bez łącznika na początku ani na końcu.",
   "no errors today": "Brak",
-  "no visits today": "Brak"
+  "no visits today": "Brak",
+  "Finish Setup": "Dokończ konfigurację",
+  "Finishing Patchy’s setup": "Kończenie konfiguracji Patchy",
+  "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site.": "Konfiguracja Patchy na tym Macu nie została jeszcze dokończona, więc nic nie dodano. „Dokończ konfigurację” kończy ją, a potem dodaje witrynę.",
+  "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy.": "Konfiguracja Patchy nie została dokończona, więc witryny nie dodano. Twoim pozostałym witrynom nic się nie stało; w „Pokaż szczegóły” znajdziesz dokładny komunikat od Patchy."
 }

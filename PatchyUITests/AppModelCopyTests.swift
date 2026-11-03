@@ -77,6 +77,7 @@ import Testing
 
     @Test func addFailures() {
         #expect(AppModel.addFailureMessage(code: "config_invalid") == "The setup check found a problem, so Patchy undid every step. Nothing was added and your other sites are fine.")
+        #expect(AppModel.addFailureMessage(code: "setup_required") == "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site.")
         #expect(AppModel.addFailureMessage(code: "site_exists") == "A site with this address already exists, so nothing was changed.")
         #expect(AppModel.addFailureMessage(code: "sudo_required") == "Patchy couldn’t point the address at this Mac, so nothing was created. Your other sites are fine.")
         #expect(AppModel.addFailureMessage(code: "hosts_update_failed") == "Patchy couldn’t point the address at this Mac, so nothing was created. Your other sites are fine.")

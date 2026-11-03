@@ -437,5 +437,9 @@
   "Today": "Ma",
   "Use lowercase letters, numbers and hyphens, without a hyphen at the start or end.": "Használjon kisbetűket, számokat és kötőjeleket, de az elején vagy a végén ne legyen kötőjel.",
   "no errors today": "Nincs",
-  "no visits today": "Nincs"
+  "no visits today": "Nincs",
+  "Finish Setup": "Beállítás befejezése",
+  "Finishing Patchy’s setup": "A Patchy beállításának befejezése",
+  "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site.": "A Patchy beállítása ezen a Macen még nem fejeződött be, ezért semmi sem lett hozzáadva. A „Beállítás befejezése” befejezi, majd hozzáadja a webhelyet.",
+  "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy.": "A Patchy beállítása nem fejeződött be, ezért a webhely nem lett hozzáadva. A többi webhelye rendben van; a Patchy pontos üzenete a „Részletek megjelenítése” alatt látható."
 }

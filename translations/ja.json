@@ -420,5 +420,9 @@
   "Today": "今日",
   "Use lowercase letters, numbers and hyphens, without a hyphen at the start or end.": "英小文字、数字、ハイフンを使ってください。先頭と末尾にはハイフンを使えません。",
   "no errors today": "なし",
-  "no visits today": "なし"
+  "no visits today": "なし",
+  "Finish Setup": "セットアップを完了",
+  "Finishing Patchy’s setup": "Patchyのセットアップを完了しています",
+  "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site.": "このMacではPatchyのセットアップがまだ完了していないため、何も追加されませんでした。「セットアップを完了」でセットアップを済ませてから、サイトを追加します。",
+  "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy.": "Patchyのセットアップが完了しなかったため、サイトは追加されませんでした。ほかのサイトは問題ありません。Patchyからの正確なメッセージは「詳細を表示」で確認できます。"
 }

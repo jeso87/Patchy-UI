@@ -437,5 +437,9 @@
   "Today": "Idag",
   "Use lowercase letters, numbers and hyphens, without a hyphen at the start or end.": "Använd små bokstäver, siffror och bindestreck, utan bindestreck i början eller slutet.",
   "no errors today": "Inga",
-  "no visits today": "Inga"
+  "no visits today": "Inga",
+  "Finish Setup": "Slutför inställningen",
+  "Finishing Patchy’s setup": "Slutför inställningen av Patchy",
+  "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site.": "Patchy är inte färdiginställt på den här Macen ännu, så inget lades till. ”Slutför inställningen” gör klart det och lägger sedan till webbplatsen.",
+  "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy.": "Inställningen av Patchy blev inte klar, så webbplatsen lades inte till. Dina andra webbplatser påverkas inte; under ”Visa detaljer” finns det exakta meddelandet från Patchy."
 }

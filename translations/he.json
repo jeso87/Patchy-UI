@@ -454,5 +454,9 @@
   "Today": "היום",
   "Use lowercase letters, numbers and hyphens, without a hyphen at the start or end.": "יש להשתמש באותיות לטיניות קטנות, ספרות ומקפים, בלי מקף בהתחלה או בסוף.",
   "no errors today": "אין",
-  "no visits today": "אין"
+  "no visits today": "אין",
+  "Finish Setup": "השלמת ההגדרה",
+  "Finishing Patchy’s setup": "משלים את ההגדרה של Patchy",
+  "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site.": "ההגדרה של Patchy במק הזה עדיין לא הושלמה, ולכן שום דבר לא נוסף. ״השלמת ההגדרה״ משלימה אותה ואז מוסיפה את האתר.",
+  "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy.": "ההגדרה של Patchy לא הושלמה, ולכן האתר לא נוסף. האתרים האחרים שלך תקינים; ב״הצגת פרטים״ מופיעה ההודעה המדויקת מ-Patchy."
 }

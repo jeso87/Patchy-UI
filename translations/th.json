@@ -420,5 +420,9 @@
   "Today": "วันนี้",
   "Use lowercase letters, numbers and hyphens, without a hyphen at the start or end.": "ใช้ตัวอักษรภาษาอังกฤษพิมพ์เล็ก ตัวเลข และขีดกลาง โดยไม่ขึ้นต้นหรือลงท้ายด้วยขีดกลาง",
   "no errors today": "ไม่มี",
-  "no visits today": "ไม่มี"
+  "no visits today": "ไม่มี",
+  "Finish Setup": "ตั้งค่าให้เสร็จ",
+  "Finishing Patchy’s setup": "กำลังตั้งค่า Patchy ให้เสร็จ",
+  "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site.": "Patchy ยังตั้งค่าบน Mac เครื่องนี้ไม่เสร็จ จึงยังไม่ได้เพิ่มอะไร “ตั้งค่าให้เสร็จ” จะตั้งค่าให้เสร็จแล้วเพิ่มเว็บไซต์ให้",
+  "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy.": "การตั้งค่า Patchy ไม่เสร็จสมบูรณ์ จึงไม่ได้เพิ่มเว็บไซต์ เว็บไซต์อื่นๆ ของคุณยังปกติดี ดูข้อความที่ตรงตามจริงจาก Patchy ได้ที่ “แสดงรายละเอียด”"
 }

@@ -157,6 +157,8 @@ public struct PatchyResult: Sendable, Equatable, Decodable {
 /// its messages, so the app matches these and never Patchy's English.
 public enum PatchyError {
     public static let siteExists = "site_exists"
+    /// From `add` (Patchy 1.4.1+): `patchy setup` hasn't wired Patchy into Apache yet.
+    public static let setupRequired = "setup_required"
     public static let sudoRequired = "sudo_required"
     public static let hostsUpdateFailed = "hosts_update_failed"
     public static let cancelled = "cancelled"

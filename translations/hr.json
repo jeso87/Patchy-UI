@@ -454,5 +454,9 @@
   "Today": "Danas",
   "Use lowercase letters, numbers and hyphens, without a hyphen at the start or end.": "Koristite mala slova, brojeve i crtice, bez crtice na početku ili kraju.",
   "no errors today": "Nema",
-  "no visits today": "Nema"
+  "no visits today": "Nema",
+  "Finish Setup": "Dovrši postavljanje",
+  "Finishing Patchy’s setup": "Dovršavanje postavljanja Patchyja",
+  "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site.": "Patchy još nije do kraja postavljen na ovom Macu, pa ništa nije dodano. “Dovrši postavljanje” to dovršava, a zatim dodaje web-stranicu.",
+  "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy.": "Postavljanje Patchyja nije dovršeno, pa web-stranica nije dodana. Vaše ostale web-stranice su u redu; pod “Prikaži detalje” nalazi se točna poruka od Patchyja."
 }

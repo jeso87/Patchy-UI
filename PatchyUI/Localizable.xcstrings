@@ -50002,6 +50002,459 @@
           "stringUnit" : { "state" : "translated", "value" : "在 %@ 分享（需要密碼）" }
         }
       }
+    },
+    "Finish Setup" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Finish Setup" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "إكمال الإعداد" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Acaba la configuració" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dokončit nastavení" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Færdiggør opsætning" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Einrichtung abschließen" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ολοκλήρωση ρύθμισης" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Terminar configuración" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "تکمیل آماده‌سازی" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Viimeistele valmistelu" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Terminer la configuration" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "השלמת ההגדרה" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dovrši postavljanje" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Beállítás befejezése" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ljúka uppsetningu" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Completa configurazione" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "セットアップを完了" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "설정 완료하기" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Fullfør oppsettet" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Voltooi instellen" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Fullfør oppsettet" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dokończ konfigurację" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Concluir Configuração" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Concluir configuração" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Finalizați configurarea" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Завершить настройку" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dokončiť nastavenie" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dokončaj nastavitev" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Slutför inställningen" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "ตั้งค่าให้เสร็จ" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kurulumu Tamamla" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Завершити налаштування" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Hoàn tất thiết lập" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "完成設定" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "完成设置" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "完成設定" }
+        }
+      }
+    },
+    "Finishing Patchy’s setup" : {
+      "comment" : "Progress step shown while a change runs.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Finishing Patchy’s setup" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "جارٍ إكمال إعداد Patchy" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "S’està acabant la configuració de Patchy" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dokončuje se nastavení Patchy" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Færdiggør opsætningen af Patchy" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Einrichtung von Patchy wird abgeschlossen" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ολοκλήρωση της ρύθμισης του Patchy" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Terminando la configuración de Patchy" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "در حال تکمیل آماده‌سازی Patchy" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Viimeistellään Patchyn valmistelua" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Fin de la configuration de Patchy" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "משלים את ההגדרה של Patchy" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dovršavanje postavljanja Patchyja" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "A Patchy beállításának befejezése" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Lýk uppsetningu Patchy" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Completamento della configurazione di Patchy" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchyのセットアップを完了しています" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy 설정을 완료하는 중" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Fullfører oppsettet av Patchy" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Instellen van Patchy voltooien" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Fullfører oppsettet av Patchy" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kończenie konfiguracji Patchy" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Concluindo a configuração do Patchy" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "A concluir a configuração do Patchy" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Se finalizează configurarea Patchy" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Завершение настройки Patchy" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dokončuje sa nastavenie Patchy" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Dokončevanje nastavitve programa Patchy" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Slutför inställningen av Patchy" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "กำลังตั้งค่า Patchy ให้เสร็จ" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy kurulumu tamamlanıyor" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Завершення налаштування Patchy" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Đang hoàn tất thiết lập Patchy" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "正在完成Patchy的設定" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "正在完成 Patchy 的设置" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "正在完成Patchy的設定" }
+        }
+      }
+    },
+    "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "لم يكتمل إعداد Patchy على هذا الـMac بعد، لذا لم تتم إضافة شيء. يُكمل «إكمال الإعداد» الإعداد ثم يضيف الموقع." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy encara no ha acabat de configurar-se en aquest Mac, així que no s’ha afegit res. “Acaba la configuració” la completa i després afegeix el lloc web." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy ještě na tomto Macu není nastavené, takže se nic nepřidalo. „Dokončit nastavení“ ho dokončí a pak web přidá." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy er ikke sat helt op på denne Mac endnu, så intet blev tilføjet. “Færdiggør opsætning” gør det færdigt og tilføjer derefter webstedet." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy ist auf diesem Mac noch nicht fertig eingerichtet, daher wurde nichts hinzugefügt. „Einrichtung abschließen“ holt das nach und fügt dann die Website hinzu." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Το Patchy δεν έχει ολοκληρώσει ακόμη τη ρύθμισή του σε αυτό το Mac, οπότε δεν προστέθηκε τίποτα. Η «Ολοκλήρωση ρύθμισης» την ολοκληρώνει και μετά προσθέτει τον ιστότοπο." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy aún no ha terminado de configurarse en este Mac, así que no se ha añadido nada. “Terminar configuración” la completa y después añade el sitio." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "آماده‌سازی Patchy روی این Mac هنوز کامل نشده است، پس چیزی اضافه نشد. «تکمیل آماده‌سازی» آن را کامل می‌کند و سپس سایت را اضافه می‌کند." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchyn valmistelu tässä Macissa on vielä kesken, joten mitään ei lisätty. ”Viimeistele valmistelu” saattaa sen loppuun ja lisää sitten sivuston." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "La configuration de Patchy n’est pas encore terminée sur ce Mac, donc rien n’a été ajouté. « Terminer la configuration » l’achève, puis ajoute le site." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "ההגדרה של Patchy במק הזה עדיין לא הושלמה, ולכן שום דבר לא נוסף. ״השלמת ההגדרה״ משלימה אותה ואז מוסיפה את האתר." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy još nije do kraja postavljen na ovom Macu, pa ništa nije dodano. “Dovrši postavljanje” to dovršava, a zatim dodaje web-stranicu." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "A Patchy beállítása ezen a Macen még nem fejeződött be, ezért semmi sem lett hozzáadva. A „Beállítás befejezése” befejezi, majd hozzáadja a webhelyet." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Uppsetningu Patchy á þessum Mac er ekki lokið, svo engu var bætt við. „Ljúka uppsetningu“ klárar hana og bætir svo vefnum við." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy non ha ancora completato la configurazione su questo Mac, quindi non è stato aggiunto nulla. “Completa configurazione” la porta a termine e poi aggiunge il sito." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "このMacではPatchyのセットアップがまだ完了していないため、何も追加されませんでした。「セットアップを完了」でセットアップを済ませてから、サイトを追加します。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "이 Mac에서 Patchy 설정이 아직 끝나지 않아 아무것도 추가되지 않았습니다. ‘설정 완료하기’를 누르면 설정을 마친 다음 사이트를 추가합니다." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy er ikke ferdig konfigurert på denne Macen ennå, så ingenting ble lagt til. «Fullfør oppsettet» gjør det ferdig og legger deretter til nettstedet." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy is nog niet helemaal ingesteld op deze Mac, dus er is niets toegevoegd. 'Voltooi instellen' rondt dat af en voegt daarna de website toe." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy er ikkje ferdig sett opp på denne Macen enno, så ingenting vart lagt til. «Fullfør oppsettet» gjer det ferdig og legg deretter til nettstaden." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Konfiguracja Patchy na tym Macu nie została jeszcze dokończona, więc nic nie dodano. „Dokończ konfigurację” kończy ją, a potem dodaje witrynę." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "O Patchy ainda não terminou de ser configurado neste Mac, então nada foi adicionado. Concluir Configuração termina esse processo e depois adiciona o site." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "O Patchy ainda não terminou a configuração neste Mac, por isso nada foi adicionado. “Concluir configuração” termina-a e depois adiciona o site." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy nu este încă configurat complet pe acest Mac, așa că nu s-a adăugat nimic. „Finalizați configurarea” o încheie, apoi adaugă site-ul." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy ещё не до конца настроен на этом Mac, поэтому ничего не добавлено. «Завершить настройку» доведёт её до конца, а затем добавит сайт." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy ešte na tomto Macu nie je nastavené, takže sa nič nepridalo. „Dokončiť nastavenie“ ho dokončí a potom web pridá." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy na tem Macu še ni do konca nastavljen, zato ni bilo nič dodano. »Dokončaj nastavitev« ga nastavi do konca in nato doda spletno mesto." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy är inte färdiginställt på den här Macen ännu, så inget lades till. ”Slutför inställningen” gör klart det och lägger sedan till webbplatsen." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy ยังตั้งค่าบน Mac เครื่องนี้ไม่เสร็จ จึงยังไม่ได้เพิ่มอะไร “ตั้งค่าให้เสร็จ” จะตั้งค่าให้เสร็จแล้วเพิ่มเว็บไซต์ให้" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy bu Mac’te henüz tam kurulmadığından hiçbir şey eklenmedi. “Kurulumu Tamamla” kurulumu bitirir, ardından siteyi ekler." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy ще не до кінця налаштовано на цьому Mac, тому нічого не додано. «Завершити налаштування» доведе його до кінця, а потім додасть сайт." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy chưa được thiết lập xong trên máy Mac này nên chưa có gì được thêm. “Hoàn tất thiết lập” sẽ thiết lập xong rồi thêm trang web." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy在這部Mac上尚未完成設定，所以沒有加入任何內容。「完成設定」會先完成設定，然後加入網站。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy 在这台 Mac 上尚未完成设置，因此没有添加任何内容。“完成设置”会先完成设置，然后添加网站。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy在這台Mac上尚未完成設定，因此沒有加入任何內容。「完成設定」會先完成設定，然後加入網站。" }
+        }
+      }
+    },
+    "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "لم يكتمل إعداد Patchy، لذا لم تتم إضافة الموقع. مواقعك الأخرى سليمة، وتجد في «إظهار التفاصيل» رسالة Patchy كما هي." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "La configuració de Patchy no s’ha acabat, així que el lloc web no s’ha afegit. Els teus altres llocs web estan bé; a “Mostra els detalls” hi ha el missatge exacte de Patchy." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nastavení Patchy se nedokončilo, takže web nebyl přidán. Vaše ostatní weby jsou v pořádku; přesnou zprávu od Patchy najdete pod „Zobrazit podrobnosti“." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Opsætningen af Patchy blev ikke færdig, så webstedet blev ikke tilføjet. Dine andre websteder er i orden; under “Vis oplysninger” står den præcise meddelelse fra Patchy." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Die Einrichtung von Patchy wurde nicht abgeschlossen, daher wurde die Website nicht hinzugefügt. Deine anderen Websites sind in Ordnung; unter „Details einblenden“ steht die genaue Meldung von Patchy." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Η ρύθμιση του Patchy δεν ολοκληρώθηκε, οπότε ο ιστότοπος δεν προστέθηκε. Οι άλλοι ιστότοποί σας είναι εντάξει· η «Εμφάνιση λεπτομερειών» περιέχει το ακριβές μήνυμα του Patchy." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "La configuración de Patchy no ha terminado, así que el sitio no se ha añadido. Tus otros sitios están bien; en “Mostrar detalles” está el mensaje exacto de Patchy." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "آماده‌سازی Patchy کامل نشد، پس سایت اضافه نشد. سایت‌های دیگر شما سالم‌اند؛ پیام دقیق Patchy در «نمایش جزئیات» است." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchyn valmistelu ei valmistunut, joten sivustoa ei lisätty. Muut sivustosi ovat kunnossa; Patchyn tarkka viesti löytyy kohdasta ”Näytä tiedot”." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "La configuration de Patchy n’a pas abouti, donc le site n’a pas été ajouté. Vos autres sites ne sont pas touchés ; « Afficher les détails » contient le message exact de Patchy." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "ההגדרה של Patchy לא הושלמה, ולכן האתר לא נוסף. האתרים האחרים שלך תקינים; ב״הצגת פרטים״ מופיעה ההודעה המדויקת מ-Patchy." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Postavljanje Patchyja nije dovršeno, pa web-stranica nije dodana. Vaše ostale web-stranice su u redu; pod “Prikaži detalje” nalazi se točna poruka od Patchyja." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "A Patchy beállítása nem fejeződött be, ezért a webhely nem lett hozzáadva. A többi webhelye rendben van; a Patchy pontos üzenete a „Részletek megjelenítése” alatt látható." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Uppsetningu Patchy lauk ekki, svo vefnum var ekki bætt við. Hinir vefirnir þínir eru í lagi; undir „Sýna upplýsingar“ eru nákvæm skilaboð frá Patchy." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "La configurazione di Patchy non è stata completata, quindi il sito non è stato aggiunto. Gli altri tuoi siti non hanno problemi; in “Mostra dettagli” trovi il messaggio esatto di Patchy." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchyのセットアップが完了しなかったため、サイトは追加されませんでした。ほかのサイトは問題ありません。Patchyからの正確なメッセージは「詳細を表示」で確認できます。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy 설정이 완료되지 않아 사이트가 추가되지 않았습니다. 다른 사이트는 문제없으며, Patchy가 보낸 정확한 메시지는 ‘세부사항 보기’에 있습니다." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Oppsettet av Patchy ble ikke fullført, så nettstedet ble ikke lagt til. De andre nettstedene dine er i orden; under «Vis detaljer» finner du den nøyaktige meldingen fra Patchy." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Het instellen van Patchy is niet voltooid, dus de website is niet toegevoegd. Je andere websites zijn in orde; bij 'Toon details' staat de precieze melding van Patchy." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Oppsettet av Patchy vart ikkje fullført, så nettstaden vart ikkje lagd til. Dei andre nettstadene dine er i orden; under «Vis detaljar» finn du den nøyaktige meldinga frå Patchy." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Konfiguracja Patchy nie została dokończona, więc witryny nie dodano. Twoim pozostałym witrynom nic się nie stało; w „Pokaż szczegóły” znajdziesz dokładny komunikat od Patchy." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "A configuração do Patchy não foi concluída, então o site não foi adicionado. Os seus outros sites estão funcionando normalmente; a mensagem exata do Patchy está em Mostrar Detalhes." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "A configuração do Patchy não foi concluída, por isso o site não foi adicionado. Os seus outros sites estão bem; em “Mostrar detalhes” encontra a mensagem exata do Patchy." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Configurarea Patchy nu s-a încheiat, așa că site-ul nu a fost adăugat. Celelalte site-uri ale dvs. sunt în regulă; „Afișați detaliile” conține mesajul exact de la Patchy." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Настройка Patchy не завершилась, поэтому сайт не добавлен. С другими вашими сайтами всё в порядке; нажмите «Показать подробности», чтобы увидеть точное сообщение Patchy." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nastavenie Patchy sa nedokončilo, takže web nebol pridaný. Vaše ostatné weby sú v poriadku; presné hlásenie od Patchy nájdete v časti „Zobraziť podrobnosti“." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nastavitev programa Patchy se ni končala, zato spletno mesto ni bilo dodano. Vaša druga spletna mesta so v redu; pod »Prikaži podrobnosti« je natančno sporočilo programa Patchy." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Inställningen av Patchy blev inte klar, så webbplatsen lades inte till. Dina andra webbplatser påverkas inte; under ”Visa detaljer” finns det exakta meddelandet från Patchy." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "การตั้งค่า Patchy ไม่เสร็จสมบูรณ์ จึงไม่ได้เพิ่มเว็บไซต์ เว็บไซต์อื่นๆ ของคุณยังปกติดี ดูข้อความที่ตรงตามจริงจาก Patchy ได้ที่ “แสดงรายละเอียด”" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy kurulumu tamamlanmadığından site eklenmedi. Diğer siteleriniz sorunsuz; Patchy’nin tam iletisi “Ayrıntıları Göster”de." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Налаштування Patchy не завершилося, тому сайт не додано. З іншими вашими сайтами все гаразд; натисніть «Показати деталі», щоб побачити точне повідомлення Patchy." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Quá trình thiết lập Patchy chưa hoàn tất nên trang web chưa được thêm. Các trang web khác của bạn vẫn ổn; “Hiển thị chi tiết” có thông báo chính xác từ Patchy." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy的設定未能完成，所以沒有加入網站。你的其他網站不受影響；「顯示詳情」中有Patchy的原始訊息。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy 的设置未能完成，因此没有添加网站。你的其他网站不受影响；“显示详情”中有来自 Patchy 的确切信息。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "Patchy的設定未能完成，因此沒有加入網站。你的其他網站都沒有問題；「顯示詳細資訊」中有Patchy的完整訊息。" }
+        }
+      }
     }
   },
   "version" : "1.0"

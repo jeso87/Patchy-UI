@@ -437,5 +437,9 @@
   "Today": "Bugün",
   "Use lowercase letters, numbers and hyphens, without a hyphen at the start or end.": "Küçük harf, rakam ve kısa çizgi kullanın; başta veya sonda kısa çizgi olmasın.",
   "no errors today": "Yok",
-  "no visits today": "Yok"
+  "no visits today": "Yok",
+  "Finish Setup": "Kurulumu Tamamla",
+  "Finishing Patchy’s setup": "Patchy kurulumu tamamlanıyor",
+  "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site.": "Patchy bu Mac’te henüz tam kurulmadığından hiçbir şey eklenmedi. “Kurulumu Tamamla” kurulumu bitirir, ardından siteyi ekler.",
+  "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy.": "Patchy kurulumu tamamlanmadığından site eklenmedi. Diğer siteleriniz sorunsuz; Patchy’nin tam iletisi “Ayrıntıları Göster”de."
 }

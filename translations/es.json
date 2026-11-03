@@ -437,5 +437,9 @@
   "Today": "Hoy",
   "Use lowercase letters, numbers and hyphens, without a hyphen at the start or end.": "Usa letras minúsculas, números y guiones, sin guion al principio ni al final.",
   "no errors today": "Ninguno",
-  "no visits today": "Ninguna"
+  "no visits today": "Ninguna",
+  "Finish Setup": "Terminar configuración",
+  "Finishing Patchy’s setup": "Terminando la configuración de Patchy",
+  "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site.": "Patchy aún no ha terminado de configurarse en este Mac, así que no se ha añadido nada. “Terminar configuración” la completa y después añade el sitio.",
+  "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy.": "La configuración de Patchy no ha terminado, así que el sitio no se ha añadido. Tus otros sitios están bien; en “Mostrar detalles” está el mensaje exacto de Patchy."
 }

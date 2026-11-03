@@ -437,5 +437,9 @@
   "Today": "Tänään",
   "Use lowercase letters, numbers and hyphens, without a hyphen at the start or end.": "Käytä pieniä kirjaimia, numeroita ja yhdysmerkkejä. Yhdysmerkki ei saa olla alussa eikä lopussa.",
   "no errors today": "Ei yhtään",
-  "no visits today": "Ei yhtään"
+  "no visits today": "Ei yhtään",
+  "Finish Setup": "Viimeistele valmistelu",
+  "Finishing Patchy’s setup": "Viimeistellään Patchyn valmistelua",
+  "Patchy hasn’t finished setting up on this Mac, so nothing was added. Finish Setup completes it, then adds the site.": "Patchyn valmistelu tässä Macissa on vielä kesken, joten mitään ei lisätty. ”Viimeistele valmistelu” saattaa sen loppuun ja lisää sitten sivuston.",
+  "Patchy’s setup didn’t finish, so the site wasn’t added. Your other sites are fine; Show Details has the exact message from Patchy.": "Patchyn valmistelu ei valmistunut, joten sivustoa ei lisätty. Muut sivustosi ovat kunnossa; Patchyn tarkka viesti löytyy kohdasta ”Näytä tiedot”."
 }
