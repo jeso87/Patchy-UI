@@ -3,6 +3,20 @@
     <channel>
         <title>Patchy UI</title>
         <item>
+            <title>1.5.0</title>
+            <pubDate>Wed, 04 Nov 2026 14:17:17 -0500</pubDate>
+            <sparkle:version>10</sparkle:version>
+            <sparkle:shortVersionString>1.5.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="markdown"><![CDATA[### Ready for Patchy 1.5.0
+
+Patchy 1.5.0 adds tab completion for people who use Patchy in Terminal. Nothing changes in Patchy UI, which now expects Patchy 1.5.0 so it won't warn you about a version mismatch.
+
+Made for **Patchy 1.5.0**. Update Patchy first, in Terminal: `brew upgrade joeworkman/patchy/patchy`
+]]></description>
+            <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.5.0/PatchyUI-1.5.0.dmg" length="2885424" type="application/octet-stream" sparkle:edSignature="kn5/fI8RqVN8ErWHSd8x0+orNfZvpUSchlOJ8zBJZOER5aGn77kr6lbewM3im/V4e3vkF0GlHHHCtvPtGro3DQ=="/>
+        </item>
+        <item>
             <title>1.4.1</title>
             <pubDate>Tue, 03 Nov 2026 16:34:54 -0500</pubDate>
             <sparkle:version>9</sparkle:version>
@@ -46,40 +60,6 @@ To stop using your domain, go to **Settings › General** and choose **Disconnec
 Made for **Patchy 1.4.0**. Update Patchy first, in Terminal: `brew upgrade joeworkman/patchy/patchy`
 ]]></description>
             <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.4.0/PatchyUI-1.4.0.dmg" length="2879167" type="application/octet-stream" sparkle:edSignature="+53vDrMOaCc09HhJFsYqDygHyWF/SuaDweG1nl+bpvZRYc9pMxALdPwHwjFuO5Xrc+A1CxB6BeXD91zwKh1lDw=="/>
-        </item>
-        <item>
-            <title>1.3.0</title>
-            <pubDate>Thu, 29 Oct 2026 16:27:19 -0400</pubDate>
-            <sparkle:version>7</sparkle:version>
-            <sparkle:shortVersionString>1.3.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### A new menu bar panel
-
-The menu bar menu is now a panel built for getting to your sites fast.
-
-- **Search as you type.** Type part of a site's name and press Return to open it in your browser. The arrow keys move through the list.
-- **Open it from anywhere with a keyboard shortcut.** Set one in Settings › General, and you can find and open any site without touching the mouse.
-- **Sites that need attention come first,** then your groups, then everything else.
-- **Server controls at the top** (Start, Stop, Restart) and **quick buttons at the bottom** for adding a site, Settings and opening Patchy UI.
-- **Shared sites show in the panel too,** with Copy Link and Stop Sharing.
-
-### Share a site at a public link
-
-Show a client a preview without uploading anything. Click **Share** on any site and you get a link that works until you stop sharing.
-
-- **Use your own domain.** Once you've connected one with `patchy share setup`, Share asks each time: your site's own address on that domain, **with a password** or **without one**, or a **temporary address** that is new each time.
-- **Passwords are made for you,** new each time you share. **Copy Address and Password** puts everything your client needs on the clipboard, ready to paste into a message.
-- **Links stop when you stop.** Sharing ends when you click Stop Sharing, stop the server or quit the app, and Patchy removes the address from your domain.
-
-### Under the hood
-
-- Patchy UI now asks Patchy for everything through its new machine-readable output instead of reading Patchy's files, so future Patchy releases are much less likely to break it.
-- Changing a site's folder now uses Patchy's own `patchy folder` command.
-- While a change runs, the app shows one step instead of a checklist, because Patchy now reports only the result.
-
-Made for **Patchy 1.3.0**. Update Patchy first, in Terminal: `brew upgrade joeworkman/patchy/patchy`
-]]></description>
-            <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.3.0/PatchyUI-1.3.0.dmg" length="2743479" type="application/octet-stream" sparkle:edSignature="GVDz8yOdD0J0pu7kb469KkNcRpCotdyBdMo2nRUNbSwsx6M1xgGHDtS94yd/l+KMao5h8RPYPqNEaEoCc5wwBg=="/>
         </item>
     </channel>
 </rss>
