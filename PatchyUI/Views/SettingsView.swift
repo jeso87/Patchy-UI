@@ -50,6 +50,7 @@ private struct BusyRow: View {
 struct GeneralSettings: View {
     @Environment(AppModel.self) private var model
     @AppStorage(AppDelegate.showDockIconKey) private var showDockIcon = true
+    @AppStorage(AppModel.offerTotalCMSKey) private var offerTotalCMS = false
     @State private var openAtLogin = SMAppService.mainApp.status == .enabled
     @State private var loginError: String?
     @State private var confirmDisconnect = false
@@ -77,6 +78,11 @@ struct GeneralSettings: View {
                     ShortcutRecorder()
                 }
                 SettingsNote("Works from any app. Type part of a site’s name, then press Return to open it.")
+            }
+
+            Section {
+                Toggle("Offer to install Total CMS 3 when adding a site", isOn: $offerTotalCMS)
+                SettingsNote("Adds a checkbox to New Site that sets up a Total CMS 3 project in the folder you choose. Patchy UI installs Composer if it’s missing.")
             }
 
             if model.canShare {

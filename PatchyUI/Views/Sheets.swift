@@ -115,6 +115,8 @@ struct AddressField: View {
 /// The folder as a card. A folder always has to be chosen; the app never picks one.
 struct FolderCard: View {
     @Binding var folder: URL?
+    /// Total CMS installs into a new, empty folder.
+    var wantsEmpty = false
 
     var body: some View {
         HStack(spacing: 12) {
@@ -137,7 +139,7 @@ struct FolderCard: View {
                     Text("No folder chosen yet")
                         .fontWeight(.semibold)
                         .foregroundStyle(Theme.secondaryText)
-                    Text("Choose the folder that holds this site’s files, or make a new one.")
+                    Text(wantsEmpty ? "Choose an empty folder for the project, or make a new one." : "Choose the folder that holds this site’s files, or make a new one.")
                         .font(.system(size: 11.5))
                         .foregroundStyle(Theme.secondaryText)
                         .fixedSize(horizontal: false, vertical: true)
@@ -157,6 +159,7 @@ struct FolderCard: View {
 
 struct AddSiteSheet: View {
     @Environment(AppModel.self) private var model
+    @AppStorage(AppModel.offerTotalCMSKey) private var offerTotalCMS = false
 
     var body: some View {
         switch model.add.phase {
@@ -185,7 +188,12 @@ struct AddSiteSheet: View {
         }
         .onChange(of: model.add.name) { model.add.confirmedReal = false }
 
-        FolderCard(folder: $model.add.folder)
+        FolderCard(folder: $model.add.folder, wantsEmpty: draft.installTotalCMS)
+
+        if offerTotalCMS || model.debugOffersTotalCMS {
+            TotalCMSOptionsView(draft: $model.add, problem: draft.totalCMSProblem(activePHP: model.snapshot.activePHP),
+                                showsLicenseNote: valid && !draft.finalAddress.hasSuffix(".test"))
+        }
 
         if !model.sortedGroups.isEmpty {
             Picker("Group", selection: $model.add.groupID) {
@@ -288,6 +296,74 @@ struct AddSiteSheet: View {
             }
         }
         .controlSize(.large)
+    }
+}
+
+/// The "Install Total CMS 3" checkbox and, when ticked, the install's options.
+struct TotalCMSOptionsView: View {
+    @Binding var draft: AddDraft
+    let problem: String?
+    let showsLicenseNote: Bool
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Toggle("Install Total CMS 3", isOn: $draft.installTotalCMS)
+                .toggleStyle(.checkbox)
+            if draft.installTotalCMS {
+                let root = draft.tcms.layout == .root
+                Form {
+                    Picker("Layout", selection: $draft.tcms.layout) {
+                        Text("Whole site").tag(TotalCMSOptions.Layout.root)
+                        Text("Under /tcms/").tag(TotalCMSOptions.Layout.subpath)
+                    }
+                    Picker("Starter", selection: $draft.tcms.starter) {
+                        Text("None").tag(TotalCMSOptions.Starter.none)
+                        Text("Minimal").tag(TotalCMSOptions.Starter.minimal)
+                        Text("Blog").tag(TotalCMSOptions.Starter.blog)
+                        Text("Business").tag(TotalCMSOptions.Starter.business)
+                        Text("Portfolio").tag(TotalCMSOptions.Starter.portfolio)
+                    }
+                    .disabled(!root)
+                    Toggle("Frontend tools (Vite)", isOn: $draft.tcms.frontend)
+                        .disabled(!root)
+                    Toggle("Keep templates in Git", isOn: $draft.tcms.gitTemplates)
+                }
+                .formStyle(.columns)
+                .padding(.leading, 20)
+                Text(Self.explanation(draft.tcms))
+                    .font(.system(size: 11.5))
+                    .foregroundStyle(Theme.secondaryText)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.leading, 20)
+                if let problem {
+                    Text(problem)
+                        .font(.system(size: 12))
+                        .foregroundStyle(Theme.redText)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .padding(.leading, 20)
+                } else if showsLicenseNote {
+                    Text("Addresses ending in .test get every Total CMS Pro feature without a license.")
+                        .font(.system(size: 11.5))
+                        .foregroundStyle(Theme.secondaryText)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .padding(.leading, 20)
+                }
+            }
+        }
+    }
+
+    /// One line on what the chosen layout and starter give you, in the installer's own terms.
+    static func explanation(_ options: TotalCMSOptions) -> String {
+        guard options.layout == .root else {
+            return String(localized: "Total CMS lives at /tcms/, leaving the rest of the site free for your own frontend.")
+        }
+        switch options.starter {
+        case .none: return String(localized: "An empty install. You set everything up yourself.")
+        case .minimal: return String(localized: "A single page with a clean layout.")
+        case .blog: return String(localized: "A blog with a post list, single posts and an about page.")
+        case .business: return String(localized: "A business site with service pages and a contact form.")
+        case .portfolio: return String(localized: "A portfolio with project pages and contact details.")
+        }
     }
 }
 
