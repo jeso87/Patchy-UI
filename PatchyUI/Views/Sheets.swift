@@ -241,7 +241,7 @@ struct AddSiteSheet: View {
             Button("Add Site") { model.submitAdd() }
                 .buttonStyle(.borderedProminent)
                 .keyboardShortcut(.defaultAction)
-                .disabled(!draft.canSubmit(existing: model.addresses) || model.isBusy)
+                .disabled(!draft.canSubmit(existing: model.addresses, activePHP: model.snapshot.activePHP) || model.isBusy)
         }
         .controlSize(.large)
     }

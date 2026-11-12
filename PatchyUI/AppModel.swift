@@ -80,7 +80,9 @@ struct AddDraft: Equatable {
     }
 
     var name = ""
-    var folder: URL?
+    var folder: URL? {
+        didSet { if folder != oldValue { totalCMSInstalled = false } }
+    }
     /// The group the new site joins, if any.
     var groupID: UUID?
     var includeWWW = true
@@ -92,6 +94,43 @@ struct AddDraft: Equatable {
     var errorDetails = ""
     /// The add stopped because Patchy's one-time setup hasn't run, so the sheet offers to run it.
     var needsSetup = false
+    /// Install Total CMS 3 with Composer into `folder` before adding the site.
+    var installTotalCMS = false
+    var tcms = TotalCMSOptions()
+    /// Total CMS installed into `folder`; a retry only adds the site, never runs Composer again.
+    var totalCMSInstalled = false
+
+    /// The folder Patchy serves: the project's `public` folder for a Total CMS install.
+    var siteFolder: URL? {
+        guard let folder else { return nil }
+        return installTotalCMS ? TotalCMS.docroot(for: folder) : folder
+    }
+
+    /// Why a Total CMS install can't start yet, or nil.
+    func totalCMSProblem(activePHP: String?) -> String? {
+        guard installTotalCMS, !totalCMSInstalled else { return nil }
+        if let folder, !ProjectFolder.isEmpty(folder) {
+            return String(localized: "Choose an empty folder. Total CMS installs into a new, empty folder.")
+        }
+        guard let activePHP else {
+            return String(localized: "Patchy UI can’t tell which PHP your server runs, so it can’t install Total CMS. Start the server and try again.")
+        }
+        guard TotalCMS.supports(php: activePHP) else {
+            return String(localized: "Total CMS needs PHP 8.2 or newer. Your server runs PHP \(activePHP). Switch PHP from the toolbar, then try again.",
+                          comment: "Shown in the Add Site sheet. The placeholder is a PHP version such as 8.1.")
+        }
+        return nil
+    }
+
+    func steps(composerMissing: Bool) -> [String] {
+        var steps: [String] = []
+        if installTotalCMS, !totalCMSInstalled {
+            if composerMissing { steps.append(String(localized: "Installing Composer", comment: "Progress step shown while a change runs.")) }
+            steps.append(String(localized: "Installing Total CMS 3 (this can take a minute)", comment: "Progress step shown while a change runs."))
+        }
+        steps.append(String(localized: "Setting up the site", comment: "Progress step shown while a change runs."))
+        return steps
+    }
 
     var finalAddress: String { AddressRules.finalAddress(from: name) }
     var suffix: String { AddressRules.usesDefaultSuffix(name) ? ".test" : "" }
@@ -112,8 +151,9 @@ struct AddDraft: Equatable {
     var isReal: Bool { AddressRules.isRealAddress(finalAddress) }
     var offersWWW: Bool { AddressRules.offersWWW(finalAddress) }
 
-    func canSubmit(existing: [String]) -> Bool {
+    func canSubmit(existing: [String], activePHP: String?) -> Bool {
         isValidAddress(existing: existing) && folder != nil && (!isReal || confirmedReal)
+            && totalCMSProblem(activePHP: activePHP) == nil
     }
 }
 
@@ -437,9 +477,12 @@ final class AppModel {
 
     /// Runs one changing command at a time, showing what it's doing and re-reading state when it ends.
     /// With `--json` Patchy reports no progress, only its result, so each change shows one step.
-    private func runTask(step: String, password: String? = nil, _ body: @escaping CommandBody) async -> CommandResult {
+    /// `steps` shows a longer list with `step` as the current one; `refresh: false` skips re-reading
+    /// Patchy's state when the command didn't change it (Composer).
+    private func runTask(step: String, steps: [String]? = nil, refresh shouldRefresh: Bool = true, password: String? = nil,
+                         _ body: @escaping CommandBody) async -> CommandResult {
         guard let client, busy == nil else { return CommandResult(exitCode: -1, output: "") }
-        busy = Busy(steps: [step])
+        busy = Busy(steps: steps ?? [step], index: steps?.firstIndex(of: step) ?? 0)
         banner = nil
         sessionPassword = password
 
@@ -450,7 +493,7 @@ final class AppModel {
         askpass?.stop()
         sessionPassword = nil
         if passwordPrompt != nil { cancelPasswordPrompt() }
-        await refresh()
+        if shouldRefresh { await refresh() }
         busy = nil
         return result
     }
@@ -681,18 +724,47 @@ final class AppModel {
         openMainWindow?()
     }
 
+    /// The Settings switch that adds "Install Total CMS 3" to New Site. Off by default.
+    static let offerTotalCMSKey = "OfferTotalCMS"
+
+    /// Debug builds show the Total CMS option with `-PatchyDebugTCMS YES`, without changing the setting.
+    var debugOffersTotalCMS: Bool {
+        #if DEBUG
+        UserDefaults.standard.bool(forKey: "PatchyDebugTCMS")
+        #else
+        false
+        #endif
+    }
+
+    private var fakeAdd: Bool {
+        #if DEBUG
+        UserDefaults.standard.bool(forKey: "PatchyDebugFakeAdd")
+        #else
+        false
+        #endif
+    }
+
     func submitAdd() {
-        guard !isBusy, add.canSubmit(existing: addresses), let folder = add.folder else { return }
+        guard !isBusy, add.canSubmit(existing: addresses, activePHP: snapshot.activePHP),
+              let projectFolder = add.folder, let folder = add.siteFolder else { return }
         guard requireTrust(for: .add) else { return }
         let address = add.finalAddress
         let includeWWW = add.offersWWW && add.includeWWW
         let groupID = add.groupID
-        let step = String(localized: "Setting up the site", comment: "Progress step shown while a change runs.")
-        add.steps = [step]
+        let installsTotalCMS = add.installTotalCMS && !add.totalCMSInstalled
+        let composerMissing = installsTotalCMS && !(environment?.composerInstalled ?? false) && !fakeAdd
+        let steps = add.steps(composerMissing: composerMissing)
+        let step = steps[steps.count - 1]
+        add.steps = steps
         add.phase = .progress
         sheet = .add
         Task {
-            let result = await runTask(step: step) { client, askpass, output in
+            if installsTotalCMS {
+                guard await installTotalCMS(into: projectFolder, steps: steps, composerMissing: composerMissing) else { return }
+            }
+            let usedTotalCMS = add.installTotalCMS
+            let frontendUnbuilt = usedTotalCMS && add.tcms.layout == .root && add.tcms.frontend && !(environment?.nodeInstalled ?? true)
+            let result = await runTask(step: step, steps: steps) { client, askpass, output in
                 #if DEBUG
                 if UserDefaults.standard.bool(forKey: "PatchyDebugFakeAdd") {
                     try? await Task.sleep(for: .seconds(3))
@@ -718,14 +790,20 @@ final class AppModel {
                 add = AddDraft()
                 if serverRunning {
                     sheet = nil
-                    banner = Banner(severity: .ok, text: String(localized: "\(address) is ready. Its folder is \(folder.displayPath).", comment: "Banner under the toolbar."), openAddress: address)
+                    if frontendUnbuilt {
+                        banner = Banner(severity: .ok, text: String(localized: "\(address) is ready. Total CMS’s frontend tools are installed but not built, because Node isn’t on this Mac. You can build them later.", comment: "Banner under the toolbar."), openAddress: address)
+                    } else {
+                        banner = Banner(severity: .ok, text: String(localized: "\(address) is ready. Its folder is \(folder.displayPath).", comment: "Banner under the toolbar."), openAddress: address)
+                    }
+                    // Total CMS's setup wizard runs the first time the site is opened.
+                    if usedTotalCMS, !fakeAdd, let site = site(address) { openInBrowser(site) }
                 } else {
                     var failure = Self.startFailure(result)
                     failure.title = String(localized: "\(address) was added, but the server isn’t running", comment: "Title of an error sheet.")
                     sheet = .error(failure)
                 }
             } else {
-                add.failedIndex = 0
+                add.failedIndex = steps.count - 1
                 add.errorDetails = "$ patchy add \(address) \(folder.path)\n" + result.details
                 add.errorMessage = Self.addFailureMessage(code: result.errorCode)
                 add.needsSetup = result.errorCode == PatchyError.setupRequired
@@ -733,6 +811,50 @@ final class AppModel {
                 sheet = .add
             }
         }
+    }
+
+    /// Installs Composer if needed, then Total CMS 3 into the empty project folder. Returns false
+    /// (with the sheet showing why) when either fails; no site is added then.
+    private func installTotalCMS(into folder: URL, steps: [String], composerMissing: Bool) async -> Bool {
+        guard let environment else { return false }
+        let fake = fakeAdd
+        if composerMissing {
+            let result = await runTask(step: steps[0], steps: steps, refresh: false) { client, _, output in
+                await client.installComposer(onOutput: output)
+            }
+            guard environment.composerInstalled else {
+                failAdd(at: 0, message: String(localized: "Composer couldn’t be installed, so nothing was changed. Show Details has the exact message from Homebrew."),
+                        details: "$ brew install composer\n" + result.output)
+                return false
+            }
+        }
+        let index = composerMissing ? 1 : 0
+        let options = add.tcms
+        let command = ComposerCommand.createProject(folder: folder, options: options, php: snapshot.activePHP ?? "", in: environment)
+        if !fake { ProjectFolder.removeFinderLeftovers(folder) }
+        let result = await runTask(step: steps[index], steps: steps, refresh: false) { client, _, output in
+            if fake {
+                try? await Task.sleep(for: .seconds(2))
+                return CommandResult(exitCode: 0, output: "")
+            }
+            return await client.run(command, onOutput: output)
+        }
+        guard fake || options.isInstalled(in: folder) else {
+            failAdd(at: index, message: String(localized: "Total CMS couldn’t be installed, so the site wasn’t added. The folder was left as it is so you can look inside; empty it or choose another before trying again."),
+                    details: command.displayLine + "\n" + result.output)
+            return false
+        }
+        add.totalCMSInstalled = true
+        return true
+    }
+
+    private func failAdd(at index: Int, message: String, details: String) {
+        add.failedIndex = index
+        add.errorMessage = message
+        add.errorDetails = details
+        add.needsSetup = false
+        add.phase = .error
+        sheet = .add
     }
 
     /// Runs `patchy setup`, which Patchy 1.4.1+ requires before `add`, then adds the site again.
