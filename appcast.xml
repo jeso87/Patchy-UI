@@ -3,6 +3,20 @@
     <channel>
         <title>Patchy UI</title>
         <item>
+            <title>1.5.1.1</title>
+            <pubDate>Thu, 12 Nov 2026 17:48:53 -0500</pubDate>
+            <sparkle:version>13</sparkle:version>
+            <sparkle:shortVersionString>1.5.1.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="markdown"><![CDATA[### Fixes
+
+- Clicking a site in the sidebar no longer scrolls the list to put that site in the middle. The list still brings a site into view when you open it from the menu bar or add a new one.
+
+Still made for **Patchy 1.5.1**.
+]]></description>
+            <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.5.1.1/PatchyUI-1.5.1.1.dmg" length="3021671" type="application/octet-stream" sparkle:edSignature="O3LrwPZ4gQiN2+LvYtMGjSHPGPVA6LopZYgbFLLE2Xu2ouIfde0rPENHrHhIWQMPJRPiQChe8hK5wIfCUEg+Ag=="/>
+        </item>
+        <item>
             <title>1.5.1</title>
             <pubDate>Thu, 12 Nov 2026 17:35:21 -0500</pubDate>
             <sparkle:version>12</sparkle:version>
@@ -30,20 +44,6 @@ Made for **Patchy 1.5.1**. Update Patchy first, in Terminal: `brew upgrade joewo
 Still made for **Patchy 1.5.0**.
 ]]></description>
             <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.5.0.1/PatchyUI-1.5.0.1.dmg" length="3021947" type="application/octet-stream" sparkle:edSignature="cd8xaEl8qlC3q0GapPXAEMhCsRriRXbFpFSn8lQzhejhAuLwPJU1XjhgblRdbJabn70H6LoxIFLzmHynvSk1BA=="/>
-        </item>
-        <item>
-            <title>1.5.0</title>
-            <pubDate>Wed, 04 Nov 2026 14:17:17 -0500</pubDate>
-            <sparkle:version>10</sparkle:version>
-            <sparkle:shortVersionString>1.5.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Ready for Patchy 1.5.0
-
-Patchy 1.5.0 adds tab completion for people who use Patchy in Terminal. Nothing changes in Patchy UI, which now expects Patchy 1.5.0 so it won't warn you about a version mismatch.
-
-Made for **Patchy 1.5.0**. Update Patchy first, in Terminal: `brew upgrade joeworkman/patchy/patchy`
-]]></description>
-            <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.5.0/PatchyUI-1.5.0.dmg" length="2885424" type="application/octet-stream" sparkle:edSignature="kn5/fI8RqVN8ErWHSd8x0+orNfZvpUSchlOJ8zBJZOER5aGn77kr6lbewM3im/V4e3vkF0GlHHHCtvPtGro3DQ=="/>
         </item>
     </channel>
 </rss>
