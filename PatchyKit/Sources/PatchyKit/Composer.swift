@@ -95,3 +95,37 @@ public struct ComposerProject: Sendable, Equatable {
         return nil
     }
 }
+
+/// A Composer command, run under the server's PHP so packages match the PHP that serves the site.
+public struct ComposerCommand: Sendable, Equatable {
+    public let executable: URL
+    public let arguments: [String]
+    public let environment: [String: String]
+    /// Variables worth showing in Show Details (the install options).
+    private let shownVariables: [String: String]
+
+    private init(php: String, in env: PatchyEnvironment, _ composerArguments: [String], variables: [String: String] = [:]) {
+        executable = env.phpBinary(version: php)
+        arguments = [env.composerBinary.path] + composerArguments
+        environment = env.processEnvironment(extra: variables.merging(["COMPOSER_NO_INTERACTION": "1"]) { a, _ in a })
+        shownVariables = variables
+    }
+
+    public static func createProject(folder: URL, options: TotalCMSOptions, php: String, in env: PatchyEnvironment) -> ComposerCommand {
+        ComposerCommand(php: php, in: env, ["create-project", "totalcms/totalcms", folder.path, "--no-interaction"],
+                        variables: options.environment)
+    }
+
+    public static func update(project: URL, php: String, in env: PatchyEnvironment) -> ComposerCommand {
+        ComposerCommand(php: php, in: env, ["update", "--no-interaction", "--working-dir=\(project.path)"])
+    }
+
+    /// The command as someone would type it, for Show Details.
+    public var displayLine: String {
+        let variables = shownVariables.keys.sorted { a, b in
+            // TCMS_LAYOUT first, then the rest alphabetically, matching how the docs write it.
+            a == "TCMS_LAYOUT" || (b != "TCMS_LAYOUT" && a < b)
+        }.map { "\($0)=\(shownVariables[$0]!)" }
+        return "$ " + (variables + ["composer"] + arguments.dropFirst()).joined(separator: " ")
+    }
+}

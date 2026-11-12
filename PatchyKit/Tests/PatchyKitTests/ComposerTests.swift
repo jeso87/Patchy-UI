@@ -131,6 +131,43 @@ import Testing
         #expect(project?.usesTotalCMS == false)
     }
 
+    // MARK: Commands
+
+    let homebrew = PatchyEnvironment(brewPrefix: URL(fileURLWithPath: "/opt/homebrew"))
+
+    @Test func phpBinaryUsesOptAlias() {
+        #expect(homebrew.phpBinary(version: "8.4").path == "/opt/homebrew/opt/php@8.4/bin/php")
+        #expect(homebrew.composerBinary.path == "/opt/homebrew/bin/composer")
+    }
+
+    @Test func createProjectCommand() {
+        let command = ComposerCommand.createProject(folder: URL(fileURLWithPath: "/tmp/x/site"), options: TotalCMSOptions(),
+                                                    php: "8.4", in: homebrew)
+        #expect(command.executable.path == "/opt/homebrew/opt/php@8.4/bin/php")
+        #expect(command.arguments == ["/opt/homebrew/bin/composer", "create-project", "totalcms/totalcms", "/tmp/x/site", "--no-interaction"])
+        #expect(command.environment["TCMS_LAYOUT"] == "root")
+        #expect(command.environment["TCMS_STARTER"] == "none")
+        #expect(command.environment["TCMS_FRONTEND"] == "0")
+        #expect(command.environment["TCMS_GIT_TEMPLATES"] == "1")
+        #expect(command.environment["COMPOSER_NO_INTERACTION"] == "1")
+        #expect(command.environment["PATH"]?.hasPrefix("/opt/homebrew/bin") == true)
+    }
+
+    @Test func updateCommand() {
+        let command = ComposerCommand.update(project: URL(fileURLWithPath: "/tmp/x/proj"), php: "8.4", in: homebrew)
+        #expect(command.arguments == ["/opt/homebrew/bin/composer", "update", "--no-interaction", "--working-dir=/tmp/x/proj"])
+        #expect(!command.environment.keys.contains { $0.hasPrefix("TCMS_") })
+        #expect(command.environment["COMPOSER_NO_INTERACTION"] == "1")
+    }
+
+    @Test func displayLineHidesPHPPath() {
+        let line = ComposerCommand.createProject(folder: URL(fileURLWithPath: "/tmp/x/site"), options: TotalCMSOptions(),
+                                                 php: "8.4", in: homebrew).displayLine
+        #expect(line.hasPrefix("$ TCMS_LAYOUT=root"))
+        #expect(line.contains("composer create-project totalcms/totalcms /tmp/x/site --no-interaction"))
+        #expect(!line.contains("opt/php@"))
+    }
+
     @Test func noComposer() {
         let site = scratch(); defer { cleanUp(site) }
         #expect(ComposerProject.find(siteFolder: site) == nil)

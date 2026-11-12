@@ -39,6 +39,18 @@ public struct PatchyEnvironment: Sendable, Equatable {
     public var patchyBinary: URL { patchyOverride ?? brewPrefix.appending(path: "bin/patchy") }
     public var optDir: URL { brewPrefix.appending(path: "opt") }
 
+    /// Homebrew's Composer, a PHP script the app runs under a chosen PHP.
+    public var composerBinary: URL { brewPrefix.appending(path: "bin/composer") }
+    public var composerInstalled: Bool { FileManager.default.isExecutableFile(atPath: composerBinary.path) }
+    /// Total CMS's frontend pipeline builds during the install only when Node is present.
+    public var nodeInstalled: Bool { FileManager.default.isExecutableFile(atPath: brewPrefix.appending(path: "bin/node").path) }
+
+    /// The PHP binary for a major.minor version. Homebrew keeps an `opt/php@X.Y` link for the
+    /// unversioned `php` formula too, so this works whichever formula provides it.
+    public func phpBinary(version: String) -> URL {
+        optDir.appending(path: "php@\(version)/bin/php")
+    }
+
     /// Environment for child processes. An app launched from Finder has no shell PATH,
     /// and patchy shells out to brew, jq, mkcert, apachectl and php.
     public func processEnvironment(extra: [String: String] = [:]) -> [String: String] {

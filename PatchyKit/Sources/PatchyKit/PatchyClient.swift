@@ -97,9 +97,20 @@ public struct PatchyClient: Sendable {
     }
 
     /// Installs cloudflared, which `patchy share` needs. Patchy's formula depends on it, so this
-    /// is only for a Patchy installed some other way; it is the one place the app runs Homebrew.
+    /// is only for a Patchy installed some other way. With `installComposer`, the only places the app runs Homebrew.
     public func installCloudflared(onOutput: Output? = nil) async -> CommandResult {
         await ProcessRunner.run(environment.brewPrefix.appending(path: "bin/brew"), ["install", "cloudflared"],
                                 environment: environment.processEnvironment(), onOutput: onOutput)
+    }
+
+    /// Installs Composer, which installing Total CMS and updating Composer sites need.
+    public func installComposer(onOutput: Output? = nil) async -> CommandResult {
+        await ProcessRunner.run(environment.brewPrefix.appending(path: "bin/brew"), ["install", "composer"],
+                                environment: environment.processEnvironment(), onOutput: onOutput)
+    }
+
+    /// Runs a Composer command. Composer isn't Patchy, so its result is judged by the caller re-reading the folder.
+    public func run(_ command: ComposerCommand, onOutput: Output? = nil) async -> CommandResult {
+        await ProcessRunner.run(command.executable, command.arguments, environment: command.environment, onOutput: onOutput)
     }
 }
