@@ -3,6 +3,21 @@
     <channel>
         <title>Patchy UI</title>
         <item>
+            <title>1.5.0.1</title>
+            <pubDate>Thu, 12 Nov 2026 16:53:03 -0500</pubDate>
+            <sparkle:version>11</sparkle:version>
+            <sparkle:shortVersionString>1.5.0.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="markdown"><![CDATA[### New
+
+- **Start a Total CMS 3 site.** New Site has an **Install Total CMS 3** checkbox. Tick it, choose an empty folder, and Patchy UI installs Total CMS 3 there with Composer, then adds the site so it opens at the setup wizard. You can pick the layout, a starter, the frontend tools and whether templates are kept in Git. If Composer isn't on your Mac, Patchy UI installs it with Homebrew first. The checkbox can be hidden in Settings › General.
+- **Update Total CMS / Update Packages.** A site that uses Composer gets an update button that runs `composer update`, so Total CMS and its plugins (or any other packages) stay current. Composer always runs with the PHP your server uses.
+
+Still made for **Patchy 1.5.0**.
+]]></description>
+            <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.5.0.1/PatchyUI-1.5.0.1.dmg" length="3021947" type="application/octet-stream" sparkle:edSignature="cd8xaEl8qlC3q0GapPXAEMhCsRriRXbFpFSn8lQzhejhAuLwPJU1XjhgblRdbJabn70H6LoxIFLzmHynvSk1BA=="/>
+        </item>
+        <item>
             <title>1.5.0</title>
             <pubDate>Wed, 04 Nov 2026 14:17:17 -0500</pubDate>
             <sparkle:version>10</sparkle:version>
@@ -29,37 +44,6 @@ Patchy 1.4.1 won't add a site until its one-time setup has run on your Mac. If P
 Made for **Patchy 1.4.1**. Update Patchy first, in Terminal: `brew upgrade joeworkman/patchy/patchy`
 ]]></description>
             <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.4.1/PatchyUI-1.4.1.dmg" length="2885227" type="application/octet-stream" sparkle:edSignature="5VP7RYwf2RMNsLELYHOnx97fKNpdJO+PFYCG6BVa49vaNMOsIOAXQHGZF9CuvlDNSqdcBAQsZHTQPOCvyLluAg=="/>
-        </item>
-        <item>
-            <title>1.4.0</title>
-            <pubDate>Thu, 29 Oct 2026 21:52:39 -0400</pubDate>
-            <sparkle:version>8</sparkle:version>
-            <sparkle:shortVersionString>1.4.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### A tidier site page
-
-- **One row of actions** beside the site's name: **Copy Address**, **Open in Browser**, **Share**, and a **…** menu with Reveal in Finder and Remove Site.
-- **Today at a glance.** Each site's page now counts today's errors and visits. Click either one to jump straight to that log.
-- **A more compact sidebar.** Each site takes one line, and a mark appears only beside sites that need attention. Certificate details live on the site's page.
-
-### Server controls in one menu
-
-Click **Running · PHP 8.5** in the toolbar to restart or stop the server. When more than one version of PHP is installed, you can also switch between them there.
-
-### Every way to share
-
-Patchy 1.4.0 adds new ways to share a site, and Share now offers all of them once you've connected your own domain:
-
-- **Your site's own address** on your domain, open to anyone or **with a password**.
-- **Change Address…** picks the name before your domain, such as `preview.example.com`. Patchy remembers it for next time.
-- **A random address** on your domain that is new each time, open or with a password.
-- **A public link** on trycloudflare.com, even when a domain is connected.
-
-To stop using your domain, go to **Settings › General** and choose **Disconnect**.
-
-Made for **Patchy 1.4.0**. Update Patchy first, in Terminal: `brew upgrade joeworkman/patchy/patchy`
-]]></description>
-            <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.4.0/PatchyUI-1.4.0.dmg" length="2879167" type="application/octet-stream" sparkle:edSignature="+53vDrMOaCc09HhJFsYqDygHyWF/SuaDweG1nl+bpvZRYc9pMxALdPwHwjFuO5Xrc+A1CxB6BeXD91zwKh1lDw=="/>
         </item>
     </channel>
 </rss>
