@@ -3,6 +3,21 @@
     <channel>
         <title>Patchy UI</title>
         <item>
+            <title>1.5.1.2</title>
+            <pubDate>Thu, 12 Nov 2026 18:19:32 -0500</pubDate>
+            <sparkle:version>14</sparkle:version>
+            <sparkle:shortVersionString>1.5.1.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="markdown"><![CDATA[### New
+
+- **Your own Total CMS defaults.** Settings › General has a new **New Total CMS sites start with** section: pick the layout, starter, frontend tools and whether templates are kept in Git, and New Site starts with your choices. You can still change them for each site.
+- **Keep templates in Git** is now off by default.
+
+Still made for **Patchy 1.5.1**.
+]]></description>
+            <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.5.1.2/PatchyUI-1.5.1.2.dmg" length="3033811" type="application/octet-stream" sparkle:edSignature="4g9R2XKhURKIMSJUDa6+KJSitcxtO2sQDENGUSfLFjK392jGW2Rt8op2Ozn6uLEAmrvz+dd8IdImoZVRwkP8CQ=="/>
+        </item>
+        <item>
             <title>1.5.1.1</title>
             <pubDate>Thu, 12 Nov 2026 17:48:53 -0500</pubDate>
             <sparkle:version>13</sparkle:version>
@@ -29,21 +44,6 @@ Patchy 1.5.1 fixes first-time setup on a Mac that has never run Patchy before: s
 Made for **Patchy 1.5.1**. Update Patchy first, in Terminal: `brew upgrade joeworkman/patchy/patchy`
 ]]></description>
             <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.5.1/PatchyUI-1.5.1.dmg" length="3020753" type="application/octet-stream" sparkle:edSignature="nUhXFNYnJRLXJwsLrjTvFZJPyy41i8rOLmXh3/IOWixbuByVz7tjtfFaKJoEYWr2RkKiYLqTtIORtp/bKulyCg=="/>
-        </item>
-        <item>
-            <title>1.5.0.1</title>
-            <pubDate>Thu, 12 Nov 2026 16:53:03 -0500</pubDate>
-            <sparkle:version>11</sparkle:version>
-            <sparkle:shortVersionString>1.5.0.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### New
-
-- **Start a Total CMS 3 site.** New Site has an **Install Total CMS 3** checkbox. Tick it, choose an empty folder, and Patchy UI installs Total CMS 3 there with Composer, then adds the site so it opens at the setup wizard. You can pick the layout, a starter, the frontend tools and whether templates are kept in Git. If Composer isn't on your Mac, Patchy UI installs it with Homebrew first. The checkbox can be hidden in Settings › General.
-- **Update Total CMS / Update Packages.** A site that uses Composer gets an update button that runs `composer update`, so Total CMS and its plugins (or any other packages) stay current. Composer always runs with the PHP your server uses.
-
-Still made for **Patchy 1.5.0**.
-]]></description>
-            <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.5.0.1/PatchyUI-1.5.0.1.dmg" length="3021947" type="application/octet-stream" sparkle:edSignature="cd8xaEl8qlC3q0GapPXAEMhCsRriRXbFpFSn8lQzhejhAuLwPJU1XjhgblRdbJabn70H6LoxIFLzmHynvSk1BA=="/>
         </item>
     </channel>
 </rss>
