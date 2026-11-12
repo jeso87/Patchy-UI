@@ -25,14 +25,14 @@ Keeping those sites up to date is the same story: `composer update` in a termina
 
 ## Anti-goals
 
-- New users must not see any of this unless they go looking. The setting is off by default.
+- The checkbox is unticked by default, so nobody installs Total CMS by accident. The setting is on by default (changed from off after the first build, by the developer's request) and can be turned off.
 - Nothing about Total CMS may leak into how Patchy itself is driven. Patchy stays the source of truth for sites; the app still talks to Patchy only through its CLI and `--json`.
 - A failed Total CMS install must never leave a half-added site in Patchy.
 - No raw Composer output outside Show Details.
 
 ## Part 1: the setting
 
-Settings › General gains a toggle, off by default:
+Settings › General gains a toggle, on by default:
 
 > **Offer to install Total CMS 3 when adding a site**
 > Note under it: "Adds a checkbox to New Site that sets up a Total CMS 3 project in the folder you choose. Needs Composer, which Patchy UI installs for you if it's missing."
@@ -116,7 +116,7 @@ Detection runs when a site is selected (or with the snapshot; builder's call), o
 
 ## Decided by the developer
 
-- Opt-in setting in Settings, off by default (not a hidden keyboard shortcut).
+- A setting in Settings (not a hidden keyboard shortcut), on by default; first built off, switched on at the developer's request.
 - Missing Composer is installed through Homebrew, like cloudflared.
 - The four options above, with defaults `root`, `none`, frontend off, Git templates on.
 - Frontend without Node: install without building and say it can be built later.

@@ -50,7 +50,7 @@ private struct BusyRow: View {
 struct GeneralSettings: View {
     @Environment(AppModel.self) private var model
     @AppStorage(AppDelegate.showDockIconKey) private var showDockIcon = true
-    @AppStorage(AppModel.offerTotalCMSKey) private var offerTotalCMS = false
+    @AppStorage(AppModel.offerTotalCMSKey) private var offerTotalCMS = AppModel.offerTotalCMSDefault
     @State private var openAtLogin = SMAppService.mainApp.status == .enabled
     @State private var loginError: String?
     @State private var confirmDisconnect = false

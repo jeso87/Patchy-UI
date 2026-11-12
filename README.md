@@ -48,7 +48,7 @@ commands for you. It is free, open source, and not affiliated with Joe Workman.
   without a password), or an anonymous trycloudflare.com link. Settings can
   disconnect the domain again.
   Sharing needs Cloudflare's free `cloudflared`; the app offers to install it.
-- **Start a Total CMS 3 site** (optional, off until you turn it on in
+- **Start a Total CMS 3 site** (on by default; turn it off in
   Settings › General). New Site then offers to install Total CMS 3 with
   Composer into an empty folder you choose, with its layout, starter, frontend
   tools and Git templates as options, and adds the site with the project's

@@ -159,7 +159,7 @@ struct FolderCard: View {
 
 struct AddSiteSheet: View {
     @Environment(AppModel.self) private var model
-    @AppStorage(AppModel.offerTotalCMSKey) private var offerTotalCMS = false
+    @AppStorage(AppModel.offerTotalCMSKey) private var offerTotalCMS = AppModel.offerTotalCMSDefault
 
     var body: some View {
         switch model.add.phase {

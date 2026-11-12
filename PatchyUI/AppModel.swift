@@ -734,8 +734,9 @@ final class AppModel {
         openMainWindow?()
     }
 
-    /// The Settings switch that adds "Install Total CMS 3" to New Site. Off by default.
+    /// The Settings switch that adds "Install Total CMS 3" to New Site. On by default.
     static let offerTotalCMSKey = "OfferTotalCMS"
+    static let offerTotalCMSDefault = true
 
     /// Debug builds show the Total CMS option with `-PatchyDebugTCMS YES`, without changing the setting.
     var debugOffersTotalCMS: Bool {
