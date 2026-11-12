@@ -3,6 +3,20 @@
     <channel>
         <title>Patchy UI</title>
         <item>
+            <title>1.5.1</title>
+            <pubDate>Thu, 12 Nov 2026 17:35:21 -0500</pubDate>
+            <sparkle:version>12</sparkle:version>
+            <sparkle:shortVersionString>1.5.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="markdown"><![CDATA[### Ready for Patchy 1.5.1
+
+Patchy 1.5.1 fixes first-time setup on a Mac that has never run Patchy before: setup used to fail with an Apache error, so new users couldn't add a site. Nothing changes in Patchy UI, which now expects Patchy 1.5.1 so it won't warn you about a version mismatch.
+
+Made for **Patchy 1.5.1**. Update Patchy first, in Terminal: `brew upgrade joeworkman/patchy/patchy`
+]]></description>
+            <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.5.1/PatchyUI-1.5.1.dmg" length="3020753" type="application/octet-stream" sparkle:edSignature="nUhXFNYnJRLXJwsLrjTvFZJPyy41i8rOLmXh3/IOWixbuByVz7tjtfFaKJoEYWr2RkKiYLqTtIORtp/bKulyCg=="/>
+        </item>
+        <item>
             <title>1.5.0.1</title>
             <pubDate>Thu, 12 Nov 2026 16:53:03 -0500</pubDate>
             <sparkle:version>11</sparkle:version>
@@ -30,20 +44,6 @@ Patchy 1.5.0 adds tab completion for people who use Patchy in Terminal. Nothing 
 Made for **Patchy 1.5.0**. Update Patchy first, in Terminal: `brew upgrade joeworkman/patchy/patchy`
 ]]></description>
             <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.5.0/PatchyUI-1.5.0.dmg" length="2885424" type="application/octet-stream" sparkle:edSignature="kn5/fI8RqVN8ErWHSd8x0+orNfZvpUSchlOJ8zBJZOER5aGn77kr6lbewM3im/V4e3vkF0GlHHHCtvPtGro3DQ=="/>
-        </item>
-        <item>
-            <title>1.4.1</title>
-            <pubDate>Tue, 03 Nov 2026 16:34:54 -0500</pubDate>
-            <sparkle:version>9</sparkle:version>
-            <sparkle:shortVersionString>1.4.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Finish Patchy's setup from the app
-
-Patchy 1.4.1 won't add a site until its one-time setup has run on your Mac. If Patchy UI finds setup hasn't finished when you add a site, it says so and offers **Finish Setup**. That runs the setup, asking for your Mac password if it needs it, and then adds your site.
-
-Made for **Patchy 1.4.1**. Update Patchy first, in Terminal: `brew upgrade joeworkman/patchy/patchy`
-]]></description>
-            <enclosure url="https://github.com/jeso87/Patchy-UI/releases/download/v1.4.1/PatchyUI-1.4.1.dmg" length="2885227" type="application/octet-stream" sparkle:edSignature="5VP7RYwf2RMNsLELYHOnx97fKNpdJO+PFYCG6BVa49vaNMOsIOAXQHGZF9CuvlDNSqdcBAQsZHTQPOCvyLluAg=="/>
         </item>
     </channel>
 </rss>
