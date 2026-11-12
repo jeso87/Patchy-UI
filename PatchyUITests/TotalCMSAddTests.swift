@@ -111,6 +111,23 @@ import Testing
         #expect(draft.steps(composerMissing: true) == ["Setting up the site"])
     }
 
+    @Test func newSiteStartsFromSavedDefaults() {
+        let suite = "TotalCMSAddTests-\(UUID().uuidString)"
+        let settings = UserDefaults(suiteName: suite)!
+        defer { settings.removePersistentDomain(forName: suite) }
+        var saved = TotalCMSOptions()
+        saved.starter = .blog
+        saved.gitTemplates = true
+        saved.save(to: settings)
+
+        let model = AppModel()
+        model.settings = settings
+        model.phase = .ready
+        model.openAdd(name: "example")
+        #expect(model.add.tcms == saved)
+        #expect(!model.add.installTotalCMS)
+    }
+
     @Test func updateButtonTitles() {
         let folder = URL(fileURLWithPath: "/tmp/p")
         #expect(AppModel.updateButtonTitle(ComposerProject(folder: folder, usesTotalCMS: true)) == "Update Total CMS")

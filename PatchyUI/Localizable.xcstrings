@@ -54874,6 +54874,232 @@
           "stringUnit" : { "state" : "translated", "value" : "整個網站" }
         }
       }
+    },
+    "New Total CMS sites start with" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "New Total CMS sites start with" }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "تبدأ مواقع Total CMS الجديدة بما يلي" }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Els llocs web nous de Total CMS comencen amb" }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nové weby s Total CMS začínají s" }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nye Total CMS-websteder starter med" }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Neue Total-CMS-Websites starten mit" }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Οι νέοι ιστότοποι Total CMS ξεκινούν με" }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Los nuevos sitios de Total CMS empiezan con" }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "سایت‌های جدید Total CMS با این‌ها شروع می‌شوند" }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Uudet Total CMS -sivustot alkavat näillä" }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Les nouveaux sites Total CMS commencent avec" }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "אתרי Total CMS חדשים מתחילים עם" }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nove web-stranice s Total CMS-om počinju s" }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Az új Total CMS-webhelyek kiinduló beállításai" }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nýir Total CMS-vefir byrja með" }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "I nuovi siti Total CMS partono con" }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "新しいTotal CMSサイトの初期設定" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "새 Total CMS 사이트의 기본 설정" }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nye Total CMS-nettsteder starter med" }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nieuwe Total CMS-websites beginnen met" }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nye Total CMS-nettstader startar med" }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nowe witryny Total CMS zaczynają z" }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Novos sites com Total CMS começam com" }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Os novos sites com Total CMS começam com" }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Site-urile noi Total CMS pornesc cu" }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Новые сайты Total CMS начинаются с" }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nové weby s Total CMS začínajú s" }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nova spletna mesta s Total CMS začnejo z" }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nya Total CMS-webbplatser börjar med" }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "เว็บไซต์ Total CMS ใหม่เริ่มต้นด้วย" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Yeni Total CMS siteleri şu ayarlarla başlar" }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Нові сайти Total CMS починаються з" }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Trang web Total CMS mới bắt đầu với" }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "新Total CMS網站的預設值" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "新 Total CMS 网站的默认设置" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "新Total CMS網站的預設值" }
+        }
+      }
+    },
+    "You can still change these for each site in New Site." : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "You can still change these for each site in New Site." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "لا يزال بإمكانك تغيير هذه الخيارات لكل موقع في «موقع جديد»." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "Encara pots canviar-ho per a cada lloc web a Lloc web nou." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "U každého webu to můžete stále změnit v okně Nový web." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Du kan stadig ændre dem for hvert websted i Nyt websted." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Du kannst das in „Neue Website“ für jede Website noch ändern." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Μπορείτε ακόμα να τα αλλάξετε για κάθε ιστότοπο στο «Νέος ιστότοπος»." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "Puedes cambiarlo para cada sitio en Nuevo sitio." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "همچنان می‌توانید این‌ها را برای هر سایت در «سایت جدید» تغییر دهید." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Voit yhä muuttaa näitä sivustokohtaisesti kohdassa Uusi sivusto." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Vous pouvez toujours les modifier pour chaque site dans Nouveau site." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "עדיין אפשר לשנות אותם לכל אתר ב„אתר חדש”." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "To i dalje možete promijeniti za svaku web-stranicu u prozoru Nova web-stranica." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Az Új webhely ablakban webhelyenként továbbra is módosíthatod őket." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Þú getur samt breytt þessu fyrir hvern vef í Nýr vefur." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Puoi comunque cambiarli per ogni sito in Nuovo sito." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "「新規サイト」でサイトごとに変更することもできます。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "새 사이트에서 사이트마다 바꿀 수 있습니다." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Du kan fortsatt endre dette for hvert nettsted i Nytt nettsted." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Je kunt dit per website nog aanpassen in Nieuwe website." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Du kan framleis endre dette for kvar nettstad i Ny nettstad." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nadal możesz to zmienić dla każdej witryny w oknie Nowa witryna." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Você ainda pode alterar isso para cada site em Novo Site." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Pode continuar a alterar isto para cada site em Novo site." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Puteți modifica în continuare aceste opțiuni pentru fiecare site în Site nou." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Для каждого сайта это можно изменить в окне «Новый сайт»." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Pri každom webe to môžete stále zmeniť v okne Nový web." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "To lahko še vedno spremenite za vsako spletno mesto v oknu Novo spletno mesto." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Du kan fortfarande ändra detta för varje webbplats i Ny webbplats." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "คุณยังเปลี่ยนค่าเหล่านี้ได้สำหรับแต่ละเว็บไซต์ในเว็บไซต์ใหม่" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bunları Yeni Site’ta her site için yine değiştirebilirsin." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Для кожного сайту це можна змінити у вікні «Новий сайт»." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Bạn vẫn có thể thay đổi các mục này cho từng trang web trong Trang web mới." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "你仍可在「新網站」為每個網站更改這些設定。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "你仍可在“新网站”中为每个网站更改这些设置。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "你仍可在「新網站」為每個網站更改這些設定。" }
+        }
+      }
     }
   },
   "version" : "1.0"

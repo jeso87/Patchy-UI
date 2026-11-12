@@ -51,6 +51,7 @@ struct GeneralSettings: View {
     @Environment(AppModel.self) private var model
     @AppStorage(AppDelegate.showDockIconKey) private var showDockIcon = true
     @AppStorage(AppModel.offerTotalCMSKey) private var offerTotalCMS = AppModel.offerTotalCMSDefault
+    @State private var tcmsDefaults = TotalCMSOptions.saved(in: .standard)
     @State private var openAtLogin = SMAppService.mainApp.status == .enabled
     @State private var loginError: String?
     @State private var confirmDisconnect = false
@@ -83,6 +84,14 @@ struct GeneralSettings: View {
             Section {
                 Toggle("Offer to install Total CMS 3 when adding a site", isOn: $offerTotalCMS)
                 SettingsNote("Adds a checkbox to New Site that sets up a Total CMS 3 project in the folder you choose. Patchy UI installs Composer if it’s missing.")
+            }
+
+            if offerTotalCMS {
+                Section("New Total CMS sites start with") {
+                    TotalCMSOptionControls(options: $tcmsDefaults)
+                    SettingsNote("You can still change these for each site in New Site.")
+                }
+                .onChange(of: tcmsDefaults) { _, options in options.save(to: .standard) }
             }
 
             if model.canShare {

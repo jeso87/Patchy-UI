@@ -299,6 +299,31 @@ struct AddSiteSheet: View {
     }
 }
 
+/// Layout, starter, frontend tools and Git templates: the same controls in New Site and in the
+/// Settings defaults. The starter and frontend apply to the whole-site layout only.
+struct TotalCMSOptionControls: View {
+    @Binding var options: TotalCMSOptions
+
+    var body: some View {
+        let root = options.layout == .root
+        Picker("Layout", selection: $options.layout) {
+            Text("Whole site").tag(TotalCMSOptions.Layout.root)
+            Text("Under /tcms/").tag(TotalCMSOptions.Layout.subpath)
+        }
+        Picker("Starter", selection: $options.starter) {
+            Text("None").tag(TotalCMSOptions.Starter.none)
+            Text("Minimal").tag(TotalCMSOptions.Starter.minimal)
+            Text("Blog").tag(TotalCMSOptions.Starter.blog)
+            Text("Business").tag(TotalCMSOptions.Starter.business)
+            Text("Portfolio").tag(TotalCMSOptions.Starter.portfolio)
+        }
+        .disabled(!root)
+        Toggle("Frontend tools (Vite)", isOn: $options.frontend)
+            .disabled(!root)
+        Toggle("Keep templates in Git", isOn: $options.gitTemplates)
+    }
+}
+
 /// The "Install Total CMS 3" checkbox and, when ticked, the install's options.
 struct TotalCMSOptionsView: View {
     @Binding var draft: AddDraft
@@ -312,23 +337,8 @@ struct TotalCMSOptionsView: View {
                 // Once installed, the site must be served from public/, so the choice is locked.
                 .disabled(draft.totalCMSInstalled)
             if draft.installTotalCMS {
-                let root = draft.tcms.layout == .root
                 Form {
-                    Picker("Layout", selection: $draft.tcms.layout) {
-                        Text("Whole site").tag(TotalCMSOptions.Layout.root)
-                        Text("Under /tcms/").tag(TotalCMSOptions.Layout.subpath)
-                    }
-                    Picker("Starter", selection: $draft.tcms.starter) {
-                        Text("None").tag(TotalCMSOptions.Starter.none)
-                        Text("Minimal").tag(TotalCMSOptions.Starter.minimal)
-                        Text("Blog").tag(TotalCMSOptions.Starter.blog)
-                        Text("Business").tag(TotalCMSOptions.Starter.business)
-                        Text("Portfolio").tag(TotalCMSOptions.Starter.portfolio)
-                    }
-                    .disabled(!root)
-                    Toggle("Frontend tools (Vite)", isOn: $draft.tcms.frontend)
-                        .disabled(!root)
-                    Toggle("Keep templates in Git", isOn: $draft.tcms.gitTemplates)
+                    TotalCMSOptionControls(options: $draft.tcms)
                 }
                 .formStyle(.columns)
                 .disabled(draft.skipsInstall)

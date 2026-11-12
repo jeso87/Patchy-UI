@@ -187,6 +187,8 @@ final class AppModel {
     var sheet: Sheet?
     var banner: Banner?
     var add = AddDraft()
+    /// Where the app's own preferences live; tests swap in a scratch suite.
+    var settings: UserDefaults = .standard
     /// Each site's Composer project, by address, once looked up. Missing means none or not looked yet.
     var composerProjects: [String: ComposerProject] = [:]
     var folderDraft: URL?
@@ -734,6 +736,7 @@ final class AppModel {
     func openAdd(name: String = "", folder: URL? = nil) {
         guard !isBusy, phase == .ready else { return }
         add = AddDraft(name: name, folder: folder)
+        add.tcms = TotalCMSOptions.saved(in: settings)
         sheet = .add
         openMainWindow?()
     }
@@ -1374,6 +1377,7 @@ extension AppModel {
         case "add":
             let name = defaults.string(forKey: "PatchyDebugName") ?? ""
             add = AddDraft(name: name, folder: URL(fileURLWithPath: NSHomeDirectory()).appending(path: "Websites/\(AddressRules.finalAddress(from: name))"))
+            add.tcms = TotalCMSOptions.saved(in: settings)
             sheet = .add
         case "addprogress":
             add = AddDraft(name: "harbor-cafe", phase: .progress, steps: ["Setting up the site"])

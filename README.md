@@ -53,6 +53,7 @@ commands for you. It is free, open source, and not affiliated with Joe Workman.
   Composer into an empty folder you choose, with its layout, starter, frontend
   tools and Git templates as options, and adds the site with the project's
   `public` folder. The app installs Composer with Homebrew if it's missing.
+  Set your own starting options in Settings › General.
 - **Update Composer sites.** A site whose folder (or, for a `public` folder,
   the folder above it) has a `composer.json` gets an Update button that runs
   `composer update`: "Update Total CMS" for Total CMS projects, "Update

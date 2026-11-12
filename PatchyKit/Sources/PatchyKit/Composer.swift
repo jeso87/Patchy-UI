@@ -17,9 +17,34 @@ public struct TotalCMSOptions: Sendable, Equatable {
     public var layout: Layout = .root
     public var starter: Starter = .none
     public var frontend = false
-    public var gitTemplates = true
+    public var gitTemplates = false
 
     public init() {}
+
+    // MARK: Saved defaults (Settings › General)
+
+    public static let layoutKey = "TotalCMSLayout"
+    public static let starterKey = "TotalCMSStarter"
+    public static let frontendKey = "TotalCMSFrontend"
+    public static let gitTemplatesKey = "TotalCMSGitTemplates"
+
+    /// The options New Site starts with: what the person saved in Settings, or the installer's
+    /// defaults for anything unset or unrecognised.
+    public static func saved(in defaults: UserDefaults) -> TotalCMSOptions {
+        var options = TotalCMSOptions()
+        if let layout = defaults.string(forKey: layoutKey).flatMap(Layout.init(rawValue:)) { options.layout = layout }
+        if let starter = defaults.string(forKey: starterKey).flatMap(Starter.init(rawValue:)) { options.starter = starter }
+        if defaults.object(forKey: frontendKey) != nil { options.frontend = defaults.bool(forKey: frontendKey) }
+        if defaults.object(forKey: gitTemplatesKey) != nil { options.gitTemplates = defaults.bool(forKey: gitTemplatesKey) }
+        return options
+    }
+
+    public func save(to defaults: UserDefaults) {
+        defaults.set(layout.rawValue, forKey: Self.layoutKey)
+        defaults.set(starter.rawValue, forKey: Self.starterKey)
+        defaults.set(frontend, forKey: Self.frontendKey)
+        defaults.set(gitTemplates, forKey: Self.gitTemplatesKey)
+    }
 
     /// The starter and frontend apply to the root layout only.
     public var environment: [String: String] {

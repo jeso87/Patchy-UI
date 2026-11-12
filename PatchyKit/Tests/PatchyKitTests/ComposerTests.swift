@@ -21,8 +21,40 @@ import Testing
 
     @Test func defaultEnvironment() {
         #expect(TotalCMSOptions().environment == [
-            "TCMS_LAYOUT": "root", "TCMS_STARTER": "none", "TCMS_FRONTEND": "0", "TCMS_GIT_TEMPLATES": "1",
+            "TCMS_LAYOUT": "root", "TCMS_STARTER": "none", "TCMS_FRONTEND": "0", "TCMS_GIT_TEMPLATES": "0",
         ])
+    }
+
+    // MARK: Saved defaults
+
+    func freshDefaults() -> UserDefaults {
+        let name = "ComposerTests-\(UUID().uuidString)"
+        let defaults = UserDefaults(suiteName: name)!
+        defaults.removePersistentDomain(forName: name)
+        return defaults
+    }
+
+    @Test func savedDefaultsStartAsTheInstallerDefaults() {
+        #expect(TotalCMSOptions.saved(in: freshDefaults()) == TotalCMSOptions())
+    }
+
+    @Test func savedDefaultsRoundTrip() {
+        let defaults = freshDefaults()
+        var options = TotalCMSOptions()
+        options.layout = .subpath
+        options.starter = .portfolio
+        options.frontend = true
+        options.gitTemplates = true
+        options.save(to: defaults)
+        #expect(TotalCMSOptions.saved(in: defaults) == options)
+    }
+
+    @Test func unknownSavedValuesFallBack() {
+        // A value from a later version, or a typo, must not break New Site.
+        let defaults = freshDefaults()
+        defaults.set("sideways", forKey: TotalCMSOptions.layoutKey)
+        defaults.set("gallery", forKey: TotalCMSOptions.starterKey)
+        #expect(TotalCMSOptions.saved(in: defaults) == TotalCMSOptions())
     }
 
     @Test func subpathForcesNoStarterOrFrontend() {
@@ -177,7 +209,7 @@ import Testing
         #expect(command.environment["TCMS_LAYOUT"] == "root")
         #expect(command.environment["TCMS_STARTER"] == "none")
         #expect(command.environment["TCMS_FRONTEND"] == "0")
-        #expect(command.environment["TCMS_GIT_TEMPLATES"] == "1")
+        #expect(command.environment["TCMS_GIT_TEMPLATES"] == "0")
         #expect(command.environment["COMPOSER_NO_INTERACTION"] == "1")
         #expect(command.environment["PATH"]?.hasPrefix("/opt/homebrew/bin") == true)
     }

@@ -118,7 +118,7 @@ Detection runs when a site is selected (or with the snapshot; builder's call), o
 
 - A setting in Settings (not a hidden keyboard shortcut), on by default; first built off, switched on at the developer's request.
 - Missing Composer is installed through Homebrew, like cloudflared.
-- The four options above, with defaults `root`, `none`, frontend off, Git templates on.
+- The four options above, with defaults `root`, `none`, frontend off, Git templates on. (Changed in 1.5.1.2 at the developer's request: Git templates default to off, and Settings › General lets each person save their own defaults, stored as `TotalCMSLayout`, `TotalCMSStarter`, `TotalCMSFrontend` and `TotalCMSGitTemplates`.)
 - Frontend without Node: install without building and say it can be built later.
 - Composer runs under the server's active PHP, for both install and update.
 - The user picks or creates an empty folder; `public/` inside it becomes the site's folder.
