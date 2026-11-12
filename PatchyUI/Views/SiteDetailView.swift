@@ -21,6 +21,8 @@ struct SiteDetailView: View {
                         actions
                     }
                 }
+                // Re-checked when the site or its folder changes, so Update appears for Composer sites.
+                .task(id: site.address + "\n" + site.folder) { await model.loadComposerProject(for: site) }
                 if let state = model.shares[site.address], state != .stopped {
                     SharePanel(address: site.address, state: state)
                 }
@@ -114,6 +116,12 @@ struct SiteDetailView: View {
                         .help(model.serverRunning ? "Share this site at a public link" : "Start the server to share this site")
                         .disabled(!model.serverRunning)
                 }
+            }
+
+            if let project = model.composerProjects[site.address] {
+                Button(AppModel.updateButtonTitle(project)) { model.updatePackages(site) }
+                    .disabled(model.isBusy)
+                    .help(project.folder.path)
             }
 
             Menu {

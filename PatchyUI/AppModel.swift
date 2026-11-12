@@ -175,6 +175,8 @@ final class AppModel {
     var sheet: Sheet?
     var banner: Banner?
     var add = AddDraft()
+    /// Each site's Composer project, by address, once looked up. Missing means none or not looked yet.
+    var composerProjects: [String: ComposerProject] = [:]
     var folderDraft: URL?
     var trustStep: TrustStep = .explain
     var trustError: String?
@@ -1172,6 +1174,60 @@ final class AppModel {
             }
             sheet = nil
             if let site = site(address) { share(site, mode: mode) }
+        }
+    }
+
+    // MARK: Composer sites
+
+    static func updateButtonTitle(_ project: ComposerProject) -> String {
+        project.usesTotalCMS ? String(localized: "Update Total CMS", comment: "Button in a site's header.")
+                             : String(localized: "Update Packages", comment: "Button in a site's header. Runs Composer's update.")
+    }
+
+    /// Looks for the site's `composer.json` off the main thread; the header shows Update when there is one.
+    func loadComposerProject(for site: Site) async {
+        let folder = URL(fileURLWithPath: site.folder)
+        let project = await Task.detached { ComposerProject.find(siteFolder: folder) }.value
+        composerProjects[site.address] = project
+    }
+
+    func updatePackages(_ site: Site) {
+        guard !isBusy, let project = composerProjects[site.address], let environment else { return }
+        guard let php = snapshot.activePHP else {
+            sheet = .error(ErrorInfo(title: String(localized: "Couldn’t update \(site.address)", comment: "Title of an error sheet."),
+                                     message: String(localized: "Start the server first, so Patchy UI knows which PHP to update with."),
+                                     details: ""))
+            return
+        }
+        let address = site.address
+        let command = ComposerCommand.update(project: project.folder, php: php, in: environment)
+        let step = project.usesTotalCMS ? String(localized: "Updating Total CMS and its plugins", comment: "Progress step shown while a change runs.")
+                                         : String(localized: "Updating packages", comment: "Progress step shown while a change runs.")
+        Task {
+            if !environment.composerInstalled {
+                let install = String(localized: "Installing Composer", comment: "Progress step shown while a change runs.")
+                let result = await runTask(step: install, steps: [install, step], refresh: false) { client, _, output in
+                    await client.installComposer(onOutput: output)
+                }
+                guard environment.composerInstalled else {
+                    sheet = .error(ErrorInfo(title: String(localized: "Couldn’t install Composer", comment: "Title of an error sheet."),
+                                             message: String(localized: "Nothing was changed. Show Details has the exact message from Homebrew.", comment: "Message in an error sheet."),
+                                             details: "$ brew install composer\n" + result.output))
+                    return
+                }
+            }
+            let result = await runTask(step: step, refresh: false) { client, _, output in
+                await client.run(command, onOutput: output)
+            }
+            if result.succeeded {
+                banner = Banner(severity: .ok, text: project.usesTotalCMS
+                                ? String(localized: "Total CMS and its plugins are up to date.", comment: "Banner under the toolbar.")
+                                : String(localized: "Packages are up to date.", comment: "Banner under the toolbar."))
+            } else {
+                sheet = .error(ErrorInfo(title: String(localized: "Couldn’t update \(address)", comment: "Title of an error sheet."),
+                                         message: String(localized: "Nothing else was changed. Show Details has the exact message from Composer."),
+                                         details: command.displayLine + "\n" + result.output))
+            }
         }
     }
 

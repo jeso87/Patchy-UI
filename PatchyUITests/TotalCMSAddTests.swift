@@ -89,4 +89,10 @@ import Testing
         draft.totalCMSInstalled = false
         #expect(draft.steps(composerMissing: true) == ["Setting up the site"])
     }
+
+    @Test func updateButtonTitles() {
+        let folder = URL(fileURLWithPath: "/tmp/p")
+        #expect(AppModel.updateButtonTitle(ComposerProject(folder: folder, usesTotalCMS: true)) == "Update Total CMS")
+        #expect(AppModel.updateButtonTitle(ComposerProject(folder: folder, usesTotalCMS: false)) == "Update Packages")
+    }
 }
