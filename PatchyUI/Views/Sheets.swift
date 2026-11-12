@@ -309,6 +309,8 @@ struct TotalCMSOptionsView: View {
         VStack(alignment: .leading, spacing: 8) {
             Toggle("Install Total CMS 3", isOn: $draft.installTotalCMS)
                 .toggleStyle(.checkbox)
+                // Once installed, the site must be served from public/, so the choice is locked.
+                .disabled(draft.totalCMSInstalled)
             if draft.installTotalCMS {
                 let root = draft.tcms.layout == .root
                 Form {
@@ -329,6 +331,7 @@ struct TotalCMSOptionsView: View {
                     Toggle("Keep templates in Git", isOn: $draft.tcms.gitTemplates)
                 }
                 .formStyle(.columns)
+                .disabled(draft.skipsInstall)
                 .padding(.leading, 20)
                 Text(Self.explanation(draft.tcms))
                     .font(.system(size: 11.5))

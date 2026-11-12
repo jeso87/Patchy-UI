@@ -85,6 +85,35 @@ import Testing
         #expect(options.isInstalled(in: root))
     }
 
+    @Test func recognisesInstalledProject() {
+        let root = scratch(); defer { cleanUp(root) }
+        #expect(!TotalCMS.isInstalledProject(root))
+        write(#"{"require":{"totalcms/cms":"^3"}}"#, to: root.appending(path: "composer.json"))
+        #expect(!TotalCMS.isInstalledProject(root))
+        write("<?php", to: root.appending(path: "public/index.php"))
+        #expect(TotalCMS.isInstalledProject(root))
+
+        let subpath = scratch(); defer { cleanUp(subpath) }
+        write(#"{"require":{"totalcms/cms":"^3"}}"#, to: subpath.appending(path: "composer.json"))
+        write("<?php", to: subpath.appending(path: "public/tcms/index.php"))
+        #expect(TotalCMS.isInstalledProject(subpath))
+
+        let other = scratch(); defer { cleanUp(other) }
+        write(#"{"require":{"slim/slim":"^4"}}"#, to: other.appending(path: "composer.json"))
+        write("<?php", to: other.appending(path: "public/index.php"))
+        #expect(!TotalCMS.isInstalledProject(other))
+    }
+
+    @Test func installNeedsExitCodeAndFiles() {
+        let root = scratch(); defer { cleanUp(root) }
+        let options = TotalCMSOptions()
+        #expect(!options.installSucceeded(CommandResult(exitCode: 0, output: ""), in: root))
+        write("<?php", to: root.appending(path: "public/index.php"))
+        #expect(options.installSucceeded(CommandResult(exitCode: 0, output: ""), in: root))
+        // Files extracted, but a post-install script failed.
+        #expect(!options.installSucceeded(CommandResult(exitCode: 1, output: ""), in: root))
+    }
+
     @Test func docrootIsPublic() {
         #expect(TotalCMS.docroot(for: URL(fileURLWithPath: "/tmp/site")).path == "/tmp/site/public")
     }

@@ -100,15 +100,23 @@ struct AddDraft: Equatable {
     /// Total CMS installed into `folder`; a retry only adds the site, never runs Composer again.
     var totalCMSInstalled = false
 
-    /// The folder Patchy serves: the project's `public` folder for a Total CMS install.
+    /// The folder Patchy serves: the project's `public` folder for a Total CMS install, including
+    /// one that already happened (so unticking the box afterwards never serves the project root).
     var siteFolder: URL? {
         guard let folder else { return nil }
-        return installTotalCMS ? TotalCMS.docroot(for: folder) : folder
+        return installTotalCMS || totalCMSInstalled ? TotalCMS.docroot(for: folder) : folder
+    }
+
+    /// Total CMS is already in the folder (this sheet installed it, or an earlier attempt did before
+    /// Close), so Add Site only adds the site.
+    var skipsInstall: Bool {
+        guard installTotalCMS else { return totalCMSInstalled }
+        return totalCMSInstalled || folder.map(TotalCMS.isInstalledProject) == true
     }
 
     /// Why a Total CMS install can't start yet, or nil.
     func totalCMSProblem(activePHP: String?) -> String? {
-        guard installTotalCMS, !totalCMSInstalled else { return nil }
+        guard installTotalCMS, !skipsInstall else { return nil }
         if let folder, !ProjectFolder.isEmpty(folder) {
             return String(localized: "Choose an empty folder. Total CMS installs into a new, empty folder.")
         }
@@ -124,7 +132,7 @@ struct AddDraft: Equatable {
 
     func steps(composerMissing: Bool) -> [String] {
         var steps: [String] = []
-        if installTotalCMS, !totalCMSInstalled {
+        if installTotalCMS, !skipsInstall {
             if composerMissing { steps.append(String(localized: "Installing Composer", comment: "Progress step shown while a change runs.")) }
             steps.append(String(localized: "Installing Total CMS 3 (this can take a minute)", comment: "Progress step shown while a change runs."))
         }
@@ -753,7 +761,7 @@ final class AppModel {
         let address = add.finalAddress
         let includeWWW = add.offersWWW && add.includeWWW
         let groupID = add.groupID
-        let installsTotalCMS = add.installTotalCMS && !add.totalCMSInstalled
+        let installsTotalCMS = add.installTotalCMS && !add.skipsInstall
         let composerMissing = installsTotalCMS && !(environment?.composerInstalled ?? false) && !fakeAdd
         let steps = add.steps(composerMissing: composerMissing)
         let step = steps[steps.count - 1]
@@ -764,7 +772,7 @@ final class AppModel {
             if installsTotalCMS {
                 guard await installTotalCMS(into: projectFolder, steps: steps, composerMissing: composerMissing) else { return }
             }
-            let usedTotalCMS = add.installTotalCMS
+            let usedTotalCMS = add.installTotalCMS || add.totalCMSInstalled
             let frontendUnbuilt = usedTotalCMS && add.tcms.layout == .root && add.tcms.frontend && !(environment?.nodeInstalled ?? true)
             let result = await runTask(step: step, steps: steps) { client, askpass, output in
                 #if DEBUG
@@ -841,7 +849,7 @@ final class AppModel {
             }
             return await client.run(command, onOutput: output)
         }
-        guard fake || options.isInstalled(in: folder) else {
+        guard fake || options.installSucceeded(result, in: folder) else {
             failAdd(at: index, message: String(localized: "Total CMS couldn’t be installed, so the site wasn’t added. The folder was left as it is so you can look inside; empty it or choose another before trying again."),
                     details: command.displayLine + "\n" + result.output)
             return false

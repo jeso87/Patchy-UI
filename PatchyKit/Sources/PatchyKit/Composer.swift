@@ -32,7 +32,12 @@ public struct TotalCMSOptions: Sendable, Equatable {
         ]
     }
 
-    /// Judged by the front controller existing, not by Composer's exit code.
+    /// Composer must exit cleanly and the front controller must exist: a post-install script can
+    /// fail after the files are extracted.
+    public func installSucceeded(_ result: CommandResult, in project: URL) -> Bool {
+        result.succeeded && isInstalled(in: project)
+    }
+
     public func isInstalled(in project: URL) -> Bool {
         let path = layout == .root ? "public/index.php" : "public/tcms/index.php"
         return FileManager.default.fileExists(atPath: project.appending(path: path).path)
@@ -47,6 +52,17 @@ public enum TotalCMS {
         guard let major = parts.first else { return false }
         let minor = parts.count > 1 ? parts[1] : 0
         return (major, minor) >= (8, 2)
+    }
+
+    /// A folder that already holds a Total CMS project (either layout), such as one installed
+    /// before a failed `patchy add`. Adding it only needs the site, not another install.
+    public static func isInstalledProject(_ folder: URL) -> Bool {
+        guard ComposerProject.find(siteFolder: folder)?.usesTotalCMS == true else { return false }
+        return TotalCMSOptions.Layout.allCases.contains { layout in
+            var options = TotalCMSOptions()
+            options.layout = layout
+            return options.isInstalled(in: folder)
+        }
     }
 
     /// The folder Patchy serves for a Composer-installed Total CMS project.

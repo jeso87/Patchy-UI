@@ -68,6 +68,27 @@ import Testing
         #expect(draft.totalCMSProblem(activePHP: "8.4") == nil)
     }
 
+    @Test func folderWithTotalCMSSkipsInstall() {
+        // After Close, a reopened sheet pointed at the installed project must only add the site.
+        let url = folder(empty: true); defer { try? FileManager.default.removeItem(at: url) }
+        try! #"{"require":{"totalcms/cms":"^3"}}"#.write(to: url.appending(path: "composer.json"), atomically: true, encoding: .utf8)
+        try! FileManager.default.createDirectory(at: url.appending(path: "public"), withIntermediateDirectories: true)
+        try! "<?php".write(to: url.appending(path: "public/index.php"), atomically: true, encoding: .utf8)
+        let draft = draft(url)
+        #expect(draft.skipsInstall)
+        #expect(draft.totalCMSProblem(activePHP: "8.4") == nil)
+        #expect(draft.steps(composerMissing: true) == ["Setting up the site"])
+        #expect(draft.siteFolder == url.appending(path: "public"))
+    }
+
+    @Test func untickingAfterInstallStillServesPublic() {
+        let url = folder(empty: false); defer { try? FileManager.default.removeItem(at: url) }
+        var draft = draft(url)
+        draft.totalCMSInstalled = true
+        draft.installTotalCMS = false
+        #expect(draft.siteFolder == url.appending(path: "public"))
+    }
+
     @Test func changingFolderForgetsInstall() {
         let url = folder(empty: true); defer { try? FileManager.default.removeItem(at: url) }
         var draft = draft(url)
