@@ -48,6 +48,15 @@ commands for you. It is free, open source, and not affiliated with Joe Workman.
   without a password), or an anonymous trycloudflare.com link. Settings can
   disconnect the domain again.
   Sharing needs Cloudflare's free `cloudflared`; the app offers to install it.
+- **Start a Total CMS 3 site** (optional, off until you turn it on in
+  Settings › General). New Site then offers to install Total CMS 3 with
+  Composer into an empty folder you choose, with its layout, starter, frontend
+  tools and Git templates as options, and adds the site with the project's
+  `public` folder. The app installs Composer with Homebrew if it's missing.
+- **Update Composer sites.** A site whose folder (or, for a `public` folder,
+  the folder above it) has a `composer.json` gets an Update button that runs
+  `composer update`: "Update Total CMS" for Total CMS projects, "Update
+  Packages" otherwise. Composer runs with the PHP version the server uses.
 - **Group related sites,** such as one customer's domain and subdomains. Groups
   show in the sidebar and as headings in the menu bar panel. The app suggests groups
   for sites that look related, and never groups anything by itself. Groups
@@ -144,7 +153,9 @@ against a signing key built into the app before they are installed.
 **Network.** The daily update check, and the download if you accept an update,
 are the only network requests Patchy UI makes on its own. When you share a
 site, Patchy runs Cloudflare's `cloudflared`, and visitors to the link reach
-your site through Cloudflare until you stop sharing or quit the app. It has no
+your site through Cloudflare until you stop sharing or quit the app. Installing
+Total CMS or clicking Update runs Composer, which downloads packages from
+Packagist and GitHub (and Total CMS's servers). It has no
 analytics, no accounts and no telemetry.
 
 **Your Mac password.** Some changes need administrator rights: setting up
@@ -171,8 +182,9 @@ the Homebrew prefix, which the App Sandbox does not allow. That is also why it
 is distributed here and not on the Mac App Store.
 
 **Not included:** installing Homebrew, Patchy, PHP versions or PHP extensions
-(the one exception is `cloudflared`, installed with Homebrew when you ask to
-share a site);
+(the exceptions are `cloudflared`, installed with Homebrew when you ask to
+share a site, and Composer, installed with Homebrew when you install Total CMS
+or update a Composer site);
 editing `httpd.conf` or `php.ini`; turning password-free mode off (use
 `patchy untrust`).
 
