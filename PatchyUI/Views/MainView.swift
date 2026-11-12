@@ -171,9 +171,9 @@ struct SidebarView: View {
         }
         .onDeleteCommand { model.askRemove() }
         // Bring a selection made elsewhere into view: a site that was just added, or one picked
-        // from the menu bar.
-        .onChange(of: model.selection) { _, selected in
-            guard let selected else { return }
+        // from the menu bar. Clicks in the list are left alone; see `revealSelection`.
+        .onChange(of: model.revealSelection) {
+            guard let selected = model.selection else { return }
             // A row that was only just added isn't laid out yet in this update, and the list
             // estimates the position of rows it hasn't drawn, so one jump can land short.
             Task {

@@ -177,6 +177,10 @@ final class AppModel {
     var phase: Phase = .checking
     var snapshot = PatchySnapshot()
     var selection: String?
+    /// Goes up when the app picks a site the person may not be looking at (the menu bar, a new
+    /// site), so the sidebar scrolls it into view. A click in the sidebar leaves it alone: that
+    /// row is already in view, and scrolling would move the list under the pointer.
+    private(set) var revealSelection = 0
     var filter = ""
     var tab: DetailTab = .overview
     var busy: Busy?
@@ -796,6 +800,7 @@ final class AppModel {
             if sites.contains(where: { $0.address == address }) {
                 if let groupID { groups.assign(address, to: groupID) }
                 selection = address
+                revealSelection += 1
                 tab = .overview
                 filter = ""
                 add = AddDraft()
@@ -1267,6 +1272,7 @@ final class AppModel {
     /// Opens the main window on one site.
     func showSite(_ address: String) {
         selection = address
+        revealSelection += 1
         tab = .overview
         filter = ""
         openMainWindow?()
@@ -1275,6 +1281,7 @@ final class AppModel {
     func showAttention() {
         if let first = problemSites.first {
             selection = first.address
+            revealSelection += 1
             tab = .overview
             filter = ""
         }
@@ -1395,6 +1402,7 @@ extension AppModel {
                 snapshot.sites = (snapshot.sites + [fake]).sorted { $0.address < $1.address }
                 busy = nil
                 selection = defaults.string(forKey: "PatchyDebugSelectAfter") ?? fake.address
+                revealSelection += 1
                 tab = .overview
                 filter = ""
                 add = AddDraft()
