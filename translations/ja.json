@@ -348,7 +348,7 @@
   "Anyone with this link can see this site until you stop sharing.": "このリンクを知っている人は、共有を停止するまでこのサイトを見ることができます。",
   "Copy Address and Password": "アドレスとパスワードをコピー",
   "Copy Link": "リンクをコピー",
-  "Couldn’t get a public link. Check your internet connection and try again.": "公開リンクを取得できませんでした。インターネット接続を確認して、もう一度お試しください。",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "公開リンクを取得できませんでした。インターネット接続を確認してください。Little Snitch などのファイアウォールアプリを使用している場合は、cloudflared の接続を許可してから、もう一度お試しください。",
   "Couldn’t install cloudflared": "cloudflaredをインストールできませんでした",
   "Couldn’t share %@": "%@を共有できませんでした",
   "Getting a public link…": "公開リンクを取得中…",

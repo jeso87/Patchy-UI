@@ -348,7 +348,7 @@
   "Anyone with this link can see this site until you stop sharing.": "任何擁有此連結的人都可以查看這個網站，直至你停止分享。",
   "Copy Address and Password": "複製網址和密碼",
   "Copy Link": "複製連結",
-  "Couldn’t get a public link. Check your internet connection and try again.": "無法取得公開連結。請檢查你的互聯網連線，然後再試一次。",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "無法取得公開連結。請檢查你的互聯網連線。如果你使用 Little Snitch 等防火牆 App，請允許 cloudflared 連線，然後再試一次。",
   "Couldn’t install cloudflared": "無法安裝cloudflared",
   "Couldn’t share %@": "無法分享%@",
   "Getting a public link…": "正在取得公開連結⋯",

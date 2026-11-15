@@ -432,7 +432,7 @@
   "Anyone with this link can see this site until you stop sharing.": "Kdor koli ima to povezavo, lahko vidi to spletno mesto, dokler ne prenehate deliti.",
   "Copy Address and Password": "Kopiraj naslov in geslo",
   "Copy Link": "Kopiraj povezavo",
-  "Couldn’t get a public link. Check your internet connection and try again.": "Javne povezave ni bilo mogoče dobiti. Preverite internetno povezavo in poskusite znova.",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "Javne povezave ni bilo mogoče dobiti. Preverite internetno povezavo. Če uporabljate aplikacijo požarnega zidu, na primer Little Snitch, dovolite cloudflared vzpostavitev povezave in poskusite znova.",
   "Couldn’t install cloudflared": "Programa cloudflared ni bilo mogoče namestiti",
   "Couldn’t share %@": "Spletnega mesta %@ ni bilo mogoče deliti",
   "Getting a public link…": "Pridobivanje javne povezave …",

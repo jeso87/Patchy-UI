@@ -41230,120 +41230,6 @@
         }
       }
     },
-    "Couldn’t get a public link. Check your internet connection and try again." : {
-      "comment" : "Shown when sharing a site failed.",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Couldn’t get a public link. Check your internet connection and try again." }
-        },
-        "ar" : {
-          "stringUnit" : { "state" : "translated", "value" : "تعذّر الحصول على رابط عام. تحقّق من اتصالك بالإنترنت وحاول مرة أخرى." }
-        },
-        "ca" : {
-          "stringUnit" : { "state" : "translated", "value" : "No s’ha pogut obtenir un enllaç públic. Comprova la connexió a internet i torna-ho a provar." }
-        },
-        "cs" : {
-          "stringUnit" : { "state" : "translated", "value" : "Veřejný odkaz se nepodařilo získat. Zkontrolujte připojení k internetu a zkuste to znovu." }
-        },
-        "da" : {
-          "stringUnit" : { "state" : "translated", "value" : "Der kunne ikke oprettes et offentligt link. Tjek din internetforbindelse, og prøv igen." }
-        },
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Es konnte kein öffentlicher Link erstellt werden. Prüfe deine Internetverbindung und versuche es erneut." }
-        },
-        "el" : {
-          "stringUnit" : { "state" : "translated", "value" : "Δεν ήταν δυνατή η λήψη δημόσιου συνδέσμου. Ελέγξτε τη σύνδεσή σας στο διαδίκτυο και δοκιμάστε ξανά." }
-        },
-        "es" : {
-          "stringUnit" : { "state" : "translated", "value" : "No se ha podido obtener un enlace público. Comprueba tu conexión a internet y vuelve a intentarlo." }
-        },
-        "fa" : {
-          "stringUnit" : { "state" : "translated", "value" : "دریافت پیوند عمومی ممکن نشد. اتصال اینترنت خود را بررسی کنید و دوباره امتحان کنید." }
-        },
-        "fi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Julkista linkkiä ei saatu. Tarkista internetyhteys ja yritä uudelleen." }
-        },
-        "fr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Impossible d’obtenir un lien public. Vérifiez votre connexion à Internet et réessayez." }
-        },
-        "he" : {
-          "stringUnit" : { "state" : "translated", "value" : "לא ניתן היה לקבל קישור ציבורי. יש לבדוק את החיבור לאינטרנט ולנסות שוב." }
-        },
-        "hr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Nije moguće dobiti javnu poveznicu. Provjerite internetsku vezu i pokušajte ponovno." }
-        },
-        "hu" : {
-          "stringUnit" : { "state" : "translated", "value" : "Nem sikerült nyilvános linket kérni. Ellenőrizze az internetkapcsolatot, és próbálja újra." }
-        },
-        "is" : {
-          "stringUnit" : { "state" : "translated", "value" : "Ekki tókst að fá opinberan tengil. Athugaðu nettenginguna og reyndu aftur." }
-        },
-        "it" : {
-          "stringUnit" : { "state" : "translated", "value" : "Impossibile ottenere un link pubblico. Controlla la connessione a Internet e riprova." }
-        },
-        "ja" : {
-          "stringUnit" : { "state" : "translated", "value" : "公開リンクを取得できませんでした。インターネット接続を確認して、もう一度お試しください。" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "공개 링크를 받을 수 없습니다. 인터넷 연결을 확인한 다음 다시 시도하십시오." }
-        },
-        "nb" : {
-          "stringUnit" : { "state" : "translated", "value" : "Kunne ikke hente en offentlig lenke. Sjekk internettforbindelsen og prøv igjen." }
-        },
-        "nl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Kan geen openbare link krijgen. Controleer je internetverbinding en probeer het opnieuw." }
-        },
-        "nn" : {
-          "stringUnit" : { "state" : "translated", "value" : "Kunne ikkje hente ei offentleg lenkje. Sjekk internettsambandet og prøv igjen." }
-        },
-        "pl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Nie udało się uzyskać linku publicznego. Sprawdź połączenie z internetem i spróbuj ponownie." }
-        },
-        "pt-BR" : {
-          "stringUnit" : { "state" : "translated", "value" : "Não foi possível obter um link público. Verifique sua conexão com a internet e tente novamente." }
-        },
-        "pt-PT" : {
-          "stringUnit" : { "state" : "translated", "value" : "Não foi possível obter uma ligação pública. Verifique a ligação à internet e tente novamente." }
-        },
-        "ro" : {
-          "stringUnit" : { "state" : "translated", "value" : "Nu s-a putut obține un link public. Verificați conexiunea la internet și încercați din nou." }
-        },
-        "ru" : {
-          "stringUnit" : { "state" : "translated", "value" : "Не удалось получить публичную ссылку. Проверьте подключение к интернету и повторите попытку." }
-        },
-        "sk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Verejný odkaz sa nepodarilo získať. Skontrolujte pripojenie na internet a skúste to znova." }
-        },
-        "sl" : {
-          "stringUnit" : { "state" : "translated", "value" : "Javne povezave ni bilo mogoče dobiti. Preverite internetno povezavo in poskusite znova." }
-        },
-        "sv" : {
-          "stringUnit" : { "state" : "translated", "value" : "Det gick inte att få en offentlig länk. Kontrollera internetanslutningen och försök igen." }
-        },
-        "th" : {
-          "stringUnit" : { "state" : "translated", "value" : "รับลิงก์สาธารณะไม่ได้ ตรวจสอบการเชื่อมต่ออินเทอร์เน็ตแล้วลองอีกครั้ง" }
-        },
-        "tr" : {
-          "stringUnit" : { "state" : "translated", "value" : "Herkese açık bağlantı alınamadı. İnternet bağlantınızı denetleyip yeniden deneyin." }
-        },
-        "uk" : {
-          "stringUnit" : { "state" : "translated", "value" : "Не вдалося отримати публічне посилання. Перевірте підключення до інтернету й повторіть спробу." }
-        },
-        "vi" : {
-          "stringUnit" : { "state" : "translated", "value" : "Không thể lấy liên kết công khai. Hãy kiểm tra kết nối internet rồi thử lại." }
-        },
-        "zh-HK" : {
-          "stringUnit" : { "state" : "translated", "value" : "無法取得公開連結。請檢查你的互聯網連線，然後再試一次。" }
-        },
-        "zh-Hans" : {
-          "stringUnit" : { "state" : "translated", "value" : "无法获取公开链接。请检查你的互联网连接，然后重试。" }
-        },
-        "zh-Hant" : {
-          "stringUnit" : { "state" : "translated", "value" : "無法取得公開連結。請檢查你的網際網路連線，然後再試一次。" }
-        }
-      }
-    },
     "Couldn’t install cloudflared" : {
       "comment" : "Title of an error sheet.",
       "extractionState" : "extracted_with_value",
@@ -55098,6 +54984,120 @@
         },
         "zh-Hant" : {
           "stringUnit" : { "state" : "translated", "value" : "你仍可在「新網站」為每個網站更改這些設定。" }
+        }
+      }
+    },
+    "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again." : {
+      "comment" : "Shown when sharing a site failed. “Little Snitch” is a firewall app and “cloudflared” is the program that makes the link; don't translate either name.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : { "state" : "translated", "value" : "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again." }
+        },
+        "ar" : {
+          "stringUnit" : { "state" : "translated", "value" : "تعذّر الحصول على رابط عام. تحقّق من اتصالك بالإنترنت. إذا كنت تستخدم تطبيق جدار حماية مثل Little Snitch، فاسمح لـ cloudflared بالاتصال، ثم حاول مرة أخرى." }
+        },
+        "ca" : {
+          "stringUnit" : { "state" : "translated", "value" : "No s’ha pogut obtenir un enllaç públic. Comprova la connexió a internet. Si fas servir una app de tallafoc com Little Snitch, permet que cloudflared es connecti i torna-ho a provar." }
+        },
+        "cs" : {
+          "stringUnit" : { "state" : "translated", "value" : "Veřejný odkaz se nepodařilo získat. Zkontrolujte připojení k internetu. Pokud používáte aplikaci firewallu, například Little Snitch, povolte cloudflared připojení a zkuste to znovu." }
+        },
+        "da" : {
+          "stringUnit" : { "state" : "translated", "value" : "Der kunne ikke oprettes et offentligt link. Tjek din internetforbindelse. Hvis du bruger en firewall-app som Little Snitch, skal du give cloudflared lov til at oprette forbindelse og derefter prøve igen." }
+        },
+        "de" : {
+          "stringUnit" : { "state" : "translated", "value" : "Es konnte kein öffentlicher Link erstellt werden. Prüfe deine Internetverbindung. Wenn du eine Firewall-App wie Little Snitch verwendest, erlaube cloudflared die Verbindung und versuche es dann erneut." }
+        },
+        "el" : {
+          "stringUnit" : { "state" : "translated", "value" : "Δεν ήταν δυνατή η λήψη δημόσιου συνδέσμου. Ελέγξτε τη σύνδεσή σας στο διαδίκτυο. Αν χρησιμοποιείτε εφαρμογή τείχους προστασίας όπως το Little Snitch, επιτρέψτε στο cloudflared να συνδεθεί και δοκιμάστε ξανά." }
+        },
+        "es" : {
+          "stringUnit" : { "state" : "translated", "value" : "No se ha podido obtener un enlace público. Comprueba tu conexión a internet. Si usas una app de cortafuegos como Little Snitch, permite que cloudflared se conecte y vuelve a intentarlo." }
+        },
+        "fa" : {
+          "stringUnit" : { "state" : "translated", "value" : "دریافت پیوند عمومی ممکن نشد. اتصال اینترنت خود را بررسی کنید. اگر از یک برنامهٔ دیوار آتش مانند Little Snitch استفاده می‌کنید، به cloudflared اجازهٔ اتصال بدهید و دوباره امتحان کنید." }
+        },
+        "fi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Julkista linkkiä ei saatu. Tarkista internetyhteys. Jos käytät palomuurisovellusta, kuten Little Snitchiä, salli cloudflaredin muodostaa yhteys ja yritä sitten uudelleen." }
+        },
+        "fr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Impossible d’obtenir un lien public. Vérifiez votre connexion à Internet. Si vous utilisez une app de pare-feu comme Little Snitch, autorisez cloudflared à se connecter, puis réessayez." }
+        },
+        "he" : {
+          "stringUnit" : { "state" : "translated", "value" : "לא ניתן היה לקבל קישור ציבורי. יש לבדוק את החיבור לאינטרנט. אם יש בשימוש אפליקציית חומת אש כמו Little Snitch, יש לאפשר ל-cloudflared להתחבר ולנסות שוב." }
+        },
+        "hr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nije moguće dobiti javnu poveznicu. Provjerite internetsku vezu. Ako koristite aplikaciju vatrozida kao što je Little Snitch, dopustite cloudflaredu povezivanje, a zatim pokušajte ponovno." }
+        },
+        "hu" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nem sikerült nyilvános linket kérni. Ellenőrizze az internetkapcsolatot. Ha tűzfalalkalmazást használ, például a Little Snitch-et, engedélyezze a cloudflared kapcsolódását, majd próbálja újra." }
+        },
+        "is" : {
+          "stringUnit" : { "state" : "translated", "value" : "Ekki tókst að fá opinberan tengil. Athugaðu nettenginguna. Ef þú notar eldveggsforrit á borð við Little Snitch skaltu leyfa cloudflared að tengjast og reyna svo aftur." }
+        },
+        "it" : {
+          "stringUnit" : { "state" : "translated", "value" : "Impossibile ottenere un link pubblico. Controlla la connessione a Internet. Se usi un’app firewall come Little Snitch, consenti a cloudflared di connettersi, poi riprova." }
+        },
+        "ja" : {
+          "stringUnit" : { "state" : "translated", "value" : "公開リンクを取得できませんでした。インターネット接続を確認してください。Little Snitch などのファイアウォールアプリを使用している場合は、cloudflared の接続を許可してから、もう一度お試しください。" }
+        },
+        "ko" : {
+          "stringUnit" : { "state" : "translated", "value" : "공개 링크를 받을 수 없습니다. 인터넷 연결을 확인하십시오. Little Snitch 같은 방화벽 앱을 사용하는 경우 cloudflared의 연결을 허용한 다음 다시 시도하십시오." }
+        },
+        "nb" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kunne ikke hente en offentlig lenke. Sjekk internettforbindelsen. Hvis du bruker en brannmur-app som Little Snitch, må du la cloudflared koble til og så prøve igjen." }
+        },
+        "nl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kan geen openbare link krijgen. Controleer je internetverbinding. Als je een firewall-app zoals Little Snitch gebruikt, sta cloudflared dan toe verbinding te maken en probeer het opnieuw." }
+        },
+        "nn" : {
+          "stringUnit" : { "state" : "translated", "value" : "Kunne ikkje hente ei offentleg lenkje. Sjekk internettsambandet. Om du brukar ein brannmur-app som Little Snitch, må du la cloudflared kople til og så prøve igjen." }
+        },
+        "pl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nie udało się uzyskać linku publicznego. Sprawdź połączenie z internetem. Jeśli używasz aplikacji zapory, takiej jak Little Snitch, zezwól cloudflared na połączenie, a następnie spróbuj ponownie." }
+        },
+        "pt-BR" : {
+          "stringUnit" : { "state" : "translated", "value" : "Não foi possível obter um link público. Verifique sua conexão com a internet. Se você usa um app de firewall como o Little Snitch, permita que o cloudflared se conecte e tente novamente." }
+        },
+        "pt-PT" : {
+          "stringUnit" : { "state" : "translated", "value" : "Não foi possível obter uma ligação pública. Verifique a ligação à internet. Se utiliza uma app de firewall como o Little Snitch, permita que o cloudflared se ligue e tente novamente." }
+        },
+        "ro" : {
+          "stringUnit" : { "state" : "translated", "value" : "Nu s-a putut obține un link public. Verificați conexiunea la internet. Dacă folosiți o aplicație firewall precum Little Snitch, permiteți-i lui cloudflared să se conecteze, apoi încercați din nou." }
+        },
+        "ru" : {
+          "stringUnit" : { "state" : "translated", "value" : "Не удалось получить публичную ссылку. Проверьте подключение к интернету. Если вы используете приложение-брандмауэр, например Little Snitch, разрешите cloudflared подключаться и повторите попытку." }
+        },
+        "sk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Verejný odkaz sa nepodarilo získať. Skontrolujte pripojenie na internet. Ak používate aplikáciu firewallu, napríklad Little Snitch, povoľte cloudflared pripojenie a skúste to znova." }
+        },
+        "sl" : {
+          "stringUnit" : { "state" : "translated", "value" : "Javne povezave ni bilo mogoče dobiti. Preverite internetno povezavo. Če uporabljate aplikacijo požarnega zidu, na primer Little Snitch, dovolite cloudflared vzpostavitev povezave in poskusite znova." }
+        },
+        "sv" : {
+          "stringUnit" : { "state" : "translated", "value" : "Det gick inte att få en offentlig länk. Kontrollera internetanslutningen. Om du använder en brandväggsapp som Little Snitch, låt cloudflared ansluta och försök sedan igen." }
+        },
+        "th" : {
+          "stringUnit" : { "state" : "translated", "value" : "รับลิงก์สาธารณะไม่ได้ ตรวจสอบการเชื่อมต่ออินเทอร์เน็ต หากคุณใช้แอปไฟร์วอลล์อย่าง Little Snitch ให้อนุญาตให้ cloudflared เชื่อมต่อ แล้วลองอีกครั้ง" }
+        },
+        "tr" : {
+          "stringUnit" : { "state" : "translated", "value" : "Herkese açık bağlantı alınamadı. İnternet bağlantınızı denetleyin. Little Snitch gibi bir güvenlik duvarı uygulaması kullanıyorsanız cloudflared’in bağlanmasına izin verip yeniden deneyin." }
+        },
+        "uk" : {
+          "stringUnit" : { "state" : "translated", "value" : "Не вдалося отримати публічне посилання. Перевірте підключення до інтернету. Якщо ви користуєтеся застосунком-брандмауером, як-от Little Snitch, дозвольте cloudflared підключатися й повторіть спробу." }
+        },
+        "vi" : {
+          "stringUnit" : { "state" : "translated", "value" : "Không thể lấy liên kết công khai. Hãy kiểm tra kết nối internet. Nếu bạn dùng ứng dụng tường lửa như Little Snitch, hãy cho phép cloudflared kết nối rồi thử lại." }
+        },
+        "zh-HK" : {
+          "stringUnit" : { "state" : "translated", "value" : "無法取得公開連結。請檢查你的互聯網連線。如果你使用 Little Snitch 等防火牆 App，請允許 cloudflared 連線，然後再試一次。" }
+        },
+        "zh-Hans" : {
+          "stringUnit" : { "state" : "translated", "value" : "无法获取公开链接。请检查你的互联网连接。如果你使用 Little Snitch 等防火墙 App，请允许 cloudflared 连接，然后重试。" }
+        },
+        "zh-Hant" : {
+          "stringUnit" : { "state" : "translated", "value" : "無法取得公開連結。請檢查你的網際網路連線。如果你使用 Little Snitch 等防火牆 App，請允許 cloudflared 連線，然後再試一次。" }
         }
       }
     }

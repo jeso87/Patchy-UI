@@ -432,7 +432,7 @@
   "Anyone with this link can see this site until you stop sharing.": "Любой, у кого есть эта ссылка, может открыть этот сайт, пока вы не остановите общий доступ.",
   "Copy Address and Password": "Скопировать адрес и пароль",
   "Copy Link": "Скопировать ссылку",
-  "Couldn’t get a public link. Check your internet connection and try again.": "Не удалось получить публичную ссылку. Проверьте подключение к интернету и повторите попытку.",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "Не удалось получить публичную ссылку. Проверьте подключение к интернету. Если вы используете приложение-брандмауэр, например Little Snitch, разрешите cloudflared подключаться и повторите попытку.",
   "Couldn’t install cloudflared": "Не удалось установить cloudflared",
   "Couldn’t share %@": "Не удалось открыть общий доступ к %@",
   "Getting a public link…": "Получение публичной ссылки…",

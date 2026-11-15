@@ -348,7 +348,7 @@
   "Anyone with this link can see this site until you stop sharing.": "이 링크를 아는 사람은 누구나 공유를 중단할 때까지 이 사이트를 볼 수 있습니다.",
   "Copy Address and Password": "주소 및 암호 복사하기",
   "Copy Link": "링크 복사하기",
-  "Couldn’t get a public link. Check your internet connection and try again.": "공개 링크를 받을 수 없습니다. 인터넷 연결을 확인한 다음 다시 시도하십시오.",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "공개 링크를 받을 수 없습니다. 인터넷 연결을 확인하십시오. Little Snitch 같은 방화벽 앱을 사용하는 경우 cloudflared의 연결을 허용한 다음 다시 시도하십시오.",
   "Couldn’t install cloudflared": "cloudflared를 설치할 수 없음",
   "Couldn’t share %@": "%@ 사이트를 공유할 수 없음",
   "Getting a public link…": "공개 링크를 받는 중…",

@@ -348,7 +348,7 @@
   "Anyone with this link can see this site until you stop sharing.": "Bất kỳ ai có liên kết này đều xem được trang web này cho đến khi bạn dừng chia sẻ.",
   "Copy Address and Password": "Sao chép địa chỉ và mật khẩu",
   "Copy Link": "Sao chép liên kết",
-  "Couldn’t get a public link. Check your internet connection and try again.": "Không thể lấy liên kết công khai. Hãy kiểm tra kết nối internet rồi thử lại.",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "Không thể lấy liên kết công khai. Hãy kiểm tra kết nối internet. Nếu bạn dùng ứng dụng tường lửa như Little Snitch, hãy cho phép cloudflared kết nối rồi thử lại.",
   "Couldn’t install cloudflared": "Không thể cài đặt cloudflared",
   "Couldn’t share %@": "Không thể chia sẻ %@",
   "Getting a public link…": "Đang lấy liên kết công khai…",

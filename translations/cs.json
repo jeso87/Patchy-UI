@@ -378,7 +378,7 @@
   "Anyone with this link can see this site until you stop sharing.": "Kdokoli s tímto odkazem může tento web vidět, dokud sdílení neukončíte.",
   "Copy Address and Password": "Zkopírovat adresu a heslo",
   "Copy Link": "Zkopírovat odkaz",
-  "Couldn’t get a public link. Check your internet connection and try again.": "Veřejný odkaz se nepodařilo získat. Zkontrolujte připojení k internetu a zkuste to znovu.",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "Veřejný odkaz se nepodařilo získat. Zkontrolujte připojení k internetu. Pokud používáte aplikaci firewallu, například Little Snitch, povolte cloudflared připojení a zkuste to znovu.",
   "Couldn’t install cloudflared": "cloudflared se nepodařilo nainstalovat",
   "Couldn’t share %@": "Web %@ se nepodařilo sdílet",
   "Getting a public link…": "Získává se veřejný odkaz…",

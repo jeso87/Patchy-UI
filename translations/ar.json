@@ -423,7 +423,7 @@
   "Anyone with this link can see this site until you stop sharing.": "يمكن لأي شخص لديه هذا الرابط رؤية هذا الموقع حتى توقف المشاركة.",
   "Copy Address and Password": "نسخ العنوان وكلمة السر",
   "Copy Link": "نسخ الرابط",
-  "Couldn’t get a public link. Check your internet connection and try again.": "تعذّر الحصول على رابط عام. تحقّق من اتصالك بالإنترنت وحاول مرة أخرى.",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "تعذّر الحصول على رابط عام. تحقّق من اتصالك بالإنترنت. إذا كنت تستخدم تطبيق جدار حماية مثل Little Snitch، فاسمح لـ cloudflared بالاتصال، ثم حاول مرة أخرى.",
   "Couldn’t install cloudflared": "تعذّر تثبيت cloudflared",
   "Couldn’t share %@": "تعذّرت مشاركة %@",
   "Getting a public link…": "جارٍ الحصول على رابط عام…",

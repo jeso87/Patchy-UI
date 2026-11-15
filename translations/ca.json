@@ -363,7 +363,7 @@
   "Anyone with this link can see this site until you stop sharing.": "Qualsevol persona amb aquest enllaç pot veure aquest lloc web fins que deixis de compartir-lo.",
   "Copy Address and Password": "Copia l’adreça i la contrasenya",
   "Copy Link": "Copia l’enllaç",
-  "Couldn’t get a public link. Check your internet connection and try again.": "No s’ha pogut obtenir un enllaç públic. Comprova la connexió a internet i torna-ho a provar.",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "No s’ha pogut obtenir un enllaç públic. Comprova la connexió a internet. Si fas servir una app de tallafoc com Little Snitch, permet que cloudflared es connecti i torna-ho a provar.",
   "Couldn’t install cloudflared": "No s’ha pogut instal·lar cloudflared",
   "Couldn’t share %@": "No s’ha pogut compartir %@",
   "Getting a public link…": "S’està obtenint un enllaç públic…",

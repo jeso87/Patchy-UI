@@ -363,7 +363,7 @@
   "Anyone with this link can see this site until you stop sharing.": "Allir sem hafa þennan tengil geta séð þennan vef þar til þú hættir að deila.",
   "Copy Address and Password": "Afrita veffang og lykilorð",
   "Copy Link": "Afrita tengil",
-  "Couldn’t get a public link. Check your internet connection and try again.": "Ekki tókst að fá opinberan tengil. Athugaðu nettenginguna og reyndu aftur.",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "Ekki tókst að fá opinberan tengil. Athugaðu nettenginguna. Ef þú notar eldveggsforrit á borð við Little Snitch skaltu leyfa cloudflared að tengjast og reyna svo aftur.",
   "Couldn’t install cloudflared": "Ekki tókst að setja upp cloudflared",
   "Couldn’t share %@": "Ekki tókst að deila %@",
   "Getting a public link…": "Sæki opinberan tengil…",

@@ -393,7 +393,7 @@
   "Anyone with this link can see this site until you stop sharing.": "Будь-хто з цим посиланням може переглядати цей сайт, доки ви не зупините спільний доступ.",
   "Copy Address and Password": "Скопіювати адресу й пароль",
   "Copy Link": "Скопіювати посилання",
-  "Couldn’t get a public link. Check your internet connection and try again.": "Не вдалося отримати публічне посилання. Перевірте підключення до інтернету й повторіть спробу.",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "Не вдалося отримати публічне посилання. Перевірте підключення до інтернету. Якщо ви користуєтеся застосунком-брандмауером, як-от Little Snitch, дозвольте cloudflared підключатися й повторіть спробу.",
   "Couldn’t install cloudflared": "Не вдалося встановити cloudflared",
   "Couldn’t share %@": "Не вдалося надати спільний доступ до %@",
   "Getting a public link…": "Отримання публічного посилання…",

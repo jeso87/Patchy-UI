@@ -363,7 +363,7 @@
   "Anyone with this link can see this site until you stop sharing.": "Iedereen met deze link kan deze website zien tot je stopt met delen.",
   "Copy Address and Password": "Kopieer adres en wachtwoord",
   "Copy Link": "Kopieer link",
-  "Couldn’t get a public link. Check your internet connection and try again.": "Kan geen openbare link krijgen. Controleer je internetverbinding en probeer het opnieuw.",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "Kan geen openbare link krijgen. Controleer je internetverbinding. Als je een firewall-app zoals Little Snitch gebruikt, sta cloudflared dan toe verbinding te maken en probeer het opnieuw.",
   "Couldn’t install cloudflared": "Kan cloudflared niet installeren",
   "Couldn’t share %@": "Kan %@ niet delen",
   "Getting a public link…": "Openbare link ophalen…",

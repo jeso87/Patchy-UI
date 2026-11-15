@@ -417,7 +417,7 @@
   "Anyone with this link can see this site until you stop sharing.": "Oricine are acest link poate vedea acest site până când opriți partajarea.",
   "Copy Address and Password": "Copiați adresa și parola",
   "Copy Link": "Copiați linkul",
-  "Couldn’t get a public link. Check your internet connection and try again.": "Nu s-a putut obține un link public. Verificați conexiunea la internet și încercați din nou.",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "Nu s-a putut obține un link public. Verificați conexiunea la internet. Dacă folosiți o aplicație firewall precum Little Snitch, permiteți-i lui cloudflared să se conecteze, apoi încercați din nou.",
   "Couldn’t install cloudflared": "Nu s-a putut instala cloudflared",
   "Couldn’t share %@": "Nu s-a putut partaja %@",
   "Getting a public link…": "Se obține un link public…",

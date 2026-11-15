@@ -66,8 +66,8 @@ import Testing
     @Test func problems() {
         #expect(ShareCopy.problem(failure("apache_not_running")) == "The server isn’t running. Start it, then share again.")
         #expect(ShareCopy.problem(failure("tunnel_stopped", wasSharing: true)) == "Sharing stopped on its own, so the link no longer works.")
-        #expect(ShareCopy.problem(failure("tunnel_failed")) == "Couldn’t get a public link. Check your internet connection and try again.")
-        #expect(ShareCopy.problem(failure("cloudflare_error")) == "Couldn’t get a public link. Check your internet connection and try again.")
+        #expect(ShareCopy.problem(failure("tunnel_failed")) == "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.")
+        #expect(ShareCopy.problem(failure("cloudflare_error")) == "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.")
     }
 
     /// Patchy's code says what's wrong for problems that aren't the network; the app passes that on.

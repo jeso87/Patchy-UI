@@ -363,7 +363,7 @@
   "Anyone with this link can see this site until you stop sharing.": "Bu bağlantıya sahip olan herkes, siz paylaşımı durdurana kadar bu siteyi görebilir.",
   "Copy Address and Password": "Adresi ve Parolayı Kopyala",
   "Copy Link": "Bağlantıyı Kopyala",
-  "Couldn’t get a public link. Check your internet connection and try again.": "Herkese açık bağlantı alınamadı. İnternet bağlantınızı denetleyip yeniden deneyin.",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "Herkese açık bağlantı alınamadı. İnternet bağlantınızı denetleyin. Little Snitch gibi bir güvenlik duvarı uygulaması kullanıyorsanız cloudflared’in bağlanmasına izin verip yeniden deneyin.",
   "Couldn’t install cloudflared": "cloudflared yüklenemedi",
   "Couldn’t share %@": "%@ paylaşılamadı",
   "Getting a public link…": "Herkese açık bağlantı alınıyor…",

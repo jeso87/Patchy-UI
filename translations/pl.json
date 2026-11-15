@@ -432,7 +432,7 @@
   "Anyone with this link can see this site until you stop sharing.": "Każdy, kto ma ten link, może oglądać tę witrynę, dopóki nie zatrzymasz udostępniania.",
   "Copy Address and Password": "Kopiuj adres i hasło",
   "Copy Link": "Kopiuj link",
-  "Couldn’t get a public link. Check your internet connection and try again.": "Nie udało się uzyskać linku publicznego. Sprawdź połączenie z internetem i spróbuj ponownie.",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "Nie udało się uzyskać linku publicznego. Sprawdź połączenie z internetem. Jeśli używasz aplikacji zapory, takiej jak Little Snitch, zezwól cloudflared na połączenie, a następnie spróbuj ponownie.",
   "Couldn’t install cloudflared": "Nie udało się zainstalować cloudflared",
   "Couldn’t share %@": "Nie udało się udostępnić witryny %@",
   "Getting a public link…": "Uzyskiwanie linku publicznego…",

@@ -378,7 +378,7 @@
   "Anyone with this link can see this site until you stop sharing.": "כל מי שיש לו את הקישור יכול לראות את האתר עד שיופסק השיתוף.",
   "Copy Address and Password": "העתקת הכתובת והסיסמה",
   "Copy Link": "העתקת הקישור",
-  "Couldn’t get a public link. Check your internet connection and try again.": "לא ניתן היה לקבל קישור ציבורי. יש לבדוק את החיבור לאינטרנט ולנסות שוב.",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "לא ניתן היה לקבל קישור ציבורי. יש לבדוק את החיבור לאינטרנט. אם יש בשימוש אפליקציית חומת אש כמו Little Snitch, יש לאפשר ל-cloudflared להתחבר ולנסות שוב.",
   "Couldn’t install cloudflared": "לא ניתן היה להתקין את cloudflared",
   "Couldn’t share %@": "לא ניתן היה לשתף את %@",
   "Getting a public link…": "מתקבל קישור ציבורי…",

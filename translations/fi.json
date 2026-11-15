@@ -363,7 +363,7 @@
   "Anyone with this link can see this site until you stop sharing.": "Kuka tahansa, jolla on tämä linkki, voi nähdä tämän sivuston, kunnes lopetat jakamisen.",
   "Copy Address and Password": "Kopioi osoite ja salasana",
   "Copy Link": "Kopioi linkki",
-  "Couldn’t get a public link. Check your internet connection and try again.": "Julkista linkkiä ei saatu. Tarkista internetyhteys ja yritä uudelleen.",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "Julkista linkkiä ei saatu. Tarkista internetyhteys. Jos käytät palomuurisovellusta, kuten Little Snitchiä, salli cloudflaredin muodostaa yhteys ja yritä sitten uudelleen.",
   "Couldn’t install cloudflared": "cloudflaredin asentaminen epäonnistui",
   "Couldn’t share %@": "Sivuston %@ jakaminen epäonnistui",
   "Getting a public link…": "Haetaan julkista linkkiä…",

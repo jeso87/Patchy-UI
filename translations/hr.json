@@ -378,7 +378,7 @@
   "Anyone with this link can see this site until you stop sharing.": "Svatko s ovom poveznicom može vidjeti ovu web-stranicu dok ne prestanete dijeliti.",
   "Copy Address and Password": "Kopiraj adresu i lozinku",
   "Copy Link": "Kopiraj poveznicu",
-  "Couldn’t get a public link. Check your internet connection and try again.": "Nije moguće dobiti javnu poveznicu. Provjerite internetsku vezu i pokušajte ponovno.",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "Nije moguće dobiti javnu poveznicu. Provjerite internetsku vezu. Ako koristite aplikaciju vatrozida kao što je Little Snitch, dopustite cloudflaredu povezivanje, a zatim pokušajte ponovno.",
   "Couldn’t install cloudflared": "Nije moguće instalirati cloudflared",
   "Couldn’t share %@": "Nije moguće podijeliti %@",
   "Getting a public link…": "Dohvaćanje javne poveznice…",

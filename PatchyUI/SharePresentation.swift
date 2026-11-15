@@ -65,7 +65,7 @@ enum ShareCopy {
         case PatchyError.invalidName:
             return String(localized: "That name can’t be used in a web address. Use lowercase letters, numbers and hyphens.", comment: "Shown when sharing a site failed.")
         case PatchyError.tunnelFailed, PatchyError.cloudflareError:
-            return String(localized: "Couldn’t get a public link. Check your internet connection and try again.", comment: "Shown when sharing a site failed.")
+            return String(localized: "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.", comment: "Shown when sharing a site failed. “Little Snitch” is a firewall app and “cloudflared” is the program that makes the link; don't translate either name.")
         default:
             return String(localized: "Couldn’t share this site. Show Details has the exact message from Patchy.", comment: "Shown when sharing a site failed.")
         }

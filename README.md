@@ -159,6 +159,13 @@ Total CMS or clicking Update runs Composer, which downloads packages from
 Packagist and GitHub (and Total CMS's servers). It has no
 analytics, no accounts and no telemetry.
 
+**Firewall apps.** If you use Little Snitch, LuLu or a similar app, it asks
+about `cloudflared` the first time you share. Sharing needs only its outgoing
+connections, so you can deny incoming ones. Homebrew's `cloudflared` isn't
+code-signed, so a rule for Patchy UI doesn't cover it, and the firewall may ask
+again after `cloudflared` is upgraded. If the firewall blocks it, sharing fails
+and the message suggests allowing `cloudflared` to connect.
+
 **Your Mac password.** Some changes need administrator rights: setting up
 password-free mode, creating the first certificate, and refreshing
 certificates. Without password-free mode, so does every change that updates

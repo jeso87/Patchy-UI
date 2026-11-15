@@ -363,7 +363,7 @@
   "Anyone with this link can see this site until you stop sharing.": "هر کسی که این پیوند را داشته باشد، تا وقتی اشتراک‌گذاری را متوقف نکرده‌اید می‌تواند این سایت را ببیند.",
   "Copy Address and Password": "کپی نشانی و رمز",
   "Copy Link": "کپی پیوند",
-  "Couldn’t get a public link. Check your internet connection and try again.": "دریافت پیوند عمومی ممکن نشد. اتصال اینترنت خود را بررسی کنید و دوباره امتحان کنید.",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "دریافت پیوند عمومی ممکن نشد. اتصال اینترنت خود را بررسی کنید. اگر از یک برنامهٔ دیوار آتش مانند Little Snitch استفاده می‌کنید، به cloudflared اجازهٔ اتصال بدهید و دوباره امتحان کنید.",
   "Couldn’t install cloudflared": "نصب cloudflared ممکن نشد",
   "Couldn’t share %@": "اشتراک‌گذاری %@ ممکن نشد",
   "Getting a public link…": "در حال دریافت پیوند عمومی…",

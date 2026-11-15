@@ -363,7 +363,7 @@
   "Anyone with this link can see this site until you stop sharing.": "Alla som har den här länken kan se den här webbplatsen tills du slutar dela.",
   "Copy Address and Password": "Kopiera adress och lösenord",
   "Copy Link": "Kopiera länk",
-  "Couldn’t get a public link. Check your internet connection and try again.": "Det gick inte att få en offentlig länk. Kontrollera internetanslutningen och försök igen.",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "Det gick inte att få en offentlig länk. Kontrollera internetanslutningen. Om du använder en brandväggsapp som Little Snitch, låt cloudflared ansluta och försök sedan igen.",
   "Couldn’t install cloudflared": "Det gick inte att installera cloudflared",
   "Couldn’t share %@": "Det gick inte att dela %@",
   "Getting a public link…": "Hämtar en offentlig länk…",

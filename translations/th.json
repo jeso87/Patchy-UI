@@ -348,7 +348,7 @@
   "Anyone with this link can see this site until you stop sharing.": "ทุกคนที่มีลิงก์นี้จะดูเว็บไซต์นี้ได้จนกว่าคุณจะหยุดแชร์",
   "Copy Address and Password": "คัดลอกที่อยู่และรหัสผ่าน",
   "Copy Link": "คัดลอกลิงก์",
-  "Couldn’t get a public link. Check your internet connection and try again.": "รับลิงก์สาธารณะไม่ได้ ตรวจสอบการเชื่อมต่ออินเทอร์เน็ตแล้วลองอีกครั้ง",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "รับลิงก์สาธารณะไม่ได้ ตรวจสอบการเชื่อมต่ออินเทอร์เน็ต หากคุณใช้แอปไฟร์วอลล์อย่าง Little Snitch ให้อนุญาตให้ cloudflared เชื่อมต่อ แล้วลองอีกครั้ง",
   "Couldn’t install cloudflared": "ติดตั้ง cloudflared ไม่ได้",
   "Couldn’t share %@": "แชร์ %@ ไม่ได้",
   "Getting a public link…": "กำลังรับลิงก์สาธารณะ…",

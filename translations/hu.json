@@ -363,7 +363,7 @@
   "Anyone with this link can see this site until you stop sharing.": "Bárki, akinél megvan ez a link, láthatja ezt a webhelyet, amíg le nem állítja a megosztást.",
   "Copy Address and Password": "Cím és jelszó másolása",
   "Copy Link": "Link másolása",
-  "Couldn’t get a public link. Check your internet connection and try again.": "Nem sikerült nyilvános linket kérni. Ellenőrizze az internetkapcsolatot, és próbálja újra.",
+  "Couldn’t get a public link. Check your internet connection. If you use a firewall app such as Little Snitch, allow cloudflared to connect, then try again.": "Nem sikerült nyilvános linket kérni. Ellenőrizze az internetkapcsolatot. Ha tűzfalalkalmazást használ, például a Little Snitch-et, engedélyezze a cloudflared kapcsolódását, majd próbálja újra.",
   "Couldn’t install cloudflared": "Nem sikerült telepíteni a cloudflared eszközt",
   "Couldn’t share %@": "Nem sikerült megosztani: %@",
   "Getting a public link…": "Nyilvános link kérése…",
