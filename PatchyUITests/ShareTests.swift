@@ -27,6 +27,19 @@ import Testing
         #expect(choices.map(\.section) == [0, 0, 0, 1, 1, 2])
     }
 
+    /// Try Again makes the same kind of link that failed, not the default one: an anonymous link that
+    /// failed must not come back as the site's address on the connected domain.
+    @Test func retryKeepsTheChosenLink() {
+        let model = AppModel()
+        let failure = ShareFailure(code: PatchyError.tunnelFailed, details: "", wasSharing: false)
+        #expect(model.retryMode(for: "harbor.test") == .standard)
+        model.shareFailed("harbor.test", failure, mode: .anonymous)
+        #expect(model.shares["harbor.test"] == .failed(failure))
+        #expect(model.retryMode(for: "harbor.test") == .anonymous)
+        model.dismissShareProblem("harbor.test")
+        #expect(model.retryMode(for: "harbor.test") == .standard)
+    }
+
     /// The address a site was last shared at wins over the one Patchy would pick; another domain's doesn't.
     @Test func shareHost() {
         var site = Site(address: "shop.harbor.test", folder: "/tmp", folderExists: true, certificate: .missing, isRouted: true)

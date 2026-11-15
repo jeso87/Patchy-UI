@@ -202,6 +202,8 @@ final class AppModel {
     /// Shares asked to stop that haven't finished stopping.
     var stoppingShares: Set<String> = []
     @ObservationIgnored private var shareSessions: [String: ShareSession] = [:]
+    /// The kind of link each failed share was making, so Try Again makes the same kind.
+    @ObservationIgnored private var failedShareModes: [String: ShareMode] = [:]
     /// Whether the previous read found the server stopped; see `sharesToStop`.
     @ObservationIgnored private var serverSeenDown = false
 
@@ -479,7 +481,10 @@ final class AppModel {
         for address in Self.sharesToStop(Array(shareSessions.keys), snapshot: snapshot, serverWasDown: serverWasDown) {
             stopSharing(address)
         }
-        for address in shares.keys where shareSessions[address] == nil && site(address) == nil { shares[address] = nil }
+        for address in shares.keys where shareSessions[address] == nil && site(address) == nil {
+            shares[address] = nil
+            failedShareModes[address] = nil
+        }
         if selection == nil || !sites.contains(where: { $0.address == selection }) {
             selection = sites.first?.address
         }
@@ -1097,11 +1102,21 @@ final class AppModel {
                 sheet = .installCloudflared(address, mode: mode)
                 openMainWindow?()
             } else {
-                shares[address] = state
+                shareFailed(address, failure, mode: mode)
             }
         case .starting, .sharing:
             if shareSessions[address] != nil { shares[address] = state }
         }
+    }
+
+    func shareFailed(_ address: String, _ failure: ShareFailure, mode: ShareMode) {
+        shares[address] = .failed(failure)
+        failedShareModes[address] = mode
+    }
+
+    /// The kind of link Try Again makes: the one that failed, or the default.
+    func retryMode(for address: String) -> ShareMode {
+        failedShareModes[address] ?? .standard
     }
 
     /// True while any site is shared or starting to be.
@@ -1146,12 +1161,15 @@ final class AppModel {
     }
 
     func retryShare(_ address: String) {
+        let mode = retryMode(for: address)
         shares[address] = nil
-        if let site = site(address) { share(site) }
+        failedShareModes[address] = nil
+        if let site = site(address) { share(site, mode: mode) }
     }
 
     func dismissShareProblem(_ address: String) {
         if case .failed? = shares[address] { shares[address] = nil }
+        failedShareModes[address] = nil
     }
 
     func showShareProblem(_ address: String) {
